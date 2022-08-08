@@ -1,0 +1,23 @@
+
+/* --------------------- DoosanENC Released 0000.00.00 --------------------- */
+/* --------------------- Published by 4m Creative --------------------- */
+
+
+
+
+
+/* --------------------- Animations --------------------- */
+@keyframes mouse-wheel {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(6px);
+        -ms-transform: translateY(6px);
+        transform: translateY(6px);
+    }
+}

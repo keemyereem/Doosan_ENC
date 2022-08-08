@@ -1,0 +1,21 @@
+
+/* --------------------- DoosanENC Released 0000.00.00 --------------------- */
+/* --------------------- Published by 4m Creative --------------------- */
+
+
+@media screen and (max-width:1400px) {
+
+
+}
+
+
+/* -------------------- 모바일 -------------------- */
+@media screen and (max-width:767px) {
+    /* 공통부분 */
+    br.br_pc, br.br_t {display: none;}
+    br.br_m {display: block;}
+    html{overflow-x: auto; width: 100%;}
+    .img_pc {display: none;}
+    .img_m {display: inline-block;}
+
+}

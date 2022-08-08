@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" /> 
+        <meta name="author" content="DoosanENC">
+        <meta name="robots" content="index, follow">
+        <meta name="title" content="두산건설">
+        <meta name="description" content="두산건설 리뉴얼 홈페이지입니다.">
+        <meta name="keywords" content="두산건설, 리뉴얼홈페이지, 포엠크리에이티브">
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="두산건설" />
+        <meta property="og:description" content="두산건설 리뉴얼 홈페이지입니다." />
+        <meta property="og:site_name" content="DoosanENC">
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="두산건설" />
+        <meta name="twitter:description" content="두산건설 리뉴얼 홈페이지입니다." />
+
+        <title>두산건설 퍼블리싱 리스트</title>
+        <link rel="icon" href="admin/images/favicon.jpg" sizes="32x32">
+        <style>
+            body, td, th, div, span, p, a {font-size:12px; margin: 0; padding: 0; font-family: "Malgun Gothic", "맑은 고딕", "돋움", "dotum";}
+            body, div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, form, fieldset, input, table, tr, th, td, a, span, em, button, textarea, header, footer, nav, section, aside.all_menu, article {margin: 0; padding: 0; box-sizing: border-box;}
+            body {padding-bottom:20px;}
+            ul, ol, li {list-style: none;}
+
+            .hr { color:red; font-weight: bold; }
+            .blind {display:none;}
+            .header {position:relative; background:#005caa; padding:10px; color:#fff; font-size:20px; font-weight:bold;}
+            .content_tab {margin:15px 0 0 15px;}
+            .content_tab ul li {display:inline-block; *display:inline-block; margin-right:15px; zoom:1;}
+            .content_tab ul li a {margin:10px; text-decoration:none; outline-style:none; color:#787878; font-size:16px; font-weight:normal;}
+            .content_tab ul li a:hover, a:active, a:visited {text-decoration: none;}
+            .content_tab ul li.active a {color:#005caa;font-weight: bold;}
+
+            .content {padding:15px;}
+            .content table {width:100%; border-collapse:collapse; border-spacing:0;}
+            .content table.mt15 {margin-top:15px;}
+            .content th {background:#e3e3e3;}
+            .content th, .content td {border:1px solid #ddd; border-spacing:0; padding:5px; text-align:center;}
+
+            .th_width100 { width:100px; }
+            .th_width200 { width:200px; }
+            table tbody:nth-child(2n-1) tr {background: rgb(243, 243, 243);}
+
+        </style>
+        <script src="js/lib/jquery-1.12.4.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#tab_list").find("ul").find("li").find("a").on("click", function () {
+                    var currentIdx = $(this).parent().index();
+                    console.log(currentIdx);
+                    $('#tab_list ul li').removeClass("active");
+                    $(this).parent().addClass("active");
+                    $(".content").addClass("blind");
+                    $(".content").eq(currentIdx).removeClass("blind");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">두산건설 퍼블리싱 리스트</div>
+        <div id="tab_list" class="content_tab">
+            <ul style="float: left;">
+                <li class="active"><a href="javascript:;">사용자 국문</a></li>
+                <!-- <li><a href="javascript:;" onclick="alert('준비중');">사용자 영문</a></li> -->
+            </ul>  
+        </div>
+        <div style="float: right; padding: 0 15px 15px;">
+            ○ : 작업 중 
+            ● : 작업 완료
+        </div>
+        <!-- 사용자 국문 -->
+        <div class="content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>1depth</th>
+                        <th>2depth</th>
+                        <th>3depth</th>
+                        <th>4depth</th>
+                        <th class="th_width200">비고</th>
+                        <th>화면 ID</th>
+                        <th class="th_width100">PC</th>
+                        <th class="th_width100">Mobile</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>메인</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="hr"></td>
+                        <td><a href="html/DE-00-00-001.html" target="_blank">DE-00-00-001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>    
+                    <tr>
+                        <td rowspan="3">공통</td>
+                        <td>sitemap</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="include/sitemap.html" target="_blank">sitemap.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>header</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="include/header.html" target="_blank">header.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>footer</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="include/footer.html" target="_blank">footer.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td rowspan="3">사업영역</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/DE-01-01-001.html" target="_blank">DE-01-01-001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/DE-01-02-001.html" target="_blank">DE-01-02-001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/DE-01-03-001.html" target="_blank">DE-01-03-001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td rowspan="3">기술개발</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/DE-02-01-001.html" target="_blank">DE-02-01-001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/DE-02-02-001.html" target="_blank">DE-02-02-001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/DE-02-03-001.html" target="_blank">DE-02-03-001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">회사소개</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/DE-03-01-001.html" target="_blank">DE-03-01-001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/DE-03-02-001.html" target="_blank">DE-03-02-001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">사회책임경영</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/DE-04-01-001.html" target="_blank">DE-04-01-001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/DE-04-02-001.html" target="_blank">DE-04-02-001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td rowspan="4">인재채용</td>
+                        <td rowspan="2"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/DE-05-01-001.html" target="_blank">DE-05-01-001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/DE-05-01-002.html" target="_blank">DE-05-01-002.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="hr"></td>
+                        <td><a href="html/DE-05-02-001.html" target="_blank">DE-05-02-001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/DE-05-03-001.html" target="_blank">DE-05-03-001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                
+            </table>
+        </div>
+
+
+
+
+
+        <!-- //////////////////////////////////////////////////////////////// 사용자 영문 //////////////////////////////////////////////////////////////// -->
+        <div class="content blind">
+            <table>
+                <thead>
+                    <tr>
+                        <th>1depth</th>
+                        <th>2depth</th>
+                        <th>3depth</th>
+                        <th>4depth</th>
+                        <th>5depth</th>
+                        <th>비고</th>
+                        <th>화면 ID</th>
+                        <th class="th_width100">PC</th>
+                        <th class="th_width100">Mobile</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Main</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/en/EN-00-00-001.html" target="_blank">EN-00-00-001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>    
+                    <tr>
+                        <td rowspan="3">Common</td>
+                        <td>header</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="include/en/header.html" target="_blank">header.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>footer</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="include/en/footer.html" target="_blank">footer.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>sitemap</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="include/en/sitemap.html" target="_blank">sitemap.html</a></td>
+                        <td>-</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>About us</td>
+                        <td>About us</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/en/EN-01-01-0001.html" target="_blank">EN-01-01-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>Contact us</td>
+                        <td>Location</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/en/EN-02-01-0001.html" target="_blank">EN-02-01-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td rowspan="4">Solution</td>
+                        <td>Smart Traffic Enforcement</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/en/EN-03-01-0001.html" target="_blank">EN-03-01-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Intelligent Traffic Management</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/en/EN-03-01-0001.html#anchor_sol2" target="_blank">EN-03-02-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Industrial System</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/en/EN-03-01-0001.html#anchor_sol3" target="_blank">EN-03-03-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Smart Traffic Management Platform </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="html/en/EN-03-01-0001.html#anchor_sol4" target="_blank">EN-03-04-0001.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+
+
+
+            </table>
+        </div>
+
+
+
+    </body>
+
+</html>
