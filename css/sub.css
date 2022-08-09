@@ -2,22 +2,61 @@
 /* --------------------- DoosanENC Released 0000.00.00 --------------------- */
 /* --------------------- Published by 4m Creative --------------------- */
 
+#main #fullpage section {width: 100%; height: 100vh;}
+#main #fullpage .section01 { position: relative; /* clip-path: polygon(37% 17%, 72% 17%, 63% 87%, 27% 87%); */ }
+#main #fullpage .section01.ani { animation: intro 1s alternate; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+#main #fullpage .section01 .center,
+#main #fullpage .section01 .center .inner { height: 100%; } 
 
+#main #fullpage .section01 .swiper { width: 100%; height: 100%; }
+#main #fullpage .section01 .swiper-slide { background-position: center; background-size: cover; }
+#main #fullpage .section01 .swiper-slide img { display: block;  width: 100%; height:100%; }
+#main #fullpage .section01 .swiper .sec01_controller { width: 40rem; height: 3rem; position: absolute; display: flex; align-items: center; justify-content: space-between; border: 1px solid red; bottom:30%; left: 10%; z-index: 1; }
+#main #fullpage .section01 .swiper .sec01_controller .swiper-pagination-sec01 { bottom: unset; right: 0; margin:auto; width: 32.4rem; display: flex; justify-content: space-between; align-items: center; }
+#main #fullpage .section01 .swiper .sec01_controller .swiper-pagination-sec01:after { content: ''; width: 30rem; height: .1rem; background: #fff; position: absolute; opacity: .5; left:0; right:0; margin: auto; }
+#main #fullpage .section01 .swiper .sec01_controller .swiper-pagination-sec01 span { width: 2.7rem; height: 2.7rem; border-radius: 100%; border:.1rem solid #fff; position: absolute; box-sizing: border-box; }
+#main #fullpage .section01 .swiper .sec01_controller .swiper-pagination-sec01 .swiper-pagination-bullet { background: transparent; width: .5rem; height: .5rem; opacity: 1; padding: 1.35rem; margin: 0; position: relative; }
+#main #fullpage .section01 .swiper .sec01_controller .swiper-pagination-sec01 .swiper-pagination-bullet:after { content: ''; display: block; width: .5rem; height: .5rem; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; background: #fff; border-radius: 100%; }
+#main #fullpage .section01 .swiper .sec01_controller .swiper-button { width: 1rem; height: 2rem; display: block; margin-top:unset; top:unset; }
+#main #fullpage .section01 .swiper .sec01_controller .swiper-button-next { content: url(../images/main/sec01_controller_arrowNext.png); right: 0; }
+#main #fullpage .section01 .swiper .sec01_controller .swiper-button-prev { content: url(../images/main/sec01_controller_arrowPrev.png); left: 0; }
 
+/* #main #fullpage .section02 .inner { border: 1px solid red; position: relative; } */
+#main #fullpage .section02 .swiper, #main #fullpage .section02 .swiper-wrapper, #main #fullpage .section02 .swiper-slide { width: 100%; height: 100vh; }
+#main #fullpage .section02 .swiper-slide { border: 1px solid red; position: relative; display: flex; align-items: flex-end; }
+#main #fullpage .section02 h1 { opacity: 0; position: absolute; top: 50%; transform: translateY(-100%); left: 29vw; font-family: 'Montserrat'; font-size: 8.8rem; color: #0e1115; font-weight: 800; text-transform: uppercase; letter-spacing: -.088rem; }
+#main #fullpage .section02 .big_img { width: auto;  height: 100%; }
+#main #fullpage .section02 .big_img img  {height: 100%; object-fit: cover; }
+#main #fullpage .section02 .mov_txt { opacity: 0; font-family: 'Montserrat'; font-size: 34rem; font-weight: 900; color: #87afdc; position: absolute; top: 50%; transform: translateY(-50%); right: 1.1rem; }
+#main #fullpage .section02 .right { position: relative; padding-bottom: 4rem; padding-left: 4rem; }
+#main #fullpage .section02 .right .contents { display: flex; align-items: center; }
+#main #fullpage .section02 .right .contents .con_txt { margin-left: 4rem; }
+#main #fullpage .section02 .right .contents .con_txt dt { font-size: 2.2rem; font-weight: 700; color: #005eb8; letter-spacing: -.05em; }
+#main #fullpage .section02 .right .contents .con_txt dd { font-size: 1.8rem; color: #555; line-height: 1.66; margin-top: 2rem; }
+#main #fullpage .section02 .swiper-slide.swiper-slide-active h1 { opacity: 1; }
+#main #fullpage .section02 .swiper-slide.swiper-slide-active .mov_txt { opacity: 1; z-index: -1; }
+#main #fullpage .section02 .right .swiper-pagination-sec02 { border: 1px solid #000; display: flex; }
+#main #fullpage .section02 .right .swiper-pagination-bullet { display: block; padding-left: 4rem; width: 24rem; border-radius: 0; height: auto; background: none; text-align: left; font-family: 'Montserrat'; font-size: 2rem; font-weight: 800; color: #0e1115; }
+#main #fullpage .section02 .right .swiper-pagination-bullet-active { color: #005eb8; }
+/* #main #fullpage .section02 .right .swiper-pagination > span:nth-of-type(1)::before {content:'01';}
+#main #fullpage .section02 .right .swiper-pagination > span:nth-of-type(2)::before {content:'02';}
+#main #fullpage .section02 .right .swiper-pagination > span:nth-of-type(3)::before {content:'03';} */
+.swiper-progress-bar { position: relative; width: 100%; display: block; z-index: 1; height: .1rem; }
+.swiper-progress-bar .slide_progress-bar { position: absolute; height: .2rem; background: #005eb8; width: auto; clear: both; opacity: 0; bottom: 0; left: 0; right: 0; }
+.swiper-progress-bar .slide_progress-bar::after { position: absolute; top: 0; left: 0; background: #000; height: 100%; width: 0; content:''; transition: width .1s linear; }
+.swiper-progress-bar.active .slide_progress-bar { opacity: 1; }
+.swiper-progress-bar.animate .slide_progress-bar::after { width: 100%; transition: width linear; transition-delay: unset; transition-duration: 5s; }
 
 
 /* --------------------- Animations --------------------- */
-@keyframes mouse-wheel {
+@keyframes intro {
     0% {
-        opacity: 1;
-        -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-        transform: translateY(0);
+        clip-path: polygon(37% 17%, 72% 17%, 63% 87%, 27% 87%);
+    }
+    50% {
+        clip-path: polygon(0% 17%, 100% 17%, 100% 87%, 0% 87%);
     }
     100% {
-        opacity: 0;
-        -webkit-transform: translateY(6px);
-        -ms-transform: translateY(6px);
-        transform: translateY(6px);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 }

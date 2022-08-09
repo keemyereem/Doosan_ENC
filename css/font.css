@@ -158,3 +158,22 @@
     src: local(※),
     url(../font/Poppins-ExtraBold.ttf) format('truetype');
 }
+
+@font-face {
+    font-family: "YGO"; 
+    font-weight: 200;
+    src: local(※),
+    url(../font/YD_YGO520.TTF) format('truetype');
+}
+@font-face {
+    font-family: "YGO"; 
+    font-weight: 300;
+    src: local(※),
+    url(../font/YD_YGO530.ttf) format('truetype');
+}
+@font-face {
+    font-family: "YGO"; 
+    font-weight: 400;
+    src: local(※),
+    url(../font/YD_YGO550.ttf) format('truetype');
+}

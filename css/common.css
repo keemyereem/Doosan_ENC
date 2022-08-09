@@ -9,7 +9,7 @@
 * {margin:0; padding:0; box-sizing:border-box !important;}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, article, aside, hgroup, header, footer, figure, figcaption, nav, section { margin:0; padding:0; border:0; font-size:100%; vertical-align:baseline; background:transparent; }
 article, aside, hgroup, header, footer, figure, figcaption, nav, section {display:block;}
-html, body {font-size:62.5%;font-family: 'NS'; font-weight: 200; color:#000; line-height:1.2; box-sizing:border-box; -webkit-text-size-adjust:none;overflow-x: hidden;}
+html, body {font-size:62.5%;font-family: 'YGO'; font-weight: 200; color:#000; line-height:1.2; letter-spacing: -.25em; box-sizing:border-box; -webkit-text-size-adjust:none; }
 h1, h2, h3, h4, h5, h6 {font-weight:normal; line-height:normal; word-break:keep-all;}
 fieldset {border:none;}
 ol, li {list-style:none; zoom:1;}
@@ -94,7 +94,78 @@ br.br_t, br.br_m {display: none;}
 
 
 /* header */
+.header {width: 100%;position: fixed;top: 0;left: 0;z-index: 99;padding: 0 5rem;}
+.header .header_wrap {height: 10rem;display: flex;align-items: center;font-size: 1.8rem;color: #222;}
+.header .logo {display: block;width: 10.3rem;height: 2.8rem;background: url(../images/common/logo_b.png) no-repeat;font-size: 0;margin-right: 7vw;}
+.header .gnb {width: 74.8rem;}
+.header .gnb > ul {width: 100%;display: flex;flex-shrink: 1; justify-content: space-around;}
+.header .gnb_menu {width: 46rem;display: flex;flex-shrink: 0;justify-content: space-between;align-items: center;margin-left: auto;}
+.header .gnb_menu .right_nav ul {display: flex;}
+.header .gnb_menu .right_nav ul li a {font-size: 1.4rem;color: #777;padding: 0 2rem;}
+.header .gnb_menu .right_nav ul li:first-child a {position: relative;}
+.header .gnb_menu .right_nav ul li:first-child a:after {display: inline-block;content:'';width: 0.1rem;height: 1.4rem;background: #222; opacity: .2; position: absolute;top: 50%;right: -.1rem;transform: translateY(-50%);}
 
+.header .lang_select {display: inline-block;position: relative;vertical-align: middle;}
+.header .lang_select .lang_current {display: block;position:relative;font-size: 1.8rem;}
+.header .lang_select .lang_current .ico.global {display: inline-block;width: 2.3rem;height: 2.3rem;background: url(../images/common/icon_lang_b.png) 0 0 no-repeat;vertical-align: middle;}
+.header .lang_select .lang_current .ico.select {display: inline-block;margin-left: 1.5rem;width: 1rem;height: .5rem;background: url(../images/common/icon_sel.png) 0 0 no-repeat;vertical-align: middle;}
+.header .lang_select .lang_choice {display: block;position: absolute;top: 3.3rem;left: 0;margin-left: -2.5rem; overflow: hidden;background: #fff;width: 8rem;height: 0;text-align: center;transition: all .3s;}
+.header .lang_select .lang_choice li {margin-top: 1rem;line-height: normal;}
+.header .lang_select .lang_choice li:first-child {margin-top: 0;}
+.header .lang_select .lang_choice li a {font-weight: 300;font-size: 1.7rem;color: #777;}
+.header .lang_select .lang_choice li.on a {color: #222;}
+.header .lang_select.open .lang_choice {height: auto;padding: 2rem 0;border: .1rem solid #808080;}
+.header .lang_select.open .lang_current .ico.select {transform: rotate(180deg);}
+
+.header .gnb_menu .weve_btn a {display: block;width: 14rem;height:4.2rem;border-radius: 2.1rem;border: 1px solid #004098;background: url(../images/common/weve_logo_b.png) no-repeat 50% 50%;background-size: 4.7rem 3rem;}
+
+.header .top_sitemap {display: inline-block;vertical-align: middle;cursor: pointer;}
+.header .top_sitemap button{vertical-align: middle; width: 3.6rem; height: 2.3rem; display: inline-flex; flex-direction: column; justify-content: space-between; position: relative;}
+.header .top_sitemap button span{display: inline-block; width: 2.6rem; height: .3rem; margin-bottom: .7rem; margin-left: 1rem; position: relative; overflow: hidden; }
+.header .top_sitemap button span:nth-child(2) {width: 3.6rem; margin-left: 0;}
+.header .top_sitemap button span:last-child {margin-bottom: 0;}
+
+/* header top sitemap button animation*/
+.header .top_sitemap button span::before , .header .top_sitemap button span::after{ transition-duration: 0.25s; transition-property: transform; }
+.header .top_sitemap button span::before{content: ''; width: 100%; height: 100%; background-color: #000; display: block; transform: translateX(0);}
+.header .top_sitemap button span::after{content: ''; width: 100%; height: 100%; background-color: #000; position: absolute; left: 0; top: 0; transform: translateX(100%);}
+
+.header .top_sitemap:not(.on) button span:nth-child(1)::before{transition-delay: 0.2s;}
+.header .top_sitemap:not(.on) button span:nth-child(1)::after{transition-delay: 0s;}
+.header .top_sitemap:not(.on) button span:nth-child(2)::before{transition-delay: 0.3s;}
+.header .top_sitemap:not(.on) button span:nth-child(2)::after{transition-delay: 0.1s;}
+.header .top_sitemap:not(.on) button span:nth-child(3)::before{transition-delay: 0.4s;}
+.header .top_sitemap:not(.on) button span:nth-child(3)::after{transition-delay: 0.2s;}
+.header .top_sitemap:not(.on):hover button span::before{transform: translateX(-100%);}
+.header .top_sitemap:not(.on):hover button span::after{transform: translateX(0%);}
+.header .top_sitemap:not(.on):hover button span:nth-child(1)::before{transition-delay: 0s;}
+.header .top_sitemap:not(.on):hover button span:nth-child(1)::after{transition-delay: 0.2s;}
+.header .top_sitemap:not(.on):hover button span:nth-child(2)::before{transition-delay: 0.1s;}
+.header .top_sitemap:not(.on):hover button span:nth-child(2)::after{transition-delay: 0.3s;}
+.header .top_sitemap:not(.on):hover button span:nth-child(3)::before{transition-delay: 0.2s;}
+.header .top_sitemap:not(.on):hover button span:nth-child(3)::after{transition-delay: 0.4s;}
+.header .top_sitemap.on {z-index: 101; transition-delay: 0s; transition-duration: 0s;}
+.header .top_sitemap button span:nth-child(1){animation:manuAnimate01_1 0.8s forwards;}
+.header .top_sitemap button span:nth-child(2){animation:manuAnimate02_1 0.8s forwards;}
+.header .top_sitemap button span:nth-child(3){animation:manuAnimate03_1 0.8s forwards;}
+.header .top_sitemap.on button span:nth-child(1){animation:manuAnimate01 0.8s forwards;}
+.header .top_sitemap.on button span:nth-child(2){animation:manuAnimate02 0s forwards;}
+.header .top_sitemap.on button span:nth-child(3){animation:manuAnimate03 0.8s forwards;}
+@keyframes manuAnimate01 { 0%{transform: translateY(0px) rotate(0deg);} 50%{transform: translateY(9px) rotate(0deg);} 100%{transform: translateY(9px) rotate(45deg);} }
+@keyframes manuAnimate01_1 { 0%{transform: translateY(9px) rotate(45deg);} 50%{transform: translateY(9px) rotate(0deg);} 100%{transform: translateY(0px) rotate(0deg);} }
+@keyframes manuAnimate02 { 0%{opacity: 1;} 100%{opacity: 0;} }
+@keyframes manuAnimate02_1 { 0%{opacity: 0;} 100%{opacity: 1;} }
+@keyframes manuAnimate03 { 0%{transform: translateY(0px) rotate(0deg);} 50%{transform: translateY(-9px) rotate(0deg);} 100%{transform: translateY(-9px) rotate(135deg);} }
+@keyframes manuAnimate03_1 { 0%{transform: translateY(-9px) rotate(135deg);} 50%{transform: translateY(-9px) rotate(0deg);} 100%{transform: translateY(0px) rotate(0deg);} }
+
+/* header ( white version ) */
+.header.wht .logo {background: url(../images/common/logo_w.png) no-repeat;}
+.header.wht .gnb > ul > li > a {color: #fff;}
+.header.wht .gnb_menu .right_nav ul li a  {color: #fff;}
+.header .gnb_menu .right_nav ul li:first-child a:after {background: #fff;}
+.header.wht .lang_select .lang_current .ico.global {background: url(../images/common/icon_lang_w.png) 0 0 no-repeat;}
+.header.wht .gnb_menu .weve_btn a {border: 1px solid #fff;background: url(../images/common/weve_logo_w.png) no-repeat 50% 50%;}
+.header.wht .top_sitemap button span::before, .header.wht .top_sitemap button span::after {background-color: #fff;}
 
 /* sitemap */
 
