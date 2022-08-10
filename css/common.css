@@ -9,7 +9,7 @@
 * {margin:0; padding:0; box-sizing:border-box !important;}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, article, aside, hgroup, header, footer, figure, figcaption, nav, section { margin:0; padding:0; border:0; font-size:100%; vertical-align:baseline; background:transparent; }
 article, aside, hgroup, header, footer, figure, figcaption, nav, section {display:block;}
-html, body {font-size:62.5%;font-family: 'YGO'; font-weight: 200; color:#000; line-height:1.2; letter-spacing: -.25em; box-sizing:border-box; -webkit-text-size-adjust:none; }
+html, body {font-size:62.5%;font-family: 'YGO520';/* font-weight: 200; */ color:#000; line-height:1.2; letter-spacing: -.25em; box-sizing:border-box; -webkit-text-size-adjust:none; }
 h1, h2, h3, h4, h5, h6 {font-weight:normal; line-height:normal; word-break:keep-all;}
 fieldset {border:none;}
 ol, li {list-style:none; zoom:1;}
@@ -98,7 +98,8 @@ br.br_t, br.br_m {display: none;}
 .header .header_wrap {height: 10rem;display: flex;align-items: center;font-size: 1.8rem;color: #222;}
 .header .logo {display: block;width: 10.3rem;height: 2.8rem;background: url(../images/common/logo_b.png) no-repeat;font-size: 0;margin-right: 7vw;}
 .header .gnb {width: 74.8rem;}
-.header .gnb > ul {width: 100%;display: flex;flex-shrink: 1; justify-content: space-around;}
+.header .gnb > ul {width: 100%;display: flex;flex-shrink: 1; justify-content: space-around; /* font-weight: 300; */ font-family: 'YGO530';}
+.header .gnb > ul li a { /* font-weight: 300; */font-family: 'YGO530'; }
 .header .gnb_menu {width: 46rem;display: flex;flex-shrink: 0;justify-content: space-between;align-items: center;margin-left: auto;}
 .header .gnb_menu .right_nav ul {display: flex;}
 .header .gnb_menu .right_nav ul li a {font-size: 1.4rem;color: #777;padding: 0 2rem;}
@@ -112,7 +113,7 @@ br.br_t, br.br_m {display: none;}
 .header .lang_select .lang_choice {display: block;position: absolute;top: 3.3rem;left: 0;margin-left: -2.5rem; overflow: hidden;background: #fff;width: 8rem;height: 0;text-align: center;transition: all .3s;}
 .header .lang_select .lang_choice li {margin-top: 1rem;line-height: normal;}
 .header .lang_select .lang_choice li:first-child {margin-top: 0;}
-.header .lang_select .lang_choice li a {font-weight: 300;font-size: 1.7rem;color: #777;}
+.header .lang_select .lang_choice li a { font-family: 'YGO530';/* font-weight: 300; */font-size: 1.7rem;color: #777;}
 .header .lang_select .lang_choice li.on a {color: #222;}
 .header .lang_select.open .lang_choice {height: auto;padding: 2rem 0;border: .1rem solid #808080;}
 .header .lang_select.open .lang_current .ico.select {transform: rotate(180deg);}

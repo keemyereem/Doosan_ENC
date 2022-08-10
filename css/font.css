@@ -2,15 +2,6 @@
 /* FONT */
 
 /* ------------------------------------noto sans kr----------------------------------- */
-/* @font-face {
-    font-family: 'NS';
-    font-weight: 50;
-    src: local(※),
-    url(../font/NotoSansCJKkr-Thin.eot?#iefix) format('embedded-opentype'),
-    url(../font/NotoSansCJKkr-Thin.woff) format('woff'),
-    url(../font/NotoSansCJKkr-Thin.ttf) format('truetype');
-} */
-
 @font-face {
     font-family: 'NS';
     font-weight: 100;
@@ -49,13 +40,7 @@
     url(../font/NotoSansCJKkr-Bold.eot?#iefix) format('embedded-opentype'),
     url(../font/NotoSansCJKkr-Bold.ttf) format('truetype');
 }
-/* @font-face {
-    font-family: 'NS';
-    font-weight: 500;
-    src: local(※),
-    url(../font/NotoSansCJKkr-Black.eot?#iefix) format('embedded-opentype'),
-    url(../font/NotoSansCJKkr-Black.otf) format('truetype');
-} */
+
 
 /* ------------------------------------play----------------------------------- */
 @font-face {
@@ -71,71 +56,29 @@
     url(../font/Play-Bold.ttf) format('truetype');
 }
 
-/* ------------------------------------Poppins----------------------------------- */
-@font-face {
-    font-family: 'Poppins';
-    font-weight: 100;
-    src: local(※),
-    url(../font/Poppins-ExtraLight.ttf) format('truetype');
-}
-@font-face {
-    font-family: 'Poppins';
-    font-weight: 150;
-    src: local(※),
-    url(../font/Poppins-Thin.ttf) format('truetype');
-}
-@font-face {
-    font-family: 'Poppins';
-    font-weight: 200;
-    src: local(※),
-    url(../font/Poppins-Light.ttf) format('truetype');
-}
-@font-face {
-    font-family: 'Poppins';
-    font-weight: 300;
-    src: local(※),
-    url(../font/Poppins-Regular.ttf) format('truetype');
-}
-@font-face {
-    font-family: 'Poppins';
-    font-weight: 400;
-    src: local(※),
-    url(../font/Poppins-Medium.ttf) format('truetype');
-}
-@font-face {
-    font-family: 'Poppins';
-    font-weight: 500;
-    src: local(※),
-    url(../font/Poppins-SemiBold.ttf) format('truetype');
-}
-@font-face {
-    font-family: 'Poppins';
-    font-weight: 600;
-    src: local(※),
-    url(../font/Poppins-Bold.ttf) format('truetype');
-}
-@font-face {
-    font-family: 'Poppins';
-    font-weight: 700;
-    src: local(※),
-    url(../font/Poppins-ExtraBold.ttf) format('truetype');
-}
 
+/* ------------------------------------윤고딕----------------------------------- */
 @font-face {
-    font-family: "YGO"; 
-    font-weight: 200;
+    font-family: "YGO520"; 
+    font-weight: normal;
     src: local(※),
-    url(../font/YD_YGO520.TTF) format('truetype');
+    url(../font/YGO520.ttf) format('truetype');
 }
 @font-face {
-    font-family: "YGO"; 
-    font-weight: 300;
+    font-family: "YGO530"; 
+    font-weight: normal;
     src: local(※),
-    url(../font/YD_YGO530.ttf) format('truetype');
+    url(../font/YGO530.ttf) format('truetype');
 }
 @font-face {
-    font-family: "YGO"; 
-    font-weight: 400;
+    font-family: "YGO540"; 
+    font-weight: normal;
     src: local(※),
-    url(../font/YD_YGO550.ttf) format('truetype');
+    url(../font/YGO540.ttf) format('truetype');
+}
+@font-face {
+    font-family: "YGO550"; 
+    font-weight: normal;
+    src: local(※),
+    url(../font/YGO550.ttf) format('truetype');
 }

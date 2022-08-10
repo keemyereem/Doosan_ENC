@@ -19,17 +19,20 @@ $(function(){
         menu: '#rightnavi',
         verticalCentered: false,
         css3: true,
-        sectionsColor: ['#FEC260', '#3FA796', '#A10035', '#FEC260'],
-        // navigation: true,
-        // navigationPosition: 'right',
-        // navigationTooltips: ['Masterpiece', 'Business', 'Social responsibility', 'Career', 'Channel'],
-        // showActiveTooltip: false,
+        sectionsColor: ['#FEC260', '#3FA796', '#A10035', '#FEC260', '#222'],
 
         // controlArrows: true,            // 슬라이드 컨트롤 애로우 생성 
         // slidesNavigation: true,         // 슬라이드 컨트롤 네비게이션 생성
         // slidesNavPosition: 'bottom',    // 슬라이드 컨트롤 네비게이션 위치 
 
         scrollingSpeed: 1000,
+        onLeave: function(index, nextIndex, direction){
+          if(nextIndex == 5){
+            $(".header").addClass("wht");
+          }else {
+            $(".header").removeClass("wht");
+          }
+        }
 
 
 
@@ -61,8 +64,8 @@ var mainEvent = {
     init:function(){
         this.headerEvent();
         this.intro();
-        this.mainSwiper();
         this.sec02Swiper();
+        this.sec03Swiper();
     },
 
     headerEvent:() => {
@@ -108,7 +111,10 @@ var mainEvent = {
             var x = document.getElementById("intro_trigger");
             x.addEventListener("animationend", () => {
                 console.log('-> intro animation end');
+
                 $('.header').addClass('wht');
+                $('#rightnavi, .sec01_controller').css('opacity', '1')
+                mainEvent.mainSwiper();
             });
 
 
@@ -118,10 +124,13 @@ var mainEvent = {
     mainSwiper: () => {
         var swiper = new Swiper(".mainSwiper", {
             spaceBetween: 30,
-            speed: 1000,
+            speed: 500,
             effect: "fade",
             loop: true,
-            // autoplay: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: true,
+            },
             
             navigation: {
               nextEl: ".swiper-button-next",
@@ -132,40 +141,37 @@ var mainEvent = {
               clickable: true,
             },
 
-            //  슬라이드 이벤트 감지 - 참고 https://songsong.dev/entry/swiperjs-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%8D%94-%EA%B8%B0%EB%B3%B8-%EC%82%AC%EC%9A%A9%EB%B2%95-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0
+            //  슬라이드 이벤트 감지 - 참고 https://songsong.dev/entry/swiperjs-슬라이더-기본-사용법-알아보기
             on : {  
+                init: function() {
+                    // this.autoplay.stop()
+                },
 
-              slideChangeTransitionStart: () => {
-                  
-                  $('.swiper-pagination-bullet').eq(this.realIndex).addClass('realIndex');
-                  // $('.swiper-pagination-bullet').not(':eq(' + this.realIndex + ')').removeClass('realIndex');
-                  
-              },
+                slideChangeTransitionStart: function() {
+                    $('.swiper-slide').addClass('changing');
+                    $('.swiper-slide').removeClass('changed');
+                },
 
-              slideChangeTransitionEnd: () => {
-
-                
-              },
+                slideChangeTransitionEnd: () => {
+                    $('.swiper-slide').removeClass('changing');
+                    $('.swiper-slide').addClass('changed');
+                },
             }
 
         });
 
-
-        let dd = $('.realIndex').position();
-        console.log(dd);
-        $('.bullet_hr').css('left', (dd / 10) + 'rem');
-        
-          
- 
-        
-
-
-        $(document).on('click', '.mainSwiper .swiper-pagination-bullet, .mainSwiper .swiper-button', () => {
+        // 페이지네이션 동그라미 슬라이드별 이동
+        swiper.on('transitionStart', ()=> {
             let $this = $('.swiper-pagination-bullet-active').position().left;
+            $('.bullet_hr').css('left', ($this / 10) + 'rem');
+        });
 
-            console.log('bullet click / ' + 'position : ' + $this);
-            $('.bullet_hr').css('left', ($this / 10) + 'rem')
-        })
+        // Next, Prev버튼 클릭 시 오토플레이 재개
+        $(document).on('click', '.swiper-button', () => {
+            swiper.autoplay.start();
+        });
+
+
     },
 
     sec02Swiper: () => {
@@ -173,7 +179,12 @@ var mainEvent = {
       var swiper2 = new Swiper(".section02 .swiper", {
         speed: 500,
         loop: true,
+        autoplayDisableOnInteraction: false,
+        slidesPerView: 1, 
         effect: "fade",
+        fadeEffect: {
+          crossFade: true
+        },
         watchOverflow: true,
         watchSlidesProgress: true,
         watchSlidesVisibility: true,
@@ -193,10 +204,66 @@ var mainEvent = {
         },
 
 
-    });
+      });
 
     },
 
+    sec03Swiper: () => {
+      var swiper3 = new Swiper(".section03 .bus_swiper", {
+        speed: 500,
+        loop: true,
+        autoplayDisableOnInteraction: false,
+        slidesPerView: 1, 
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true
+        },
+        watchOverflow: true,
+        watchSlidesProgress: true,
+        watchSlidesVisibility: true,
+
+        pagination: {
+          el: '.swiper-pagination-sec03',
+          clickable: 'true',
+          type: 'bullets',
+      
+        },
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false
+        },
+
+
+      });
+
+      var innerSwiper3 = new Swiper(".section03 .inner_swiper", {
+        speed: 500,
+        loop: true,
+        autoplayDisableOnInteraction: false,
+        slidesPerView: 1, 
+        watchOverflow: true,
+        watchSlidesProgress: true,
+        watchSlidesVisibility: true,
+
+        pagination: {
+          el: '.section03 .right .swiper-pagination',
+          clickable: 'true',
+          type: 'bullets',
+      
+        },
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false
+        },
+
+
+      });
+
+    },
+    
+
+
+  
 
   
 };
