@@ -71,44 +71,6 @@
     url(../font/Play-Bold.ttf) format('truetype');
 }
 
-/* ------------------------------------Montserrat----------------------------------- */
-@font-face {
-    font-family: 'Montserrat';
-    font-weight: 100;
-    src: local(※),
-    url(../font/Montserrat-Light.ttf) format('truetype');
-}
-@font-face {
-    font-family: 'Montserrat';
-    font-weight: 200;
-    src: local(※),
-    url(../font/Montserrat-Regular.ttf) format('truetype');
-}
-@font-face {
-    font-family: 'Montserrat';
-    font-weight: 300;
-    src: local(※),
-    url(../font/Montserrat-Medium.ttf) format('truetype');
-}
-@font-face {
-    font-family: 'Montserrat';
-    font-weight: 350;
-    src: local(※),
-    url(../font/Montserrat-SemiBold.ttf) format('truetype');
-}
-@font-face {
-    font-family: 'Montserrat';
-    font-weight: 400;
-    src: local(※),
-    url(../font/Montserrat-Bold.ttf) format('truetype');
-}
-@font-face {
-    font-family: 'Montserrat';
-    font-weight: 450;
-    src: local(※),
-    url(../font/Montserrat-ExtraBold.ttf) format('truetype');
-}
-
 /* ------------------------------------Poppins----------------------------------- */
 @font-face {
     font-family: 'Poppins';
