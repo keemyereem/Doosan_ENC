@@ -2,24 +2,31 @@
 /* --------------------- DoosanENC Released 2022.08.08 --------------------- */
 /* --------------------- Published by 4m Creative --------------------- */
 .container {position: relative;}
-#rightnavi {position: fixed;top: 50%;right: 8rem;transform: translateY(-50%);text-align: center; opacity: 0; transition: opacity ease 1s; }
-#rightnavi li {position: relative;margin: 3rem 0;width: 2.2rem;text-align: center;}
-#rightnavi li a {display: inline-block;width: .7rem;height: .7rem;background: #ccc;border-radius: 50%;vertical-align: top;transition: all .1s;} 
+
+#rightnavi {position: fixed; top: 50%; right: 5rem; transform: translateY(-50%);text-align: center; opacity: 0; transition: opacity ease 1s; }
+#rightnavi.none {display: none;}
+#rightnavi li {position: relative;margin: 3rem 0;width: 2.2rem;text-align: center; padding-bottom: 0; transition: padding-bottom ease .5s;}
+#rightnavi li a {display: inline-block; position: relative; width: .7rem;height: .7rem;background: #ccc;border-radius: 50%;vertical-align: top; overflow: visible; } 
 #rightnavi li.active a {background: #005eb8;}
-#rightnavi li a span {display: none;font-size: 1.8rem;font-family: 'Montserrat';font-weight: 700;color: #005eb8;writing-mode: vertical-rl;height: auto;}
-#rightnavi li.active a span {display: block;margin-top: 3rem;line-height: 1;}
-#rightnavi li:first-child.active {}
-#rightnavi li:nth-child(2).active {padding-bottom: 11.7rem;}
-#rightnavi li:nth-child(3).active {padding-bottom: 8.5rem;}
-#rightnavi li:nth-child(4).active {padding-bottom: 19rem;border: 1px solid red;}
-#rightnavi li:nth-child(5).active {padding-bottom: 6.4rem;}
-#rightnavi li:last-child.active {padding-bottom: 6.4rem;}
+#rightnavi li a span { position: absolute; left: 0; right: 0; margin: auto; font-size: 1.8rem; font-family: 'Montserrat'; font-weight: 400; color: #005eb8; writing-mode: vertical-rl; height: 0; width: fit-content; overflow: hidden; transition: 2s max-height ease 0s; max-height: 0; white-space: nowrap; }
+#rightnavi li.active a span { margin-top: 3rem; line-height: 1; height: auto; max-height: 50rem; }
+#rightnavi li:nth-child(2).active {padding-bottom: 12rem; }
+#rightnavi li:nth-child(3).active {padding-bottom: 9rem; }
+#rightnavi li:nth-child(4).active {padding-bottom: 18.5rem; }
+#rightnavi li:nth-child(5).active {padding-bottom: 7rem; }
+#rightnavi li:nth-child(6).active {padding-bottom: 8.5rem; }
+#rightnavi li:last-child {display: none; }
 
 #main #fullpage section {width: 100%; height: 100vh;}
+#main #fullpage section .center { width: 100%; height: 100%; display: flex; align-items: center; }
+#main #fullpage section .inner {margin: 0 auto; height: fit-content; width: 100%; position: relative; }
+#main #fullpage section .sec_tit { font-family: 'Montserrat'; font-size: 6rem; font-weight: 800; color: #222; }
+#main #fullpage section .sec_tit::before { content:''; display: block; width: 6.5rem; height: .6rem; background: #005eb8; transform: skew(-45deg); margin-bottom: 2.5rem; }
+
 #main #fullpage .section01 { position: relative; clip-path: polygon(37% 17%, 72% 17%, 63% 87%, 27% 87%); }
 #main #fullpage .section01.ani { animation: intro 1s alternate; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
 #main #fullpage .section01 .center,
-#main #fullpage .section01 .center .inner { height: 100%; } 
+#main #fullpage .section01 .center .inner { width: 100%; height: 100%; } 
 #main #fullpage .section01 .swiper { width: 100%; height: 100%; }
 #main #fullpage .section01 .swiper-slide { background-position: center; background-size: cover; }
 #main #fullpage .section01 .swiper-slide h2 { font-size: 6.6rem; color: #fff; position: absolute; top: 0; bottom: 0; left: 10%; margin: auto; height: fit-content; transform: translateY(-6rem); }
@@ -41,17 +48,17 @@
 
 #main #fullpage .section02 .swiper, #main #fullpage .section02 .swiper-wrapper, #main #fullpage .section02 .swiper-slide { width: 100%; height: 100vh; }
 #main #fullpage .section02 .swiper { position: relative; }
-#main #fullpage .section02 .swiper-slide { border: 1px solid red; position: relative; display: flex; align-items: flex-end; }
-#main #fullpage .section02 h1 { opacity: 0; position: absolute; top: 50%; transform: translateY(-100%); left: 29vw; font-family: 'Montserrat'; font-size: 8.8rem; color: #0e1115; font-weight: 800; text-transform: uppercase; letter-spacing: -.088rem; }
-#main #fullpage .section02 .big_img { width: auto;  height: 100%; }
-#main #fullpage .section02 .big_img img  {height: 100%; object-fit: cover; }
+#main #fullpage .section02 .swiper-slide { position: relative; display: flex; align-items: flex-end; }
+#main #fullpage .section02 h1 { opacity: 0; position: absolute; top: 50%; transform: translateY(-100%); left: 0; font-family: 'Montserrat'; font-size: 8.8rem; color: #0e1115; font-weight: 800; text-transform: uppercase; letter-spacing: -.088rem; transition: all .6s .3s ease-in-out; }
+#main #fullpage .section02 .big_img {  height: 100%; }
+#main #fullpage .section02 .big_img img  { width: auto; object-fit: cover; }
 #main #fullpage .section02 .mov_txt { opacity: 0; font-family: 'Montserrat'; font-size: 34rem; font-weight: 900; color: #87afdc; position: absolute; top: 50%; transform: translateY(-50%); left: 100%; }
 #main #fullpage .section02 .right { position: relative; padding-bottom: 4rem; padding-left: 4rem; }
 #main #fullpage .section02 .right .contents { display: flex; align-items: center; }
 #main #fullpage .section02 .right .contents .con_txt { margin-left: 4rem; opacity: 0; }
 #main #fullpage .section02 .right .contents .con_txt dt { font-size: 2.2rem; font-weight: 700; color: #005eb8; letter-spacing: -.05em; }
 #main #fullpage .section02 .right .contents .con_txt dd { font-size: 1.8rem; color: #555; line-height: 1.66; margin-top: 2rem; }
-#main #fullpage .section02 .swiper-slide.swiper-slide-active h1 { opacity: 1; }
+#main #fullpage .section02 .swiper-slide.swiper-slide-active h1 { opacity: 1; left: 29vw; }
 #main #fullpage .section02 .swiper-slide.swiper-slide-active .mov_txt { opacity: 1; z-index: -1; animation: sec02_txt 5s .2s; }
 #main #fullpage .section02 .swiper-slide.swiper-slide-active .con_txt { opacity: 1; }
 #main #fullpage .section02 .swiper-pagination-sec02 { display: flex; width: auto; margin-bottom: 5.3rem; }
@@ -62,17 +69,97 @@
 #main #fullpage .section02 .swiper-pagination-bullet-active { background-color: transparent; }
 #main #fullpage .section02 .swiper-pagination-bullet-active b { animation-name: countingBar; animation-duration: 5s; animation-timing-function: ease-in; animation-iteration-count: 1; animation-direction: alternate ; animation-fill-mode:forwards; }
 
-#main #fullpage .section03 .inner { max-width: 144rem; margin: 0 auto; }
-#main #fullpage .section03 .sec_tit { font-family: 'Montserrat'; font-size: 6rem; font-weight: 800; color: #222; }
-#main #fullpage .section03 .sec_tit::before { content:''; display: block; width: 6.5rem; height: .6rem; background: #005eb8; transform: skew(-45deg); margin-bottom: 2.5rem; }
-#main #fullpage .section03 .bus_swiper .swiper-slide { display: flex; }
-#main #fullpage .section03 .bus_swiper .left { width: 46rem; height: auto; background: #fff; border: 1px solid #005eb8; padding: 3rem 3rem 7rem; }
-#main #fullpage .section03 .bus_swiper .left .tit {  font-family: 'YGO550'; /* font-weight: 400; */ font-size: 2.4rem; color: #0e1115; letter-spacing: -.06rem; margin: 3rem 0; }
+#main #fullpage .section03 .inner { max-width: 147.5rem; margin: 5rem auto 0; transform: translateX(-1.75rem); position: relative; }
+#main #fullpage .section03 .sec_tit { margin-left: 3.5rem; position: absolute; top: 0; }
+#main #fullpage .section03 .bus_swiper > .swiper-wrapper > .swiper-slide { display: flex; align-items: flex-start; height: fit-content; padding-bottom: 4rem; padding-top: 1.8rem; }
+#main #fullpage .section03 .bus_swiper .left { width: 46rem; min-height: 55.4rem; height: fit-content; background: #fff; box-shadow: 5px 4px 20px 0px rgba(54, 63, 72, 0.5); border: 1px solid #005eb8; padding: 3rem 3rem 7rem; transform: translateY(8.5rem); margin-left: 3.5rem; margin-top: 3rem; }
+#main #fullpage .section03 .bus_swiper .left .tit { font-weight: 400; font-size: 2.4rem; color: #0e1115; letter-spacing: -.06rem; margin: 3rem 0; }
 #main #fullpage .section03 .bus_swiper .left ul li { display: flex; }
 #main #fullpage .section03 .bus_swiper .left ul li+li { margin-top: 1.5rem; }
 #main #fullpage .section03 .bus_swiper .left ul li b::before { content:''; display: inline-block; width: .612rem; height: .612rem; background: #d9dfe9; border-radius: 50%; vertical-align: middle; margin-right: 1.5rem; }
 #main #fullpage .section03 .bus_swiper .left ul li b { font-size: 1.6rem; color: #0e1115; letter-spacing: -.032rem; display: inline-block; width: 10rem; flex-shrink: 0; }
-#main #fullpage .section03 .bus_swiper .left ul li span {  font-family: 'YGO530';/* font-weight: 300; */ font-size: 1.6rem; color: #777; letter-spacing: -.032rem; }
+#main #fullpage .section03 .bus_swiper .left ul li span { font-weight: 300; font-size: 1.6rem; color: #777; letter-spacing: -.032rem; }
+#main #fullpage .section03 .bus_swiper .right { width: calc(100% - 42rem); margin-left: -4rem; z-index: -1; }
+#main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 { width: auto; float: right; }
+#main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > .swiper-pagination-bullet { opacity: 1;  border-radius: 0; margin-right: 4rem; background: transparent; height: fit-content; }
+#main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span::after { content:''; display: block; width: 100%; height: .1rem; background: rgba(0, 94, 184,.2); }
+#main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span.swiper-pagination-bullet-active::after { background: rgba(0, 94, 184,1); height: .2rem; }
+#main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span:nth-of-type(1) { width: 28rem; }
+#main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span:nth-of-type(2) { width: 24rem; }
+#main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span:nth-of-type(3) { width: 28rem; margin-right: 0; }
+#main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span > em { display: inline-block; width: 100%; padding-bottom: 2rem; font-weight: 500; font-size: 1.6rem; color: #0e1115; position: relative; }
+#main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span > em::after { content:''; display: inline-block; font-family: 'Montserrat'; position: absolute; right: 0; }
+#main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span.swiper-pagination-bullet-active > em { color: #005eb8; }
+#main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span:nth-of-type(1) > em::after { content:'Building real value'; }
+#main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span:nth-of-type(2) > em::after { content:'Creating new space'; }
+#main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span:nth-of-type(3) > em::after { content:'Connected to the world'; }
+#main #fullpage .section03 .inner_swiper { position: relative;  }
+#main #fullpage .section03 .inner_swiper,
+#main #fullpage .section03 .inner_swiper .swiper-wrapper,
+#main #fullpage .section03 .inner_swiper .swiper-slide { width: 100%; height: 100%; }
+#main #fullpage .section03 .inner_swiper .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
+#main #fullpage .section03 .inner_swiper .swiper-pagination { width: auto; position: absolute; left: 9rem; bottom: 4rem; }
+#main #fullpage .section03 .inner_swiper .swiper-pagination > span { width: .7rem; height: .7rem; opacity: 1; background: #fff; margin-right: 3rem; position: relative; }
+#main #fullpage .section03 .inner_swiper .swiper-pagination > span::before { content:''; display: inline-block; width: 2.6rem; height: 2.6rem; border: 1px solid #fff; border-radius: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; }
+#main #fullpage .section03 .inner_swiper .swiper-pagination > span.swiper-pagination-bullet-active::before { opacity: 1; }
+
+#main #fullpage .section04 { position: relative; }
+#main #fullpage .section04 .inner { max-width: 164rem; }
+#main #fullpage .section04 .sec_tit { padding: 23.6vh 0 4.6rem; left: 15vw; position: relative; top: 0; }
+#main #fullpage .section04 .card { bottom: 0; left: 0; right: 0; width: 100%; height: 54vh; max-width: 164rem; margin: auto; display: flex; }
+#main #fullpage .section04 .card li { height: 100%; width: calc(100% / 5); position: relative; }
+#main #fullpage .section04 .card li p,
+#main #fullpage .section04 .card li h3 { position: absolute; left: 0; right: 0; bottom: 0; top: 0; margin: auto; display: inline-table; }
+#main #fullpage .section04 .card li p { font-size: 2rem; transform: translateY(5.6rem); color: #222; }
+#main #fullpage .section04 .card li h3 { transform: translateY(5.6rem); color: #fff; overflow: hidden; }
+#main #fullpage .section04 .card li h3 span { font-family: 'Montserrat'; font-weight: 450; display: inline-block; overflow: hidden; }
+#main #fullpage .section04 .card li h3 span:first-child { text-indent: 100%; font-size: 6rem; }
+#main #fullpage .section04 .card li h3 span:last-child { text-indent: 0; font-size: 1.8rem; margin-top: -1rem; position: relative; top: 0; opacity: 0; margin-left: .5rem;}
+#main #fullpage .section04 .card li .bg { position: absolute; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 0; transition: all ease .3s; }
+#main #fullpage .section04 .card li .icon { position: absolute; left: 0; right: 0; bottom: 0; top: 0; margin: auto; transform: translateY(-6rem); }
+#main #fullpage .section04 .card li:nth-child(2) .icon { transform: translateY(-7rem); }
+#main #fullpage .section04 .card li:hover { flex-direction: column-reverse; }
+#main #fullpage .section04 .card li:hover .bg { opacity: 1; box-shadow: .8rem .6rem 2rem 0 rgba(0, 0, 0, 0.4); }
+#main #fullpage .section04 .card li:hover p { color: #fff; transform: translateY(-15.7rem); }
+#main #fullpage .section04 .card li:hover h3 span:last-child { opacity: 1; top: -1rem; transition:.3s all ease .4s;  }
+#main #fullpage .section04 .card li:hover h3 span:first-child { animation: sec04_cardDescription .5s forwards }
+
+#main #fullpage .section05 .inner { max-width: 144rem; }
+#main #fullpage .section05 .sec_tit { font-family: 'Montserrat'; font-size: 6rem; font-weight: 800; color: #222; position: absolute; top: 0; }
+
+#main #fullpage .section06 .inner { max-width: 144rem; width: 100%; height: 100%; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+#main #fullpage .section06 .left .sub_tit { font-family: 'YOON'; font-size: 3rem; color: #555; line-height: 1.53; margin: 2rem 0 7rem; }
+#main #fullpage .section06 .left .viewmore { display: block; width: 13.6rem; font-family: 'Montserrat'; font-size: 1.4rem; color: #222; position: relative; }
+#main #fullpage .section06 .left .viewmore::after { content:''; display: block; width: 0; height: .1rem; background: #000; margin-top: 1rem; transition: all .3s; }
+#main #fullpage .section06 .left .viewmore:hover::after { width: 100%; }
+#main #fullpage .section06 .left .viewmore > span { display: inline-block; opacity: 0; width: 1.2rem; height: .1rem; background: #000; position: absolute; right: 0; bottom: 2rem; }
+#main #fullpage .section06 .left .viewmore:hover > span { opacity: 1; }
+#main #fullpage .section06 .left ul { width: 34rem; display: flex; justify-content: space-between; margin-top: 10rem; }
+#main #fullpage .section06 .left ul li .pg_name { font-size: 1.6rem; color: #222; text-align: center; margin-top: 2rem; }
+#main #fullpage .section06 .right { width: 84rem; position: relative; }
+#main #fullpage .section06 .right .tab { display: flex; width: 21.4rem; margin-left: auto; margin-bottom: 4rem; }
+#main #fullpage .section06 .right .tab li { width: 50%; text-align: right; }
+#main #fullpage .section06 .right .tab li:nth-child(1) { padding-right: 3.2rem; }
+#main #fullpage .section06 .right .tab li a { font-family: 'Montserrat'; font-size: 1.8rem; font-weight: 700; position: relative; color: #d1d1d1; }
+#main #fullpage .section06 .right .tab li a::before { content:''; display: inline-block; width: .5rem; height: .5rem; border-radius: 50%; background: #d1d1d1; position: absolute; left: -1.5rem; top: .8rem; }
+#main #fullpage .section06 .right .tab li:nth-child(1).on a::before { background: #005eb8; }
+#main #fullpage .section06 .right .tab li:nth-child(2).on a::before { background: #00ad83; }
+#main #fullpage .section06 .right .tab li:nth-child(1).on a { color: #005eb8; }
+#main #fullpage .section06 .right .tab li:nth-child(2).on a { color: #00ad83; }
+#main #fullpage .section06 .right .contents { position: relative; }
+#main #fullpage .section06 .right .contents > ul { /* height: 54.8rem; position: absolute; opacity: 0; z-index: -1; */display: none; }
+#main #fullpage .section06 .right .contents > ul.on {  display: block; }
+#main #fullpage .section06 .right .contents > ul li { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; padding: 5rem 0; }
+#main #fullpage .section06 .right .contents > ul li:last-child { margin-top: -1px; }
+#main #fullpage .section06 .right .contents > ul li:hover { border-color: #005eb8; z-index: 10; position: relative; }
+#main #fullpage .section06 .right .contents .tag { font-family: 'Montserrat'; font-size: 1.6rem; font-weight: 700; color: #005eb8; }
+#main #fullpage .section06 .right .contents .tag > .date { font-weight: 500; color: #999; }
+#main #fullpage .section06 .right .contents .tag > .date::before { content:''; display: inline-block; width: .1rem; height: 1rem; background: #ccc; margin: 0 2rem; }
+#main #fullpage .section06 .right .contents > ul li .txt p { font-weight: 700; color: #222; font-size: 2.2rem; letter-spacing: -.055rem; margin: 3rem 0 4rem; }
+#main #fullpage .section06 .right .contents > ul li .txt a { font-family: 'Montserrat'; font-size: 1.4rem; color: #222; position: relative; }
+#main #fullpage .section06 .right .contents > ul li .txt a::after { content:''; display: inline-block; width: .9rem; height: 1.5rem; background: url(../images/main/sec06_arrow.png) no-repeat; position: absolute; top: 50%; left: 100%; transform: translateX(4rem); margin-top: -.75rem; transition: transform .3s; }
+#main #fullpage .section06 .right .contents > ul li .txt a:hover::after { transform: translateX(6rem); }
+
 
 
 /* --------------------- Animations --------------------- */
@@ -97,3 +184,8 @@
     0% {width: 0;}
     100% {width:100%;}
 }
+
+@keyframes sec04_cardDescription {
+    80% { text-indent: 0%; }
+    100% { text-indent: 0%; }
+} 

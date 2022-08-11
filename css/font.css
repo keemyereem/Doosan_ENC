@@ -1,6 +1,47 @@
 @charset "utf-8";
 /* FONT */
 
+/* ------------------------------------Montserrat----------------------------------- */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap'); */
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 100;
+    src: local(※),
+    url(../font/Montserrat-Light.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 200;
+    src: local(※),
+    url(../font/Montserrat-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 300;
+    src: local(※),
+    url(../font/Montserrat-Medium.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 350;
+    src: local(※),
+    url(../font/Montserrat-SemiBold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    src: local(※),
+    url(../font/Montserrat-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 450;
+    src: local(※),
+    url(../font/Montserrat-ExtraBold.ttf) format('truetype');
+}
+
+
 /* ------------------------------------noto sans kr----------------------------------- */
 @font-face {
     font-family: 'NS';
@@ -39,46 +80,4 @@
     src: local(※),
     url(../font/NotoSansCJKkr-Bold.eot?#iefix) format('embedded-opentype'),
     url(../font/NotoSansCJKkr-Bold.ttf) format('truetype');
-}
-
-
-/* ------------------------------------play----------------------------------- */
-@font-face {
-    font-family: 'play';
-    font-weight: 200;
-    src: local(※),
-    url(../font/Play-Regular.ttf) format('truetype');
-}
-@font-face {
-    font-family: 'play';
-    font-weight: 400;
-    src: local(※),
-    url(../font/Play-Bold.ttf) format('truetype');
-}
-
-
-/* ------------------------------------윤고딕----------------------------------- */
-@font-face {
-    font-family: "YGO520"; 
-    font-weight: normal;
-    src: local(※),
-    url(../font/YGO520.ttf) format('truetype');
-}
-@font-face {
-    font-family: "YGO530"; 
-    font-weight: normal;
-    src: local(※),
-    url(../font/YGO530.ttf) format('truetype');
-}
-@font-face {
-    font-family: "YGO540"; 
-    font-weight: normal;
-    src: local(※),
-    url(../font/YGO540.ttf) format('truetype');
-}
-@font-face {
-    font-family: "YGO550"; 
-    font-weight: normal;
-    src: local(※),
-    url(../font/YGO550.ttf) format('truetype');
 }

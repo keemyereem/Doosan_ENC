@@ -15,12 +15,12 @@ $(function(){
 	});
 
     $('#fullpage').fullpage({
-        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage'],
+        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage'],
         menu: '#rightnavi',
         verticalCentered: false,
         css3: true,
-        sectionsColor: ['#FEC260', '#3FA796', '#A10035', '#FEC260', '#222'],
-
+        
+        // sectionsColor: ['#FEC260', '#3FA796', '#fff', '#fff', '#fff'],
         // controlArrows: true,            // 슬라이드 컨트롤 애로우 생성 
         // slidesNavigation: true,         // 슬라이드 컨트롤 네비게이션 생성
         // slidesNavPosition: 'bottom',    // 슬라이드 컨트롤 네비게이션 위치 
@@ -31,6 +31,11 @@ $(function(){
             $(".header").addClass("wht");
           }else {
             $(".header").removeClass("wht");
+          }
+          if(nextIndex == 7){
+            $("#rightnavi").addClass("none");
+          }else {
+            $("#rightnavi").removeClass("none");
           }
         }
 
@@ -66,6 +71,9 @@ var mainEvent = {
         this.intro();
         this.sec02Swiper();
         this.sec03Swiper();
+        this.sec04Card();
+        this.sec06Tab();
+        this.footerEvent();
     },
 
     headerEvent:() => {
@@ -128,7 +136,7 @@ var mainEvent = {
             effect: "fade",
             loop: true,
             autoplay: {
-                delay: 2000,
+                delay: 5000,
                 disableOnInteraction: true,
             },
             
@@ -209,11 +217,13 @@ var mainEvent = {
     },
 
     sec03Swiper: () => {
+      var listArray = ["주택사업","건축사업","토목사업"];
       var swiper3 = new Swiper(".section03 .bus_swiper", {
         speed: 500,
         loop: true,
         autoplayDisableOnInteraction: false,
         slidesPerView: 1, 
+        allowTouchMove: false,
         effect: "fade",
         fadeEffect: {
           crossFade: true
@@ -226,7 +236,9 @@ var mainEvent = {
           el: '.swiper-pagination-sec03',
           clickable: 'true',
           type: 'bullets',
-      
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + '<em>'+ listArray[index]+'</em>' + '</span>';
+          },
         },
         autoplay: {
             delay: 5000,
@@ -235,10 +247,20 @@ var mainEvent = {
 
 
       });
+      //마우스 오버시 자동슬라이드 멈춤
+      $(".section03 .bus_swiper").each(function(elem, target){
+        var swp = target.swiper;
+        $(this).hover(function() {
+            swp.autoplay.stop();
+        }, function() {
+            swp.autoplay.start();
+        });
+      });
+
 
       var innerSwiper3 = new Swiper(".section03 .inner_swiper", {
         speed: 500,
-        loop: true,
+        loop: false,
         autoplayDisableOnInteraction: false,
         slidesPerView: 1, 
         watchOverflow: true,
@@ -251,17 +273,63 @@ var mainEvent = {
           type: 'bullets',
       
         },
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false
-        },
+        // autoplay: {
+        //     delay: 5000,
+        //     disableOnInteraction: false
+        // },
 
 
       });
 
     },
-    
 
+    sec04Card: () => {
+      $('.card li').hover(function() {
+        var getSrc = $(this).children('.icon').attr('src');
+        getSrc = getSrc.replace(".png","_hover.png");
+        
+        $(this).children('.icon').attr('src', getSrc);
+        
+      }, function() {
+        var getSrc = $(this).children('.icon').attr('src');
+        getSrc = getSrc.replace("_hover.png", ".png");
+
+        $(this).children('.icon').attr('src', getSrc);
+      });
+      
+    },
+
+    sec06Tab: () => {
+      var Tabs = $('.section06 .right .tab li');
+      Tabs.on("click", function(){
+        $(this).addClass('on');
+        $(this).siblings().removeClass('on');
+
+        var Tabs_idx = Tabs.index(this);
+        $('.section06 .right .contents > ul').removeClass('on');
+        $('.section06 .right .contents > ul').eq(Tabs_idx).addClass('on');
+        
+      });
+    },
+    
+    footerEvent: () => {
+      $(document).on("click",".family_site .site_selected",function(){
+        var selElm = $(this).parent();
+        if(!selElm.hasClass("open")){
+            selElm.addClass("open");
+        }else{
+            selElm.removeClass("open");
+        }
+      });
+
+      $(document).on("click",".family_site .site_list li a",function(){
+        var selected = this.innerText;
+        var siteName = document.getElementsByClassName('site_selected')[0];
+        var familySite = this.parentNode.parentNode.parentNode;
+        siteName.innerText = selected;
+        familySite.classList.remove('open');
+      });
+    },
 
   
 
