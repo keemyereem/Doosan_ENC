@@ -14,34 +14,30 @@ $(function(){
 
 	});
 
-    $('#fullpage').fullpage({
-        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage'],
-        menu: '#rightnavi',
-        verticalCentered: false,
-        css3: true,
-        
-        // sectionsColor: ['#FEC260', '#3FA796', '#fff', '#fff', '#fff'],
-        // controlArrows: true,            // 슬라이드 컨트롤 애로우 생성 
-        // slidesNavigation: true,         // 슬라이드 컨트롤 네비게이션 생성
-        // slidesNavPosition: 'bottom',    // 슬라이드 컨트롤 네비게이션 위치 
+    // $('#fullpage').fullpage({
+    //     anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage'],
+    //     menu: '#rightnavi',
+    //     verticalCentered: false,
+    //     css3: true,
 
-        scrollingSpeed: 1000,
-        onLeave: function(index, nextIndex, direction){
-          if(nextIndex == 5){
-            $(".header").addClass("wht");
-          }else {
-            $(".header").removeClass("wht");
-          }
-          if(nextIndex == 7){
-            $("#rightnavi").addClass("none");
-          }else {
-            $("#rightnavi").removeClass("none");
-          }
-        }
+    //     scrollingSpeed: 1000,
+    //     onLeave: function(index, nextIndex, direction){
+    //       if(nextIndex == 5){
+    //         $(".header").addClass("wht");
+    //       }else {
+    //         $(".header").removeClass("wht");
+    //       }
+    //       if(nextIndex == 7){
+    //         $("#rightnavi").addClass("none");
+    //       }else {
+    //         $("#rightnavi").removeClass("none");
+    //       }
+    //     },
 
 
 
-    });
+
+    // });
 
 });
 
@@ -52,13 +48,41 @@ $(function(){
 var commonEvent = {
     init:function(){
        this.headerEvent();
+       this.submenuEvent();
     }, 
 
-    headerEvent:function(){
+    headerEvent:() => {
 
-        
-    },
+      //언어선택
+      $(document).on("click",".lang_select .lang_current",function(){
+          var selElm = $(this).parent();
+          if(!selElm.hasClass("open")){
+              selElm.addClass("open");
+          }else{
+              selElm.removeClass("open");
+          }
+      });
 
+  },
+  submenuEvent: () => {
+      $(document).on('click', '.sub_visual_menu .depth', function(){
+          $(this).toggleClass("open");
+      });
+
+      $(document).on('click', '.sub_visual_menu .depth .drop_box li a', function(){
+          var selected = $(this).text();
+          var dep_tit = $(this).closest('.drop_box').siblings('.dep_tit');
+          dep_tit.text(selected);  
+          
+      });
+
+      $(document).on('click', '.scroll_down', function() {
+        $('html, body').animate({scrollTop:300}, '300');
+      });
+
+  },
+
+  
 };
 
 
@@ -69,11 +93,12 @@ var mainEvent = {
     init:function(){
         this.headerEvent();
         this.intro();
-        this.sec02Swiper();
-        this.sec03Swiper();
+        // this.sec02Swiper();
+        // this.sec03Swiper();
         this.sec04Card();
         this.sec06Tab();
         this.footerEvent();
+        this.createFullpage();
     },
 
     headerEvent:() => {
@@ -91,7 +116,14 @@ var mainEvent = {
     },
 
     intro:() => {
+        $(window).ready(() =>{
+          $('body').addClass('blockScroll');
+          $('#rightnavi, .sec01_controller').addClass('blind')
+        });
+
         $(window).load(() => {
+            
+
             var backgroundImageUrl = "../images/main/sec01_bg1.png";
 
             // checking if image is already there in cache 
@@ -120,8 +152,10 @@ var mainEvent = {
             x.addEventListener("animationend", () => {
                 console.log('-> intro animation end');
 
+                $('body').removeClass('blockScroll');
                 $('.header').addClass('wht');
-                $('#rightnavi, .sec01_controller').css('opacity', '1')
+                $('#rightnavi, .sec01_controller').removeClass('blind')
+                mainEvent.createFullpage();
                 mainEvent.mainSwiper();
             });
 
@@ -211,7 +245,6 @@ var mainEvent = {
             disableOnInteraction: false
         },
 
-
       });
 
     },
@@ -241,7 +274,7 @@ var mainEvent = {
           },
         },
         autoplay: {
-            delay: 5000,
+            delay: 3000,
             disableOnInteraction: false
         },
 
@@ -331,7 +364,118 @@ var mainEvent = {
       });
     },
 
-  
+    createFullpage: () => {
+      $('#fullpage').fullpage({
+        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage'],
+        menu: '#rightnavi',
+        verticalCentered: false,
+        css3: true,
+        
+        // sectionsColor: ['#FEC260', '#3FA796', '#fff', '#fff', '#fff'],
+        // controlArrows: true,            // 슬라이드 컨트롤 애로우 생성 
+        // slidesNavigation: true,         // 슬라이드 컨트롤 네비게이션 생성
+        // slidesNavPosition: 'bottom',    // 슬라이드 컨트롤 네비게이션 위치 
+
+        scrollingSpeed: 1000,
+        onLeave: function(index, nextIndex, direction){
+
+          if(nextIndex == 1 || nextIndex == 5){
+            setTimeout(() => {
+              $(".header").addClass("wht");
+            }, 1000);
+            
+          }else {
+            setTimeout(() => {
+            $(".header").removeClass("wht");
+            }, 1000);
+
+          }
+
+          // footer
+          if(nextIndex == 7){
+            $("#rightnavi, .header").addClass("indent");
+
+          }else {
+            $("#rightnavi, .header").removeClass("indent");
+
+          }
+        },
+
+        afterLoad: function(anchorLink, index){
+          /* 인포그래픽 섹션 도달 후 오토플레이 시작 */
+
+          if (index == 2) {
+            setTimeout(() => {
+              mainEvent.sec02Swiper();
+              // console.log('--> swiper02 initiating');
+
+            }, 300);
+          } else if (index == 3) {
+            setTimeout(() => {
+              mainEvent.sec03Swiper();
+              // console.log('--> swiper03 initiating');
+
+            },300);
+          } else {
+           
+          }
+
+          // footer
+          if (index == 7) {
+            setTimeout(() => {
+              $('.footer .sec_tit > span').addClass('fin')
+            }, 200);
+          } else {
+           
+          }
+        },
+
+
+
+    });
+  },
 
   
+};
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////                                                         **서브**                                                                   ///////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+var civilEngineerEvent = {
+  init: function(){
+    this.civilTab();
+    this.civilSwiper();
+  },
+  civilTab: () => {
+    var Tabs = $('.civil_engineer .tab_box ul li');
+    Tabs.on("click", function(){
+      $(this).addClass('on');
+      $(this).siblings().removeClass('on');
+    });
+
+  },
+
+  civilSwiper: () => {
+    $(".civil_engineer .outline .swiper").each(function(index){
+      console.log(index);
+      var idx = index +1;
+
+      // 첫번째 슬라이드 2depth 스와이퍼 
+      var bus03Swiper = new Swiper('.civil_engineer .outline .swiper0' + idx, {
+          observer: true,
+          observeParents: true,
+          slidesPerView : 1,
+          speed: 500,
+          
+          navigation: {
+              nextEl: '.civil_engineer .outline .swiper-button-next0' + idx,
+              prevEl: '.civil_engineer .outline .swiper-button-prev0' + idx,
+          },
+          watchOverflow: true,
+
+
+        });
+      });
+  },
+
 };
