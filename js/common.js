@@ -41,6 +41,7 @@ var commonEvent = {
     init:function(){
        this.headerEvent();
        this.submenuEvent();
+       this.footerEvent();
     }, 
 
     headerEvent:() => {
@@ -74,6 +75,24 @@ var commonEvent = {
 
   },
 
+  footerEvent: () => {
+    $(document).on("click",".family_site .site_selected",function(){
+      var selElm = $(this).parent();
+      if(!selElm.hasClass("open")){
+          selElm.addClass("open");
+      }else{
+          selElm.removeClass("open");
+      }
+    });
+
+    $(document).on("click",".family_site .site_list li a",function(){
+      var selected = this.innerText;
+      var siteName = document.getElementsByClassName('site_selected')[0];
+      var familySite = this.parentNode.parentNode.parentNode;
+      siteName.innerText = selected;
+      familySite.classList.remove('open');
+    });
+  },
   
 };
 
@@ -84,9 +103,9 @@ var commonEvent = {
 var mainEvent = {
     init:function(){
         this.headerEvent();
-        this.intro();
+        // this.intro();
+        this.createFullpage();
         this.sec04Card();
-        this.sec05Video();
         this.sec06Tab();
         this.footerEvent();
     },
@@ -133,7 +152,11 @@ var mainEvent = {
                 img = undefined;
               };
 
-              console.log('cannot founded background image!');
+              console.log('-X cannot found imgData.');
+
+              setTimeout(() => {
+                $('.section01').addClass('ani');
+              }, 1000);
             };
 
             // after animation ended, initializing object
@@ -144,9 +167,16 @@ var mainEvent = {
                 $('body').removeClass('blockScroll');
                 $('.header').addClass('wht');
                 $('#rightnavi, .sec01_controller').removeClass('blind');
-
-                mainEvent.createFullpage();
                 mainEvent.mainSwiper();
+                if ($('body').width() > 768) {
+                  mainEvent.createFullpage();
+                } else {
+                  $('section').addClass('active')
+                  mainEvent.sec02Swiper();
+                  mainEvent.sec03Swiper();
+                }
+                
+                
             });
 
 
@@ -321,30 +351,6 @@ var mainEvent = {
       });
       
     },
-    
-    sec05Video: () => {
-
-      
-      $(".video_thumb").on("click", function(){
-        $(this).addClass('blind');
-        $(this).siblings('.video').removeClass('blind');
-
-        // var iframe = $("#video02")
-        // var src = iframe.attr('src');
-        // if(datasrc!=src){
-        //   iframe.attr('src','https://www.youtube.com/embed/tjuR-GhAnIs?autoplay=1');
-        //   alert('aa');
-        // }
-      });
-
-      $(document).mouseup(function (e){
-        var LayerPopup = $(".video_thumb");
-        if(LayerPopup.has(e.target).length === 0){
-          LayerPopup.removeClass("blind");
-          $('.video').addClass('blind');
-        }
-      });
-    },
 
     sec06Tab: () => {
       var Tabs = $('.section06 .right .tab li');
@@ -429,7 +435,7 @@ var mainEvent = {
               mainEvent.sec03Swiper();
               // console.log('--> swiper03 initiating');
 
-            },300);
+            },0);
           } else {
            
           }
@@ -492,4 +498,96 @@ var civilEngineerEvent = {
       });
   },
 
+
 };
+
+//사업실적 팝업
+function popupbusiness(popConts) {
+  var popthis = $(".popup."+popConts);
+  popthis.fadeIn(300);
+  
+  // 탭 메뉴 슬라이드 스와이퍼
+  var popSlide01 = new Swiper('.card_popup01 .inner_box', {
+      slidesPerView : '1',
+      watchOverflow : true,
+      navigation: {  
+          nextEl: '.inner_nav .next',
+          prevEl: '.inner_nav .prev',
+      },
+      pagination: {
+          el: ".counter_slider",
+          type: 'fraction',
+          formatFractionCurrent: function (number) {
+              return ('0' + number).slice(-2);
+          },
+          formatFractionTotal: function (number) {
+              return ('0' + number).slice(-2);
+          },
+          renderFraction: function (currentClass, totalClass) {
+              return '<span class="' + currentClass + '"></span>' +
+                      '/' +
+                     '<span class="' + totalClass + '"></span>';
+          }
+
+      },
+
+
+  });
+  var popSlide02 = new Swiper('.card_popup02 .inner_box', {
+      slidesPerView : '1',
+      watchOverflow : true,
+      navigation: {  
+          nextEl: '.inner_nav .next',
+          prevEl: '.inner_nav .prev',
+      },
+      pagination: {
+          el: ".counter_slider",
+          type: 'fraction',
+          formatFractionCurrent: function (number) {
+              return ('0' + number).slice(-2);
+          },
+          formatFractionTotal: function (number) {
+              return ('0' + number).slice(-2);
+          },
+          renderFraction: function (currentClass, totalClass) {
+              return '<span class="' + currentClass + '"></span>' +
+                      '/' +
+                     '<span class="' + totalClass + '"></span>';
+          }
+
+      },
+
+
+  });
+  /* 환경건설 팝업 */
+  var popSlide03 = new Swiper('.card_const .inner_box', {
+      slidesPerView : '1',
+      watchOverflow : true,
+      navigation: {  
+          nextEl: '.inner_nav .next',
+          prevEl: '.inner_nav .prev',
+      },
+      pagination: {
+          el: ".counter_slider",
+          type: 'fraction',
+          formatFractionCurrent: function (number) {
+              return ('0' + number).slice(-2);
+          },
+          formatFractionTotal: function (number) {
+              return ('0' + number).slice(-2);
+          },
+          renderFraction: function (currentClass, totalClass) {
+              return '<span class="' + currentClass + '"></span>' +
+                      '/' +
+                     '<span class="' + totalClass + '"></span>';
+          }
+
+      },
+
+
+  });
+
+  popthis.find(".pop_close").click(function(){
+      popthis.fadeOut(300);
+  });
+}

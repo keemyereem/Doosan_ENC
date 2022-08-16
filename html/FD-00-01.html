@@ -35,7 +35,6 @@
     <link type="text/css" href="css/lib/jquery.fullpage.css" rel="stylesheet">
     <link type="text/css" href="css/lib/aos.css" rel="stylesheet">
 
-    <link href="//db.onlinewebfonts.com/c/aad7a027cef9752cc4ead963f89cd028?family=YD+Gothic+500" rel="stylesheet" type="text/css"/>
     <link type="text/css" href="css/font.css" rel="stylesheet">
     <link type="text/css" href="css/common.css" rel="stylesheet">
     <link type="text/css" href="css/sub.css" rel="stylesheet">
@@ -48,9 +47,7 @@
     <script src="js/lib/jquery.easings.min.js"></script>
     <script src="js/lib/scrolloverflow.js"></script>
     <script src="js/lib/aos.js"></script>
-
-    <script src="js/common.js?v=1.0"></script>
-    
+    <script src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vfl1aVfNF/www-widgetapi.js" async></script>
 
     <!-- Initialized Include Path -->
     <script>
@@ -325,7 +322,7 @@
                                     
                                     <h3 class="opener"><span>17</span><span>차</span></h3>
                                     <img src="images/main/sec04_icon01.png" alt="section04_icon01" class="icon">
-                                    <p>사랑의 차(茶) 보내기</p>
+                                    <p>사랑의 차(<span lang="zh-CN" style="font-family:'NS'; font-weight: 400;">茶</span>) 보내기</p>
                                 </li>
                                 <li>
                                     <img src="images/main/sec04_bg02.png" alt="section04_bg02" class="bg">
@@ -373,17 +370,17 @@
                                 </li>
                                 <li><a href="javascript:;" title="직무소개 페이지로 이동">직무소개<img src="images/main/sec05_link_arrow02.png" alt="sec05_link_arrow02"></a></li>
                             </ul>
-                            <ul class="video_box">
+                            <ul class="interview_box">
                                 <li>
-                                    <div class="video_wrap">
+                                    <div class="interview_wrap">
                                         <span class="border bdt"></span>
                                         <span class="border bdl"></span>
                                         <span class="border bdr"></span>
                                         <span class="border bdb"></span>
-                                        <video>
-                                            <source src="videos/main01_xl.webm" type="video/webm">
-                                            <source src="videos/main01_xl.mp4" type="video/mp4">
-                                        </video>
+                                        <div class="interview_thumb">
+                                            <img src="images/main/sec05_thumbnail01.png" alt="sec05_thumbnail01" /> 
+                                            <!-- <img src="images/main/video_play.png" alt="재생버튼" class="btn_play"> -->
+                                        </div>
                                     </div>
                                     <dl>
                                         <dt>안전한 건축 현장을 위해 노력합니다</dt>
@@ -391,24 +388,15 @@
                                     </dl>
                                 </li>
                                 <li>
-                                    <div class="video_wrap">
+                                    <div class="interview_wrap">
                                         <span class="border bdt"></span>
                                         <span class="border bdl"></span>
                                         <span class="border bdr"></span>
                                         <span class="border bdb"></span>
-                                        <div class="video_thumb">
-                                            <img src="videos/sec05_thumbnail01.png" style="cursor:pointer" /> 
-                                            <img src="images/main/video_play.png" alt="재생버튼" class="btn_play">
+                                        <div class="interview_thumb">
+                                            <img src="images/main/sec05_thumbnail02.png" alt="sec05_thumbnail02" /> 
+                                            <!-- <img src="images/main/video_play.png" alt="재생버튼" class="btn_play"> -->
                                         </div>
-                                        <!-- 
-                                            <div class="video_thumb" onclick="this.nextElementSibling.style.display='block'; this.style.display='none'">
-                                            <img src="videos/sec05_thumbnail01.png" style="cursor:pointer" /> 
-                                            <img src="images/main/video_play.png" alt="재생버튼" class="btn_play">
-                                        </div> 
-                                        -->
-                                         <div class="video blind">
-                                             <iframe id="video02" width="560" height="315" src="https://www.youtube.com/embed/tjuR-GhAnIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                         </div>
                                     </div>
                                     <dl>
                                         <dt>생산, 물류, 자금관리, 기술 등 다양한 업무를 배울 수 있는 영업직무</dt>
@@ -449,7 +437,7 @@
                             <div class="right">
                                 <ul class="tab">
                                     <li class="on"><a href="javascript:;" title="News 보기">NEWS</a></li>
-                                    <li><a href="javascript:;" title="Channel 보기">CHANNEL</a></li>
+                                    <li><a href="javascript:;" title="Channel 보기">SNS</a></li>
                                 </ul>
                                 <div class="contents">
                                     <ul class="news on">
@@ -532,6 +520,9 @@
         <!-- footer -->
         <div class="footer"></div>
         <!-- //footer -->
+
+        <!-- common JS -->
+        <script src="js/common.js?v=1.0"></script>
     </div>
 </body>
 

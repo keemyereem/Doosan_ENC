@@ -91,34 +91,3 @@
     <!-- //right menu -->
     <!-- mobile GNB -->
 </div>
-
-<script>
-    $(function(){
-        $('.header .menu_solution').hover(function(){
-            $(this).parents('.header').addClass('menu');
-        }, function(){
-            $(this).parents('.header').removeClass('menu');
-        });       
-        $(window).on('scroll',function(){
-            const st = $(window).scrollTop();
-
-            if (st>=100){
-                $('.header .menu_solution').hover(function(){
-                    $(this).parents('.header').removeClass('fixed').addClass('menu');
-                }, function(){
-                    $(this).parents('.header').removeClass('menu').addClass('fixed');
-                });
-            }else{
-                $('.header .menu_solution').hover(function(){
-                    $(this).parents('.header').addClass('menu');
-                }, function(){
-                    $(this).parents('.header').removeClass('menu, fixed');
-                });
-            }
-
-        });
-
-
-
-    })
-</script>
