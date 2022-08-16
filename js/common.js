@@ -14,30 +14,22 @@ $(function(){
 
 	});
 
-    // $('#fullpage').fullpage({
-    //     anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage'],
-    //     menu: '#rightnavi',
-    //     verticalCentered: false,
-    //     css3: true,
-
-    //     scrollingSpeed: 1000,
-    //     onLeave: function(index, nextIndex, direction){
-    //       if(nextIndex == 5){
-    //         $(".header").addClass("wht");
-    //       }else {
-    //         $(".header").removeClass("wht");
-    //       }
-    //       if(nextIndex == 7){
-    //         $("#rightnavi").addClass("none");
-    //       }else {
-    //         $("#rightnavi").removeClass("none");
-    //       }
-    //     },
-
-
-
-
-    // });
+  addEventListener("fetch", (event) => {
+    event.respondWith(
+      (async () => {
+        // Respond from the cache if we can
+        const cachedResponse = await caches.match(event.request);
+        if (cachedResponse) return cachedResponse;
+  
+        // Else, use the preloaded response, if it's there
+        const response = await event.preloadResponse;
+        if (response) return response;
+  
+        // Else try the network.
+        return fetch(event.request);
+      })()
+    );
+  });
 
 });
 
@@ -93,12 +85,10 @@ var mainEvent = {
     init:function(){
         this.headerEvent();
         this.intro();
-        // this.sec02Swiper();
-        // this.sec03Swiper();
         this.sec04Card();
+        this.sec05Video();
         this.sec06Tab();
         this.footerEvent();
-        this.createFullpage();
     },
 
     headerEvent:() => {
@@ -122,8 +112,7 @@ var mainEvent = {
         });
 
         $(window).load(() => {
-            
-
+          
             var backgroundImageUrl = "../images/main/sec01_bg1.png";
 
             // checking if image is already there in cache 
@@ -154,7 +143,8 @@ var mainEvent = {
 
                 $('body').removeClass('blockScroll');
                 $('.header').addClass('wht');
-                $('#rightnavi, .sec01_controller').removeClass('blind')
+                $('#rightnavi, .sec01_controller').removeClass('blind');
+
                 mainEvent.createFullpage();
                 mainEvent.mainSwiper();
             });
@@ -331,6 +321,30 @@ var mainEvent = {
       });
       
     },
+    
+    sec05Video: () => {
+
+      
+      $(".video_thumb").on("click", function(){
+        $(this).addClass('blind');
+        $(this).siblings('.video').removeClass('blind');
+
+        // var iframe = $("#video02")
+        // var src = iframe.attr('src');
+        // if(datasrc!=src){
+        //   iframe.attr('src','https://www.youtube.com/embed/tjuR-GhAnIs?autoplay=1');
+        //   alert('aa');
+        // }
+      });
+
+      $(document).mouseup(function (e){
+        var LayerPopup = $(".video_thumb");
+        if(LayerPopup.has(e.target).length === 0){
+          LayerPopup.removeClass("blind");
+          $('.video').addClass('blind');
+        }
+      });
+    },
 
     sec06Tab: () => {
       var Tabs = $('.section06 .right .tab li');
@@ -344,7 +358,7 @@ var mainEvent = {
         
       });
     },
-    
+
     footerEvent: () => {
       $(document).on("click",".family_site .site_selected",function(){
         var selElm = $(this).parent();
