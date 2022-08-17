@@ -99,7 +99,7 @@
 #mobile #main #fullpage .section06 .right .tab { margin-left: 0; width: auto; margin-bottom: 3rem; }
 #mobile #main #fullpage .section06 .right .tab li { text-align: left; }
 #main #fullpage .section06 .right .tab li a {font-size: 1.35rem;}
-#main #fullpage .section06 .right .tab li a::before { width: .4rem; height: .4rem; }
+#main #fullpage .section06 .right .tab li a::before { width: .4rem; height: .4rem; top: .6rem; }
 
 
 /* =========================================== 서브 ======================================== */
