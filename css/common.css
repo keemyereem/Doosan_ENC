@@ -9,7 +9,8 @@
 * {margin:0; padding:0; box-sizing:border-box !important;}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, article, aside, hgroup, header, footer, figure, figcaption, nav, section { margin:0; padding:0; border:0; font-size:100%; vertical-align:baseline; background:transparent; }
 article, aside, hgroup, header, footer, figure, figcaption, nav, section {display:block;}
-html, body {font-size:62.5%;font-family: 'Pretendard'; font-weight: 200; color:#000; line-height:1.2; box-sizing:border-box; -webkit-text-size-adjust:none; scroll-behavior: smooth; }
+html, body {font-size:62.5%;font-family: 'Pretendard'; font-weight: 200; color:#000; line-height:1.2; box-sizing:border-box; -webkit-text-size-adjust:none; }
+html.smooth, body.smooth { scroll-behavior: smooth; }
 h1, h2, h3, h4, h5, h6 {font-weight:normal; line-height:normal; word-break:keep-all;}
 fieldset {border:none;}
 ol, li {list-style:none; zoom:1;}
@@ -44,7 +45,7 @@ br.br_t, br.br_m {display: none;}
 .br_m, 
 .indent { display: none; }
 .blind { opacity: 0;}
-.blockScroll { overflow: hidden; height: 100%; }
+.blockScroll { overflow: hidden; height: 100vh; }
 /*popup*/
 
 
@@ -199,7 +200,7 @@ br.br_t, br.br_m {display: none;}
 .container .sub_visual .sub_visual_menu .depth2 { width: 30rem; background: #000; border: 0; }
 .container .sub_visual .sub_visual_menu .depth2.open > a { background: #000; }
 .container .sub_visual .sub_visual_menu .depth2 > a:before { background: #000; border-top-color: #fff; }
-.container .sub_visual .sub_visual_menu .depth2 .dep_tit { font-weight: 300; color: #fff; }
+.container .sub_visual .sub_visual_menu .depth2 .dep_tit { color: #fff; }
 .container .sub_visual .sub_visual_menu .depth2 .drop_box { background: #000; }
 .container .sub_visual .sub_visual_menu .depth2 .drop_box li a:hover { color: #fff; }
 .container .sub_visual .scroll_down { font-family: 'Montserrat'; font-size: 1.8rem; color: #fff; display: block; position: absolute; right: 11.7rem; bottom: 8rem; }
@@ -233,6 +234,10 @@ br.br_t, br.br_m {display: none;}
 .footer .footer_wrap  ul li a.blue { font-family: 'NS'; font-weight: 400; color: #005eb8; opacity: 1; }
 .footer .footer_wrap  ul li:not(:last-child)::after { content:''; display: inline-block; width: .1rem; height: 1.4rem; background: #fff; opacity: .5;  }
 .footer .footer_wrap p { font-family: 'Montserrat'; font-size: 1.6rem; opacity: .2; text-align: center; margin-top: 4rem; }
+
+#topButton { font-family: 'Montserrat'; font-size: 1.8rem; color: #000; letter-spacing: .09rem; position: fixed; right: 11.7rem; bottom: 8rem; display: none; z-index: 999; }
+#topButton::after { content:''; display: inline-block; width: 2.3rem; height: 3rem; background: url(../images/common/scrollTop.png) no-repeat; vertical-align: middle; margin-left: 2rem; }
+#topButton.on { position: absolute; }
 
 /* privacy_policy */
 

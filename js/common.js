@@ -42,6 +42,7 @@ var commonEvent = {
        this.headerEvent();
        this.submenuEvent();
        this.footerEvent();
+       this.goTopEvent();
     }, 
 
     headerEvent:() => {
@@ -70,7 +71,8 @@ var commonEvent = {
       });
 
       $(document).on('click', '.scroll_down', function() {
-        $('html, body').animate({scrollTop:300}, '300');
+        var titleTop = $('.title_area').offset().top;
+        $('html, body').removeClass('smooth').animate({scrollTop: titleTop}, '300');
       });
 
   },
@@ -94,6 +96,30 @@ var commonEvent = {
     });
   },
   
+  goTopEvent: () => {
+    $(window).scroll(function() {
+      // top button controll
+      if ($(this).scrollTop() > 1000) {
+          $('#topButton').fadeIn();
+      } else {
+          $('#topButton').fadeOut();
+      }
+      var footerTop = $('.footer').offset().top - $(window).outerHeight();
+      var pos = $('.footer').outerHeight() + Number(80);
+      
+      if($(this).scrollTop() > footerTop){
+        $('#topButton').addClass('on').css({'bottom':pos});
+      }else {
+        $('#topButton').removeClass('on').css({'bottom':'8rem'});
+      }
+
+  });
+
+  $(document).on('click', '#topButton', function() {
+      $('html, body').removeClass('smooth').animate({scrollTop:0}, '300');
+  });
+  },
+
 };
 
 
@@ -103,8 +129,8 @@ var commonEvent = {
 var mainEvent = {
     init:function(){
         this.headerEvent();
-        // this.intro();
-        this.createFullpage();
+        this.intro();
+        // this.createFullpage();
         this.sec04Card();
         this.sec06Tab();
         this.footerEvent();
@@ -167,7 +193,13 @@ var mainEvent = {
                 $('body').removeClass('blockScroll');
                 $('.header').addClass('wht');
                 $('#rightnavi, .sec01_controller').removeClass('blind');
+                
+                setTimeout(() => {
+                  $('.clip-wrap').addClass('indent');
+                }, 500);
+                
                 mainEvent.mainSwiper();
+
                 if ($('body').width() > 768) {
                   mainEvent.createFullpage();
                 } else {
@@ -258,14 +290,29 @@ var mainEvent = {
           renderBullet: function (index, className) {
               return '<span class="' + className + '">' + '<em>'+ listArray[index]+'</em>' + '<i></i>' + '<b></b>'  + '</span>';
           },
-      
+        },
+        navigation: {
+          nextEl: ".swiper2-button-next",
+          prevEl: ".swiper2-button-prev",
         },
         autoplay: {
             delay: 5000,
             disableOnInteraction: false
         },
 
+        on : {  
+          init: function() {
+              this.autoplay.stop()
+          }
+        }
+
       });
+      
+      if ($('.section02').hasClass('active')) {
+        swiper2.autoplay.start();
+      } else {
+
+      }
 
     },
 
@@ -427,6 +474,7 @@ var mainEvent = {
           if (index == 2) {
             setTimeout(() => {
               mainEvent.sec02Swiper();
+              
               // console.log('--> swiper02 initiating');
 
             }, 300);
@@ -437,7 +485,7 @@ var mainEvent = {
 
             },0);
           } else {
-           
+            
           }
 
           // footer
@@ -465,6 +513,7 @@ var civilEngineerEvent = {
   init: function(){
     this.civilTab();
     this.civilSwiper();
+    this.oulineNav();
   },
   civilTab: () => {
     var Tabs = $('.civil_engineer .tab_box ul li');
@@ -497,6 +546,11 @@ var civilEngineerEvent = {
         });
       });
   },
+   oulineNav: () => {
+    $('.section_nav_prev, .section_nav_next').click(function(){
+      $('html,body').addClass('smooth');
+    });
+   },
 
 
 };
@@ -509,6 +563,7 @@ function popupbusiness(popConts) {
   // 탭 메뉴 슬라이드 스와이퍼
   var popSlide01 = new Swiper('.card_popup01 .inner_box', {
       slidesPerView : '1',
+      spaceBetween : 10,
       watchOverflow : true,
       navigation: {  
           nextEl: '.inner_nav .next',
@@ -517,73 +572,13 @@ function popupbusiness(popConts) {
       pagination: {
           el: ".counter_slider",
           type: 'fraction',
-          formatFractionCurrent: function (number) {
-              return ('0' + number).slice(-2);
-          },
-          formatFractionTotal: function (number) {
-              return ('0' + number).slice(-2);
-          },
-          renderFraction: function (currentClass, totalClass) {
-              return '<span class="' + currentClass + '"></span>' +
-                      '/' +
-                     '<span class="' + totalClass + '"></span>';
-          }
-
       },
-
-
-  });
-  var popSlide02 = new Swiper('.card_popup02 .inner_box', {
-      slidesPerView : '1',
-      watchOverflow : true,
-      navigation: {  
-          nextEl: '.inner_nav .next',
-          prevEl: '.inner_nav .prev',
+      breakpoints: {
+        
+        768: {
+          spaceBetween: 60,
+        },
       },
-      pagination: {
-          el: ".counter_slider",
-          type: 'fraction',
-          formatFractionCurrent: function (number) {
-              return ('0' + number).slice(-2);
-          },
-          formatFractionTotal: function (number) {
-              return ('0' + number).slice(-2);
-          },
-          renderFraction: function (currentClass, totalClass) {
-              return '<span class="' + currentClass + '"></span>' +
-                      '/' +
-                     '<span class="' + totalClass + '"></span>';
-          }
-
-      },
-
-
-  });
-  /* 환경건설 팝업 */
-  var popSlide03 = new Swiper('.card_const .inner_box', {
-      slidesPerView : '1',
-      watchOverflow : true,
-      navigation: {  
-          nextEl: '.inner_nav .next',
-          prevEl: '.inner_nav .prev',
-      },
-      pagination: {
-          el: ".counter_slider",
-          type: 'fraction',
-          formatFractionCurrent: function (number) {
-              return ('0' + number).slice(-2);
-          },
-          formatFractionTotal: function (number) {
-              return ('0' + number).slice(-2);
-          },
-          renderFraction: function (currentClass, totalClass) {
-              return '<span class="' + currentClass + '"></span>' +
-                      '/' +
-                     '<span class="' + totalClass + '"></span>';
-          }
-
-      },
-
 
   });
 
