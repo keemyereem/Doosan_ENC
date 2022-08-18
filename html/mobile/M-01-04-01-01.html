@@ -62,6 +62,7 @@
 
             commonEvent.init();
             civilEngineerEvent.init();
+            mobileEvent.init();
         });
     </script>
 </head>
@@ -121,14 +122,18 @@
             </div>
 
             <div class="tab_box">
-                <div class="inner">
-                    <ul>
-                        <li><a href="javascript:;" title="개요 페이지로 이동">개요</a></li>
-                        <li class="on"><a href="javascript:;" title="철도·지하철 페이지로 이동">철도·지하철</a></li>
-                        <li><a href="javascript:;" title="고속도로 페이지로 이동">고속도로</a></li>
-                        <li><a href="javascript:;" title="도로·교량 페이지로 이동">도로·교량</a></li>
-                        <li><a href="javascript:;" title="환경·에너지·항만·수자원 페이지로 이동">환경·에너지·항만·수자원</a></li>
+                <div class="inner swiper outline_tab_swiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide on"><a href="html/mobile/M-01-04-01.html" title="개요 페이지로 이동">개요</a></li>
+                        <li class="swiper-slide"><a href="javascript:;" title="철도·지하철 페이지로 이동">철도·지하철</a></li>
+                        <li class="swiper-slide"><a href="javascript:;" title="고속도로 페이지로 이동">고속도로</a></li>
+                        <li class="swiper-slide"><a href="javascript:;" title="도로·교량 페이지로 이동">도로·교량</a></li>
+                        <li class="swiper-slide"><a href="javascript:;" title="환경·에너지·항만·수자원 페이지로 이동">환경·에너지·항만·수자원</a></li>
                     </ul>
+                </div>
+                <div class="tab-swiper-nav">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>                                
                 </div>
             </div>
 
