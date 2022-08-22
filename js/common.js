@@ -40,25 +40,10 @@ $(function(){
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var commonEvent = {
     init:function(){
-       this.headerEvent();
        this.submenuEvent();
        this.footerEvent();
        this.goTopEvent();
     }, 
-
-    headerEvent:() => {
-
-      //언어선택
-      $(document).on("click",".lang_select .lang_current",function(){
-          var selElm = $(this).parent();
-          if(!selElm.hasClass("open")){
-              selElm.addClass("open");
-          }else{
-              selElm.removeClass("open");
-          }
-      });
-
-    },
 
     submenuEvent: () => {
         $(document).on('click', '.sub_visual_menu .depth', function(){
@@ -130,26 +115,81 @@ var commonEvent = {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var mainEvent = {
     init:function(){
-        this.headerEvent();
-        // this.intro();
-        this.createFullpage();
+        this.intro();
+        this.sec02Swiper();
+        this.sec03Swiper();
         this.sec04Card();
         this.sec06Tab();
         this.footerEvent();
-        this.sec02Swiper();
     },
 
-    headerEvent:() => {
+    createFullpage: () => {
 
-        //언어선택
-        $(document).on("click",".lang_select .lang_current",function(){
-            var selElm = $(this).parent();
-            if(!selElm.hasClass("open")){
-                selElm.addClass("open");
-            }else{
-                selElm.removeClass("open");
-            }
-        });
+      $('#fullpage').fullpage({
+        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage'],
+        menu: '#rightnavi',
+        verticalCentered: false,
+        css3: true,
+        scrollingSpeed: 800,
+
+        onLeave: function(index, nextIndex, direction){
+
+          if(nextIndex == 1 || nextIndex == 5){
+            setTimeout(() => {
+              $(".header").addClass("wht");
+            }, 500);
+            
+          }else {
+            setTimeout(() => {
+            $(".header").removeClass("wht");
+            }, 500);
+
+          }
+          
+          // footer
+          if(nextIndex == 7){
+            $("#rightnavi, .header").addClass("indent");
+
+          }else {
+            $("#rightnavi, .header").removeClass("indent");
+
+          }
+        },
+
+        afterLoad: function(anchorLink, index){
+          
+          // 인포그래픽 섹션 도달 후 오토플레이 시작
+          if (index == 1) {
+            swiper.autoplay.start();
+          } else {
+            swiper.autoplay.stop();
+            swiper.slideTo(1);
+          }
+          if (index == 2) {
+            swiper2.autoplay.start();
+          } else {
+            swiper2.autoplay.stop();
+            swiper2.slideTo(1);
+          }
+          if (index == 3) {
+            swiper3.autoplay.start();
+          } else {
+            swiper3.autoplay.stop();
+            swiper3.slideTo(1);
+          }
+
+
+          // footer
+          if (index == 7) {
+            setTimeout(() => {
+              $('.footer .sec_tit > span').addClass('fin')
+            }, 200);
+          } else {
+            
+          }
+        },
+
+      });
 
     },
 
@@ -206,7 +246,7 @@ var mainEvent = {
                 if ($('body').width() > 768) {
                   mainEvent.createFullpage();
                 } else {
-                  $('section').addClass('active')
+                  
                   mainEvent.sec02Swiper();
                   mainEvent.sec03Swiper();
                 }
@@ -219,7 +259,7 @@ var mainEvent = {
     },
 
     mainSwiper: () => {
-        var swiper = new Swiper(".mainSwiper", {
+        swiper = new Swiper(".mainSwiper", {
             spaceBetween: 30,
             speed: 500,
             effect: "fade",
@@ -273,8 +313,8 @@ var mainEvent = {
 
     sec02Swiper: () => {
       var listArray = ["01","02","03","04",'05'];
-      var swiper2 = new Swiper(".section02 .swiper", {
-        speed: 500,
+      swiper2 = new Swiper(".section02 .swiper", {
+        speed: 200,
         loop: true,
         autoplayDisableOnInteraction: false,
         slidesPerView: 1, 
@@ -297,10 +337,7 @@ var mainEvent = {
               return '<span class="' + className + '">' + '<em>'+ listArray[index]+'</em>' + '<i></i>' + '<b></b>'  + '</span>';
           },
         },
-        // navigation: {
-        //   nextEl: ".swiper2-button-next",
-        //   prevEl: ".swiper2-button-prev",
-        // },
+
         autoplay: {
             delay: 5000,
             disableOnInteraction: false,
@@ -308,60 +345,58 @@ var mainEvent = {
 
         on : {  
           init: function() {
-              // this.autoplay.stop()
+            this.autoplay.stop()
           }
         }
 
       });
-      
-      if ($('.section02').hasClass('active')) {
-        // swiper2.autoplay.start();
-      } else {
-        // swiper2.slideTo(0,0);
-      }
 
       
-      let bullet = $('.swiper-pagination-sec02 .swiper-pagination-bullet');
-      let bulletWidth = bullet.width();
-      let bulletMargin = parseInt( bullet.css('margin-right'));
-      let index = 0;
 
-      bulletWidth = bulletWidth + bulletMargin;
+      $(window).on('load resize', function(e) {
 
-      // let imgs;
-      // let img_count;
-      // var img_position =1;
-      // imgs = $('.swiper-pagination-sec02');
-      // img_count  = imgs.children().length;
+        let bullet = $('.swiper-pagination-sec02 .swiper-pagination-bullet');
+        let bulletWidth = bullet.width();
+        let bulletMargin = parseInt( bullet.css('margin-right'));
+        let index = 0;
 
+        bulletWidth = bulletWidth + bulletMargin;
 
+        $(document).on('click','.swiper2-button-next',function(){
+          index += 1;
+          if (index > bullet.length - 3) {
+            index = 0;
+          }
+          next();
+        });
 
-      $(document).on('click','.swiper2-button-next',function(){
-        index += 1;
-        if (index > 0) {
-          index = 1;
+        function next(){
+            $('.swiper-pagination-sec02').css({
+              'transform':'translateX(' + -(bulletWidth * index) + 'px)',
+              'transition':'.3s'
+            });
         }
-        next();
       });
-      $(document).on('click','.swiper2-button-prev',function(){
-        index -= 1;
-        if (index < 0) {
-          index = 0;
-        }
-        prev();
-      });
-      function next(){
-          $('.swiper-pagination-sec02').css({
-            'transform':'translateX(' + -(bulletWidth * index) + 'px)',
-            'transition':'.3s'
-          });
-      }
 
-      function prev(){
-          $('.swiper-pagination-sec02').css({
-            'transform':'translateX(' + -(bulletWidth * index) + 'px)',
-            'transition':'.3s'
-          });
+      if ($(window).width() < 768) {
+        $(window).on('scroll', function() {
+          var st = $(window).scrollTop();
+          var sec2Top = $('.section02').position().top;
+          var sec3Top = $('.section03').position().top;
+
+          if (st > sec2Top) {
+            $('.section02').addClass('active');
+            swiper2.autoplay.start();
+          } else {
+            swiper2.autoplay.stop();
+          }
+          if (st > sec3Top) {
+            $('.section03').addClass('active');
+            swiper3.autoplay.start();
+          } else {
+            swiper3.autoplay.stop();
+          }
+        });
       }
   
     },
@@ -369,7 +404,7 @@ var mainEvent = {
 
     sec03Swiper: () => {
       var listArray = ["주택사업","건축사업","토목사업"];
-      var swiper3 = new Swiper(".section03 .bus_swiper", {
+      swiper3 = new Swiper(".section03 .bus_swiper", {
         speed: 500,
         loop: true,
         autoplayDisableOnInteraction: false,
@@ -395,6 +430,12 @@ var mainEvent = {
             delay: 3000,
             disableOnInteraction: false
         },
+
+        on : {  
+          init: function() {
+             this.autoplay.stop()
+          }
+        }
 
 
       });
@@ -437,18 +478,15 @@ var mainEvent = {
     sec04Card: () => {
       if($('body').width() > 768){
         $('.card li').hover(function() {
-          var getSrc = $(this).children('.icon').attr('src');
-          getSrc = getSrc.replace(".png","_hover.png");
-          
-          $(this).children('.icon').attr('src', getSrc);
+          $(this).find('.icon').hide();
+          $(this).find('.icon_white').show();
           
         }, function() {
-          var getSrc = $(this).children('.icon').attr('src');
-          getSrc = getSrc.replace("_hover.png", ".png");
-  
-          $(this).children('.icon').attr('src', getSrc);
+          $(this).find('.icon').show();
+          $(this).find('.icon_white').hide();
         });
-      }else{
+
+      } else {
 
       }
       
@@ -485,85 +523,6 @@ var mainEvent = {
         familySite.classList.remove('open');
       });
     },
-
-    createFullpage: () => {
-      $('#fullpage').fullpage({
-        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage'],
-        menu: '#rightnavi',
-        verticalCentered: false,
-        css3: true,
-        
-        // sectionsColor: ['#FEC260', '#3FA796', '#fff', '#fff', '#fff'],
-        // controlArrows: true,            // 슬라이드 컨트롤 애로우 생성 
-        // slidesNavigation: true,         // 슬라이드 컨트롤 네비게이션 생성
-        // slidesNavPosition: 'bottom',    // 슬라이드 컨트롤 네비게이션 위치 
-
-        scrollingSpeed: 1000,
-        onLeave: function(index, nextIndex, direction){
-
-          if(nextIndex == 1 || nextIndex == 5){
-            setTimeout(() => {
-              $(".header").addClass("wht");
-            }, 1000);
-            
-          }else {
-            setTimeout(() => {
-            $(".header").removeClass("wht");
-            }, 1000);
-
-          }
-          // if(nextIndex == 2){
-          //   setTimeout(() => {
-          //     mainEvent.sec02Swiper();
-
-          //     }, 200);
-          // }else {
-            
-          // }
-
-          // footer
-          if(nextIndex == 7){
-            $("#rightnavi, .header").addClass("indent");
-
-          }else {
-            $("#rightnavi, .header").removeClass("indent");
-
-          }
-        },
-
-        afterLoad: function(anchorLink, index){
-          /* 인포그래픽 섹션 도달 후 오토플레이 시작 */
-
-          if (index == 2) {
-            setTimeout(() => {
-              // mainEvent.sec02Swiper();
-
-            }, 0);
-          } else if (index == 3) {
-            setTimeout(() => {
-              mainEvent.sec03Swiper();
-              // console.log('--> swiper03 initiating');
-
-            },0);
-          } else {
-            
-          }
-
-          // footer
-          if (index == 7) {
-            setTimeout(() => {
-              $('.footer .sec_tit > span').addClass('fin')
-            }, 200);
-          } else {
-           
-          }
-        },
-
-
-
-    });
-  },
-
   
 };
 
@@ -677,5 +636,5 @@ var mobileEvent = {
     });
 
   },
-  
+
 };
