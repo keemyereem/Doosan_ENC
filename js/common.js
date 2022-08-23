@@ -635,8 +635,7 @@ function popupbusiness(popConts) {
   var popthis = $(".popup."+popConts);
   popthis.fadeIn(300);
 
-  setTimeout()
-  console.log(popthis);
+
 
   // 탭 메뉴 슬라이드 스와이퍼
   // var popSlide01 = new Swiper('.card_popup01 .inner_box', {
