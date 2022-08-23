@@ -40,10 +40,24 @@ $(function(){
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var commonEvent = {
     init:function(){
-       this.submenuEvent();
-       this.footerEvent();
-       this.goTopEvent();
+      this.headerEvent();
+      this.subVisual();
+      this.submenuEvent();
+      this.footerEvent();
+      this.goTopEvent();
     }, 
+
+    headerEvent: () => {
+      $(window).on('scroll',function(){
+        $(".header").css("left",0-$(this).scrollLeft());
+      });
+    },
+
+    subVisual: () => {
+      $(window).load(() => {
+        $('.sub_visual').addClass('ani')
+      })
+    },
 
     submenuEvent: () => {
         $(document).on('click', '.sub_visual_menu .depth', function(){
@@ -60,6 +74,29 @@ var commonEvent = {
         $(document).on('click', '.scroll_down', function() {
           var titleTop = $('.title_area').offset().top;
           $('html, body').removeClass('smooth').animate({scrollTop: titleTop}, '300');
+        });
+
+
+        const subMenu = document.querySelector(".sub_visual_menu");
+        const fixMenu = subMenu.offsetTop;
+
+
+        $(window).on('scroll', function() {
+          let st = $(window).scrollTop();
+          
+          console.log(fixMenu);
+
+          if(st >= fixMenu) {
+            subMenu.classList.add('fixed');
+          } else {
+            subMenu.classList.remove('fixed');
+          }
+          
+          if (st >= fixMenu - 200) {
+            $('.header').addClass('indentUp');
+          } else {  
+            $('.header').removeClass('indentUp');
+          }
         });
 
     },
@@ -80,6 +117,22 @@ var commonEvent = {
         var familySite = this.parentNode.parentNode.parentNode;
         siteName.innerText = selected;
         familySite.classList.remove('open');
+      });
+
+      $(window).on('scroll', function() {
+        let st = $(window).scrollTop();
+        let footer = document.querySelector(".footer").offsetTop;
+
+        if ($(window).width() > 768) {
+            footer = footer - 300;
+
+            if(st >= footer) {
+                console.log('adadad')
+                setTimeout(() => {
+                    $('.footer .sec_tit > span').addClass('fin')
+                }, 200);
+            }
+        }
       });
     },
     
@@ -120,6 +173,7 @@ var mainEvent = {
         this.sec03Swiper();
         this.sec04Card();
         this.sec06Tab();
+        this.headerEvent();
         this.footerEvent();
     },
 
@@ -313,8 +367,8 @@ var mainEvent = {
 
     sec02Swiper: () => {
       var listArray = ["01","02","03","04",'05'];
-      swiper2 = new Swiper(".section02 .swiper", {
-        speed: 200,
+      swiper2 = new Swiper(".section02 .myswiper", {
+        speed: 500,
         loop: true,
         autoplayDisableOnInteraction: false,
         slidesPerView: 1, 
@@ -345,8 +399,14 @@ var mainEvent = {
 
         on : {  
           init: function() {
-            this.autoplay.stop()
-          }
+            this.autoplay.stop();
+          },
+
+          slideChange: function () {
+            if (this.realIndex > 2) {
+              console.log('ddd')
+            }
+          },
         }
 
       });
@@ -361,12 +421,13 @@ var mainEvent = {
         let index = 0;
 
         bulletWidth = bulletWidth + bulletMargin;
-
+      
         $(document).on('click','.swiper2-button-next',function(){
           index += 1;
+          
           if (index > bullet.length - 3) {
             index = 0;
-          }
+          };
           next();
         });
 
@@ -375,30 +436,10 @@ var mainEvent = {
               'transform':'translateX(' + -(bulletWidth * index) + 'px)',
               'transition':'.3s'
             });
+            console.log(index);
         }
       });
 
-      if ($(window).width() < 768) {
-        $(window).on('scroll', function() {
-          var st = $(window).scrollTop();
-          var sec2Top = $('.section02').position().top;
-          var sec3Top = $('.section03').position().top;
-
-          if (st > sec2Top) {
-            $('.section02').addClass('active');
-            swiper2.autoplay.start();
-          } else {
-            swiper2.autoplay.stop();
-          }
-          if (st > sec3Top) {
-            $('.section03').addClass('active');
-            swiper3.autoplay.start();
-          } else {
-            swiper3.autoplay.stop();
-          }
-        });
-      }
-  
     },
 
 
@@ -444,9 +485,12 @@ var mainEvent = {
         var swp = target.swiper;
         $(this).hover(function() {
             swp.autoplay.stop();
+            $(this).find('.right').addClass('on');
         }, function() {
             swp.autoplay.start();
+            $(this).find('.right').removeClass('on');
         });
+
       });
 
 
@@ -472,6 +516,7 @@ var mainEvent = {
 
 
       });
+
 
     },
 
@@ -505,6 +550,12 @@ var mainEvent = {
       });
     },
 
+    headerEvent: () => {
+      $(window).on('scroll',function(){
+        $(".header").css("left",0-$(this).scrollLeft());
+      });
+    },
+
     footerEvent: () => {
       $(document).on("click",".family_site .site_selected",function(){
         var selElm = $(this).parent();
@@ -533,7 +584,7 @@ var civilEngineerEvent = {
   init: function(){
     this.civilTab();
     this.civilSwiper();
-    this.oulineNav();
+    this.outlineNav();
   },
   civilTab: () => {
     var Tabs = $('.civil_engineer .tab_box ul li');
@@ -564,7 +615,7 @@ var civilEngineerEvent = {
         });
       });
   },
-   oulineNav: () => {
+   outlineNav: () => {
     $('.section_nav_prev, .section_nav_next').click(function(){
       $('html,body').addClass('smooth');
     });
@@ -579,26 +630,26 @@ function popupbusiness(popConts) {
   popthis.fadeIn(300);
   
   // 탭 메뉴 슬라이드 스와이퍼
-  var popSlide01 = new Swiper('.card_popup01 .inner_box', {
-      slidesPerView : '1',
-      spaceBetween : 10,
-      watchOverflow : true,
-      navigation: {  
-          nextEl: '.inner_nav .next',
-          prevEl: '.inner_nav .prev',
-      },
-      pagination: {
-          el: ".counter_slider",
-          type: 'fraction',
-      },
-      breakpoints: {
+  // var popSlide01 = new Swiper('.card_popup01 .inner_box', {
+  //     slidesPerView : '1',
+  //     spaceBetween : 10,
+  //     watchOverflow : true,
+  //     navigation: {  
+  //         nextEl: '.inner_nav .next',
+  //         prevEl: '.inner_nav .prev',
+  //     },
+  //     pagination: {
+  //         el: ".counter_slider",
+  //         type: 'fraction',
+  //     },
+  //     breakpoints: {
         
-        768: {
-          spaceBetween: 60,
-        },
-      },
+  //       768: {
+  //         spaceBetween: 60,
+  //       },
+  //     },
 
-  });
+  // });
 
   popthis.find(".pop_close").click(function(){
       popthis.fadeOut(300);
@@ -612,6 +663,9 @@ function popupbusiness(popConts) {
 var mobileEvent = {
   init: function(){
     this.civilTabSwiper();
+    this.sec02Swiper();
+    this.sec03Swiper();
+    this.mainScroll();
   },
   civilTabSwiper: () => {
     var tabSwiper = new Swiper(".civil_engineer .outline_tab_swiper", {
@@ -635,6 +689,126 @@ var mobileEvent = {
 
     });
 
+  },
+
+  sec02Swiper: () => {
+    var listArray = ["01","02","03"];
+    swiper2_m = new Swiper("#mobile .section02 .mobSwiper", {
+      speed: 500,
+      loop: true,
+      autoplayDisableOnInteraction: false,
+      slidesPerView: 1, 
+      initialSlide: 0,
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true
+      },
+      watchOverflow: true,
+      watchSlidesProgress: true,
+      watchSlidesVisibility: true,
+      observer: true,
+      observeParents: true,
+
+      pagination: {
+        el: '#mobile .swiper-pagination-sec02',
+        clickable: 'true',
+        type: 'bullets',
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + '<em>'+ listArray[index]+'</em>' + '<i></i>' + '<b></b>'  + '</span>';
+        },
+      },
+
+      autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+      },
+
+      on : {  
+        init: function() {
+          this.autoplay.stop();
+        }
+      }
+
+    });
+
+  },
+
+  sec03Swiper: () => {
+    var listArray = ["주택사업","건축사업","토목사업"];
+    swiper3_m = new Swiper("#mobile .section03 .bus_swiper_m", {
+      speed: 500,
+      loop: true,
+      autoplayDisableOnInteraction: false,
+      slidesPerView: 1, 
+      allowTouchMove: false,
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true
+      },
+      watchOverflow: true,
+      watchSlidesProgress: true,
+      watchSlidesVisibility: true,
+
+      pagination: {
+        el: '#mobile .swiper-pagination-sec03',
+        clickable: 'true',
+        type: 'bullets',
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + '<em>'+ listArray[index]+'</em>' + '</span>';
+        },
+      },
+      autoplay: {
+          delay: 3000,
+          disableOnInteraction: false
+      },
+
+      on : {  
+        init: function() {
+           this.autoplay.stop()
+        }
+      }
+
+
+    });
+    //마우스 오버시 자동슬라이드 멈춤
+    $("#mobile .section03 .bus_swiper_m").each(function(elem, target){
+      var swp = target.swiper;
+      $(this).hover(function() {
+          swp.autoplay.stop();
+      }, function() {
+          swp.autoplay.start();
+      });
+    });
+
+
+  },
+
+  mainScroll: () => {
+
+    $(window).on('scroll', function() {
+
+      var st = $(window).scrollTop();
+      var sec2Top = $('#mobile .section02').position().top - 300;
+      var sec3Top = $('#mobile .section03').position().top - 300;
+      var sec4Top = $('#mobile .section04').position().top - 300;
+
+      if (sec3Top > st && st > sec2Top) {
+        $('#mobile .section02').addClass('active');
+        swiper2_m.autoplay.start();
+      } else {
+        $('#mobile .section02').removeClass('active');
+        swiper2_m.autoplay.stop();
+      }
+
+
+      if ( sec4Top > st && st > sec3Top ) {
+        $('#mobile .section03').addClass('active');
+        swiper3_m.autoplay.start();
+      } else {
+        $('#mobile .section03').removeClass('active');
+        swiper3_m.autoplay.stop();
+      }
+    });
   },
 
 };
