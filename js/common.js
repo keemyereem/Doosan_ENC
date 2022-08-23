@@ -167,7 +167,6 @@ var commonEvent = {
 var mainEvent = {
     init:function(){
         this.intro();
-        // this.createFullpage();
         this.sec02Swiper();
         this.sec03Swiper();
         this.sec04Card();
@@ -668,12 +667,14 @@ function popupbusiness(popConts) {
 ///////////                                                        **모바일**                                                                  ///////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var mobileEvent = {
+
   init: function(){
     this.civilTabSwiper();
     this.sec02Swiper();
     this.sec03Swiper();
     this.mainScroll();
   },
+
   civilTabSwiper: () => {
     var tabSwiper = new Swiper(".civil_engineer .outline_tab_swiper", {
       speed: 500,
@@ -681,10 +682,11 @@ var mobileEvent = {
       autoplayDisableOnInteraction: false,
       slidesPerView: 3, 
       a11y : false, 
-      simulateTouch: false,
+      simulateTouch: true,
       touchRatio: 0,
       slideToClickedSlide : false,
       allowTouchMove : true, 
+      draggable: true,
       watchOverflow: true,
       watchSlidesProgress: true,
       watchSlidesVisibility: true,
@@ -736,6 +738,21 @@ var mobileEvent = {
         }
       }
 
+    });
+
+    $(window).on('load resize', function(e) {      
+      swiper2_m.on('slideChange', function() {
+        index = this.realIndex;
+        next();
+      });
+
+      function next(){
+        const focused = document.querySelector('.swiper-pagination-sec02 .swiper-pagination-bullet-active');
+
+        setTimeout (function() {
+            focused.scrollIntoView({behavior: "smooth", block: "nearest", inline: "nearest"});
+        }, 0)
+      }
     });
 
   },
@@ -824,6 +841,15 @@ var mobileEvent = {
       var sec2Top = $('#mobile .section02').position().top - 300;
       var sec3Top = $('#mobile .section03').position().top - 300;
       var sec4Top = $('#mobile .section04').position().top - 300;
+
+      if (st > 100) {
+        $('.header').removeClass('wht');
+        $('.header').addClass('wht_m')
+      } else {
+        $('.header').addClass('wht');
+        $('.header').removeClass('wht_m');
+      }
+
 
       if (sec3Top > st && st > sec2Top) {
         $('#mobile .section02').addClass('active');

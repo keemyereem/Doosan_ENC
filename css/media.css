@@ -39,6 +39,7 @@
 
 /* header */
 #mobile .header { max-width: 768px; width: 100%; margin: auto; right: 0; left: 0; padding: 0 2rem; }
+#mobile .header.wht_m { background: #fff; box-shadow: 0 -.5rem 1rem rgba(0, 0, 0, .4); }
 #mobile .header .header_wrap { height: 6rem; justify-content: space-between; }
 #mobile .header .logo { width: 7.7rem; height: 2.1rem; margin-right: 0; background-size: contain !important; }
 #mobile .header .gnb_menu { width: 100%; }
@@ -103,7 +104,7 @@
 #mobile #main #fullpage section .sec_tit { font-size: 3.5rem; }
 #mobile #main #fullpage section .sec_tit::before { width: 4.8rem; height: .4rem; }
 
-#mobile #main #fullpage .section01 { height: 100vh!important; }
+#mobile #main #fullpage .section01 { height: 100vh !important; }
 #mobile #main #fullpage .section01 .swiper .sec01_controller { left: 0; right: 0; bottom: 4rem; margin: auto; width: calc(100% - 7.4rem); height: 4rem; }
 #mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-pagination-sec01 { width: calc(100% - 6rem); }
 #mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-pagination-sec01:after { width: calc(100% - 10rem); }
@@ -115,9 +116,8 @@
 #mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-button-prev { content: url(../images/main/sec01_controller_arrowPrev_m.png); }
 #mobile #main #fullpage .section01 .swiper-slide h2 { font-size: 3.8rem; }
 #mobile #main #fullpage .section01 .clip-wrap { width: 100%; height: 100%; position: absolute; z-index: 9; background: #fff; }
-#mobile #main #fullpage .section01 .clip-css { width: 33.4rem; height: 32.8rem; object-fit: none; transform: translateY(5%); }
+#mobile #main #fullpage .section01 .clip-css { width: 33.4rem; height: 32.8rem; object-fit: none; }
 #mobile #main #fullpage .section01.ani .clip-css { animation: intro_mobile 1s alternate; width: 100%; height: 100%; }
-#mobile #main #fullpage .section01.active .clip-css { transform: translateY(0); }
 
 
 
@@ -125,12 +125,16 @@
 #mobile #main #fullpage .section02 .swiper-slide { display: block; }
 #mobile #main #fullpage .section02 .big_img { width: 100%; max-width: 100%; height: 60vh; transform: rotate3d(0, 0, 0, 0); }
 #mobile #main #fullpage .section02 .big_img img { width: 100%; }
-#mobile #main #fullpage .section02 h2 { position: relative; left: 100%; transform: translateY(0); margin-top: 2rem; margin-bottom: 2rem; opacity: 1; font-size: 4rem; transition: all ease-in-out 5s; }
-#mobile #main #fullpage .section02 .swiper-slide.swiper-slide-active h2 { left: 2rem; }
-#mobile #main #fullpage .section02 .swiper-pagination-sec02 {  margin-left: 1rem; bottom: 0; padding-bottom: 9.35rem; overflow-x: auto; }
-#mobile #main #fullpage .section02 .swiper-pagination-bullet { width: 18rem; margin-right: 3rem; flex-shrink: 0; position: relative; }
+#mobile #main #fullpage .section02 .swiper-slide h2 { position: initial; transform: translate(100%, 0); margin-top: 2rem; margin-bottom: 2rem; margin-left: 2rem; opacity: 1; font-size: 4rem; }
+
+#mobile #main #fullpage .section02.active .swiper-slide.swiper-slide-active h2 { transform: translate(0, 0); transition: all ease-in-out 2s; }
+#mobile #main #fullpage .section02 .swiper-pagination-wrap-mobile { overflow-x: auto; margin-left: 1rem; bottom: 0; padding:2rem 0 9.35rem; }
+#mobile #main #fullpage .section02 .swiper-pagination-sec02 { width: fit-content;  }
+#mobile #main #fullpage .section02 .swiper-pagination-bullet { width: 18rem; padding-right: 3rem; margin-right: 0; flex-shrink: 0; position: relative; }
+#mobile #main #fullpage .section02 .swiper-pagination-bullet i { width: calc(100% - 3rem); }
 #mobile #main #fullpage .section02 .swiper-pagination-bullet::after { display: block; position: absolute; bottom: -3.5rem; left: 0; /* transform: translateY(calc(100% + 1.5rem)); */ font-size: 1.65rem; font-weight: 400; letter-spacing: -.0825rem; color: #005eb8; opacity: .2; }
 #mobile #main #fullpage .section02 .swiper-pagination-bullet-active::after { opacity: 1; }
+#mobile #main #fullpage .section02.active .swiper-pagination-bullet-active b { animation-name: countingBar-lessWidth; }
 #mobile #main #fullpage .section02 .swiper-pagination-sec02 > span:nth-of-type(1)::after { content:'해운대 두산위브더제니스'; }
 #mobile #main #fullpage .section02 .swiper-pagination-sec02 > span:nth-of-type(2)::after { content:'분당 두산타워'; }
 #mobile #main #fullpage .section02 .swiper-pagination-sec02 > span:nth-of-type(3)::after { content:'신분당선전철'; }
@@ -310,29 +314,32 @@
         clip-path: polygon(0% 75%, 25% 0%, 100% 25%, 75% 100%);
         width: 33.4rem; 
         height: 32.8rem;
-        transform: translateY(5%);
     }
     40% {
         -webkit-clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
         clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
         width: 33.4rem; 
         height: 32.8rem;
-        transform: translateY(3%);
     }
     60% {
         -webkit-clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
         clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
         width: 33.4rem; 
         height: 32.8rem;
-        transform: translateY(3%);
     }
     100% {
         -webkit-clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
         clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
         width: 100%;
         height: 100%;
-        transform: translateY(0);
     }
 }
 
-
+@keyframes countingBar-lessWidth {
+    0% {
+        width: 0;
+    }
+    100% {
+        width:calc(100% - 3rem);
+    }
+}
