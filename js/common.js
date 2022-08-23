@@ -632,11 +632,12 @@ var civilEngineerEvent = {
 
 //사업실적 팝업
 function popupbusiness(popConts) {
-  $(this).addClass('ani');
   var popthis = $(".popup."+popConts);
   popthis.fadeIn(300);
+
+  setTimeout()
   console.log(popthis);
-  popthis.find('.popup_inner').addClass('ani');
+
   // 탭 메뉴 슬라이드 스와이퍼
   // var popSlide01 = new Swiper('.card_popup01 .inner_box', {
   //     slidesPerView : '1',
