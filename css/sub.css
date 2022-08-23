@@ -82,7 +82,7 @@
 #main #fullpage .section02 .right .contents .con_txt dt { font-size: 2.2rem; font-weight: 700; color: #005eb8; letter-spacing: -.05em; }
 #main #fullpage .section02 .right .contents .con_txt dd { font-size: 1.8rem; color: #555; line-height: 1.66; margin-top: 2rem; }
 #main #fullpage .section02.active .swiper-slide.swiper-slide .big_img img { width: 100%; transform: scale(1.1); }
-#main #fullpage .section02.active .swiper-slide.swiper-slide-active .big_img img { animation: scale 6s alternate; }
+#main #fullpage .section02.active .swiper-slide.swiper-slide-active .big_img img { animation: scale 7s alternate; }
 #main #fullpage .section02.active .swiper-slide.swiper-slide-active .mov_txt { opacity: .08; z-index: -1; animation: sec02_txt 10s .2s; }
 #main #fullpage .section02.active .swiper-slide.swiper-slide-active h2 { opacity: 1; left: 29vw; }
 #main #fullpage .section02.active .swiper-slide.swiper-slide-active .con_txt { opacity: 1; transform: translateX(0); }
@@ -125,7 +125,7 @@
 #main #fullpage .section03 .inner > .swiper .right { width: calc(100% - 42rem); margin-left: 10rem; z-index: -1; opacity: 0; transition: all ease-in-out .5s .2s; }
 #main #fullpage .section03 .inner > .swiper .right .swiper-slide { width: 100%; height: fit-content; overflow: hidden; }
 #main #fullpage .section03 .inner > .swiper .right .swiper-slide img { transition: transform .5s }
-#main #fullpage .section03 .inner > .swiper .right.on .swiper-slide img { transform: scale(1.1); }
+#main #fullpage .section03 .inner > .swiper .right .swiper-slide:hover img { transform: scale(1.1); }
 #main #fullpage .section03 .inner > .swiper .swiper-pagination-sec03 { width: auto; float: right; transform: translateY(100%); opacity: 0; }
 #main #fullpage .section03 .inner > .swiper .swiper-pagination-sec03 > .swiper-pagination-bullet { opacity: 1;  border-radius: 0; margin-right: 4rem; background: transparent; height: fit-content; }
 #main #fullpage .section03 .inner > .swiper .swiper-pagination-sec03 > span::after { content:''; display: block; width: 100%; height: .1rem; background: rgba(0, 94, 184,.2); }
@@ -142,16 +142,16 @@
 #main #fullpage .section03.active .inner > .swiper .left { transform: translate(0, 8.5rem); opacity: 1; }
 #main #fullpage .section03.active .inner > .swiper .right { margin-left: -4rem; opacity: 1; }
 #main #fullpage .section03.active .inner > .swiper .swiper-pagination-sec03 { transform: translateY(0); opacity: 1; transition: all ease-in-out .5s .7s; }
-#main #fullpage .section03 .inner_swiper { position: relative;  }
-#main #fullpage .section03 .inner_swiper,
-#main #fullpage .section03 .inner_swiper .swiper-wrapper,
-#main #fullpage .section03 .inner_swiper .swiper-slide { width: 100%; height: 100%; }
-#main #fullpage .section03 .inner_swiper .swiper-slide img { width: 100%; height: 100%; object-fit: cover; transition: transform ease-in-out .5s; }
-#main #fullpage .section03 .inner_swiper .swiper-slide .img:hover img { transform: scale(1.2); }
-#main #fullpage .section03 .inner_swiper .swiper-pagination { width: auto; position: absolute; left: 9rem; bottom: 4rem; }
-#main #fullpage .section03 .inner_swiper .swiper-pagination > span { width: .7rem; height: .7rem; opacity: 1; background: #fff; margin-right: 3rem; position: relative; }
-#main #fullpage .section03 .inner_swiper .swiper-pagination > span::before { content:''; display: inline-block; width: 2.6rem; height: 2.6rem; border: 1px solid #fff; border-radius: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; }
-#main #fullpage .section03 .inner_swiper .swiper-pagination > span.swiper-pagination-bullet-active::before { opacity: 1; }
+#main #fullpage .section03 .inner > .swiper .swiper { position: relative;  }
+#main #fullpage .section03 .inner > .swiper .swiper,
+#main #fullpage .section03 .inner > .swiper .swiper .swiper-wrapper,
+#main #fullpage .section03 .inner > .swiper .swiper .swiper-slide { width: 100%; height: 100%; }
+#main #fullpage .section03 .inner > .swiper .swiper .swiper-slide img { width: 100%; height: 100%; object-fit: cover; transition: transform ease-in-out .5s; }
+#main #fullpage .section03 .inner > .swiper .swiper .swiper-slide .img:hover img { transform: scale(1.2); }
+#main #fullpage .section03 .inner > .swiper .swiper .swiper-pagination { width: auto; position: absolute; left: 9rem; bottom: 4rem; }
+#main #fullpage .section03 .inner > .swiper .swiper .swiper-pagination > span { width: .7rem; height: .7rem; opacity: 1; background: #fff; margin-right: 3rem; position: relative; }
+#main #fullpage .section03 .inner > .swiper .swiper .swiper-pagination > span::before { content:''; display: inline-block; width: 2.6rem; height: 2.6rem; border: 1px solid #fff; border-radius: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; }
+#main #fullpage .section03 .inner > .swiper .swiper .swiper-pagination > span.swiper-pagination-bullet-active::before { opacity: 1; }
 
 #main #fullpage .section04 { position: relative; }
 #main #fullpage .section04 .inner { max-width: 164rem; }
@@ -389,6 +389,7 @@
 .civil_engineer .business_lists .list_img .list_hover .name::before { content:''; display: block; width: 0; height: 0.6rem; background: #005eb8; margin: 0 auto 4.5rem; transform: skew(-40deg); transition: width .3s; }
 .civil_engineer .business_lists .list_img:hover .list_hover { width: 100%; height: 100%; opacity: 1; }
 .civil_engineer .business_lists .list_img:hover .list_hover .name::before { width: 6.5rem; }
+.civil_engineer .business_lists .list_img:hover + .list_cont { opacity: 0; }
 .civil_engineer .business_lists .list_img .list_hover .date { color: #fff; opacity: .8; font-size: 2.2rem; font-weight: 300; margin-top: 1rem; overflow: hidden; transition: all ease .2s; }
 .civil_engineer .business_lists .list_img:hover .list_hover { z-index: 1; }
 .civil_engineer .business_lists .view_more { display: block; width: 17rem; height: 5rem; line-height: 5rem; border: 1px solid rgba(255, 255, 255,.5); border-radius: 2.5rem; font-family: 'Montserrat'; font-size: 1.4rem; color: #fff; padding: 0 2.8rem; margin: 4.5rem auto 0; }

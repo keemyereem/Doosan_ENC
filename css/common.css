@@ -217,11 +217,11 @@ br.br_t, br.br_m {display: none;}
 .container .sub_visual .inner { position: relative; }
 .container .sub_visual h1 { font-size: 7rem; font-weight: 400; color: #fff; line-height: 1; letter-spacing: -.35rem; position: absolute; top: 50%; left: 0; transform: translateY(-2rem); }
 .container .sub_visual .sub_visual_menu { width: 62rem; height: 6rem; background: #fff; position: absolute; bottom: 16rem; display: flex; }
-.container .sub_visual .sub_visual_menu.fixed { position: fixed; top: 0; z-index: 9; width: 100%; left:0; border-bottom: 1px solid #e8e8e8;}
+.container .sub_visual .sub_visual_menu.fixed { position: fixed; top: 0; z-index: 9; width: 100%; left:0; border-bottom: 1px solid #e8e8e8; }
 
 .container .sub_visual .sub_visual_menu .menu_inner {display: flex;}
 
-.container .sub_visual .sub_visual_menu.fixed .menu_inner {width: 144rem; margin: 0 auto;}
+.container .sub_visual .sub_visual_menu.fixed .menu_inner {width: 144rem; margin: 0 auto; }
 /* .container .sub_visual .inner.fixed { position: fixed; top:0; border: 1px solid red; height: fit-content; } */
 
 .container .sub_visual .sub_visual_menu .home { width: 6rem; height: 6rem; background: #fff url(../images/common/vis_home.png) no-repeat 50% 50%; background-size: 1.6rem; border: 1px solid #e8e8e8; position: relative; }

@@ -84,8 +84,6 @@ var commonEvent = {
         $(window).on('scroll', function() {
           let st = $(window).scrollTop();
           
-          console.log(fixMenu);
-
           if(st >= fixMenu) {
             subMenu.classList.add('fixed');
           } else {
@@ -169,6 +167,7 @@ var commonEvent = {
 var mainEvent = {
     init:function(){
         this.intro();
+        // this.createFullpage();
         this.sec02Swiper();
         this.sec03Swiper();
         this.sec04Card();
@@ -400,18 +399,11 @@ var mainEvent = {
         on : {  
           init: function() {
             this.autoplay.stop();
-          },
+          }
 
-          slideChange: function () {
-            if (this.realIndex > 2) {
-              console.log('ddd')
-            }
-          },
         }
 
       });
-
-      
 
       $(window).on('load resize', function(e) {
 
@@ -424,8 +416,20 @@ var mainEvent = {
       
         $(document).on('click','.swiper2-button-next',function(){
           index += 1;
-          
           if (index > bullet.length - 3) {
+            index = 0;
+          };
+          next();
+        });
+
+        swiper2.on('slideChange', function() {
+          if (this.realIndex > 2) {
+            index += 1;
+
+            if (index > bullet.length - 3) {
+              index = bullet.length - 3;
+            };
+          } else if (this.realIndex === 0) {
             index = 0;
           };
           next();
@@ -436,7 +440,6 @@ var mainEvent = {
               'transform':'translateX(' + -(bulletWidth * index) + 'px)',
               'transition':'.3s'
             });
-            console.log(index);
         }
       });
 
@@ -460,7 +463,7 @@ var mainEvent = {
         watchSlidesVisibility: true,
 
         pagination: {
-          el: '.swiper-pagination-sec03',
+          el: '.bus_swiper .swiper-pagination-sec03',
           clickable: 'true',
           type: 'bullets',
           renderBullet: function (index, className) {
@@ -478,8 +481,8 @@ var mainEvent = {
           }
         }
 
-
       });
+
       //마우스 오버시 자동슬라이드 멈춤
       $(".section03 .bus_swiper").each(function(elem, target){
         var swp = target.swiper;
@@ -493,8 +496,7 @@ var mainEvent = {
 
       });
 
-
-      var innerSwiper3 = new Swiper(".section03 .inner_swiper", {
+      innerSwiper3 = new Swiper(".section03 .inner_swiper", {
         speed: 500,
         loop: false,
         autoplayDisableOnInteraction: false,
@@ -509,14 +511,19 @@ var mainEvent = {
           type: 'bullets',
       
         },
-        // autoplay: {
-        //     delay: 5000,
-        //     disableOnInteraction: false
-        // },
 
 
       });
 
+      $(".section03 .inner_swiper").each(function(elem, target){
+        var innerswp = target.swiper;
+
+        $('.swiper-pagination-sec03 > span').on('click', function(){
+          setTimeout(() => {
+            innerswp.slideTo(0,0);
+          }, 200);
+        });
+      });
 
     },
 
@@ -677,7 +684,7 @@ var mobileEvent = {
       simulateTouch: false,
       touchRatio: 0,
       slideToClickedSlide : false,
-      allowTouchMove : false, 
+      allowTouchMove : true, 
       watchOverflow: true,
       watchSlidesProgress: true,
       watchSlidesVisibility: true,
@@ -780,7 +787,33 @@ var mobileEvent = {
       });
     });
 
+    var innerSwiper3_m = new Swiper("#mobile .section03 .inner_swiper_m", {
+      speed: 500,
+      loop: false,
+      autoplayDisableOnInteraction: false,
+      slidesPerView: 1, 
+      watchOverflow: true,
+      watchSlidesProgress: true,
+      watchSlidesVisibility: true,
 
+      pagination: {
+        el: '#mobile .section03 .inner_swiper_m .swiper-pagination',
+        clickable: 'true',
+        type: 'bullets',
+    
+      },
+
+    });
+
+    $("#mobile .section03 .inner_swiper_m").each(function(elem, target){
+      var innerswp = target.swiper;
+
+      $('#mobile .swiper-pagination-sec03 > span').on('click', function(){
+        setTimeout(() => {
+          innerswp.slideTo(0,0);
+        }, 200);
+      });
+    });
   },
 
   mainScroll: () => {

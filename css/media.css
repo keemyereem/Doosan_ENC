@@ -156,9 +156,9 @@
 #mobile #main #fullpage .section03 .inner > .swiper .swiper-pagination-sec03 > span:nth-of-type(1),
 #mobile #main #fullpage .section03 .inner > .swiper .swiper-pagination-sec03 > span:nth-of-type(2),
 #mobile #main #fullpage .section03 .inner > .swiper .swiper-pagination-sec03 > span:nth-of-type(3) { width: calc((100% - .6rem) / 3); }
-#mobile #main #fullpage .section03 .inner_swiper .swiper-pagination { bottom: 1.6rem; left: 1.6rem; }
-#mobile #main #fullpage .section03 .inner_swiper .swiper-pagination > span { width: .5rem; height: .5rem; margin-right: 2rem; }
-#mobile #main #fullpage .section03 .inner_swiper .swiper-pagination > span::before { width: 2rem; height: 2rem; }
+#mobile #main #fullpage .section03 .inner > .swiper .swiper .swiper-pagination { bottom: 1.6rem; left: 1.6rem; }
+#mobile #main #fullpage .section03 .inner > .swiper .swiper .swiper-pagination > span { width: .5rem; height: .5rem; margin-right: 2rem; }
+#mobile #main #fullpage .section03 .inner > .swiper .swiper .swiper-pagination > span::before { width: 2rem; height: 2rem; }
 #mobile #main #fullpage .section03 .inner > .swiper .swiper-pagination-sec03 > span > em { padding-bottom: 1.1rem; }
 #mobile #main #fullpage .section03 .inner > .swiper .swiper-pagination-sec03 > span:nth-of-type(1) > em::after,
 #mobile #main #fullpage .section03 .inner > .swiper .swiper-pagination-sec03 > span:nth-of-type(2) > em::after,
