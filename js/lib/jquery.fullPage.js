@@ -2916,7 +2916,7 @@
         * Shows a message in the console of the given type.
         */
         function showError(type, text){
-            console && console[type] && console[type]('fullPage: ' + text);
+            // console && console[type] && console[type]('fullPage: ' + text);
         }
 
     }; //end of $.fn.fullpage

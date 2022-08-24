@@ -41,7 +41,7 @@
 
 #main #fullpage .section01 { position: relative; }
 #main #fullpage .section01 .clip-wrap { width: 100vw; height: 100%; position: absolute; z-index: 9; background: #fff; overflow: hidden; }
-#main #fullpage .section01 .clip-css { -webkit-clip-path: polygon(0% 75%, 25% 0%, 100% 25%, 75% 100%); clip-path: polygon(0% 75%, 25% 0%, 100% 25%, 75% 100%); position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; width: 66.9rem; height: 65.6rem; object-fit: none; }
+#main #fullpage .section01 .clip-css {width: 100%;height: 100%;background: url(../images/main/sec01_bg1.png)no-repeat 50% 50%; background-size: cover; z-index: 100; -webkit-clip-path: polygon(0% 75%, 25% 0%, 100% 25%, 75% 100%); clip-path: polygon(0% 75%, 25% 0%, 100% 25%, 75% 100%); position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; width: 66.9rem; height: 65.6rem; object-fit: none; }
 #main #fullpage .section01.ani .clip-css { animation: intro 1.3s alternate; -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); width: 100%; height: 100%; }
 #main #fullpage .section01.active .clip-css { transform: translateY(0); }
 #main #fullpage .section01 .center,
@@ -55,7 +55,7 @@
 #main #fullpage .section01 .swiper-slide h2 span:nth-child(4) { transition: .5s 1.1s; }
 #main #fullpage .section01 .swiper-slide-active h2 span { bottom: 0px; opacity: 1; }
 #main #fullpage .section01 .swiper-slide img { display: block;  width: 100%; height:100%; object-fit: cover; }
-#main #fullpage .section01 .swiper-slide.swiper-slide-active img { animation: scaleDown 6s alternate;  }
+#main #fullpage .section01 .swiper-slide.swiper-slide-active img { animation: scale 6s alternate;  }
 #main #fullpage .section01 .swiper .sec01_controller { width: 40rem; height: 3rem; position: absolute; display: flex; align-items: center; justify-content: space-between; bottom:30%; left: 10%; z-index: 1; transition: opacity ease 1s; }
 #main #fullpage .section01 .swiper .sec01_controller .swiper-pagination-sec01 { bottom: unset; right: 0; margin:auto; width: 32.4rem; display: flex; justify-content: space-between; align-items: center; }
 #main #fullpage .section01 .swiper .sec01_controller .swiper-pagination-sec01:after { content: ''; width: 30rem; height: .1rem; background: #fff; position: absolute; opacity: .5; left:0; right:0; margin: auto; }
@@ -126,7 +126,7 @@
 #main #fullpage .section03 .inner > .swiper .right { width: calc(100% - 42rem); margin-left: 10rem; z-index: -1; opacity: 0; transition: all ease-in-out .5s .2s; }
 #main #fullpage .section03 .inner > .swiper .right .swiper-slide { width: 100%; height: fit-content; overflow: hidden; }
 #main #fullpage .section03 .inner > .swiper .right .swiper-slide img { transition: transform .5s }
-#main #fullpage .section03 .inner > .swiper .swiper-slide-active .right .swiper-slide.swiper-slide-active img { animation: scale 4s alternate; }
+#main #fullpage .section03.active .inner > .swiper .swiper-slide-active .right .swiper-slide.swiper-slide-active img { animation: scale 4s alternate; }
 #main #fullpage .section03 .inner > .swiper .swiper-pagination-sec03 { width: auto; float: right; transform: translateY(100%); opacity: 0; }
 #main #fullpage .section03 .inner > .swiper .swiper-pagination-sec03 > .swiper-pagination-bullet { opacity: 1;  border-radius: 0; margin-right: 4rem; background: transparent; height: fit-content; }
 #main #fullpage .section03 .inner > .swiper .swiper-pagination-sec03 > span::after { content:''; display: block; width: 100%; height: .1rem; background: rgba(0, 94, 184,.2); }
@@ -165,8 +165,8 @@
 #main #fullpage .section04 .card li p { font-size: 2rem; transform: translateY(5.6rem); color: #222; font-weight: 350; }
 #main #fullpage .section04 .card li h3 { transform: translateY(5.6rem); color: #fff; overflow: hidden; font-weight: 350; }
 #main #fullpage .section04 .card li h3 span { font-family: 'Montserrat'; font-weight: 350; display: inline-block; overflow: hidden; }
-#main #fullpage .section04 .card li h3 span:first-child { text-indent: 100%; font-size: 6rem; }
-#main #fullpage .section04 .card li h3 span:last-child { text-indent: 0; font-family: 'Pretendard'; font-size: 1.8rem; margin-top: -1rem; position: relative; top: 0; opacity: 0; margin-left: .5rem;}
+#main #fullpage .section04 .card li h3 span:first-child { /* text-indent: 100%; */ font-size: 6rem; width: 11rem; text-align: center; }
+#main #fullpage .section04 .card li h3 span:last-child { text-indent: 0; font-family: 'Pretendard'; font-size: 1.8rem; margin-top: -1rem; position: relative; /* top: 0; opacity: 0; */ margin-left: .5rem;}
 #main #fullpage .section04 .card li .bg { position: absolute; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 0; transition: all ease .3s; }
 #main #fullpage .section04 .card li .icon,
 #main #fullpage .section04 .card li .icon_white { position: absolute; left: 0; right: 0; bottom: 0; top: 0; margin: auto; transform: translateY(-6rem); }
@@ -174,8 +174,8 @@
 #main #fullpage .section04 .card li:hover { flex-direction: column-reverse; }
 #main #fullpage .section04 .card li:hover .bg { opacity: 1; box-shadow: .8rem .6rem 2rem 0 rgba(0, 0, 0, 0.4); }
 #main #fullpage .section04 .card li:hover p { color: #fff; transform: translateY(-15.7rem); }
-#main #fullpage .section04 .card li:hover h3 span:last-child { opacity: 1; top: -1.2rem; transition:.3s all ease .4s;  }
-#main #fullpage .section04 .card li:hover h3 span:first-child { animation: sec04_cardDescription .5s forwards }
+/* #main #fullpage .section04 .card li:hover h3 span:last-child { opacity: 1; top: -1.2rem; transition:.3s all ease .4s;  } */
+/* #main #fullpage .section04 .card li:hover h3 span:first-child { animation: sec04_cardDescription .5s forwards } */
 #main #fullpage .section04.active .card li { opacity: 1; transform: translateY(0); transition: all ease 1s .5s; }
 #main #fullpage .section04.active .card li:nth-child(2) { transition-delay: .6s; }
 #main #fullpage .section04.active .card li:nth-child(3) { transition-delay: .7s; }
@@ -350,17 +350,19 @@
 .civil_engineer .tab_box ul li.on a { color: #fff; font-weight: 400; }
 .civil_engineer .outline .section { padding: 10rem 0 11rem; position: relative; /* height: auto; */ }
 .civil_engineer .outline .section:nth-of-type(2n) { background: #f9f9f9; }
-.civil_engineer .section .section_nav { position: absolute; top: 10rem; left: 12.2rem; width: 2rem; text-align: center; margin: 0 auto; }
-.civil_engineer .section .section_nav .section_nav_prev { padding-bottom: 6rem; cursor: pointer; }
-.civil_engineer .section .section_nav .current_page { font-family: 'Montserrat'; font-size: 3rem; font-weight: 300; color: #005eb8; }
-.civil_engineer .section .section_nav .current_page > span { display: block; font-family: 'Pretendard'; font-size: 2rem; font-weight: 400; color: #005eb8; transform: rotate(270deg) translateY(-.1rem); transform-origin: left top; }
+/* .civil_engineer .section .section_nav.on { left: 6.35vw; opacity: 1; } */
+.civil_engineer/*  .section */ .section_nav { display: flex; flex-direction: column; justify-content: space-between; position: fixed; top: 50%; left: -2rem; opacity: 0; transition: all ease .3s; transform: translateY(-50%); z-index: 2; height: 55rem; border: 1px solid #f00; /* position: absolute; top: 10rem; */ width: 2rem; text-align: center; margin: 0 auto; }
+.civil_engineer/*  .section */ .section_nav .section_nav_prev { padding-bottom: 6rem; cursor: pointer; }
+.civil_engineer/*  .section */ .section_nav .section_nav_fraction { display: flex; flex-direction: column; justify-content: space-between; height: 100%; }
+.civil_engineer/*  .section */ .section_nav .current_page { font-family: 'Montserrat'; font-size: 3rem; font-weight: 300; color: #005eb8; }
+.civil_engineer/*  .section */ .section_nav/*  .current_page > */ .page_name {border: 1px solid #000; width: 25rem; display: block; font-family: 'Pretendard'; font-size: 2rem; font-weight: 400; color: #005eb8; /* transform: rotate(270deg) translate(-100%,-.1rem); transform-origin: left top; */ transform: rotate(270deg) translate(-100%,-445%); position: absolute;top: 0;left: 0; }
 .civil_engineer .section01 .section_nav .current_page > span { width: 10rem; margin-top: 15rem; }
 .civil_engineer .section02 .section_nav .current_page > span { width: 23rem; margin-top: 28rem; }
 .civil_engineer .section03 .section_nav .current_page > span { width: 23rem; margin-top: 28rem; }
 .civil_engineer .section04 .section_nav .current_page > span { width: 13rem; margin-top: 18rem; }
-.civil_engineer .section .section_nav .total_page { font-family: 'Montserrat'; font-size: 1.8rem; font-weight: 300; }
-.civil_engineer .section .section_nav .total_page::before { content:''; display: block; width: 0.1rem; height: 3.7rem; background: #999; margin: 0 0 2rem 1rem; }
-.civil_engineer .section .section_nav .section_nav_next { padding-top: 6rem; cursor: pointer; }
+.civil_engineer/*  .section */ .section_nav .total_page { font-family: 'Montserrat'; font-size: 1.8rem; font-weight: 300; }
+.civil_engineer/*  .section */ .section_nav .total_page::before { content:''; display: block; width: 0.1rem; height: 3.7rem; background: #999; margin: 0 0 2rem 1rem; }
+.civil_engineer/*  .section */ .section_nav .section_nav_next { padding-top: 6rem; cursor: pointer; }
 .civil_engineer .outline .section .inner { padding: 0 4rem; }
 .civil_engineer .outline .section .tit { font-size: 3.8rem; font-weight: 450; color: #222; padding: 7rem 0 2rem; }
 .civil_engineer .outline .section p { display: flex; justify-content: space-between; }
@@ -409,7 +411,7 @@
 .card_popup .popup_inner .pop_cont {max-width: 136rem;width: 100%;background: #f5f5f5;/* padding: 6rem 10rem 6rem 6rem; */display: flex;justify-content: space-between;align-items: center;}
 .card_popup .popup_inner .pop_cont .inner_box {width: 50%;height: auto;/* background: #f5f5f5; */padding: 6rem;overflow: hidden;}
 .card_popup .popup_inner .pop_cont .inner_box .list {width: 100%; height: fit-content; overflow: hidden; }
-.card_popup .popup_inner .pop_cont .inner_box .list > img {transition: transform .3s;}
+.card_popup .popup_inner .pop_cont .inner_box .list > img {transition: transform .8s;}
 .card_popup .popup_inner .pop_cont .inner_box .list:hover > img {transform: scale(1.1);}
 .card_popup .popup_inner .pop_cont .txt_box {width: 50%;height: 100%; padding: 6rem 10rem 6rem 6rem;background: #fff;}
 .card_popup .popup_inner .pop_cont .txt_box .card_tit {font-size: 4rem;font-weight: 400;color: #222;letter-spacing: -.1rem;margin-bottom: 2rem;}

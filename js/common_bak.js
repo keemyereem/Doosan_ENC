@@ -125,6 +125,7 @@ var commonEvent = {
           footer = footer - 300;
 
           if(st >= footer) {
+              console.log('adadad')
               setTimeout(() => {
                   $('.footer .sec_tit > span').addClass('fin')
               }, 200);
@@ -757,49 +758,84 @@ var civilOutline = {
   init: function(){
     this.outlineNav();
   },
-
   outlineNav: () => {
-
-    const section = $('.section');
-    const fixSidemenu = $('.civil_engineer .section_nav');
-    const fraction = fixSidemenu.find('.section_nav_fraction');
+    // $('.section_nav_prev, .section_nav_next').click(function(){
+    //   $('html,body').addClass('smooth');
+    // });
+  
     
-    fraction.children('.total_page').text(section.length)
-
-    $(window).on('load scroll resize', function (){
-        let fixmenuHeight = $('.sub_visual_menu').height();
-        let currentPosition = $(window).scrollTop() + fixmenuHeight;
-        let sectionEnd = section.outerHeight();
-
-      if (currentPosition > section.offset().top) {
-        fixSidemenu.addClass('on');
-
-        section.each(function (index) {
-          if (index + 1 !== section.length) {
-
-            if (currentPosition > section.eq(index).offset().top && currentPosition < section.eq(index + 1).offset().top) {
-              section.eq(index).addClass('active');
-              section.not(':eq(' + index + ')').removeClass('active');
-              fraction.children('.current_page').text(index + 1);
-
-            }
-          } else {
-
-            if (currentPosition > section.eq(index).offset().top) {
-              section.eq(index).addClass('active');
-              section.not(':eq(' + index + ')').removeClass('active');
-              fraction.children('.current_page').text(index + 1);
-            }
-          }
-      
-        });
-
-      } else if (currentPosition < section.offset().top && currentPosition > section) {
-        fixSidemenu.removeClass('on');
-        section.removeClass('active');
+    $(window).on('scroll',function(){
+      var st = $(window).scrollTop(),
+      s1Top = $('.section01').offset().top - 200,
+      s2Top = $('.section02').offset().top - 200,
+      s3Top = $('.section03').offset().top - 200,
+      s4Top = $('.section04').offset().top - 200,
+      ftTop = $('.footer').offset().top - $('.footer').outerHeight() + 100,
+      sNavi = $('.section_nav'),
+      curPg = $('.section_nav .current_page')/* .text() */,
+      totalPg = $('.section_nav .total_page')/* .text() */,
+      curTxt = $('.section_nav .page_name')/* .text() */,
+      btnPrev = $('.section_nav_prev'),
+      btnNext = $('.section_nav_next');
+    
+      console.log(' section01: ' + s1Top);
+      console.log(' section02: ' + s2Top);
+      console.log(' section03: ' + s3Top);
+      console.log(' section04: ' + s4Top);
+      // console.log(' footer: ' + ftTop);
+      // console.log(' curPg: ' + curPg);
+      // console.log(' totalPg: ' + totalPg);
+      // console.log(' curTxt: ' + curTxt);
+      console.log(' st: ' + st);
+  
+  
+      if(st > s1Top && st < ftTop){
+        sNavi.addClass('on');
+      }else {
+        sNavi.removeClass('on');
       }
+  
+      if(st >= s1Top && st < s2Top){
+        curPg.text('1');
+        curTxt.text('경부고속철도');
+        btnNext.on('click', function(){
+          $('html, body').animate({st : s2Top},300);
+        });
+      }else if(st >= s2Top && st <
         
+        
+        
+        
+        s3Top){
+        curPg.text('2');
+        curTxt.text('지하철 9호선 909공구');
+        btnPrev.on('click', function(){
+          $('html, body').animate({st : s1Top},300);
+        });
+        btnNext.on('click', function(){
+          $('html, body').animate({st : s3Top},300);
+        });
+      }else if(st >= s3Top && st < s4Top){
+        curPg.text('3');
+        curTxt.text('강남순환도시고속도로 5공구');
+        btnPrev.on('click', function(){
+          $('html, body').animate({st : s2Top},300);
+        });
+        btnNext.on('click', function(){
+          $('html, body').animate({st : s4Top},300);
+        });
+      }else if(st >= s4Top && st < ftTop){
+        curPg.text('4');
+        curTxt.text('동대구역 고가교');
+        btnPrev.on('click', function(){
+          $('html, body').animate({st : s3Top},300);
+        });
+      }else{
+  
+      }
+  
     });
+  
   
    },
 }
