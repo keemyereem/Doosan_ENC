@@ -311,123 +311,123 @@ var mainEvent = {
   },
 
   mainSwiper: () => {
-    var interleaveOffset = 0.5;
+    // var interleaveOffset = 0.5;
 
-    var swiperOptions = {
-      spaceBetween: 30,
-      speed: 500,
-      effect: "fade",
-      loop: true,
-      parallax: true,
-      autoplay: {
-          delay: 3500,
-          disableOnInteraction: true,
-      },
-      watchSlidesProgress: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination-sec01",
-        clickable: true,
-      },
-      on: {
-        slideChangeTransitionStart: function() {
-            $('.swiper-slide').addClass('changing');
-            $('.swiper-slide').removeClass('changed');
-        },
+    // var swiperOptions = {
+    //   spaceBetween: 30,
+    //   speed: 500,
+    //   effect: "fade",
+    //   loop: true,
+    //   parallax: true,
+    //   autoplay: {
+    //       delay: 3500,
+    //       disableOnInteraction: true,
+    //   },
+    //   watchSlidesProgress: true,
+    //   navigation: {
+    //     nextEl: ".swiper-button-next",
+    //     prevEl: ".swiper-button-prev",
+    //   },
+    //   pagination: {
+    //     el: ".swiper-pagination-sec01",
+    //     clickable: true,
+    //   },
+    //   on: {
+    //     slideChangeTransitionStart: function() {
+    //         $('.swiper-slide').addClass('changing');
+    //         $('.swiper-slide').removeClass('changed');
+    //     },
 
-        slideChangeTransitionEnd: () => {
-            $('.swiper-slide').removeClass('changing');
-            $('.swiper-slide').addClass('changed');
-        },
-        progress: function() {
-          var swiper = this;
-          for (var i = 0; i < swiper.slides.length; i++) {
-            var slideProgress = swiper.slides[i].progress;
-            var innerOffset = swiper.width * interleaveOffset;
-            var innerTranslate = slideProgress * innerOffset;
-            swiper.slides[i].querySelector(".slide-inner").style.transform =
-              "translate3d(" + innerTranslate + "px, 0, 0)";
-          }      
-        },
-        touchStart: function() {
-          var swiper = this;
-          for (var i = 0; i < swiper.slides.length; i++) {
-            swiper.slides[i].style.transition = "";
-          }
-        },
-        setTransition: function(speed) {
-          var swiper = this;
-          for (var i = 0; i < swiper.slides.length; i++) {
-            swiper.slides[i].style.transition = speed + "ms";
-            swiper.slides[i].querySelector(".slide-inner").style.transition =
-              speed + "ms";
-          }
-        }
-      }
-    };
+    //     slideChangeTransitionEnd: () => {
+    //         $('.swiper-slide').removeClass('changing');
+    //         $('.swiper-slide').addClass('changed');
+    //     },
+    //     progress: function() {
+    //       var swiper = this;
+    //       for (var i = 0; i < swiper.slides.length; i++) {
+    //         var slideProgress = swiper.slides[i].progress;
+    //         var innerOffset = swiper.width * interleaveOffset;
+    //         var innerTranslate = slideProgress * innerOffset;
+    //         swiper.slides[i].querySelector(".slide-inner").style.transform =
+    //           "translate3d(" + innerTranslate + "px, 0, 0)";
+    //       }      
+    //     },
+    //     touchStart: function() {
+    //       var swiper = this;
+    //       for (var i = 0; i < swiper.slides.length; i++) {
+    //         swiper.slides[i].style.transition = "";
+    //       }
+    //     },
+    //     setTransition: function(speed) {
+    //       var swiper = this;
+    //       for (var i = 0; i < swiper.slides.length; i++) {
+    //         swiper.slides[i].style.transition = speed + "ms";
+    //         swiper.slides[i].querySelector(".slide-inner").style.transition =
+    //           speed + "ms";
+    //       }
+    //     }
+    //   }
+    // };
 
-    swiper = new Swiper(".mainSwiper", swiperOptions);
+    // swiper = new Swiper(".mainSwiper", swiperOptions);
 
-    var sliderBgSetting = $(".slide-bg-image");
-    sliderBgSetting.each(function(indx){
-        if ($(this).attr("data-background")){
-            $(this).css("background-image", "url(" + $(this).data("background") + ")");
-        }
-    });
+    // var sliderBgSetting = $(".slide-bg-image");
+    // sliderBgSetting.each(function(indx){
+    //     if ($(this).attr("data-background")){
+    //         $(this).css("background-image", "url(" + $(this).data("background") + ")");
+    //     }
+    // });
 
 
-      // swiper = new Swiper(".mainSwiper", {
-      //     spaceBetween: 30,
-      //     speed: 500,
-      //     effect: "fade",
-      //     loop: true,
-      //     autoplay: {
-      //         delay: 3500,
-      //         disableOnInteraction: true,
-      //     },
+      swiper = new Swiper(".mainSwiper", {
+          spaceBetween: 30,
+          speed: 500,
+          effect: "fade",
+          loop: true,
+          autoplay: {
+              delay: 3500,
+              disableOnInteraction: true,
+          },
           
-      //     navigation: {
-      //       nextEl: ".swiper-button-next",
-      //       prevEl: ".swiper-button-prev",
-      //     },
-      //     pagination: {
-      //       el: ".swiper-pagination-sec01",
-      //       clickable: true,
-      //     },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          pagination: {
+            el: ".swiper-pagination-sec01",
+            clickable: true,
+          },
 
-      //     //  슬라이드 이벤트 감지 - 참고 https://songsong.dev/entry/swiperjs-슬라이더-기본-사용법-알아보기
-      //     on : {  
-      //         init: function() {
-      //             // this.autoplay.stop()
-      //         },
+          //  슬라이드 이벤트 감지 - 참고 https://songsong.dev/entry/swiperjs-슬라이더-기본-사용법-알아보기
+          on : {  
+              init: function() {
+                  // this.autoplay.stop()
+              },
 
-      //         slideChangeTransitionStart: function() {
-      //             $('.swiper-slide').addClass('changing');
-      //             $('.swiper-slide').removeClass('changed');
-      //         },
+              slideChangeTransitionStart: function() {
+                  $('.swiper-slide').addClass('changing');
+                  $('.swiper-slide').removeClass('changed');
+              },
 
-      //         slideChangeTransitionEnd: () => {
-      //             $('.swiper-slide').removeClass('changing');
-      //             $('.swiper-slide').addClass('changed');
-      //         },
-      //     },
+              slideChangeTransitionEnd: () => {
+                  $('.swiper-slide').removeClass('changing');
+                  $('.swiper-slide').addClass('changed');
+              },
+          },
           
 
-      // });
+      });
 
       // 페이지네이션 동그라미 슬라이드별 이동
-      // swiper.on('transitionStart', ()=> {
-      //     let $this = $('.swiper-pagination-bullet-active').position().left;
-      //     $('.bullet_hr').css('left', ($this / 10) + 'rem');
-      // });
+      swiper.on('transitionStart', ()=> {
+          let $this = $('.swiper-pagination-bullet-active').position().left;
+          $('.bullet_hr').css('left', ($this / 10) + 'rem');
+      });
 
-      // // Next, Prev버튼 클릭 시 오토플레이 재개
-      // $(document).on('click', '.swiper-button', () => {
-      //     swiper.autoplay.start();
-      // });
+      // Next, Prev버튼 클릭 시 오토플레이 재개
+      $(document).on('click', '.swiper-button', () => {
+          swiper.autoplay.start();
+      });
 
 
   },
