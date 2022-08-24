@@ -268,7 +268,7 @@ br.br_t, br.br_m {display: none;}
 .footer .family_site .site_list li a { font-size: 1.6rem; color: #fff; }
 
 .footer .right ul { padding-left: 16rem; }
-.footer .right ul li a { display: block; font-size: 3.2rem; color: #fff; opacity: .8; font-weight: 450; /* padding-bottom: 5rem; */padding: 2.5rem 0;; width: 100%; max-width: 56rem; display: flex; align-items: center; justify-content: space-between; position: relative; transition: all .3s; }
+.footer .right ul li a { display: block; font-size: 3.2rem; color: #fff; opacity: .8; font-weight: 450; /* padding-bottom: 5rem; */padding: 2vh 0; width: 100%; max-width: 56rem; display: flex; align-items: center; justify-content: space-between; position: relative; transition: all .3s; }
 .footer .right ul li a::after { content:''; width: 1.2rem; height: 1.2rem; border-top: 2px solid #fff; border-right: 2px solid #fff; transform: rotate(45deg); opacity: .5; transition: opacity .2; }
 .footer .right ul li a::before { content:''; display: block; width: 0; height: 0.1rem; background: #fff; position: absolute; left: 0; bottom: 0; opacity: .8; transition: width .3s; }
 .footer .right ul li:hover a { font-size: 4.4rem; opacity: 1; }

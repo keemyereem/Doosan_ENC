@@ -311,54 +311,123 @@ var mainEvent = {
   },
 
   mainSwiper: () => {
-      swiper = new Swiper(".mainSwiper", {
-          spaceBetween: 30,
-          speed: 500,
-          effect: "fade",
-          loop: true,
-          autoplay: {
-              delay: 5000,
-              disableOnInteraction: true,
-          },
-          
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-          pagination: {
-            el: ".swiper-pagination-sec01",
-            clickable: true,
-          },
+    var interleaveOffset = 0.5;
 
-          //  슬라이드 이벤트 감지 - 참고 https://songsong.dev/entry/swiperjs-슬라이더-기본-사용법-알아보기
-          on : {  
-              init: function() {
-                  // this.autoplay.stop()
-              },
+    var swiperOptions = {
+      spaceBetween: 30,
+      speed: 500,
+      effect: "fade",
+      loop: true,
+      parallax: true,
+      autoplay: {
+          delay: 3500,
+          disableOnInteraction: true,
+      },
+      watchSlidesProgress: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination-sec01",
+        clickable: true,
+      },
+      on: {
+        slideChangeTransitionStart: function() {
+            $('.swiper-slide').addClass('changing');
+            $('.swiper-slide').removeClass('changed');
+        },
 
-              slideChangeTransitionStart: function() {
-                  $('.swiper-slide').addClass('changing');
-                  $('.swiper-slide').removeClass('changed');
-              },
-
-              slideChangeTransitionEnd: () => {
-                  $('.swiper-slide').removeClass('changing');
-                  $('.swiper-slide').addClass('changed');
-              },
+        slideChangeTransitionEnd: () => {
+            $('.swiper-slide').removeClass('changing');
+            $('.swiper-slide').addClass('changed');
+        },
+        progress: function() {
+          var swiper = this;
+          for (var i = 0; i < swiper.slides.length; i++) {
+            var slideProgress = swiper.slides[i].progress;
+            var innerOffset = swiper.width * interleaveOffset;
+            var innerTranslate = slideProgress * innerOffset;
+            swiper.slides[i].querySelector(".slide-inner").style.transform =
+              "translate3d(" + innerTranslate + "px, 0, 0)";
+          }      
+        },
+        touchStart: function() {
+          var swiper = this;
+          for (var i = 0; i < swiper.slides.length; i++) {
+            swiper.slides[i].style.transition = "";
           }
+        },
+        setTransition: function(speed) {
+          var swiper = this;
+          for (var i = 0; i < swiper.slides.length; i++) {
+            swiper.slides[i].style.transition = speed + "ms";
+            swiper.slides[i].querySelector(".slide-inner").style.transition =
+              speed + "ms";
+          }
+        }
+      }
+    };
 
-      });
+    swiper = new Swiper(".mainSwiper", swiperOptions);
+
+    var sliderBgSetting = $(".slide-bg-image");
+    sliderBgSetting.each(function(indx){
+        if ($(this).attr("data-background")){
+            $(this).css("background-image", "url(" + $(this).data("background") + ")");
+        }
+    });
+
+
+      // swiper = new Swiper(".mainSwiper", {
+      //     spaceBetween: 30,
+      //     speed: 500,
+      //     effect: "fade",
+      //     loop: true,
+      //     autoplay: {
+      //         delay: 3500,
+      //         disableOnInteraction: true,
+      //     },
+          
+      //     navigation: {
+      //       nextEl: ".swiper-button-next",
+      //       prevEl: ".swiper-button-prev",
+      //     },
+      //     pagination: {
+      //       el: ".swiper-pagination-sec01",
+      //       clickable: true,
+      //     },
+
+      //     //  슬라이드 이벤트 감지 - 참고 https://songsong.dev/entry/swiperjs-슬라이더-기본-사용법-알아보기
+      //     on : {  
+      //         init: function() {
+      //             // this.autoplay.stop()
+      //         },
+
+      //         slideChangeTransitionStart: function() {
+      //             $('.swiper-slide').addClass('changing');
+      //             $('.swiper-slide').removeClass('changed');
+      //         },
+
+      //         slideChangeTransitionEnd: () => {
+      //             $('.swiper-slide').removeClass('changing');
+      //             $('.swiper-slide').addClass('changed');
+      //         },
+      //     },
+          
+
+      // });
 
       // 페이지네이션 동그라미 슬라이드별 이동
-      swiper.on('transitionStart', ()=> {
-          let $this = $('.swiper-pagination-bullet-active').position().left;
-          $('.bullet_hr').css('left', ($this / 10) + 'rem');
-      });
+      // swiper.on('transitionStart', ()=> {
+      //     let $this = $('.swiper-pagination-bullet-active').position().left;
+      //     $('.bullet_hr').css('left', ($this / 10) + 'rem');
+      // });
 
-      // Next, Prev버튼 클릭 시 오토플레이 재개
-      $(document).on('click', '.swiper-button', () => {
-          swiper.autoplay.start();
-      });
+      // // Next, Prev버튼 클릭 시 오토플레이 재개
+      // $(document).on('click', '.swiper-button', () => {
+      //     swiper.autoplay.start();
+      // });
 
 
   },
@@ -762,44 +831,69 @@ var civilOutline = {
 
     const section = $('.section');
     const fixSidemenu = $('.civil_engineer .section_nav');
-    const fraction = fixSidemenu.find('.section_nav_fraction');
+    const fraction = fixSidemenu.find('.fraction');
+    const fixmenuHeight = $('.sub_visual_menu').height();
     
     fraction.children('.total_page').text(section.length)
 
-    $(window).on('load scroll resize', function (){
-        let fixmenuHeight = $('.sub_visual_menu').height();
+    $(window).on('load resize scroll', function(e) {
+        let gap = $(window).height() / 4;
         let currentPosition = $(window).scrollTop() + fixmenuHeight;
-        let sectionEnd = section.outerHeight();
+        let fractionOut = (section.eq(section.length - 1).innerHeight() / 4) + $('.footer').offset().top - $('.footer').outerHeight();
 
-      if (currentPosition > section.offset().top) {
+      if (currentPosition > section.eq(0).offset().top - gap && currentPosition < fractionOut) {
         fixSidemenu.addClass('on');
 
         section.each(function (index) {
+          
+          indexName = section.eq(index).find('.tit').text();
+
           if (index + 1 !== section.length) {
 
-            if (currentPosition > section.eq(index).offset().top && currentPosition < section.eq(index + 1).offset().top) {
+            if (currentPosition > section.eq(index).offset().top - gap && currentPosition < section.eq(index + 1).offset().top) {
               section.eq(index).addClass('active');
               section.not(':eq(' + index + ')').removeClass('active');
               fraction.children('.current_page').text(index + 1);
-
+              fraction.children('.page_name').text(indexName);
             }
           } else {
 
-            if (currentPosition > section.eq(index).offset().top) {
+            if (currentPosition > section.eq(index).offset().top - gap) {
               section.eq(index).addClass('active');
               section.not(':eq(' + index + ')').removeClass('active');
               fraction.children('.current_page').text(index + 1);
+              fraction.children('.page_name').text(indexName);
             }
           }
-      
+
         });
 
-      } else if (currentPosition < section.offset().top && currentPosition > section) {
+      } else {
         fixSidemenu.removeClass('on');
         section.removeClass('active');
       }
-        
+
     });
+
+    $('.section_nav .button').on('click', function() {
+      let ctlIdx = fraction.children('.current_page').text();
+
+      if ($(this).hasClass('prev') == true) {
+        if (ctlIdx == 1) {
+          ctlIdx = 0;
+        } else {
+        ctlIdx = ctlIdx - 2;
+        }
+
+        $('html, body').animate({
+          scrollTop: section.eq(ctlIdx).offset().top - fixmenuHeight
+        }, 500);
+      } else {
+        $('html, body').animate({
+          scrollTop: section.eq(ctlIdx).offset().top
+        }, 500);
+      }
+    })
   
    },
 }
