@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <!-- SET FILE PATH :: compatibility ie9 code -->
+   <base href="../" />
+   <!--[if IE]><script type="text/javascript">
+            // Fix for IE ignoring relative base tags.
+            (function() {
+                var baseTag = document.getElementsByTagName('base')[0];
+                baseTag.href = baseTag.href;
+            })();
+    </script><![endif]-->
+
+    <meta charset="utf-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
+    <meta name="author" content="DoosanENC">
+    <meta name="robots" content="index, follow">
+    <meta name="title" content="두산건설">
+    <meta name="description" content="두산건설 리뉴얼 홈페이지입니다.">
+    <meta name="keywords" content="두산건설, 리뉴얼홈페이지, 포엠크리에이티브">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="두산건설" />
+    <meta property="og:description" content="두산건설 리뉴얼 홈페이지입니다." />
+    <meta property="og:site_name" content="DoosanENC">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="두산건설" />
+    <meta name="twitter:description" content="두산건설 리뉴얼 홈페이지입니다." />
+    
+    <title>sample</title>
+    <link rel="icon" href="images/favicon.png" sizes="32x32">
+    <link rel="canonical" href="http://dev.topes.4-m.co.kr/" />  
+
+    <!-- Library CSS -->
+    <link type="text/css" href="css/lib/jquery.swiper.min.css" rel="stylesheet">
+    <link type="text/css" href="css/lib/jquery.fullpage.css" rel="stylesheet">
+    <link type="text/css" href="css/lib/aos.css" rel="stylesheet">
+
+    <link type="text/css" href="css/font.css" rel="stylesheet">
+    <link type="text/css" href="css/common.css" rel="stylesheet">
+    <link type="text/css" href="css/sub.css" rel="stylesheet">
+    <link type="text/css" href="sample.css" rel="stylesheet">
+
+    <!-- Library JS -->
+    <script src="js/lib/jquery-1.12.4.min.js"></script>
+    <script src="js/lib/jquery.swiper.min.js"></script>
+    <script src="js/lib/jquery.easings.min.js"></script>
+    <script src="js/lib/aos.js"></script>
+    <script>
+        $(document).ready( function() {
+            mainEvent.init();
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="wrap" id="main">
+        <div id="fullpage">
+                    
+            <section class="section section01" data-anchor="firstPage" id="intro_trigger">
+                <div class="center">
+                    <div class="inner">
+
+                        <figure class="clip-wrap">
+                            <div class="clip-css"></div>
+                        </figure>
+            
+                        <div class="swiper mainSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="images/main/sec01_bg1.png" alt="main_bg1">
+                                    <h2>
+                                        <span>더 좋은 세상의 시작,</span>
+                                        <span>더 나은 미래를 짓습니다.</span>
+                                    </h2>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/main/sec01_bg2.png" alt="main_bg2">
+                                    <h2>
+                                        <span>토목 대역사를 통해</span>
+                                        <span>대한민국의 지도를 바꿨습니다.</span>
+                                    </h2>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/main/sec01_bg3.png" alt="main_bg3">
+                                    <h2>
+                                        <span>더 나은 내일위해 끊임없이</span>
+                                        <span>변화하고 혁신하겠습니다.</span>
+                                    </h2>
+                                </div>
+                            </div>
+
+                            <div class="sec01_controller">
+                                <div class="swiper-button swiper-button-next"></div>
+                                <div class="swiper-pagination-sec01"></div>
+                                <span class="bullet_hr"></span>
+                                <div class="swiper-button swiper-button-prev"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+    </div>
+
+
+    <script>
+        
+    // HERO SLIDER
+    var menu = [];
+    jQuery('.swiper-slide').each( function(index){
+        menu.push( jQuery(this).find('.slide-inner').attr("data-text") );
+    });
+    var interleaveOffset = 0.5;
+    var swiperOptions = {
+        loop: true,
+        speed: 1000,
+        parallax: true,
+        autoplay: {
+            delay: 6500,
+            disableOnInteraction: false,
+        },
+        watchSlidesProgress: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        on: {
+            progress: function() {
+                var swiper = this;
+                for (var i = 0; i < swiper.slides.length; i++) {
+                    var slideProgress = swiper.slides[i].progress;
+                    var innerOffset = swiper.width * interleaveOffset;
+                    var innerTranslate = slideProgress * innerOffset;
+                    swiper.slides[i].querySelector(".slide-inner").style.transform =
+                    "translate3d(" + innerTranslate + "px, 0, 0)";
+                }      
+            },
+
+            touchStart: function() {
+              var swiper = this;
+              for (var i = 0; i < swiper.slides.length; i++) {
+                swiper.slides[i].style.transition = "";
+              }
+            },
+
+            setTransition: function(speed) {
+                var swiper = this;
+                for (var i = 0; i < swiper.slides.length; i++) {
+                    swiper.slides[i].style.transition = speed + "ms";
+                    swiper.slides[i].querySelector(".slide-inner").style.transition =
+                    speed + "ms";
+                }
+            }
+        }
+    };
+
+    var swiper = new Swiper(".swiper-container", swiperOptions);
+
+    // DATA BACKGROUND IMAGE
+    var sliderBgSetting = $(".slide-bg-image");
+    sliderBgSetting.each(function(indx){
+        if ($(this).attr("data-background")){
+            $(this).css("background-image", "url(" + $(this).data("background") + ")");
+        }
+    });
+
+    </script>
+    <!-- common JS -->
+    <script src="js/common.js"></script>
+   </body>
+</html>
