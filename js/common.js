@@ -291,9 +291,9 @@ var mainEvent = {
               setTimeout(() => {
                 $('.clip-wrap').addClass('indent');
               }, 0);
-              
-              mainEvent.mainSwiper();
 
+              mainEvent.mainSwiper();
+              
               if ($('body').width() > 768) {
                 mainEvent.createFullpage();
               } else {
@@ -314,13 +314,12 @@ var mainEvent = {
 
     var swiperOptions = {
       speed: 1000,
-      loop: true,
-      parallax: true,
+      loop: false,
+      watchSlidesProgress: true,
       autoplay: {
           delay: 3500,
           disableOnInteraction: true,
       },
-      watchSlidesProgress: true,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -330,33 +329,30 @@ var mainEvent = {
         clickable: true,
       },
       on: {
-        slideChangeTransitionStart: function() {
-            $('.swiper-slide').addClass('changing');
-            $('.swiper-slide').removeClass('changed');
-        },
-
-        slideChangeTransitionEnd: () => {
-            $('.swiper-slide').removeClass('changing');
-            $('.swiper-slide').addClass('changed');
-        },
         progress: function() {
           var swiper = this;
+          
           for (var i = 0; i < swiper.slides.length; i++) {
+            console.log('swiper length: '+ swiper.slides[i]);
+
             var slideProgress = swiper.slides[i].progress;
             var innerOffset = swiper.width * interleaveOffset;
             var innerTranslate = slideProgress * innerOffset;
+
             swiper.slides[i].querySelector(".slide-inner").style.transform =
               "translate3d(" + innerTranslate + "px, 0, 0)";
+
             swiper.slides[i].querySelector(".slide-inner").style.transition =
               "transform 1s";
+
             // swiper.slides[i].querySelector(".slide-inner").style.transition =
             //   "background-size 6s";
             
-            var cList = this.slides[i].classList;
-            if(cList.contains('changed') && cList.contains('swiper-slide-active')){
-              swiper.slides[i].querySelector(".slide-inner").style.transition =
-              "background-size 6s";
-            }
+            // var cList = this.slides[i].classList;
+            // if(cList.contains('changed') && cList.contains('swiper-slide-active')){
+            //   swiper.slides[i].querySelector(".slide-inner").style.transition =
+            //   "background-size 6s";
+            // }
           }      
         },
         touchStart: function() {
@@ -369,8 +365,8 @@ var mainEvent = {
           var swiper = this;
           for (var i = 0; i < swiper.slides.length; i++) {
             swiper.slides[i].style.transition = speed + "ms";
-            swiper.slides[i].querySelector(".slide-inner").style.transition =
-              speed + "ms";
+            swiper.slides[i].querySelector(".slide-inner").style.transitionDuration = speed + "ms";
+            swiper.slides[i].querySelector(".slide-inner").style.transitionProperty = "transform";
           }
         }
       }
