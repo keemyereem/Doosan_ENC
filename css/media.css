@@ -166,7 +166,7 @@
 #mobile #main #fullpage .section03 .inner > .swiper .swiper-pagination-sec03 > span:nth-of-type(3) > em::after { content:''; }
 
 #mobile #main #fullpage .section04 .inner { padding: 6rem 2rem; }
-#mobile #main #fullpage .section04 .sec_tit { padding: 0 0 5rem 0; position: initial; left: 0; opacity: 1; }
+#mobile #main #fullpage .section04 .con_tit { padding: 0 0 5rem 0; position: initial; left: 0; opacity: 1; }
 #mobile #main #fullpage .section04 .card { height: auto; flex-wrap: wrap; }
 #mobile #main #fullpage .section04 .card li { width: 50%; text-align: center; opacity: 1; }
 #mobile #main #fullpage .section04 .card li:not(:last-child) { margin-bottom: 5rem; }
@@ -182,7 +182,7 @@
 
 #mobile #main #fullpage .section05 { background: linear-gradient(to bottom, #000 29.8rem, #fff 29.9rem, #fff 100%); }
 #mobile #main #fullpage .section05 .inner { transform:translateY(0); padding: 6rem 1rem; }
-#mobile #main #fullpage .section05 .sec_tit { position: initial; }
+#mobile #main #fullpage .section05 .con_tit { position: initial; }
 #mobile #main #fullpage .section05 .link { position: initial; margin: 2.2rem 0 3rem; }
 #mobile #main #fullpage .section05 .link li:last-child { margin-left: 4rem; }
 #mobile #main #fullpage .section05 .interview_box { padding-top: 0; flex-direction: column; }
@@ -227,7 +227,7 @@
 /* =========================================== 서브 ======================================== */
 #mobile .civil_engineer .sub_visual {  background-image: url(../images/business/business_bg_m.png); background-size: cover; }
 #mobile .civil_engineer .title_area { padding: 6rem 2rem 7rem; text-align: center; }
-#mobile .civil_engineer .title_area .sec_tit { font-size: 3.5rem; }
+#mobile .civil_engineer .title_area .con_tit { font-size: 3.5rem; }
 #mobile .civil_engineer .title_area .sub_tit { font-size: 2.2rem; padding: 3rem 0 1rem; line-height: 1.36; }
 #mobile .civil_engineer .title_area .sub_tit > b {  font-size: 2.3rem; }
 #mobile .civil_engineer .title_area .sub_txt { font-size: 1.5rem; line-height: 1.86; }
