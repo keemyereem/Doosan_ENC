@@ -2,17 +2,37 @@
 /* --------------------- DoosanENC Released 2022.08.08 --------------------- */
 /* --------------------- Published by 4m Creative --------------------- */
 
+
 $(function(){
     
-  AOS.init({
-  // 핸들링 참고: https://github.com/michalsnik/aos
-  once : true,
-  throttleDelay : 99,
-  duration: 1000,
-      anchorPlacement: 'center-bobttom',
-      startEvent: "load",
+  const isMobile = () => {
+    const user = navigator.userAgent;
+    let isCheck = false;
 
-});
+    if ( user.indexOf("iPhone") > -1 || user.indexOf("Android") > -1 ) {
+        isCheck = true;
+    }
+
+    return isCheck;
+  }
+if (isMobile() == false) {
+  console.log('*PC environment')
+  $('html').attr('id', 'pc')
+} else {
+  console.log('*Mobile environment')
+  $('html').attr('id', 'mobile')
+}
+
+
+  AOS.init({
+    // 핸들링 참고: https://github.com/michalsnik/aos
+    once : true,
+    throttleDelay : 99,
+    duration: 1000,
+    anchorPlacement: 'center-bobttom',
+    startEvent: "load",
+
+  });
 
 addEventListener("fetch", (event) => {
   event.respondWith(
@@ -30,6 +50,8 @@ addEventListener("fetch", (event) => {
     })()
   );
 });
+
+
 
 
 });
@@ -192,7 +214,7 @@ var mainEvent = {
           
         }else {
           setTimeout(() => {
-          $(".header").removeClass("wht");
+            $(".header").removeClass("wht");
           }, 500);
 
         }
@@ -293,14 +315,16 @@ var mainEvent = {
               }, 0);
 
               mainEvent.mainSwiper();
-              
-              if ($('body').width() > 768) {
+              if (isMobile() == false) {
                 mainEvent.createFullpage();
               } else {
-                
                 mainEvent.sec02Swiper();
                 mainEvent.sec03Swiper();
               }
+              
+      
+                
+              
               
               
           });
@@ -333,7 +357,7 @@ var mainEvent = {
           var swiper = this;
           
           for (var i = 0; i < swiper.slides.length; i++) {
-            console.log('swiper length: '+ swiper.slides[i]);
+            // console.log('swiper length: '+ swiper.slides[i]);
 
             var slideProgress = swiper.slides[i].progress;
             var innerOffset = swiper.width * interleaveOffset;

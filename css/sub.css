@@ -82,7 +82,7 @@
 #main #fullpage .section02 .swiper { position: relative; }
 #main #fullpage .section02 .swiper-slide { position: relative; display: flex; align-items: flex-end; }
 #main #fullpage .section02 h2 { z-index: 1; opacity: 0; position: absolute; top: 50%; transform: translateY(-100%); left: 20vw; font-family: 'Montserrat'; font-size: 8.8rem; color: #0e1115; font-weight: 450; text-transform: uppercase; letter-spacing: -.088rem; transition: all ease-in-out .4s; }
-#main #fullpage .section02 .big_img { width: 100%; max-width: 42vw; height: 100vh; transform: rotate3d(0, 0, 0, 90deg); overflow: hidden; }
+#main #fullpage .section02 .big_img { width: 100%; max-width: 42%; height: 100vh; transform: rotate3d(0, 0, 0, 90deg); overflow: hidden; }
 #main #fullpage .section02 .big_img img  { width: 0; height: 100%; object-fit: cover; object-position: center; transition: width ease-in-out .4s .3s }
 #main #fullpage .section02 .mov_txt { opacity: 0; font-family: 'Montserrat'; font-size: 32rem; font-weight: 500; color: #005eb8; position: absolute; top: 50%; transform: translateY(-50%); left: 100%; transition: all ease; }
 #main #fullpage .section02 .right { position: relative; padding-bottom: 4rem; padding-left: 4rem; }
@@ -97,7 +97,7 @@
 #main #fullpage .section02.active .swiper-slide.swiper-slide-active .mov_txt { opacity: .08; z-index: -1; animation: sec02_txt 12s .2s; }
 #main #fullpage .section02.active .swiper-slide.swiper-slide-active h2 { opacity: 1; left: 29vw; }
 #main #fullpage .section02.active .swiper-slide.swiper-slide-active .con_txt { opacity: 1; transform: translateX(0); }
-#main #fullpage .section02 .moving_tab { overflow: hidden; max-width: 92rem; width: calc(100% - (48vw + 4rem)); height: 9rem; position: absolute; top: 50%; left: calc(42vw + 4rem); transform: translateY(14rem); z-index: 11; display: flex; justify-content: space-between; align-items: flex-end; }
+#main #fullpage .section02 .moving_tab { overflow: hidden; max-width: 92rem; width: calc(100% - (48% + 4rem)); height: 9rem; position: absolute; top: 50%; left: calc(42% + 4rem); transform: translateY(14rem); z-index: 11; display: flex; justify-content: space-between; align-items: flex-end; }
 #main #fullpage .section02 .swiper-pagination-sec02 { display: flex; width: 100%; position: relative; bottom: 2rem; max-width: 500rem; height: fit-content; opacity: 1; transition-property: transform; transition-duration: .3s; }
 #main #fullpage .section02 .swiper-button { width: 6rem; height: 7rem; background-size: 1rem 1.5rem; border: 1px solid #ccdff1; position: absolute; top: 0; cursor: pointer; box-shadow: -.2rem .2rem .7rem 0px rgba(34, 34, 34, 0.1); }
 #main #fullpage .section02 .swiper2-button-next { background: #fff url(../images/common/arrow_r_13x21.png) no-repeat 50% 50%; right: 0; z-index: 13;  }
@@ -344,13 +344,42 @@
 /* =========================================================================== */
 
 #wrap, .container { width: 100%; }
+.title_area { padding: 10rem 0 11.5rem; text-align: center; }
+.title_area .con_tit { font-size: 6rem; font-weight: 450; color: #0b0f14; letter-spacing: -.15rem; padding-bottom: 4rem; }
+.title_area .sub_tit { font-size: 3.4rem; font-weight: 400; color: #0b0f14; letter-spacing: -.085rem; padding-bottom: 1rem; }
+.title_area .sub_tit > b { font-family: 'Montserrat'; font-size: 3.6rem; font-weight: 350; color: #005eb8; }
+.title_area .sub_txt { font-size: 2rem; font-weight: 150; color: #555; letter-spacing: -.05rem; line-height: 2; }
+
+
+/* ================================  고객센터  =============================== */
+/* 고객문의 */
+.customer .sub_visual { background-image: url(../images/customer/customer_bg.png); }
+.customer .customer_inquiry .inner { max-width: 120rem; }
+.customer .customer_inquiry .section1 { background: #f9f9f9; padding: 11.5rem 0 12rem; }
+.customer .customer_inquiry .section1 .sec_tit { font-size: 3.4rem; color: #222; font-weight: 450; }
+.customer .customer_inquiry .section1 .cont_box { background: #fff; border: 1px solid #e8e8e8; margin: 3rem 0 2rem; }
+.customer .customer_inquiry .section1 .cont_box > div { font-size: 1.6rem; color: #222; line-height: 1.625; padding: 4.5rem 7rem; overflow-y: scroll; }
+.customer .customer_inquiry .section1 ul { font-size: 1.4rem; color: #777; line-height: 1.71; letter-spacing: -.0014rem; margin-bottom: 3.5rem; }
+.customer .customer_inquiry .section1 ul li { position: relative; padding-left: 1.2rem; }
+.customer .customer_inquiry .section1 ul li span { position: absolute; top: 0; left: 0; }
+
+.customer .customer_inquiry .section2 { padding: 12rem 0 20rem; }
+.customer .customer_inquiry .section2 p { font-size: 1.6rem; color: #222; margin-bottom: 2rem; }
+.customer .customer_inquiry .section2 .es { color: #005eb8; }
+.customer .customer_inquiry .section2 .row { width: 100%; display: flex; align-items: center; }
+.customer .customer_inquiry .section2 .row.row_short { max-width: 68.2rem; } 
+.customer .customer_inquiry .section2 .row+.row { margin-top: 2rem; }
+.customer .customer_inquiry .section2 .row .tit_cell { font-size: 1.8rem; color: #222; width: 13rem; flex-shrink: 0; }
+.customer .customer_inquiry .section2 .row .ipt_cell { width: 100%; }
+
+
+.customer .customer_inquiry .section2 .btn_submit { display: block; width: 28.3rem; height: 6.4rem; line-height: 6.4rem; background: #000; border-radius: 3.2rem; text-align: center; font-size: 1.6rem; font-weight: 150; color: #fff; transition: transform .3s; margin: 12rem auto 0; }
+.customer .customer_inquiry .section2 .btn_submit:hover { transform: scale(1.05); }
+
+
+
 
 .civil_engineer .sub_visual { background-image: url(../images/business/business_bg.png); }
-/* .civil_engineer */ .title_area { padding: 10rem 0 12rem; text-align: center; }
-/* .civil_engineer */ .title_area .con_tit { font-size: 6rem; font-weight: 450; color: #0b0f14; letter-spacing: -.15rem; }
-/* .civil_engineer */ .title_area .sub_tit { font-size: 3.4rem; font-weight: 400; color: #0b0f14; letter-spacing: -.085rem; padding: 4rem 0 1rem; }
-/* .civil_engineer */ .title_area .sub_tit > b { font-family: 'Montserrat'; font-size: 3.6rem; font-weight: 350; color: #005eb8; }
-/* .civil_engineer */ .title_area .sub_txt { font-size: 2rem; font-weight: 150; color: #555; letter-spacing: -.05rem; line-height: 2; }
 .civil_engineer .title_area .download_btn { display: inline-block; width: 23.2rem; font-size: 1.6rem; color: #000; margin-top: 8rem;  }
 .civil_engineer .title_area .download_btn > i { display: inline-block; width: 1.9rem; height: 2rem; background: url(../images/common/icon_download.png) no-repeat; margin-left: 4rem; vertical-align: baseline; }
 .civil_engineer .title_area .download_btn::after { content:''; display: block; width: 100%; height: 0.1rem; background: #000; margin-top: 2rem; transition: width .3s; }
