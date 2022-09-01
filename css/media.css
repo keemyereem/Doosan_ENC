@@ -29,6 +29,8 @@
     .img_pc {display: none;}
     .img_m {display: inline-block;}
 
+    .input_row input {padding: 0 1rem;}
+
 }
 
 
@@ -38,11 +40,12 @@
 #mobile { width: 100%; }
 
 /* header */
-#mobile .header { margin: auto; right: 0; left: 0; padding: 0 2rem; }
-#mobile .header .header_wrap { height: 6rem; justify-content: space-between; }
+#mobile .header { padding: 0 2rem; width: 100vw; }
+#mobile .header .header_wrap { width: 100%; height: 6rem; justify-content: space-between; }
 #mobile .header .logo { width: 7.7rem; height: 2.1rem; margin-right: 0; background-size: contain !important; }
-#mobile .header .gnb_menu { }
+#mobile .header .gnb_menu { width: auto; margin-left: initial; display: block; }
 #mobile .header .gnb,
+#mobile .header .weve_btn,
 #mobile .header .lang_select,
 #mobile .header .right_nav { display: none; }
 #mobile .header .top_sitemap button { width: 2.7rem; height: 1.75rem; }
@@ -98,9 +101,9 @@
 
 
 /* ========================================= 메인 ========================================== */
-
+#mobile #main #rightnavi { display: none; }
 #mobile #main #fullpage section { height: auto!important; }
-#mobile #main #fullpage section .sec_tit { font-size: 3.5rem; }
+#mobile #main #fullpage section .sec_tit { font-size: 3.5rem; left: 0; }
 #mobile #main #fullpage section .sec_tit::before { width: 4.8rem; height: .4rem; }
 
 #mobile #main #fullpage .section01 { height: 100vh!important; }
@@ -224,15 +227,43 @@
 #mobile #main #fullpage .section06 .right .contents > ul li .txt a:hover::after { transform: translate(3rem,-50%); }
 
 /* =========================================== 서브 ======================================== */
+#mobile .title_area { padding: 6rem 2rem 7rem; text-align: center; }
+#mobile .title_area .con_tit { font-size: 3.5rem; }
+#mobile .title_area .sub_tit { font-size: 2.2rem; padding: 3rem 0 1rem; line-height: 1.36; }
+#mobile .title_area .sub_tit > b {  font-size: 2.3rem; }
+#mobile .title_area .sub_txt { font-size: 1.5rem; line-height: 1.86; }
+#mobile .title_area .download_btn { width: 17.5rem; font-size: 1.3rem; margin-top: 4.5rem;  }
+#mobile .title_area .download_btn > i { width: 1.45rem; height: 1.5rem; background: url(../images/common/icon_download.png) no-repeat; background-size: contain; margin-left: 2.1rem; }
+#mobile .title_area .download_btn::after { margin-top: 1.5rem; }
+
+
+/* ================================  Channel  =============================== */
+/* News */
+#mobile .channel .sub_visual { background-image: url(../images/channel/channel_bg_m.png); }
+#mobile .channel .news { padding-bottom: 10rem; }
+#mobile .channel .news .news_list .search { width: 100%; max-width: 22.5rem; }
+#mobile .channel .news .news_list .search .input_search input { width: calc(100% - 2.8rem); height: 3.6rem; font-size: 1.7rem; }
+#mobile .channel .news .news_list .search .input_search a { width: 2.8rem; height: 3.6rem; background-size: 1.8rem; }
+#mobile .channel .news .news_list .total {font-size: 1.3rem; width: 100%; max-width: 22.5rem; margin: 1.5rem auto 0; padding-left: .8rem; }
+#mobile .channel .news .news_list ul li { width: 100%; height: 33.1rem; }
+#mobile .channel .news .news_list ul li:nth-last-child(n+1):nth-last-child(-n+3) { margin-bottom: 5rem; }
+#mobile .channel .news .news_list ul li:last-child { margin-bottom: 0!important; }
+#mobile .channel .news .news_list ul li .img { height: 23.25rem; }
+#mobile .channel .news .news_list ul li .txt_box { padding: 1.6rem 2rem 2rem; }
+#mobile .channel .news .news_list ul li .txt_box .tit { font-size: 1.5rem; line-height: 1.4; }
+#mobile .channel .news .news_list ul li .txt_box .date { font-size: 1.2rem; }
+#mobile .channel .news .news_list ul li .bdt,
+#mobile .channel .news .news_list ul li .bdb { height: .2rem; }
+#mobile .channel .news .news_list ul li .bdl,
+#mobile .channel .news .news_list ul li .bdr { width: .2rem; }
+#mobile .channel .news .news_list .btn_box { margin-top: 4.5rem; }
+#mobile .channel .news .news_list .btn_line { width: 100%; max-width: 22.2rem; height: 5rem; line-height: 5rem; }
+#mobile .channel .news .news_list .btn_line a { border-radius: 2.5rem; font-size: 1.5rem; padding: 0 3rem 0 4rem; }
+#mobile .channel .news .news_list .btn_line a span { width: 1.6rem; height: 1.6rem; }
+#mobile .channel .news .news_list .btn_line a:hover span { background-size: contain; }
+
+
 #mobile .civil_engineer .sub_visual {  background-image: url(../images/business/business_bg_m.png); background-size: cover; }
-#mobile .civil_engineer .title_area { padding: 6rem 2rem 7rem; text-align: center; }
-#mobile .civil_engineer .title_area .con_tit { font-size: 3.5rem; }
-#mobile .civil_engineer .title_area .sub_tit { font-size: 2.2rem; padding: 3rem 0 1rem; line-height: 1.36; }
-#mobile .civil_engineer .title_area .sub_tit > b {  font-size: 2.3rem; }
-#mobile .civil_engineer .title_area .sub_txt { font-size: 1.5rem; line-height: 1.86; }
-#mobile .civil_engineer .title_area .download_btn { width: 17.5rem; font-size: 1.3rem; margin-top: 4.5rem;  }
-#mobile .civil_engineer .title_area .download_btn > i { width: 1.45rem; height: 1.5rem; background: url(../images/common/icon_download.png) no-repeat; background-size: contain; margin-left: 2.1rem; }
-#mobile .civil_engineer .title_area .download_btn::after { margin-top: 1.5rem; }
 #mobile .civil_engineer .tab_box { padding: 3rem 0; position: relative; }
 #mobile .civil_engineer .tab_box ul li { height: 4.5rem; /* width: 12rem; */ flex: initial; flex-shrink: 0; }
 #mobile .civil_engineer .tab_box ul li.on { box-shadow: 0px 0px 16px 4px rgb(34 34 34 / 20%); }

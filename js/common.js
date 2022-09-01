@@ -3,6 +3,7 @@
 /* --------------------- Published by 4m Creative --------------------- */
 
 
+
 $(function(){
     
   const isMobile = () => {
@@ -67,6 +68,7 @@ var commonEvent = {
     this.submenuEvent();
     this.footerEvent();
     this.goTopEvent();
+    this.iptEvent();
   }, 
 
   headerEvent: () => {
@@ -178,6 +180,26 @@ var commonEvent = {
       $('html, body')/* .removeClass('smooth') */.animate({scrollTop:0}, '300');
   });
   },
+
+  iptEvent: () => {
+    //selectbox
+    var selectType = $(".select_row>select");
+    selectType.addClass("selectBox");
+    selectChange(selectType);
+    function selectChange(type) {
+        type.change(function () {
+            var select_name = $(this).children("option:selected").text();
+            $(this).siblings("label").text(select_name);
+        });
+    };
+
+    //file
+    var fileTarget = $('#upload_file');
+    fileTarget.on('change', function(){
+        var cur =$ (".file_row input[type='file']").val();
+        $(".upload_name").val(cur);
+    });
+},
 
 };
 
@@ -315,7 +337,9 @@ var mainEvent = {
               }, 0);
 
               mainEvent.mainSwiper();
-              if (isMobile() == false) {
+
+              let deviveChecker = $('#mobile')
+              if (!deviveChecker.length) {
                 mainEvent.createFullpage();
               } else {
                 mainEvent.sec02Swiper();
@@ -730,58 +754,58 @@ var mainEvent = {
 ///////////                                                         **서브**                                                                   ///////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var civilEngineerEvent = {
-init: function(){
-  this.civilTab();
-  this.civilSwiper();
-},
-civilTab: () => {
-  var Tabs = $('.civil_engineer .tab_box ul li');
-  Tabs.on("click", function(){
-    $(this).addClass('on');
-    $(this).siblings().removeClass('on');
-  });
-
-},
-
-civilSwiper: () => {
-  $(".civil_engineer .outline .swiper").each(function(index){
-    var idx = index +1;
-    // 첫번째 슬라이드 2depth 스와이퍼 
-    var bus03Swiper = new Swiper('.civil_engineer .outline .swiper0' + idx, {
-        observer: true,
-        observeParents: true,
-        slidesPerView : 1,
-        speed: 500,
-        
-        navigation: {
-            nextEl: '.civil_engineer .outline .swiper-button-next0' + idx,
-            prevEl: '.civil_engineer .outline .swiper-button-prev0' + idx,
-        },
-        watchOverflow: true,
-
-
-      });
+  init: function(){
+    this.civilTab();
+    this.civilSwiper();
+  },
+  civilTab: () => {
+    var Tabs = $('.civil_engineer .tab_box ul li');
+    Tabs.on("click", function(){
+      $(this).addClass('on');
+      $(this).siblings().removeClass('on');
     });
-},
+
+  },
+
+  civilSwiper: () => {
+    $(".civil_engineer .outline .swiper").each(function(index){
+      var idx = index +1;
+      // 첫번째 슬라이드 2depth 스와이퍼 
+      var bus03Swiper = new Swiper('.civil_engineer .outline .swiper0' + idx, {
+          observer: true,
+          observeParents: true,
+          slidesPerView : 1,
+          speed: 500,
+          
+          navigation: {
+              nextEl: '.civil_engineer .outline .swiper-button-next0' + idx,
+              prevEl: '.civil_engineer .outline .swiper-button-prev0' + idx,
+          },
+          watchOverflow: true,
+
+
+        });
+      });
+  },
 
 };
 
-//사업실적 팝업
-function popupbusiness(popConts) {
-  var popthis = $(".popup."+popConts);
-    popthis.fadeIn(300);
-    setTimeout(() => {
-      $('.pop_cont .list img').css({'transform':'scale(1.2)','transition':'all 3s'});
-  }, 200);
-
-
-  popthis.find(".pop_close").click(function(){
-      popthis.fadeOut(300);
+  //사업실적 팝업
+  function popupbusiness(popConts) {
+    var popthis = $(".popup."+popConts);
+      popthis.fadeIn(300);
       setTimeout(() => {
-        $('.pop_cont .list img').css({'transform':'scale(1)'});
-      }, 200);
-  });
-}
+        $('.pop_cont .list img').css({'transform':'scale(1.2)','transition':'all 3s'});
+    }, 200);
+
+
+    popthis.find(".pop_close").click(function(){
+        popthis.fadeOut(300);
+        setTimeout(() => {
+          $('.pop_cont .list img').css({'transform':'scale(1)'});
+        }, 200);
+    });
+  }
 
 
 var civilOutline = {
@@ -799,9 +823,9 @@ var civilOutline = {
     fraction.children('.total_page').text(section.length)
 
     $(window).on('load resize scroll', function(e) {
-        let gap = $(window).height() / 4;
-        let currentPosition = $(window).scrollTop() + fixmenuHeight;
-        let fractionOut = (section.eq(section.length - 1).innerHeight() / 4) + $('.footer').offset().top - $('.footer').outerHeight();
+      let gap = $(window).height() / 4;
+      let currentPosition = $(window).scrollTop() + fixmenuHeight;
+      let fractionOut = (section.eq(section.length - 1).innerHeight() / 4) + $('.footer').offset().top - $('.footer').outerHeight();
 
       if (currentPosition > section.eq(0).offset().top - gap && currentPosition < fractionOut) {
         fixSidemenu.addClass('on');
@@ -834,7 +858,6 @@ var civilOutline = {
         fixSidemenu.removeClass('on');
         section.removeClass('active');
       }
-
     });
 
     $('.section_nav .button').on('click', function() {
@@ -856,9 +879,80 @@ var civilOutline = {
         }, 500);
       }
     })
-  
-   },
+
+  },
 }
+
+var companyEvent = {
+  init: function(){
+    this.chart();
+  },
+
+  chart: ()=> {
+    const graph = $('.investment .graph');
+
+    graph.each((index) => {
+      const line = graph.eq(index).find('.graph_bg li');
+
+      line.each((idx) => {
+        let lineData = line.eq(idx).attr('data-line');
+        let lineNum = lineData.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+        line.eq(idx).children('span').text(lineNum);
+      });
+      
+      
+    });
+
+
+
+  },
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////                                                        **모바일**                                                                  ///////
