@@ -644,7 +644,7 @@
 .investment .invest_inform > li .graph .graph_bar li { width: 7rem; height: 0%; border-radius: 1.5rem 1.5rem 0 0; margin:0 1.65rem; transition: height ease 1.5s; position: relative; }
 .investment .invest_inform > li .graph .graph_bar li:nth-child(2) { transition-delay: .2s; }
 .investment .invest_inform > li .graph .graph_bar li:nth-child(3) { transition-delay: .4s; }
-.investment .invest_inform > li .graph .graph_bar li > span { font-family: 'Montserrat'; font-size: 1.4rem; width: 8.5rem; line-height: 3.4rem; height: 3.6rem; border-radius: 1.75rem; background: #fff; position: absolute; text-align: center; transform: translateX(50%); right: 50%; top: -5.1rem; box-shadow: 0 .6rem 1.8rem 0 rgba(4, 0, 0, 0.17); }
+.investment .invest_inform > li .graph .graph_bar li > span { display: none; font-family: 'Montserrat'; font-size: 1.4rem; width: 8.5rem; line-height: 3.4rem; height: 3.6rem; border-radius: 1.75rem; background: #fff; position: absolute; text-align: center; transform: translateX(50%); right: 50%; top: -5.1rem; box-shadow: 0 .6rem 1.8rem 0 rgba(4, 0, 0, 0.17); }
 .investment .invest_inform > li .graph .graph_bar li > p { font-size: 1.6rem; color: #222222; text-align: center; position: absolute; bottom: 0; transform: translateX(50%); right: 50%; bottom: -4.4rem; }
 .investment .invest_inform > li .graph .graph_bar li > p span { font-size: 1.3rem; color: #666666; }
 .investment .invest_inform > li .graph .graph_bar li:nth-child(3) > span { background: #e73100; color: #fff !important; }

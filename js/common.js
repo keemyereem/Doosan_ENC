@@ -911,12 +911,26 @@ var companyEvent = {
   },
 
   chart: ()=> {
+
     const graph = $('.investment .graph');
     const graphBarColor = ['#999999', '#f78600', '#e73100'];
-    var op ;
 
     // 그래프 별 작동 토글
     graph.each((index) => {
+
+      // scroll animation 동작
+      $(window).on('scroll load', ()=> {
+        var st = $(window).scrollTop();
+        let graphOffset = graph.eq(index).offset().top;
+        let graphAni = graphOffset - $(window).height();
+
+        if (st > graphAni) {
+          graph.eq(index).addClass('on');
+        } else {
+          graph.eq(index).removeClass('on');
+        }
+      })
+
       const line = graph.eq(index).find('.graph_bg li');
       const bar = graph.eq(index).find('.graph_bar li');
       let maxPercent = graph.eq(index).find('.graph_bg li').eq(0).attr('data-line');
@@ -942,7 +956,7 @@ var companyEvent = {
           graph.eq(index).addClass('convert')
           bar.eq(i).addClass('minus');
         }
-
+        
         bar.eq(i).css({'height': + barPercent + '%', 'background': '' + graphBarColor[i]});
         bar.eq(i).find('> span').text(barNum).css({'border': '.1rem solid' + graphBarColor[i], 'color': '' + graphBarColor[i]});
 
@@ -955,6 +969,12 @@ var companyEvent = {
           barPercent = dataMinus / maxPercent * 100;
           bar.eq(i).css('height', + barPercent + '%');
         }
+
+        // 그래프바 로딩이 끝나면 툴팁 나타내기
+        const transitionEnd = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend';
+        bar.on(transitionEnd, function() {
+          bar.eq(i).find('> span').fadeIn();
+        });
 
       });
 
