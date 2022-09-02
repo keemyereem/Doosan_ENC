@@ -35,7 +35,6 @@
     <link type="text/css" href="css/lib/jquery.fullpage.css" rel="stylesheet">
     <link type="text/css" href="css/lib/aos.css" rel="stylesheet">
 
-    <link href="//db.onlinewebfonts.com/c/aad7a027cef9752cc4ead963f89cd028?family=YD+Gothic+500" rel="stylesheet" type="text/css"/>
     <link type="text/css" href="css/font.css" rel="stylesheet">
     <link type="text/css" href="css/common.css" rel="stylesheet">
     <link type="text/css" href="css/sub.css" rel="stylesheet">
@@ -48,20 +47,18 @@
     <script src="js/lib/jquery.easings.min.js"></script>
     <script src="js/lib/scrolloverflow.js"></script>
     <script src="js/lib/aos.js"></script>
-
-    <script src="js/common.js?v=1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     
-
-    <!-- Initialized Include Path -->
+    <script src="js/common.js?v=1.0"></script>
     <script>
         $(document).ready( function() {
-            //html용 include
+            // Including HTML
             $(".header").load("include/header.html?v=1.0");
             // $(".sitemap").load("include/sitemap.html");
             $(".footer").load("include/footer.html");
 
+            // JS importing
             commonEvent.init();
-
         });
     </script>
 </head>
@@ -78,15 +75,15 @@
         <div class="sitemap"></div>
         <!-- //sitemap -->
 
-        <div class="container customer">
+        <div class="container technology">
             <div class="sub_visual">
                 <div class="inner">
-                    <h1>고객센터</h1>
+                    <h1>기술개발</h1>
                     <div class="sub_visual_menu">
                         <div class="menu_inner">
                             <div class="home"></div>
                             <div class="depth depth1">
-                                <a href="javascript:;" class="dep_tit" title="하위메뉴 열기">고객센터</a>
+                                <a href="javascript:;" class="dep_tit" title="하위메뉴 열기">기술개발</a>
                                 <ul class="drop_box">
                                     <li><a href="javascript:;" title="사업영역 페이지로 이동">사업영역</a></li>
                                     <li><a href="javascript:;" title="기술개발 페이지로 이동">기술개발</a></li>
@@ -98,11 +95,11 @@
                                 </ul>
                             </div>
                             <div class="depth depth2">
-                                <a href="javascript:;" class="dep_tit" title="하위메뉴 열기">공지사항</a>
+                                <a href="javascript:;" class="dep_tit" title="하위메뉴 열기">지식재산권</a>
                                 <ul class="drop_box">
-                                    <li><a href="javascript:;" title="공지사항 페이지로 이동">공지사항</a></li>
-                                    <li><a href="javascript:;" title="고객문의 페이지로 이동">고객문의</a></li>
-                                    <li><a href="javascript:;" title="사이버 신문고 페이지로 이동">사이버 신문고</a></li>
+                                    <li><a href="javascript:;" title="기술역량 페이지로 이동">기술역량</a></li>
+                                    <li><a href="javascript:;" title="지식재산권 페이지로 이동">지식재산권</a></li>
+                                    <li><a href="javascript:;" title="기술연구소 페이지로 이동">기술연구소</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -114,86 +111,70 @@
             </div>
 
             <div class="title_area">
-                <h2 class="con_tit" data-aos="fade-up">공지사항</h2>
-
+                <h2 class="con_tit" data-aos="fade-up">지식재산권</h2>
             </div>
 
-            <div class="contents notice">
-                <div class="inner1200">
-                    <div class="tb_top">
-                        <div class="search">
-                            <div class="input_row input_search">
-                                <input type="text" id="" placeholder="검색어를 입력해 주세요." />
-                                <a href="javascript:;">검색</a>
-                            </div>
-                        </div>
-                        <div class="total">
-                            <!-- 검색결과 -->
-                            <span class="blind"><b class="blue">&quot;건축&quot;</b> 검색 결과 총 <b>0</b>건</span>
-                        </div>
-                    </div>
-                    <div class="tb_box">
+            <div class="tab_box" data-aos="fade-in">
+                <div class="inner">
+                    <ul>
+                        <li><a href="html/FD-02-02-01.html" title="신기술 페이지로 이동">신기술</a></li>
+                        <li><a href="html/FD-02-02-02.html" title="특허 페이지로 이동">특허</a></li>
+                        <li class="on"><a href="javascript:;" title="실용신안 페이지로 이동">실용신안</a></li>
+                        <li><a href="html/FD-02-02-04.html" title="디자인 페이지로 이동">디자인</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="contents ipr ipr03">
+                <div class="inner">
+                    <div class="tb_box" data-aos="fade-in">
                         <div class="tb_row row_head">
-                            <div class="num">번호</div>
-                            <div class="tit">제목</div>
-                            <div class="date">등록일</div>
+                            <div class="cell01">No</div>
+                            <div class="cell02">특허번호</div>
+                            <div class="cell03">출원일자</div>
+                            <div class="cell04">출원번호 </div>
+                            <div class="cell05">등록일자 </div>
+                            <div class="cell06">존속기간(예정)만료일</div>
+                            <div class="cell07">발명(고안)의 명칭</div>
                         </div>
-                        <!-- 검색결과 0 -->
-                        <div class="tb_row row_body null none">
-                            등록된 내용이 없습니다.
-                        </div>
-                        <!-- .검색결과 0 -->
+    
                         <div class="tb_row row_body">
-                            <div class="num">10</div>
-                            <div class="tit"><a href="html/FD-HEAD-02-01-02.html">두산건설 공지사항
-                            </a></div>
-                            <div class="date"><b>등록일</b>2022-08-23</div>
-                        </div>
-                        <div class="tb_row row_body">
-                            <div class="num">9</div>
-                            <div class="tit"><a href="javascript:;">두산건설 채용공고</a></div>
-                            <div class="date"><b>등록일</b>2022-07-23</div>
+                            <div class="cell01">4</div>
+                            <div class="cell02">실용신안 제20-0428574</div>
+                            <div class="cell03"></div>
+                            <div class="cell04"></div>
+                            <div class="cell05"></div>
+                            <div class="cell06">2022-12-17</div>
+                            <div class="cell07">항공장애표시구 통과형 카</div>
                         </div>
                         <div class="tb_row row_body">
-                            <div class="num">8</div>
-                            <div class="tit"><a href="javascript:;">홈페이지 개인정보 처리방침 변경에 따른 안내</a></div>
-                            <div class="date"><b>등록일</b>2022-06-23</div>
+                            <div class="cell01">3</div>
+                            <div class="cell02">실용신안 제20-0424715</div>
+                            <div class="cell03"></div>
+                            <div class="cell04"></div>
+                            <div class="cell05"></div>
+                            <div class="cell06">2022-12-17</div>
+                            <div class="cell07">삭도용 캐리지</div>
                         </div>
                         <div class="tb_row row_body">
-                            <div class="num">7</div>
-                            <div class="tit"><a href="javascript:;">2022년 주주총회 소집 통지</a></div>
-                            <div class="date"><b>등록일</b>2022-06-23</div>
+                            <div class="cell01">2</div>
+                            <div class="cell02">실용신안 제20-0389353</div>
+                            <div class="cell03"></div>
+                            <div class="cell04"></div>
+                            <div class="cell05"></div>
+                            <div class="cell06">2022-12-17</div>
+                            <div class="cell07">철탑용 낙하물 방지장치</div>
                         </div>
                         <div class="tb_row row_body">
-                            <div class="num">6</div>
-                            <div class="tit"><a href="javascript:;">ESG채권(녹색채권) 투자자 안내문 및 ESG인증평가(G1등급) 보고서 공지</a></div>
-                            <div class="date"><b>등록일</b>2022-05-21</div>
+                            <div class="cell01">1</div>
+                            <div class="cell02">실용신안 20-0471931</div>
+                            <div class="cell03">2012-12-17</div>
+                            <div class="cell04">20-2012-0011917</div>
+                            <div class="cell05">2014-03-17</div>
+                            <div class="cell06">2022-12-17</div>
+                            <div class="cell07">매입등의 커버고정구조</div>
                         </div>
-                        <div class="tb_row row_body">
-                            <div class="num">5</div>
-                            <div class="tit"><a href="javascript:;">홈페이지 개인정보 처리방침 변경에 따른 안내</a></div>
-                            <div class="date"><b>등록일</b>2022-05-18</div>
-                        </div>
-                        <div class="tb_row row_body">
-                            <div class="num">4</div>
-                            <div class="tit"><a href="javascript:;">두산건설 공지사항 </a></div>
-                            <div class="date"><b>등록일</b>2022-04-18</div>
-                        </div>
-                        <div class="tb_row row_body">
-                            <div class="num">3</div>
-                            <div class="tit"><a href="javascript:;">임시점검 안내</a></div>
-                            <div class="date"><b>등록일</b>2022-03-17</div>
-                        </div>
-                        <div class="tb_row row_body">
-                            <div class="num">2</div>
-                            <div class="tit"><a href="javascript:;">2022년 신규 협력사 모집 공고</a></div>
-                            <div class="date"><b>등록일</b>2022-02-17</div>
-                        </div>
-                        <div class="tb_row row_body">
-                            <div class="num">1</div>
-                            <div class="tit"><a href="javascript:;">홈페이지 개인정보 처리방침 변경에 따른 안내</a></div>
-                            <div class="date"><b>등록일</b>2022-01-17</div>
-                        </div>
+                       
                         <div class="paging">
                             <a href="javascript:;" class="front" title="맨 앞"></a>
                             <a href="javascript:;" class="prev" title="이 전"></a>
@@ -211,13 +192,8 @@
                 </div>
             </div>
             <!-- footer -->
-            <section class="footer">
-                              
-            </section> 
+            <div class="footer"></div>
         </div>
-
     </div>
-
 </body>
-
 </html>

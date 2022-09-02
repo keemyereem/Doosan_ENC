@@ -435,7 +435,7 @@
 .customer .customer_inquiry .section1 { background: #f9f9f9; padding: 11.5rem 0 12rem; }
 .customer .customer_inquiry .section1 .sec_tit { font-size: 3.4rem; color: #222; font-weight: 450; }
 .customer .customer_inquiry .section1 .cont_box { background: #fff; border: 1px solid #e8e8e8; margin: 3rem 0 2rem; }
-.customer .customer_inquiry .section1 .cont_box > div { font-size: 1.6rem; color: #222; line-height: 1.625; padding: 4.5rem 7rem; overflow-y: scroll; }
+.customer .customer_inquiry .section1 .cont_box > div { font-size: 1.6rem; color: #222; line-height: 1.625; padding: 4.5rem 7rem; height: 19.4rem; overflow-y: scroll; }
 .customer .customer_inquiry .section1 ul { font-size: 1.4rem; color: #777; line-height: 1.71; letter-spacing: -.0014rem; margin-bottom: 3.5rem; }
 .customer .customer_inquiry .section1 ul li { position: relative; padding-left: 1.2rem; }
 .customer .customer_inquiry .section1 ul li span { position: absolute; top: 0; left: 0; }
@@ -456,7 +456,7 @@
 
 
 /* 공지사항 */
-.customer .notice {padding-bottom: 14rem;}
+.customer .notice {padding-bottom: 20rem;}
 .customer .notice .tb_top {position: relative;}
 .customer .notice .tb_top .input_search input {width: 28rem;height: 4.7rem;border: 1px solid #e8e8e8;}
 .customer .notice .tb_top .input_search a {width: 4.7rem;height: 4.7rem;background: #005eb8 url(../images/common/icon_search.png) no-repeat 50% 50%;background-size: 2rem;}
@@ -480,7 +480,6 @@
 .customer .notice .tb_box .tb_row .view b {display: none;padding-right: .5rem;font-weight: 300;}
 .customer .notice .tb_box .tb_row .date {width: 17%;}
 .customer .notice .tb_box .tb_row .date b {display: none;padding-right: .5rem;font-weight: 300;}
-.customer .notice .tb_box .tb_row .none {width: 100%;height: 27rem;}
 .customer .notice .tb_box .tb_row.none {display: none;}
 .customer .notice .tb_box .tb_row.null {font-size: 1.6rem;color: #222;text-align: center;padding: 24rem 0;}
 
@@ -574,6 +573,55 @@
 .card_popup .popup_inner .pop_cont .inner_nav .counter_slider .swiper-pagination-current {color: #005eb8;}
 .card_popup .popup_inner .pop_cont .inner_nav .counter_slider .cur_num {color: #005eb8;font-weight: 300;}
 
+/* ================================  기술개발  =============================== */
+.technology .sub_visual { background-image: url(../images/technology/tech_bg.png); }
+/* 기술역량 */
+
+/* 지식재산권 */
+.technology .ipr { padding-bottom: 20rem; }
+.technology .ipr .tb_box { position: relative; }
+.technology .ipr .tb_box .tb_row { display: table; table-layout: fixed; width: 100%; }
+.technology .ipr .tb_box .tb_row.row_head { border-top: .2rem solid #000; border-bottom: .1rem solid #e8e8e8; background: #f9f9f9; }
+.technology .ipr .tb_box .tb_row.row_body {border-bottom: .1rem solid #e8e8e8;}
+.technology .ipr .tb_box .tb_row>div { display: table-cell; height: 7rem; border-right: .1rem solid #e8e8e8; vertical-align: middle; text-align: center; }
+.technology .ipr .tb_box .tb_row.row_head>div { font-size: 1.6rem; color: #222; font-weight: 400; } 
+.technology .ipr .tb_box .tb_row.row_body>div { font-size: 1.6rem; color: #222; }
+.technology .ipr .tb_box .tb_row.row_body .tit { text-align: left; padding-left: 5rem; }
+.technology .ipr .tb_box .tb_row .download a { display: inline-block; width: 1.5rem; height: 1.7rem; background: url(../images/technology/icon_download.png) no-repeat 50% 50%; background-size: contain; }
+.technology .ipr .tb_box .tb_row .mob { display: none; }
+.technology .ipr .tb_box .tb_row .ord { width: 8%; }
+.technology .ipr .tb_box .tb_row .class { width: 11%; }
+.technology .ipr .tb_box .tb_row .num { width: 11%; }
+.technology .ipr .tb_box .tb_row .cert { width: 8%; border-right: 0; }
+.technology .ipr .tb_box .tb_row .patent_num { width: 20%; }
+.technology .ipr .tb_box .tb_row .download { width: 8%; border-right: 0; }
+.technology .ipr .tb_box .tb_row .cell07 { border-right: 0; }
+.technology .ipr .tb_box .tb_row.row_body .cell07 { text-align: left; padding-left: 5rem; }
+
+.technology .ipr.ipr03 .tb_box .tb_row .cell01 { width: 8%; }
+.technology .ipr.ipr03 .tb_box .tb_row .cell02 { width: 18%; }
+.technology .ipr.ipr03 .tb_box .tb_row .cell03 { width: 11%; }
+.technology .ipr.ipr03 .tb_box .tb_row .cell04 { width: 15%; }
+.technology .ipr.ipr03 .tb_box .tb_row .cell05 { width: 11%; }
+.technology .ipr.ipr03 .tb_box .tb_row .cell06 { width: 15%; }
+.technology .ipr.ipr03 .tb_box .tb_row .cell07 { width: 22%; }
+
+.technology .ipr.ipr04 .tb_box .tb_row .cell01 { width: 8%; }
+.technology .ipr.ipr04 .tb_box .tb_row .cell02 { width: 14%; }
+.technology .ipr.ipr04 .tb_box .tb_row .cell03 { width: 10%; }
+.technology .ipr.ipr04 .tb_box .tb_row .cell04 { width: 15%; }
+.technology .ipr.ipr04 .tb_box .tb_row .cell05 { width: 10%; }
+.technology .ipr.ipr04 .tb_box .tb_row .cell06 { width: 15%; }
+.technology .ipr.ipr04 .tb_box .tb_row .cell07 { width: 28%; }
+
+/* 기술연구소 */
+
+
+
+
+
+
+
 
 /* ================================  회사소개  =============================== */
 
@@ -583,14 +631,24 @@
 
 /* 재무정보 */
 .investment .invest_inform { width: 100%; height: fit-content; display: flex; flex-wrap: wrap; justify-content: space-between; }
-.investment .invest_inform > li { width: calc(50% - 2.5rem); height: 50.5rem; margin-bottom: 5rem; border: .1rem solid #e8e8e8; padding: 4.5rem 0; }
+.investment .invest_inform > li { width: calc(50% - 2.5rem); height: 50.5rem; margin-bottom: 5rem; border: .1rem solid #e8e8e8; padding: 4.5rem 0; position: relative; }
 .investment .invest_inform > li h2 { font-weight: 400; color: #222222; font-size: 3rem; line-height: 1; text-align: center; }
 .investment .invest_inform > li .graph { position: relative; width: fit-content; margin: auto; height: 100%; }
 .investment .invest_inform > li .graph > span { width: 100%; display: block; text-align: right; color: #999999; font-size: 1.4rem; }
-.investment .invest_inform > li .graph .graph_bg { font-family: 'Montserrat'; display: flex; flex-direction: column; height: 100%; justify-content: space-between; padding-bottom: 8.5rem; }
+.investment .invest_inform > li .graph .graph_bg { font-family: 'Montserrat'; display: flex; flex-direction: column; height: 100%; justify-content: space-between; padding-bottom: 8.5rem; position: relative; }
 .investment .invest_inform > li .graph .graph_bg li { line-height: 1; font-size: 1.6rem; color: #666666; display: flex; flex-direction: row-reverse; align-items: center; }
 .investment .invest_inform > li .graph .graph_bg li span { display: block; text-align: right; padding-right: 1rem; }
 .investment .invest_inform > li .graph .graph_bg li:before { content: ''; width: 52.8rem; height: .1rem; display: inline-block; background: #e8e8e8; }
 
-.investment .invest_inform > li .graph .graph_bar { border: 1px solid red; position: absolute; width: 52.8rem; height: calc(100% - 10rem); right: 0; bottom: 7.6rem; overflow: hidden; }
-.investment .invest_inform > li .graph .graph_bar li {  }
+.investment .invest_inform > li .graph .graph_bar { position: absolute; width: 52.8rem; height: calc(100% - 10rem); right: 0; display: flex; justify-content: center; align-items: flex-end; }
+.investment .invest_inform > li .graph .graph_bar li { width: 7rem; height: 0%; border-radius: 1.5rem 1.5rem 0 0; margin:0 1.65rem; transition: height ease 1.5s; position: relative; }
+.investment .invest_inform > li .graph .graph_bar li:nth-child(2) { transition-delay: .2s; }
+.investment .invest_inform > li .graph .graph_bar li:nth-child(3) { transition-delay: .4s; }
+.investment .invest_inform > li .graph .graph_bar li > span { font-family: 'Montserrat'; font-size: 1.4rem; width: 8.5rem; line-height: 3.4rem; height: 3.6rem; border-radius: 1.75rem; background: #fff; position: absolute; text-align: center; transform: translateX(50%); right: 50%; top: -5.1rem; box-shadow: 0 .6rem 1.8rem 0 rgba(4, 0, 0, 0.17); }
+.investment .invest_inform > li .graph .graph_bar li > p { font-size: 1.6rem; color: #222222; text-align: center; position: absolute; bottom: 0; transform: translateX(50%); right: 50%; bottom: -4.4rem; }
+.investment .invest_inform > li .graph .graph_bar li > p span { font-size: 1.3rem; color: #666666; }
+.investment .invest_inform > li .graph .graph_bar li:nth-child(3) > span { background: #e73100; color: #fff !important; }
+.investment .invest_inform > li .graph .graph_bar .minus { transform: scale(-1) translateY(-100%); }
+.investment .invest_inform > li .graph .graph_bar .minus > p { transform: translate(50%, -23.85rem) scale(-1);}
+.investment .invest_inform > li .graph .graph_bar .minus > span { transform: translate(50%, 0) scale(-1); }
+.investment .invest_inform > li .graph.convert .graph_bar li:not(.minus) > p { transform: translate(50%, 18.78rem); }

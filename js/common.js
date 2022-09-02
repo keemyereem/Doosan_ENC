@@ -69,6 +69,7 @@ var commonEvent = {
     this.footerEvent();
     this.goTopEvent();
     this.iptEvent();
+    this.tabEvent();
   }, 
 
   headerEvent: () => {
@@ -160,25 +161,37 @@ var commonEvent = {
   goTopEvent: () => {
     $(window).scroll(function() {
       // top button controll
-      if ($(this).scrollTop() > 1000) {
+      if ($(this).scrollTop() > 700) {
           $('#topButton').fadeIn();
       } else {
           $('#topButton').fadeOut();
       }
       var footerTop = $('.footer').offset().top - $(window).outerHeight();
       var pos = $('.footer').outerHeight() + Number(80);
+      var pos_m = $('.footer').outerHeight() + Number(35);
       
       if($(this).scrollTop() > footerTop){
-        $('#topButton').addClass('on').css({'bottom':pos});
+        if($(window).width() > 767){
+          $('#topButton').addClass('on').css({'bottom':pos});
+        }else{
+          $('#topButton').addClass('on').css({'bottom':pos_m});
+        }
+        
       }else {
-        $('#topButton').removeClass('on').css({'bottom':'8rem'});
+        if($(window).width() > 767){
+          $('#topButton').removeClass('on').css({'bottom':'8rem'});
+        }else{
+          $('#topButton').removeClass('on').css({'bottom':'3.5rem'});
+        }
+        
       }
 
-  });
+    });
 
-  $(document).on('click', '#topButton', function() {
-      $('html, body')/* .removeClass('smooth') */.animate({scrollTop:0}, '300');
-  });
+    $(document).on('click', '#topButton', function() {
+        $('html, body')/* .removeClass('smooth') */.animate({scrollTop:0}, '300');
+    });
+    
   },
 
   iptEvent: () => {
@@ -199,7 +212,16 @@ var commonEvent = {
         var cur =$ (".file_row input[type='file']").val();
         $(".upload_name").val(cur);
     });
-},
+  },
+
+  tabEvent: () => {
+    var Tabs = $('.tab_box ul li');
+    Tabs.on("click", function(){
+      $(this).addClass('on');
+      $(this).siblings().removeClass('on');
+    });
+
+  },
 
 };
 
@@ -758,14 +780,14 @@ var civilEngineerEvent = {
     this.civilTab();
     this.civilSwiper();
   },
-  civilTab: () => {
-    var Tabs = $('.civil_engineer .tab_box ul li');
-    Tabs.on("click", function(){
-      $(this).addClass('on');
-      $(this).siblings().removeClass('on');
-    });
+  // civilTab: () => {
+  //   var Tabs = $('.civil_engineer .tab_box ul li');
+  //   Tabs.on("click", function(){
+  //     $(this).addClass('on');
+  //     $(this).siblings().removeClass('on');
+  //   });
 
-  },
+  // },
 
   civilSwiper: () => {
     $(".civil_engineer .outline .swiper").each(function(index){
@@ -890,22 +912,70 @@ var companyEvent = {
 
   chart: ()=> {
     const graph = $('.investment .graph');
+    const graphBarColor = ['#999999', '#f78600', '#e73100'];
 
+    // 그래프 별 작동 토글
     graph.each((index) => {
       const line = graph.eq(index).find('.graph_bg li');
+      const bar = graph.eq(index).find('.graph_bar li');
+      let maxPercent = graph.eq(index).find('.graph_bg li').eq(0).attr('data-line');
 
+      // 라인 백그라운드 생성
       line.each((idx) => {
-        let lineData = line.eq(idx).attr('data-line');
+        lineData = line.eq(idx).attr('data-line');
         let lineNum = lineData.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
         line.eq(idx).children('span').text(lineNum);
+        if (lineData === '0') {
+          line.eq(idx).addClass('standard');
+        }
       });
+
+      // 수치 data 기반 바 높이값 생성
+      bar.each((i) => {
+        let barData = bar.eq(i).attr('data-percent');
+        let barNum = barData.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        let barPercent = Math.abs(barData) / maxPercent * 100;
+        
+        if (barData < 0) {
+          graph.eq(index).addClass('convert')
+          bar.eq(i).addClass('minus');
+        }
+
+        bar.eq(i).css({'height': + barPercent + '%', 'background': '' + graphBarColor[i]});
+        bar.eq(i).find('> span').text(barNum).css({'border': '.1rem solid' + graphBarColor[i], 'color': '' + graphBarColor[i]});
+
+
+        // 수치상 '-'값이 있는 경우 그래프 방향 조정
+        if (graph.eq(index).hasClass('convert')) {
+          let dataMinus = Math.abs(bar.eq(i).attr('data-percent'));
+
+          maxPercent = Math.abs(lineData);
+          barPercent = dataMinus / maxPercent * 100;
+          bar.eq(i).css('height', + barPercent + '%');
+        }
+
+      });
+
+      // '0' 수치 기준점으로 그래프바 위치 고정 및 그래프 비율 조절
+      if (line.length) {
+        let gH = graph.eq(index).height();
+        let zeroH = graph.eq(index).find('.standard').position().top;
+        let stdH = graph.eq(index).find('.standard').height() / 2;
+        let countH = $('.graph > span').height();
+        let barH = $('.convert .graph_bar').height();
+
+        let standardIdx = $('.convert').find('.graph_bg .standard').index() + 1;
+        let standardPosition = (gH - (zeroH + stdH + countH)) / 10;
+        let standardHeight = (barH / (line.length - 1) * standardIdx) / 10;
+
+        graph.eq(index).find('.graph_bar').css('bottom', + standardPosition + 'rem');
+        $('.convert .graph_bar').css({'height': + standardHeight + 'rem'})
+      }
+
       
       
     });
-
-
-
   },
 }
 

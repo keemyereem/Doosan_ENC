@@ -80,7 +80,7 @@ br.br_t, br.br_m {display: none;}
 .checkbox_row {display: inline-block;position: relative;}
 .checkbox_row input[type="checkbox"] {display: none;}
 .checkbox_row input[type="checkbox"] + label {display: block;position: relative;font-size: 2rem;color: #222;cursor: pointer;}
-.checkbox_row input[type="checkbox"] + label:before {content: "";display: inline-block;margin-right: 1.6rem;width: 2.4rem;height: 2.4rem;border: .1rem solid #d0d0d0;vertical-align: top;box-sizing: border-box;}
+.checkbox_row input[type="checkbox"] + label:before {content: "";display: inline-block;margin-right: 1.6rem;width: 2.4rem;height: 2.4rem;border: .1rem solid #e8e8e8;vertical-align: top;box-sizing: border-box;}
 .checkbox_row input[type="checkbox"]:checked + label:before {content: "";background:url(../images/common/checked.png) 50% 50% no-repeat;background-size: 1.3rem 1rem;}
 
 /* file */
@@ -242,11 +242,11 @@ br.br_t, br.br_m {display: none;}
 .container .sub_visual .sub_visual_menu .depth2 .dep_tit { color: #fff; }
 .container .sub_visual .sub_visual_menu .depth2 .drop_box { background: #000; }
 .container .sub_visual .sub_visual_menu .depth2 .drop_box li a:hover { color: #fff; }
-.container .sub_visual .scroll_down { font-family: 'Montserrat'; font-size: 1.8rem; color: #fff; display: block; position: absolute; right: 11.7rem; bottom: 8rem; }
-.container .sub_visual .scroll_down::after { content:''; display: inline-block; width: 2.3rem; height: 3rem; background: url(../images/common/visual_scroll_arrow.png) no-repeat; vertical-align: middle; margin-left: 2rem; }
+.container .sub_visual .scroll_down { font-family: 'Montserrat'; font-size: 1.8rem; color: #fff; display: block; writing-mode: vertical-rl; letter-spacing: .18rem; position: absolute; right: 8rem; bottom: 13.3rem; }
+.container .sub_visual .scroll_down::after { content:''; display: block; width: 2.3rem; height: 3rem; background: url(../images/common/visual_scroll_arrow.png) no-repeat; position: absolute; bottom: -5.3rem; left: 0; margin-left: .2rem; }
 
 /* paging */
-.contents .paging {margin-top: 5rem;margin-bottom: 2.8rem;position: relative;text-align: center;}
+.contents .paging {margin-top: 5rem;position: relative;text-align: center;}
 .contents .paging>a {display: inline-block;vertical-align: middle;}
 .contents .paging .front {width: 1.2rem;height: 1.1rem;background: url(../images/common/arrow_front.png) 0 0 no-repeat;background-size: 100% 100%;}
 .contents .paging .prev {margin-left: 1.5rem;width: .6rem;height: 1.1rem;background: url(../images/common/arrow_prev.png) 0 0 no-repeat;background-size: 100% 100%;}
@@ -302,8 +302,8 @@ br.br_t, br.br_m {display: none;}
 .footer .footer_wrap  ul li:not(:last-child)::after { content:''; display: inline-block; width: .1rem; height: 1.4rem; background: #fff; opacity: .5;  }
 .footer .footer_wrap p { font-family: 'Montserrat'; font-size: 1.6rem; opacity: .2; text-align: center; margin-top: 4rem; }
 
-#topButton { font-family: 'Montserrat'; font-size: 1.8rem; color: #000; letter-spacing: .09rem; position: fixed; right: 11.7rem; bottom: 8rem; display: none; z-index: 999; }
-#topButton::after { content:''; display: inline-block; width: 2.3rem; height: 3rem; background: url(../images/common/scrollTop.png) no-repeat; vertical-align: middle; margin-left: 2rem; }
+#topButton { font-family: 'Montserrat'; font-size: 1.8rem; color: #000; letter-spacing: .09rem; position: fixed; right: 11.7rem; bottom: 8rem; display: none; z-index: 999; position: relative; writing-mode: vertical-lr; }
+#topButton::after { content:''; display: block; width: 2.3rem; height: 3rem; background: url(../images/common/scrollTop.png) no-repeat; background-size: contain; vertical-align: middle; position: absolute; top: -100%; left: 0; }
 #topButton.on { position: absolute; }
 
 /* privacy_policy */
