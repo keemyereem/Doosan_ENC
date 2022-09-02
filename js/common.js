@@ -913,6 +913,7 @@ var companyEvent = {
   chart: ()=> {
     const graph = $('.investment .graph');
     const graphBarColor = ['#999999', '#f78600', '#e73100'];
+    var op ;
 
     // 그래프 별 작동 토글
     graph.each((index) => {
