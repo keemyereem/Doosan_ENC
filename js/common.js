@@ -215,10 +215,56 @@ var commonEvent = {
   },
 
   tabEvent: () => {
-    var Tabs = $('.tab_box ul li');
+    var Tabs = $('.tab_box ul li'),
+        currTab = $('.tab_box ul li.on').index();
+        
     Tabs.on("click", function(){
       $(this).addClass('on');
       $(this).siblings().removeClass('on');
+    });
+
+    var slides = $('#mobile .tab_box ul'),
+        slide = $('#mobile .tab_box ul li'),
+        currentIdx = 0,
+        slideCount = slide.length,
+        slideWidth = slides.width()/3,
+        prevBtn = $('.control.prev'),
+        nextBtn = $('.control.next');
+
+    if(currTab > 2){
+      currentIdx = 1;
+      slides.css('left', -slideWidth + 'px' ); 
+      prevBtn.on('click', function(){
+        if(currentIdx > 0){
+          moveSlide(currentIdx - 1);
+          console.log('currentIdx'+currentIdx);
+        }else {
+  
+        }
+      });
+
+    }else {
+      slides.css('left', '0' ); 
+    }
+
+    function moveSlide(num){
+      slides.css({'left': -slideWidth * num +'px'});
+      currentIdx = num;
+    }
+    nextBtn.on('click', function(){
+      if(currentIdx < slideCount -3){
+        moveSlide(currentIdx + 1);
+      }else {
+      
+      }
+    });
+
+    prevBtn.on('click', function(){
+      if(currentIdx > 0){
+        moveSlide(currentIdx - 1);
+      }else {
+
+      }
     });
 
   },
@@ -777,7 +823,6 @@ var mainEvent = {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var civilEngineerEvent = {
   init: function(){
-    this.civilTab();
     this.civilSwiper();
   },
   // civilTab: () => {
@@ -912,17 +957,20 @@ var companyEvent = {
 
   chart: ()=> {
 
-    const graph = $('.investment .graph');
-    const graphBarColor = ['#999999', '#f78600', '#e73100'];
-
+    const graph = $('#HMchart .graph');
+    const graphBarColor = ['#999999', '#f78600', '#e73100', 'purple'];
+    const transitionEnd = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend';
+    const barSpeed = 1000;
+    const deviceChecker = $('#mobile')
+    
     // 그래프 별 작동 토글
     graph.each((index) => {
 
-      // scroll animation 동작
+      // scroll animation 동작/ graph에 작동 클래스 부여
       $(window).on('scroll load', ()=> {
         var st = $(window).scrollTop();
         let graphOffset = graph.eq(index).offset().top;
-        let graphAni = graphOffset - $(window).height();
+        let graphAni = graphOffset - $(window).height() / 2;
 
         if (st > graphAni) {
           graph.eq(index).addClass('on');
@@ -941,64 +989,111 @@ var companyEvent = {
         let lineNum = lineData.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
         line.eq(idx).children('span').text(lineNum);
+
+        // 0수치에 기준점 클래스 부여/ 라인 숫자 최대(또는 최소)값 기준 그래프바 높이값 조정 클래스 부여
         if (lineData === '0') {
           line.eq(idx).addClass('standard');
+        } else if (Math.abs(lineData) > maxPercent) {
+          line.eq(idx).addClass('standardReverse')
+        }  
+
+
+        // 모바일버전 span태크 width값 통일(우측정렬 위해)
+        if (deviceChecker.length) {
+          mobileSpanFirst = graph.eq(index).find('.graph_bg li').eq(0);
+
+          if (line.eq(idx).hasClass('standardReverse') || mobileSpanFirst.length) {
+            mobileSpanWidth = (mobileSpanFirst.find('span').outerWidth()) / 10;
+
+            line.eq(idx).find('> span').css('width', + mobileSpanWidth + 1 + 'rem');
+            console.log(mobileSpanWidth);
+          }
         }
       });
-
+      
+      
       // 수치 data 기반 바 높이값 생성
       bar.each((i) => {
         let barData = bar.eq(i).attr('data-percent');
         let barNum = barData.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-        let barPercent = Math.abs(barData) / maxPercent * 100;
-        
-        if (barData < 0) {
+        let barPercent = barData / maxPercent * 100;
+
+        // 툴팁 가림설정
+        bar.eq(i).find('> span, > p').hide();
+
+        // 바 데이터와 라인 데이터에 '-'값이 들어갈 경우 혼합 차트 변경
+        if (barData < 0 && lineData < 0) {
           graph.eq(index).addClass('convert')
           bar.eq(i).addClass('minus');
         }
-        
-        bar.eq(i).css({'height': + barPercent + '%', 'background': '' + graphBarColor[i]});
-        bar.eq(i).find('> span').text(barNum).css({'border': '.1rem solid' + graphBarColor[i], 'color': '' + graphBarColor[i]});
 
-
-        // 수치상 '-'값이 있는 경우 그래프 방향 조정
+        // 수치상 '-'값이 있는 경우 그래프 방향 조정/ 최대 또는 최소값 기준 그래프바 퍼센트 형성
         if (graph.eq(index).hasClass('convert')) {
           let dataMinus = Math.abs(bar.eq(i).attr('data-percent'));
+          let standardReverse = graph.eq(index).find('.standardReverse').attr('data-line');
+          
+          maxPercent = Math.abs(standardReverse);
 
-          maxPercent = Math.abs(lineData);
+          if (standardReverse == null) {
+            maxPercent = line.eq(0).attr('data-line');
+          }
           barPercent = dataMinus / maxPercent * 100;
-          bar.eq(i).css('height', + barPercent + '%');
         }
 
-        // 그래프바 로딩이 끝나면 툴팁 나타내기
-        const transitionEnd = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend';
-        bar.on(transitionEnd, function() {
-          bar.eq(i).find('> span').fadeIn();
-        });
+        // 바 그래프 애니메이션 기능
+        function chartBarStart() {
+          bar.eq(i).css({'height': + barPercent + '%', 'background': '' + graphBarColor[i], 'transition': 'height ease ' + barSpeed / 1000 + 's'});
+          bar.eq(i).find('> span').text(barNum).css({'border': '.1rem solid' + graphBarColor[i], 'color': '' + graphBarColor[i]});
+        }
+
+        // scroll animation 동작
+        $(window).on('scroll load', ()=> {
+          if ($('.graph').eq(index).hasClass('on')) {
+            // bar로딩
+            chartBarStart();
+            // bar로딩 끝나면, 툴팁 나타내기 
+            bar.on(transitionEnd, function() {
+              bar.eq(i).find('> span').fadeIn();
+              setTimeout(() => {
+                bar.eq(i).find('> p').fadeIn();
+              }, 200);
+            });
+          }
+        })
 
       });
-
+    
       // '0' 수치 기준점으로 그래프바 위치 고정 및 그래프 비율 조절
       if (line.length) {
         let gH = graph.eq(index).height();
+        let barH = graph.eq(index).find('.graph_bar').height();
+        let countH = $('.graph > span').height();
         let zeroH = graph.eq(index).find('.standard').position().top;
         let stdH = graph.eq(index).find('.standard').height() / 2;
-        let countH = $('.graph > span').height();
-        let barH = $('.convert .graph_bar').height();
-
-        let standardIdx = $('.convert').find('.graph_bg .standard').index() + 1;
         let standardPosition = (gH - (zeroH + stdH + countH)) / 10;
-        let standardHeight = (barH / (line.length - 1) * standardIdx) / 10;
+        let convertHeightReverse = (barH - zeroH) / 10;
 
+        // 그래프바 위치
         graph.eq(index).find('.graph_bar').css('bottom', + standardPosition + 'rem');
-        $('.convert .graph_bar').css({'height': + standardHeight + 'rem'})
-      }
+        
+        // 혼합형 차트 기준점 기준 위아래 높이값 비교 - 높은값을 높이값으로 선정
+        if (zeroH / 10 > convertHeightReverse) {
+          convertHeight = zeroH / 10;
+        } else {
+          convertHeight = convertHeightReverse;
+        }
+        
 
+        // 혼합형 차트 숫자 높이값
+        graph.eq(index).find('.graph_bar').css({'height': + convertHeight + 'rem'});
+      }
       
-      
-    });
+    }); 
+    
   },
 }
+
+
 
 
 

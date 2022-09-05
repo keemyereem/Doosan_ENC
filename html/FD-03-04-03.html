@@ -59,6 +59,7 @@
 
             // JS importing
             commonEvent.init();
+            companyEvent.init();
         });
     </script>
 </head>
@@ -75,15 +76,15 @@
         <div class="sitemap"></div>
         <!-- //sitemap -->
 
-        <div class="container technology">
+        <div class="container investment">
             <div class="sub_visual">
                 <div class="inner">
-                    <h1>기술개발</h1>
+                    <h1>회사소개</h1>
                     <div class="sub_visual_menu">
                         <div class="menu_inner">
                             <div class="home"></div>
                             <div class="depth depth1">
-                                <a href="javascript:;" class="dep_tit" title="하위메뉴 열기">기술개발</a>
+                                <a href="javascript:;" class="dep_tit" title="하위메뉴 열기">회사소개</a>
                                 <ul class="drop_box">
                                     <li><a href="javascript:;" title="사업영역 페이지로 이동">사업영역</a></li>
                                     <li><a href="javascript:;" title="기술개발 페이지로 이동">기술개발</a></li>
@@ -95,11 +96,14 @@
                                 </ul>
                             </div>
                             <div class="depth depth2">
-                                <a href="javascript:;" class="dep_tit" title="하위메뉴 열기">지식재산권</a>
+                                <a href="javascript:;" class="dep_tit" title="하위메뉴 열기">투자정보</a>
                                 <ul class="drop_box">
-                                    <li><a href="javascript:;" title="기술역량 페이지로 이동">기술역량</a></li>
-                                    <li><a href="javascript:;" title="지식재산권 페이지로 이동">지식재산권</a></li>
-                                    <li><a href="javascript:;" title="기술연구소 페이지로 이동">기술연구소</a></li>
+                                    <li><a href="javascript:;" title="경영이념 페이지로 이동">경영이념</a></li>
+                                    <li><a href="javascript:;" title="대표이사 인사말 페이지로 이동">대표이사 인사말</a></li>
+                                    <li><a href="javascript:;" title="연혁 페이지로 이동">연혁</a></li>
+                                    <li><a href="javascript:;" title="투자정보 페이지로 이동">투자정보</a></li>
+                                    <li><a href="javascript:;" title="오시는 길 페이지로 이동">오시는 길</a></li>
+                                    <li><a href="javascript:;" title="스포츠구단 페이지로 이동">스포츠구단</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -111,103 +115,108 @@
             </div>
 
             <div class="title_area">
-                <h2 class="con_tit" data-aos="fade-up">지식재산권</h2>
+                <h2 class="con_tit" data-aos="fade-up">투자정보</h2>
             </div>
 
-            <div class="tab_box" data-aos="fade-in">
+            <div class="tab_box" data-aos="fade-up">
                 <div class="inner">
                     <ul>
-                        <li class="on"><a href="javascript:;" title="신기술 페이지로 이동">신기술</a></li>
-                        <li><a href="html/FD-02-02-02.html" title="특허 페이지로 이동">특허</a></li>
-                        <li><a href="html/FD-02-02-03.html" title="실용신안 페이지로 이동">실용신안</a></li>
-                        <li><a href="html/FD-02-02-04.html" title="디자인 페이지로 이동">디자인</a></li>
+                        <li><a href="html/FD-03-04-01.html" title="이사회 페이지로 이동">이사회</a></li>
+                        <li><a href="html/FD-03-04-02.html" title="재무정보 페이지로 이동">재무정보</a></li>
+                        <li class="on"><a href="javascript:;" title="전자공고 페이지로 이동">전자공고</a></li>
                     </ul>
                 </div>
-
-                <div class="control prev">이전</div>
-                <div class="control next">다음</div>
             </div>
 
-            <div class="contents ipr ipr01">
+            <div class="contents announce">
                 <div class="inner">
-                    <div class="tb_box" data-aos="fade-in">
+                    <div class="tb_top">
+                        <div class="search">
+                            <div class="select_row">
+                                <label for="year">연도선택</label>
+                                <select id="year" class="selectBox">
+                                    <option value="">2022</option>
+                                    <option value="">2021</option>
+                                    <option value="">2020</option>
+                                    <option value="">2019</option>
+                                    <option value="">2018</option>
+                                    <option value="">2017</option>
+                                    <option value="">2016</option>
+                                    <option value="">2015</option>
+                                    <option value="">2014</option>
+                                    <option value="">2013</option>
+                                </select>
+                                </div>
+                            <div class="input_row input_search">
+                                <input type="text" id="" placeholder="검색어를 입력해 주세요." />
+                                <a href="javascript:;">검색</a>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <!-- 검색결과 -->
+                            <span class="blind"><b class="blue">&quot;건축&quot;</b> 검색 결과 총 <b>0</b>건</span>
+                        </div>
+                    </div>
+                    <div class="tb_box">
                         <div class="tb_row row_head">
-                            <div class="ord">No</div>
-                            <div class="class">구분</div>
-                            <div class="num">번호</div>
-                            <div class="tit">기술의 명칭</div>
-                            <div class="cert">인증서</div>
+                            <div class="tit">제목</div>
+                            <div class="date">일시</div>
+                            <div class="period">공고기간</div>
                         </div>
-    
-                        <div class="tb_row row_body">
-                            <div class="ord">19</div>
-                            <div class="class"><b class="mob">구분</b> 전력신기술</div>
-                            <div class="num"><b class="mob">번호</b> 873 </div>
-                            <div class="tit">연단거리 확보를 위해 단일 앵커를 중앙에 배치하는 교량받침 기술</div>
-                            <div class="cert"></div>
+                        <!-- 검색결과 0 -->
+                        <div class="tb_row row_body null none">
+                            등록된 내용이 없습니다.
                         </div>
+                        <!-- .검색결과 0 -->
                         <div class="tb_row row_body">
-                            <div class="ord">18</div>
-                            <div class="class"><b class="mob">구분</b> 전력신기술</div>
-                            <div class="num"><b class="mob">번호</b> 828 </div>
-                            <div class="tit">터널 공사 시 근로자 위치 및 환경정보를 기반으로 하는 근로자 안전관리 시스템</div>
-                            <div class="cert"></div>
+                            <div class="tit"><a href="html/FD-03-04-03-01.html">제 46기 재무상태표 공고의 건</a></div>
+                            <div class="date"><b>등록일</b>2022-08-23</div>
+                            <div class="period">2022-03-30 ~</div>
                         </div>
                         <div class="tb_row row_body">
-                            <div class="ord">17</div>
-                            <div class="class"><b class="mob">구분</b> 환경신기술</div>
-                            <div class="num"><b class="mob">번호</b> 768 </div>
-                            <div class="tit">원형체결판을 이용한 무용접 무볼트 방식 강관말뚝머리보강공법(Disk Connector공법)</div>
-                            <div class="cert"></div>
+                            <div class="tit"><a href="javascript:;">제 45기 재무상태표 공고의 건</a></div>
+                            <div class="date"><b>등록일</b>2022-07-23</div>
+                            <div class="period">2022-03-30 ~</div>
                         </div>
                         <div class="tb_row row_body">
-                            <div class="ord">16</div>
-                            <div class="class"><b class="mob">구분</b> 건설신기술</div>
-                            <div class="num"><b class="mob">번호</b> 727 </div>
-                            <div class="tit">가설 철골기둥과 가설 철골브라켓에 거치되는 이중격자 철골보와 슬래브를 이용하여 흙막이를 지지하는 downward식 역타공법</div>
-                            <div class="cert"></div>
+                            <div class="tit"><a href="javascript:;">분할합병 종료 보고의 공고문</a></div>
+                            <div class="date"><b>등록일</b>2022-06-23</div>
+                            <div class="period">2022-03-30 ~</div>
                         </div>
                         <div class="tb_row row_body">
-                            <div class="ord">15</div>
-                            <div class="class"><b class="mob">구분</b> 방재신기술</div>
-                            <div class="num"><b class="mob">번호</b> 710 </div>
-                            <div class="tit">연질형 수지를 적용한 FRP 도막재와 시트를 이용한 인공지반녹화용 방근·방수 복합공법(SMART GREEN SYSTEM)</div>
-                            <div class="cert"></div>
+                            <div class="tit"><a href="javascript:;">주식 병합 공고</a></div>
+                            <div class="date"><b>등록일</b>2022-06-23</div>
+                            <div class="period">2022-03-30 ~</div>
                         </div>
                         <div class="tb_row row_body">
-                            <div class="ord">14</div>
-                            <div class="class"><b class="mob">구분</b> 건설신기술</div>
-                            <div class="num"><b class="mob">번호</b> 685 </div>
-                            <div class="tit">고성능 분체 혼화재 및 조기강도형 알칼리프리계 급결제를 사용한 습식 숏크리트 공법</div>
-                            <div class="cert"></div>
+                            <div class="tit"><a href="javascript:;">채권자 이의제출 공고</a></div>
+                            <div class="date"><b>등록일</b>2022-05-21</div>
+                            <div class="period">2022-03-30 ~</div>
                         </div>
                         <div class="tb_row row_body">
-                            <div class="ord">13</div>
-                            <div class="class"><b class="mob">구분</b> 건설신기술</div>
-                            <div class="num"><b class="mob">번호</b> 649 </div>
-                            <div class="tit">단열재가 포함된 철근 트러스 일체형 슬래브 합판 거푸집 공법</div>
-                            <div class="cert"></div>
+                            <div class="tit"><a href="javascript:;">물적분할 종료 보고의 공고</a></div>
+                            <div class="date"><b>등록일</b>2022-05-18</div>
+                            <div class="period">2022-03-30 ~</div>
                         </div>
                         <div class="tb_row row_body">
-                            <div class="ord">12</div>
-                            <div class="class"><b class="mob">구분</b> 건설신기술</div>
-                            <div class="num"><b class="mob">번호</b> 617 </div>
-                            <div class="tit">고강도 콘크리트에 폴리론 화이버(Polylon Fiber)를 혼입하여 폭렬현상을 방지하는 기술</div>
-                            <div class="cert"></div>
+                            <div class="tit"><a href="javascript:;">제 44기 재무상태표 공고의 건 </a></div>
+                            <div class="date"><b>등록일</b>2022-04-18</div>
+                            <div class="period">2022-03-30 ~</div>
                         </div>
                         <div class="tb_row row_body">
-                            <div class="ord">11</div>
-                            <div class="class"><b class="mob">구분</b> 건설신기술</div>
-                            <div class="num"><b class="mob">번호</b> 569 </div>
-                            <div class="tit">너트 조임식 체결구를 이용한 대구경 철근 이음 공법</div>
-                            <div class="cert"></div>
+                            <div class="tit"><a href="javascript:;">주권 실효통지 공고문</a></div>
+                            <div class="date"><b>등록일</b>2022-03-17</div>
+                            <div class="period">2022-03-30 ~</div>
                         </div>
                         <div class="tb_row row_body">
-                            <div class="ord">10</div>
-                            <div class="class"><b class="mob">구분</b> 건설신기술</div>
-                            <div class="num"><b class="mob">번호</b> 548 </div>
-                            <div class="tit">Strut & Tie Model을 적용한 아치형 철판과 강봉으로 구성된 철근콘크리트 기초 보강공법</div>
-                            <div class="cert"></div>
+                            <div class="tit"><a href="javascript:;">임시주주총회소집을 위한 기준일 설정 공고</a></div>
+                            <div class="date"><b>등록일</b>2022-02-17</div>
+                            <div class="period">2019-12-12 ~ 2019-12-27</div>
+                        </div>
+                        <div class="tb_row row_body">
+                            <div class="tit"><a href="javascript:;">전자증권 전환 대상 주권 권리자(주주) 보호 및 조치사항 안내</a></div>
+                            <div class="date"><b>등록일</b>2022-01-17</div>
+                            <div class="period">2019-06-21 ~ 2019-09-11</div>
                         </div>
                         <div class="paging">
                             <a href="javascript:;" class="front" title="맨 앞"></a>
@@ -224,6 +233,8 @@
                         </div>
                     </div>
                 </div>
+
+
             </div>
             <!-- footer -->
             <div class="footer"></div>
