@@ -227,17 +227,17 @@ var commonEvent = {
         slide = $('#mobile .tab_box ul li'),
         currentIdx = 0,
         slideCount = slide.length,
-        slideWidth = slides.width()/3,
+        slideWidth = slides.outerWidth() / 3,
         prevBtn = $('.control.prev'),
         nextBtn = $('.control.next');
 
     if(currTab > 2){
       currentIdx = 1;
-      slides.css('left', -slideWidth + 'px' ); 
+      
+      slides.css('left', -slideWidth * (slideCount - 3) + 'px' ); 
       prevBtn.on('click', function(){
         if(currentIdx > 0){
           moveSlide(currentIdx - 1);
-          console.log('currentIdx'+currentIdx);
         }else {
   
         }
@@ -250,10 +250,13 @@ var commonEvent = {
     function moveSlide(num){
       slides.css({'left': -slideWidth * num +'px'});
       currentIdx = num;
+      console.log('num'+num);
+
     }
     nextBtn.on('click', function(){
       if(currentIdx < slideCount -3){
         moveSlide(currentIdx + 1);
+        console.log('currentIdx: '+currentIdx);
       }else {
       
       }
@@ -262,6 +265,7 @@ var commonEvent = {
     prevBtn.on('click', function(){
       if(currentIdx > 0){
         moveSlide(currentIdx - 1);
+        console.log('currentIdx: '+currentIdx);
       }else {
 
       }
@@ -980,6 +984,7 @@ var companyEvent = {
       })
 
       const line = graph.eq(index).find('.graph_bg li');
+      const graphBars = graph.eq(index).find('.graph_bar');
       const bar = graph.eq(index).find('.graph_bar li');
       let maxPercent = graph.eq(index).find('.graph_bg li').eq(0).attr('data-line');
 
@@ -989,26 +994,14 @@ var companyEvent = {
         let lineNum = lineData.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
         line.eq(idx).children('span').text(lineNum);
-
+        
         // 0수치에 기준점 클래스 부여/ 라인 숫자 최대(또는 최소)값 기준 그래프바 높이값 조정 클래스 부여
         if (lineData === '0') {
           line.eq(idx).addClass('standard');
         } else if (Math.abs(lineData) > maxPercent) {
-          line.eq(idx).addClass('standardReverse')
+          line.eq(-1).addClass('standardReverse')
         }  
 
-
-        // 모바일버전 span태크 width값 통일(우측정렬 위해)
-        if (deviceChecker.length) {
-          mobileSpanFirst = graph.eq(index).find('.graph_bg li').eq(0);
-
-          if (line.eq(idx).hasClass('standardReverse') || mobileSpanFirst.length) {
-            mobileSpanWidth = (mobileSpanFirst.find('span').outerWidth()) / 10;
-
-            line.eq(idx).find('> span').css('width', + mobileSpanWidth + 1 + 'rem');
-            console.log(mobileSpanWidth);
-          }
-        }
       });
       
       
@@ -1031,9 +1024,8 @@ var companyEvent = {
         if (graph.eq(index).hasClass('convert')) {
           let dataMinus = Math.abs(bar.eq(i).attr('data-percent'));
           let standardReverse = graph.eq(index).find('.standardReverse').attr('data-line');
-          
           maxPercent = Math.abs(standardReverse);
-
+          
           if (standardReverse == null) {
             maxPercent = line.eq(0).attr('data-line');
           }
@@ -1042,12 +1034,21 @@ var companyEvent = {
 
         // 바 그래프 애니메이션 기능
         function chartBarStart() {
-          bar.eq(i).css({'height': + barPercent + '%', 'background': '' + graphBarColor[i], 'transition': 'height ease ' + barSpeed / 1000 + 's'});
+          // 그래프바가 차트 수치 밖으로 넘어갈 경우 툴팁 세팅
+          const maginotLine = graphBars.height() - (graph.eq(index).find('.graph_bg li').eq(1).position().top / 3) * 2;
+          if (bar.eq(i).height() >= maginotLine) {
+            bar.eq(i).find('> span').css({'top': '1rem', 'right': '30%'})
+          }
+          if (bar.eq(i).height() > graphBars.height()) {
+            barPercent = 104
+          }
+
+          bar.eq(i).css({'height': + barPercent + '%', 'background': '' + graphBarColor[i], 'transition': 'height ease ' + barSpeed / 1000 + 's', 'transition-delay': + i / 10 * 2 + 's'});
           bar.eq(i).find('> span').text(barNum).css({'border': '.1rem solid' + graphBarColor[i], 'color': '' + graphBarColor[i]});
         }
 
         // scroll animation 동작
-        $(window).on('scroll load', ()=> {
+        $(window).on('load resize scroll', ()=> {
           if ($('.graph').eq(index).hasClass('on')) {
             // bar로딩
             chartBarStart();
@@ -1059,22 +1060,23 @@ var companyEvent = {
               }, 200);
             });
           }
-        })
-
+        });
+        
       });
     
       // '0' 수치 기준점으로 그래프바 위치 고정 및 그래프 비율 조절
       if (line.length) {
         let gH = graph.eq(index).height();
-        let barH = graph.eq(index).find('.graph_bar').height();
+        // let barH = graphBars.height();
         let countH = $('.graph > span').height();
         let zeroH = graph.eq(index).find('.standard').position().top;
         let stdH = graph.eq(index).find('.standard').height() / 2;
+        let barH = graphBars.height() - (countH + stdH);
         let standardPosition = (gH - (zeroH + stdH + countH)) / 10;
         let convertHeightReverse = (barH - zeroH) / 10;
 
         // 그래프바 위치
-        graph.eq(index).find('.graph_bar').css('bottom', + standardPosition + 'rem');
+        graphBars.css('bottom', + standardPosition + 'rem');
         
         // 혼합형 차트 기준점 기준 위아래 높이값 비교 - 높은값을 높이값으로 선정
         if (zeroH / 10 > convertHeightReverse) {
@@ -1082,12 +1084,22 @@ var companyEvent = {
         } else {
           convertHeight = convertHeightReverse;
         }
-        
-
         // 혼합형 차트 숫자 높이값
-        graph.eq(index).find('.graph_bar').css({'height': + convertHeight + 'rem'});
+        graphBars.css({'height': + convertHeight + 'rem'});
+        
+        // 모바일버전 
+        if (deviceChecker.length) {
+          // span태크 width값 통일(우측정렬 위해)
+          const lineSpan = graph.eq(index).find('.graph_bg > li > span');
+          let padding = 12;
+          let spanWidth = (lineSpan.width() + padding) / 10;
+
+          lineSpan.css({'max-width': spanWidth + 'rem', 'width': '100%'});
+          graphBars.css({'width': 'calc(100% - ' + (spanWidth + 1) + 'rem)'});
+        }
+        
       }
-      
+
     }); 
     
   },
