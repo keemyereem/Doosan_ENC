@@ -40,9 +40,6 @@
     <link type="text/css" href="css/sub.css" rel="stylesheet">
     <link type="text/css" href="css/media.css" rel="stylesheet">
 
-    <!-- <link media=”handheld, only screen and (max-device-width: 320px)” href=”css/media.css” type=”text/css” rel=”stylesheet” />
-    <link media=”only screen and (max-device-width: 480px)” href=”css/media.css” type=”text/css” rel=”stylesheet” /> -->
-
     <!-- Library JS -->
     <script src="js/lib/jquery-1.12.4.min.js"></script>
     <script src="js/lib/jquery.swiper.min.js"></script>
@@ -54,17 +51,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>
 
-    
-
-    <!-- Initialized Include Path -->
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
     <script>
         $(document).ready( function() {
-            //html용 include
+            // Including HTML
             $(".header").load("include/header.html?v=1.0");
-            // $(".sitemap").load("include/sitemap.html");
             $(".footer").load("include/footer.html");
-            mainEvent.init();
 
+            // JS importing
+            mainEvent.init();
         });
     </script>
 </head>
@@ -101,7 +97,6 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="slide-inner slide-bg-image slide-inner1" data-background="images/main/sec01_bg1.png">
-                                            <!-- <img src="images/main/sec01_bg1.png" alt="main_bg1"> -->
                                         </div>
                                         <h2>
                                             <span>더 좋은 세상의 시작,</span>
@@ -110,7 +105,6 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="slide-inner slide-bg-image slide-inner2" data-background="images/main/sec01_bg2.png">
-                                            <!-- <img src="images/main/sec01_bg2.png" alt="main_bg2"> -->
                                         </div>
                                         <h2>
                                             <span>토목 대역사를 통해</span>
@@ -119,7 +113,6 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="slide-inner slide-bg-image slide-inner3" data-background="images/main/sec01_bg3.png">
-                                            <!-- <img src="images/main/sec01_bg3.png" alt="main_bg3"> -->
                                         </div>
                                         <h2>
                                             <span>더 나은 내일위해 끊임없이</span>
@@ -531,7 +524,7 @@
 
 <!-- SECTION 07 -->  
                 <section class="section footer" data-anchor="seventhPage">
-                    <!-- <h2 class="indent">COPYRIGHT (C)2022 DOOSAN. ALL RIGHTS DESERVED.</h2> -->
+                    <h2 class="indent">COPYRIGHT (C)2022 DOOSAN. ALL RIGHTS DESERVED.</h2>
                 </section>
 
                 <ul id="rightnavi">
@@ -544,20 +537,9 @@
                     <li data-menuanchor="seventhPage"><a href="html/FD-00-01.html#seventhPage"><span></span></a></li>
                 </ul>
             </div>
-
-
-
-            
         </div>
-
-
-
         <!-- footer -->
         <div class="footer"></div>
-        <!-- //footer -->
-
-        <!-- common JS -->
-        <script src="js/common.js?v=1.0"></script>
     </div>
 </body>
 

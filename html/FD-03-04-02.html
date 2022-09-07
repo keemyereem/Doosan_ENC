@@ -34,12 +34,13 @@
     <link type="text/css" href="css/lib/jquery.swiper.min.css" rel="stylesheet">
     <link type="text/css" href="css/lib/jquery.fullpage.css" rel="stylesheet">
     <link type="text/css" href="css/lib/aos.css" rel="stylesheet">
-
+    <link type="text/css" href="css/lib/slick.css" rel="stylesheet">
+    
     <link type="text/css" href="css/font.css" rel="stylesheet">
     <link type="text/css" href="css/common.css" rel="stylesheet">
     <link type="text/css" href="css/sub.css" rel="stylesheet">
     <link type="text/css" href="css/media.css" rel="stylesheet">
-
+    
     <!-- Library JS -->
     <script src="js/lib/jquery-1.12.4.min.js"></script>
     <script src="js/lib/jquery.swiper.min.js"></script>
@@ -47,6 +48,7 @@
     <script src="js/lib/jquery.easings.min.js"></script>
     <script src="js/lib/scrolloverflow.js"></script>
     <script src="js/lib/aos.js"></script>
+    <script src="js/lib/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     
     <script src="js/common.js?v=1.0"></script>
@@ -54,7 +56,6 @@
         $(document).ready( function() {
             // Including HTML
             $(".header").load("include/header.html?v=1.0");
-            // $(".sitemap").load("include/sitemap.html");
             $(".footer").load("include/footer.html");
 
             // JS importing
@@ -128,7 +129,7 @@
                 </div>
             </div>
 
-            <div class="contents">
+            <div class="contents financial">
 
                 <!-- || Chart Custom 〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓 --> 
                 <!-- || 1. [data-line] = 가이드라인 수치 표기 / '0'표기된 위치 기준 그래프바 생성                        || -->
@@ -139,7 +140,7 @@
 
                 <!-- PS --> 
                 <!-- 작동 스크립트는 common.js -> companyEvent -> chart function()에 있음. -->
-                <!-- 반 자동화이기 떄문에 html 마크업 내부 data값만 조절하면 됨. -->
+                <!-- html 마크업 내부 data값만 조절 -->
                 <!-- bar형 수직그래프만 구현됨. 다른 스타일 필요시 작업 소요. -->
 
                 <ul id="HMchart">
