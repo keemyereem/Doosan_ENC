@@ -6,79 +6,88 @@
 
 $(function(){
     if ($('#mobile').length) {
-        mainEvent.init();
+        // Including HTML
+        $(".header").load("include/header.html?v=1.0");
+        $(".footer").load("include/footer.html");
 
-        $('#mobile #main .section').each((index) => {
-            const currentSection = $('.section').eq(index).offset().top;
-            const nextSection = $('.section').eq(index + 1).offset().top;
-            
-            $('.container').prepend('<div class="dd" style="width:100%; height:1px; display:block; position:absolute;"></div>');
-            $('.dd:nth-child(' + index + ')').css({'background': 'red', 'top': + currentSection + 'px'});
-            console.log(index)
-            
-            $(window).on('scroll', ()=> {
-                let st = $(window).scrollTop();
+        // JS importing
+        mainEvent.intro();
+        mainEvent.headerEvent();
+        mainEvent.footerEvent();
+        mainEvent.sec04Card();
+        mainEvent.sec06Tab();
+
+        $(window).on('scroll', ()=> {
+            const s1Top = $('.section01').offset().top-200,
+                  s2Top = $('.section02').offset().top-200,
+                  s3Top = $('.section03').offset().top-200,
+                  s4Top = $('.section04').offset().top-200,
+                  s5Top = $('.section05').offset().top-200,
+                  s6Top = $('.section06').offset().top-200,
+                //   s7Top = $('.section07').offset().top-200,
+                  st = $(window).scrollTop();
+                  
+            if ( s2Top > st && st > s1Top ) {
+                $('#mobile .section01').addClass('active');
+            } else {
+                $('#mobile .section01').removeClass('active');
+            }                        
+            if ( s3Top > st && st > s2Top ) {
+                $('#mobile .section02').addClass('active');
+                // mainEvent.sec02Swiper();
+            } else {
+                $('#mobile .section02').removeClass('active');
+            }     
+            if ( s4Top > st && st > s3Top ) {
+                $('#mobile .section03').addClass('active');
+                // mainEvent.sec03Swiper();
+            } else {
+                $('#mobile .section03').removeClass('active');
+            } 
+            if ( s5Top > st && st > s4Top ) {
+                $('#mobile .section04').addClass('active');
+
+            } else {
+                $('#mobile .section04').removeClass('active');
+            }        
+            if ( s6Top > st && st > s5Top ) {
+                $('#mobile .section05').addClass('active');
                 
-                console.log('st :'+st);
-                console.log('currentSection :'+currentSection);
-                console.log('nextSection :'+nextSection);
-                
-                if (st >= currentSection && st < nextSection && index + 1 <= index.length) {
-                    $('.section').eq(index).addClass('active');
-                } else {
-                    $('.section').eq(index).removeClass('active');
-                }
-                 
-            });
-            $(window).on('scroll', ()=> {
-                const s1Top = $('.section01').offset().top-200,
-                      s2Top = $('.section02').offset().top-200,
-                      s3Top = $('.section03').offset().top-200,
-                      s4Top = $('.section04').offset().top-200,
-                      s5Top = $('.section05').offset().top-200,
-                      s6Top = $('.section06').offset().top-200,
-                      st = $(window).scrollTop();
-                      
-                if ( s2Top > st && st > s1Top ) {
-                    $('#mobile .section01').addClass('active');
-                } else {
-                    $('#mobile .section01').removeClass('active');
-                }                        
-                if ( s3Top > st && st > s2Top ) {
-                    $('#mobile .section02').addClass('active');
-                } else {
-                    $('#mobile .section02').removeClass('active');
-                }     
-                if ( s4Top > st && st > s3Top ) {
-                    $('#mobile .section03').addClass('active');
-                } else {
-                    $('#mobile .section03').removeClass('active');
-                } 
-                if ( s5Top > st && st > s4Top ) {
-                    $('#mobile .section04').addClass('active');
-                } else {
-                    $('#mobile .section04').removeClass('active');
-                }        
-                if ( s6Top > st && st > s5Top ) {
-                    $('#mobile .section05').addClass('active');
-                } else {
-                    $('#mobile .section05').removeClass('active');
-                }  
+            } else {
+                $('#mobile .section05').removeClass('active');
+            }  
 
-                // for (let i=1; i<7; i++){
-                //     if ( $('.section').eq(i+1) > st && st > $('.section').eq(i)) {
-                //         $('.section').eq(i).addClass('active');
-                //     } else {
-                //         $('.section').eq(i).removeClass('active');
-                //     }  
-                // }                 
-            });
 
+            // for (let i=1; i<7; i++){
+            //     if ( $('.section').eq(i+1) > st && st > $('.section').eq(i)) {
+            //         $('.section').eq(i).addClass('active');
+            //     } else {
+            //         $('.section').eq(i).removeClass('active');
+            //     }  
+            // }                 
         });
 
+        // $('#mobile #main .section').each((index) => {
+        //     const currentSection = $('.section').eq(index).offset().top;
+        //     const nextSection = $('.section').eq(index + 1).offset().top;
+            
+        //     $('.container').prepend('<div class="dd" style="width:100%; height:1px; display:block; position:absolute;"></div>');
+        //     $('.dd:nth-child(' + index + ')').css({'background': 'red', 'top': + currentSection + 'px'});
+        //     console.log(index)
+            
+        //     $(window).on('scroll', ()=> {
+        //         let st = $(window).scrollTop();
+                
+                
+        //         if (st >= currentSection && st < nextSection && index + 1 <= index.length) {
+        //             $('.section').eq(index).addClass('active');
+        //         } else {
+        //             $('.section').eq(index).removeClass('active');
+        //         }
+                 
+        //     });
 
-
-
+        // });
 
     }
 });
@@ -338,7 +347,13 @@ var mainEvent = {
 
         on : {  
             init: function() {
-            this.autoplay.stop();
+                if ($('#mobile').length) {
+                    // this.autoplay.start();
+                }else {
+                    this.autoplay.stop();
+
+                }
+
             }
 
         }
@@ -347,40 +362,42 @@ var mainEvent = {
 
         $(window).on('load resize', function(e) {
 
-        let bullet = $('.swiper-pagination-sec02 .swiper-pagination-bullet');
-        let bulletWidth = bullet.width();
-        let bulletMargin = parseInt( bullet.css('margin-right'));
-        let index = 0;
+            let bullet = $('.swiper-pagination-sec02 .swiper-pagination-bullet');
+            let bulletWidth = bullet.width();
+            let bulletMargin = parseInt( bullet.css('margin-right'));
+            let index = 0;
 
-        bulletWidth = bulletWidth + bulletMargin;
-        
-        $(document).on('click','.swiper2-button-next',function(){
-            index += 1;
-            if (index > bullet.length - 3) {
-            index = 0;
-            };
-            next();
-        });
-
-        swiper2.on('slideChange', function() {
-            if (this.realIndex > 2) {
-            index += 1;
-            if (index > bullet.length - 3) {
-                index = bullet.length - 3;
-            };
-
-            } else if (this.realIndex === 0) {
-            index = 0;
-            };
-            next();
-        });
-
-        function next(){
-            $('.swiper-pagination-sec02').css({
-                'transform':'translateX(' + -(bulletWidth * index) + 'px)',
-                'transition':'.3s'
+            bulletWidth = bulletWidth + bulletMargin;
+            
+            $(document).on('click','.swiper2-button-next',function(){
+                index += 1;
+                if (index > bullet.length - 3) {
+                index = 0;
+                };
+                next();
             });
-        }
+
+            swiper2.on('slideChange', function() {
+                if (this.realIndex > 2) {
+                    index += 1;
+                    if (index > bullet.length - 3) {
+                        index = bullet.length - 3;
+                    };
+
+                } else if (this.realIndex === 0) {
+                    index = 0;
+                };
+                next();
+
+            });
+
+            function next(){
+                $('.swiper-pagination-sec02').css({
+                    'transform':'translateX(' + -(bulletWidth * index) + 'px)',
+                    'transition':'.3s'
+                });
+            }
+
         });
 
     },
@@ -394,6 +411,7 @@ var mainEvent = {
             loop: true,
             autoplayDisableOnInteraction: false,
             slidesPerView: 1, 
+            initialSlide: 0,
             allowTouchMove: false,
             effect: "fade",
             fadeEffect: {
@@ -418,7 +436,11 @@ var mainEvent = {
 
             on : {  
                 init: function() {
-                    this.autoplay.stop()
+                    if ($('#mobile').length) {
+                        // this.autoplay.start();
+                    }else {
+                        this.autoplay.stop()
+                    }
                 }
             }
         });
@@ -432,6 +454,7 @@ var mainEvent = {
                 swp.autoplay.start();
             });
         });
+
 
         innerSwiper3 = new Swiper(".section03 .inner_swiper", {
             speed: 500,

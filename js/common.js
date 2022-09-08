@@ -207,77 +207,53 @@ var commonEvent = {
   },
 
   tabEvent: () => {
-    // let Tabs = $('.tab_box ul li'),
-    //     activeTab = $('.tab_box .tab_slide li.on'),
-    //     currTab = activeTab.index(),
-    //     tabslide = $('#mobile .tab_box .tab_slide');
-        
-    // Tabs.on("click", function(){
-    //   $(this).addClass('on');
-    //   $(this).siblings().removeClass('on');
-
-    // });
-
-    // tabslide.slick({
-    //   slidesToShow: 3,
-    //   slidesToScroll: 1,
-    //   autoplaySpeed: 2000,
-    //   infinite: false,
-    //   draggable: true,
-    //   arrows: true,
-    //   prevArrow: $('.tab_box .prev'),
-    //   nextArrow: $('.tab_box .next'),
-    // });
-
-
     const tabContainer = $('#mobile .tab_box > .inner')
     const tabBox = tabContainer.find('> .tab_slide');
     const tabButton = tabBox.find('> li');
-
-    let tcWidth = tabContainer.width();
-    let dd = 0;
+    let size = tabButton.length;
+    let tbIndex = 0;
 
     if (tabBox.length) {
+      $(document).ready(function(){
+        let tbOn = Math.floor(tabBox.find('> li.on').position().left);
+        let tbWidth = tabButton.width();
 
-      tabContainer.on('scroll resize load', ()=> {
-        
-        
+        tabContainer.animate({scrollLeft: tbOn - tbWidth}, 1000);
+      });
+
+      tabContainer.on('load resize scroll', ()=> {
           tabBoxPosition = Math.abs(tabBox.position().left);
-          console.log(tabBoxPosition)
 
           tabButton.each((index)=> {
-            tabButtonPosition = tabButton.eq(index).position().left;
+            tabButtonPosition = Math.floor(tabButton.eq(index).position().left);
 
-            if (tabBoxPosition >= tabButtonPosition && tabBoxPosition < tabButton.eq(index + 1).position().left) {
-              console.log('허용 인덱스 값 : ' + index);
-              dd = index;
+            if (size !== index + 1) {
+              nextIndexPosition = Math.floor(tabButton.eq(index).next().position().left);
+
+              if (tabBoxPosition > tabButtonPosition && tabBoxPosition <= nextIndexPosition) {
+                tbIndex = index;
+              }
             }
 
-          })
-        
+          });
+
       });
 
       $('.control').on('click', function() {
         if ($(this).hasClass('prev')) {
-          console.log('prev = ' + dd)
-          console.log(tabButton.eq(dd).position().left)
+          tsMove = Math.floor(tabButton.eq(tbIndex).position().left);
+
+          tabContainer.animate({scrollLeft: tsMove}, 200)
         } else {
-          console.log('next = ' + (dd + 3))
+          if (Math.abs(tabBox.position().left) == Math.floor(tabButton.eq(tbIndex).next().position().left)) {
+            tbIndex = tbIndex + 1;
+          } else {
+            tbIndex = tbIndex;
+          }
+          tsMove = Math.floor(tabButton.eq(tbIndex).next().position().left);
+          tabContainer.animate({scrollLeft: tsMove}, 200)
         }
       })
-      
-
-
-      $(document).ready(function(){
-        const activeTab = document.getElementById('tab_on');
-        activeTab.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center"});
-
-        tabButton.each((index)=> {
-          tabButtonPosition = tabButton.eq(index).position().left;
-          console.log(index + ' 버튼의 left 위치 값 : ' + tabButtonPosition)
-        });
-        
-      });
     }
 
 
