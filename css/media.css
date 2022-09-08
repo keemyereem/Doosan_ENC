@@ -82,7 +82,7 @@
 #mobile .header .top_sitemap button span:nth-child(2) { width: 2.7rem; margin-left: 0; }
 
 /* container*/
-#mobile #sub .container .inner { width: calc(100% - 4rem); padding: 0; }
+#mobile #sub .container .inner { width: calc(100% - 6rem); padding: 0; }
 #mobile #sub .container .inner1200 { padding: 0 2rem; }
 
 /* pagination */
@@ -162,9 +162,8 @@
 #mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-button-next { content: url(../images/main/sec01_controller_arrowNext_m.png); }
 #mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-button-prev { content: url(../images/main/sec01_controller_arrowPrev_m.png); }
 #mobile #main #fullpage .section01 .swiper-slide h2 { font-size: 3.8rem; }
-#mobile #main #fullpage .section01 .swiper-slide .slide-inner1 {background: url(../images/main/sec01_bg1_m.png) no-repeat 50% 50%; background-size: auto 100%; }
 #mobile #main #fullpage .section01 .clip-wrap { width: 100%; height: 100%; position: absolute; z-index: 9; background: #fff; }
-#mobile #main #fullpage .section01 .clip-css { width: 33.4rem; height: 32.8rem; transform: translateY(5%); object-fit: cover; background-size: cover !important; background: url(../images/main/sec01_bg1_m.png)no-repeat 50% 50%; }
+#mobile #main #fullpage .section01 .clip-css { width: 33.4rem; height: 32.8rem; transform: translateY(5%); }
 #mobile #main #fullpage .section01.ani .clip-css { animation: intro_mobile 1s alternate; width: 100%; height: 100%; }
 #mobile #main #fullpage .section01.active .clip-css { transform: translateY(0); }
 
@@ -314,7 +313,7 @@
 #mobile .title_area .download_btn > i { width: 1.45rem; height: 1.5rem; background: url(../images/common/icon_download.png) no-repeat; background-size: contain; margin-left: 2.1rem; }
 #mobile .title_area .download_btn::after { margin-top: 1.5rem; }
 #mobile .tab_box { position: relative; width: 100%; height: 4.5rem; }
-#mobile .tab_box > .inner { overflow-x: auto; width: calc(100% - 6rem)!important; height: 100%; position: relative; transition: all ease 1s; }
+#mobile .tab_box > .inner { overflow-x: auto; height: 100%; position: relative; transition: all ease 1s; }
 #mobile .tab_box ul { width: fit-content; position: absolute; left: 0; top: 0; transition: left .5s ease-out; }
 #mobile .tab_box ul li { flex: initial; flex-shrink: 0!important; width: calc(100% / 3); height: 4.5rem; display: table; }
 #mobile .tab_box ul.tab_slide li { width: calc((100vw - 6rem) / 3); }
@@ -567,6 +566,7 @@
 #mobile .investment .sub_visual { background-image: url(../images/company/company_bg_m.png); }
 #mobile .investment .tab_box { padding: 0; margin-top: 4rem; }
 #mobile .investment .tab_box > .inner { width: calc(100% - 4rem)!important; }
+#mobile .investment .tab_box ul { width: 100%; }
 
 /* 재무정보 - Custom Chart */
 #mobile .investment .financial { margin-top: 4.5rem; }
