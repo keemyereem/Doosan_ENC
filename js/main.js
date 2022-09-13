@@ -239,15 +239,16 @@ var mainEvent = {
     },
 
     mainSwiper: () => {
-        var interleaveOffset = 0.5;
-
-        var swiperOptions = {
+        const interleaveOffset = 0.5;
+        swiper = new Swiper(".section01 .mainSwiper", {
             speed: 1000,
-            loop: false,
-            watchSlidesProgress: true,
+            loop: true,
+            observer: true,
+            observeParents: true,
+            watchSlidesProgress: false,
             autoplay: {
-                delay: 3500,
-                disableOnInteraction: true,
+                delay: 3500, 
+                disableOnInteraction: true  // 쓸어 넘기거나 버튼 클릭 시 자동 슬라이드 정지.
             },
             navigation: {
                 nextEl: ".swiper-button-next",
@@ -259,42 +260,24 @@ var mainEvent = {
             },
             on: {
                 progress: function() {
-                    var swiper = this;
-                    
-                    for (var i = 0; i < swiper.slides.length; i++) {
-                        // console.log('swiper length: '+ swiper.slides[i]);
+                    dd = Math.abs($('.swiper-wrapper').css("transform").replace(/(\.\d+)+/,'').split(',')[4]);
+                    aa = $('.swiper-wrapper').css("transform");
 
-                        var slideProgress = swiper.slides[i].progress;
-                        var innerOffset = swiper.width * interleaveOffset;
-                        var innerTranslate = slideProgress * innerOffset;
-
-                        swiper.slides[i].querySelector(".slide-inner").style.transform =
-                        "translate3d(" + innerTranslate + "px, 0, 0)";
-
-                        swiper.slides[i].querySelector(".slide-inner").style.transition =
-                        "transform 1s";
-                    }      
-                },
-
-                touchStart: function() {
-                    var swiper = this;
-                    for (var i = 0; i < swiper.slides.length; i++) {
-                        swiper.slides[i].style.transition = "";
+                    for (var i = 0; i < this.slides.length; i++) {
+                        this.slides[i].querySelector(".slide-inner").style.transform =
+                        "translate3d(" + dd / 7 + "px, 0, 0)";
                     }
-                },
-                setTransition: function(speed) {
-                    var swiper = this;
-                    for (var i = 0; i < swiper.slides.length; i++) {
-                        swiper.slides[i].style.transition = speed + "ms";
-                        swiper.slides[i].querySelector(".slide-inner").style.transitionDuration = speed + "ms";
-                        swiper.slides[i].querySelector(".slide-inner").style.transitionProperty = "transform";
-                    }
-                },
+                    console.log(dd)
+                }
             }
-        };
 
-        swiper = new Swiper(".mainSwiper", swiperOptions);
+        });
+        swiper.on('progress', ()=> {
+            var aa = swiper.realIndex;
+            
+        })
 
+        
         // 페이지네이션 동그라미 슬라이드별 이동
         swiper.on('transitionStart', ()=> {
             let $this = $('.swiper-pagination-bullet-active').position().left;
@@ -304,16 +287,13 @@ var mainEvent = {
         // Next, Prev버튼 클릭 시 오토플레이 재개
         $(document).on('click', '.swiper-button', () => {
             swiper.autoplay.start();
-            
         });
-
-        // 모바일
-        
 
     },
 
     sec02Swiper: () => {
         var listArray = ["01","02","03","04",'05'];
+
         swiper2 = new Swiper(".section02 .myswiper", {
         speed: 500,
         loop: true,

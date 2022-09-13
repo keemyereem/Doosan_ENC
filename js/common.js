@@ -51,23 +51,27 @@ $(function(){
 });
 
 
+// 고객문의 => 국가선택 select
 document.addEventListener('DOMContentLoaded', () => {
-  // 고객문의 => 국가선택 select
-  const selectDrop = document.querySelector('#sel02');
+  if ($('#sel02').length) {
+    const selectDrop = document.querySelector('#sel02');
 
-  fetch('https://restcountries.com/v2/all').then(res => {
-      return res.json();
-  }).then(data => {
-      let output = "";
-      data.forEach(country => {
-          output += `<option value ="${country.name}">${country.name}</option>`;
-      })
+    fetch('https://restcountries.com/v2/all').then(res => {
+        return res.json();
+    }).then(data => {
+        let output = "";
+        data.forEach(country => {
+            output += `<option value ="${country.name}">${country.name}</option>`;
+        })
 
-      selectDrop.innerHTML = output;
-  }).catch(err => {
-      console.log(err);
-  })
+        selectDrop.innerHTML = output;
+    }).catch(err => {
+        console.log(err);
+    })
+  }
 });
+
+
 
 
 
@@ -302,6 +306,7 @@ var civilEngineerEvent = {
           observeParents: true,
           slidesPerView : 1,
           speed: 500,
+          loop: true,
           
           navigation: {
               nextEl: '.civil_engineer .outline .swiper-button-next0' + idx,
