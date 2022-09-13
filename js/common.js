@@ -3,7 +3,6 @@
 /* --------------------- Published by 4m Creative --------------------- */
 
 
-
 $(function(){
     
   const isMobile = () => {
@@ -47,9 +46,29 @@ $(function(){
         return fetch(event.request);
       })()
     );
-  });
+  }); 
 
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  // 고객문의 => 국가선택 select
+  const selectDrop = document.querySelector('#sel02');
+
+  fetch('https://restcountries.com/v2/all').then(res => {
+      return res.json();
+  }).then(data => {
+      let output = "";
+      data.forEach(country => {
+          output += `<option value ="${country.name}">${country.name}</option>`;
+      })
+
+      selectDrop.innerHTML = output;
+  }).catch(err => {
+      console.log(err);
+  })
+});
+
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -204,6 +223,7 @@ var commonEvent = {
         var cur =$ (".file_row input[type='file']").val();
         $(".upload_name").val(cur);
     });
+
   },
 
   tabEvent: () => {
@@ -241,17 +261,20 @@ var commonEvent = {
 
       $('.control').on('click', function() {
         if ($(this).hasClass('prev')) {
-          tsMove = Math.floor(tabButton.eq(tbIndex).position().left);
+            tsMove = Math.floor(tabButton.eq(tbIndex).position().left);
 
-          tabContainer.animate({scrollLeft: tsMove}, 200)
+            tabContainer.animate({scrollLeft: tsMove}, 200)
         } else {
-          if (Math.abs(tabBox.position().left) == Math.floor(tabButton.eq(tbIndex).next().position().left)) {
-            tbIndex = tbIndex + 1;
-          } else {
-            tbIndex = tbIndex;
-          }
-          tsMove = Math.floor(tabButton.eq(tbIndex).next().position().left);
-          tabContainer.animate({scrollLeft: tsMove}, 200)
+            tsmoveTrigger = Math.abs(tabBox.position().left);
+            
+            if (Math.ceil(tsmoveTrigger) == Math.floor(tabButton.eq(tbIndex).next().position().left)) {
+                tbIndex = tbIndex + 1;
+            } else {
+                tbIndex = tbIndex;
+            }
+
+            tsMove = Math.floor(tabButton.eq(tbIndex).next().position().left);
+            tabContainer.animate({scrollLeft: tsMove}, 200);
         }
       })
     }
