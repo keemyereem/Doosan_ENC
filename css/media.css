@@ -206,8 +206,8 @@
 #mobile #main #fullpage .section03 .bus_swiper .left ul li b::before { width: .45rem; height: .45rem; transform: rotate(18deg); border-radius: 0; }
 #mobile #main #fullpage .section03 .bus_swiper .left ul li span { font-size: 1.3rem; }
 #mobile #main #fullpage .section03 .bus_swiper .left > a { font-size: 1.2rem; margin-top: 2.5rem; }
-#mobile #main #fullpage .section03 .bus_swiper .left > a::after { width: .65rem; height: 1.05rem; background-size: .65rem 1.05rem; transform: translate(3rem,-50%); margin-top: 0rem; }
-#mobile #main #fullpage .section03 .bus_swiper .left > a:hover::after { transform: translate(3rem,-50%); }
+#mobile #main #fullpage .section03 .bus_swiper .left > a::after { width: .65rem; height: 1.05rem; background-size: .65rem 1.05rem; transform: translateX(3rem); margin-top: -.525rem; }
+#mobile #main #fullpage .section03 .bus_swiper .left > a:hover::after { transform: translateX(3rem); }
 #mobile #main #fullpage .section03 .bus_swiper > .swiper-wrapper > .swiper-slide { padding-top: 0; }
 #mobile #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 { float: none; width: calc(100% - 2rem); margin: 0 auto; display: flex; justify-content: space-between; opacity: 1; transform: translateY(0); }
 #mobile #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > .swiper-pagination-bullet { margin-right: 0; }
@@ -293,8 +293,8 @@
 #mobile #main #fullpage .section06 .right .contents > ul.on { display: block; }
 #mobile #main #fullpage .section06 .right .contents > ul li .txt p { font-size: 1.6rem; line-height: 1.59; margin: 2rem 0 2.6rem; }
 #mobile #main #fullpage .section06 .right .contents > ul li .txt a { font-size: 1.2rem; }
-#mobile #main #fullpage .section06 .right .contents > ul li .txt a::after { width: .65rem; height: 1.05rem; background-size: .65rem 1.05rem; transform: translate(3rem,-50%); margin-top: 0rem; }
-#mobile #main #fullpage .section06 .right .contents > ul li .txt a:hover::after { transform: translate(3rem,-50%); }
+#mobile #main #fullpage .section06 .right .contents > ul li .txt a::after { width: .65rem; height: 1.05rem; background-size: .65rem 1.05rem; transform: translateX(3rem); margin-top: -.525rem; }
+#mobile #main #fullpage .section06 .right .contents > ul li .txt a:hover::after { transform: translateX(3rem); }
 #mobile #main #fullpage .section06 .right .contents > ul li .img { display: none; }
 
 
