@@ -74,17 +74,17 @@ $(function(){
             const currentSection = $('.section').eq(index).offset().top;
             const nextSection = $('.section').eq(index).next().offset().top;
 
-            console.log(' currentSection: '+currentSection);
-            console.log(' nextSection: '+nextSection);
+            // console.log(' currentSection: '+currentSection);
+            // console.log(' nextSection: '+nextSection);
             
             $('.container').prepend('<div class="dd" style="width:100%; height:1px; display:block; position:absolute;"></div>');
             $('.dd:nth-child(' + index + ')').css({'background': 'red', 'top': + currentSection + 'px'});
-            console.log(index)
+            // console.log(index)
             
             $(window).on('scroll', ()=> {
                 let st = $(window).scrollTop();
-                console.log(' currentSection: '+currentSection);
-                console.log('index : '+index);
+                // console.log(' currentSection: '+currentSection);
+                // console.log('index : '+index);
                 
                 if (st >= currentSection && st < nextSection && index + 1 <= index.length) {
                     $('.section').eq(index).addClass('active');
@@ -113,7 +113,9 @@ var mainEvent = {
         this.headerEvent();
         this.footerEvent();
 
-        this.mobile();
+        if($('#mobile').length){
+            this.mobile();
+        }
     },
 
     createFullpage: () => {
@@ -159,14 +161,10 @@ var mainEvent = {
                     //swiper.slideTo(1);
                 }
                 if (index == 2) {
-                    if($('#pc').length){
-                        alert('pc');
-                        console.log('pc');
-                        swiper2.autoplay.start();
-                    }
+                    swiper2.autoplay.start();
                 } else {
                     swiper2.autoplay.stop();
-                    swiper2.slideTo(0);
+                    swiper2.slideTo(1);
                 }
                 if (index == 3) {
                     swiper3.autoplay.start();
@@ -242,8 +240,8 @@ var mainEvent = {
                 mainEvent.mainSwiper();
 
                 if ($('#mobile').length) {
-                    mainEvent.sec02Swiper();
-                    mainEvent.sec03Swiper();
+                    // mainEvent.sec02Swiper();
+                    // mainEvent.sec03Swiper();
                 } else {
                     mainEvent.createFullpage();
                 }
@@ -384,13 +382,13 @@ var mainEvent = {
             $(window).on('scroll', ()=> {
                 
                 const s1Top = $('#mobile .section01').offset().top-200,
-                    s2Top = $('#mobile .section02').offset().top-200,
-                    s3Top = $('#mobile .section03').offset().top-200,
-                    s4Top = $('#mobile .section04').offset().top-200,
-                    s5Top = $('#mobile .section05').offset().top-200,
-                    s6Top = $('#mobile .section06').offset().top-200,
-                    //   s7Top = $('.section07').offset().top-200,
-                    st = $(window).scrollTop();
+                      s2Top = $('#mobile .section02').offset().top-200,
+                      s3Top = $('#mobile .section03').offset().top-200,
+                      s4Top = $('#mobile .section04').offset().top-200,
+                      s5Top = $('#mobile .section05').offset().top-200,
+                      s6Top = $('#mobile .section06').offset().top-200,
+                      //   s7Top = $('.section07').offset().top-200,
+                      st = $(window).scrollTop();
                     
                 if ( s2Top > st && st > s1Top ) {
                     $('#mobile .section01').addClass('active');
@@ -400,7 +398,6 @@ var mainEvent = {
                 if ( s3Top > st && st > s2Top ) {
                     $('#mobile .section02').addClass('active');
                     swiper2.autoplay.start();
-                    // console.log(mainEvent.init());
                 } else {
                     $('#mobile .section02').removeClass('active');
                     swiper2.autoplay.stop();
@@ -494,16 +491,30 @@ var mainEvent = {
             });
 
             swiper2.on('slideChange', function() {
-                if (this.realIndex > 2) {
-                    index += 1;
-                    if (index > bullet.length - 3) {
-                        index = bullet.length - 3;
+                if($('#pc').length){
+                    if (this.realIndex > 2) {
+                        index += 1;
+                        if (index > bullet.length - 3) {
+                            index = bullet.length - 3;
+                        };
+    
+                    } else if (this.realIndex === 0) {
+                        index = 0;
                     };
-
-                } else if (this.realIndex === 0) {
-                    index = 0;
-                };
-                next();
+                    next();
+                }else {
+                    if (this.realIndex > 1) {
+                        index += 1;
+                        if (index > bullet.length - 3) {
+                            index = bullet.length - 3;
+                        };
+    
+                    } else if (this.realIndex === 0) {
+                        index = 0;
+                    };
+                    mobnext();
+                    console.log('index:'+swiper2.realIndex)
+                }
 
             });
 
@@ -512,6 +523,14 @@ var mainEvent = {
                     'transform':'translateX(' + -(bulletWidth * index) + 'px)',
                     'transition':'.3s'
                 });
+                
+            };
+            function mobnext(){
+                $('.swiper-pagination-sec02').css({
+                    'left': + -(bulletWidth * index*2) + 'px',
+                    'transition':'.3s'
+                });
+                
             }
 
         });
