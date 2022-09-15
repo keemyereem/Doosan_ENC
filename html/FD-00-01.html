@@ -31,7 +31,7 @@
     <link rel="canonical" href="http://dev.topes.4-m.co.kr/" />  
 
     <!-- Library CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.css" integrity="sha512-T3xwtELy3dqQUajk2sl4V6x/VnT+WbXgAKIu/Go7L6oDDWf4A5dJbG49vKn0am3dTNh/KHAbU2+4Ih2vVioxSg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css"/>
     <link type="text/css" href="css/lib/jquery.fullpage.css" rel="stylesheet">
     <link type="text/css" href="css/lib/aos.css" rel="stylesheet">
 
@@ -41,9 +41,12 @@
     <link type="text/css" href="css/media.css" rel="stylesheet">
 
     <!-- Library JS -->
-    <script src="js/lib/jquery-1.12.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js" integrity="sha512-V1mUBtsuFY9SNr+ptlCQAlPkhsH0RGLcazvOCFt415od2Bf9/YkdjXxZCdhrP/TVYsPeAWuHa+KYLbjNbeEnWg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="js/lib/jquery.fullPage.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.3.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+    <script src="js/lib/jquery.fullPage.js"></script> 
     <script src="js/lib/jquery.easings.min.js"></script>
     <script src="js/lib/scrolloverflow.js"></script>
     <script src="js/lib/aos.js"></script>
@@ -52,6 +55,8 @@
 
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
+    
+    <!-- Initialized Include Path -->
     <script>
         $(document).ready( function() {
             // Including HTML
@@ -96,7 +101,7 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="slide-inner bg01">
-                                            <img src="images/main/sec01_bg1.png">
+                                            <!-- <img src="images/main/sec01_bg1.png"> -->
                                         </div>
                                         <h2>
                                             <span>더 좋은 세상의 시작,</span>
@@ -105,7 +110,7 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="slide-inner bg02">
-                                            <img src="images/main/sec01_bg2.png">
+                                            <!-- <img src="images/main/sec01_bg2.png"> -->
                                         </div>
                                         <h2>
                                             <span>토목 대역사를 통해</span>
@@ -114,7 +119,7 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="slide-inner bg03">
-                                            <img src="images/main/sec01_bg3.png">
+                                            <!-- <img src="images/main/sec01_bg3.png"> -->
                                         </div>
                                         <h2>
                                             <span>더 나은 내일위해 끊임없이</span>
@@ -244,7 +249,7 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="left">
-                                            <div class="img"><img src="images/main/sec03_small_img01.png" alt="주택사업 이미지"></div>
+                                            <div class="img img01"><img src="images/main/sec03_small_img01.png" alt="주택사업 이미지" class="img_pc"></div>
                                             <div class="tit">광주계림 두산위브</div>
                                             <ul>
                                                 <li><b>시행사</b><span>광주계림재건축조합</span></li>
@@ -272,7 +277,7 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="left">
-                                            <div class="img"><img src="images/main/sec03_small02_img01.png" alt="주택사업 이미지"></div>
+                                            <div class="img img02"><img src="images/main/sec03_small02_img01.png" alt="주택사업 이미지" class="img_pc"></div>
                                             <div class="tit">삼보판매지원시설</div>
                                             <ul>
                                                 <li><b>발주처</b><span>마리오 아울렛 3관</span></li>
@@ -300,7 +305,7 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="left">
-                                            <div class="img"><img src="images/main/sec03_small03_img01.png" alt="주택사업 이미지"></div>
+                                            <div class="img img03"><img src="images/main/sec03_small03_img01.png" alt="주택사업 이미지" class="img_pc"></div>
                                             <div class="tit">강남순환 도시고속도로 5공구</div>
                                             <ul>
                                                 <li><b>발주처</b><span>강남순환도로주식회사</span></li>

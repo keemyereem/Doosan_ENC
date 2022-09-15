@@ -178,11 +178,12 @@
 #mobile #main #fullpage .section02 .right { display: none; }
 #mobile #main #fullpage .section02 .big_img { width: 100%; max-width: 100%; height: 62vh; }
 #mobile #main #fullpage .section02 .big_img img { width: 100%; }
-#mobile #main #fullpage .section02 .swiper-slide h2 { transform: translate(100%,0); margin-top: 2rem; margin-bottom: 2rem; margin-left: 2rem;font-size: 4rem;transition: opacity; width: 100%;}
-#mobile #main #fullpage .section02.active .swiper-slide.swiper-slide-active h2,
-#mobile #main #fullpage .section02.active .swiper-slide.swiper-slide-duplicate-active h2 {opacity: 1; position: relative; left: 2rem; transform: translate(0,0); transition: all ease-in-out .8s }
+#mobile #main #fullpage .section02 .swiper-slide h2 { transform: translate(0,0); margin-top: 2rem; margin-bottom: 2rem; margin-left: 2rem;font-size: 4rem;transition: opacity; }
+#mobile #main #fullpage .section02/* .active */ .swiper-slide.swiper-slide-active h2,
+#mobile #main #fullpage .section02/* .active */ .swiper-slide.swiper-slide-duplicate-active h2 {opacity: 1; position: relative; left: 0rem; transform: translate(0,0); transition: all ease-in-out .8s }
 
-#mobile #main #fullpage .section02 .moving_tab { max-width: 100%; width: 100%; height: 7rem; align-items: start; position: relative; top:0; left: 1rem; transform: translateY(0); overflow: auto; }
+#mobile #main #fullpage .section02 .moving_tab { max-width: 100%; width: 100%; height: 7rem; align-items: start; position: relative; top:0; left: 0; transform: translateY(0); overflow: auto; }
+#mobile #main #fullpage .section02 .moving_tab .swiper-pagination-sec02 { margin-left: 1rem; }
 #mobile #main #fullpage .section02 .swiper-pagination-bullet { width: 18rem; margin-right: 3rem; flex-shrink: 0; top: 2rem; }
 #mobile #main #fullpage .section02 .swiper-pagination-bullet::after { display: block; position: absolute; bottom: -3.5rem; left: 0; font-size: 1.65rem; font-weight: 400; letter-spacing: -.0825rem; color: #005eb8; opacity: .2; }
 #mobile #main #fullpage .section02 .swiper-pagination-bullet-active::after { opacity: 1; }
@@ -198,8 +199,11 @@
 #mobile #main #fullpage .section03 .inner { transform: translateX(0); opacity: 1; margin: 0; padding: 6rem 0rem; }
 #mobile #main #fullpage .section03 .sec_tit { position: initial; margin-left: 2rem; margin-bottom: 2rem; }
 #mobile #main #fullpage .section03 .bus_swiper .left { opacity: 1; width: calc(100% - 2rem); margin: 0 auto; padding: 1rem 1rem 3.5rem; transform: translateY(0); min-height: auto; box-shadow: .25rem .2rem 1rem 0px rgba(54, 63, 72, 0.5); }
-#mobile #main #fullpage .section03 .bus_swiper .left .img { width: 100%; height: 30rem; overflow: hidden; }
-#mobile #main #fullpage .section03 .bus_swiper .left .img img { width: 100%; height: 100%; object-fit: cover; }
+#mobile #main #fullpage .section03 .bus_swiper .left .img { width: 100%; height: 30rem; overflow: hidden; position: relative; }
+#mobile #main #fullpage .section03 .bus_swiper .left .img img { width: 100%; height: 100%; object-fit: cover; transition: none; }
+#mobile #main #fullpage .section03 .bus_swiper .left .img .swiper-pagination { text-align: left; padding-left: 1rem; bottom: 1.5rem; border: 1px solid red; width: fit-content; }
+#mobile #main #fullpage .section03 .bus_swiper .left .img .swiper-pagination .swiper-pagination-bullet { width: .5rem; height: .5rem; border-radius: 50%; background: #fff; opacity: 1; box-sizing: border-box; padding: 0; margin: 0 1.1rem; position: relative; }
+#mobile #main #fullpage .section03 .bus_swiper .left .img .swiper-pagination .swiper-pagination-bullet-active::after { content:''; display: inline-block; width: 2rem; height: 2rem; border: .15rem solid #fff; border-radius: 50%; position: absolute; top: -.9rem; left: -.9rem; }
 #mobile #main #fullpage .section03 .bus_swiper .left .tit { font-size: 1.7rem; margin: 1.5rem 0 2rem; }
 #mobile #main #fullpage .section03 .bus_swiper .left ul li+li { margin-top: 1rem; }
 #mobile #main #fullpage .section03 .bus_swiper .left ul li b { font-size: 1.3rem; width: 8rem; }

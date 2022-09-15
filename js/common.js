@@ -305,15 +305,24 @@ var civilEngineerEvent = {
           observer: true,
           observeParents: true,
           slidesPerView : 1,
-          speed: 500,
+          speed: 1000,
           loop: true,
-          
+          autoplay: {
+            delay: 3500,
+            disableOnInteraction: true  // 쓸어 넘기거나 버튼 클릭 시 자동 슬라이드 정지.
+          },
           navigation: {
               nextEl: '.civil_engineer .outline .swiper-button-next0' + idx,
               prevEl: '.civil_engineer .outline .swiper-button-prev0' + idx,
           },
           watchOverflow: true,
       });
+
+      // Next, Prev버튼 클릭 시 오토플레이 재개
+      $(document).on('click', '.civil_engineer .outline .swiper-button-next0' + idx + ', .civil_engineer .outline .swiper-button-prev0' + idx + '', () => {
+          bus03Swiper.autoplay.start();
+      });
+
     });
   },
 
