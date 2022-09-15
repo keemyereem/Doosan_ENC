@@ -430,7 +430,7 @@ var companyEvent = {
     const graph = $('#HMchart .graph');
     const graphBarColor = ['#999999', '#f78600', '#e73100', 'purple'];
     const transitionEnd = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend';
-    const barSpeed = 1000;
+    const barSpeed = 2000;
     const deviceChecker = $('#mobile')
     
     // 그래프 별 작동 토글
@@ -509,7 +509,7 @@ var companyEvent = {
             barPercent = 104
           }
 
-          bar.eq(i).css({'height': + barPercent + '%', 'background': '' + graphBarColor[i], 'transition': 'height ease ' + barSpeed / 1000 + 's', 'transition-delay': + i / 10 * 2 + 's'});
+          bar.eq(i).css({'height': + barPercent + '%', 'background': '' + graphBarColor[i], 'transition': 'height cubic-bezier(.42,-0.01,.21,1) ' + barSpeed / 1000 + 's', 'transition-delay': + i / 10 * 2 + 's'});
           bar.eq(i).find('> span').text(barNum).css({'border': '.1rem solid' + graphBarColor[i], 'color': '' + graphBarColor[i]});
         }
 

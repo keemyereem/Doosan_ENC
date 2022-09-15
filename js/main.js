@@ -60,6 +60,7 @@ var mainEvent = {
             anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage'],
             menu: '#rightnavi',
             verticalCentered: false,
+            scrollOverflow: false,
             css3: true,
             scrollingSpeed: 800,
 
