@@ -430,7 +430,7 @@ var companyEvent = {
     const graph = $('#HMchart .graph');
     const graphBarColor = ['#999999', '#f78600', '#e73100', 'purple'];
     const transitionEnd = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend';
-    const barSpeed = 2000;
+    const barSpeed = 1000;
     const deviceChecker = $('#mobile')
     
     // 그래프 별 작동 토글

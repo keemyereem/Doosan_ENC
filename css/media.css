@@ -201,7 +201,7 @@
 #mobile #main #fullpage .section03 .bus_swiper .left { opacity: 1; width: calc(100% - 2rem); margin: 0 auto; padding: 1rem 1rem 3.5rem; transform: translateY(0); min-height: auto; box-shadow: .25rem .2rem 1rem 0px rgba(54, 63, 72, 0.5); }
 #mobile #main #fullpage .section03 .bus_swiper .left .img { width: 100%; height: 30rem; overflow: hidden; position: relative; }
 #mobile #main #fullpage .section03 .bus_swiper .left .img img { width: 100%; height: 100%; object-fit: cover; transition: none; }
-#mobile #main #fullpage .section03 .bus_swiper .left .img .swiper-pagination { text-align: left; padding-left: 1rem; bottom: 1.5rem; border: 1px solid red; width: fit-content; }
+#mobile #main #fullpage .section03 .bus_swiper .left .img .swiper-pagination { text-align: left; padding-left: 1rem; bottom: 1.5rem; }
 #mobile #main #fullpage .section03 .bus_swiper .left .img .swiper-pagination .swiper-pagination-bullet { width: .5rem; height: .5rem; border-radius: 50%; background: #fff; opacity: 1; box-sizing: border-box; padding: 0; margin: 0 1.1rem; position: relative; }
 #mobile #main #fullpage .section03 .bus_swiper .left .img .swiper-pagination .swiper-pagination-bullet-active::after { content:''; display: inline-block; width: 2rem; height: 2rem; border: .15rem solid #fff; border-radius: 50%; position: absolute; top: -.9rem; left: -.9rem; }
 #mobile #main #fullpage .section03 .bus_swiper .left .tit { font-size: 1.7rem; margin: 1.5rem 0 2rem; }

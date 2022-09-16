@@ -278,7 +278,7 @@ var mainEvent = {
                     $('#mobile .section02').addClass('active');
                     swiper2.autoplay.start();
                 } else {
-                    // $('#mobile .section02').removeClass('active');
+                    $('#mobile .section02').removeClass('active');
                     swiper2.autoplay.stop();
                     swiper2.slideTo(1);
                 }     
@@ -306,47 +306,55 @@ var mainEvent = {
             });
 
             //section3
+
             $('.bus_swiper .left .img01').addClass('swiper');
             $('.bus_swiper .left .img01').prepend('<div class="swiper-wrapper"></div>');
             $('.bus_swiper .left .img01 .swiper-wrapper').prepend('<img src="images/main/sec03_big_img01.png" alt="주택사업 이미지" class="swiper-slide">');
             $('.bus_swiper .left .img01 .swiper-wrapper').prepend('<img src="images/main/sec03_big_img01.png" alt="주택사업 이미지" class="swiper-slide">');
             $('.bus_swiper .left .img01 .swiper-wrapper').prepend('<img src="images/main/sec03_big_img01.png" alt="주택사업 이미지" class="swiper-slide">');
-            $('.bus_swiper .left .img01').append('<div class="swiper-pagination"></div>');
+            $('.bus_swiper .left .img01').prepend('<div class="swiper-pagination"></div>');
 
             $('.bus_swiper .left .img02').addClass('swiper');
             $('.bus_swiper .left .img02').prepend('<div class="swiper-wrapper"></div>');
             $('.bus_swiper .left .img02 .swiper-wrapper').prepend('<img src="images/main/sec03_big02_img01.png" alt="건축사업 이미지" class="swiper-slide">');
             $('.bus_swiper .left .img02 .swiper-wrapper').prepend('<img src="images/main/sec03_big02_img01.png" alt="건축사업 이미지" class="swiper-slide">');
             $('.bus_swiper .left .img02 .swiper-wrapper').prepend('<img src="images/main/sec03_big02_img01.png" alt="건축사업 이미지" class="swiper-slide">');
-            $('.bus_swiper .left .img02').append('<div class="swiper-pagination"></div>');
+            $('.bus_swiper .left .img02').prepend('<div class="swiper-pagination"></div>');
 
             $('.bus_swiper .left .img03').addClass('swiper');
             $('.bus_swiper .left .img03').prepend('<div class="swiper-wrapper"></div>');
             $('.bus_swiper .left .img03 .swiper-wrapper').prepend('<img src="images/main/sec03_big03_img01.png" alt="토목사업 이미지" class="swiper-slide">');
             $('.bus_swiper .left .img03 .swiper-wrapper').prepend('<img src="images/main/sec03_big03_img01.png" alt="토목사업 이미지" class="swiper-slide">');
             $('.bus_swiper .left .img03 .swiper-wrapper').prepend('<img src="images/main/sec03_big03_img01.png" alt="토목사업 이미지" class="swiper-slide">');
-            $('.bus_swiper .left .img03').append('<div class="swiper-pagination"></div>');
+            $('.bus_swiper .left .img03').prepend('<div class="swiper-pagination"></div>');
 
-            $('.bus_swiper .left .img').each(function(index){
+            $('.bus_swiper .left .img').each(function(index, target){
                 mobSwiper3 = new Swiper("#mobile .section03 .img0"+index, {
                     speed: 500,
                     loop: false,
                     autoplayDisableOnInteraction: false,
                     slidesPerView: 1, 
+                    initialSlide: 0,
                     watchOverflow: true,
                     watchSlidesProgress: true,
                     watchSlidesVisibility: true,
         
                     pagination: {
-                        el: '#mobile .section03 .img0'+index+'.swiper-pagination',
+                        el: '#mobile .section03 .img .swiper-pagination',
                         clickable: 'true',
                         type: 'bullets',
                     
                     },
                 });
-                console.log(index);
-            });
 
+                var mobswp = target.swiper;
+                $('#mobile .swiper-pagination-sec03 > span').on('click', function(){
+                    setTimeout(() => {
+                        mobswp.slideTo(0,0);
+                        
+                    }, 200);
+                });
+            });
 
         }
 
