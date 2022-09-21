@@ -55,7 +55,8 @@
     #mobile .area_row textarea { padding: 1.5rem 2rem; font-size: 1.4rem; line-height: 1.4; }
 
     /* check box type */
-    #mobile .checkbox_row input[type="checkbox"] + label { font-size: 1.5rem; }
+    #mobile .checkbox_row input[type="checkbox"] + label { font-size: 1.5rem; margin-bottom: 1rem; }
+    #mobile .checkbox_row input[type="checkbox"] + label:last-child { margin-right: 0; }
     #mobile .checkbox_row input[type="checkbox"] + label:before { margin-right: 1rem; width: 1.8rem; height: 1.8rem; }
     #mobile .checkbox_row input[type="checkbox"]:checked + label:before { background-size: 1rem .75rem; }
 
@@ -386,12 +387,14 @@
 #mobile .customer .customer_inquiry .section1 .cont_box > div { font-size: 1.3rem; line-height: 1.38; padding: 2rem; height: 12.4rem; }
 #mobile .customer .customer_inquiry .section1 ul { font-size: 1.2rem; line-height: 1.41; margin-bottom: 3.2rem; }
 #mobile .customer .customer_inquiry .section1 ul li { padding-left: 1rem; }
+#mobile .customer .customer_inquiry .section1 .checkbox_row p { display: none; }
 #mobile .customer .customer_inquiry .section2 { padding: 4.5rem 0 10rem; }
 #mobile .customer .customer_inquiry .section2 p { font-size: 1.3rem; margin-bottom: 1.5rem; }
 #mobile .customer .customer_inquiry .section2 .row { flex-direction: column; align-items: initial; }
 #mobile .customer .customer_inquiry .section2 .row.row_short { max-width: 68.2rem; }
 #mobile .customer .customer_inquiry .section2 .row+.row { margin-top: 2rem; }
 #mobile .customer .customer_inquiry .section2 .row .tit_cell { font-size: 1.4rem; width: 100%; flex-shrink: 1; margin-bottom: 1rem; }
+#mobile .customer .customer_inquiry .section2 .row.cont_row .tit_cell { margin-top: 0; }
 #mobile .customer .customer_inquiry .section2 .file_row .upload_name { width: calc(100% - 11.1rem); padding: 0; }
 #mobile .customer .customer_inquiry .section2 .file_row+.info { font-size: 1.3rem; margin-top: 1.3rem; }
 #mobile .customer .customer_inquiry .section2 .btn_box { margin-top: 6.4rem; }
