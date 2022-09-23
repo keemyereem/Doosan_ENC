@@ -165,6 +165,12 @@ var mainEvent = {
                     $('.clip-wrap').addClass('indent');
                 }, 0);
 
+                if($('#mobile').length){
+                    setTimeout(() => {
+                        $('#main #fullpage .section01').addClass('active');
+                    }, 500);
+                }
+
                 mainEvent.mainSwiper();
 
                 if (!$('#mobile').length) {
@@ -258,7 +264,7 @@ var mainEvent = {
     mobile: () => {
         if($('#mobile').length){
             //sec
-            $(window).on('scroll', ()=> {
+            $(window).on('load scroll resize', ()=> {
                 
                 const s1Top = $('#mobile .section01').offset().top-200,
                       s2Top = $('#mobile .section02').offset().top-200,
@@ -306,7 +312,6 @@ var mainEvent = {
             });
 
             //section3
-
             $('.bus_swiper .left .img01').addClass('swiper');
             $('.bus_swiper .left .img01').prepend('<div class="swiper-wrapper"></div>');
             $('.bus_swiper .left .img01 .swiper-wrapper').prepend('<img src="images/main/sec03_big_img01.png" alt="주택사업 이미지" class="swiper-slide">');
@@ -346,15 +351,18 @@ var mainEvent = {
                     
                     },
                 });
-
-                var mobswp = target.swiper;
-                $('#mobile .swiper-pagination-sec03 > span').on('click', function(){
-                    setTimeout(() => {
-                        mobswp.slideTo(0,0);
-                        
-                    }, 200);
-                });
+                
             });
+
+            mobSwiper3;
+            $('#mobile .swiper-pagination-sec03 > span').on('click', ()=> {
+                console.log(mobSwiper3)
+                setTimeout(() => {
+                    // mobSwiper3.slideTo();
+                    
+                }, 200);
+            });
+            
 
         }
 
@@ -390,7 +398,7 @@ var mainEvent = {
         },
 
         autoplay: {
-            delay: 5000,
+            delay: 2000,
             disableOnInteraction: false,
         },
 
@@ -432,18 +440,26 @@ var mainEvent = {
                         index = 0;
                     };
                     next();
-                }else {
-                    if (this.realIndex > 1) {
-                        index += 1;
-                        if (index > bullet.length - 3) {
-                            index = bullet.length - 3;
-                        };
-    
-                    } else if (this.realIndex === 0) {
-                        index = 0;
-                    };
-                    mobnext();
-                    console.log('index:'+swiper2.realIndex)
+
+                } else {
+                    // Mobile
+                    let bullet_mobile = $('.swiper-pagination-sec02').children('span');
+                    let title_mobile = $('#mobile #main #fullpage .section02 .swiper-slide');
+
+                    title_mobile.each((index) => {
+                        let dd = title_mobile.eq(index).children('h2').height();
+
+                        console.log(dd);
+
+                    });
+
+                    console.log(title_mobile)
+
+                    bullet_mobile.each((index) => {
+                        dd = bullet_mobile.eq(this.realIndex).position().left;
+                    })
+                    $('.moving_tab').animate({scrollLeft: dd}, 300);   
+
                 }
 
             });
@@ -453,15 +469,7 @@ var mainEvent = {
                     'transform':'translateX(' + -(bulletWidth * index) + 'px)',
                     'transition':'.3s'
                 });
-                
             };
-            function mobnext(){
-                $('.swiper-pagination-sec02').css({
-                    'left': + -(bulletWidth * index*2) + 'px',
-                    'transition':'.3s'
-                });
-                
-            }
 
         });
 

@@ -147,13 +147,14 @@
 
 /* 공통 */
 #mobile #main #rightnavi { display: none; }
-#mobile #main #fullpage section { height: auto!important; }
+#mobile #main #fullpage section { height: auto!important; overflow: hidden; }
 #mobile #main #fullpage section .sec_tit { font-size: 3.5rem; left: 0; }
 #mobile #main #fullpage section .sec_tit::before { width: 4.8rem; height: .4rem; }
 
 /* Section01 */
 #mobile #main #fullpage .section01 { height: 100vh!important; overflow: hidden; }
 #mobile #main #fullpage .section01 .swiper .sec01_controller { left: 0; right: 0; bottom: 4rem; margin: auto; width: calc(100% - 7.4rem); height: 4rem; }
+/* #mobile #main #fullpage .section01.ani .swiper .sec01_controller { opacity: 1; transition-delay: .6s; } */
 #mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-pagination-sec01 { width: calc(100% - 6rem); }
 #mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-pagination-sec01:after { width: calc(100% - 10rem); }
 #mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-pagination-sec01 .swiper-pagination-bullet { width: .9rem; height: .9rem; padding: 2rem; }
@@ -179,11 +180,11 @@
 #mobile #main #fullpage .section02 .right { display: none; }
 #mobile #main #fullpage .section02 .big_img { width: 100%; max-width: 100%; height: 62vh; }
 #mobile #main #fullpage .section02 .big_img img { width: 100%; }
-#mobile #main #fullpage .section02 .swiper-slide h2 { transform: translate(0,0); margin-top: 2rem; margin-bottom: 2rem; margin-left: 2rem;font-size: 4rem;transition: opacity; }
+#mobile #main #fullpage .section02 .swiper-slide h2 { transform: translate(0,0); margin-top: 2rem; margin-bottom: 2rem; margin-left: 2rem;font-size: 4rem;transition: opacity; height: 14.7rem; }
 #mobile #main #fullpage .section02/* .active */ .swiper-slide.swiper-slide-active h2,
 #mobile #main #fullpage .section02/* .active */ .swiper-slide.swiper-slide-duplicate-active h2 {opacity: 1; position: relative; left: 0rem; transform: translate(0,0); transition: all ease-in-out .8s }
 
-#mobile #main #fullpage .section02 .moving_tab { max-width: 100%; width: 100%; height: 7rem; align-items: start; position: relative; top:0; left: 0; transform: translateY(0); overflow: auto; }
+#mobile #main #fullpage .section02 .moving_tab { max-width: 100%; width: 100%; height: 8rem; align-items: start; position: relative; top:0; left: 0; transform: translateY(0); overflow: auto; padding-bottom: 2rem; }
 #mobile #main #fullpage .section02 .moving_tab .swiper-pagination-sec02 { margin-left: 1rem; }
 #mobile #main #fullpage .section02 .swiper-pagination-bullet { width: 18rem; margin-right: 3rem; flex-shrink: 0; top: 2rem; }
 #mobile #main #fullpage .section02 .swiper-pagination-bullet::after { display: block; position: absolute; bottom: -3.5rem; left: 0; font-size: 1.65rem; font-weight: 400; letter-spacing: -.0825rem; color: #005eb8; opacity: .2; }
