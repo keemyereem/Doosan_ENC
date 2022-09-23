@@ -397,10 +397,10 @@ var mainEvent = {
             },
         },
 
-        // autoplay: {
-        //     delay: 2000,
-        //     disableOnInteraction: false,
-        // },
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
 
         on : {  
             init: function() {
@@ -466,7 +466,6 @@ var mainEvent = {
             slides.each((index) => {
                 let title_mobile = slides.eq(index).children('h2').height();
                 arr.push(title_mobile);
-                console.log(slides.eq(index).children('h2'))
             });
             
             let max_title = Math.max.apply(null, arr);
