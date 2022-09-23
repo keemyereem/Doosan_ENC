@@ -355,10 +355,11 @@ var mainEvent = {
             });
 
             mobSwiper3;
+            console.log(mobSwiper3)
             $('#mobile .swiper-pagination-sec03 > span').on('click', ()=> {
                 console.log(mobSwiper3)
                 setTimeout(() => {
-                    // mobSwiper3.slideTo();
+                    mobSwiper3.slideTo();
                     
                 }, 200);
             });
