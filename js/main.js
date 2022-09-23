@@ -334,7 +334,7 @@ var mainEvent = {
             $('.bus_swiper .left .img03').prepend('<div class="swiper-pagination"></div>');
 
             $('.bus_swiper .left .img').each(function(index, target){
-                mobSwiper3 = new Swiper("#mobile .section03 .img0"+index, {
+                mobSwiper3 = new Swiper("#mobile .section03 .img0" + index, {
                     speed: 500,
                     loop: false,
                     autoplayDisableOnInteraction: false,
@@ -351,18 +351,15 @@ var mainEvent = {
                     
                     },
                 });
+
                 
             });
-
-            mobSwiper3;
-            console.log(mobSwiper3)
+            
             $('#mobile .swiper-pagination-sec03 > span').on('click', ()=> {
-                console.log(mobSwiper3)
-                setTimeout(() => {
-                    mobSwiper3.slideTo();
-                    
-                }, 200);
+                console.log('dd');
+                target.slideTo();
             });
+            
             
 
         }
