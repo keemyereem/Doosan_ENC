@@ -83,7 +83,7 @@
 #main #fullpage .section02 .swiper-slide { width: 100%; height: 100vh; }
 #main #fullpage .section02 .swiper { position: relative; }
 #main #fullpage .section02 .swiper-slide { position: relative; display: flex; align-items: flex-end; }
-#main #fullpage .section02 h2 { z-index: 1; opacity: 0; position: absolute; top: 50%; transform: translateY(-100%); left: 20vw; font-family: 'Montserrat'; font-size: 8.8rem; color: #0e1115; font-weight: 450; text-transform: uppercase; letter-spacing: -.088rem; transition: all ease-in-out .4s; }
+#main #fullpage .section02 h2 { z-index: 1; opacity: 0; width: fit-content; position: absolute; top: 50%; transform: translateY(-100%); left: 20vw; font-family: 'Montserrat'; font-size: 8.8rem; color: #0e1115; font-weight: 450; text-transform: uppercase; letter-spacing: -.088rem; transition: all ease-in-out .4s; }
 #main #fullpage .section02 .big_img { width: 100%; max-width: 42%; height: 100vh; transform: rotate3d(0, 0, 0, 90deg); overflow: hidden; }
 #main #fullpage .section02 .big_img img  { width: 0; height: 100%; object-fit: cover; object-position: center; transition: width ease-in-out .4s .3s }
 #main #fullpage .section02 .mov_txt { opacity: 0; font-family: 'Montserrat'; font-size: 32rem; font-weight: 500; color: #005eb8; position: absolute; top: 50%; transform: translateY(-50%); left: 100%; transition: all ease; }

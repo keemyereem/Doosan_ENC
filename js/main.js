@@ -397,10 +397,10 @@ var mainEvent = {
             },
         },
 
-        autoplay: {
-            delay: 2000,
-            disableOnInteraction: false,
-        },
+        // autoplay: {
+        //     delay: 2000,
+        //     disableOnInteraction: false,
+        // },
 
         on : {  
             init: function() {
@@ -413,10 +413,10 @@ var mainEvent = {
 
         $(window).on('load resize', function(e) {
 
-            let bullet = $('.swiper-pagination-sec02 .swiper-pagination-bullet');
-            let bulletWidth = bullet.width();
-            let bulletMargin = parseInt( bullet.css('margin-right'));
-            let index = 0;
+            let bullet = $('.swiper-pagination-sec02 .swiper-pagination-bullet'),
+                bulletWidth = bullet.width(),
+                bulletMargin = parseInt( bullet.css('margin-right')),
+                index = 0;
 
             bulletWidth = bulletWidth + bulletMargin;
             
@@ -444,22 +444,11 @@ var mainEvent = {
                 } else {
                     // Mobile
                     let bullet_mobile = $('.swiper-pagination-sec02').children('span');
-                    let title_mobile = $('#mobile #main #fullpage .section02 .swiper-slide');
 
-                    title_mobile.each((index) => {
-                        let dd = title_mobile.eq(index).children('h2').height();
-
-                        console.log(dd);
-
-                    });
-
-                    console.log(title_mobile)
-
-                    bullet_mobile.each((index) => {
-                        dd = bullet_mobile.eq(this.realIndex).position().left;
+                    bullet_mobile.each(() => {
+                        moveIdx = bullet_mobile.eq(this.realIndex).position().left;
                     })
-                    $('.moving_tab').animate({scrollLeft: dd}, 300);   
-
+                    $('.moving_tab').animate({scrollLeft: moveIdx}, 300);   
                 }
 
             });
@@ -470,6 +459,18 @@ var mainEvent = {
                     'transition':'.3s'
                 });
             };
+
+            const slides = $('#mobile #main #fullpage .section02 .swiper-slide'),
+                  arr = [];
+
+            slides.each((index) => {
+                let title_mobile = slides.eq(index).children('h2').height();
+                arr.push(title_mobile);
+                console.log(slides.eq(index).children('h2'))
+            });
+            
+            let max_title = Math.max.apply(null, arr);
+            slides.children('h2').css('height', max_title + 'px');
 
         });
 

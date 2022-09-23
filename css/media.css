@@ -63,407 +63,408 @@
     /* file */
     #mobile .file_row label { width: 11.1rem; height: 3.5rem; line-height: 3.5rem; font-size: 1.3rem; font-weight: 150; border-radius: 1.7rem; }
     #mobile .file_row .upload_name { height: 3.5rem; font-size: 1.3rem; padding: 0 2rem; }
+
+
+    /* device checker */
+    #mobile { width: 100%; }
+    #mobile .sub_visual { background-size: cover; }
+
+    /* header */
+    #mobile .header { padding: 0 2rem; width: 100vw; }
+    #mobile .header .header_wrap { width: 100%; height: 6rem; justify-content: space-between; }
+    #mobile .header .logo { width: 7.7rem; height: 2.1rem; margin-right: 0; background-size: contain !important; }
+    #mobile .header .gnb_menu { width: auto; margin-left: initial; display: block; }
+    #mobile .header .gnb,
+    #mobile .header .weve_btn,
+    #mobile .header .lang_select,
+    #mobile .header .right_nav { display: none; }
+    #mobile .header .top_sitemap button { width: 2.7rem; height: 1.75rem; }
+    #mobile .header .top_sitemap button span { width: 1.95rem; height: 2.5rem; margin-left: .75rem; margin-bottom: 0.5rem; }
+    #mobile .header .top_sitemap button span:nth-child(2) { width: 2.7rem; margin-left: 0; }
+
+    /* container*/
+    #mobile #sub .container .inner { width: calc(100% - 6rem); padding: 0 0 5.3rem; }
+    #mobile #sub .container .inner1200 { padding: 0 2rem; }
+
+    /* pagination */
+    #mobile .contents .paging {margin-top: 3rem; margin-bottom: 0; display: flex; justify-content: space-between; align-items: center; }
+    #mobile .contents .paging .prev {margin-left: 3vw; width: .7rem; height: 1.2rem;}
+    #mobile .contents .paging .next {margin-right: 3vw; width: .7rem; height: 1.2rem;}
+    #mobile .contents .paging ul { margin: 0 6vw; display: inline-block; vertical-align: middle; display: flex; justify-content: center; width: 65%; }
+    #mobile .contents .paging ul:after { content: ""; display: block; clear: both; }
+    #mobile .contents .paging ul li { position: relative; float: left; margin: 0 2vw; }
+    #mobile .contents .paging ul li a { width: 2rem; height: 2rem; line-height: 1.5; font-size: 1.3rem; vertical-align: middle; }
+
+    /* sub_visual */
+    #mobile .container .sub_visual { height: 47.5rem; }
+    #mobile .container .sub_visual .sub_visual_menu.fixed { max-width: 76.8rem; left: 50%; transform: translateX(-50%); }
+    #mobile .container .sub_visual h1 { font-size: 4rem; transform: translateY(1.1rem); left: 0; }
+    #mobile .container .sub_visual .sub_visual_menu { width: 100%; height: 4.5rem; bottom: 9rem; }
+    #mobile .container .sub_visual .sub_visual_menu .menu_inner { width: 100%; }
+    #mobile .container .sub_visual .sub_visual_menu .home { width: 4.5rem; height: 4.5rem; background-size: 1.15rem 1.15rem; }
+    #mobile .container .sub_visual .sub_visual_menu .depth1 { width: calc(50% - 3.75rem); border-bottom: 0; }
+    #mobile .container .sub_visual .sub_visual_menu .depth2 { width: calc(50% - .75rem); border: 0; }
+    #mobile .container .sub_visual .sub_visual_menu .depth > a { height: 4.5rem; line-height: 4.5rem; padding-left: 2rem; font-size: 1.4rem; }
+    #mobile .container .sub_visual .sub_visual_menu .depth > a:before { top: 2.1rem; right: 2rem; border-left: .35rem solid transparent; border-right: .35rem solid transparent; }
+    #mobile .container .sub_visual .sub_visual_menu .depth1 > a:before { border-top: .35rem solid #777; }
+    #mobile .container .sub_visual .sub_visual_menu .depth2 > a:before { border-top: .35rem solid #fff; }
+    #mobile .container .sub_visual .sub_visual_menu .depth .drop_box { padding: 0 0 0 2rem; }
+    #mobile .container .sub_visual .sub_visual_menu .depth.open .drop_box { padding: 1rem 0 1rem 2rem; }
+    #mobile .container .sub_visual .sub_visual_menu .depth .drop_box li a { padding: .7rem 0; font-size: 1.3rem; }
+    #mobile .container .sub_visual .scroll_down { display: none; }
+
+    /* footer */
+    #mobile .footer { height: auto!important; }
+    #mobile .footer .inner { display: block; height: auto!important; padding: 0 2rem; }
+    #mobile .footer .inner > div { width: 100%; }
+    #mobile .footer .sec_tit { font-size: 3.5rem; padding-top: 6rem; }
+    #mobile .footer .sec_tit > span { color: #005eb8; }
+    #mobile .footer .sec_tit > span::after { content:''; display: block; width: 100%; height: .4rem; background-color: #005eb8; transform: skew(-40deg); transition: width ease-in-out .5s; }
+    #mobile .footer .family_site { margin-top: 5rem; margin-bottom: 7rem; }
+    #mobile .footer .family_site .site_selected { font-size: 1.4rem; width: 11rem; }
+    #mobile .footer .family_site .site_selected::after { border-top: .35rem solid #fff; border-left: .35rem solid transparent; border-right: .35rem solid transparent; } 
+    #mobile .footer .family_site .site_list { width: 11rem; top: 2rem; }
+    #mobile .footer .family_site.open .site_list { padding: 1rem; }
+    #mobile .footer .family_site .site_list li a { font-size: 1.4rem; }
+    #mobile .footer .right { display: none; }
+    #mobile .footer .footer_wrap { height: auto; padding: 5rem 0; }
+    #mobile .footer .footer_wrap ul { width: 100%; display: flex; justify-content: center;align-items: center; padding: 0 2rem; text-align: center; }
+    #mobile .footer .footer_wrap ul li { position: relative; display: inline-block; }
+    #mobile .footer .footer_wrap ul li:not(:last-child)::after { height: 1rem; margin: 0 1.7vw;}
+    #mobile .footer .footer_wrap ul li a { padding: 0; font-size: 1.3rem; }
+    #mobile .footer .footer_wrap p { margin-top: 2.2rem; font-size: 1.2rem; }
+
+    /* top button */
+    #mobile #topButton { font-size: 1.4rem; right: 2rem; bottom: 3.5rem; }
+    #mobile #topButton::after { width: 1.8rem; height: 2.3rem; }
+
+
+
+
+    /* =========================================================================== */
+    /* ===============================  Main Page  =============================== */
+    /* =========================================================================== */
+
+    /* 공통 */
+    #mobile #main #rightnavi { display: none; }
+    #mobile #main #fullpage section { height: auto!important; overflow: hidden; }
+    #mobile #main #fullpage section .sec_tit { font-size: 3.5rem; left: 0; }
+    #mobile #main #fullpage section .sec_tit::before { width: 4.8rem; height: .4rem; }
+
+    /* Section01 */
+    #mobile #main #fullpage .section01 { height: 100vh!important; overflow: hidden; }
+    #mobile #main #fullpage .section01 .swiper .sec01_controller { left: 0; right: 0; bottom: 4rem; margin: auto; width: calc(100% - 7.4rem); height: 4rem; }
+    /* #mobile #main #fullpage .section01.ani .swiper .sec01_controller { opacity: 1; transition-delay: .6s; } */
+    #mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-pagination-sec01 { width: calc(100% - 6rem); }
+    #mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-pagination-sec01:after { width: calc(100% - 10rem); }
+    #mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-pagination-sec01 .swiper-pagination-bullet { width: .9rem; height: .9rem; padding: 2rem; }
+    #mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-pagination-sec01 .swiper-pagination-bullet:after { width: .9rem; height: .9rem; }
+    #mobile #main #fullpage .section01 .swiper .sec01_controller .bullet_hr { left: 3rem; width: 4rem; height: 4rem; }
+    #mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-button { width: 1.6rem; height: 3rem; }
+    #mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-button-next { content: url(../images/main/sec01_controller_arrowNext_m.png); }
+    #mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-button-prev { content: url(../images/main/sec01_controller_arrowPrev_m.png); }
+    #mobile #main #fullpage .section01 .swiper-slide h2 { font-size: 3.8rem; }
+    #mobile #main #fullpage .section01 .clip-wrap { width: 100%; height: 100%; position: absolute; z-index: 9; background: #fff; }
+    #mobile #main #fullpage .section01 .clip-css { width: 33.4rem; height: 32.8rem; transform: translateY(0); }
+    #mobile #main #fullpage .section01.ani .clip-css { animation: intro_mobile 1s alternate; width: 100%; height: 100%; }
+    #mobile #main #fullpage .section01.active .clip-css { transform: translateY(0); }
+
+    /* Section02 */
+    #mobile #main #fullpage .section02 { padding-bottom: 5.8rem; }
+    #mobile #main #fullpage .section02 .swiper, 
+    #mobile #main #fullpage .section02 .swiper-wrapper, 
+    #mobile #main #fullpage .section02 .swiper-slide { height: fit-content; }
+    #mobile #main #fullpage .section02 .right .contents .thumb_img { display: none; }
+    #mobile #main #fullpage .section02 .swiper-slide { display: flex; flex-direction: column-reverse; }
+    #mobile #main #fullpage .section02 .mov_txt,
+    #mobile #main #fullpage .section02 .right { display: none; }
+    #mobile #main #fullpage .section02 .big_img { width: 100%; max-width: 100%; height: 62vh; }
+    #mobile #main #fullpage .section02 .big_img img { width: 100%; }
+    #mobile #main #fullpage .section02 .swiper-slide h2 { width: 100%; transform: translate(50%,0); margin: 2rem 0 2rem 2rem; font-size: 4rem; transition: opacity; }
+    #mobile #main #fullpage .section02/* .active */ .swiper-slide.swiper-slide-active h2,
+    #mobile #main #fullpage .section02/* .active */ .swiper-slide.swiper-slide-duplicate-active h2 {opacity: 1; position: relative; left: 2rem; transform: translate(0,0);font-size: 4rem; transition: all ease-in-out .8s }
+
+    #mobile #main #fullpage .section02 .moving_tab { width: 100%; height: 8.5rem; align-items: start; position: relative; top:0; left: 0; transform: translateY(0); overflow: auto; }
+    #mobile #main #fullpage .section02 .moving_tab .swiper-pagination-sec02 { width: fit-content; margin-left: 1rem; }
+    #mobile #main #fullpage .section02 .swiper-pagination-bullet { width: 18rem; margin-right: 3rem; flex-shrink: 0; top: 2rem; }
+    #mobile #main #fullpage .section02 .swiper-pagination-bullet::after { display: block; position: absolute; bottom: -3.5rem; left: 0; font-size: 1.65rem; font-weight: 400; letter-spacing: -.0825rem; color: #005eb8; opacity: .2; }
+    #mobile #main #fullpage .section02 .swiper-pagination-bullet-active::after { opacity: 1; }
+    #mobile #main #fullpage .section02 .swiper-pagination-sec02 > span:nth-of-type(1)::after { content:'해운대 두산위브더제니스'; }
+    #mobile #main #fullpage .section02 .swiper-pagination-sec02 > span:nth-of-type(2)::after { content:'분당 두산타워'; }
+    #mobile #main #fullpage .section02 .swiper-pagination-sec02 > span:nth-of-type(3)::after { content:'신분당선전철'; }
+    #mobile #main #fullpage .section02 .swiper-pagination-sec02 > span:last-child { margin-right: 1rem; }
+    #mobile #main #fullpage .section02 .swiper-pagination-bullet em { font-size: 1.4rem; padding-bottom: 1.5rem;  }
+    #mobile #main #fullpage .section02 .swiper-button { display: none; }
+    #mobile #main #fullpage .section02.active .swiper-pagination-bullet-active b { animation-duration: 4.5s; }
+
+    /* Section03 */
+    #mobile #main #fullpage .section03 { background: #f9f9f9; }
+    #mobile #main #fullpage .section03 .inner { transform: translateX(0); opacity: 1; margin: 0; padding: 6rem 0rem; }
+    #mobile #main #fullpage .section03 .sec_tit { position: initial; margin-left: 2rem; margin-bottom: 2rem; }
+    #mobile #main #fullpage .section03 .bus_swiper .left { opacity: 1; width: calc(100% - 2rem); margin: 0 auto; padding: 1rem 1rem 3.5rem; transform: translateY(0); min-height: auto; box-shadow: .25rem .2rem 1rem 0px rgba(54, 63, 72, 0.5); }
+    #mobile #main #fullpage .section03 .bus_swiper .left .img { width: 100%; height: 30rem; overflow: hidden; position: relative; }
+    #mobile #main #fullpage .section03 .bus_swiper .left .img img { width: 100%; height: 100%; object-fit: cover; transition: none; }
+    #mobile #main #fullpage .section03 .bus_swiper .left .img .swiper-pagination { text-align: left; padding-left: 1rem; bottom: 1.5rem; }
+    #mobile #main #fullpage .section03 .bus_swiper .left .img .swiper-pagination .swiper-pagination-bullet { width: .5rem; height: .5rem; border-radius: 50%; background: #fff; opacity: 1; box-sizing: border-box; padding: 0; margin: 0 1.1rem; position: relative; }
+    #mobile #main #fullpage .section03 .bus_swiper .left .img .swiper-pagination .swiper-pagination-bullet-active::after { content:''; display: inline-block; width: 2rem; height: 2rem; border: .15rem solid #fff; border-radius: 50%; position: absolute; top: -.9rem; left: -.9rem; }
+    #mobile #main #fullpage .section03 .bus_swiper .left .tit { font-size: 1.7rem; margin: 1.5rem 0 2rem; }
+    #mobile #main #fullpage .section03 .bus_swiper .left ul li+li { margin-top: 1rem; }
+    #mobile #main #fullpage .section03 .bus_swiper .left ul li b { font-size: 1.3rem; width: 8rem; }
+    #mobile #main #fullpage .section03 .bus_swiper .left ul li b::before { width: .45rem; height: .45rem; transform: rotate(18deg); border-radius: 0; }
+    #mobile #main #fullpage .section03 .bus_swiper .left ul li span { font-size: 1.3rem; }
+    #mobile #main #fullpage .section03 .bus_swiper .left > a { font-size: 1.2rem; margin-top: 2.5rem; }
+    #mobile #main #fullpage .section03 .bus_swiper .left > a::after { width: .65rem; height: 1.05rem; background-size: .65rem 1.05rem; transform: translateX(3rem); margin-top: -.525rem; }
+    #mobile #main #fullpage .section03 .bus_swiper .left > a:hover::after { transform: translateX(3rem); }
+    #mobile #main #fullpage .section03 .bus_swiper > .swiper-wrapper > .swiper-slide { padding-top: 0; }
+    #mobile #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 { float: none; width: calc(100% - 2rem); margin: 0 auto; display: flex; justify-content: space-between; opacity: 1; transform: translateY(0); }
+    #mobile #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > .swiper-pagination-bullet { margin-right: 0; }
+    #mobile #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span:nth-of-type(1),
+    #mobile #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span:nth-of-type(2),
+    #mobile #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span:nth-of-type(3) { width: calc((100% - .6rem) / 3); }
+    #mobile #main #fullpage .section03 .inner_swiper .swiper-pagination { bottom: 1.6rem; left: 1.6rem; }
+    #mobile #main #fullpage .section03 .inner_swiper .swiper-pagination > span { width: .5rem; height: .5rem; margin-right: 2rem; }
+    #mobile #main #fullpage .section03 .inner_swiper .swiper-pagination > span::before { width: 2rem; height: 2rem; }
+    #mobile #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span > em { padding-bottom: 1.1rem; }
+    #mobile #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span:nth-of-type(1) > em::after,
+    #mobile #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span:nth-of-type(2) > em::after,
+    #mobile #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span:nth-of-type(3) > em::after { content:''; }
+    #mobile #main #fullpage .section03 .bus_swiper .right { display: none; }
+
+    /* Section04 */
+    #mobile #main #fullpage .section04 .inner { padding: 6rem 2rem; }
+    #mobile #main #fullpage .section04 .sec_tit { padding: 0 0 3.5rem 0; position: initial; left: 0; opacity: 1; }
+    #mobile #main #fullpage .section04 .card { height: auto; flex-wrap: wrap; }
+    #mobile #main #fullpage .section04 .card li { width: 50%; height: 16.5rem; text-align: center; opacity: 1; transform: translateY(0); }
+    #mobile #main #fullpage .section04 .card li .bg { width: 100%; height: 100%; object-fit: cover; position: relative; }
+    #main #fullpage .section04 .card li:hover .bg { box-shadow: .4rem .3rem 2rem 0 rgba(0, 0, 0, 0.4); }
+    #mobile #main #fullpage .section04 .card li .icon,
+    #mobile #main #fullpage .section04 .card li .icon_white { transform: translateY(-2.6rem); }
+    #mobile #main #fullpage .section04 .card li:nth-child(1) .icon,
+    #mobile #main #fullpage .section04 .card li:nth-child(1) .icon_white {  width: 6.75rem; }
+    #mobile #main #fullpage .section04 .card li:nth-child(2) .icon,
+    #mobile #main #fullpage .section04 .card li:nth-child(2) .icon_white {  width: 5.7rem; }
+    #mobile #main #fullpage .section04 .card li:nth-child(3) .icon,
+    #mobile #main #fullpage .section04 .card li:nth-child(3) .icon_white {  width: 7.15rem; }
+    #mobile #main #fullpage .section04 .card li:nth-child(4) .icon,
+    #mobile #main #fullpage .section04 .card li:nth-child(4) .icon_white {  width: 6.45rem; }
+    #mobile #main #fullpage .section04 .card li:nth-child(5) .icon,
+    #mobile #main #fullpage .section04 .card li:nth-child(5) .icon_white {  width: 6.3rem; }
+    #mobile #main #fullpage .section04 .card li p { transform: translateY(0); bottom: 3rem; top: initial; text-align: center; font-size: 1.5rem; }
+    #mobile #main #fullpage .section04 .card li:hover p { transform: translateY(0); }
+    #mobile #main #fullpage .section04 .card li h3,
+    #mobile #main #fullpage .section04 .card li:hover .icon { display: none; }
+    #mobile #main #fullpage .section04 .card li:hover .icon_white { display: block; }
+
+    /* Section05 */
+    #mobile #main #fullpage .section05 { background: linear-gradient(to bottom, #000 29.8rem, #fff 29.9rem, #fff 100%); }
+    #mobile #main #fullpage .section05 .inner { transform:translateY(0); padding: 6rem 1rem; }
+    #mobile #main #fullpage .section05 .sec_tit { position: initial; }
+    #mobile #main #fullpage .section05 .link { position: initial; margin: 2.2rem 0 3rem; }
+    #mobile #main #fullpage .section05 .link li:last-child { margin-left: 4rem; }
+    #mobile #main #fullpage .section05 .interview_box { padding-top: 0; flex-direction: column; }
+    #mobile #main #fullpage .section05 .interview_box li { width: 100%; }
+    #mobile #main #fullpage .section05 .link li a { font-size: 1.5rem; }
+    #mobile #main #fullpage .section05 .link li a img { width: 1.25rem; margin-left: 1.4rem; }
+    #mobile #main #fullpage .section05 .interview_box li:not(:first-child) { margin-top: 4rem; }
+    #mobile #main #fullpage .section05 .interview_box li .interview_wrap { height: fit-content; }
+    #mobile #main #fullpage .section05 .interview_box li .interview_wrap .bdt,
+    #mobile #main #fullpage .section05 .interview_box li .interview_wrap .bdb { height: 0.3rem; }
+    #mobile #main #fullpage .section05 .interview_box li .interview_wrap .bdl,
+    #mobile #main #fullpage .section05 .interview_box li .interview_wrap .bdr { width: 0.3rem; }
+    #mobile #main #fullpage .section05 .interview_box li .interview_wrap .interview_thumb img.btn_play { width: 5rem; height: 5rem; }
+    #mobile #main #fullpage .section05 .interview_box li dl { margin-top: 2rem; }
+    #mobile #main #fullpage .section05 .interview_box li dl dt { font-size: 1.6rem; }
+    #mobile #main #fullpage .section05 .interview_box li dl dd { font-size: 1.3rem; padding-top: 1rem; }
+    #mobile #main #fullpage .section05 .interview_box li dl dd span:before { height: 1rem; margin: 0 1.5rem; }
+
+    /* Section06 */
+    #mobile #main #fullpage .section06 .inner { flex-direction: column; background: #f9f9f9; padding-bottom: 8rem; }
+    #mobile #main #fullpage .section06 .left { width: 100%; padding: 6rem 2rem 5rem; }
+    #mobile #main #fullpage .section06 .left .sub_tit { font-size: 2rem; line-height: 1.6; margin: 1rem 0 3rem; }
+    #mobile #main #fullpage .section06 .left .viewmore { font-size: 1.2rem; width: 10.2rem; }
+    #mobile #main #fullpage .section06 .left .viewmore::after { width: 100%; }
+    #mobile #main #fullpage .section06 .left .viewmore > span { opacity: 1; }
+    #mobile #main #fullpage .section06 .left ul { max-width: 26rem; width: 100%; margin-top: 4rem; }
+    #mobile #main #fullpage .section06 .left ul li:hover .icon { transform: none; }
+    #mobile #main #fullpage .section06 .left ul .icon img { width: 6rem; }
+    #mobile #main #fullpage .section06 .left ul li .pg_name { font-size: 1.3rem; }
+    #mobile #main #fullpage .section06 .right { width: calc(100% - 2rem); padding: 3rem 1rem 2rem; background: #fff; box-shadow: 1px 2px 18px 2px rgba(34, 34, 34, 0.1); }
+    #mobile #main #fullpage .section06 .right .tab { margin-left: 0; width: auto; margin-bottom: 3rem; justify-content: left; }
+    #mobile #main #fullpage .section06 .right .tab li { text-align: left; }
+    #mobile #main #fullpage .section06 .right .tab li:nth-child(1) { padding-right: 3rem; padding-left: 1rem; }
+    #mobile #main #fullpage .section06 .right .tab li a {font-size: 1.35rem;}
+    #mobile #main #fullpage .section06 .right .tab li a::before { width: .4rem; height: .4rem; position: initial; vertical-align: middle; margin-right: 1rem; }
+    #mobile #main #fullpage .section06 .right .contents .tag { font-size: 1.3rem; }
+    #mobile #main #fullpage .section06 .right .contents .tag > .date::before { margin: 0 1.3rem; }
+    #mobile #main #fullpage .section06 .right .contents > ul { height: fit-content; position: initial; display: none; }
+    #mobile #main #fullpage .section06 .right .contents > ul.on { display: block; }
+    #mobile #main #fullpage .section06 .right .contents > ul li .txt p { font-size: 1.6rem; line-height: 1.59; margin: 2rem 0 2.6rem; }
+    #mobile #main #fullpage .section06 .right .contents > ul li .txt a { font-size: 1.2rem; }
+    #mobile #main #fullpage .section06 .right .contents > ul li .txt a::after { width: .65rem; height: 1.05rem; background-size: .65rem 1.05rem; transform: translateX(3rem); margin-top: -.525rem; }
+    #mobile #main #fullpage .section06 .right .contents > ul li .txt a:hover::after { transform: translateX(3rem); }
+    #mobile #main #fullpage .section06 .right .contents > ul li .img { display: none; }
+
+
+
+    /* =========================================================================== */
+    /* ================================  Sub Page  =============================== */
+    /* =========================================================================== */
+
+    /* 공통 */
+    #mobile .title_area { padding: 6rem 2rem 0; text-align: center; }
+    #mobile .title_area .con_tit { font-size: 3.5rem; padding-bottom: 0; }
+    #mobile .title_area .sub_tit { font-size: 2.2rem; padding: 3rem 0 1rem; line-height: 1.36; }
+    #mobile .title_area .sub_tit > b {  font-size: 2.3rem; }
+    #mobile .title_area .sub_txt { font-size: 1.5rem; line-height: 1.66; }
+    #mobile .title_area .download_btn { width: 17.5rem; font-size: 1.3rem; margin-top: 4.5rem; margin-bottom: 6.5rem;  }
+    #mobile .title_area .download_btn > i { width: 1.45rem; height: 1.5rem; background: url(../images/common/icon_download.png) no-repeat; background-size: contain; margin-left: 2.1rem; }
+    #mobile .title_area .download_btn::after { margin-top: 1.5rem; }
+    #mobile .tab_box { position: relative; width: 100%; height: 4.5rem; }
+    #mobile .tab_box > .inner { overflow-x: auto; height: 100%; position: relative; transition: all ease 1s; }
+    #mobile .tab_box ul { width: fit-content; position: absolute; left: 0; top: 0; transition: left .5s ease-out; }
+    #mobile .tab_box ul li { flex: initial; flex-shrink: 0!important; width: calc(100% / 3); height: 4.5rem; display: table; }
+    #mobile .tab_box ul.tab_slide li { width: calc((100vw - 6rem) / 3); }
+    #mobile .tab_box ul li:not(:last-child) { border-right: 0; }
+    #mobile .tab_box ul li a { font-size: 1.35rem; }
+    #mobile .tab_box ul li.on { box-shadow: 0px -.8rem 1.4rem .4rem rgba(34, 34, 34, 0.2); }
+    #mobile .tab_box ul li.on a { font-weight: 200; }
+    #mobile .tab_box .control { width: 3rem; height:4.5rem; font-size: 0; position: absolute; top: 0; display: block; }
+    #mobile .tab_box .prev { background: url(../images/common/arrow_l_13x21.png) no-repeat 50% 50%; background-size: .65rem 1.05rem; left: 0; }
+    #mobile .tab_box .next { background: url(../images/common/arrow_r_13x21.png) no-repeat 50% 50%; background-size: .65rem 1.05rem; right: 0; }
+
+
+    /* ================================  Channel  =============================== */
+
+    /* News */
+    #mobile .channel .sub_visual { background-image: url(../images/channel/channel_bg_m.png); }
+    #mobile .channel .sub_txt { padding-top: 3rem; }
+    #mobile .channel .news { padding-bottom: 10rem; }
+    #mobile .channel .news .news_list .search { width: 100%; max-width: 22.5rem; margin: 3rem auto 0; }
+    #mobile .channel .news .news_list .search .input_search input { width: calc(100% - 2.8rem); height: 3.6rem; font-size: 1.7rem; border: 0; }
+    #mobile .channel .news .news_list .search .input_search a { width: 2.8rem; height: 3.6rem; background-size: 1.8rem; }
+    #mobile .channel .news .news_list .total {font-size: 1.3rem; width: 100%; max-width: 22.5rem; margin: 1.5rem auto 0; padding-left: .8rem; }
+    #mobile .channel .news .news_list ul li { width: 100%; height: 33.1rem; }
+    #mobile .channel .news .news_list ul li:nth-last-child(n+1):nth-last-child(-n+3) { margin-bottom: 5rem; }
+    #mobile .channel .news .news_list ul li:last-child { margin-bottom: 0!important; }
+    #mobile .channel .news .news_list ul li .img { height: 23.25rem; }
+    #mobile .channel .news .news_list ul li .txt_box { padding: 1.6rem 2rem 2rem; }
+    #mobile .channel .news .news_list ul li .txt_box .tit { font-size: 1.5rem; line-height: 1.4; }
+    #mobile .channel .news .news_list ul li .txt_box .date { font-size: 1.2rem; margin-top: 1rem; }
+    #mobile .channel .news .news_list ul li .bdt,
+    #mobile .channel .news .news_list ul li .bdb { height: .2rem; }
+    #mobile .channel .news .news_list ul li .bdl,
+    #mobile .channel .news .news_list ul li .bdr { width: .2rem; }
+    #mobile .channel .news .news_list .btn_box { margin-top: 4.5rem; }
+    #mobile .channel .news .news_list .btn_line { width: 100%; max-width: 22.2rem; height: 5rem; line-height: 5rem; }
+    #mobile .channel .news .news_list .btn_line a { border-radius: 2.5rem; font-size: 1.5rem; padding: 0 3rem 0 4rem; }
+    #mobile .channel .news .news_list .btn_line a span { width: 1.6rem; height: 1.6rem; }
+    #mobile .channel .news .news_list .btn_line a:hover span { background-size: contain; }
+    #mobile .channel .news .news_list .null { font-size: 1.3rem; padding: 12.5rem 0; }
+
+    /* 상세페이지 공통 */
+    #mobile .detail_pg { padding-top: 6.5rem; }
+    #mobile .tb_view { margin-top: 0; }
+    #mobile .tb_view .tb_row.row_head .tit { font-size: 2.5rem; }
+    #mobile .tb_view .tb_row.row_head .date { font-size: 1.3rem; padding: 2.5rem 0; }
+    #mobile .tb_view .view_box .view_info { min-height: 10rem; padding: 5rem 0 5rem; font-size: 1.4rem; line-height: 1.71; }
+    #mobile .tb_view .view_box .file_box { padding: 0 0 7rem 0; }
+    #mobile .tb_view .view_box .file_box .file_download a { padding: .5rem 0 .5rem 2.2rem; font-size: 1.4rem; background-size: 1.45rem 1.5rem; }
+    #mobile .tb_view .view_nav dl { height: 4.6rem; }
+    #mobile .tb_view .view_nav dl dt { width: 7.5rem; font-size: 1.3rem; }
+    #mobile .tb_view .view_nav dl dd { width: calc(100% - 7.5rem); }
+    #mobile .tb_view .view_nav dl dd a { font-size: 1.25rem; }
+    #mobile .tb_view .btn_box { margin-top: 6.5rem; }
+    #mobile .tb_view .btn_line { width: 100%; max-width: 21.1rem; height: 4.5rem; line-height: 4.5rem; }
+    #mobile .tb_view .btn_line a { border-radius: 2.25rem; font-size: 1.3rem; }
+
+
+    /* ================================  고객센터  =============================== */
+
+    /* 고객문의 */
+    #mobile .customer .sub_txt { padding-top: 3rem; }
+    #mobile .customer .sub_visual { background-image: url(../images/customer/customer_bg.png); }
+    #mobile .customer .customer_inquiry .section1 { padding: 4.5rem 0; margin-top: 6rem; }
+    #mobile .customer .customer_inquiry .section1 .sec_tit { font-size: 1.7rem; }
+    #mobile .customer .customer_inquiry .section1 .cont_box { margin: 2rem 0 1.5rem; }
+    #mobile .customer .customer_inquiry .section1 .cont_box > div { font-size: 1.3rem; line-height: 1.38; padding: 2rem; height: 12.4rem; }
+    #mobile .customer .customer_inquiry .section1 ul { font-size: 1.2rem; line-height: 1.41; margin-bottom: 3.2rem; }
+    #mobile .customer .customer_inquiry .section1 ul li { padding-left: 1rem; }
+    #mobile .customer .customer_inquiry .section1 .checkbox_row p { display: none; }
+    #mobile .customer .customer_inquiry .section2 { padding: 4.5rem 0 10rem; }
+    #mobile .customer .customer_inquiry .section2 p { font-size: 1.3rem; margin-bottom: 1.5rem; }
+    #mobile .customer .customer_inquiry .section2 .row { flex-direction: column; align-items: initial; }
+    #mobile .customer .customer_inquiry .section2 .row.row_short { max-width: 68.2rem; }
+    #mobile .customer .customer_inquiry .section2 .row+.row { margin-top: 2rem; }
+    #mobile .customer .customer_inquiry .section2 .row .tit_cell { font-size: 1.4rem; width: 100%; flex-shrink: 1; margin-bottom: 1rem; }
+    #mobile .customer .customer_inquiry .section2 .row.cont_row .tit_cell { margin-top: 0; }
+    #mobile .customer .customer_inquiry .section2 .file_row .upload_name { width: calc(100% - 11.1rem); padding: 0; }
+    #mobile .customer .customer_inquiry .section2 .file_row+.info { font-size: 1.3rem; margin-top: 1.3rem; }
+    #mobile .customer .customer_inquiry .section2 .btn_box { margin-top: 6.4rem; }
+    #mobile .customer .customer_inquiry .section2 .btn_blk { width: 100%; max-width: 21.1rem; height: 4.5rem; line-height: 4.5rem; }
+    #mobile .customer .customer_inquiry .section2 .btn_blk a { border-radius: 2.25rem; }
+
+    /* 공지사항 */
+    #mobile .customer .notice { padding-bottom: 10rem; }
+    #mobile .customer .notice .tb_top { margin-top: 3rem; }
+
+    #mobile .customer .notice .tb_top .search { width: 100%; max-width: 22.5rem; margin: 3rem auto 0; }
+    #mobile .customer .notice .tb_top .search .input_search input { width: calc(100% - 2.8rem); height: 3.6rem; font-size: 1.7rem; border: 0; }
+    #mobile .customer .notice .tb_top .search .input_search a { width: 2.8rem; height: 3.6rem; background-size: 1.8rem; }
+    #mobile .customer .notice .tb_top .total {font-size: 1.3rem; width: 100%; max-width: 22.5rem; margin: 1.5rem auto 0; padding-left: .8rem; }
+    #mobile .customer .notice .tb_box { margin-top: 1.5rem; border-top: .1rem solid #000; }
+    #mobile .customer .notice .tb_box .tb_row { display: block; width: 100%;}
+    #mobile .customer .notice .tb_box .tb_row.row_head { display: none; }
+    #mobile .customer .notice .tb_box .tb_row.row_body { padding: 2rem 1.5rem; }
+    #mobile .customer .notice .tb_box .tb_row>div { height: auto; line-height: 1; text-align: left; }
+    #mobile .customer .notice .tb_box .tb_row.row_body .num { display: none; }
+    #mobile .customer .notice .tb_box .tb_row.row_body .tit a { font-size: 1.3rem; padding-left: 0; -webkit-line-clamp: 2; white-space: initial; -webkit-box-orient: vertical; display: -webkit-box; line-height: 1.3; }
+    #mobile .customer .notice .tb_box .tb_row.row_body .tit { display: block; width: 100%; }
+    #mobile .customer .notice .tb_box .tb_row.row_body .date { display: inline-block; width: 100%; font-size: 1.1rem; margin-top: .8rem; }
+    #mobile .customer .notice .tb_box .tb_row.row_body .date b { display: inline-block; font-size: 1rem; font-weight: 400; padding-right: .8rem; }
+    #mobile .customer .notice .tb_box .tb_row.null { font-size: 1.3rem; padding: 12.5rem 0; }
+    #mobile .customer .notice .tb_box .tb_row.none { display: none; }
+
+
+    /* ================================  기술개발  =============================== */
+
+    /* 기술역량 */
+
+    /* 지식재산권 */
+    #mobile .technology .tab_box { margin-top: 4.5rem; }
+    #mobile .technology .ipr { padding-top: 4.5rem; padding-bottom: 10rem; }
+    #mobile .technology .ipr .tb_box { border-top: .1rem solid #000; }
+    #mobile .technology .ipr .tb_box .tb_row { display: block; width: 100%; }
+    #mobile .technology .ipr .tb_box .tb_row.row_head { display: none; }
+    #mobile .technology .ipr .tb_box .tb_row.row_body { padding: 1.5rem; }
+    #mobile .technology .ipr .tb_box .tb_row>div { width: 100%; height: auto; line-height: 1.5; text-align: left; border-right: 0; font-size: 1.3rem; }
+    #mobile .technology .ipr .tb_box .tb_row.row_body .ord,
+    #mobile .technology .ipr .tb_box .tb_row.row_body .cert,
+    #mobile .technology .ipr .tb_box .tb_row.row_body .cell01 { display: none; }
+    #mobile .technology .ipr .tb_box .tb_row.row_body .mob { display: inline-block; }
+    #mobile .technology .ipr .tb_box .tb_row.row_body b.mob { padding-right: 1rem; }
+    #mobile .technology .ipr .tb_box .tb_row.row_body .tit { display: block; width: 100%; margin-top: 1rem; padding-left: 0; line-height: 1.53; }
+    #mobile .technology .ipr .tb_box .tb_row .class { width: 39%; max-width: 13.1rem; display: inline-block; }
+    #mobile .technology .ipr .tb_box .tb_row .num { width: 50%; display: inline-block; }
+    #mobile .technology .ipr .tb_box .tb_row .patent_num { display: inline-block; width: 65%; max-width: 20.7rem; }
+    #mobile .technology .ipr .tb_box .tb_row .date  { display: inline-block; width: 48%; }
+    #mobile .technology .ipr .tb_box .tb_row .download a { width: 1.15rem; height: 1.2rem; }
+    #mobile .technology .ipr .tb_box .tb_row.row_body .cell02,
+    #mobile .technology .ipr .tb_box .tb_row.row_body .cell03,
+    #mobile .technology .ipr .tb_box .tb_row.row_body .cell04,
+    #mobile .technology .ipr .tb_box .tb_row.row_body .cell05 { display: inline-block; letter-spacing: -.0325rem; }
+    #mobile .technology .ipr .tb_box .tb_row.row_body .cell06,
+    #mobile .technology .ipr .tb_box .tb_row.row_body .cell07 { display: block; padding-left: 0; }
+    #mobile .technology .ipr.ipr02 .tb_box .tb_row { position: relative; }
+    #mobile .technology .ipr.ipr02 .tb_box .tb_row .download { width: 29%; position: absolute; top: 1.5rem; left: calc(65% + 1rem); }
+    #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell02,
+    #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell04 { width: 60%; }
+    #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell03,
+    #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell05 { width: 39%; }
+    #mobile .technology .ipr.ipr04 .tb_box .tb_row.row_body .cell02,
+    #mobile .technology .ipr.ipr04 .tb_box .tb_row.row_body .cell04 { width: 57%; }
+    #mobile .technology .ipr.ipr04 .tb_box .tb_row.row_body .cell03,
+    #mobile .technology .ipr.ipr04 .tb_box .tb_row.row_body .cell05 { width: 42%; }
 }
-
-/* device checker */
-#mobile { width: 100%; }
-#mobile .sub_visual { background-size: cover; }
-
-/* header */
-#mobile .header { padding: 0 2rem; width: 100vw; }
-#mobile .header .header_wrap { width: 100%; height: 6rem; justify-content: space-between; }
-#mobile .header .logo { width: 7.7rem; height: 2.1rem; margin-right: 0; background-size: contain !important; }
-#mobile .header .gnb_menu { width: auto; margin-left: initial; display: block; }
-#mobile .header .gnb,
-#mobile .header .weve_btn,
-#mobile .header .lang_select,
-#mobile .header .right_nav { display: none; }
-#mobile .header .top_sitemap button { width: 2.7rem; height: 1.75rem; }
-#mobile .header .top_sitemap button span { width: 1.95rem; height: 2.5rem; margin-left: .75rem; margin-bottom: 0.5rem; }
-#mobile .header .top_sitemap button span:nth-child(2) { width: 2.7rem; margin-left: 0; }
-
-/* container*/
-#mobile #sub .container .inner { width: calc(100% - 6rem); padding: 0 0 5.3rem; }
-#mobile #sub .container .inner1200 { padding: 0 2rem; }
-
-/* pagination */
-#mobile .contents .paging {margin-top: 3rem; margin-bottom: 0; display: flex; justify-content: space-between; align-items: center; }
-#mobile .contents .paging .prev {margin-left: 3vw; width: .7rem; height: 1.2rem;}
-#mobile .contents .paging .next {margin-right: 3vw; width: .7rem; height: 1.2rem;}
-#mobile .contents .paging ul { margin: 0 6vw; display: inline-block; vertical-align: middle; display: flex; justify-content: center; width: 65%; }
-#mobile .contents .paging ul:after { content: ""; display: block; clear: both; }
-#mobile .contents .paging ul li { position: relative; float: left; margin: 0 2vw; }
-#mobile .contents .paging ul li a { width: 2rem; height: 2rem; line-height: 1.5; font-size: 1.3rem; vertical-align: middle; }
-
-/* sub_visual */
-#mobile .container .sub_visual { height: 47.5rem; }
-#mobile .container .sub_visual .sub_visual_menu.fixed { max-width: 76.8rem; left: 50%; transform: translateX(-50%); }
-#mobile .container .sub_visual h1 { font-size: 4rem; transform: translateY(1.1rem); left: 0; }
-#mobile .container .sub_visual .sub_visual_menu { width: 100%; height: 4.5rem; bottom: 9rem; }
-#mobile .container .sub_visual .sub_visual_menu .menu_inner { width: 100%; }
-#mobile .container .sub_visual .sub_visual_menu .home { width: 4.5rem; height: 4.5rem; background-size: 1.15rem 1.15rem; }
-#mobile .container .sub_visual .sub_visual_menu .depth1 { width: calc(50% - 3.75rem); border-bottom: 0; }
-#mobile .container .sub_visual .sub_visual_menu .depth2 { width: calc(50% - .75rem); border: 0; }
-#mobile .container .sub_visual .sub_visual_menu .depth > a { height: 4.5rem; line-height: 4.5rem; padding-left: 2rem; font-size: 1.4rem; }
-#mobile .container .sub_visual .sub_visual_menu .depth > a:before { top: 2.1rem; right: 2rem; border-left: .35rem solid transparent; border-right: .35rem solid transparent; }
-#mobile .container .sub_visual .sub_visual_menu .depth1 > a:before { border-top: .35rem solid #777; }
-#mobile .container .sub_visual .sub_visual_menu .depth2 > a:before { border-top: .35rem solid #fff; }
-#mobile .container .sub_visual .sub_visual_menu .depth .drop_box { padding: 0 0 0 2rem; }
-#mobile .container .sub_visual .sub_visual_menu .depth.open .drop_box { padding: 1rem 0 1rem 2rem; }
-#mobile .container .sub_visual .sub_visual_menu .depth .drop_box li a { padding: .7rem 0; font-size: 1.3rem; }
-#mobile .container .sub_visual .scroll_down { display: none; }
-
-/* footer */
-#mobile .footer { height: auto!important; }
-#mobile .footer .inner { display: block; height: auto!important; padding: 0 2rem; }
-#mobile .footer .inner > div { width: 100%; }
-#mobile .footer .sec_tit { font-size: 3.5rem; padding-top: 6rem; }
-#mobile .footer .sec_tit > span { color: #005eb8; }
-#mobile .footer .sec_tit > span::after { content:''; display: block; width: 100%; height: .4rem; background-color: #005eb8; transform: skew(-40deg); transition: width ease-in-out .5s; }
-#mobile .footer .family_site { margin-top: 5rem; margin-bottom: 7rem; }
-#mobile .footer .family_site .site_selected { font-size: 1.4rem; width: 11rem; }
-#mobile .footer .family_site .site_selected::after { border-top: .35rem solid #fff; border-left: .35rem solid transparent; border-right: .35rem solid transparent; } 
-#mobile .footer .family_site .site_list { width: 11rem; top: 2rem; }
-#mobile .footer .family_site.open .site_list { padding: 1rem; }
-#mobile .footer .family_site .site_list li a { font-size: 1.4rem; }
-#mobile .footer .right { display: none; }
-#mobile .footer .footer_wrap { height: auto; padding: 5rem 0; }
-#mobile .footer .footer_wrap ul { width: 100%; display: flex; justify-content: center;align-items: center; padding: 0 2rem; text-align: center; }
-#mobile .footer .footer_wrap ul li { position: relative; display: inline-block; }
-#mobile .footer .footer_wrap ul li:not(:last-child)::after { height: 1rem; margin: 0 1.7vw;}
-#mobile .footer .footer_wrap ul li a { padding: 0; font-size: 1.3rem; }
-#mobile .footer .footer_wrap p { margin-top: 2.2rem; font-size: 1.2rem; }
-
-/* top button */
-#mobile #topButton { font-size: 1.4rem; right: 2rem; bottom: 3.5rem; }
-#mobile #topButton::after { width: 1.8rem; height: 2.3rem; }
-
-
-
-
-/* =========================================================================== */
-/* ===============================  Main Page  =============================== */
-/* =========================================================================== */
-
-/* 공통 */
-#mobile #main #rightnavi { display: none; }
-#mobile #main #fullpage section { height: auto!important; overflow: hidden; }
-#mobile #main #fullpage section .sec_tit { font-size: 3.5rem; left: 0; }
-#mobile #main #fullpage section .sec_tit::before { width: 4.8rem; height: .4rem; }
-
-/* Section01 */
-#mobile #main #fullpage .section01 { height: 100vh!important; overflow: hidden; }
-#mobile #main #fullpage .section01 .swiper .sec01_controller { left: 0; right: 0; bottom: 4rem; margin: auto; width: calc(100% - 7.4rem); height: 4rem; }
-/* #mobile #main #fullpage .section01.ani .swiper .sec01_controller { opacity: 1; transition-delay: .6s; } */
-#mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-pagination-sec01 { width: calc(100% - 6rem); }
-#mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-pagination-sec01:after { width: calc(100% - 10rem); }
-#mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-pagination-sec01 .swiper-pagination-bullet { width: .9rem; height: .9rem; padding: 2rem; }
-#mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-pagination-sec01 .swiper-pagination-bullet:after { width: .9rem; height: .9rem; }
-#mobile #main #fullpage .section01 .swiper .sec01_controller .bullet_hr { left: 3rem; width: 4rem; height: 4rem; }
-#mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-button { width: 1.6rem; height: 3rem; }
-#mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-button-next { content: url(../images/main/sec01_controller_arrowNext_m.png); }
-#mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-button-prev { content: url(../images/main/sec01_controller_arrowPrev_m.png); }
-#mobile #main #fullpage .section01 .swiper-slide h2 { font-size: 3.8rem; }
-#mobile #main #fullpage .section01 .clip-wrap { width: 100%; height: 100%; position: absolute; z-index: 9; background: #fff; }
-#mobile #main #fullpage .section01 .clip-css { width: 33.4rem; height: 32.8rem; transform: translateY(5%); }
-#mobile #main #fullpage .section01.ani .clip-css { animation: intro_mobile 1s alternate; width: 100%; height: 100%; }
-#mobile #main #fullpage .section01.active .clip-css { transform: translateY(0); }
-
-/* Section02 */
-#mobile #main #fullpage .section02 { padding-bottom: 5.8rem; }
-#mobile #main #fullpage .section02 .swiper, 
-#mobile #main #fullpage .section02 .swiper-wrapper, 
-#mobile #main #fullpage .section02 .swiper-slide { height: fit-content; }
-#mobile #main #fullpage .section02 .right .contents .thumb_img { display: none; }
-#mobile #main #fullpage .section02 .swiper-slide { display: flex; flex-direction: column-reverse; }
-#mobile #main #fullpage .section02 .mov_txt,
-#mobile #main #fullpage .section02 .right { display: none; }
-#mobile #main #fullpage .section02 .big_img { width: 100%; max-width: 100%; height: 62vh; }
-#mobile #main #fullpage .section02 .big_img img { width: 100%; }
-#mobile #main #fullpage .section02 .swiper-slide h2 { transform: translate(0,0); margin-top: 2rem; margin-bottom: 2rem; margin-left: 2rem;font-size: 4rem;transition: opacity; height: 14.7rem; }
-#mobile #main #fullpage .section02/* .active */ .swiper-slide.swiper-slide-active h2,
-#mobile #main #fullpage .section02/* .active */ .swiper-slide.swiper-slide-duplicate-active h2 {opacity: 1; position: relative; left: 0rem; transform: translate(0,0); transition: all ease-in-out .8s }
-
-#mobile #main #fullpage .section02 .moving_tab { max-width: 100%; width: 100%; height: 8rem; align-items: start; position: relative; top:0; left: 0; transform: translateY(0); overflow: auto; padding-bottom: 2rem; }
-#mobile #main #fullpage .section02 .moving_tab .swiper-pagination-sec02 { margin-left: 1rem; }
-#mobile #main #fullpage .section02 .swiper-pagination-bullet { width: 18rem; margin-right: 3rem; flex-shrink: 0; top: 2rem; }
-#mobile #main #fullpage .section02 .swiper-pagination-bullet::after { display: block; position: absolute; bottom: -3.5rem; left: 0; font-size: 1.65rem; font-weight: 400; letter-spacing: -.0825rem; color: #005eb8; opacity: .2; }
-#mobile #main #fullpage .section02 .swiper-pagination-bullet-active::after { opacity: 1; }
-#mobile #main #fullpage .section02 .swiper-pagination-sec02 > span:nth-of-type(1)::after { content:'해운대 두산위브더제니스'; }
-#mobile #main #fullpage .section02 .swiper-pagination-sec02 > span:nth-of-type(2)::after { content:'분당 두산타워'; }
-#mobile #main #fullpage .section02 .swiper-pagination-sec02 > span:nth-of-type(3)::after { content:'신분당선전철'; }
-#mobile #main #fullpage .section02 .swiper-pagination-bullet em { font-size: 1.4rem; padding-bottom: 1.5rem;  }
-#mobile #main #fullpage .section02 .swiper-button { display: none; }
-#mobile #main #fullpage .section02.active .swiper-pagination-bullet-active b { animation-duration: 4.5s; }
-
-/* Section03 */
-#mobile #main #fullpage .section03 { background: #f9f9f9; }
-#mobile #main #fullpage .section03 .inner { transform: translateX(0); opacity: 1; margin: 0; padding: 6rem 0rem; }
-#mobile #main #fullpage .section03 .sec_tit { position: initial; margin-left: 2rem; margin-bottom: 2rem; }
-#mobile #main #fullpage .section03 .bus_swiper .left { opacity: 1; width: calc(100% - 2rem); margin: 0 auto; padding: 1rem 1rem 3.5rem; transform: translateY(0); min-height: auto; box-shadow: .25rem .2rem 1rem 0px rgba(54, 63, 72, 0.5); }
-#mobile #main #fullpage .section03 .bus_swiper .left .img { width: 100%; height: 30rem; overflow: hidden; position: relative; }
-#mobile #main #fullpage .section03 .bus_swiper .left .img img { width: 100%; height: 100%; object-fit: cover; transition: none; }
-#mobile #main #fullpage .section03 .bus_swiper .left .img .swiper-pagination { text-align: left; padding-left: 1rem; bottom: 1.5rem; }
-#mobile #main #fullpage .section03 .bus_swiper .left .img .swiper-pagination .swiper-pagination-bullet { width: .5rem; height: .5rem; border-radius: 50%; background: #fff; opacity: 1; box-sizing: border-box; padding: 0; margin: 0 1.1rem; position: relative; }
-#mobile #main #fullpage .section03 .bus_swiper .left .img .swiper-pagination .swiper-pagination-bullet-active::after { content:''; display: inline-block; width: 2rem; height: 2rem; border: .15rem solid #fff; border-radius: 50%; position: absolute; top: -.9rem; left: -.9rem; }
-#mobile #main #fullpage .section03 .bus_swiper .left .tit { font-size: 1.7rem; margin: 1.5rem 0 2rem; }
-#mobile #main #fullpage .section03 .bus_swiper .left ul li+li { margin-top: 1rem; }
-#mobile #main #fullpage .section03 .bus_swiper .left ul li b { font-size: 1.3rem; width: 8rem; }
-#mobile #main #fullpage .section03 .bus_swiper .left ul li b::before { width: .45rem; height: .45rem; transform: rotate(18deg); border-radius: 0; }
-#mobile #main #fullpage .section03 .bus_swiper .left ul li span { font-size: 1.3rem; }
-#mobile #main #fullpage .section03 .bus_swiper .left > a { font-size: 1.2rem; margin-top: 2.5rem; }
-#mobile #main #fullpage .section03 .bus_swiper .left > a::after { width: .65rem; height: 1.05rem; background-size: .65rem 1.05rem; transform: translateX(3rem); margin-top: -.525rem; }
-#mobile #main #fullpage .section03 .bus_swiper .left > a:hover::after { transform: translateX(3rem); }
-#mobile #main #fullpage .section03 .bus_swiper > .swiper-wrapper > .swiper-slide { padding-top: 0; }
-#mobile #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 { float: none; width: calc(100% - 2rem); margin: 0 auto; display: flex; justify-content: space-between; opacity: 1; transform: translateY(0); }
-#mobile #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > .swiper-pagination-bullet { margin-right: 0; }
-#mobile #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span:nth-of-type(1),
-#mobile #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span:nth-of-type(2),
-#mobile #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span:nth-of-type(3) { width: calc((100% - .6rem) / 3); }
-#mobile #main #fullpage .section03 .inner_swiper .swiper-pagination { bottom: 1.6rem; left: 1.6rem; }
-#mobile #main #fullpage .section03 .inner_swiper .swiper-pagination > span { width: .5rem; height: .5rem; margin-right: 2rem; }
-#mobile #main #fullpage .section03 .inner_swiper .swiper-pagination > span::before { width: 2rem; height: 2rem; }
-#mobile #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span > em { padding-bottom: 1.1rem; }
-#mobile #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span:nth-of-type(1) > em::after,
-#mobile #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span:nth-of-type(2) > em::after,
-#mobile #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span:nth-of-type(3) > em::after { content:''; }
-#mobile #main #fullpage .section03 .bus_swiper .right { display: none; }
-
-/* Section04 */
-#mobile #main #fullpage .section04 .inner { padding: 6rem 2rem; }
-#mobile #main #fullpage .section04 .sec_tit { padding: 0 0 3.5rem 0; position: initial; left: 0; opacity: 1; }
-#mobile #main #fullpage .section04 .card { height: auto; flex-wrap: wrap; }
-#mobile #main #fullpage .section04 .card li { width: 50%; height: 16.5rem; text-align: center; opacity: 1; transform: translateY(0); }
-#mobile #main #fullpage .section04 .card li .bg { width: 100%; height: 100%; object-fit: cover; position: relative; }
-#main #fullpage .section04 .card li:hover .bg { box-shadow: .4rem .3rem 2rem 0 rgba(0, 0, 0, 0.4); }
-#mobile #main #fullpage .section04 .card li .icon,
-#mobile #main #fullpage .section04 .card li .icon_white { transform: translateY(-2.6rem); }
-#mobile #main #fullpage .section04 .card li:nth-child(1) .icon,
-#mobile #main #fullpage .section04 .card li:nth-child(1) .icon_white {  width: 6.75rem; }
-#mobile #main #fullpage .section04 .card li:nth-child(2) .icon,
-#mobile #main #fullpage .section04 .card li:nth-child(2) .icon_white {  width: 5.7rem; }
-#mobile #main #fullpage .section04 .card li:nth-child(3) .icon,
-#mobile #main #fullpage .section04 .card li:nth-child(3) .icon_white {  width: 7.15rem; }
-#mobile #main #fullpage .section04 .card li:nth-child(4) .icon,
-#mobile #main #fullpage .section04 .card li:nth-child(4) .icon_white {  width: 6.45rem; }
-#mobile #main #fullpage .section04 .card li:nth-child(5) .icon,
-#mobile #main #fullpage .section04 .card li:nth-child(5) .icon_white {  width: 6.3rem; }
-#mobile #main #fullpage .section04 .card li p { transform: translateY(0); bottom: 3rem; top: initial; text-align: center; font-size: 1.5rem; }
-#mobile #main #fullpage .section04 .card li:hover p { transform: translateY(0); }
-#mobile #main #fullpage .section04 .card li h3,
-#mobile #main #fullpage .section04 .card li:hover .icon { display: none; }
-#mobile #main #fullpage .section04 .card li:hover .icon_white { display: block; }
-
-/* Section05 */
-#mobile #main #fullpage .section05 { background: linear-gradient(to bottom, #000 29.8rem, #fff 29.9rem, #fff 100%); }
-#mobile #main #fullpage .section05 .inner { transform:translateY(0); padding: 6rem 1rem; }
-#mobile #main #fullpage .section05 .sec_tit { position: initial; }
-#mobile #main #fullpage .section05 .link { position: initial; margin: 2.2rem 0 3rem; }
-#mobile #main #fullpage .section05 .link li:last-child { margin-left: 4rem; }
-#mobile #main #fullpage .section05 .interview_box { padding-top: 0; flex-direction: column; }
-#mobile #main #fullpage .section05 .interview_box li { width: 100%; }
-#mobile #main #fullpage .section05 .link li a { font-size: 1.5rem; }
-#mobile #main #fullpage .section05 .link li a img { width: 1.25rem; margin-left: 1.4rem; }
-#mobile #main #fullpage .section05 .interview_box li:not(:first-child) { margin-top: 4rem; }
-#mobile #main #fullpage .section05 .interview_box li .interview_wrap { height: fit-content; }
-#mobile #main #fullpage .section05 .interview_box li .interview_wrap .bdt,
-#mobile #main #fullpage .section05 .interview_box li .interview_wrap .bdb { height: 0.3rem; }
-#mobile #main #fullpage .section05 .interview_box li .interview_wrap .bdl,
-#mobile #main #fullpage .section05 .interview_box li .interview_wrap .bdr { width: 0.3rem; }
-#mobile #main #fullpage .section05 .interview_box li .interview_wrap .interview_thumb img.btn_play { width: 5rem; height: 5rem; }
-#mobile #main #fullpage .section05 .interview_box li dl { margin-top: 2rem; }
-#mobile #main #fullpage .section05 .interview_box li dl dt { font-size: 1.6rem; }
-#mobile #main #fullpage .section05 .interview_box li dl dd { font-size: 1.3rem; padding-top: 1rem; }
-#mobile #main #fullpage .section05 .interview_box li dl dd span:before { height: 1rem; margin: 0 1.5rem; }
-
-/* Section06 */
-#mobile #main #fullpage .section06 .inner { flex-direction: column; background: #f9f9f9; padding-bottom: 8rem; }
-#mobile #main #fullpage .section06 .left { width: 100%; padding: 6rem 2rem 5rem; }
-#mobile #main #fullpage .section06 .left .sub_tit { font-size: 2rem; line-height: 1.6; margin: 1rem 0 3rem; }
-#mobile #main #fullpage .section06 .left .viewmore { font-size: 1.2rem; width: 10.2rem; }
-#mobile #main #fullpage .section06 .left .viewmore::after { width: 100%; }
-#mobile #main #fullpage .section06 .left .viewmore > span { opacity: 1; }
-#mobile #main #fullpage .section06 .left ul { max-width: 26rem; width: 100%; margin-top: 4rem; }
-#mobile #main #fullpage .section06 .left ul li:hover .icon { transform: none; }
-#mobile #main #fullpage .section06 .left ul .icon img { width: 6rem; }
-#mobile #main #fullpage .section06 .left ul li .pg_name { font-size: 1.3rem; }
-#mobile #main #fullpage .section06 .right { width: calc(100% - 2rem); padding: 3rem 1rem 2rem; background: #fff; box-shadow: 1px 2px 18px 2px rgba(34, 34, 34, 0.1); }
-#mobile #main #fullpage .section06 .right .tab { margin-left: 0; width: auto; margin-bottom: 3rem; justify-content: left; }
-#mobile #main #fullpage .section06 .right .tab li { text-align: left; }
-#mobile #main #fullpage .section06 .right .tab li:nth-child(1) { padding-right: 3rem; padding-left: 1rem; }
-#mobile #main #fullpage .section06 .right .tab li a {font-size: 1.35rem;}
-#mobile #main #fullpage .section06 .right .tab li a::before { width: .4rem; height: .4rem; position: initial; vertical-align: middle; margin-right: 1rem; }
-#mobile #main #fullpage .section06 .right .contents .tag { font-size: 1.3rem; }
-#mobile #main #fullpage .section06 .right .contents .tag > .date::before { margin: 0 1.3rem; }
-#mobile #main #fullpage .section06 .right .contents > ul { height: fit-content; position: initial; display: none; }
-#mobile #main #fullpage .section06 .right .contents > ul.on { display: block; }
-#mobile #main #fullpage .section06 .right .contents > ul li .txt p { font-size: 1.6rem; line-height: 1.59; margin: 2rem 0 2.6rem; }
-#mobile #main #fullpage .section06 .right .contents > ul li .txt a { font-size: 1.2rem; }
-#mobile #main #fullpage .section06 .right .contents > ul li .txt a::after { width: .65rem; height: 1.05rem; background-size: .65rem 1.05rem; transform: translateX(3rem); margin-top: -.525rem; }
-#mobile #main #fullpage .section06 .right .contents > ul li .txt a:hover::after { transform: translateX(3rem); }
-#mobile #main #fullpage .section06 .right .contents > ul li .img { display: none; }
-
-
-
-/* =========================================================================== */
-/* ================================  Sub Page  =============================== */
-/* =========================================================================== */
-
-/* 공통 */
-#mobile .title_area { padding: 6rem 2rem 0; text-align: center; }
-#mobile .title_area .con_tit { font-size: 3.5rem; padding-bottom: 0; }
-#mobile .title_area .sub_tit { font-size: 2.2rem; padding: 3rem 0 1rem; line-height: 1.36; }
-#mobile .title_area .sub_tit > b {  font-size: 2.3rem; }
-#mobile .title_area .sub_txt { font-size: 1.5rem; line-height: 1.66; }
-#mobile .title_area .download_btn { width: 17.5rem; font-size: 1.3rem; margin-top: 4.5rem; margin-bottom: 6.5rem;  }
-#mobile .title_area .download_btn > i { width: 1.45rem; height: 1.5rem; background: url(../images/common/icon_download.png) no-repeat; background-size: contain; margin-left: 2.1rem; }
-#mobile .title_area .download_btn::after { margin-top: 1.5rem; }
-#mobile .tab_box { position: relative; width: 100%; height: 4.5rem; }
-#mobile .tab_box > .inner { overflow-x: auto; height: 100%; position: relative; transition: all ease 1s; }
-#mobile .tab_box ul { width: fit-content; position: absolute; left: 0; top: 0; transition: left .5s ease-out; }
-#mobile .tab_box ul li { flex: initial; flex-shrink: 0!important; width: calc(100% / 3); height: 4.5rem; display: table; }
-#mobile .tab_box ul.tab_slide li { width: calc((100vw - 6rem) / 3); }
-#mobile .tab_box ul li:not(:last-child) { border-right: 0; }
-#mobile .tab_box ul li a { font-size: 1.35rem; }
-#mobile .tab_box ul li.on { box-shadow: 0px -.8rem 1.4rem .4rem rgba(34, 34, 34, 0.2); }
-#mobile .tab_box ul li.on a { font-weight: 200; }
-#mobile .tab_box .control { width: 3rem; height:4.5rem; font-size: 0; position: absolute; top: 0; display: block; }
-#mobile .tab_box .prev { background: url(../images/common/arrow_l_13x21.png) no-repeat 50% 50%; background-size: .65rem 1.05rem; left: 0; }
-#mobile .tab_box .next { background: url(../images/common/arrow_r_13x21.png) no-repeat 50% 50%; background-size: .65rem 1.05rem; right: 0; }
-
-
-/* ================================  Channel  =============================== */
-
-/* News */
-#mobile .channel .sub_visual { background-image: url(../images/channel/channel_bg_m.png); }
-#mobile .channel .sub_txt { padding-top: 3rem; }
-#mobile .channel .news { padding-bottom: 10rem; }
-#mobile .channel .news .news_list .search { width: 100%; max-width: 22.5rem; margin: 3rem auto 0; }
-#mobile .channel .news .news_list .search .input_search input { width: calc(100% - 2.8rem); height: 3.6rem; font-size: 1.7rem; border: 0; }
-#mobile .channel .news .news_list .search .input_search a { width: 2.8rem; height: 3.6rem; background-size: 1.8rem; }
-#mobile .channel .news .news_list .total {font-size: 1.3rem; width: 100%; max-width: 22.5rem; margin: 1.5rem auto 0; padding-left: .8rem; }
-#mobile .channel .news .news_list ul li { width: 100%; height: 33.1rem; }
-#mobile .channel .news .news_list ul li:nth-last-child(n+1):nth-last-child(-n+3) { margin-bottom: 5rem; }
-#mobile .channel .news .news_list ul li:last-child { margin-bottom: 0!important; }
-#mobile .channel .news .news_list ul li .img { height: 23.25rem; }
-#mobile .channel .news .news_list ul li .txt_box { padding: 1.6rem 2rem 2rem; }
-#mobile .channel .news .news_list ul li .txt_box .tit { font-size: 1.5rem; line-height: 1.4; }
-#mobile .channel .news .news_list ul li .txt_box .date { font-size: 1.2rem; margin-top: 1rem; }
-#mobile .channel .news .news_list ul li .bdt,
-#mobile .channel .news .news_list ul li .bdb { height: .2rem; }
-#mobile .channel .news .news_list ul li .bdl,
-#mobile .channel .news .news_list ul li .bdr { width: .2rem; }
-#mobile .channel .news .news_list .btn_box { margin-top: 4.5rem; }
-#mobile .channel .news .news_list .btn_line { width: 100%; max-width: 22.2rem; height: 5rem; line-height: 5rem; }
-#mobile .channel .news .news_list .btn_line a { border-radius: 2.5rem; font-size: 1.5rem; padding: 0 3rem 0 4rem; }
-#mobile .channel .news .news_list .btn_line a span { width: 1.6rem; height: 1.6rem; }
-#mobile .channel .news .news_list .btn_line a:hover span { background-size: contain; }
-#mobile .channel .news .news_list .null { font-size: 1.3rem; padding: 12.5rem 0; }
-
-/* 상세페이지 공통 */
-#mobile .detail_pg { padding-top: 6.5rem; }
-#mobile .tb_view { margin-top: 0; }
-#mobile .tb_view .tb_row.row_head .tit { font-size: 2.5rem; }
-#mobile .tb_view .tb_row.row_head .date { font-size: 1.3rem; padding: 2.5rem 0; }
-#mobile .tb_view .view_box .view_info { min-height: 10rem; padding: 5rem 0 5rem; font-size: 1.4rem; line-height: 1.71; }
-#mobile .tb_view .view_box .file_box { padding: 0 0 7rem 0; }
-#mobile .tb_view .view_box .file_box .file_download a { padding: .5rem 0 .5rem 2.2rem; font-size: 1.4rem; background-size: 1.45rem 1.5rem; }
-#mobile .tb_view .view_nav dl { height: 4.6rem; }
-#mobile .tb_view .view_nav dl dt { width: 7.5rem; font-size: 1.3rem; }
-#mobile .tb_view .view_nav dl dd { width: calc(100% - 7.5rem); }
-#mobile .tb_view .view_nav dl dd a { font-size: 1.25rem; }
-#mobile .tb_view .btn_box { margin-top: 6.5rem; }
-#mobile .tb_view .btn_line { width: 100%; max-width: 21.1rem; height: 4.5rem; line-height: 4.5rem; }
-#mobile .tb_view .btn_line a { border-radius: 2.25rem; font-size: 1.3rem; }
-
-
-/* ================================  고객센터  =============================== */
-
-/* 고객문의 */
-#mobile .customer .sub_txt { padding-top: 3rem; }
-#mobile .customer .sub_visual { background-image: url(../images/customer/customer_bg.png); }
-#mobile .customer .customer_inquiry .section1 { padding: 4.5rem 0; margin-top: 6rem; }
-#mobile .customer .customer_inquiry .section1 .sec_tit { font-size: 1.7rem; }
-#mobile .customer .customer_inquiry .section1 .cont_box { margin: 2rem 0 1.5rem; }
-#mobile .customer .customer_inquiry .section1 .cont_box > div { font-size: 1.3rem; line-height: 1.38; padding: 2rem; height: 12.4rem; }
-#mobile .customer .customer_inquiry .section1 ul { font-size: 1.2rem; line-height: 1.41; margin-bottom: 3.2rem; }
-#mobile .customer .customer_inquiry .section1 ul li { padding-left: 1rem; }
-#mobile .customer .customer_inquiry .section1 .checkbox_row p { display: none; }
-#mobile .customer .customer_inquiry .section2 { padding: 4.5rem 0 10rem; }
-#mobile .customer .customer_inquiry .section2 p { font-size: 1.3rem; margin-bottom: 1.5rem; }
-#mobile .customer .customer_inquiry .section2 .row { flex-direction: column; align-items: initial; }
-#mobile .customer .customer_inquiry .section2 .row.row_short { max-width: 68.2rem; }
-#mobile .customer .customer_inquiry .section2 .row+.row { margin-top: 2rem; }
-#mobile .customer .customer_inquiry .section2 .row .tit_cell { font-size: 1.4rem; width: 100%; flex-shrink: 1; margin-bottom: 1rem; }
-#mobile .customer .customer_inquiry .section2 .row.cont_row .tit_cell { margin-top: 0; }
-#mobile .customer .customer_inquiry .section2 .file_row .upload_name { width: calc(100% - 11.1rem); padding: 0; }
-#mobile .customer .customer_inquiry .section2 .file_row+.info { font-size: 1.3rem; margin-top: 1.3rem; }
-#mobile .customer .customer_inquiry .section2 .btn_box { margin-top: 6.4rem; }
-#mobile .customer .customer_inquiry .section2 .btn_blk { width: 100%; max-width: 21.1rem; height: 4.5rem; line-height: 4.5rem; }
-#mobile .customer .customer_inquiry .section2 .btn_blk a { border-radius: 2.25rem; }
-
-/* 공지사항 */
-#mobile .customer .notice { padding-bottom: 10rem; }
-#mobile .customer .notice .tb_top { margin-top: 3rem; }
-
-#mobile .customer .notice .tb_top .search { width: 100%; max-width: 22.5rem; margin: 3rem auto 0; }
-#mobile .customer .notice .tb_top .search .input_search input { width: calc(100% - 2.8rem); height: 3.6rem; font-size: 1.7rem; border: 0; }
-#mobile .customer .notice .tb_top .search .input_search a { width: 2.8rem; height: 3.6rem; background-size: 1.8rem; }
-#mobile .customer .notice .tb_top .total {font-size: 1.3rem; width: 100%; max-width: 22.5rem; margin: 1.5rem auto 0; padding-left: .8rem; }
-#mobile .customer .notice .tb_box { margin-top: 1.5rem; border-top: .1rem solid #000; }
-#mobile .customer .notice .tb_box .tb_row { display: block; width: 100%;}
-#mobile .customer .notice .tb_box .tb_row.row_head { display: none; }
-#mobile .customer .notice .tb_box .tb_row.row_body { padding: 2rem 1.5rem; }
-#mobile .customer .notice .tb_box .tb_row>div { height: auto; line-height: 1; text-align: left; }
-#mobile .customer .notice .tb_box .tb_row.row_body .num { display: none; }
-#mobile .customer .notice .tb_box .tb_row.row_body .tit a { font-size: 1.3rem; padding-left: 0; -webkit-line-clamp: 2; white-space: initial; -webkit-box-orient: vertical; display: -webkit-box; line-height: 1.3; }
-#mobile .customer .notice .tb_box .tb_row.row_body .tit { display: block; width: 100%; }
-#mobile .customer .notice .tb_box .tb_row.row_body .date { display: inline-block; width: 100%; font-size: 1.1rem; margin-top: .8rem; }
-#mobile .customer .notice .tb_box .tb_row.row_body .date b { display: inline-block; font-size: 1rem; font-weight: 400; padding-right: .8rem; }
-#mobile .customer .notice .tb_box .tb_row.null { font-size: 1.3rem; padding: 12.5rem 0; }
-#mobile .customer .notice .tb_box .tb_row.none { display: none; }
-
-
-/* ================================  기술개발  =============================== */
-
-/* 기술역량 */
-
-/* 지식재산권 */
-#mobile .technology .tab_box { margin-top: 4.5rem; }
-#mobile .technology .ipr { padding-top: 4.5rem; padding-bottom: 10rem; }
-#mobile .technology .ipr .tb_box { border-top: .1rem solid #000; }
-#mobile .technology .ipr .tb_box .tb_row { display: block; width: 100%; }
-#mobile .technology .ipr .tb_box .tb_row.row_head { display: none; }
-#mobile .technology .ipr .tb_box .tb_row.row_body { padding: 1.5rem; }
-#mobile .technology .ipr .tb_box .tb_row>div { width: 100%; height: auto; line-height: 1.5; text-align: left; border-right: 0; font-size: 1.3rem; }
-#mobile .technology .ipr .tb_box .tb_row.row_body .ord,
-#mobile .technology .ipr .tb_box .tb_row.row_body .cert,
-#mobile .technology .ipr .tb_box .tb_row.row_body .cell01 { display: none; }
-#mobile .technology .ipr .tb_box .tb_row.row_body .mob { display: inline-block; }
-#mobile .technology .ipr .tb_box .tb_row.row_body b.mob { padding-right: 1rem; }
-#mobile .technology .ipr .tb_box .tb_row.row_body .tit { display: block; width: 100%; margin-top: 1rem; padding-left: 0; line-height: 1.53; }
-#mobile .technology .ipr .tb_box .tb_row .class { width: 39%; max-width: 13.1rem; display: inline-block; }
-#mobile .technology .ipr .tb_box .tb_row .num { width: 50%; display: inline-block; }
-#mobile .technology .ipr .tb_box .tb_row .patent_num { display: inline-block; width: 65%; max-width: 20.7rem; }
-#mobile .technology .ipr .tb_box .tb_row .date  { display: inline-block; width: 48%; }
-#mobile .technology .ipr .tb_box .tb_row .download a { width: 1.15rem; height: 1.2rem; }
-#mobile .technology .ipr .tb_box .tb_row.row_body .cell02,
-#mobile .technology .ipr .tb_box .tb_row.row_body .cell03,
-#mobile .technology .ipr .tb_box .tb_row.row_body .cell04,
-#mobile .technology .ipr .tb_box .tb_row.row_body .cell05 { display: inline-block; letter-spacing: -.0325rem; }
-#mobile .technology .ipr .tb_box .tb_row.row_body .cell06,
-#mobile .technology .ipr .tb_box .tb_row.row_body .cell07 { display: block; padding-left: 0; }
-#mobile .technology .ipr.ipr02 .tb_box .tb_row { position: relative; }
-#mobile .technology .ipr.ipr02 .tb_box .tb_row .download { width: 29%; position: absolute; top: 1.5rem; left: calc(65% + 1rem); }
-#mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell02,
-#mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell04 { width: 60%; }
-#mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell03,
-#mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell05 { width: 39%; }
-#mobile .technology .ipr.ipr04 .tb_box .tb_row.row_body .cell02,
-#mobile .technology .ipr.ipr04 .tb_box .tb_row.row_body .cell04 { width: 57%; }
-#mobile .technology .ipr.ipr04 .tb_box .tb_row.row_body .cell03,
-#mobile .technology .ipr.ipr04 .tb_box .tb_row.row_body .cell05 { width: 42%; }
-
 /* responsive */
 @media screen and (max-width:380px) {
     #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell02,
@@ -648,21 +649,21 @@
         clip-path: polygon(0% 75%, 25% 0%, 100% 25%, 75% 100%);
         width: 33.4rem; 
         height: 32.8rem;
-        transform: translateY(5%);
+        transform: translateY(0);
     }
     40% {
         -webkit-clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
         clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
         width: 33.4rem; 
         height: 32.8rem;
-        transform: translateY(3%);
+        transform: translateY(0);
     }
     60% {
         -webkit-clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
         clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
         width: 33.4rem; 
         height: 32.8rem;
-        transform: translateY(3%);
+        transform: translateY(0);
     }
     100% {
         -webkit-clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
