@@ -152,7 +152,7 @@
     #mobile #main #fullpage section .sec_tit::before { width: 4.8rem; height: .4rem; }
 
     /* Section01 */
-    #mobile #main #fullpage .section01 { height: 100vh; overflow: hidden; }
+    #mobile #main #fullpage .section01 { height: calc(var(--vh, 1vh) * 100); overflow: hidden; transition: height ease .3s; }
     #mobile #main #fullpage .section01 .swiper .sec01_controller { left: 0; right: 0; bottom: 4rem; margin: auto; width: calc(100% - 7.4rem); height: 4rem; }
     /* #mobile #main #fullpage .section01.ani .swiper .sec01_controller { opacity: 1; transition-delay: .6s; } */
     #mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-pagination-sec01 { width: calc(100% - 6rem); }
@@ -229,6 +229,7 @@
     #mobile #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span:nth-of-type(3) > em::after { content:''; }
     #mobile #main #fullpage .section03 .bus_swiper .right { position: absolute; width: calc(100% - 4rem); height: 30rem; z-index: 9; right: 0; left: 0; margin: auto; top: 1rem; overflow: hidden; transition: all ease .3s .1s; }
     #mobile #main #fullpage .section03 .bus_swiper .right .swiper-slide { height: 100%; }
+    #mobile #main #fullpage .section03 .bus_swiper .right .swiper-slide.mob-slide { display: block; }
 
     /* Section04 */
     #mobile #main #fullpage .section04 .inner { padding: 6rem 2rem; }

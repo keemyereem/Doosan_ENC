@@ -5,7 +5,14 @@
 
 
 $(function(){
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
 
+    //resize
+    window.addEventListener('resize', ()=> {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    })
 });
 
 
@@ -21,10 +28,6 @@ var mainEvent = {
         this.sec06Tab();
         this.headerEvent();
         this.footerEvent();
-
-        if($('#mobile').length){
-            this.mobile();
-        }
     },
 
     createFullpage: () => {
@@ -100,8 +103,8 @@ var mainEvent = {
         });
 
         $(window).load(() => {
-            var backgroundImageUrl = "../images/main/sec01_bg1.png";
-
+            var backgroundImageUrl = "images/main/sec01_bg1.png";
+            
             // checking if image is already there in cache 
             if (sessionStorage.getItem(backgroundImageUrl)) {
                 console.log('-> intro animation start');
@@ -119,10 +122,7 @@ var mainEvent = {
                 };
 
                 console.log('-X cannot found imgData.');
-
-                setTimeout(() => {
-                    $('.section01').addClass('ani');
-                }, 500);
+                location.reload();
             };
 
             // after animation ended, initializing object
@@ -148,6 +148,8 @@ var mainEvent = {
 
                 if (!$('#mobile').length) {
                     mainEvent.createFullpage();
+                } else {
+                    mainEvent.mobile();
                 }
             });
         });
@@ -534,8 +536,13 @@ var mainEvent = {
                     if ( st < sectionNextTop && st > sectionTop ) {
                         section.eq(index).addClass('active');
 
+
                         if (index === 0) {
                             swiper.autoplay.start();
+                            setTimeout(() => {
+                                $('.section01').addClass('ani');
+                                $('body').removeClass('blockScroll');
+                            }, 500);
                         } else {
                             swiper.autoplay.stop();
                             swiper.slideTo(1);

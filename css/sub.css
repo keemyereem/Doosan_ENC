@@ -137,6 +137,7 @@
 #main #fullpage .section03 .bus_swiper .left:hover > a::after { background: url(../images/common/arrow_9x15_w.png) no-repeat; animation: arrwRight 1.2s ease-in-out infinite; }
 #main #fullpage .section03 .bus_swiper .right { width: calc(100% - 42rem); margin-left: 10rem; z-index: -1; opacity: 0; transition: all ease-in-out .5s .2s; }
 #main #fullpage .section03 .bus_swiper .right .swiper-slide { width: 100%; height: fit-content; overflow: hidden; }
+#main #fullpage .section03 .bus_swiper .right .swiper-slide.mob-slide { display: none; }
 #main #fullpage .section03 .bus_swiper .right .swiper-slide img { transition: transform .6s }
 #main #fullpage .section03.active .bus_swiper .swiper-slide-active .right .swiper-slide.swiper-slide-active img { transform: scale(1.1); transition: transform 6s }
 #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 { width: auto; float: right; transform: translateY(100%); opacity: 0; }
@@ -153,12 +154,12 @@
 #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span:nth-of-type(2) > em::after { content:'Creating new space'; }
 #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span:nth-of-type(3) > em::after { content:'Better Connected to the world'; }
 #main #fullpage .section03.active .bus_swiper .left { transform: translate(0, 8.5rem); opacity: 1; }
-#main #fullpage .section03.active .bus_swiper .right { margin-left: -4rem; opacity: 1; overflow: hidden; }
+#main #fullpage .section03 .bus_swiper .right { margin-left: -4rem; opacity: 1; overflow: hidden; }
 #main #fullpage .section03.active .bus_swiper .swiper-pagination-sec03 { transform: translateY(0); opacity: 1; transition: all ease-in-out .5s .7s; }
 #main #fullpage .section03 .inner_swiper { position: relative;  }
 #main #fullpage .section03 .inner_swiper,
 #main #fullpage .section03 .inner_swiper .swiper-wrapper,
-#main #fullpage .section03 .inner_swiper .swiper-slide { width: 100%; height: 100%; overflow: hidden; }
+#main #fullpage .section03 .inner_swiper .swiper-slide { width: 100%; height: 100%; }
 #main #fullpage .section03 .inner_swiper .swiper-slide img { width: 100%; height: 100%; object-fit: cover; transition: transform ease-in-out 1s; }
 #main #fullpage .section03 .inner_swiper .swiper-slide.swiper-slide-active .img img { transform: scale(1.2); }
 #main #fullpage .section03 .inner_swiper .swiper-pagination { width: auto; position: absolute; left: 9rem; bottom: 4rem; }
