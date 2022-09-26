@@ -147,12 +147,12 @@
 
     /* 공통 */
     #mobile #main #rightnavi { display: none; }
-    #mobile #main #fullpage section { height: auto!important; overflow: hidden; }
+    #mobile #main #fullpage section { height: auto; overflow: hidden; }
     #mobile #main #fullpage section .sec_tit { font-size: 3.5rem; left: 0; }
     #mobile #main #fullpage section .sec_tit::before { width: 4.8rem; height: .4rem; }
 
     /* Section01 */
-    #mobile #main #fullpage .section01 { height: 100vh!important; overflow: hidden; }
+    #mobile #main #fullpage .section01 { height: 100vh; overflow: hidden; }
     #mobile #main #fullpage .section01 .swiper .sec01_controller { left: 0; right: 0; bottom: 4rem; margin: auto; width: calc(100% - 7.4rem); height: 4rem; }
     /* #mobile #main #fullpage .section01.ani .swiper .sec01_controller { opacity: 1; transition-delay: .6s; } */
     #mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-pagination-sec01 { width: calc(100% - 6rem); }
@@ -203,7 +203,6 @@
     #mobile #main #fullpage .section03 .sec_tit { position: initial; margin-left: 2rem; margin-bottom: 2rem; }
     #mobile #main #fullpage .section03 .bus_swiper .left { opacity: 1; width: calc(100% - 2rem); margin: 0 auto; padding: 1rem 1rem 3.5rem; transform: translateY(0); min-height: auto; box-shadow: .25rem .2rem 1rem 0px rgba(54, 63, 72, 0.5); }
     #mobile #main #fullpage .section03 .bus_swiper .left .img { width: 100%; height: 30rem; overflow: hidden; position: relative; }
-    #mobile #main #fullpage .section03 .bus_swiper .left .img img { width: 100%; height: 100%; object-fit: cover; transition: none; }
     #mobile #main #fullpage .section03 .bus_swiper .left .img .swiper-pagination { text-align: left; padding-left: 1rem; bottom: 1.5rem; }
     #mobile #main #fullpage .section03 .bus_swiper .left .img .swiper-pagination .swiper-pagination-bullet { width: .5rem; height: .5rem; border-radius: 50%; background: #fff; opacity: 1; box-sizing: border-box; padding: 0; margin: 0 1.1rem; position: relative; }
     #mobile #main #fullpage .section03 .bus_swiper .left .img .swiper-pagination .swiper-pagination-bullet-active::after { content:''; display: inline-block; width: 2rem; height: 2rem; border: .15rem solid #fff; border-radius: 50%; position: absolute; top: -.9rem; left: -.9rem; }
@@ -215,7 +214,7 @@
     #mobile #main #fullpage .section03 .bus_swiper .left > a { font-size: 1.2rem; margin-top: 2.5rem; }
     #mobile #main #fullpage .section03 .bus_swiper .left > a::after { width: .65rem; height: 1.05rem; background-size: .65rem 1.05rem; transform: translateX(3rem); margin-top: -.525rem; }
     #mobile #main #fullpage .section03 .bus_swiper .left > a:hover::after { transform: translateX(3rem); }
-    #mobile #main #fullpage .section03 .bus_swiper > .swiper-wrapper > .swiper-slide { padding-top: 0; }
+    #mobile #main #fullpage .section03 .bus_swiper > .swiper-wrapper > .swiper-slide { padding-top: 0; position: relative; }
     #mobile #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 { float: none; width: calc(100% - 2rem); margin: 0 auto; display: flex; justify-content: space-between; opacity: 1; transform: translateY(0); }
     #mobile #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > .swiper-pagination-bullet { margin-right: 0; }
     #mobile #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span:nth-of-type(1),
@@ -228,7 +227,8 @@
     #mobile #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span:nth-of-type(1) > em::after,
     #mobile #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span:nth-of-type(2) > em::after,
     #mobile #main #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span:nth-of-type(3) > em::after { content:''; }
-    #mobile #main #fullpage .section03 .bus_swiper .right { display: none; }
+    #mobile #main #fullpage .section03 .bus_swiper .right { position: absolute; width: calc(100% - 4rem); height: 30rem; z-index: 9; right: 0; left: 0; margin: auto; top: 1rem; overflow: hidden; transition: all ease .3s .1s; }
+    #mobile #main #fullpage .section03 .bus_swiper .right .swiper-slide { height: 100%; }
 
     /* Section04 */
     #mobile #main #fullpage .section04 .inner { padding: 6rem 2rem; }
@@ -258,8 +258,8 @@
     /* Section05 */
     #mobile #main #fullpage .section05 { background: linear-gradient(to bottom, #000 29.8rem, #fff 29.9rem, #fff 100%); }
     #mobile #main #fullpage .section05 .inner { transform:translateY(0); padding: 6rem 1rem; }
-    #mobile #main #fullpage .section05 .sec_tit { position: initial; }
-    #mobile #main #fullpage .section05 .link { position: initial; margin: 2.2rem 0 3rem; }
+    #mobile #main #fullpage .section05 .sec_tit { position: initial; padding-left: 1rem; }
+    #mobile #main #fullpage .section05 .link { position: initial; margin: 2.2rem 0 3rem 1rem; }
     #mobile #main #fullpage .section05 .link li:last-child { margin-left: 4rem; }
     #mobile #main #fullpage .section05 .interview_box { padding-top: 0; flex-direction: column; }
     #mobile #main #fullpage .section05 .interview_box li { width: 100%; }
@@ -272,7 +272,7 @@
     #mobile #main #fullpage .section05 .interview_box li .interview_wrap .bdl,
     #mobile #main #fullpage .section05 .interview_box li .interview_wrap .bdr { width: 0.3rem; }
     #mobile #main #fullpage .section05 .interview_box li .interview_wrap .interview_thumb img.btn_play { width: 5rem; height: 5rem; }
-    #mobile #main #fullpage .section05 .interview_box li dl { margin-top: 2rem; }
+    #mobile #main #fullpage .section05 .interview_box li dl { margin: 2rem 0 0 1rem; }
     #mobile #main #fullpage .section05 .interview_box li dl dt { font-size: 1.6rem; }
     #mobile #main #fullpage .section05 .interview_box li dl dd { font-size: 1.3rem; padding-top: 1rem; }
     #mobile #main #fullpage .section05 .interview_box li dl dd span:before { height: 1rem; margin: 0 1.5rem; }
@@ -298,6 +298,7 @@
     #mobile #main #fullpage .section06 .right .contents .tag > .date::before { margin: 0 1.3rem; }
     #mobile #main #fullpage .section06 .right .contents > ul { height: fit-content; position: initial; display: none; }
     #mobile #main #fullpage .section06 .right .contents > ul.on { display: block; }
+    #mobile #main #fullpage .section06 .right .contents > ul li { padding: 4rem 1rem; }
     #mobile #main #fullpage .section06 .right .contents > ul li .txt p { font-size: 1.6rem; line-height: 1.59; margin: 2rem 0 2.6rem; }
     #mobile #main #fullpage .section06 .right .contents > ul li .txt a { font-size: 1.2rem; }
     #mobile #main #fullpage .section06 .right .contents > ul li .txt a::after { width: .65rem; height: 1.05rem; background-size: .65rem 1.05rem; transform: translateX(3rem); margin-top: -.525rem; }

@@ -5,34 +5,7 @@
 
 
 $(function(){
-    if ($('#mobile').length) {
-        $('#mobile #main .section').each((index) => {
-            const currentSection = $('.section').eq(index).offset().top;
-            const nextSection = $('.section').eq(index).next().offset().top;
 
-            // console.log(' currentSection: '+currentSection);
-            // console.log(' nextSection: '+nextSection);
-            
-            $('.container').prepend('<div class="dd" style="width:100%; height:1px; display:block; position:absolute;"></div>');
-            $('.dd:nth-child(' + index + ')').css({'background': 'red', 'top': + currentSection + 'px'});
-            // console.log(index)
-            
-            $(window).on('scroll', ()=> {
-                let st = $(window).scrollTop();
-                // console.log(' currentSection: '+currentSection);
-                // console.log('index : '+index);
-                
-                if (st >= currentSection && st < nextSection && index + 1 <= index.length) {
-                    $('.section').eq(index).addClass('active');
-                } else {
-                    $('.section').eq(index).removeClass('active');
-                }
-                 
-            });
-
-        });
-
-    }
 });
 
 
@@ -261,157 +234,44 @@ var mainEvent = {
 
     },
 
-    mobile: () => {
-        if($('#mobile').length){
-            //sec
-            $(window).on('load scroll resize', ()=> {
-                
-                const s1Top = $('#mobile .section01').offset().top-200,
-                      s2Top = $('#mobile .section02').offset().top-200,
-                      s3Top = $('#mobile .section03').offset().top-200,
-                      s4Top = $('#mobile .section04').offset().top-200,
-                      s5Top = $('#mobile .section05').offset().top-200,
-                      s6Top = $('#mobile .section06').offset().top-200,
-                      //   s7Top = $('.section07').offset().top-200,
-                      st = $(window).scrollTop();
-                    
-                if ( s2Top > st && st > s1Top ) {
-                    $('#mobile .section01').addClass('active');
-                } else {
-                    $('#mobile .section01').removeClass('active');
-                }                        
-                if ( s3Top > st && st > s2Top ) {
-                    $('#mobile .section02').addClass('active');
-                    swiper2.autoplay.start();
-                } else {
-                    $('#mobile .section02').removeClass('active');
-                    swiper2.autoplay.stop();
-                    swiper2.slideTo(1);
-                }     
-                if ( s4Top > st && st > s3Top ) {
-                    $('#mobile .section03').addClass('active');
-                    swiper3.autoplay.start();
-                } else {
-                    $('#mobile .section03').removeClass('active');
-                    swiper3.autoplay.stop();
-                    swiper3.slideTo(1);
-                } 
-                if ( s5Top > st && st > s4Top ) {
-                    $('#mobile .section04').addClass('active');
-    
-                } else {
-                    $('#mobile .section04').removeClass('active');
-                }        
-                if ( s6Top > st && st > s5Top ) {
-                    $('#mobile .section05').addClass('active');
-                    
-                } else {
-                    $('#mobile .section05').removeClass('active');
-                }  
-                
-            });
-
-            //section3
-            $('.bus_swiper .left .img01').addClass('swiper');
-            $('.bus_swiper .left .img01').prepend('<div class="swiper-wrapper"></div>');
-            $('.bus_swiper .left .img01 .swiper-wrapper').prepend('<img src="images/main/sec03_big_img01.png" alt="주택사업 이미지" class="swiper-slide">');
-            $('.bus_swiper .left .img01 .swiper-wrapper').prepend('<img src="images/main/sec03_big_img01.png" alt="주택사업 이미지" class="swiper-slide">');
-            $('.bus_swiper .left .img01 .swiper-wrapper').prepend('<img src="images/main/sec03_big_img01.png" alt="주택사업 이미지" class="swiper-slide">');
-            $('.bus_swiper .left .img01').prepend('<div class="swiper-pagination"></div>');
-
-            $('.bus_swiper .left .img02').addClass('swiper');
-            $('.bus_swiper .left .img02').prepend('<div class="swiper-wrapper"></div>');
-            $('.bus_swiper .left .img02 .swiper-wrapper').prepend('<img src="images/main/sec03_big02_img01.png" alt="건축사업 이미지" class="swiper-slide">');
-            $('.bus_swiper .left .img02 .swiper-wrapper').prepend('<img src="images/main/sec03_big02_img01.png" alt="건축사업 이미지" class="swiper-slide">');
-            $('.bus_swiper .left .img02 .swiper-wrapper').prepend('<img src="images/main/sec03_big02_img01.png" alt="건축사업 이미지" class="swiper-slide">');
-            $('.bus_swiper .left .img02').prepend('<div class="swiper-pagination"></div>');
-
-            $('.bus_swiper .left .img03').addClass('swiper');
-            $('.bus_swiper .left .img03').prepend('<div class="swiper-wrapper"></div>');
-            $('.bus_swiper .left .img03 .swiper-wrapper').prepend('<img src="images/main/sec03_big03_img01.png" alt="토목사업 이미지" class="swiper-slide">');
-            $('.bus_swiper .left .img03 .swiper-wrapper').prepend('<img src="images/main/sec03_big03_img01.png" alt="토목사업 이미지" class="swiper-slide">');
-            $('.bus_swiper .left .img03 .swiper-wrapper').prepend('<img src="images/main/sec03_big03_img01.png" alt="토목사업 이미지" class="swiper-slide">');
-            $('.bus_swiper .left .img03').prepend('<div class="swiper-pagination"></div>');
-
-            $('.bus_swiper .left .img').each(function(index, target){
-                mobSwiper3 = new Swiper("#mobile .section03 .img0"+index, {
-                    speed: 500,
-                    loop: false,
-                    autoplayDisableOnInteraction: false,
-                    slidesPerView: 1, 
-                    initialSlide: 0,
-                    watchOverflow: true,
-                    watchSlidesProgress: true,
-                    watchSlidesVisibility: true,
-        
-                    pagination: {
-                        el: '#mobile .section03 .img .swiper-pagination',
-                        clickable: 'true',
-                        type: 'bullets',
-                    
-                    },
-                });
-
-                
-            });
-            
-
-            $(".section03 .left .img").each(function(elem, target){
-                var innerswp = target.swiper;
-    
-                $('#mobile .swiper-pagination-sec03 > span').on('click', function(){
-                    setTimeout(() => {
-                    innerswp.slideTo(0,0);
-                    }, 200);
-                });
-            });
-            
-
-        }
-
-
-    },
-
     sec02Swiper: () => {
         var listArray = ["01","02","03","04",'05'];
 
         swiper2 = new Swiper(".section02 .myswiper", {
-        speed: 500,
-        loop: true,
-        autoplayDisableOnInteraction: false,
-        slidesPerView: 1, 
-        initialSlide: 0,
-        effect: "fade",
-        fadeEffect: {
-            crossFade: true
-        },
-        watchOverflow: true,
-        watchSlidesProgress: true,
-        watchSlidesVisibility: true,
-        observer: true,
-        observeParents: true,
-
-        pagination: {
-            el: '.swiper-pagination-sec02',
-            clickable: 'true',
-            type: 'bullets',
-            renderBullet: function (index, className) {
-                return '<span class="' + className + '">' + '<em>'+ listArray[index]+'</em>' + '<i></i>' + '<b></b>'  + '</span>';
+            speed: 500,
+            loop: true,
+            autoplayDisableOnInteraction: false,
+            slidesPerView: 1, 
+            initialSlide: 0,
+            effect: "fade",
+            fadeEffect: {
+                crossFade: true
             },
-        },
+            watchOverflow: true,
+            watchSlidesProgress: true,
+            watchSlidesVisibility: true,
+            observer: true,
+            observeParents: true,
 
-        autoplay: {
-            delay: 2000,
-            disableOnInteraction: false,
-        },
+            pagination: {
+                el: '.swiper-pagination-sec02',
+                clickable: 'true',
+                type: 'bullets',
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + '<em>'+ listArray[index]+'</em>' + '<i></i>' + '<b></b>'  + '</span>';
+                },
+            },
 
-        on : {  
-            init: function() {
-                this.autoplay.stop()
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+
+            on : {  
+                init: function() {
+                    this.autoplay.stop()
+                }
             }
-
-        }
-
         });
 
         $(window).on('load resize', function(e) {
@@ -518,7 +378,6 @@ var mainEvent = {
         });
 
         //마우스 오버시 자동슬라이드 멈춤
-        
         $(".section03 .bus_swiper").each(function(elem, target){
             var swp = target.swiper;
             $(this).hover(function() {
@@ -527,8 +386,6 @@ var mainEvent = {
                 swp.autoplay.start();
             });
         });
-        
-
 
         innerSwiper3 = new Swiper(".section03 .inner_swiper", {
             speed: 500,
@@ -538,6 +395,8 @@ var mainEvent = {
             watchOverflow: true,
             watchSlidesProgress: true,
             watchSlidesVisibility: true,
+            observer: true,
+            observeParents: true,
 
             pagination: {
                 el: '.section03 .inner_swiper .swiper-pagination',
@@ -658,6 +517,49 @@ var mainEvent = {
             siteName.innerText = selected;
             familySite.classList.remove('open');
         });
+    },
+
+    mobile: () => {
+        if($('#mobile').length){
+
+            // section toggle active when swipe to arrive each offsetTop
+            $(window).on('load scroll resize', ()=> {
+                const section = $('#mobile section');
+
+                section.each((index)=> {
+                    let sectionTop = section.eq(index).offset().top - 200,
+                        sectionNextTop = section.eq(index).next().offset().top - 200,
+                        st = $(window).scrollTop();
+
+                    if ( st < sectionNextTop && st > sectionTop ) {
+                        section.eq(index).addClass('active');
+
+                        if (index === 0) {
+                            swiper.autoplay.start();
+                        } else {
+                            swiper.autoplay.stop();
+                            swiper.slideTo(1);
+                        }
+
+                        if (index === 1) {
+                            swiper2.autoplay.start();
+                        } else {
+                            swiper2.autoplay.stop();
+                            swiper2.slideTo(1);
+                        }
+
+                        if (index === 2) {
+                            swiper3.autoplay.start();
+                        } else {
+                            swiper3.autoplay.stop();
+                            swiper3.slideTo(1);
+                        }
+                    } else {
+                        section.eq(index).removeClass('active');
+                    }
+                });
+            });
+        }
     },
 
 };

@@ -158,7 +158,7 @@
 #main #fullpage .section03 .inner_swiper { position: relative;  }
 #main #fullpage .section03 .inner_swiper,
 #main #fullpage .section03 .inner_swiper .swiper-wrapper,
-#main #fullpage .section03 .inner_swiper .swiper-slide { width: 100%; height: 100%; }
+#main #fullpage .section03 .inner_swiper .swiper-slide { width: 100%; height: 100%; overflow: hidden; }
 #main #fullpage .section03 .inner_swiper .swiper-slide img { width: 100%; height: 100%; object-fit: cover; transition: transform ease-in-out 1s; }
 #main #fullpage .section03 .inner_swiper .swiper-slide.swiper-slide-active .img img { transform: scale(1.2); }
 #main #fullpage .section03 .inner_swiper .swiper-pagination { width: auto; position: absolute; left: 9rem; bottom: 4rem; }
