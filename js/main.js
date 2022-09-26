@@ -541,7 +541,6 @@ var mainEvent = {
                             swiper.autoplay.start();
                             setTimeout(() => {
                                 $('.section01').addClass('ani');
-                                $('body').removeClass('blockScroll');
                             }, 500);
                         } else {
                             swiper.autoplay.stop();

@@ -642,6 +642,54 @@
 .investment .announce .tb_box .tb_row.null {font-size: 1.6rem;color: #222;text-align: center;padding: 24rem 0;}
 .investment .announce.detail_pg { padding-top: 3rem; }
 
+/* 마스터피스 - 개요 */
+.masterpiece .sub_visual { height: 100vh; background-image: url(../images/business/masterpiece01_outline_visual.png); }
+.masterpiece .sub_visual.ani { background-size: cover; }
+.masterpiece .masterpiece_menu { width: 100%; position: absolute; bottom:0; background: rgba(0,0,0,.5); }
+.masterpiece .masterpiece_menu ul { display: flex; height: 80px; max-width: 144rem; margin: 0 auto; }
+.masterpiece .masterpiece_menu ul li { flex: 1; display: table; padding-left: 4rem; }
+.masterpiece .masterpiece_menu ul li a { display: table-cell; vertical-align: middle; color: rgba(255, 255, 255,.5); font-size: 2rem; font-weight: 400; transition: color .2s; }
+.masterpiece .masterpiece_menu ul li a b { margin-right: 2rem; }
+.masterpiece .masterpiece_menu ul li.on { background: #005eb8; }
+.masterpiece .masterpiece_menu ul li.on a,
+.masterpiece .masterpiece_menu ul li:hover a { color: rgba(255, 255, 255,1); }
+
+.masterpiece .outline .tit_area .tit_blue { font-size: 2rem; font-weight: 400; color: #005eb8; }
+.masterpiece .outline .tit_area h2 { font-size: 8rem; color: #000; font-weight: 400; }
+.masterpiece .outline .tit_area p { font-size: 2rem; color: #777; }
+.masterpiece .outline .cont_area { border-top: 1px solid #222; border-bottom: 1px solid #e8e8e8; padding: 3.5rem 0 4rem; }
+.masterpiece .outline .cont_area ul { display: flex; align-items: center; }
+.masterpiece .outline .cont_area ul li { position: relative; }
+.masterpiece .outline .cont_area ul li::after { content:''; display: inline-block; width: 1px; height: 6rem; background: #e8e8e8; margin: 0 5.5rem; position: absolute; right:0; top:0; }
+.masterpiece .outline .cont_area .tit_blue { font-size: 1.8rem; font-weight: 400; color: #005eb8; }
+.masterpiece .outline .cont_area p { font-size: 1.8rem; color: #777; margin-top: 1rem; }
+.masterpiece .outline section:not(.section0) { display: flex; }
+.masterpiece .outline section h3 { font-size: 6rem; font-weight: 400; color: #222; }
+.masterpiece .outline section:not(.section0) p { font-size: 2rem; color: #555; line-height: 1.7; }
+
+
+/* 마스터피스 - 인터뷰 - 공통 */
+.interview .sub_visual h1 { font-family: 'Montserrat', sans-serif; font-size: 6rem; font-weight: 350; line-height: 1.3; text-align: center; right: 0; transform: translateY(calc(-50% + .4rem)); letter-spacing: -.1rem; }
+.interview .sub_visual h1 span { display: block; font-size: 3.8rem; font-weight: 100; letter-spacing: 1rem; line-height: 1; letter-spacing: .5rem; margin-top: 2.3rem; }
+.interview .sub_visual ul { max-width: 136rem; width: 100%; height: 21rem; margin: auto; position: absolute; left: 0; right: 0; bottom: -10.5rem; display: flex; }
+.interview .sub_visual ul li:first-child { width: 70%; position: relative; }
+.interview .sub_visual ul li:first-child:after { content: ''; display: block; width: 100%; height: 100%; position: absolute; top: 0; backdrop-filter: blur(.5rem); background: rgba(0, 0, 0, .3); }
+.interview .sub_visual ul li:first-child p { position: absolute; z-index: 1; right: 0; left: 0; top: 0; bottom: 0; margin: auto; width: fit-content; height: fit-content; }
+.interview .sub_visual ul li:first-child p span { font-size: 3.6rem; color:#fff; font-weight: 350; line-height: 1.5; display: block; text-align: center; }
+.interview .sub_visual ul li:last-child { width: 30%; background: #005eb8; }
+.interview .sub_visual ul li:last-child p { color: #fff; }
+
+/* 마스터피스 - 인터뷰 - 해운대두산위브더제니스 */
+.interview.haeundae .sub_visual { background-image: url(../images/business/haeundae_visual.png); }
+.interview.haeundae .sub_visual ul li:first-child { background: url(../images/business/haeundae_visual.png) 66% 33% no-repeat; }
+.interview.haeundae .sub_visual ul li:first-child p span:first-child { padding-right: 16rem; }
+.interview.haeundae .sub_visual ul li:first-child p span:last-child { padding-left: 16rem; }
+
+
+/* 마스터피스 - 인터뷰 - 분당두산타워 */
+.interview.bundang .sub_visual { background-image: url(../images/business/bundang_visual.png); }
+
+
 
 
 
