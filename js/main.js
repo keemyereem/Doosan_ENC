@@ -334,7 +334,7 @@ var mainEvent = {
             $('.bus_swiper .left .img03').prepend('<div class="swiper-pagination"></div>');
 
             $('.bus_swiper .left .img').each(function(index, target){
-                mobSwiper3 = new Swiper("#mobile .section03 .img0" + index, {
+                mobSwiper3 = new Swiper("#mobile .section03 .img0"+index, {
                     speed: 500,
                     loop: false,
                     autoplayDisableOnInteraction: false,
@@ -355,11 +355,16 @@ var mainEvent = {
                 
             });
             
-            $('#mobile .swiper-pagination-sec03 > span').on('click', ()=> {
-                console.log('dd');
-                target.slideTo();
+
+            $(".section03 .left .img").each(function(elem, target){
+                var innerswp = target.swiper;
+    
+                $('#mobile .swiper-pagination-sec03 > span').on('click', function(){
+                    setTimeout(() => {
+                    innerswp.slideTo(0,0);
+                    }, 200);
+                });
             });
-            
             
 
         }
