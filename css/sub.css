@@ -437,7 +437,6 @@
 
 /* 공통 */
 .masterpiece .sub_visual { height: 100vh; }
-.masterpiece .sub_visual.ani { background-size: cover; }
 .masterpiece .masterpiece_menu { width: 100%; position: absolute; bottom:0; background: rgba(0,0,0,.5); }
 .masterpiece .masterpiece_menu ul { display: flex; height: 80px; max-width: 144rem; margin: 0 auto; }
 .masterpiece .masterpiece_menu ul li { flex: 1; display: table; padding-left: 4rem; }
@@ -462,11 +461,14 @@
 .masterpiece .outline .section0 .cont_area ul li:not(:last-child):after { content:''; display: inline-block; width: 1px; height: 6rem; background: #e8e8e8; position: absolute; right:0rem; top:0; }
 .masterpiece .outline .section0 .cont_area .tit_blue { font-size: 1.8rem; font-weight: 400; color: #005eb8; }
 .masterpiece .outline .section0 .cont_area p { font-size: 1.8rem; color: #777; margin-top: 1rem; }
-.masterpiece .outline .section { display: flex; align-items: center; border: 1px solid #000; }
+.masterpiece .outline .section { display: flex; align-items: center; }
 .masterpiece .outline section .line { width: 6.5rem; height: .6rem; background: #000; transform: skew(-45deg); margin-bottom: 3.5rem; }
 .masterpiece .outline section p { font-size: 2rem; color: #555; line-height: 1.7; }
 .masterpiece .outline section h3 { font-size: 6rem; font-weight: 400; color: #222; margin-bottom: 6rem; }
-.masterpiece .outline section .img+span { font-size: 1.6rem; color: #222; margin-top: 2.5rem; display: inline-block; }
+.masterpiece .outline section .img { overflow: hidden; }
+.masterpiece .outline section .img img { transition: transform ease 1s; }
+.masterpiece .outline section .img img:hover { transform: scale(1.1); }
+.masterpiece .outline section .img+span { font-size: 1.6rem; color: #222; margin-top: 2rem; display: inline-block; }
 .masterpiece .outline .wide-img { width: 100%; }
 .masterpiece .outline .wide-img img { width: 100%; object-fit: contain; }
 .masterpiece .outline .bg-blue { background: #f5f6fa; }
@@ -476,12 +478,13 @@
 
 /* 해운대 */
 .mp01 .sub_visual { background-image: url(../images/business/masterpiece01_outline_visual.png); }
-.mp01 .outline .bg-gray { padding: 12rem 0; }
+.mp01 .outline .bg-blue { padding: 12rem 0; }
 .mp01 .outline .section .right { margin-left: auto; }
 .mp01 .outline .section0,
 .mp01 .outline .section1 { margin-bottom: 12rem; }
 .mp01 .outline .section2 .right { padding-right: 4rem; }
 .mp01 .outline .section3 .right { margin-right: -6rem; }
+.mp01 .outline .section3 { margin-top: 5rem; }
 .mp01 .outline .section3 .left { padding-left: 6rem; }
 .mp01 .outline .section4 { margin-top: 12rem; }
 .mp01 .outline .section5 { margin: 10rem 0 13rem; }
@@ -519,6 +522,8 @@
 /* 신분당선 */
 .mp03 .sub_visual { background-image: url(../images/business/masterpiece03_outline_visual.png); }
 .mp03 .outline .section { justify-content: space-between; }
+.mp03 .outline .bg-green { background: #f7faf2; border-top: 1px solid #e8e8e8; padding: 11rem 0 20rem; }
+.mp03 .outline .section8 { margin-top: 10rem; }
 
 
 /* 마스터피스 - 인터뷰 - 공통 */
@@ -526,7 +531,7 @@
 .interview .sub_visual h1 span { display: block; font-size: 3.8rem; font-weight: 100; letter-spacing: 1rem; line-height: 1; letter-spacing: .5rem; margin-top: 2.3rem; }
 .interview .sub_visual ul { max-width: 136rem; width: 100%; height: 21rem; margin: auto; position: absolute; left: 0; right: 0; bottom: -10.5rem; display: flex; box-shadow: .5rem .9rem 4.3rem 0 rgba(0, 0, 0, .34); z-index: 9; }
 .interview .sub_visual ul li:first-child { width: 70%; position: relative; }
-.interview .sub_visual ul li:first-child::after { content: ''; display: block; width: 100%; height: 100%; position: absolute; top: 0; backdrop-filter: blur(.5rem); background: rgba(0, 0, 0, .3); }
+.interview .sub_visual ul li:first-child::after { content: ''; display: block; width: 100%; height: 100%; position: absolute; top: 0; backdrop-filter: blur(.4rem); background: rgba(0, 0, 0, .4); }
 .interview .sub_visual ul li:first-child p { position: absolute; z-index: 1; right: 0; left: 0; top: 0; bottom: 0; margin: auto; width: fit-content; height: fit-content; }
 .interview .sub_visual ul li:first-child p span { font-size: 3.6rem; color:#fff; font-weight: 350; line-height: 1.5; display: block; text-align: center; }
 .interview .sub_visual ul li:last-child { width: 30%; background: #005eb8; position: relative; }
@@ -538,33 +543,39 @@
 .interview .contents .wrap { max-width: 136rem; width: 100%; margin: auto; }
 .interview .contents .wrap .left { float: left; }
 .interview .contents .wrap .right { float: right; }
-.interview .contents .wrap .img { width: calc(50% - 3rem); overflow: hidden; }
+.interview .contents .wrap .img { width: calc(50% - 3rem); overflow: hidden; margin-top: .5rem; }
 .interview .contents .wrap .img img { width: 100%; transition: all ease 1s; }
 .interview .contents .wrap .img:hover img { transform: scale(1.1); }
 .interview .contents .wrap .dl50 { width: calc(50% - 3rem); }
 .interview .contents .wrap .dl100 { width: 100%; }
-.interview .contents .wrap dl { padding-left: 6.7rem; position: relative; height: fit-content; margin-bottom: 7rem; }
-.interview .contents .wrap dl dt { font-size: 2.6rem; font-weight: 400; color: #222222; }
-.interview .contents .wrap dl dt span { display: inline-block; position: absolute; left: 0; line-height: 1; font-family: 'Montserrat', sans-serif; font-size: 3.2rem; font-weight: 450; color: #005eb8; }
-.interview .contents .wrap dl dd { font-size: 2rem; color: #777777; margin-top: 1.8rem; line-height: 1.8; }
+.interview .contents .wrap dl { padding-left: 6.7rem; position: relative; height: fit-content; margin-bottom: 6.5rem; }
+.interview .contents .wrap dl dt { font-size: 2.6rem; font-weight: 400; color: #222222; white-space: nowrap; line-height: 1.5; }
+.interview .contents .wrap dl dt span { display: inline-block; position: absolute; left: 0; line-height: 1.2; font-family: 'Montserrat', sans-serif; font-size: 3.2rem; font-weight: 450; color: #005eb8; }
+.interview .contents .wrap dl dd { font-size: 2rem; color: #777777; margin-top: 1rem; line-height: 1.8; letter-spacing: -.125rem; }
+.interview .contents .wrap dl dd span { font-size: 1.6rem; color: #005eb8; display: block; line-height: 2.25; margin-top: 1rem; }
 .interview .contents .wrap a { float: left; transition: all ease .3s; position: relative; left: 50%; transform: translateX(-50%); width: 29.6rem; height: 7.4rem; line-height: .7; margin-top: 5rem; text-align: right; padding: 3rem 6rem; font-family: 'Montserrat', sans-serif; font-size: 2rem; color: #000000; border: .1rem solid #000000; border-radius: 3.7rem; }
 .interview .contents .wrap a:before { content: url(../images/common/interview_arrow_13x21.png); width: 1.2rem; height: 2.1rem; position: absolute; left: 6rem; transform: translateY(-.5rem); }
 .interview .contents .wrap a:hover { background: #000000; color: #fff; }
-.interview .contents .wrap a:hover:before { content: url(../images/common/interview_arrow_13x21_w.png); animation: infinite 1s arrwRight; }
+.interview .contents .wrap a:hover:before { content: url(../images/common/interview_arrow_13x21_w.png); animation: infinite 1.2s interviewArrow; }
 
 /* 마스터피스 - 인터뷰 - 해운대두산위브더제니스 */
-.interview.haeundae .sub_visual { background-image: url(../images/business/haeundae_visual.png); }
-.interview.haeundae .sub_visual ul li:first-child { background: url(../images/business/haeundae_visual.png) 66% 33% no-repeat; }
-.interview.haeundae .sub_visual ul li:first-child p span:first-child { padding-right: 16rem; }
-.interview.haeundae .sub_visual ul li:first-child p span:last-child { padding-left: 16rem; }
-.interview.haeundae .contents .wrap dl.custom { margin-bottom: 12rem; }
+.haeundae .sub_visual { background-image: url(../images/business/haeundae_visual.png); }
+.haeundae .sub_visual ul li:first-child { background: url(../images/business/haeundae_visual.png) 66% 33% no-repeat; }
+.haeundae .sub_visual ul li:first-child::after { backdrop-filter: blur(.5rem); background: rgba(0, 0, 0, .3); }
+.haeundae .sub_visual ul li:first-child p span:first-child { padding-right: 16rem; }
+.haeundae .sub_visual ul li:first-child p span:last-child { padding-left: 16rem; }
+.haeundae .contents .wrap dl.custom { margin-bottom: 12rem; }
 
 /* 마스터피스 - 인터뷰 - 분당두산타워 */
-.interview.bundang .sub_visual { background-image: url(../images/business/bundang_visual.png); }
+.bundang .sub_visual { background-image: url(../images/business/bundang_visual.png); }
+.bundang .sub_visual ul li:first-child { background: url(../images/business/bundang_visual.png) 0% 25% no-repeat; background-size: 217%; }
+.bundang .sub_visual ul li:first-child p span:first-child { padding-right: 18rem; }
+.bundang .sub_visual ul li:first-child p span:last-child { padding-left: 6rem; }
 
-
-
-
+/* 마스터피스 - 인터뷰 - 신분당선 */
+.shinbundangline .sub_visual { background-image: url(../images/business/shinbundangline_visual.png); }
+.shinbundangline .sub_visual ul li:first-child { background: url(../images/business/shinbundangline_visual_s.png) 0% 0% no-repeat; }
+.shinbundangline .sub_visual ul li:first-child p span:last-child { padding-left: 9.7rem; }
 
 
 
@@ -852,4 +863,10 @@
     0% { transform: translateX(4rem); }
     65% { transform: translateX(6rem); }
     100% { transform: translateX(4rem); }
+}
+
+@keyframes interviewArrow {
+    0% { left: 6rem; }
+    50% { left: 8rem; }
+    100% { left: 6rem; }
 }

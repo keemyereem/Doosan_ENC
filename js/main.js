@@ -156,9 +156,9 @@ var mainEvent = {
     },
 
     mainSwiper: () => {
-        const mainSwiper = ".section01 .mainSwiper";
-        const interleaveOffset = 0.5;
-        const scale = 1.2;
+        const mainSwiper = ".section01 .mainSwiper",
+              interleaveOffset = 0.5,
+              scale = 1.2;
 
         let swiperOptions = {
             loop: true,
@@ -513,9 +513,10 @@ var mainEvent = {
         });
 
         $(document).on("click",".family_site .site_list li a",function(){
-            var selected = this.innerText;
-            var siteName = document.getElementsByClassName('site_selected')[0];
-            var familySite = this.parentNode.parentNode.parentNode;
+            var selected = this.innerText,
+                siteName = document.getElementsByClassName('site_selected')[0],
+                familySite = this.parentNode.parentNode.parentNode;
+                
             siteName.innerText = selected;
             familySite.classList.remove('open');
         });

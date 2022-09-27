@@ -312,7 +312,7 @@ br.br_t, br.br_m {display: none;}
 .footer .footer_wrap p { font-family: 'Montserrat'; font-size: 1.6rem; opacity: .2; text-align: center; margin-top: 4rem; }
 
 #topButton { font-family: 'Montserrat'; font-size: 1.8rem; color: #000; letter-spacing: .09rem; position: fixed; right: 8rem; bottom: 8rem; display: none; z-index: 999; writing-mode: vertical-lr; }
-#topButton::after { content:''; display: block; width: 2.3rem; height: 3rem; background: url(../images/common/scrollTop.png) no-repeat; background-size: contain; vertical-align: middle; position: absolute; top: -100%; left: 0; }
+#topButton::after { content:''; display: block; width: 2.3rem; height: 3rem; background: url(../images/common/scrollTop.png) no-repeat; background-size: contain; position: absolute; top: -100%; left: 0; }
 #topButton.on { position: absolute; }
 
 /* privacy_policy */

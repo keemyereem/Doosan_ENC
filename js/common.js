@@ -72,9 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////                                                         **공통**                                                                   ///////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -141,9 +138,6 @@ var commonEvent = {
           }
         });
       }
-      
-      
-
   },
 
   footerEvent: () => {
@@ -157,16 +151,17 @@ var commonEvent = {
     });
 
     $(document).on("click",".family_site .site_list li a",function(){
-      var selected = this.innerText;
-      var siteName = document.getElementsByClassName('site_selected')[0];
-      var familySite = this.parentNode.parentNode.parentNode;
+      var selected = this.innerText,
+          siteName = document.getElementsByClassName('site_selected')[0],
+          familySite = this.parentNode.parentNode.parentNode;
+
       siteName.innerText = selected;
       familySite.classList.remove('open');
     });
 
     $(window).on('scroll', function() {
-      let st = $(window).scrollTop();
-      let footer = document.querySelector(".footer").offsetTop;
+      let st = $(window).scrollTop(),
+          footer = document.querySelector(".footer").offsetTop;
 
       if ($(window).width() > 768) {
           footer = footer - 300;
@@ -188,24 +183,23 @@ var commonEvent = {
         } else {
             $('#topButton').fadeOut();
         }
-        var footerTop = $('.footer').offset().top - $(window).outerHeight();
-        var pos = $('.footer').outerHeight() + Number(80);
-        var pos_m = $('.footer').outerHeight() + Number(35);
+        var footerTop = $('.footer').offset().top - $(window).outerHeight(),
+            pos = $('.footer').outerHeight() + Number(80),
+            pos_m = $('.footer').outerHeight() + Number(35);
         
         if($(this).scrollTop() > footerTop){
-            if($(window).width()>767){
+            if ($(window).width()>767) {
                 $('#topButton').addClass('on').css({'bottom':pos});
             }else {
                 $('#topButton').addClass('on').css({'bottom':pos_m});
             }
 
         }else {
-            if($(window).width()>767){
+            if ($(window).width()>767) {
                 $('#topButton').removeClass('on').css({'bottom':'8rem'});
             }else {
                 $('#topButton').removeClass('on').css({'bottom':'3.5rem'});
             }
-            
         }
     });
 
@@ -217,8 +211,10 @@ var commonEvent = {
   iptEvent: () => {
     //selectbox
     var selectType = $(".select_row>select");
+
     selectType.addClass("selectBox");
     selectChange(selectType);
+
     function selectChange(type) {
         type.change(function () {
             var select_name = $(this).children("option:selected").text();
@@ -236,16 +232,17 @@ var commonEvent = {
   },
 
   tabEvent: () => {
-    const tabContainer = $('#mobile .tab_box > .inner')
-    const tabBox = tabContainer.find('> .tab_slide');
-    const tabButton = tabBox.find('> li');
-    let size = tabButton.length;
-    let tbIndex = 0;
+    const tabContainer = $('#mobile .tab_box > .inner'),
+          tabBox = tabContainer.find('> .tab_slide'),
+          tabButton = tabBox.find('> li');
+
+    let size = tabButton.length,
+        tbIndex = 0;
 
     if (tabBox.length) {
       $(document).ready(function(){
-        let tbOn = Math.floor(tabBox.find('> li.on').position().left);
-        let tbWidth = tabButton.width();
+        let tbOn = Math.floor(tabBox.find('> li.on').position().left),
+            tbWidth = tabButton.width();
 
         tabContainer.animate({scrollLeft: tbOn - tbWidth}, 1000);
       });
@@ -315,12 +312,6 @@ var businessEvent = {
 
 }
 
-
-
-
-
-
-
 var civilEngineerEvent = {
   init: function(){
     this.civilSwiper();
@@ -360,9 +351,10 @@ var civilEngineerEvent = {
 //사업실적 팝업
 function popupbusiness(popConts) {
   var popthis = $(".popup."+popConts);
-    popthis.fadeIn(300);
-    setTimeout(() => {
-      $('.pop_cont .list img').css({'transform':'scale(1.2)','transition':'all 3s'});
+  popthis.fadeIn(300);
+
+  setTimeout(() => {
+    $('.pop_cont .list img').css({'transform':'scale(1.2)','transition':'all 3s'});
   }, 200);
 
 
@@ -381,17 +373,17 @@ var civilOutline = {
 
   outlineNav: () => {
 
-    const section = $('.section');
-    const fixSidemenu = $('.civil_engineer .section_nav');
-    const fraction = fixSidemenu.find('.fraction');
-    const fixmenuHeight = $('.sub_visual_menu').height();
+    const section = $('.section'),
+          fixSidemenu = $('.civil_engineer .section_nav'),
+          fraction = fixSidemenu.find('.fraction'),
+          fixmenuHeight = $('.sub_visual_menu').height();
     
     fraction.children('.total_page').text(section.length)
 
     $(window).on('load resize scroll', function(e) {
-      let gap = $(window).height() / 4;
-      let currentPosition = $(window).scrollTop() + fixmenuHeight;
-      let fractionOut = (section.eq(section.length - 1).innerHeight() / 4) + $('.footer').offset().top - $('.footer').outerHeight();
+      let gap = $(window).height() / 4,
+          currentPosition = $(window).scrollTop() + fixmenuHeight,
+          fractionOut = (section.eq(section.length - 1).innerHeight() / 4) + $('.footer').offset().top - $('.footer').outerHeight();
 
       if (currentPosition > section.eq(0).offset().top - gap && currentPosition < fractionOut) {
         fixSidemenu.addClass('on');
@@ -456,20 +448,20 @@ var companyEvent = {
 
   chart: ()=> {
 
-    const graph = $('#HMchart .graph');
-    const graphBarColor = ['#999999', '#f78600', '#e73100', 'purple'];
-    const transitionEnd = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend';
-    const barSpeed = 1000;
-    const deviceChecker = $('#mobile')
+    const graph = $('#HMchart .graph'),
+          graphBarColor = ['#999999', '#f78600', '#e73100', 'purple'],
+          transitionEnd = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend',
+          barSpeed = 1000,
+          deviceChecker = $('#mobile');
     
     // 그래프 별 작동 토글
     graph.each((index) => {
 
       // scroll animation 동작/ graph에 작동 클래스 부여
       $(window).on('scroll load', ()=> {
-        var st = $(window).scrollTop();
-        let graphOffset = graph.eq(index).offset().top;
-        let graphAni = graphOffset - $(window).height() / 2;
+        let st = $(window).scrollTop(),
+            graphOffset = graph.eq(index).offset().top,
+            graphAni = graphOffset - $(window).height() / 2;
 
         if (st > graphAni) {
           graph.eq(index).addClass('on');
@@ -478,9 +470,10 @@ var companyEvent = {
         }
       })
 
-      const line = graph.eq(index).find('.graph_bg li');
-      const graphBars = graph.eq(index).find('.graph_bar');
-      const bar = graph.eq(index).find('.graph_bar li');
+      const line = graph.eq(index).find('.graph_bg li'),
+            graphBars = graph.eq(index).find('.graph_bar'),
+            bar = graph.eq(index).find('.graph_bar li');
+
       let maxPercent = graph.eq(index).find('.graph_bg li').eq(0).attr('data-line');
 
       // 라인 백그라운드 생성
@@ -502,9 +495,9 @@ var companyEvent = {
       
       // 수치 data 기반 바 높이값 생성
       bar.each((i) => {
-        let barData = bar.eq(i).attr('data-percent');
-        let barNum = barData.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-        let barPercent = barData / maxPercent * 100;
+        let barData = bar.eq(i).attr('data-percent'),
+            barNum = barData.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','),
+            barPercent = barData / maxPercent * 100;
 
         // 툴팁 가림설정
         bar.eq(i).find('> span, > p').hide();
@@ -517,8 +510,9 @@ var companyEvent = {
 
         // 수치상 '-'값이 있는 경우 그래프 방향 조정/ 최대 또는 최소값 기준 그래프바 퍼센트 형성
         if (graph.eq(index).hasClass('convert')) {
-          let dataMinus = Math.abs(bar.eq(i).attr('data-percent'));
-          let standardReverse = graph.eq(index).find('.standardReverse').attr('data-line');
+          let dataMinus = Math.abs(bar.eq(i).attr('data-percent')),
+              standardReverse = graph.eq(index).find('.standardReverse').attr('data-line');
+
           maxPercent = Math.abs(standardReverse);
           
           if (standardReverse == null) {
@@ -561,13 +555,13 @@ var companyEvent = {
     
       // '0' 수치 기준점으로 그래프바 위치 고정 및 그래프 비율 조절
       if (line.length) {
-        let gH = graph.eq(index).height();
-        let countH = $('.graph > span').height();
-        let zeroH = graph.eq(index).find('.standard').position().top;
-        let stdH = graph.eq(index).find('.standard').height() / 2;
-        let barH = graphBars.height() - (countH + stdH);
-        let standardPosition = (gH - (zeroH + stdH + countH)) / 10;
-        let convertHeightReverse = (barH - zeroH) / 10;
+        let gH = graph.eq(index).height(),
+            countH = $('.graph > span').height(),
+            zeroH = graph.eq(index).find('.standard').position().top,
+            stdH = graph.eq(index).find('.standard').height() / 2,
+            barH = graphBars.height() - (countH + stdH),
+            standardPosition = (gH - (zeroH + stdH + countH)) / 10,
+            convertHeightReverse = (barH - zeroH) / 10;
 
         // 그래프바 위치
         graphBars.css('bottom', + standardPosition + 'rem');
@@ -585,8 +579,8 @@ var companyEvent = {
         if (deviceChecker.length) {
           // span태크 width값 통일(우측정렬 위해)
           const lineSpan = graph.eq(index).find('.graph_bg > li > span');
-          let padding = 12;
-          let spanWidth = (lineSpan.width() + padding) / 10;
+          let padding = 12,
+              spanWidth = (lineSpan.width() + padding) / 10;
 
           lineSpan.css({'max-width': spanWidth + 'rem', 'width': '100%'});
           graphBars.css({'width': 'calc(100% - ' + (spanWidth + 1) + 'rem)'});
