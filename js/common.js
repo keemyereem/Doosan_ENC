@@ -120,24 +120,29 @@ var commonEvent = {
 
 
       const subMenu = document.querySelector(".sub_visual_menu");
-      const fixMenu = subMenu.offsetTop;
+
+      if ($(".sub_visual_menu").length) {
+        let fixMenu = subMenu.offsetTop;
 
 
-      $(window).on('scroll', function() {
-        let st = $(window).scrollTop();
-        
-        if(st >= fixMenu) {
-          subMenu.classList.add('fixed');
-        } else {
-          subMenu.classList.remove('fixed');
-        }
-        
-        if (st >= fixMenu - 200) {
-          $('.header').addClass('indentUp');
-        } else {  
-          $('.header').removeClass('indentUp');
-        }
-      });
+        $(window).on('scroll', function() {
+          let st = $(window).scrollTop();
+          
+          if(st >= fixMenu) {
+            subMenu.classList.add('fixed');
+          } else {
+            subMenu.classList.remove('fixed');
+          }
+          
+          if (st >= fixMenu - 200) {
+            $('.header').addClass('indentUp');
+          } else {  
+            $('.header').removeClass('indentUp');
+          }
+        });
+      }
+      
+      
 
   },
 
@@ -292,6 +297,30 @@ var commonEvent = {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////                                                         **서브**                                                                   ///////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+var businessEvent = {
+  init: function() {
+    this.interview();
+  },
+
+  interview: () => {
+    const contentNum = $('.interview .contents .wrap dl');
+
+    contentNum.each((index) => {
+      let n = Math.abs(index);
+      n < 9 ? contentNum.eq(index).find('dt span').text('0' + (index + 1)) : contentNum.eq(index).find('dt span').text((index + 1));
+    })
+
+  },
+
+}
+
+
+
+
+
+
+
 var civilEngineerEvent = {
   init: function(){
     this.civilSwiper();
