@@ -185,18 +185,28 @@ var commonEvent = {
         }
         var footerTop = $('.footer').offset().top - $(window).outerHeight(),
             pos = $('.footer').outerHeight() + Number(80),
+            pos_intw = $('.footer').outerHeight() + Number(196),
             pos_m = $('.footer').outerHeight() + Number(35);
         
         if($(this).scrollTop() > footerTop){
             if ($(window).width()>767) {
+              if($('.interviewBtn').length){
+                $('#topButton').addClass('on').css({'bottom':pos_intw});
+              }else {
                 $('#topButton').addClass('on').css({'bottom':pos});
+              }
+                
             }else {
                 $('#topButton').addClass('on').css({'bottom':pos_m});
             }
 
         }else {
             if ($(window).width()>767) {
+              if($('.interviewBtn').length){
+                $('#topButton').removeClass('on').css({'bottom':'19.6rem'});
+              }else {
                 $('#topButton').removeClass('on').css({'bottom':'8rem'});
+              }
             }else {
                 $('#topButton').removeClass('on').css({'bottom':'3.5rem'});
             }
@@ -206,7 +216,7 @@ var commonEvent = {
     $(document).on('click', '#topButton', function() {
         $('html, body').animate({scrollTop:0}, '300');
     });
-},
+  },
 
   iptEvent: () => {
     //selectbox
@@ -298,6 +308,8 @@ var commonEvent = {
 var businessEvent = {
   init: function() {
     this.interview();
+    this.masterpieceMenu();
+    this.goToInterview();
   },
 
   interview: () => {
@@ -309,6 +321,69 @@ var businessEvent = {
     })
 
   },
+
+  masterpieceMenu: () => {
+
+    const subMenu = document.querySelector(".masterpiece_menu");
+
+    if ($(".masterpiece_menu").length) {
+      let fixMenu = subMenu.offsetTop;
+
+      $(window).on('scroll', function() {
+        let st = $(window).scrollTop();
+
+        if(st >= fixMenu) {
+          subMenu.classList.add('fixed');
+        } else {
+          subMenu.classList.remove('fixed');
+        }
+        
+        if (st >= fixMenu - 200) {
+          $('.header').addClass('indentUp');
+        } else {  
+          $('.header').removeClass('indentUp');
+        }
+      });
+
+      if ($('#mobile').length) {
+        $('.masterpiece_menu .on').on('click', ()=> {
+            $('.masterpiece_menu ul').toggleClass('open');
+        });
+      }
+
+    }
+  },
+
+  goToInterview:() => {
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 400) {
+            $('.interviewBtn').fadeIn();
+        } else {
+            $('.interviewBtn').fadeOut();
+        }
+
+        var footerTop = $('.footer').offset().top - $(window).outerHeight(),
+            pos = $('.footer').outerHeight() + Number(80),
+            pos_m = $('.footer').outerHeight() + Number(35);
+        
+        if($(this).scrollTop() > footerTop){
+            if ($(window).width()>767) {
+                $('.interviewBtn').addClass('on').css({'bottom':pos});
+            }else {
+                $('.interviewBtn').addClass('on').css({'bottom':pos_m});
+            }
+
+        }else {
+            if ($(window).width()>767) {
+                $('.interviewBtn').removeClass('on').css({'bottom':'8rem'});
+            }else {
+                $('.interviewBtn').removeClass('on').css({'bottom':'3.5rem'});
+            }
+        }
+    });
+
+  },
+
 
 }
 

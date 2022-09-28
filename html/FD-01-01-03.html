@@ -64,7 +64,7 @@
 
             // JS importing
             commonEvent.init();
-            civilEngineerEvent.init();
+            businessEvent.init();
         });
     </script>
 </head>
@@ -85,16 +85,17 @@
             <div class="sub_visual">
                 <div class="masterpiece_menu">
                     <ul>
-                        <li><a href="javascript:;" title="해운대 두산위브더제니스"><b>01</b>해운대 두산위브더제니스</a></li>
+                        <li><a href="html/FD-01-01-01.html" title="해운대 두산위브더제니스"><b>01</b>해운대 두산위브더제니스</a></li>
                         <li class="on"><a href="javascript:;" title="분당두산타워"><b>02</b>분당두산타워</a></li>
-                        <li><a href="javascript:;" title="신분당선"><b>03</b>신분당선 </a></li>
+                        <li class="mb"><a href="html/FD-01-01-03.html" title="분당두산타워"><b>02</b>분당두산타워</a></li>
+                        <li><a href="html/FD-01-01-05.html" title="신분당선"><b>03</b>신분당선 </a></li>
                     </ul>
                 </div>
                 
             </div>
 
             <div class="contents outline">
-                <div class="interview">
+                <div class="interviewBtn">
                     <a href="html/FD-01-01-04.html" title="인터뷰">
                         <div class="icon"></div>
                         <div class="txt">
@@ -132,7 +133,10 @@
                             </ul>
                         </div>
     
-                        <div class="img"><img src="images/business/mp02_outline_img01.png" alt="분당두산타워"></div>
+                        <div class="img" data-aos="fade-in">
+                            <img src="images/business/mp02_outline_img01.png" alt="분당두산타워" class="img_pc">
+                            <img src="images/business/mp02_outline_img01_m.png" alt="분당두산타워" class="img_m">
+                        </div>
                         <span>지역의 랜드마크로 부상한 분당두산타워</span>        
                     </section>   
                     <section class="section section1">
@@ -164,7 +168,10 @@
                         </div>
                     </section> 
                 </div>
-                <div class="wide-img" data-aos="fade-in"><img src="../images/business/mp02_outline_img03.png" alt="분당두산타워"></div>
+                <div class="wide-img" data-aos="fade-in">
+                    <img src="../images/business/mp02_outline_img03.png" alt="분당두산타워" class="img_pc">
+                    <img src="../images/business/mp02_outline_img03_m.png" alt="분당두산타워" class="img_m">
+                </div>
                 
                 <div class="inner">
                     <section class="section2">
@@ -209,7 +216,10 @@
                     <div class="inner">     
                         <section class="section4" data-aos="fade-up">
                             <h3 class="indent">Inside area</h3>
-                            <div class="img"><img src="images/business/mp02_outline_img06.png" alt="분당두산타워"></div>
+                            <div class="img">
+                                <img src="images/business/mp02_outline_img06.png" alt="분당두산타워" class="img_pc">
+                                <img src="images/business/mp02_outline_img06_m.png" alt="분당두산타워" class="img_m">
+                            </div>
                         </section>  
                         <section class="section section5">
                             <div class="left" data-aos="fade-right">
@@ -230,17 +240,16 @@
                                 </p>
                             </div>
                         </section>  
-                    </div>
-                </div>
 
-                <div class="inner"> 
-                    <section class="section section6">
-                        <h3 class="indent">Interior</h3>
-                        <div class="left" data-aos="fade-right">
-                            <div class="img"><img src="images/business/mp02_outline_img07.png" alt="분당두산타워"></div>
-                            <span>소통과 업무효율을 위해 최상의 인테리어를 적용한 OIC(Open Innovation Center)</span>
-                        </div>
-                        <div class="right" data-aos="fade-left">
+                        <section class="section section6">
+                            <h3 class="indent">Interior</h3>
+                            <div class="left" data-aos="fade-right">
+                                <div class="img">
+                                    <img src="images/business/mp02_outline_img07.png" alt="분당두산타워" class="img_pc">
+                                    <img src="images/business/mp02_outline_img07_m.png" alt="분당두산타워" class="img_m">
+                                </div>
+                                <span>소통과 업무효율을 위해 최상의 인테리어를 적용한<br class="br_m"> OIC(Open Innovation Center)</span>
+                            </div>
                             <p>
                                 쾌적한 최적의 사무공간구현을 위해 하부공조 시스템방식을 <br class="br_pc">
                                 도입하고 천정, 바닥 등의 마감재를 다양한 시공과 설계협의를 통해<br class="br_pc">
@@ -250,11 +259,21 @@
                                 수직계단은 수직적 소통을 위해 3개층을 연결하여 <br class="br_pc">
                                 다양한 공간을 형성했다.
                             </p>
-                            <div class="img"><img src="images/business/mp02_outline_img08.png" alt="분당두산타워"></div>
-                            <span>멋진 전망과 밝은 채광이 돋보이는 구내식당
-                            </span>
-                        </div>
-                    </section>  
+                            <div class="right" data-aos="fade-left">
+                                <!-- <p>
+                                    쾌적한 최적의 사무공간구현을 위해 하부공조 시스템방식을 <br class="br_pc">
+                                    도입하고 천정, 바닥 등의 마감재를 다양한 시공과 설계협의를 통해<br class="br_pc">
+                                    최상의 오피스환경을 구현했다. <br><br>
+                                    
+                                    그리고 오피스 공간의 허브로 계획된<br class="br_pc">
+                                    수직계단은 수직적 소통을 위해 3개층을 연결하여 <br class="br_pc">
+                                    다양한 공간을 형성했다.
+                                </p> -->
+                                <div class="img"><img src="images/business/mp02_outline_img08.png" alt="분당두산타워"></div>
+                                <span>멋진 전망과 밝은 채광이 돋보이는 구내식당</span>
+                            </div>
+                        </section>  
+                    </div>
                 </div>
 
                 <div class="bg-blue">
@@ -271,7 +290,9 @@
                         </section>
                         <section class="section8">
                             <h3 class="indent">Video</h3>
-                            <img src="../images/business/mp02_outline_img09.png" alt="">
+                            <div class="video">
+                                <img src="../images/business/mp02_outline_img09.png" alt="">
+                            </div>
                         </section>
                     </div>
                 </div>

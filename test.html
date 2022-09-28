@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <!-- SET FILE PATH :: compatibility ie9 code -->
+   <base href="../">
+   <!--[if IE]><script type="text/javascript">
+            // Fix for IE ignoring relative base tags.
+            (function() {
+                var baseTag = document.getElementsByTagName('base')[0];
+                baseTag.href = baseTag.href;
+            })();
+    </script><![endif]-->
+
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
+    <meta name="author" content="DoosanENC">
+    <meta name="robots" content="index, follow">
+    <meta name="title" content="두산건설">
+    <meta name="description" content="두산건설 리뉴얼 홈페이지입니다.">
+    <meta name="keywords" content="두산건설, 리뉴얼홈페이지, 포엠크리에이티브">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="두산건설">
+    <meta property="og:description" content="두산건설 리뉴얼 홈페이지입니다.">
+    <meta property="og:site_name" content="DoosanENC">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="두산건설">
+    <meta name="twitter:description" content="두산건설 리뉴얼 홈페이지입니다.">
+    
+    <title>test</title>
+    <link rel="icon" href="images/favicon.png" sizes="32x32">
+    <link rel="canonical" href="http://dev.topes.4-m.co.kr/">  
+
+    <!-- Library CSS -->
+
+    <link type="text/css" href="test.css" rel="stylesheet">
+
+    <!-- Library JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.3.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
+    <script src="test.js"></script>
+    
+    <!-- Initialized Include Path -->
+    <script>
+        $(document).ready( function() {
+            // JS importing
+            test.init();
+        });
+    </script>
+
+<style>
+* {
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {  
+    
+    background-color: #111;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, .2) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(255, 255, 255, .2) 2px, transparent 2px),
+        linear-gradient(rgba(255, 255, 255, .1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .1) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+    padding-bottom: 1000px;
+}
+
+.box { 
+    width: 700px;
+    height: 250px;
+    background: #005EB8;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .box > li { background: #fff; width: 150px; height: 150px; border-radius: 100%; margin: 0 5px; position: relative; opacity: 0; }
+ .box > li > ul { display: flex; flex-direction: column; justify-content: center; height: 100%; width: 100%; }
+ .box > li > ul > li { text-align: center; position: relative; }
+ .box > li > ul > li:nth-child(1) { padding: 10px 0; }
+ .box > li > ul > li:nth-child(2) { font-size: 10px; }
+ .box > li > ul > li:nth-child(3) { padding: 15px 0; }
+ .box > li > ul > li:nth-child(3) p { font-size: 24px; position: absolute; left: 0; right: 0; margin: auto; top: 0; }
+ .box > li > ul > li:nth-child(3) p:last-child { opacity: 0; }
+ .box > li > ul > li:nth-child(3) p em { color: #005EB8; font-style: normal; }
+
+ .four {
+    z-index: 9;
+ }
+
+</style>
+
+</head>
+
+<body>
+    <ul class="box">
+        <li class="one">
+            <ul>
+                <li><img src="images/common/icon_lang_b.png" alt=""></li>
+                <li>future</li>
+                <li>
+                    <p>We<em>ve</em></p>
+                    <p>ha<em>ve</em></p>
+                </li>
+            </ul>
+        </li>
+        <li class="two">
+            <ul>
+                <li><img src="images/common/icon_lang_b.png" alt=""></li>
+                <li>future</li>
+                <li>
+                    <p>We<em>ve</em></p>
+                    <p>ha<em>ve</em></p>
+                </li>
+            </ul>
+        </li>
+        <li class="three">
+            <ul>
+                <li><img src="images/common/icon_lang_b.png" alt=""></li>
+                <li>future</li>
+                <li>
+                    <p>We<em>ve</em></p>
+                    <p>ha<em>ve</em></p>
+                </li>
+            </ul>
+        </li>
+        <li class="four">
+            <ul>
+                <li><img src="images/common/icon_lang_b.png" alt=""></li>
+                <li>future</li>
+                <li>
+                    <p>We<em>ve</em></p>
+                    <p>ha<em>ve</em></p>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+<script>
+
+const tl1 = gsap.timeline();
+
+tl1.to('.box > li', {
+    opacity: 1,
+    duration: .5,
+    stagger: {
+        amount: 1
+    }
+});
+
+
+</script>
+</body>
+</html>
