@@ -364,7 +364,7 @@ var businessEvent = {
 
         var footerTop = $('.footer').offset().top - $(window).outerHeight(),
             pos = $('.footer').outerHeight() + Number(80),
-            pos_m = $('.footer').outerHeight() + Number(35);
+            pos_m = $('.footer').outerHeight() + Number(100);
         
         if($(this).scrollTop() > footerTop){
             if ($(window).width()>767) {
@@ -377,7 +377,7 @@ var businessEvent = {
             if ($(window).width()>767) {
                 $('.interviewBtn').removeClass('on').css({'bottom':'8rem'});
             }else {
-                $('.interviewBtn').removeClass('on').css({'bottom':'3.5rem'});
+                $('.interviewBtn').removeClass('on').css({'bottom':'10rem'});
             }
         }
     });

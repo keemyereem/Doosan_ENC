@@ -73,8 +73,8 @@ body {
 }
 
 .box { 
-    width: 700px;
-    height: 250px;
+    width: 800px;
+    height: 300px;
     background: #005EB8;
     position: absolute;
     margin: auto;
@@ -87,22 +87,17 @@ body {
     align-items: center;
 }
 
- .box > li { background: #fff; width: 150px; height: 150px; border-radius: 100%; margin: 0 5px; position: relative; opacity: 0; }
+ .box > li { background: #fff; width: 150px; height: 150px; border-radius: 100%; position: absolute; opacity: 0; }
  .box > li > ul { display: flex; flex-direction: column; justify-content: center; height: 100%; width: 100%; }
- .box > li > ul > li { text-align: center; position: relative; }
- .box > li > ul > li:nth-child(1) { padding: 10px 0; }
- .box > li > ul > li:nth-child(2) { font-size: 10px; }
- .box > li > ul > li:nth-child(3) { padding: 15px 0; }
- .box > li > ul > li:nth-child(3) p { font-size: 24px; position: absolute; left: 0; right: 0; margin: auto; top: 0; }
- .box > li > ul > li:nth-child(3) p:last-child { opacity: 0; }
+ .box > li > ul > li { text-align: center; position: relative; height: auto !important; }
+ .box > li > ul > li img:not(:first-child),
+ .box > li > ul > li p:not(:first-child) { position: absolute; left: 0; right: 0; margin: auto; top: 0; opacity: 0; }
+ .box > li > ul > li:nth-child(2) p { font-size: 10px; padding: 10px 0 0; }
+ .box > li > ul > li:nth-child(3) p { font-size: 24px; line-height: 1; }
  .box > li > ul > li:nth-child(3) p em { color: #005EB8; font-style: normal; }
 
- .four {
-    z-index: 9;
- }
-
+ .four { z-index: 9; }
 </style>
-
 </head>
 
 <body>
@@ -110,8 +105,8 @@ body {
         <li class="one">
             <ul>
                 <li><img src="images/common/icon_lang_b.png" alt=""></li>
-                <li>future</li>
-                <li>
+                <li><p>Future</p></li>
+                <li class="slogan">
                     <p>We<em>ve</em></p>
                     <p>ha<em>ve</em></p>
                 </li>
@@ -120,30 +115,39 @@ body {
         <li class="two">
             <ul>
                 <li><img src="images/common/icon_lang_b.png" alt=""></li>
-                <li>future</li>
-                <li>
+                <li><p>Comfort</p></li>
+                <li class="slogan">
                     <p>We<em>ve</em></p>
-                    <p>ha<em>ve</em></p>
+                    <p>li<em>ve</em></p>
                 </li>
             </ul>
         </li>
         <li class="three">
             <ul>
                 <li><img src="images/common/icon_lang_b.png" alt=""></li>
-                <li>future</li>
-                <li>
+                <li><p>Reduction</p></li>
+                <li class="slogan">
                     <p>We<em>ve</em></p>
-                    <p>ha<em>ve</em></p>
+                    <p>sa<em>ve</em></p>
                 </li>
             </ul>
         </li>
         <li class="four">
             <ul>
-                <li><img src="images/common/icon_lang_b.png" alt=""></li>
-                <li>future</li>
                 <li>
+                    <img src="images/common/icon_lang_b.png" alt="">
+                    <img src="images/common/weve_logo_b.png" alt="">
+                    <img src="images/common/weve_logo_w_m.png" alt="">
+                </li>
+                <li class="sub">
+                    <p>Solution</p>
+                    <p>Happiness</p>
+                </li>
+                <li class="slogan">
                     <p>We<em>ve</em></p>
-                    <p>ha<em>ve</em></p>
+                    <p>sol<em>ve</em></p>
+                    <p>lo<em>ve</em></p>
+                    <p>LOVE</p>
                 </li>
             </ul>
         </li>
@@ -151,16 +155,42 @@ body {
 
 <script>
 
-const tl1 = gsap.timeline();
+const tl1 = gsap.timeline({ repeat:-1, repeatDelay: 1 });
 
-tl1.to('.box > li', {
-    opacity: 1,
-    duration: .5,
-    stagger: {
-        amount: 1
-    }
-});
+tl1.to('.one', { x: -240 })
+.to('.one', { opacity: 1, duration: .5 })
+.to('.one .slogan p:first-child', { x : 0, opacity: 0, duration: .2 })
+.to('.one .slogan p:last-child', { x : 0, opacity: 1, duration: .3 }, "=-.1");
 
+tl1.to('.two', { x: -80 })
+.to('.two', { opacity: 1, duration: .5, delay: .5 })
+.to('.two .slogan p:first-child', { x : 0, opacity: 0, duration: .2 })
+.to('.two .slogan p:last-child', { x : 0, opacity: 1, duration: .3 }, "=-.1");
+
+tl1.to('.three', { x: 80})
+.to('.three', { opacity: 1, duration: .5, delay: .5 })
+.to('.three .slogan p:first-child', { x : 0, opacity: 0, duration: .2 })
+.to('.three .slogan p:last-child', { x : 0, opacity: 1, duration: .3 }, "=-.1");
+
+tl1.to('.four', { x: 240 })
+.to('.four', { opacity: 1, duration: .5, delay: .5 })
+.to('.four .slogan p:first-child', { x : 0, opacity: 0, duration: .2 })
+.to('.four .slogan p:nth-child(2)', { x : 0, opacity: 1, duration: .3 }, "=-.1");
+
+tl1.to('.box', { borderRadius: "50px", duration: .5, delay: .5 })
+.to('.box > li', { x: 0, y: 0, duration: 1, delay: .5 }, "=-1")
+.to('.box', { borderRadius: "300px", width: "300px", duration: 1 }, "=-1")
+.to('.four img:first-child, .slogan p:nth-child(2)', { opacity: 0, duration: .2 }, "=-.5")
+.to('.four img:nth-child(2), .slogan p:nth-child(3)', { opacity: 1, duration: .3 }, "=-.5");
+
+tl1.to('.box', { background: "rgba(235, 245, 255, 1)", duration: 1 })
+.to('.four', { background: "#005EB8", width: "250px", height: "250px", duration: .5, delay: .2 }, "=-1")
+.to('.four img:nth-child(2), .four .slogan p:nth-child(3), .four .sub p:first-child', { opacity: 0, duration: .2 }, "=-.5")
+.to('.four .sub p', { padding: "+=15 0 +=5", duration: .5, }, "=-.5")
+.to('.four .slogan p, .four .sub p', { duration: .5, fontSize: "+=10", color: "#fff" }, "=-.5")
+.to('.four img:nth-child(3), .four .slogan p:nth-child(4), .four .sub p:nth-child(2)', { opacity: 1, duration: .3 }, "=-.5")
+.to('.four li:not(:last-child)', { duration: .5, opacity: 0, delay: .5, height: "0 !important", padding: 0, overflow: "hidden" })
+.to('.four .slogan p', { duration: .5, fontSize: "+=20" }, "=-.5")
 
 </script>
 </body>
