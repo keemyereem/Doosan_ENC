@@ -594,9 +594,6 @@
 .shinbundangline .sub_visual ul li:first-child p em:nth-of-type(3) { padding-left: 11rem; }
 
 
-
-
-
 /* 사업소개 */
 .civil_engineer .sub_visual { background-image: url(../images/business/business_bg.png); }
 .civil_engineer .tab_box { padding: 4.5rem 0 0; background: #f9f9f9; }
@@ -709,6 +706,53 @@
 .technology .con_tit { padding-bottom: 0; }
 
 /* 기술역량 */
+.technology .competence .love_motion .top { position: relative; border: 1px solid #f00; margin-bottom: 100px; display: none; }
+.technology .competence .love_motion .top .biglove { font-family: 'Montserrat'; font-size: 260px; font-weight: 450; color: #005EB8; letter-spacing: 5.2px; margin: 0 auto; text-align: center; line-height: .7; }
+.technology .competence .love_motion .top p { font-size: 32px; font-weight: 350; color: #0c1014; letter-spacing: -.8px; text-align: center; margin-top: 5.5rem; }
+.technology .competence .love_motion .top p em { color: #005EB8; }
+
+.technology .competence .love_motion .box { max-width: 1640px; width: 100%; height: 705px; background: #005EB8; margin: auto; position: relative; display: flex; justify-content: center; align-items: center;}
+.technology .competence .love_motion .box::after { content:''; display: block; width: 100%; height: 100%; border: 5px solid #000; box-sizing: border-box; border-radius: 0 0 184px 184px; border-top: 0; position: absolute; bottom: 0;  }
+.technology .competence .love_motion .box::before { content:''; display: block; width: 100%; height: calc( 100% - 75px); /* background: #fff; */ position: absolute; top: 0; z-index: 1; }
+.technology .competence .love_motion .box > li { background: #fff; width: 328px; height: 328px; border-radius: 100%; position: absolute; opacity: 0; z-index: 2; }
+.technology .competence .love_motion .box > li > ul { display: flex; flex-direction: column; justify-content: center; height: 100%; width: 100%; }
+.technology .competence .love_motion .box > li > ul > li { text-align: center; position: relative; height: auto; }
+.technology .competence .love_motion .box > li > ul > li img:not(:first-child),
+.technology .competence .love_motion .box > li > ul > li p:not(:first-child) { position: absolute; left: 0; right: 0; margin: auto; top: 0; opacity: 0; }
+.technology .competence .love_motion .box > li > ul > li:nth-child(2) p { font-size: 16px; padding: 10px 0 0; }
+.technology .competence .love_motion .box > li > ul > li:nth-child(3) p { font-size: 48px; line-height: 1; font-family: 'Montserrat'; font-weight: 350; }
+.technology .competence .love_motion .box > li > ul > li:nth-child(3) p em { color: #005EB8; }
+.technology .competence .love_motion .box > li .hover { display: none; }
+.technology .competence .love_motion .box > li .icon { border: 1px solid #000; position: relative; }
+.technology .competence .love_motion .box > li .icon img {  }
+.technology .competence .love_motion .box > li:hover .hover { display: block; }
+.technology .competence .love_motion .box > li:hover > ul > .icon { display: inline-block; border: 1px solid orange; }
+.technology .competence .love_motion .box > li:hover .icon img:last-child { position: relative; z-index: 10;}
+.technology .competence .love_motion .box > li .hover p { font-size: 2.2rem; color: #0c1014; }
+
+
+.technology .competence .have_motion { width: 100%; height: 60rem; background-image: radial-gradient(rgba(15, 178, 138,.4) 20%, transparent 0); background-repeat: repeat; background-size: 8px 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.technology .competence .have_motion .have { display: flex; }
+.technology .competence .have_motion .have span { font-size: 15rem; font-weight: 400; font-family: 'Montserrat'; }
+.technology .competence .have_motion .transform-box { width: 3.5rem; height: 3.5rem; background: #005eb8; transform: rotate(30deg) translate(1rem, 2rem); position: relative; }
+.technology .competence .have_motion .transform-box .left,
+.technology .competence .have_motion .transform-box .right { width: 3.5rem; height: 3.5rem; -webkit-box-sizing: border-box; box-sizing: border-box; position: absolute; }
+.technology .competence .have_motion .transform-box .left::after,
+.technology .competence .have_motion .transform-box .right::after { content:''; display: block; width: 2rem; height: 100%; box-sizing: border-box; position: absolute; }
+.technology .competence .have_motion .transform-box .left::after { left: 0; border-left: 1rem solid #708da7; border-top: 1rem solid #708da7; border-bottom: 1rem solid #708da7; transform: rotate(-90deg) translate(-1.5rem, 1.5rem); }
+.technology .competence .have_motion .transform-box .right::after { right: 0; border-right: 1rem solid #005eb8; border-top: 1rem solid #005eb8; border-bottom: 1rem solid #005eb8; transform: rotate(-90deg) translate(1.5rem, -1.5rem); }
+.technology .competence .have_motion .ha { opacity: 0; margin-left: -6rem; }
+.technology .competence .have_motion .ve { margin-left: -4rem; }
+.technology .competence .have_motion .txt { font-size: 3.4rem; font-weight: 400; text-align: center; margin-top: 2rem; line-height: 1.52; }
+.technology .competence .have_motion .txt span { color: #005eb8; }
+
+
+
+
+
+
+
+
 
 /* 지식재산권 */
 .technology .ipr { padding-top: 10rem; padding-bottom: 20rem; }

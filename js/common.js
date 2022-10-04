@@ -516,6 +516,108 @@ var civilOutline = {
   },
 }
 
+var techEvent = {
+  init: function(){
+    this.loveMotion();
+    this.haveMotion();
+  },
+
+  loveMotion : () => {
+    const tl1 = gsap.timeline({ /* repeat:-1, repeatDelay: 1 */ });
+
+    tl1.to('.one', { x: -516 })
+    .to('.one', { opacity: 1, duration: .5 })
+    .to('.one .slogan p:first-child', { x : 0, opacity: 0, duration: .2 })
+    .to('.one .slogan p:last-child', { x : 0, opacity: 1, duration: .3 }, "=-.1");
+    
+    tl1.to('.two', { x: -172 })
+    .to('.two', { opacity: 1, duration: .5, delay: .5 })
+    .to('.two .slogan p:first-child', { x : 0, opacity: 0, duration: .2 })
+    .to('.two .slogan p:last-child', { x : 0, opacity: 1, duration: .3 }, "=-.1");
+    
+    tl1.to('.three', { x: 172 })
+    .to('.three', { opacity: 1, duration: .5, delay: .5 })
+    .to('.three .slogan p:first-child', { x : 0, opacity: 0, duration: .2 })
+    .to('.three .slogan p:last-child', { x : 0, opacity: 1, duration: .3 }, "=-.1");
+    
+    tl1.to('.four', { x: 516 })
+    .to('.four', { opacity: 1, duration: .5, delay: .5 })
+    .to('.four .slogan p:first-child', { x : 0, opacity: 0, duration: .2 })
+    .to('.four .slogan p:nth-child(2)', { x : 0, opacity: 1, duration: .3 }, "=-.1");
+    
+    tl1.to('.box', { borderRadius: "50px", duration: .5, delay: .5 })
+    .to('.box > li', { x: 0, y: 0, duration: 1, delay: .5 }, "=-1")
+    .to('.box', { borderRadius: "350px", width: "705px", duration: 1 }, "=-1")
+    .to('.four .sub p:first-child, .four .slogan p:nth-child(2)', { opacity: 0, duration: .2 }, "=-.1")
+    .to('.four .sub p:last-child, .four .slogan p:nth-child(3)', { opacity: 1, duration: .3 }, "=-.1");
+        
+    tl1.to('.box', { background: "rgba(153, 205, 255, .2)", duration: .5, delay: .5 })
+    .to('.four .sub p:last-child, .four .slogan p:nth-child(3), .four .icon img:first-child', { opacity: 0, duration: 0, delay: 0 })
+    .to('.four', { background: "#005EB8", width: "610px", height: "610px", duration: .5 })
+    .to('.four .box > li .icon, .four .box > li .sub', { display: "none", opacity: 0, height: "0", padding: 0, overflow: "hidden", duration: 0, delay: 0 })
+    .to('.four .slogan p:last-child', { opacity: 1, duration: .5,  color: "#fff" })
+    .to('.four .slogan p:last-child', { duration: .5, fontSize: "+=90" }, "=-.1")
+
+    
+    tl1.to('.box > li', { border: "1px solid #dbdbdb" })
+    .to('.one', { x: -516, duration: 0, delay: 0 })
+    .to('.two', { x: -172, duration: 0, delay: 0 })
+    .to('.three', { x: 172, duration: 0, delay: 0 })
+    .to('.four', { x: 516, duration: 0, delay: 0, background: "#fff", width: "328px", height: "328px" })
+    .to('.box', { width: "100%", height: "370px", backgroundColor: "transparent", borderRadius: "0", duration: 0, delay: 0 })
+    .to('.box > li .icon, .box > li .sub', { display: "none", opacity: 0, height: "0", padding: 0, overflow: "hidden", duration: 0, delay: 0 })
+    .to('.box > li .slogan p:nth-child(2)', { opacity: 1, duration: 0, delay: 0 })
+    .to('.four .slogan p:nth-child(3)', { opacity: 0, duration: 0, delay: 0 })
+    .to('.four .slogan p:last-child', { opacity: 0 })
+    .to('.box', { opacity: 0, duration: .2 }, "=-.5");
+    
+    tl1.to('.top', { display: "block" })
+    .to('.box', { opacity: 1, duration: .5 }, "=-.1");
+
+    tl1
+    .to('.four .slogan p:nth-child(2)', { opacity: 1 })
+    .to('.four .slogan p:nth-child(3)', { opacity: 0 })
+
+
+
+
+
+
+
+
+  },
+
+  haveMotion :()=> {
+    const tl2 = gsap.timeline({stagger:1});
+
+    tl2
+        .to('.transform-box', { scale: 3.14,  duration: .5, delay: 1})
+
+        .to('.we', { x:"-3rem",  duration: .5}, 1)
+        .to('.ve', { x:"2rem",  duration: .5}, 1)
+        .to('.transform-box', { scale: 3.14, rotation: 90, x: "1rem", y: "5rem",  duration: .8})
+
+        .to('.we', { x:"-5rem",  duration: .5}, 1.5)
+        .to('.ve', { x:"4rem",  duration: .5}, 1.5)
+        .to('.transform-box', { backgroundColor: "transparent",  duration: 0, delay: .5}, 2)
+        .to('.transform-box .left', { y: "2.5rem",  duration: .5, delay: .5}, 2.5)
+        .to('.transform-box .right', { y: "-2.5rem",  duration: .5, delay: .5}, 2.5)
+
+        .to('.we', { x: "-11.5rem",  duration: .5}, 3)
+        .to('.ve', { x: "10rem",  duration: .5}, 3)
+        .to('.ha', { opacity: "1",  duration: .2, delay: 1}, 3)
+
+        .to('.transform-box .left', { opacity: 0,  duration: .5, delay: .5}, 4.5)
+        .to('.transform-box .right', { opacity: 0,  duration: .5, delay: .5}, 4.5)
+        .to('.we', { x:"-6rem",  duration: .5}, 5.5)
+        .to('.ve', { x:"3.5rem",  duration: .5}, 5.5)
+        .to('.we', { color:"#005eb8",  duration: .5}, 6.5)
+        .to('.ve', { color:"#005eb8",  duration: .5}, 6.5)
+        .to('.we', { color:"#000",  duration: .5, delay: .5}, 7.5)
+  },
+
+};
+
 var companyEvent = {
   init: function(){
     this.chart();
