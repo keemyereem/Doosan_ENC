@@ -591,11 +591,12 @@ var techEvent = {
     const tl2 = gsap.timeline({stagger:1});
 
     tl2
-        .to('.transform-box', { scale: 3.14,  duration: .5, delay: 1})
+        .to('.transform-box', { /* scale: 3.14 */width: "110px", height: "110px",  duration: .5, delay: 1})
 
         .to('.we', { x:"-3rem",  duration: .5}, 1)
         .to('.ve', { x:"2rem",  duration: .5}, 1)
-        .to('.transform-box', { scale: 3.14, rotation: 90, x: "1rem", y: "5rem",  duration: .8})
+        .to('.transform-box', { /* scale: 3.14 */width: "110px", height: "110px", rotation: 90, x: "1rem", y: "5rem",  duration: .8})
+        .to('.transform-box .left::after, .transform-box .right::after', { width: "110px", height: "110px",  duration: .8})
 
         .to('.we', { x:"-5rem",  duration: .5}, 1.5)
         .to('.ve', { x:"4rem",  duration: .5}, 1.5)
@@ -607,8 +608,7 @@ var techEvent = {
         .to('.ve', { x: "10rem",  duration: .5}, 3)
         .to('.ha', { opacity: "1",  duration: .2, delay: 1}, 3)
 
-        .to('.transform-box .left', { opacity: 0,  duration: .5, delay: .5}, 4.5)
-        .to('.transform-box .right', { opacity: 0,  duration: .5, delay: .5}, 4.5)
+        .to('.transform-box .left, .transform-box .right', { opacity: 0,  duration: .5, delay: .5}, 4.5)
         .to('.we', { x:"-6rem",  duration: .5}, 5.5)
         .to('.ve', { x:"3.5rem",  duration: .5}, 5.5)
         .to('.we', { color:"#005eb8",  duration: .5}, 6.5)
@@ -764,5 +764,30 @@ var companyEvent = {
         }
       }
     }); 
+  },
+}
+
+var customerEvent = {
+  init: function(){
+    this.inqEmail();
+  },
+
+  inqEmail : function() {
+    //selectbox
+    var selectType = $(".select_row>select");
+    selectType.addClass("selectBox");
+    selectChange(selectType);
+    function selectChange(type) {
+        type.change(function () {
+            var select_name = $(this).children("option:selected").text();
+            $(this).siblings("label").text(select_name);
+
+            if(select_name === '직접입력') {
+                $('.customer .cyber_report .row .ipt_cell.email_cell > div:nth-of-type(2)').show();
+            }else {
+                $('.customer .cyber_report .row .ipt_cell.email_cell > div:nth-of-type(2)').hide();
+            }
+        });
+    };
   },
 }

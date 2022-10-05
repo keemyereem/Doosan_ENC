@@ -54,6 +54,7 @@
     <script src="js/lib/slick.min.js"></script>
 
     <script src="js/common.js?v=1.0"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <!-- Initialized Include Path -->
     <script>
@@ -64,6 +65,7 @@
 
             // JS importing
             commonEvent.init();
+            customerEvent.init();
         });
     </script>
 </head>
@@ -100,7 +102,7 @@
                                 </ul>
                             </div>
                             <div class="depth depth2">
-                                <a href="javascript:;" class="dep_tit" title="하위메뉴 열기">고객문의</a>
+                                <a href="javascript:;" class="dep_tit" title="하위메뉴 열기">사이버 감사실</a>
                                 <ul class="drop_box">
                                     <li><a href="javascript:;" title="공지사항 페이지로 이동">공지사항</a></li>
                                     <li><a href="javascript:;" title="고객문의 페이지로 이동">고객문의</a></li>
@@ -116,14 +118,10 @@
             </div>
 
             <div class="title_area">
-                <h2 class="con_tit" data-aos="fade-up">고객문의</h2>
-                <p class="sub_txt" data-aos="fade-up">
-                    두산건설에 관심을 가져주셔서 감사합니다.<br>
-                    아래 양식을 작성해주시면 해당 담당자가 연락드리겠습니다.
-                </p>
+                <h2 class="con_tit pb0" data-aos="fade-up"><em>윤리경영</em><span></span>부정 / 부패</h2>
             </div>
 
-            <div class="contents customer_inquiry">
+            <div class="contents cyber_report">
                 <section class="section1">
                     <div class="inner">
                         <h2 class="sec_tit">개인정보 수집 및 이용동의</h2>
@@ -135,11 +133,6 @@
                                 - 개인정보 수집방법 : 홈페이지
                             </div>
                         </div>
-                        <ul>
-                            <li><span>※</span> 위의 수집 및 이용 목적에 동의를 거부할 수 있으나, 이에 대한 동의가 없을 경우 상담을 진행할 수 없음을 알려드립니다.</li>
-                            <li><span>※</span> 상기 민원 상담을 위해 취득한 개인정보는 민원처리 목적 외의 마케팅 등에 활용되지 않습니다.</li>
-                            <li><span>※</span> 개인정보 수집 및 이용동의를 자세히 읽어 보신 후 동의해 주시기 바랍니다.</li>
-                        </ul>
 
                         <div class="checkbox_row">
                             <p>개인정보 수집 · 이용에 동의합니다.</p>
@@ -168,58 +161,70 @@
                     <div class="inner">
                         <p><span class="es">*</span>필수 입력항목</p>
 
-                        <div class="row row_short">
-                            <div class="tit_cell">분야</div>
+                        <div class="row">
+                            <div class="tit_cell">분류</div>
                             <div class="ipt_cell">
-                                <div class="select_row">
-                                <label for="sel01">분야를 선택해 주세요.</label>
-                                <select id="sel01" class="selectBox">
-                                    <option value="">사업</option>
-                                    <option value="">채용</option>
-                                    <option value="">사회책임경영</option>
-                                    <option value="">분양</option>
-                                    <option value="">공정거래</option>
-                                    <option value="">투자정보</option>
-                                    <option value="">웹사이트</option>
-                                    <option value="">기타</option>
-                                    <option value="">A/S신청</option>
-                                </select>
+                                <div class="txt_row">
+                                    윤리경영&nbsp; &gt; &nbsp;<b>부정 / 부패</b>
                                 </div>
                             </div>
                         </div>  
-                        <div class="row row_short">
-                            <div class="tit_cell">국가</div>
-                            <div class="ipt_cell">
-                                <div class="select_row">
-                                <label for="sel02">국가를 선택해 주세요.</label>
-                                <select id="sel02" class="selectBox">
-                                    <!-- <option value=""></option> -->
-                                </select>
-                                </div>
-                            </div>
-                        </div>  
-
-
-                        <div class="row row_short">
-                            <div class="tit_cell">소속회사</div>
-                            <div class="ipt_cell">
+                        <div class="row alignTop">
+                            <div class="tit_cell">이름<span class="es">*</span></div>
+                            <div class="ipt_cell name_cell">
                                 <div class="input_row">
-                                    <input type="text" id="company_name" placeholder="소속회사을 입력해 주세요.">
+                                    <input type="text" id="name" placeholder="이름을 입력해 주세요.">
+                                </div>
+                                <div class="checkbox_row">
+                                    <input type="checkbox" name="anonymous" id="anonymous" >
+                                    <label for="anonymous">익명</label>
+                                </div>
+                                <span class="info">* 익명으로 제보한 경우 조사가 되지 않거나 처리결과가 통보되지 않을 수 있습니다.</span>
+                            </div>
+                        </div> 
+                        <div class="row row_short">
+                            <div class="tit_cell">연락처<span class="es">*</span></div>
+                            <div class="ipt_cell phone_cell">
+                                <div class="input_row">
+                                    <input type="text" id="phone_frt">
+                                </div>
+                                <span>-</span>
+                                <div class="input_row">
+                                    <input type="text" id="phone_mid">
+                                </div>
+                                <span>-</span>
+                                <div class="input_row">
+                                    <input type="text" id="phone_lst">
                                 </div>
                             </div>
                         </div> 
                         <div class="row">
-                            <div class="tit_cell">분류<span class="es">*</span></div>
-                            <div class="ipt_cell">
+                            <div class="tit_cell">이메일<span class="es">*</span></div>
+                            <div class="ipt_cell email_cell">
+                                <div class="input_row">
+                                    <input type="text" id="email_front" placeholder="메일을 입력해 주세요." />
+                                </div>
+                                <span>@</span>
+                                <div class="input_row">
+                                    <input type="text" id="email_address" />
+                                </div>
                                 <div class="select_row">
-                                <label for="sel03">분류를 선택해 주세요.</label>
-                                <select id="sel03" class="selectBox">
-                                    <option value="">토목</option>
-                                    <option value="">건축</option>
-                                </select>
+                                    <label for="email_self">naver.com</label>
+                                    <select id="email_self" class="selectBox">
+                                        <option value="">직접입력</option>
+                                        <option selected value="naver.com">naver.com</option>
+                                        <option value="daum.net">daum.net</option>
+                                        <option value="hanmail.net">hanmail.net</option>
+                                        <option value="nate.com">nate.com</option>
+                                        <option value="gmail.com">gmail.com</option>
+                                        <option value="empal.com">empal.com</option>
+                                        <option value="hotmail.com">hotmail.com</option>
+                                        <option value="korea.kr">korea.kr</option>
+                                        <option value="yahoo.com">yahoo.com</option>
+                                    </select>
                                 </div>
                             </div>
-                        </div>  
+                        </div> 
                         <div class="row">
                             <div class="tit_cell">제목<span class="es">*</span></div>
                             <div class="ipt_cell">
@@ -228,7 +233,7 @@
                                 </div>
                             </div>
                         </div> 
-                        <div class="row cont_row">
+                        <div class="row alignTop">
                             <div class="tit_cell">내용<span class="es">*</span></div>
                             <div class="ipt_cell">
                                 <div class="area_row">
@@ -241,14 +246,40 @@
                             <div class="ipt_cell">
                                 <div class="file_row">
                                     <input class="upload_name" value="선택된 파일 없음" readonly>
-                                    <label for="upload_file">찾아보기</label>
+                                    <label for="upload_file">파일 선택</label>
                                     <input type="file" id="upload_file" name="upload_file">
                                 </div>
-                                <span class="info">* 첨부 가능한 파일의 최대 용량은 9MB입니다.</span>
+                                <span class="info">
+                                    ※ jpg, png, gif 등 이미지파일 또는 hwp, docx, xlsx, pdf, pptx 등의 문서 형식만 지원<br>
+                                    ※ 첨부하실 파일의 사이즈는 5MB까지 업로드 가능합니다
+                                </span>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="tit_cell">자동입력방지<span class="es">*</span></div>
+                            <div class="ipt_cell robot_cell">
+                                
+                                <div class="g-recaptcha" data-sitekey="6LcS1FYiAAAAAMrZWPa4EXYEO15NsZ4tFVSYw0LM"></div>								
+                                <button type="submit" onclick='return check_recaptcha();'>버튼</button>
+                                 
+                            </div>
+
+                            <script>
+                                function check_recaptcha(){
+                                    var v = grecaptcha.getResponse();
+                                    if (v.length ==0) {
+                                        alert ("'로봇이 아닙니다.'를 체크해주세요.");
+                                        return false;
+                                    } else {
+                                        location.reload();
+                                        return true;
+                                    }
+                                }
+                            </script>
+                                
+                        </div> 
                         <div class="btn_box">
-                            <div class="btn_blk"><a href="javascript:;">접수</a></div>
+                            <div class="btn_blk"><a href="javascript:;">제보하기</a></div>
                         </div>
                     </div>
 
@@ -256,7 +287,7 @@
             </div>
             <!-- footer -->
             <section class="footer">
-                <h2 class="indent">푸터</h2>
+                <h3 class="indent">footer</h3>            
             </section> 
         </div>
 

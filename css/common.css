@@ -80,7 +80,7 @@ br.br_t, br.br_m {display: none;}
 .checkbox_row {display: flex; flex-wrap: wrap; position: relative;}
 .checkbox_row p { width: 100%; font-size: 2.2rem; font-weight: 400; padding-bottom: 2.2rem; }
 .checkbox_row input[type="checkbox"] {display: none;}
-.checkbox_row input[type="checkbox"] + label {display: block;position: relative;font-size: 2rem;color: #222;cursor: pointer; margin-right: 4rem; }
+.checkbox_row input[type="checkbox"] + label {display: inline-block;position: relative;font-size: 2rem;color: #222;cursor: pointer; margin-right: 4rem; }
 .checkbox_row input[type="checkbox"] + label span { color: #888888; }
 .checkbox_row input[type="checkbox"] + label:before {content: "";display: inline-block;margin-right: 1.6rem;width: 2.4rem;height: 2.4rem;background: #fff;border: .1rem solid #e8e8e8;vertical-align: top;box-sizing: border-box;}
 .checkbox_row input[type="checkbox"]:checked + label:before {content: "";background: #fff url(../images/common/checked.png) 50% 50% no-repeat;background-size: 1.3rem 1rem;}
