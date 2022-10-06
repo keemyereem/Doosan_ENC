@@ -518,102 +518,196 @@ var civilOutline = {
 
 var techEvent = {
   init: function(){
-    this.loveMotion();
-    this.haveMotion();
+    this.motion();
+    this.sectionNav();
   },
 
-  loveMotion : () => {
-    const tl1 = gsap.timeline({ /* repeat:-1, repeatDelay: 1 */ });
+  motion : () => {
+    const tl1 = gsap.timeline({stagger:1, onComplete: function() {
+      $('.box > li').hover(function() {
+        $(this).addClass('on');
+        $(this).css('background', '#005EB8');
+        $(this).children('ul').eq(0).css({'opacity': '1'});
+        $(this).children('ul').eq(1).css({'opacity': '0'});
+      }, function() {
+        $(this).removeClass('on');
+        $(this).css('background', '#fff');
+        $(this).children('ul').eq(1).css({'opacity': '1'});
+        $(this).children('ul').eq(0).css({'opacity': '0'});
+      })
+    }}),
+          tl2 = gsap.timeline({stagger:1});
 
-    tl1.to('.one', { x: -516 })
+    $(window).on('load resize scroll', ()=> {
+      let st = $(window).scrollTop(),
+          motion01 = $('.love_motion').offset().top,
+          motion02 = $('.have_motion').offset().top,
+          trigger = st + $(window).height() / 2;
+
+      // love motion trigger
+      if (trigger > motion01 && trigger < motion02) {
+        tl1.play()
+      } else {
+        tl1.reverse()
+      }
+
+      // have motion trigger
+      if(trigger > motion02 && trigger < $('.section1').offset().top) {
+        tl2.play()
+      } else {
+        tl2.reverse()
+      }
+    })
+      
+    tl1.to('.one', { x: -516, delay: 1 })
     .to('.one', { opacity: 1, duration: .5 })
     .to('.one .slogan p:first-child', { x : 0, opacity: 0, duration: .2 })
-    .to('.one .slogan p:last-child', { x : 0, opacity: 1, duration: .3 }, "=-.1");
-    
-    tl1.to('.two', { x: -172 })
+    .to('.one .slogan p:last-child', { x : 0, opacity: 1, duration: .3 }, "=-.1")
+
+    .to('.two', { x: -172 })
     .to('.two', { opacity: 1, duration: .5, delay: .5 })
     .to('.two .slogan p:first-child', { x : 0, opacity: 0, duration: .2 })
-    .to('.two .slogan p:last-child', { x : 0, opacity: 1, duration: .3 }, "=-.1");
-    
-    tl1.to('.three', { x: 172 })
+    .to('.two .slogan p:last-child', { x : 0, opacity: 1, duration: .3 }, "=-.1")
+
+    .to('.three', { x: 172})
     .to('.three', { opacity: 1, duration: .5, delay: .5 })
     .to('.three .slogan p:first-child', { x : 0, opacity: 0, duration: .2 })
-    .to('.three .slogan p:last-child', { x : 0, opacity: 1, duration: .3 }, "=-.1");
-    
-    tl1.to('.four', { x: 516 })
+    .to('.three .slogan p:last-child', { x : 0, opacity: 1, duration: .3 }, "=-.1")
+
+    .to('.four', { x: 516 })
     .to('.four', { opacity: 1, duration: .5, delay: .5 })
     .to('.four .slogan p:first-child', { x : 0, opacity: 0, duration: .2 })
-    .to('.four .slogan p:nth-child(2)', { x : 0, opacity: 1, duration: .3 }, "=-.1");
+    .to('.four .slogan p:nth-child(2)', { x : 0, opacity: 1, duration: .3 }, "=-.1")
+
+    .to('.box > li', { x: 0, y: 0, duration: 1, delay: .5 })
+    .to('.box', { borderRadius: "705px", width: "705px", duration: 1 }, "=-1")
+    .to('svg, .box p', { opacity: 0, duration: .2 }, "=-.7")
+    .to('svg:last-child, .slogan p:nth-child(3), .sub p:last-child', { opacity: 1, duration: .3 }, "=-.7")
+
+    .to('.box', { background: "rgba(235, 245, 255, 1)", duration: 1, delay: .5 })
+    .to('.four li, .box > li:not(:last-child)', { opacity: 0, duration: .2, delay: .2 }, "=-1")
+    .to('.four', { scale: 1.9, background: "#005EB8", duration: .5 }, "=-1")
+    .to('.love span:first-child', { opacity: 1, duration: .5 }, "=-1")
+    .to('.box, .box > li, .four li p:last-child', { opacity: 0, background: "transparent", duration: .6 })
+    .to('.love span', { bottom: "auto", scale: 1.8, duration: 1, color: '#005EB8', fontWeight: 450 }, "=-.6")
+    .to('.love span:first-child', { opacity: 0, duration: .3 }, "=-1")
+    .to('.love span:last-child', { opacity: 1, duration: 1 }, "=-1")
+
+    .to('.line, .slogan p', {opacity: 1, duration: .6 })
+    .to('.line', {top: 200, duration: .6 })
+    .to('.love_motion > h2', {top: 190, opacity: 1, duration: .6 })
+    .to('.line', {top: 626, duration: .6, delay: .5 })
+    .to('.love', { height: 0 }, "=-.5")
+    .to('.box', { width: "100%", height: "40.8rem", opacity: 1 }, "=-.5")
+    .to('.one', { x: -516, duration: 0 }, "=-.5")
+    .to('.two', { x: -172, duration: 0 }, "=-.5")
+    .to('.three', { x: 172, duration: 0}, "=-.5")
+    .to('.four', { x: 516, scale: 1, duration: 0 }, "=-.5")
+    .to('.box > li > ul:first-child, .slogan p:not(:nth-child(2))', { opacity: 0, duration:0 })
+    .to('.box > li', { opacity: 1, background: "#fff", border: "1px solid rgba(0, 0, 0, .15)", duration: 1 })
+    .to('.motion_menu, .motion_menu p', { opacity: 1, duration: 1 }, "=-1")
+    .to('.four li', { opacity: 1 }, "=-1")
+
+
+
+    /* have motion */
+    tl2
+    // .to('.we', { x: "3rem"})
+    // .to('.ve', { x: "-3rem"})
+
+    .to('.transform-box', { width: "110px", height: "110px", rotation: 90, x: "5rem", y: "3.5rem",  duration: .8, delay: 1})
+    .to('.ve', { x: "6rem", duration: .8})
+    .to('.transform-box .left, .transform-box .right', { display: "block"})
+    .to('.transform-box', { backgroundColor: "transparent",  duration: .2 })
+    .to('.transform-box .left', { y: "10.5rem",  duration: .5}, 2.5)
+    .to('.transform-box .right', { y: "-13.5rem",  duration: .5}, 2.5)
+    .to('.we', { x: "-11rem", duration: .5}, 2.5)
+    .to('.ve', { x: "11rem", duration: .5}, 2.5)
+    .to('.ha', { x: "-3rem"}, 2.5)
+    .to('.ha', { width: "auto", visibility: "visible", opacity: "1", duration: .5, delay: .8}, 2.5)
+
+    .to('.transform-box .left, .transform-box .right', { display: "none", delay: .5}, 3.5)
+    .to('.transform-box', { width: "0", duration: .5, delay: .5}, 4.5)
+    .to('.we', { x: "-1rem",  duration: .5, delay: .5}, 4.5)
+    .to('.ve', { x: "1rem",  duration: .5, delay: .5}, 4.5)
+    .to('.ha', { x: "3rem", delay: .5}, 4.5)
     
-    tl1.to('.box', { borderRadius: "50px", duration: .5, delay: .5 })
-    .to('.box > li', { x: 0, y: 0, duration: 1, delay: .5 }, "=-1")
-    .to('.box', { borderRadius: "350px", width: "705px", duration: 1 }, "=-1")
-    .to('.four .sub p:first-child, .four .slogan p:nth-child(2)', { opacity: 0, duration: .2 }, "=-.1")
-    .to('.four .sub p:last-child, .four .slogan p:nth-child(3)', { opacity: 1, duration: .3 }, "=-.1");
-        
-    tl1.to('.box', { background: "rgba(153, 205, 255, .2)", duration: .5, delay: .5 })
-    .to('.four .sub p:last-child, .four .slogan p:nth-child(3), .four .icon img:first-child', { opacity: 0, duration: 0, delay: 0 })
-    .to('.four', { background: "#005EB8", width: "610px", height: "610px", duration: .5 })
-    .to('.four .box > li .icon, .four .box > li .sub', { display: "none", opacity: 0, height: "0", padding: 0, overflow: "hidden", duration: 0, delay: 0 })
-    .to('.four .slogan p:last-child', { opacity: 1, duration: .5,  color: "#fff" })
-    .to('.four .slogan p:last-child', { duration: .5, fontSize: "+=90" }, "=-.1")
 
+
+    .to('.we', { color:"#005eb8",  duration: .3, delay: .5}, 5.5)
+    .to('.ve', { color:"#005eb8",  duration: .3, delay: .5}, 5.5)
+    .to('.we', { color:"#000",  duration: .3, delay: 1}, 6.5)
     
-    tl1.to('.box > li', { border: "1px solid #dbdbdb" })
-    .to('.one', { x: -516, duration: 0, delay: 0 })
-    .to('.two', { x: -172, duration: 0, delay: 0 })
-    .to('.three', { x: 172, duration: 0, delay: 0 })
-    .to('.four', { x: 516, duration: 0, delay: 0, background: "#fff", width: "328px", height: "328px" })
-    .to('.box', { width: "100%", height: "370px", backgroundColor: "transparent", borderRadius: "0", duration: 0, delay: 0 })
-    .to('.box > li .icon, .box > li .sub', { display: "none", opacity: 0, height: "0", padding: 0, overflow: "hidden", duration: 0, delay: 0 })
-    .to('.box > li .slogan p:nth-child(2)', { opacity: 1, duration: 0, delay: 0 })
-    .to('.four .slogan p:nth-child(3)', { opacity: 0, duration: 0, delay: 0 })
-    .to('.four .slogan p:last-child', { opacity: 0 })
-    .to('.box', { opacity: 0, duration: .2 }, "=-.5");
-    
-    tl1.to('.top', { display: "block" })
-    .to('.box', { opacity: 1, duration: .5 }, "=-.1");
-
-    tl1
-    .to('.four .slogan p:nth-child(2)', { opacity: 1 })
-    .to('.four .slogan p:nth-child(3)', { opacity: 0 })
-
-
-
-
-
-
-
-
   },
 
-  haveMotion :()=> {
-    const tl2 = gsap.timeline({stagger:1});
 
-    tl2
-        .to('.transform-box', { /* scale: 3.14 */width: "110px", height: "110px",  duration: .5, delay: 1})
+  sectionNav: () => {
 
-        .to('.we', { x:"-3rem",  duration: .5}, 1)
-        .to('.ve', { x:"2rem",  duration: .5}, 1)
-        .to('.transform-box', { /* scale: 3.14 */width: "110px", height: "110px", rotation: 90, x: "1rem", y: "5rem",  duration: .8})
-        .to('.transform-box .left::after, .transform-box .right::after', { width: "110px", height: "110px",  duration: .8})
+    const section = $('section'),
+          fixSidemenu = $('.competence .section_nav'),
+          fraction = fixSidemenu.find('.fraction'),
+          fixmenuHeight = $('.sub_visual_menu').height();
+    
+    fraction.children('.total_page').text(section.length)
 
-        .to('.we', { x:"-5rem",  duration: .5}, 1.5)
-        .to('.ve', { x:"4rem",  duration: .5}, 1.5)
-        .to('.transform-box', { backgroundColor: "transparent",  duration: 0, delay: .5}, 2)
-        .to('.transform-box .left', { y: "2.5rem",  duration: .5, delay: .5}, 2.5)
-        .to('.transform-box .right', { y: "-2.5rem",  duration: .5, delay: .5}, 2.5)
+    $(window).on('load resize scroll', function(e) {
+      let gap = $(window).height() / 4,
+          currentPosition = $(window).scrollTop() + fixmenuHeight,
+          fractionOut = (section.eq(section.length - 1).innerHeight() / 4) + $('.footer').offset().top - $('.footer').outerHeight();
 
-        .to('.we', { x: "-11.5rem",  duration: .5}, 3)
-        .to('.ve', { x: "10rem",  duration: .5}, 3)
-        .to('.ha', { opacity: "1",  duration: .2, delay: 1}, 3)
+      if (currentPosition > section.eq(0).offset().top - gap && currentPosition < fractionOut) {
+        fixSidemenu.addClass('on');
 
-        .to('.transform-box .left, .transform-box .right', { opacity: 0,  duration: .5, delay: .5}, 4.5)
-        .to('.we', { x:"-6rem",  duration: .5}, 5.5)
-        .to('.ve', { x:"3.5rem",  duration: .5}, 5.5)
-        .to('.we', { color:"#005eb8",  duration: .5}, 6.5)
-        .to('.ve', { color:"#005eb8",  duration: .5}, 6.5)
-        .to('.we', { color:"#000",  duration: .5, delay: .5}, 7.5)
+        section.each(function (index) {
+          
+          indexName = section.eq(index).find('.indent').text();
+
+          if (index + 1 !== section.length) {
+
+            if (currentPosition > section.eq(index).offset().top - gap && currentPosition < section.eq(index + 1).offset().top) {
+              section.eq(index).addClass('active');
+              section.not(':eq(' + index + ')').removeClass('active');
+              fraction.children('.current_page').text(index + 1);
+              fraction.children('.page_name').text(indexName);
+            }
+          } else {
+
+            if (currentPosition > section.eq(index).offset().top - gap) {
+              section.eq(index).addClass('active');
+              section.not(':eq(' + index + ')').removeClass('active');
+              fraction.children('.current_page').text(index + 1);
+              fraction.children('.page_name').text(indexName);
+            }
+          }
+
+        });
+
+      } else {
+        fixSidemenu.removeClass('on');
+        section.removeClass('active');
+      }
+    });
+
+    $('.section_nav .button').on('click', function() {
+      let ctlIdx = fraction.children('.current_page').text();
+
+      if ($(this).hasClass('prev') == true) {
+        if (ctlIdx == 1) {
+          ctlIdx = 0;
+        } else {
+        ctlIdx = ctlIdx - 2;
+        }
+
+        $('html, body').animate({
+          scrollTop: section.eq(ctlIdx).offset().top - fixmenuHeight
+        }, 500);
+      } else {
+        $('html, body').animate({
+          scrollTop: section.eq(ctlIdx).offset().top
+        }, 500);
+      }
+    })
+
   },
 
 };

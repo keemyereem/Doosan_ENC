@@ -14,6 +14,10 @@
     .civil_engineer .section .section_nav { left: 2rem; }
 }
 
+@media screen and (max-width:1550px) {
+    .technology .competence .section_nav.on { left: 1.5rem; }
+}
+
 @media screen and (max-width:1440px) {
     #pc { overflow-x: auto !important; width: 144rem;}
     .container .sub_visual h1 { left: 5rem; }
