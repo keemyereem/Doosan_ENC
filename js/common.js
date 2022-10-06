@@ -582,7 +582,7 @@ var techEvent = {
     .to('.box > li', { x: 0, y: 0, duration: 1, delay: .5 })
     .to('.box', { borderRadius: "705px", width: "705px", duration: 1 }, "=-1")
     .to('svg, .box p', { opacity: 0, duration: .2 }, "=-.7")
-    .to('svg:last-child, .slogan p:nth-child(3), .sub p:last-child', { opacity: 1, duration: .3 }, "=-.7")
+    .to('svg:last-child, .slogan p:nth-child(3), .sub p:last-of-type', { opacity: 1, duration: .3 }, "=-.7")
 
     .to('.box', { background: "rgba(235, 245, 255, 1)", duration: 1, delay: .5 })
     .to('.four li, .box > li:not(:last-child)', { opacity: 0, duration: .2, delay: .2 }, "=-1")
@@ -603,7 +603,7 @@ var techEvent = {
     .to('.two', { x: -172, duration: 0 }, "=-.5")
     .to('.three', { x: 172, duration: 0}, "=-.5")
     .to('.four', { x: 516, scale: 1, duration: 0 }, "=-.5")
-    .to('.box > li > ul:first-child, .slogan p:not(:nth-child(2))', { opacity: 0, duration:0 })
+    .to('.box > li > ul:first-child, .slogan p:not(:nth-child(2)), .sub p:last-of-type', { opacity: 0, duration:0 })
     .to('.box > li', { opacity: 1, background: "#fff", border: "1px solid rgba(0, 0, 0, .15)", duration: 1 })
     .to('.motion_menu, .motion_menu p', { opacity: 1, duration: 1 }, "=-1")
     .to('.four li', { opacity: 1 }, "=-1")
@@ -612,31 +612,29 @@ var techEvent = {
 
     /* have motion */
     tl2
-    // .to('.we', { x: "3rem"})
-    // .to('.ve', { x: "-3rem"})
-
-    .to('.transform-box', { width: "110px", height: "110px", rotation: 90, x: "5rem", y: "3.5rem",  duration: .8, delay: 1})
-    .to('.ve', { x: "6rem", duration: .8})
-    .to('.transform-box .left, .transform-box .right', { display: "block"})
-    .to('.transform-box', { backgroundColor: "transparent",  duration: .2 })
-    .to('.transform-box .left', { y: "10.5rem",  duration: .5}, 2.5)
-    .to('.transform-box .right', { y: "-13.5rem",  duration: .5}, 2.5)
-    .to('.we', { x: "-11rem", duration: .5}, 2.5)
-    .to('.ve', { x: "11rem", duration: .5}, 2.5)
-    .to('.ha', { x: "-3rem"}, 2.5)
-    .to('.ha', { width: "auto", visibility: "visible", opacity: "1", duration: .5, delay: .8}, 2.5)
-
-    .to('.transform-box .left, .transform-box .right', { display: "none", delay: .5}, 3.5)
-    .to('.transform-box', { width: "0", duration: .5, delay: .5}, 4.5)
-    .to('.we', { x: "-1rem",  duration: .5, delay: .5}, 4.5)
-    .to('.ve', { x: "1rem",  duration: .5, delay: .5}, 4.5)
-    .to('.ha', { x: "3rem", delay: .5}, 4.5)
+    .to('.transform-box', { width: "11rem", height: "11rem", rotation: 90, x: "2rem", y: "3.5rem", duration: .8, delay: 1 }, 1)
+    .to('.we', { x: "-2rem", duration: .8, delay: 1 }, 1)
+    .to('.ve', { x: "2.5rem", duration: .8, delay: 1 }, 1)
     
+    .to('.transform-box .left, .transform-box .right', { opacity: "1", duration: "0" }, 3)
+    .to('.transform-box', { backgroundColor: "transparent", duration: .2 }, 3)
 
+    .to('.transform-box .left', { y: "2rem",  duration: .5 }, 4)
+    .to('.transform-box .right', { y: "-21rem",  duration: .5 }, 4)
+    .to('.we', { x: "-4rem", duration: .5 }, 4)
+    .to('.ve', { x: "4rem", duration: .5 }, 4)
+    .to('.ha', { x: "-3.6rem", width: "auto" }, 4)
+    .to('.ha', { opacity: "1", delay: .5 }, 4)
 
-    .to('.we', { color:"#005eb8",  duration: .3, delay: .5}, 5.5)
-    .to('.ve', { color:"#005eb8",  duration: .3, delay: .5}, 5.5)
-    .to('.we', { color:"#000",  duration: .3, delay: 1}, 6.5)
+    .to('.transform-box .left, .transform-box .right', { display: "none", delay: .5}, 5)
+    .to('.transform-box', { width: "0", duration: .5, delay: .5}, 6)
+    .to('.we', { x: "0",  duration: .5, delay: .5}, 6)
+    .to('.ve', { x: "0",  duration: .5, delay: .5}, 6)
+    .to('.ha', { x: "1.6rem", delay: .5}, 6)
+
+    .to('.we', { color:"#005eb8",  duration: .3, delay: .5}, 7)
+    .to('.ve', { color:"#005eb8",  duration: .3, delay: .5}, 7)
+    .to('.we', { color:"#000",  duration: .3, delay: 1}, 8)
     
   },
 

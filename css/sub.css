@@ -801,6 +801,9 @@
 .technology .competence .love_motion .box > li > ul > li p:not(:first-child) { position: absolute; left: 0; right: 0; margin: auto; top: 0; opacity: 0; }
 .technology .competence .love_motion .box > li > ul > li p { font-family: 'Montserrat'; }
 .technology .competence .love_motion .box > li > ul > li:nth-child(2) p { font-size: 1.8rem; padding: 2rem 0 0; font-weight: 300; }
+.technology .competence .love_motion .box > li > ul > li:nth-child(2) a { display: none; color: #fff; font-weight: 150; font-size: 1.6rem; position: absolute; z-index: 1; left: 0; right: 0; top: 2.5rem; line-height: 1; padding: 1rem; bottom: 0; margin: auto; }
+.technology .competence .love_motion .box > li > ul > li:nth-child(2) a:after { content: ''; background: url(../images/common/icon_plus_w_15x15.png) 50% 50% no-repeat; background-size: cover; width: 1.5rem; height: 1.5rem; display: inline-block; position: relative; margin-left: 2rem; top: .1rem; transition: all ease .3s; }
+.technology .competence .love_motion .box > li > ul > li:nth-child(2) a:hover:after { transform: rotate(90deg); }
 .technology .competence .love_motion .box > li > ul > .slogan p { font-size: 4.2rem; padding: 1rem 0 0; line-height: 1; font-weight: 400; }
 .technology .competence .love_motion .box > .four { z-index: 9; }
 .technology .competence .love_motion .box > .four ul:first-child .slogan p:last-child { left: 50%; transform: translateX(-50%); line-height: 1; }
@@ -814,11 +817,11 @@
 .technology .competence .love_motion .line { margin: auto; left: 0; right: 0; top: 13rem; bottom: auto; width: fit-content; position: absolute; opacity: 0; }
 .technology .competence .love_motion .line img { width: 100%; }
 .technology .competence .love_motion > h2 { color: #0c1014; letter-spacing: -.15rem; font-size: 3.2rem; line-height: 1; font-weight: 350; text-align: center;  margin: auto; left: 0; right: 0; top: 17rem; bottom: auto; width: fit-content; position: absolute; opacity: 0; }
-
-.technology .competence .love_motion .box > li.on { transition: all ease .3s; }
+.technology .competence .love_motion .box > li.on { transition: all ease .3s; box-shadow: 0px 13px 40px 0px rgba(0, 0, 0, 0.28); }
 .technology .competence .love_motion .box > li.on ul svg,
 .technology .competence .love_motion .box > li.on ul svg .st0 { fill:#fff; }
 .technology .competence .love_motion .box > li.on ul .sub { order: 1; }
+.technology .competence .love_motion .box > li.on ul .sub a { display: block; }
 .technology .competence .love_motion .box > li.on ul .slogan { order: 0; margin-top: 1rem;}
 .technology .competence .love_motion .box > li.on ul .slogan p,
 .technology .competence .love_motion .box > li.on ul .slogan p em { color: #fff; }
@@ -826,16 +829,16 @@
 .technology .competence .have_motion .inner { width: 100%; max-width: 136rem!important; height: 55.2rem!important; background-image: radial-gradient(rgba(15, 178, 138,.4) 20%, transparent 0); background-repeat: repeat; background-size: 8px 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .technology .competence .have_motion .have { display: flex; }
 .technology .competence .have_motion .have span { font-size: 15rem; font-weight: 400; font-family: 'Montserrat'; }
-.technology .competence .have_motion .transform-box { width: 3.5rem; height: 3.5rem; background: #005eb8; transform: rotate(30deg) translate(0, 2rem); position: relative; }
+.technology .competence .have_motion .transform-box { width: 3.5rem; height: 3.5rem; background: #005eb8; transform: rotate(30deg) translate(0, 3rem); position: relative; }
 .technology .competence .have_motion .transform-box .left,
-.technology .competence .have_motion .transform-box .right { width: 11rem; height: 11rem; -webkit-box-sizing: border-box; box-sizing: border-box; position: absolute; display: none; }
+.technology .competence .have_motion .transform-box .right { width: 11rem; height: 11rem; -webkit-box-sizing: border-box; box-sizing: border-box; position: absolute; opacity: 0; }
 .technology .competence .have_motion .transform-box .left::after,
 .technology .competence .have_motion .transform-box .right::after { content:''; display: block; width: 5.6rem; height: 100%; box-sizing: border-box; position: absolute; }
 .technology .competence .have_motion .transform-box .left::after { top: 2.7rem; left: 0; border-left: 2rem solid #005eb8; border-top: 2rem solid #005eb8; border-bottom: 2rem solid #005eb8; transform: rotate(-90deg) translate(0, 2.7rem); }
 .technology .competence .have_motion .transform-box .right::after { top: -2.7rem; left: 5.4rem; border-right: 2rem solid #005eb8; border-top: 2rem solid #005eb8; border-bottom: 2rem solid #005eb8; transform: rotate(-90deg) translate(0, -2.7rem); }
-.technology .competence .have_motion .ha { opacity: 0; margin-left: -6rem; width:0; visibility: hidden; }
-/* .technology .competence .have_motion .we { margin-right: 2rem; } */
-.technology .competence .have_motion .ve { margin-left: 2rem; }
+.technology .competence .have_motion .ha { opacity: 0; width:0; }
+.technology .competence .have_motion .we { margin-right: 1rem; }
+.technology .competence .have_motion .ve { margin-left: 1rem; }
 .technology .competence .have_motion .txt { font-size: 3.4rem; font-weight: 400; text-align: center; margin-top: 2rem; line-height: 1.52; }
 .technology .competence .have_motion .txt span { color: #005eb8; }
 
@@ -872,6 +875,7 @@
 .technology .competence section:nth-of-type(2n).section6 { background: #fff; padding-bottom: 0; }
 .technology .competence .section6 h3::before { display: none; }
 .technology .competence .section6 ul { border-top: .3rem solid #000; border-bottom: .3rem solid #000; margin-top: 4.5rem; }
+/* .technology .competence .section6 ul li:before {content: "";display: block;position: absolute;left: 0;top: 0;bottom: 0;right: 0;transform: scaleX(0);z-index: -1;background-color: #000;transition:all .2s ease-out;transform-origin:0 50%;} */
 .technology .competence .section6 ul li a { display: flex; align-items: center; height: 8rem; padding: 0 4rem; }
 .technology .competence .section6 ul li+li { border-top: 1px solid #ccc; }
 .technology .competence .section6 ul li .num { font-size: 2.2rem; font-weight: 450; letter-spacing: -.022rem; padding-right: 3rem; }
@@ -880,6 +884,7 @@
 .technology .competence .section6 ul li .viewmore span { font-size: 1.6rem; color: #fff; font-weight: 150; opacity: 0; }
 .technology .competence .section6 ul li:hover .viewmore span { opacity: 1; }
 .technology .competence .section6 ul li:hover { background: #000; transition: all .2s; }
+/* .technology .competence .section6 ul li:hover:before { transform:scaleX(1) } */
 .technology .competence .section6 ul li:hover .num,
 .technology .competence .section6 ul li:hover .tit { color: #fff; }
 .technology .competence .section6 ul li:hover .viewmore { background: url(../images/common/icon_plus_w_21x22.png)no-repeat 100% .15rem; background-size: 1.5rem; }
