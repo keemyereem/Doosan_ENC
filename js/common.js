@@ -712,7 +712,57 @@ var techEvent = {
 
 var companyEvent = {
   init: function(){
+    this.history();
     this.chart();
+  },
+
+  history: ()=> {
+    // $('#HMhistory').prepend('<div class="trigger" style="width:100%; height:1px; background:red; position:fixed; z-index:99; left:0;"></div>')
+
+    $(window).on('resize load scroll', ()=> {
+      const wrapTop = $('#HMhistory'),
+            subMenu = $('.sub_visual_menu').height();
+            
+      let gap = 120;
+          
+      wrapTop.each((index)=> {
+        let trigger = $(window).scrollTop() + subMenu + gap,
+            year = wrapTop.eq(index).find('.year'),
+            list = wrapTop.eq(index).find('.list'),
+            yearGap = $('.year ul li:not(".active")').outerHeight();
+
+        // $('.trigger').css('top', subMenu + gap + 'px')
+
+        if (trigger > wrapTop.eq(index).offset().top) {
+          year.css({'position': 'fixed', 'top': subMenu + gap + 'px', 'left': year.offset().left + 'px'});
+        } else {
+          year.css({'position': 'relative', 'top': 0, 'left': 0});
+        }
+
+        // 연도별 각 영역
+        list.children('li').each((index)=> {
+          let listStart = list.children('li').eq(index).offset().top,
+              listEnd = listStart + list.children('li').eq(index).outerHeight(),
+              lastList = list.children('li').last();
+
+          if (trigger >= listStart && trigger < listEnd) {
+            year.children('ul').css('margin-top', '-' + yearGap * index + 'px');
+            year.find('ul li').removeClass('active');
+            year.find('ul li').eq(index).addClass('active');
+
+            list.children('li').removeClass('active');
+            list.children('li').eq(index).addClass('active');
+            
+          } else if (trigger > lastList.offset().top) {
+            console.log(list.children('li').last().outerHeight())
+            year.css({'position': 'absolute', 'bottom': lastList.outerHeight() - gap + 'px', 'top': 'auto', 'left': year.offset().left + 'px'});
+          }
+        })
+        
+      })
+      
+    })
+
   },
 
   chart: ()=> {

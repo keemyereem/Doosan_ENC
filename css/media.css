@@ -859,68 +859,68 @@
 /* ================================  회사소개  =============================== */
 
 /* 공통 */
-#mobile .investment .sub_visual { background-image: url(../images/company/company_bg_m.png); }
-#mobile .investment .tab_box { padding: 0; margin-top: 4rem; }
-#mobile .investment .tab_box > .inner { width: calc(100% - 4rem)!important; }
-#mobile .investment .tab_box ul { width: 100%; }
+#mobile .company .sub_visual { background-image: url(../images/company/company_bg_m.png); }
+#mobile .company .tab_box { padding: 0; margin-top: 4rem; }
+#mobile .company .tab_box > .inner { width: calc(100% - 4rem)!important; }
+#mobile .company .tab_box ul { width: 100%; }
 
 /* 재무정보 - Custom Chart */
-#mobile .investment .financial { margin-top: 4.5rem; }
-#mobile .investment #HMchart { padding:0 2rem 9rem; }
-#mobile .investment #HMchart > li { width: 100%; height: 33rem; padding: 2.5rem 0; }
-#mobile .investment #HMchart > li h2 { font-size: 2rem; }
-#mobile .investment #HMchart > li .graph { width: 100%; padding: 0 1.5rem; }
-#mobile .investment #HMchart > li .graph > span { font-size: 1.2rem; }
-#mobile .investment #HMchart > li .graph .graph_bg { padding-bottom: 7.15rem; }
-#mobile .investment #HMchart > li .graph .graph_bg li { font-size: 1.3rem; }
-#mobile .investment #HMchart > li .graph .graph_bg li span { padding-right: unset; }
-#mobile .investment #HMchart > li .graph .graph_bg li:before { position: relative; width: 100%; right: 0; z-index: -1; margin-left: 1rem; }
-#mobile .investment #HMchart > li .graph .graph_bar { padding: 0 1.5rem; height: calc(100% - 6.15rem); }
-#mobile .investment #HMchart > li .graph .graph_bar li { width: 11vw; border-radius: 2vw 2vw 0 0; margin:0 8%; }
-#mobile .investment #HMchart > li .graph .graph_bar li > span { font-size: 1.2rem; width: auto; line-height: 1; height: auto; border-radius: 1.75rem; padding: .5rem 1rem; top: -3.3rem; box-shadow: 0 .3rem .9rem 0 rgba(4, 0, 0, 0.1); }
-#mobile .investment #HMchart > li .graph .graph_bar li > p { font-size: 1.3rem; bottom: -4.7rem; padding: .5rem; border-radius: .5rem; background: rgba(255, 255, 255, .7); }
-#mobile .investment #HMchart > li .graph .graph_bar li > p span { font-size: 1.15rem; }
-#mobile .investment #HMchart > li .graph .graph_bar li:nth-child(3) > span { background: #e73100; color: #fff !important; }
-#mobile .investment #HMchart > li .graph .graph_bar .minus { transform: scale(-1) translateY(-100%); }
-#mobile .investment #HMchart > li .graph .graph_bar .minus > p,
-#mobile .investment #HMchart > li .graph .graph_bar .minus > span { transform: translate(50%, 0) scale(-1); }
+#mobile .company .financial { margin-top: 4.5rem; }
+#mobile .company #HMchart { padding:0 2rem 9rem; }
+#mobile .company #HMchart > li { width: 100%; height: 33rem; padding: 2.5rem 0; }
+#mobile .company #HMchart > li h2 { font-size: 2rem; }
+#mobile .company #HMchart > li .graph { width: 100%; padding: 0 1.5rem; }
+#mobile .company #HMchart > li .graph > span { font-size: 1.2rem; }
+#mobile .company #HMchart > li .graph .graph_bg { padding-bottom: 7.15rem; }
+#mobile .company #HMchart > li .graph .graph_bg li { font-size: 1.3rem; }
+#mobile .company #HMchart > li .graph .graph_bg li span { padding-right: unset; }
+#mobile .company #HMchart > li .graph .graph_bg li:before { position: relative; width: 100%; right: 0; z-index: -1; margin-left: 1rem; }
+#mobile .company #HMchart > li .graph .graph_bar { padding: 0 1.5rem; height: calc(100% - 6.15rem); }
+#mobile .company #HMchart > li .graph .graph_bar li { width: 11vw; border-radius: 2vw 2vw 0 0; margin:0 8%; }
+#mobile .company #HMchart > li .graph .graph_bar li > span { font-size: 1.2rem; width: auto; line-height: 1; height: auto; border-radius: 1.75rem; padding: .5rem 1rem; top: -3.3rem; box-shadow: 0 .3rem .9rem 0 rgba(4, 0, 0, 0.1); }
+#mobile .company #HMchart > li .graph .graph_bar li > p { font-size: 1.3rem; bottom: -4.7rem; padding: .5rem; border-radius: .5rem; background: rgba(255, 255, 255, .7); }
+#mobile .company #HMchart > li .graph .graph_bar li > p span { font-size: 1.15rem; }
+#mobile .company #HMchart > li .graph .graph_bar li:nth-child(3) > span { background: #e73100; color: #fff !important; }
+#mobile .company #HMchart > li .graph .graph_bar .minus { transform: scale(-1) translateY(-100%); }
+#mobile .company #HMchart > li .graph .graph_bar .minus > p,
+#mobile .company #HMchart > li .graph .graph_bar .minus > span { transform: translate(50%, 0) scale(-1); }
 
 /* 전자공고 */
-#mobile .investment .announce { padding-bottom: 10rem; }
-#mobile .investment .announce .tb_top .search { width: 100%; display: flex; align-items: center; justify-content: space-between; margin-top: 3.7rem; }
-#mobile .investment .announce .tb_top .search .select_row { width: 9rem; height: 3.5rem; margin-right: 0 }
-#mobile .investment .announce .tb_top .search .select_row select { height: 3.5rem; line-height: 3.5rem; padding: 0 .5rem; }
-#mobile .investment .announce .tb_top .search .select_row { border: 0; border-bottom: 2px solid #222; }
-#mobile .investment .announce .tb_top .search .select_row::after { right: .5rem; width: 0.7rem; height: 0.35rem; background-size: contain; }
-#mobile .investment .announce .tb_top .search .select_row label { font-size: 1.5rem; height: 3.5rem; line-height: 3.5rem; padding: 0 .5rem; }
-#mobile .investment .announce .tb_top .search .input_search { width: calc(100% - 11rem); height: 3.5rem; border-bottom: 2px solid #222; }
-#mobile .investment .announce .tb_top .input_search input { width: calc(100% - 2.8rem); height: 3.5rem; font-size: 1.2rem; border: 0; }
-#mobile .investment .announce .tb_top .input_search a { width: 2.8rem; height: 3.5rem; background-size: 1.8rem 1.75rem;}
-#mobile .investment .announce .tb_top .total { padding: 1.5rem 0 0 0; text-align: left; font-size: 1.3rem; }
-#mobile .investment .announce .tb_box { border-top: .1rem solid #000; margin-top: 1.5rem; }
-#mobile .investment .announce .tb_box .tb_row { display: block; width: 100%; }
-#mobile .investment .announce .tb_box .tb_row.row_head { display: none; }
-#mobile .investment .announce .tb_box .tb_row.row_body { padding: 1.5rem; }
-#mobile .investment .announce .tb_box .tb_row>div { width: 100%; height: auto; line-height: 1.5; text-align: left; border-right: 0; font-size: 1.3rem; }
-#mobile .investment .announce .tb_box .tb_row.row_body .ord,
-#mobile .investment .announce .tb_box .tb_row.row_body .cert,
-#mobile .investment .announce .tb_box .tb_row.row_body .cell01 { display: none; }
-#mobile .investment .announce .tb_box .tb_row.row_body b.mob { display: inline-block; padding-right: 1rem; font-family: 'Pretendard'; font-size: 1rem; font-weight: 400; color: #222; }
-#mobile .investment .announce .tb_box .tb_row.row_body .tit { width: 100%; display: block; padding-bottom: .5rem; }
-#mobile .investment .announce .tb_box .tb_row.row_body .tit a { display: block; width: 100%; padding-left: 0; line-height: 1.53; font-size: 1.3rem; }
-#mobile .investment .announce .tb_box .tb_row .date { display: inline-block; width: 37%; font-size: 1.1rem; }
-#mobile .investment .announce .tb_box .tb_row .period { display: inline-block; width: 62%; font-size: 1.1rem; }
-#mobile .investment .announce .tb_box .tb_row.none {display: none;}
-#mobile .investment .announce .tb_box .tb_row.null { font-size: 1.3rem; padding: 12.5rem 0; }
-#mobile .investment .announce .tb_box .tb_row { position: relative; }
-#mobile .investment .announce .tb_box .tb_row .download { width: 29%; position: absolute; top: 1.5rem; left: calc(65% + 1rem); }
-#mobile .investment .announce .tb_box .tb_row .download a { width: 1.15rem; height: 1.2rem; }
-#mobile .investment .announce.detail_pg { padding-top: 4.5rem; }
+#mobile .company .announce { padding-bottom: 10rem; }
+#mobile .company .announce .tb_top .search { width: 100%; display: flex; align-items: center; justify-content: space-between; margin-top: 3.7rem; }
+#mobile .company .announce .tb_top .search .select_row { width: 9rem; height: 3.5rem; margin-right: 0 }
+#mobile .company .announce .tb_top .search .select_row select { height: 3.5rem; line-height: 3.5rem; padding: 0 .5rem; }
+#mobile .company .announce .tb_top .search .select_row { border: 0; border-bottom: 2px solid #222; }
+#mobile .company .announce .tb_top .search .select_row::after { right: .5rem; width: 0.7rem; height: 0.35rem; background-size: contain; }
+#mobile .company .announce .tb_top .search .select_row label { font-size: 1.5rem; height: 3.5rem; line-height: 3.5rem; padding: 0 .5rem; }
+#mobile .company .announce .tb_top .search .input_search { width: calc(100% - 11rem); height: 3.5rem; border-bottom: 2px solid #222; }
+#mobile .company .announce .tb_top .input_search input { width: calc(100% - 2.8rem); height: 3.5rem; font-size: 1.2rem; border: 0; }
+#mobile .company .announce .tb_top .input_search a { width: 2.8rem; height: 3.5rem; background-size: 1.8rem 1.75rem;}
+#mobile .company .announce .tb_top .total { padding: 1.5rem 0 0 0; text-align: left; font-size: 1.3rem; }
+#mobile .company .announce .tb_box { border-top: .1rem solid #000; margin-top: 1.5rem; }
+#mobile .company .announce .tb_box .tb_row { display: block; width: 100%; }
+#mobile .company .announce .tb_box .tb_row.row_head { display: none; }
+#mobile .company .announce .tb_box .tb_row.row_body { padding: 1.5rem; }
+#mobile .company .announce .tb_box .tb_row>div { width: 100%; height: auto; line-height: 1.5; text-align: left; border-right: 0; font-size: 1.3rem; }
+#mobile .company .announce .tb_box .tb_row.row_body .ord,
+#mobile .company .announce .tb_box .tb_row.row_body .cert,
+#mobile .company .announce .tb_box .tb_row.row_body .cell01 { display: none; }
+#mobile .company .announce .tb_box .tb_row.row_body b.mob { display: inline-block; padding-right: 1rem; font-family: 'Pretendard'; font-size: 1rem; font-weight: 400; color: #222; }
+#mobile .company .announce .tb_box .tb_row.row_body .tit { width: 100%; display: block; padding-bottom: .5rem; }
+#mobile .company .announce .tb_box .tb_row.row_body .tit a { display: block; width: 100%; padding-left: 0; line-height: 1.53; font-size: 1.3rem; }
+#mobile .company .announce .tb_box .tb_row .date { display: inline-block; width: 37%; font-size: 1.1rem; }
+#mobile .company .announce .tb_box .tb_row .period { display: inline-block; width: 62%; font-size: 1.1rem; }
+#mobile .company .announce .tb_box .tb_row.none {display: none;}
+#mobile .company .announce .tb_box .tb_row.null { font-size: 1.3rem; padding: 12.5rem 0; }
+#mobile .company .announce .tb_box .tb_row { position: relative; }
+#mobile .company .announce .tb_box .tb_row .download { width: 29%; position: absolute; top: 1.5rem; left: calc(65% + 1rem); }
+#mobile .company .announce .tb_box .tb_row .download a { width: 1.15rem; height: 1.2rem; }
+#mobile .company .announce.detail_pg { padding-top: 4.5rem; }
 
 /* responsive */
 @media screen and (max-width:316px) {
-    #mobile .investment .announce .tb_box .tb_row .date,
-    #mobile .investment .announce .tb_box .tb_row .period { width: 100%; }
+    #mobile .company .announce .tb_box .tb_row .date,
+    #mobile .company .announce .tb_box .tb_row .period { width: 100%; }
 }
 
 
