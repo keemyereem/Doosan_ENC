@@ -297,7 +297,7 @@
 .title_area .con_tit > span::after { content:''; display: inline-block; width: 0; height: 0; border-top: 1rem solid transparent; border-bottom: 1rem solid transparent; border-left: 1rem solid #1d1f1e; position: absolute; top: -.5rem; left: 0; }
 .title_area .sub_tit { font-size: 3.4rem; font-weight: 400; color: #0b0f14; letter-spacing: -.085rem; padding-bottom: 1rem; }
 .title_area .sub_tit > b { font-family: 'Montserrat'; font-size: 3.6rem; font-weight: 350; color: #005eb8; }
-.title_area .sub_txt { font-size: 2rem; font-weight: 150; color: #555; letter-spacing: -.05rem; line-height: 2; }
+.title_area .sub_txt { font-size: 2rem; font-weight: 150; color: #555; letter-spacing: -.05rem; line-height: 1.8; }
 .title_area .download_btn { display: inline-block; width: 23.2rem; font-size: 1.6rem; color: #000; margin-top: 8rem;  }
 .title_area .download_btn > i { display: inline-block; width: 1.9rem; height: 2rem; background: url(../images/common/icon_download.png) no-repeat; margin-left: 4rem; vertical-align: baseline; }
 .title_area .download_btn::after { content:''; display: block; width: 0; height: 0.1rem; background: #000; margin-top: 2rem; transition: width .3s; }
@@ -404,7 +404,7 @@
 .customer .customer_inquiry .section2 .row .tit_cell { font-size: 1.8rem; color: #222; width: 13rem; flex-shrink: 0; }
 .customer .customer_inquiry .section2 .row .ipt_cell { width: 100%; }
 .customer .customer_inquiry .section2 .file_row .upload_name { width: calc(100% - 18.2rem); }
-.customer .customer_inquiry .section2 .file_row+.info { font-size: 1.6rem; color: #777; margin-top: 1.5rem; display: block; }
+.customer .customer_inquiry .section2 .file_row+.info { font-size: 1.6rem; color: #777; margin-top: 1rem; margin-bottom: 2rem; display: block; }
 .customer .customer_inquiry .section2 .btn_box { margin-top: 12rem; }
 .customer .customer_inquiry .section2 .btn_blk { width:28.3rem;height: 6.4rem;line-height: 6.4rem; }
 .customer .customer_inquiry .section2 .btn_blk a { border-radius: 3.2rem; }
@@ -507,7 +507,7 @@
 .customer .cyber_report .section2 .row .ipt_cell.phone_cell { display: flex; align-items: center; }
 .customer .cyber_report .section2 .row .ipt_cell.phone_cell > span { font-size: 1.8rem; color: #222; margin: 0 1.7rem; }
 .customer .cyber_report .section2 .file_row .upload_name { width: calc(100% - 18.2rem); }
-.customer .cyber_report .section2 .file_row+.info { font-size: 1.6rem; color: #777; line-height: 1.5; margin-top: 1.5rem; display: block; }
+.customer .cyber_report .section2 .file_row+.info { font-size: 1.6rem; color: #777; line-height: 1.5; margin-top: 1rem; margin-bottom: 2rem; display: block; }
 .customer .cyber_report .section2 .btn_box { margin-top: 12rem; }
 .customer .cyber_report .section2 .btn_blk { width:28.3rem;height: 6.4rem;line-height: 6.4rem; }
 .customer .cyber_report .section2 .btn_blk a { border-radius: 3.2rem; }
@@ -937,8 +937,8 @@
 .company .contents { max-width: 144rem; width: 100%; margin: auto; }
 
 /* 연혁 */
-.company .history { margin-top: 7rem; }
-.company #HMhistory { display: flex; justify-content: flex-end; position: relative; }
+.company .history { margin-top: 7rem; overflow: hidden; }
+.company #HMhistory { display: flex; justify-content: flex-end; position: relative; padding-bottom: 30rem; }
 .company #HMhistory .year { display: flex; font-family: 'Montserrat', sans-serif; font-weight: 400; height: fit-content; line-height: .75; }
 .company #HMhistory .year .century { color: #222222; font-size: 16rem; }
 .company #HMhistory .year ul { transition: all ease .3s; }
@@ -947,7 +947,7 @@
 .company #HMhistory .year ul li.active { font-size: 16rem; color: #005eb8; width: fit-content; transition: all ease .3s; }
 .company #HMhistory .line { width: .1rem; background: #cccccc; margin: 0 11rem 0 16rem; position: relative; }
 .company #HMhistory .line span { position: absolute; width: 2.3rem; height: 2.3rem; border: .5rem solid #005eb8; background: #fff; border-radius: 100%; left: 50%; transform: translateX(calc(-50% + .1rem)); }
-.company #HMhistory .list li { background-image: linear-gradient(to right, #e8e8e8 50%, rgba(255,255,255,0) 0%); background-position: bottom; background-size: 5px 1px; background-repeat: repeat-x; padding-bottom: 6.4rem; }
+.company #HMhistory .list li:not(:last-child) { background-image: linear-gradient(to right, #e8e8e8 50%, rgba(255,255,255,0) 0%); background-position: bottom; background-size: 5px 1px; background-repeat: repeat-x; padding-bottom: 6.4rem; }
 .company #HMhistory .list li:not(:first-child) { padding-top: 6.4rem; }
 .company #HMhistory .list li dl { display: flex; font-size: 2rem; line-height: 2; }
 .company #HMhistory .list li dl:not(:first-of-type) { margin-top: 5rem; }

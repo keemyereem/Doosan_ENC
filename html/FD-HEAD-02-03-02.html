@@ -46,7 +46,6 @@
     <script src="js/lib/slick.min.js"></script>
 
     <script src="js/common.js?v=1.0"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <!-- Initialized Include Path -->
     <script>
@@ -236,6 +235,13 @@
                         <div class="row">
                             <div class="tit_cell">첨부파일</div>
                             <div class="ipt_cell">
+                                <!-- <div class="file_row">
+                                    <form method="POST" onsubmit="return false;" enctype="multipart/form-data">
+                                        <div class="file-list"></div>
+                                        <input type="file" id="upload_file" name="upload_file" onchange="addFile(this);" />
+                                        <label for="upload_file">찾아보기</label>
+                                    </form>
+                                </div> -->
                                 <div class="file_row">
                                     <input class="upload_name" value="선택된 파일 없음" readonly>
                                     <label for="upload_file">파일 선택</label>
@@ -251,8 +257,10 @@
                             <div class="tit_cell">자동입력방지<span class="es">*</span></div>
                             <div class="ipt_cell robot_cell">
                                 
-                                <div class="g-recaptcha" data-sitekey="6LcS1FYiAAAAAMrZWPa4EXYEO15NsZ4tFVSYw0LM"></div>								
-                                <button type="submit" onclick='return check_recaptcha();'>버튼</button>
+                                <div id="google_recaptha">
+                                    <script src='https://www.google.com/recaptcha/api.js'></script>
+                                    <div class="g-recaptcha" data-sitekey="6LdDcHgiAAAAAO9GA0TtfHsV4UGI97M6QMRLb7x9"></div>
+                                </div>
                                  
                             </div>
 

@@ -89,8 +89,7 @@ br.br_t, br.br_m {display: none;}
 .file_row {display: inline-block;vertical-align: middle;width: 100%;display: flex;align-items: center;justify-content: space-between;}
 .file_row input[type="file"] {position: absolute;width: 0;height: 0;padding: 0;overflow: hidden;border: 0;}
 .file_row label {display: block;float: left;width: 14.8rem;height: 4.6rem;line-height: 4.6rem;font-size: 1.6rem;color: #000;text-align: center;cursor: pointer;border: .1rem solid #000;border-radius: 2.3rem;}
-.file_row .upload_name {display: block;float: left;height: 4.6rem;font-size: 1.6rem;color: #b2b2b2;padding: 0 2rem; border-bottom: .1rem solid #e8e8e8;border-left: 0;border-right: 0;border-top: 0;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
-
+.file_row .upload_name {display: block;float: left;height: 4.6rem;font-size: 1.6rem;color: #b2b2b2; border-bottom: .1rem solid #e8e8e8;border-left: 0;border-right: 0;border-top: 0;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
 
 /* button */
 
