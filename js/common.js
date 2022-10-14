@@ -720,77 +720,110 @@ var companyEvent = {
 
   history: ()=> {
     "use strict"
-    
-    $('#HMhistory').prepend('<div class="trigger" style="width:100%; height:1px; background:red; position:fixed; z-index:99; left:0;"></div>');
 
-    const windowWidth = $(window).width();
+    let gap = 150;
 
     $(window).on('resize load scroll', ()=> {
       const wrap = $('#HMhistory'),
-            subMenu = $('.sub_visual_menu').height();
-      let gap = 150;
+            subMenu = $('.sub_visual_menu').height(),
+            trigger = $(window).scrollTop() + subMenu + gap;
 
-      $('.trigger').css('top', subMenu + gap + 'px');
+      
 
       wrap.each((index)=> {
-        const trigger = $(window).scrollTop() + subMenu + gap,
-              year = wrap.eq(index).find('.year'),
+        const year = wrap.eq(index).find('.year'),
               list = wrap.eq(index).find('.list'),
               line = wrap.eq(index).children('.line'),
               picker = wrap.eq(index).find('.line span');
 
-        // 센터라인 길이 초기화
-        line.css('height', wrap.eq(index).height() - list.children('li').last().children('dl').outerHeight() + picker.outerHeight() / 2 + 'px');
-        
-        let yearGap = $('.year ul li:not(".active")').outerHeight(),
-            yearLeft = year.offset().left,
-            fixMove = Math.abs($('.history').css('margin-left').replace('px', '')),
-            lastPoint = line.offset().top + line.outerHeight();
-        
-        // 진입
-        if (trigger > wrap.eq(index).offset().top && picker.offset().top + picker.outerHeight() / 2 < lastPoint) {
-          year.css({'position': 'fixed', 'top': subMenu + gap + 'px', 'left': fixMove});
-          console.log('aaa')
+        // *** PC
+        if (!$('#mobile').length) {
+          // 센터라인 길이
+          line.css('height', wrap.eq(index).height() - list.children('li').last().children('dl').outerHeight() + picker.outerHeight() / 2 + 'px');
 
-        } else if (picker.offset().top + picker.outerHeight() / 2 >= lastPoint) {
-          let pbreak = picker.offset().top - $(window).height() - gap - subMenu - picker.outerHeight() / 2;
+          let pickerPoint = trigger + $('.century').height() / 2,
+              fixMove = Math.abs($('.history').offset().left),
+              lastPoint = line.offset().top + line.outerHeight();
 
-          year.css({'position': 'absolute', 'top': pbreak + 'px', 'left': 0});
-          picker.css({'position': 'absolute', 'top': line.height() + 'px', 'left': 0});
-
-          console.log('bbb');
-
-        } else {
-          year.css({'position': 'absolute', 'top': 0, 'left': 0});
-          picker.css({'position': 'absolute', 'top': 0, 'left': 0});
-          console.log('ccc')
-        }
-
-        // 진입(피커)
-        if (trigger > wrap.eq(index).offset().top - subMenu) {
-          picker.css({'position': 'fixed', 'top': (subMenu * 1.8) + gap + 'px', 'left': $('.line').offset().left + 'px'});
-        }
-
-        // 연도별 각 영역
-        list.children('li').each((index)=> {
-          let listStart = list.children('li').eq(index).offset().top,
-              listEnd = listStart + list.children('li').eq(index).outerHeight();
-
-          // 연도 변경 및 리스트 하이라이트
-          if (picker.offset().top >= listStart && picker.offset().top < listEnd) {
-            year.children('ul').css('margin-top', '-' + yearGap * index + 'px');
-            year.find('ul li').removeClass('active');
-            year.find('ul li').eq(index).addClass('active');
-
-            list.children('li').removeClass('active');
-            list.children('li').eq(index).addClass('active');
+          // 진입(연도)
+          if (trigger > wrap.eq(index).offset().top) {
+            year.css({'position': 'fixed', 'top': subMenu + gap + 'px', 'left': -$(window).scrollLeft() + fixMove});
           
+          // *초기화
+          } else {
+            year.css({'position': 'absolute', 'top': 0, 'left': 0});
           }
+
+          // 진입(피커)
+          if (pickerPoint > wrap.eq(index).offset().top && pickerPoint < lastPoint) {
+            picker.css({
+              'position': 'fixed', 'top': subMenu + gap + $('.century').height() / 2 - picker.outerHeight() / 2 + 'px', 
+              'left': -$(window).scrollLeft() + $('.line').offset().left + 'px'
+            });
+          
+          // 이탈(연도, 피커)
+          } else if (pickerPoint >= lastPoint - picker.height() / 2) {
+            year.css({'position': 'absolute', 'top': line.height() - year.height() / 2, 'left': 0});
+            picker.css({'position': 'absolute', 'top': line.height() - picker.height() / 2, 'left': 0});
+          
+          // *초기화
+          } else {
+            picker.css({'position': 'absolute', 'top': 0, 'left': 0});
+          }
+        }
+
+        // 연도 변경 및 리스트 하이라이트
+        list.children('li').each((index)=> {
+          let yearGap = $('.year ul li:not(".active")').outerHeight(),
+              listStart = list.children('li').eq(index).offset().top,
+              listEnd = listStart + list.children('li').eq(index).outerHeight();
+          
+          // *** PC
+          if (!$('#mobile').length) {
+
+            if (picker.offset().top >= listStart && picker.offset().top < listEnd) {
+              year.children('ul').css('margin-top', '-' + yearGap * index + 'px');
+              year.find('ul li').removeClass('active');
+              year.find('ul li').eq(index).addClass('active');
+
+              list.children('li').removeClass('active');
+              list.children('li').eq(index).addClass('active');
+            
+            }
+          } 
         })
-        
+      });
+
+    })
+
+    // *** Mobile
+    if ($('#mobile').length) {
+      $('body').prepend('<div class="trigger1" style="position:fixed; height:1px; width:100%; background:red;"></div>')
+
+      $('.year, .list').find('li').removeClass('active');
+
+      const century = $('.century').text(),
+            yearChild = $('.year').find('ul li');
+
+      yearChild.each((index)=> {
+        yearChild.eq(index).prepend(century);
+        yearChild.eq(index).prependTo($('.list').children('li').eq(index));
+
+        $(window).on('scroll load resize', ()=> {
+          const mobTrigger = $(window).scrollTop();
+
+          $('.trigger1').css('top', $(window).height() / 2 - $('.sub_visual_menu').outerHeight());
+          console.log(mobTrigger);
+          console.log(yearChild.eq(0).offset().top)
+
+          if (mobTrigger > $('.list').children('li').eq(index).offset().top) {
+            $('.list, .list > li').children('li').eq(index).addClass('active');
+          }
+          
+        })
       })
       
-    })
+    }
 
   },
 

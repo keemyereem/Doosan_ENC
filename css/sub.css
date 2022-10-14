@@ -936,27 +936,43 @@
 .company .sub_visual { background-image: url(../images/company/company_bg.png); }
 .company .contents { max-width: 144rem; width: 100%; margin: auto; }
 
+
 /* 연혁 */
 .company .history { margin-top: 7rem; overflow: hidden; }
-.company #HMhistory { display: flex; justify-content: flex-end; position: relative; padding-bottom: 30rem; }
+.company #HMhistory { display: flex; justify-content: flex-end; position: relative; padding-bottom: 18rem; }
 .company #HMhistory .year { display: flex; font-family: 'Montserrat', sans-serif; font-weight: 400; height: fit-content; line-height: .75; }
-.company #HMhistory .year .century { color: #222222; font-size: 16rem; }
+.company #HMhistory .year .century { color: #222222; font-size: 16rem; height: fit-content; }
 .company #HMhistory .year ul { transition: all ease .3s; }
 .company #HMhistory .year ul li { color: #efefef; font-size: 10rem; }
 .company #HMhistory .year ul li:not(:last-child) { padding-bottom: 6rem; }
 .company #HMhistory .year ul li.active { font-size: 16rem; color: #005eb8; width: fit-content; transition: all ease .3s; }
 .company #HMhistory .line { width: .1rem; background: #cccccc; margin: 0 11rem 0 16rem; position: relative; }
 .company #HMhistory .line span { position: absolute; width: 2.3rem; height: 2.3rem; border: .5rem solid #005eb8; background: #fff; border-radius: 100%; left: 50%; transform: translateX(calc(-50% + .1rem)); }
-.company #HMhistory .list li:not(:last-child) { background-image: linear-gradient(to right, #e8e8e8 50%, rgba(255,255,255,0) 0%); background-position: bottom; background-size: 5px 1px; background-repeat: repeat-x; padding-bottom: 6.4rem; }
-.company #HMhistory .list li:not(:first-child) { padding-top: 6.4rem; }
-.company #HMhistory .list li dl { display: flex; font-size: 2rem; line-height: 2; }
-.company #HMhistory .list li dl:not(:first-of-type) { margin-top: 5rem; }
-.company #HMhistory .list li dl dt { font-weight: 400; width: 7rem; }
-.company #HMhistory .list li dl dt span { font-family: 'Montserrat', sans-serif; }
-.company #HMhistory .list li dl dd p { color: #777777; }
-.company #HMhistory .list li dl dd p:not(:first-child),
-.company #HMhistory .list li dl dd img { margin-top: 2rem; }
-.company #HMhistory .list li.active dl dt { color: #005eb8; }
+.company #HMhistory .list > li:not(:last-child) { background-image: linear-gradient(to right, #e8e8e8 50%, rgba(255,255,255,0) 0%); background-position: bottom; background-size: 5px 1px; background-repeat: repeat-x; padding-bottom: 6.4rem; }
+.company #HMhistory .list > li:not(:first-child) { padding-top: 6.4rem; }
+.company #HMhistory .list > li dl { display: flex; font-size: 2rem; line-height: 2; }
+.company #HMhistory .list > li dl:not(:first-of-type) { margin-top: 5rem; }
+.company #HMhistory .list > li dl dt { font-weight: 400; width: 7rem; }
+.company #HMhistory .list > li dl dt span { font-family: 'Montserrat', sans-serif; }
+.company #HMhistory .list > li dl dd p { color: #777777; }
+.company #HMhistory .list > li dl dd p:not(:first-child),
+.company #HMhistory .list > li dl dd img { margin-top: 2rem; }
+.company #HMhistory .list > li.active dl dt { color: #005eb8; }
+.company .greybox { width: 100%; background: #f9f9f9 url(../images/company/greybox_bg.png) 100% 100% no-repeat; padding: 13rem 0; }
+.company .greybox .wrap { max-width: 120rem; width: 100%; height: fit-content; display: flex; margin: auto; }
+.company .greybox .wrap > * { width: 50%; }
+.company .greybox .wrap .section01 { padding-top: 6rem; }
+.company .greybox .wrap .section01 h2 { font-size: 5rem; font-weight: 450; line-height: 1; padding-top: 3.5rem; position: relative; }
+.company .greybox .wrap .section01 h2::before { content: ''; position: absolute; top: 0; left: .3rem; width: 5.5rem; height: .6rem; background: #005eb8; transform: skew(-45deg); }
+.company .greybox .wrap .section01 h2 span { color: #005eb8; }
+.company .greybox .wrap .section01 p { padding-top: 4rem; font-size: 1.8rem; font-weight: 150; line-height: 1.7; }
+.company .greybox .wrap .section01 div { padding-top: 10.5rem; display: flex; }
+.company .greybox .wrap .section01 div a { padding: 2rem 1rem; width: 23.2rem; position: relative; display: flex; justify-content: space-between; font-size: 1.6rem; margin-right: 3rem; overflow: hidden; }
+.company .greybox .wrap .section01 div a::after { content: ''; width: 100%; height: .1rem; background: #000; position: absolute; bottom: 0; left: 0; transition: all ease .3s; }
+.company .greybox .wrap .section01 div a:hover { font-weight: 450; }
+.company .greybox .wrap .section01 div a:hover::after { left: -100%; }
+.company .greybox .wrap .section02 { padding: 0 0 7rem 8rem; }
+.company .greybox .wrap .section02 img { box-shadow: 0 1.4rem 2.7rem 0 rgba(0, 0, 0, .35); }
 
 /* 재무정보 - Custom Chart */
 .company .financial { margin-top: 4rem; }
@@ -1010,6 +1026,51 @@
 .company .announce .tb_box .tb_row.none {display: none;}
 .company .announce .tb_box .tb_row.null {font-size: 1.6rem;color: #222;text-align: center;padding: 24rem 0;}
 .company .announce.detail_pg { padding-top: 3rem; }
+
+/* 대표이사 인사말 */
+.company .greeting { max-width: 100%; background: linear-gradient(to bottom, #f9f9f9, #f9f9f9 89.7rem, #fff 89.8rem, #fff 100%); position: relative; padding: 12rem 0 20rem; }
+.company .greeting .inner { max-width: 168rem!important; margin: 0!important; }
+.company .greeting .tit { font-size: 4rem; font-weight: 400; line-height: 1.4; letter-spacing: -.1rem; width: fit-content; position: relative; margin-left: 32rem; margin-bottom: 6rem; }
+.company .greeting .tit span { font-family: 'Montserrat'; font-size: 4.3rem; font-weight: 400; opacity: .3; position: absolute; }
+.company .greeting .tit span:first-of-type { top: -1.3rem; left: -2.6rem; }
+.company .greeting .tit span:last-of-type { bottom: 0rem; right: 12.7rem; }
+.company .greeting .txt { font-size: 1.8rem; color: #555; line-height: 1.89; letter-spacing: -.045rem; }
+.company .greeting .txt:first-of-type { margin-left: 32rem; }
+.company .greeting .txt:last-of-type { margin-top: 50rem; width: fit-content; margin-left: auto; }
+.company .greeting .picture { position: absolute; top: 19.3rem; left: 0; }
+.company .greeting .sign { width: fit-content; margin-left: auto; margin-top: 6rem; }
+.company .greeting .sign p { font-size: 1.6rem; color: #222; letter-spacing: -.04rem; }
+.company .greeting .sign b { font-size: 2.4rem; display: inline-block; margin: 1.5rem 1.5rem 0 0; }
+
+
+
+/* ================================  인재채용  =============================== */
+
+/* 공통 */
+.recruit .sub_visual { background-image: url(../images/recruit/recruit_bg.png); }
+.recruit .contents { max-width: 144rem; width: 100%; margin: auto; }
+
+/* 인재상 */
+.recruit .type { padding: 10rem 0 20rem; }
+.recruit .type ul { display: flex; flex-wrap: wrap; }
+.recruit .type ul li { width: 50%; padding: 7rem; }
+.recruit .type ul li:nth-child(2) { background-image: linear-gradient(to bottom, #e8e8e8 40%, white 60%);  background-position: left top; background-repeat: repeat-y; background-size: 1px 13px; }
+.recruit .type ul li:nth-child(3),
+.recruit .type ul li:nth-child(5) { background-image: linear-gradient(to right, #e8e8e8 40%, white 60%);  background-position: left top; background-repeat: repeat-x; background-size: 13px 1px; }
+.recruit .type ul li:nth-child(4),
+.recruit .type ul li:nth-child(6) { background-image: linear-gradient(to right, #e8e8e8 40%, white 60%), linear-gradient(to bottom, #e8e8e8 40%, white 60%);  background-position: left top; background-repeat: repeat-x, repeat-y; background-size: 13px 1px, 1px 13px; }
+.recruit .type ul li:nth-child(6) .icon img { margin-left: .2rem; }
+.recruit .type .icon { width: 11.2rem; height: 11.2rem; border-radius: 50%; background: #f9f9f9; margin-bottom: 5rem; display: flex; align-items: center; justify-content: center; }
+.recruit .type .eng_tit { font-family: 'Montserrat'; font-size: 1.8rem; font-weight: 400; color: #005eb8; letter-spacing: -.045rem; }
+.recruit .type .tit { font-size: 2.4rem; font-weight: 450; color: #222; letter-spacing: -.06rem; padding: 1rem 0 2rem; }
+.recruit .type p { font-size: 1.6rem; font-weight: 150; color: #666; line-height: 2; letter-spacing: -.08rem; }
+
+
+
+
+
+
+
 
 
 

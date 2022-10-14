@@ -865,6 +865,38 @@
 #mobile .company .tab_box > .inner { width: calc(100% - 4rem)!important; }
 #mobile .company .tab_box ul { width: 100%; }
 
+/* 연혁 */
+#mobile .company .history { margin-top: 7rem; overflow: hidden; }
+#mobile .company #HMhistory { position: relative; padding: 0 2rem 11.5rem; }
+#mobile .company #HMhistory .year,
+#mobile .company #HMhistory .line { display: none; }
+#mobile .company #HMhistory .list > li:not(:last-child) { background-size: 6px 2px; padding-bottom: 3.7rem; }
+#mobile .company #HMhistory .list > li:not(:first-child) { padding-top: 3.7rem; }
+#mobile .company #HMhistory .list > li li { font-size: 8.5rem; color: #efefef; font-weight: 400; font-family: 'Montserrat', sans-serif; line-height: .8; padding-bottom: 4rem; }
+#mobile .company #HMhistory .list > li li.active { color: #005eb8; }
+#mobile .company #HMhistory .list > li dl { font-size: 1.5rem; line-height: 1.7; width: 100%; }
+#mobile .company #HMhistory .list > li dl:not(:first-of-type) { margin-top: 3rem; }
+#mobile .company #HMhistory .list > li dl dt { width: 4.65rem; }
+#mobile .company #HMhistory .list > li dl dd { width: calc(100% - 4.65rem); }
+#mobile .company #HMhistory .list > li dl dd p:not(:first-child),
+#mobile .company #HMhistory .list > li dl dd img { margin-top: 1.5rem; width: 100%; }
+
+#mobile .company .greybox { width: 100%; background: #f9f9f9 url(../images/company/greybox_bg.png) 100% 100% no-repeat; padding: 13rem 0; }
+#mobile .company .greybox .wrap { max-width: 120rem; width: 100%; height: fit-content; display: flex; margin: auto; }
+#mobile .company .greybox .wrap > * { width: 50%; }
+#mobile .company .greybox .wrap .section01 { padding-top: 6rem; }
+#mobile .company .greybox .wrap .section01 h2 { font-size: 5rem; font-weight: 450; line-height: 1; padding-top: 3.5rem; position: relative; }
+#mobile .company .greybox .wrap .section01 h2::before { content: ''; position: absolute; top: 0; left: .3rem; width: 5.5rem; height: .6rem; background: #005eb8; transform: skew(-45deg); }
+#mobile .company .greybox .wrap .section01 h2 span { color: #005eb8; }
+#mobile .company .greybox .wrap .section01 p { padding-top: 4rem; font-size: 1.8rem; font-weight: 150; line-height: 1.7; }
+#mobile .company .greybox .wrap .section01 div { padding-top: 10.5rem; display: flex; }
+#mobile .company .greybox .wrap .section01 div a { padding: 2rem 1rem; width: 23.2rem; position: relative; display: flex; justify-content: space-between; font-size: 1.6rem; margin-right: 3rem; overflow: hidden; }
+#mobile .company .greybox .wrap .section01 div a::after { content: ''; width: 100%; height: .1rem; background: #000; position: absolute; bottom: 0; left: 0; transition: all ease .3s; }
+#mobile .company .greybox .wrap .section01 div a:hover { font-weight: 450; }
+#mobile .company .greybox .wrap .section01 div a:hover::after { left: -100%; }
+#mobile .company .greybox .wrap .section02 { padding: 0 0 7rem 8rem; }
+#mobile .company .greybox .wrap .section02 img { box-shadow: 0 1.4rem 2.7rem 0 rgba(0, 0, 0, .35); }
+
 /* 재무정보 - Custom Chart */
 #mobile .company .financial { margin-top: 4.5rem; }
 #mobile .company #HMchart { padding:0 2rem 9rem; }
@@ -917,6 +949,21 @@
 #mobile .company .announce .tb_box .tb_row .download { width: 29%; position: absolute; top: 1.5rem; left: calc(65% + 1rem); }
 #mobile .company .announce .tb_box .tb_row .download a { width: 1.15rem; height: 1.2rem; }
 #mobile .company .announce.detail_pg { padding-top: 4.5rem; }
+
+/* 대표이사 인사말 */
+#mobile .company .greeting { background: linear-gradient(to bottom, #f9f9f9, #f9f9f9 44.2rem, #fff 44.3rem, #fff 100%); padding: 6.5rem 0 10rem; }
+#mobile .company .greeting .inner { margin: 0 auto!important; }
+#mobile .company .greeting .tit { font-size:2.4rem; margin-left: 2.4rem; margin-bottom: 0; }
+#mobile .company .greeting .tit span { font-size: 2.6rem; }
+#mobile .company .greeting .tit span:first-of-type { top: -.3rem; left: -2.4rem; }
+#mobile .company .greeting .tit span:last-of-type { bottom: 0rem; right: 5.6rem; }
+#mobile .company .greeting .txt { font-size: 1.4rem; line-height: 1.57; }
+#mobile .company .greeting .txt:first-of-type { margin-left: 0; }
+#mobile .company .greeting .txt:last-of-type { margin-top: 2rem; }
+#mobile .company .greeting .picture { width: calc(100% + 4rem); position: initial; margin-top: -2.6rem; margin-left: -2rem; }
+#mobile .company .greeting .sign {  margin-top: 3rem; }
+#mobile .company .greeting .sign p { font-size: 1.3rem; }
+#mobile .company .greeting .sign b { font-size: 1.7rem; margin: 1rem 1rem 0 0; }
 
 /* responsive */
 @media screen and (max-width:316px) {
