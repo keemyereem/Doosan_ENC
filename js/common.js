@@ -84,6 +84,7 @@ var commonEvent = {
     this.goTopEvent();
     this.iptEvent();
     this.tabEvent();
+    this.popup();
   }, 
 
   headerEvent: () => {
@@ -297,6 +298,57 @@ var commonEvent = {
 
 
   },
+
+  popup: ()=> {
+    // 스크롤 값 추적
+    let scrollPosition = 0,
+        popupClose = $('.pop_close');
+
+    $(window).on('scroll', ()=> {
+        scrollPosition = window.pageYOffset;
+    });
+
+    //공통 팝업코드
+    $('.openPopup').on('click', ()=> {
+        openProcessor();
+    });
+
+    // 팝업 닫기
+    popupClose.on('click', ()=> {
+        closeProcessor();
+    });
+
+    // 팝업 열기 function
+    function openProcessor() {
+        scrollPosition = window.pageYOffset;
+
+        $(".popup").addClass('on');
+        $('html').addClass('blockScroll');
+
+        if ($('#mobile').length) {
+            body.style.top = `-${scrollPosition}px`;
+            $('header').hide();
+        }
+    }
+
+    // 팝업 닫기 function
+    function closeProcessor() {
+
+        $('html').removeClass('blockScroll');
+        $('.popup').removeClass('on');
+        
+        if ($('#mobile').length) { 
+            scrollPosition = body.style.top;
+            scrollPosition = scrollPosition.replace('px', '');
+
+            body.style.removeProperty('top');
+            window.scrollTo(0, -(scrollPosition));
+            $('header').show();
+            
+        }
+    }
+
+},
 
 };
 
@@ -798,8 +850,7 @@ var companyEvent = {
 
     // *** Mobile
     if ($('#mobile').length) {
-      $('body').prepend('<div class="trigger1" style="position:fixed; height:1px; width:100%; background:red;"></div>')
-
+      $('.greybox').addClass('popup')
       $('.year, .list').find('li').removeClass('active');
 
       const century = $('.century').text(),
@@ -810,13 +861,12 @@ var companyEvent = {
         yearChild.eq(index).prependTo($('.list').children('li').eq(index));
 
         $(window).on('scroll load resize', ()=> {
-          const mobTrigger = $(window).scrollTop();
+          let mobTrigger = $(window).scrollTop() + $(window).height() / 2 - $('.sub_visual_menu').outerHeight(),
+              mobListStart = $('.list').children('li').eq(index).offset().top,
+              mobListEnd = mobListStart + $('.list').children('li').eq(index).outerHeight();
 
-          $('.trigger1').css('top', $(window).height() / 2 - $('.sub_visual_menu').outerHeight());
-          console.log(mobTrigger);
-          console.log(yearChild.eq(0).offset().top)
-
-          if (mobTrigger > $('.list').children('li').eq(index).offset().top) {
+          if (mobTrigger > mobListStart && mobTrigger < mobListEnd) {
+            $('.list, .list > li').children('li').removeClass('active');
             $('.list, .list > li').children('li').eq(index).addClass('active');
           }
           

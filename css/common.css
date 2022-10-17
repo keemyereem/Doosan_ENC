@@ -48,8 +48,10 @@ br.br_t, br.br_m {display: none;}
 .blind { opacity: 0;}
 .none {display: none;}
 .blockScroll { overflow: hidden; height: 100vh; }
-/*popup*/
 
+/*popup*/
+.popup { opacity: 0; visibility: hidden; transition: all ease .3s; }
+.popup.on { opacity: 1; visibility: visible; }
 
 /* selectbox */
 .select_row {display: inline-block;position: relative;width: 100%;height: 6rem;border: .1rem solid #e8e8e8;vertical-align: middle;}

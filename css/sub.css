@@ -935,7 +935,7 @@
 /* 공통 */
 .company .sub_visual { background-image: url(../images/company/company_bg.png); }
 .company .contents { max-width: 144rem; width: 100%; margin: auto; }
-
+.company .btn_mob { display: none; }
 
 /* 연혁 */
 .company .history { margin-top: 7rem; overflow: hidden; }
@@ -959,6 +959,7 @@
 .company #HMhistory .list > li dl dd img { margin-top: 2rem; }
 .company #HMhistory .list > li.active dl dt { color: #005eb8; }
 .company .greybox { width: 100%; background: #f9f9f9 url(../images/company/greybox_bg.png) 100% 100% no-repeat; padding: 13rem 0; }
+.company .greybox .pop_close { display: none; }
 .company .greybox .wrap { max-width: 120rem; width: 100%; height: fit-content; display: flex; margin: auto; }
 .company .greybox .wrap > * { width: 50%; }
 .company .greybox .wrap .section01 { padding-top: 6rem; }
@@ -1041,6 +1042,53 @@
 .company .greeting .sign { width: fit-content; margin-left: auto; margin-top: 6rem; }
 .company .greeting .sign p { font-size: 1.6rem; color: #222; letter-spacing: -.04rem; }
 .company .greeting .sign b { font-size: 2.4rem; display: inline-block; margin: 1.5rem 1.5rem 0 0; }
+
+
+/* ================================  사회책임경영  =============================== */
+
+/* 공통 */
+.sr .sub_visual { background-image: url(../images/social/sr_bg.png); }
+.sr .contents { max-width: 144rem; width: 100%; margin: auto; }
+.sr .btn_mob { display: none; }
+.sr .board { max-width: 120rem; width: 100%; margin: 0 auto 12rem; box-shadow: .2rem .3rem 5rem 0 rgba(41, 41, 41, 0.2); border-top: .8rem solid #005eb8; padding: 9rem 0 8rem; }
+.sr .board .paragraph { text-align: center; padding-bottom: 6rem; margin-bottom: 6rem; position: relative; }
+.sr .board .paragraph::after { content: ''; background: url(../images/social/board_dot.png) 50% 50% no-repeat; width: 12.4rem; height: .8rem; position: absolute; left: 0; right: 0; bottom: 0; margin: auto; }
+.sr .board .paragraph h3 { font-size: 4.4rem; font-weight: 450; color: #005eb8; line-height: 1; }
+.sr .board .paragraph p { font-size: 2rem; color: #555555; line-height: 1.8; padding-top: 3rem; }
+.sr .board .sign { text-align: center; font-size: 2.2rem; font-weight: 400; line-height: 1; }
+.sr .board .sign p:nth-child(2) { color: #555555; display: flex; align-items: center; justify-content: center; }
+.sr .board .sign p:last-child { font-size: 3rem; color: #222222; }
+.sr .board_inner { margin: 0 6rem 6rem; }
+.sr .board_inner li { padding: 6rem 0rem 6rem 2.2rem; margin: 0 6rem; display: flex; font-size: 1.8rem; color: #000000; align-items: center; line-height: 1.9; }
+.sr .board_inner li:not(:last-child) { background-image: linear-gradient(to right, #e8e8e8 100%, rgba(255,255,255,0) 0%); background-position: bottom; background-size: 6px 1px; background-repeat: repeat-x; }
+.sr .board_inner li p { width: 53%; margin-left: auto; }
+.sr .board_inner li p > span { color: #005eb8; }
+.sr .board_inner li > h4 { font-size: 2.4rem; font-weight: 450; }
+.sr .board_inner li > span { font-size: 1.6rem; font-family: 'Montserrat', sans-serif; margin-right: 2.2rem; font-weight: 450; }
+.sr section > h3 { text-align: center; font-size: 3.8rem; font-weight: 450; padding-bottom: 6rem; }
+
+/* 프롤로그(사회책임경영 원칙) */
+.sr .prologue { height: auto; box-shadow: 2px 3px 50px 0px rgba(41, 41, 41, 0.2); margin-bottom: 20rem; }
+.sr .prologue .banner { background: linear-gradient(60deg, #C1BAB3 40%, #CBC6C2 60%); padding: 13.2rem 13.6rem 0; height: 40rem; position: relative; overflow-x: clip; }
+.sr .prologue .banner h2 { text-transform: uppercase; color: #ffffff; font-size: 6rem; font-family: 'Montserrat', sans-serif; font-weight: 400; line-height: .8; }
+.sr .prologue .banner p { font-size: 2rem; color: #fff; line-height: 1.8; padding-top: 3.5rem; }
+.sr .prologue .banner img { position: absolute; right: 0; bottom: 0; }
+.sr .prologue .board_inner { margin: 0 12rem 0; padding-bottom: 4rem; }
+.sr .prologue .board_inner li { padding: 6rem 0; margin: 0; font-size: 2rem; font-weight: 400; line-height: 1.7; }
+.sr .prologue .board_inner li:not(:last-child) { background-image: linear-gradient(to right, #e8e8e8 83%, rgba(255,255,255,0) 0%); }
+.sr .prologue .board_inner li p { width: 100%; }
+.sr .prologue .board_inner li > span { margin-right: 4.5rem; font-weight: 400; }
+
+/* 안전보건경영 */
+.sr .hsm { max-width: 100%; }
+.sr .hsm .section01 .board_inner { background: rgba(0, 94, 184, .02); }
+.sr .hsm .section01.board .sign p:nth-child(2) { padding: 1rem 0; }
+.sr .hsm .section01.board .sign p:nth-child(2) span { font-family: 'Montserrat', sans-serif; margin-right: 1rem; text-transform: uppercase; }
+.sr .hsm .section01.board .sign p:nth-child(2) img { margin-left: 2.2rem; }
+.sr .hsm .section02 { background: #f9f9f9; padding: 12rem 0 20rem; }
+
+
+
 
 
 
