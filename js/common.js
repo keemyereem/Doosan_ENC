@@ -595,7 +595,7 @@ var techEvent = {
     $(window).on('load resize scroll', ()=> {
       let st = $(window).scrollTop(),
           motion01 = $('.love_motion').offset().top,
-          motion02 = $('.have_motion').offset().top,
+          motion02 = $('.weve_motion').offset().top,
           trigger = st + $(window).height() / 2;
 
       // love motion trigger
@@ -673,11 +673,14 @@ var techEvent = {
     .to('.transform-box .left, .transform-box .right', { opacity: "1", duration: "0" }, 3)
     .to('.transform-box', { backgroundColor: "transparent", duration: .2 }, 3)
 
-    .to('.transform-box .left', { y: "2rem",  duration: .5 }, 4)
-    .to('.transform-box .right', { y: "-21rem",  duration: .5 }, 4)
+    .to('.transform-box .left', { y: "2.4rem",  duration: .5 }, 4)
+    .to('.have .transform-box .right', { y: "-20.5rem",  duration: .5 }, 4)
+    .to('.live .transform-box .right', { y: "-10rem",  duration: .5 }, 4)
+    .to('.save .transform-box .right', { y: "-17.5rem",  duration: .5 }, 4)
+    .to('.solve .transform-box .right', { y: "-22rem",  duration: .5 }, 4)
     .to('.we', { x: "-4rem", duration: .5 }, 4)
     .to('.ve', { x: "4rem", duration: .5 }, 4)
-    .to('.ha', { x: "-3.6rem", width: "auto" }, 4)
+    .to('.ha', { x: "-3.7rem", width: "auto" }, 4)
     .to('.ha', { opacity: "1", delay: .5 }, 4)
 
     .to('.transform-box .left, .transform-box .right', { display: "none", delay: .5}, 5)
@@ -774,13 +777,36 @@ var companyEvent = {
     "use strict"
 
     let gap = 150;
+    const wrap = $('.HMhistory'),
+          subMenu = $('.sub_visual_menu').height();
 
-    $(window).on('resize load scroll', ()=> {
-      const wrap = $('#HMhistory'),
-            subMenu = $('.sub_visual_menu').height(),
-            trigger = $(window).scrollTop() + subMenu + gap;
-
+    // tab button
+    const tabBtn = $('.tab ul li')
+    tabBtn.each((index)=> {
       
+      let arr = [];
+      arr.push($('.HMhistory').eq(index).find('.list').width());
+
+
+      tabBtn.eq(index).on('click', ()=> {
+        tabBtn.removeClass('active');
+        tabBtn.eq(index).addClass('active');
+
+        window.scrollTo({
+          top: $('.tab').offset().top - gap,
+          behavior: 'smooth',
+        })
+        
+        $('.HMhistory').removeClass('active');
+        $('.HMhistory').eq(index).addClass('active');
+      })
+    })
+
+
+    
+    
+    $(window).on('resize load scroll', ()=> {
+      const trigger = $(window).scrollTop() + subMenu + gap;
 
       wrap.each((index)=> {
         const year = wrap.eq(index).find('.year'),
@@ -788,10 +814,10 @@ var companyEvent = {
               line = wrap.eq(index).children('.line'),
               picker = wrap.eq(index).find('.line span');
 
-        // *** PC
+        // *** PC 
         if (!$('#mobile').length) {
           // 센터라인 길이
-          line.css('height', wrap.eq(index).height() - list.children('li').last().children('dl').outerHeight() + picker.outerHeight() / 2 + 'px');
+          line.css('height', wrap.eq(index).height() - list.children('li').last().children('dl:last-child').outerHeight() + picker.outerHeight() / 2 + 'px');
 
           let pickerPoint = trigger + $('.century').height() / 2,
               fixMove = Math.abs($('.history').offset().left),
@@ -810,7 +836,7 @@ var companyEvent = {
           if (pickerPoint > wrap.eq(index).offset().top && pickerPoint < lastPoint) {
             picker.css({
               'position': 'fixed', 'top': subMenu + gap + $('.century').height() / 2 - picker.outerHeight() / 2 + 'px', 
-              'left': -$(window).scrollLeft() + $('.line').offset().left + 'px'
+              'left': -$(window).scrollLeft() + $('.HMhistory.active .line').offset().left + 'px'
             });
           
           // 이탈(연도, 피커)

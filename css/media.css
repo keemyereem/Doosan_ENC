@@ -969,6 +969,39 @@
 #mobile .company .greeting .sign b { font-size: 1.7rem; margin: 1rem 1rem 0 0; }
 #mobile .company .greeting .sign img { width: 15rem; }
 
+
+/* ================================  인재채용  =============================== */
+
+/* 공통 */
+.recruit .sub_visual { background-image: url(../images/recruit/recruit_bg.png); }
+.recruit .contents { max-width: 144rem; width: 100%; margin: auto; }
+
+/* 인재상 */
+#mobile .recruit .tab_box { margin-top: 4rem; }
+#mobile .recruit .tab_box ul { width: 100%; }
+#mobile .recruit .tab_box ul li { width: 50%!important; }
+#mobile .recruit .type { padding: 0 2rem 10rem; }
+#mobile .recruit .type ul li { width: 100%; padding: 4.5rem 0 4rem; }
+#mobile .recruit .type ul li:last-child { padding-bottom: 0; }
+#mobile .recruit .type ul li:nth-child(2) { background-image: linear-gradient(to right, #e8e8e8 60%, white 40%);  background-position: left top; background-repeat: repeat-x; background-size: 9px 1px; }
+#mobile .recruit .type ul li:nth-child(3),
+#mobile .recruit .type ul li:nth-child(4),
+#mobile .recruit .type ul li:nth-child(5),
+#mobile .recruit .type ul li:nth-child(6) { background-image: linear-gradient(to right, #e8e8e8 60%, white 40%);  background-position: left top; background-repeat: repeat-x; background-size: 9px 1px; }
+#mobile .recruit .type ul li:nth-child(6) .icon img { margin-left: .2rem; }
+#mobile .recruit .type .icon { width: 6.6rem; height: 6.6rem; margin-bottom: 3.5rem; }
+#mobile .recruit .type ul li:nth-child(1) .icon img { width: 3.5rem; }
+#mobile .recruit .type ul li:nth-child(2) .icon img { width: 3.4rem; }
+#mobile .recruit .type ul li:nth-child(3) .icon img { width: 3rem; }
+#mobile .recruit .type ul li:nth-child(4) .icon img { width: 3.1rem; }
+#mobile .recruit .type ul li:nth-child(5) .icon img { width: 2.8rem; }
+#mobile .recruit .type ul li:nth-child(6) .icon img { width: 3rem; }
+#mobile .recruit .type .eng_tit { font-size: 1.4rem; }
+#mobile .recruit .type .tit { font-size: 1.7rem; padding: 1rem 0 1.5rem; }
+#mobile .recruit .type p { font-size: 1.3rem; line-height: 1.76; }
+
+
+
 /* responsive */
 @media screen and (max-width:316px) {
     #mobile .company .announce .tb_box .tb_row .date,
