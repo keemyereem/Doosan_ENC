@@ -243,6 +243,7 @@ var commonEvent = {
   },
 
   tabEvent: () => {
+    // 유형1 (ex 사업영역) - 大분류
     const tabContainer = $('#mobile .tab_box > .inner'),
           tabBox = tabContainer.find('> .tab_slide'),
           tabButton = tabBox.find('> li');
@@ -296,6 +297,34 @@ var commonEvent = {
       })
     }
 
+    // 유형2 (ex 연혁, 직무소개) - 小분류
+    const tabBtn = $('.tab_small ul li'),
+          bar = $('.tab_small .bar');
+
+    tabBtn.each((index)=> {
+      tabBtn.css({'width': 'calc(100%/ ' + tabBtn.length + ')'})
+      bar.css({'width': tabBtn.width(), 'left': $('.tab_small ul li:first-child').offset().left});
+
+      tabBtn.eq(index).on('click', ()=> {
+        tabBtn.removeClass('active');
+        tabBtn.eq(index).addClass('active');
+
+        bar.css({'width': tabBtn.width(), 'left': $('.tab_small ul li.active').offset().left});
+        $(window).on('resize load scroll', ()=> {
+          bar.css({'width': tabBtn.width(), 'left': $('.tab_small ul li.active').offset().left});
+        });
+
+        window.scrollTo({
+          top: $('.tab_small').offset().top - $('.tab_small').outerHeight() * 2,
+          behavior: 'smooth',
+        })
+        
+        if ($('.HMhistory').length) {
+          $('.HMhistory').removeClass('active');
+          $('.HMhistory').eq(index).addClass('active');
+        }
+      })
+    })
 
   },
 
@@ -777,47 +806,30 @@ var companyEvent = {
     "use strict"
 
     let gap = 150;
+
     const wrap = $('.HMhistory'),
           subMenu = $('.sub_visual_menu').height();
-
-    // tab button
-    const tabBtn = $('.tab ul li')
-    tabBtn.each((index)=> {
-      
-      let arr = [];
-      arr.push($('.HMhistory').eq(index).find('.list').width());
-
-
-      tabBtn.eq(index).on('click', ()=> {
-        tabBtn.removeClass('active');
-        tabBtn.eq(index).addClass('active');
-
-        window.scrollTo({
-          top: $('.tab').offset().top - gap,
-          behavior: 'smooth',
-        })
+    
+    // let listWidths = wrap.map((_, elt) => $(elt).find(".list").width()).get(),
+    //     logestWidth = Math.max.apply(null, listWidths);
         
-        $('.HMhistory').removeClass('active');
-        $('.HMhistory').eq(index).addClass('active');
-      })
-    })
+    //     console.log(listWidths)
+    //     console.log(logestWidth)
 
-
-    
-    
     $(window).on('resize load scroll', ()=> {
       const trigger = $(window).scrollTop() + subMenu + gap;
-
+      
       wrap.each((index)=> {
         const year = wrap.eq(index).find('.year'),
               list = wrap.eq(index).find('.list'),
               line = wrap.eq(index).children('.line'),
               picker = wrap.eq(index).find('.line span');
-
+              
         // *** PC 
         if (!$('#mobile').length) {
           // 센터라인 길이
           line.css('height', wrap.eq(index).height() - list.children('li').last().children('dl:last-child').outerHeight() + picker.outerHeight() / 2 + 'px');
+          // list.css('width', Math.abs(logestWidth) + 'px')
 
           let pickerPoint = trigger + $('.century').height() / 2,
               fixMove = Math.abs($('.history').offset().left),
@@ -848,7 +860,7 @@ var companyEvent = {
           } else {
             picker.css({'position': 'absolute', 'top': 0, 'left': 0});
           }
-        }
+        } // ||| PC
 
         // 연도 변경 및 리스트 하이라이트
         list.children('li').each((index)=> {
@@ -868,38 +880,43 @@ var companyEvent = {
               list.children('li').eq(index).addClass('active');
             
             }
-          } 
-        })
+          } // ||| PC 
+        }) // ||| 연도 변경 및 리스트 하이라이트
+
+        // *** Mobile
+        if ($('#mobile').length) {
+          $('.greybox').addClass('popup')
+          $('.year, .list').find('li').removeClass('active');
+
+          const century = year.children('.century').text(),
+                yearChild = year.find('ul li');
+
+          yearChild.each((index)=> {
+            yearChild.eq(index).prepend(century);
+            yearChild.eq(index).prependTo(list.children('li').eq(index));
+
+            $(window).on('scroll load resize', ()=> {
+              let mobTrigger = $(window).scrollTop() + $(window).height() / 2 - $('.sub_visual_menu').outerHeight(),
+                  mobListStart = list.children('li').eq(index).offset().top,
+                  mobListEnd = mobListStart + list.children('li').eq(index).outerHeight();
+
+              if (mobTrigger > mobListStart && mobTrigger < mobListEnd) {
+                list.find('> li > li').removeClass('active');
+                list.children('li').removeClass('active');
+                
+                list.find('> li > li').eq(index).addClass('active');
+                list.children('li').eq(index).addClass('active');
+              }
+              
+            })
+          })
+        } // ||| Mobile
+
       });
 
     })
 
-    // *** Mobile
-    if ($('#mobile').length) {
-      $('.greybox').addClass('popup')
-      $('.year, .list').find('li').removeClass('active');
-
-      const century = $('.century').text(),
-            yearChild = $('.year').find('ul li');
-
-      yearChild.each((index)=> {
-        yearChild.eq(index).prepend(century);
-        yearChild.eq(index).prependTo($('.list').children('li').eq(index));
-
-        $(window).on('scroll load resize', ()=> {
-          let mobTrigger = $(window).scrollTop() + $(window).height() / 2 - $('.sub_visual_menu').outerHeight(),
-              mobListStart = $('.list').children('li').eq(index).offset().top,
-              mobListEnd = mobListStart + $('.list').children('li').eq(index).outerHeight();
-
-          if (mobTrigger > mobListStart && mobTrigger < mobListEnd) {
-            $('.list, .list > li').children('li').removeClass('active');
-            $('.list, .list > li').children('li').eq(index).addClass('active');
-          }
-          
-        })
-      })
-      
-    }
+    
 
   },
 

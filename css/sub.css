@@ -309,6 +309,13 @@
 .tab_box ul li.on { background: #005eb8; border-color: #005eb8; box-shadow: 0px 0px 32px 8px rgba(34, 34, 34, 0.2); }
 .tab_box ul li.on a { color: #fff; }
 .tab_box .control { display: none; }
+.tab_small { border-bottom: .1rem solid #e8e8e8; position: relative; }
+.tab_small ul { max-width: 144rem; margin: auto; display: flex; justify-content: center; position: relative; }
+.tab_small ul li { text-align: center; font-size: 1.8rem; color: #222222; }
+.tab_small ul li button { width: 100%; padding-bottom: 3.2rem; }
+.tab_small .bar { height: .4rem; background: #005eb8; position: absolute; bottom: 0; left: 0; transform: skew(-45deg); transition: all ease .6s; }
+.tab_small ul li:hover,
+.tab_small ul li.active { color: #005eb8; }
 
 
 /* ================================  Channel  =============================== */
@@ -376,6 +383,47 @@
 .tb_view .btn_box {margin-top: 6rem;}
 .tb_view .btn_line {width:28.3rem;height: 6.4rem;line-height: 6.4rem;}
 .tb_view .btn_line a {border-radius: 3.2rem;}
+
+/* SNS */
+.channel .sns .sns_tit { font-size: 3.4rem; font-weight: 450; color: #222; letter-spacing: -.17rem; }
+.channel .sns .sns_lists { width: 100%; display: flex; flex-wrap: wrap; }
+.channel .sns .sns_lists li { width: calc((100% - 10rem) / 3); margin-bottom: 78px; margin-right: 5rem; }
+.channel .sns .sns_lists li:nth-child(3n) { margin-right: 0; }
+.channel .sns .sns_lists li a { width: 100%; height: 100%; position: relative; }
+.channel .sns .sns_lists .border { position: absolute; z-index: 1; }
+.channel .sns .sns_lists .border.bdt,
+.channel .sns .sns_lists .border.bdb { width: 0; height: .4rem; transition: width .3s; }
+.channel .sns .sns_lists .border.bdl,
+.channel .sns .sns_lists .border.bdr { height: 0; width: .4rem; transition: height .3s; }
+.channel .sns .sns_lists li:hover .border.bdt,
+.channel .sns .sns_lists li:hover .border.bdb { width: 100%; height: .4rem; }
+.channel .sns .sns_lists li:hover .border.bdl,
+.channel .sns .sns_lists li:hover .border.bdr { height: 100%; width: .4rem; }
+.channel .sns .sns_lists .border.bdt { background: linear-gradient(to right, #007aee ,#007aee); top:0; left:0; }
+.channel .sns .sns_lists .border.bdr { background: linear-gradient(to bottom, #007aee ,#005eb8); bottom:0; right:0; }
+.channel .sns .sns_lists .border.bdb { background: linear-gradient(to left, #005eb8 ,#005eb8); bottom:0; right:0; }
+.channel .sns .sns_lists .border.bdl { background: linear-gradient(to top, #005eb8 ,#0079ee); top:0; left:0; }
+.channel .sns .sns_lists .img { overflow: hidden; height: 280px; position: relative; }
+.channel .sns .sns_lists.youtube .img { height: 243px; }
+.channel .sns .sns_lists .img img { width: 100%; height: 100%; object-fit: cover; object-position: 50%; transition: transform .8s ease-in-out; }
+.channel .sns .sns_lists .img .btn_play { width: fit-content; height: fit-content; object-fit: contain; transition: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.channel .sns .sns_lists:not(.youtube) li:hover .img img { transform: scale(1.1); }
+.channel .sns .sns_lists .txt { font-size: 2rem; color: #222; font-weight: 350; letter-spacing: -.1rem; line-height: 1.4; margin-top: 2.5rem; overflow: hidden; text-overflow: ellipsis; word-break: break-all; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.channel .sns .btn_line { display: block; width: 29.6rem; height: 7.4rem; line-height: 7.4rem; margin: 10rem auto 0; }
+.channel .sns .view_more { display: flex; justify-content: center; align-items: center; font-size: 2rem; border-radius: 3.7rem; border: 1px solid #222; }
+.channel .sns .view_more i { display: inline-block; width: 2.1rem; height: 2.1rem; background: url(../images/common/icon_plus_21x22.png); margin-left: 4.5rem; }
+.channel .sns .view_more:hover i { background: url(../images/common/icon_plus_w_21x22.png); }
+
+.channel .sns .sns_wrap+.sns_wrap { margin-top: 120px; }
+.channel .sns .sns_tit { font-family: 'Poppins'; font-size: 34px; font-weight: 400; color: #222; letter-spacing: -.85px; /* margin-bottom: 30px; */ }
+.channel .sns .go_sns { float: right; margin-top: -40px; margin-bottom: 40px; display: flex; align-items: center; width: fit-content; height: 50px; border: 1px solid #005eb8; border-radius: 25px; padding: 0 40px; line-height: 48px; font-size: 16px; color: #005eb8; }
+.channel .sns .go_sns::before { content:''; display: inline-block; margin-right: 10px; }
+.channel .sns .go_insta:before { width: 20px; height: 20px; background: url(../images/channel/sns_icon_insta.png) no-repeat 50% 50%;  background-size: contain; }
+.channel .sns .go_fb:before { width: 19px; height: 19px; background: url(../images/channel/sns_icon_fb.png) no-repeat 50% 50%; background-size: contain; }
+.channel .sns .go_yt:before { width: 26px; height: 19px; background: url(../images/channel/sns_icon_yt.png) no-repeat 50% 50%; background-size: contain; }
+.channel .sns .go_sns b { font-weight: 400; }
+.channel .sns > ul+ul { margin-top: 120px; }
+.contents.sns .popup ul li:last-child { padding: 0; }
 
 
 /* ================================  고객센터  =============================== */
@@ -944,14 +992,7 @@
 .company .btn_mob { display: none; }
 
 /* 연혁 */
-.company .history { margin-top: 7rem; overflow: hidden; position: relative; }
-.company .tab { border-bottom: .1rem solid #e8e8e8; }
-.company .tab ul { max-width: 144rem; margin: auto; display: flex; justify-content: center; position: relative; }
-.company .tab ul li { width: calc(100%/ 4); text-align: center; font-size: 1.8rem; color: #222222; }
-.company .tab ul li button { width: 100%; padding-bottom: 3.2rem; }
-.company .tab ul .bar { width: calc(100%/ 4); height: .4rem; background: #005eb8; position: absolute; bottom: 0; left: 0; transform: skew(-45deg); }
-.company .tab ul li:hover,
-.company .tab ul li.active { color: #005eb8; }
+.company .history { margin-top: 14rem; overflow: hidden; position: relative; }
 .company .HMhistory { display: flex; justify-content: flex-end; padding-bottom: 18rem; position: absolute; width: 100%; opacity: 0; visibility: hidden; top: 0; }
 .company .HMhistory.active { position: relative; opacity: 1; visibility: visible; transition: .3s; }
 .company .HMhistory .year { display: flex; font-family: 'Montserrat', sans-serif; font-weight: 400; height: fit-content; line-height: .75; position: absolute; top: 0; left: 0; }
@@ -962,6 +1003,7 @@
 .company .HMhistory .year ul li.active { font-size: 16rem; color: #005eb8; width: fit-content; transition: all ease .3s; }
 .company .HMhistory .line { width: .1rem; background: #cccccc; margin: 0 11rem 0 16rem; position: relative; }
 .company .HMhistory .line span { position: absolute; width: 2.3rem; height: 2.3rem; border: .5rem solid #005eb8; background: #fff; border-radius: 100%; left: 50%; transform: translateX(calc(-50% + .1rem)); }
+.company .HMhistory .list { width: 76rem; }
 .company .HMhistory .list > li:not(:last-child) { background-image: linear-gradient(to right, #e8e8e8 50%, rgba(255,255,255,0) 0%); background-position: bottom; background-size: 5px 1px; background-repeat: repeat-x; padding-bottom: 6.4rem; }
 .company .HMhistory .list > li:not(:first-child) { padding-top: 6.4rem; }
 .company .HMhistory .list > li dl { display: flex; font-size: 2rem; line-height: 2; }
@@ -981,7 +1023,7 @@
 .company .greybox .wrap .section01 h2::before { content: ''; position: absolute; top: 0; left: .3rem; width: 5.5rem; height: .6rem; background: #005eb8; transform: skew(-45deg); }
 .company .greybox .wrap .section01 h2 span { color: #005eb8; }
 .company .greybox .wrap .section01 p { padding-top: 4rem; font-size: 1.8rem; font-weight: 150; line-height: 1.7; }
-.company .greybox .wrap .section01 div { padding-top: 10.5rem; display: flex; }
+.company .greybox .wrap .section01 div { padding-top: 12rem; display: flex; }
 .company .greybox .wrap .section01 div a { padding: 2rem 1rem; width: 23.2rem; position: relative; display: flex; justify-content: space-between; font-size: 1.6rem; margin-right: 3rem; overflow: hidden; }
 .company .greybox .wrap .section01 div a::after { content: ''; width: 100%; height: .1rem; background: #000; position: absolute; bottom: 0; left: 0; transition: all ease .3s; }
 .company .greybox .wrap .section01 div a:hover { font-weight: 450; }
@@ -1139,8 +1181,8 @@
 .sr .em .section02 > h3 { padding-bottom: 3rem; }
 .sr .em .section02 > p { font-size: 2rem; line-height: 1.8; color: #555555; text-align: center; padding-bottom: 5rem; }
 .sr .em .section02 ul { padding: 8rem 12.5rem; max-width: 136rem; width: 100%; margin: auto; border: .1rem solid #e8e8e8; display: flex; justify-content: center; position: relative; }
-.sr .em .section02 ul li { width: calc(100%/ 3); text-align: center; display: flex; flex-direction: column; align-items: center; }
-.sr .em .section02 ul li h4 { font-size: 2.2rem; font-weight: 400; color: #fff; line-height: 1; padding: 2.5rem 0; width: 40rem; mix-blend-mode: multiply; border-radius: 3.5rem; }
+.sr .em .section02 ul li { width: calc(100%/ 3); text-align: center; display: flex; flex-direction: column; align-items: center; mix-blend-mode: multiply; }
+.sr .em .section02 ul li h4 { font-size: 2.2rem; font-weight: 400; color: #fff; line-height: 1; padding: 2.5rem 0; width: 40rem; border-radius: 3.5rem; }
 .sr .em .section02 ul li:nth-child(1) h4 { background: #00ad83; }
 .sr .em .section02 ul li:nth-child(2) h4 { background: #005eb8; }
 .sr .em .section02 ul li:nth-child(3) h4 { background: #00a5d7; }
@@ -1242,8 +1284,12 @@
 .recruit .type .tit { font-size: 2.4rem; font-weight: 450; color: #222; letter-spacing: -.06rem; padding: 1rem 0 2rem; }
 .recruit .type p { font-size: 1.6rem; font-weight: 150; color: #666; line-height: 2; letter-spacing: -.08rem; }
 
-
-
+/* 직무소개 - 목록 */
+.recruit .job .banner { background: linear-gradient(60deg, #f7f8f9 40%, #ffffff 60%); padding: 9.3rem 13.6rem 0; height: 40rem; position: relative; overflow-x: clip; }
+.recruit .job .banner h2 { text-transform: uppercase; color: #ffffff; font-size: 6rem; font-family: 'Montserrat', sans-serif; font-weight: 400; line-height: .8; padding-top: 4.5rem; }
+.recruit .job .banner h2:before { content: ''; display: block; width: 5.5rem; height: .6rem; background: #005eb8; transform: skew(-45deg); position: absolute; top: 0; margin-left: .5rem; }
+.recruit .job .banner p { font-size: 2rem; color: #fff; line-height: 1.8; padding-top: 3.5rem; }
+.recruit .job .banner img { position: absolute; right: 0; bottom: 0; }
 
 
 

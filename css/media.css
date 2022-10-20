@@ -119,6 +119,14 @@
     #mobile .container .sub_visual .sub_visual_menu .depth .drop_box li a { padding: .7rem 0; font-size: 1.3rem; }
     #mobile .container .sub_visual .scroll_down { display: none; }
 
+    /* tab */
+    #mobile .tab_small { margin-top: 5.2rem; overflow: hidden; }
+    #mobile .tab_small ul li { font-size: 1.4rem; }
+    #mobile .tab_small ul li button { width: 100%; height: 5.5rem; padding-bottom: 0; display: flex; align-items: center; justify-content: center; }
+    #mobile .tab_small .bar { height: .4rem; background: #005eb8; position: absolute; bottom: 0; left: 0; transform: skew(-45deg); transition: all ease .6s; }
+    #mobile .tab_small ul li:hover,
+    #mobile .tab_small ul li.active { color: #005eb8; }
+
     /* footer */
     #mobile .footer { height: auto!important; }
     #mobile .footer .inner { display: block; height: auto!important; padding: 0 2rem; }
@@ -871,19 +879,19 @@
 #mobile .company .btn_mob:hover { background: #222222; color: #fff; }
 #mobile .company .btn_mob:after { content: ''; width: 1rem; height: 1rem; display: inline-block; margin-left: 1.5rem; background: url(../images/common/icon_plus_mob_20x20.png) 50% 50% no-repeat; background-size: cover; transition: all ease .3s; }
 #mobile .company .btn_mob:hover:after { background: url(../images/common/icon_plus_mob_hover_20x20.png) 50% 50% no-repeat; background-size: cover; transform: rotate(90deg); }
-#mobile .company #HMhistory { position: relative; padding: 0 2rem 11.5rem; }
-#mobile .company #HMhistory .year,
-#mobile .company #HMhistory .line { display: none; }
-#mobile .company #HMhistory .list > li:not(:last-child) { background-size: 6px 2px; padding-bottom: 3.7rem; }
-#mobile .company #HMhistory .list > li:not(:first-child) { padding-top: 3.7rem; }
-#mobile .company #HMhistory .list > li li { font-size: 8.5rem; color: #efefef; font-weight: 400; font-family: 'Montserrat', sans-serif; line-height: .8; padding-bottom: 4rem; transition: all ease .3s; }
-#mobile .company #HMhistory .list > li.active li { color: #005eb8; }
-#mobile .company #HMhistory .list > li dl { font-size: 1.5rem; line-height: 1.7; width: 100%; }
-#mobile .company #HMhistory .list > li dl:not(:first-of-type) { margin-top: 3rem; }
-#mobile .company #HMhistory .list > li dl dt { width: 4.65rem; }
-#mobile .company #HMhistory .list > li dl dd { width: calc(100% - 4.65rem); }
-#mobile .company #HMhistory .list > li dl dd p:not(:first-child),
-#mobile .company #HMhistory .list > li dl dd img { margin-top: 1.5rem; width: 100%; }
+#mobile .company .HMhistory { padding: 0 2rem 22.3rem; }
+#mobile .company .HMhistory .year,
+#mobile .company .HMhistory .line { display: none; }
+#mobile .company .HMhistory .list > li:not(:last-child) { background-size: 6px 2px; padding-bottom: 3.7rem; }
+#mobile .company .HMhistory .list > li:not(:first-child) { padding-top: 3.7rem; }
+#mobile .company .HMhistory .list > li li { font-size: 8.5rem; color: #efefef; font-weight: 400; font-family: 'Montserrat', sans-serif; line-height: .8; padding-bottom: 4rem; transition: all ease .3s; }
+#mobile .company .HMhistory .list > li.active li { color: #005eb8; }
+#mobile .company .HMhistory .list > li dl { font-size: 1.5rem; line-height: 1.7; width: 100%; }
+#mobile .company .HMhistory .list > li dl:not(:first-of-type) { margin-top: 3rem; }
+#mobile .company .HMhistory .list > li dl dt { width: 4.65rem; }
+#mobile .company .HMhistory .list > li dl dd { width: calc(100% - 4.65rem); }
+#mobile .company .HMhistory .list > li dl dd p:not(:first-child),
+#mobile .company .HMhistory .list > li dl dd img { margin-top: 1.5rem; width: 100%; }
 #mobile .company .greybox { height: 100vh; background: rgba(0, 0, 0, .6); position: fixed; top: 0; bottom: 0; left: 0; right: 0; margin: auto; padding: 11.25rem 1rem 3rem; z-index: 9999; align-items: center; overflow: auto; }
 #mobile .company .greybox .pop_close { display: block; position: absolute; top: 0; width: 5.25rem; height: 5.25rem; top: 3rem; left: 0; right: 0; margin: auto; transition: all ease .3s; }
 #mobile .company .greybox .pop_close:hover { transform: rotate(90deg); }
