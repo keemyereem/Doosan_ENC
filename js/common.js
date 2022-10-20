@@ -302,14 +302,16 @@ var commonEvent = {
           bar = $('.tab_small .bar');
 
     tabBtn.each((index)=> {
+      // initializing
       tabBtn.css({'width': 'calc(100%/ ' + tabBtn.length + ')'})
-      bar.css({'width': tabBtn.width(), 'left': $('.tab_small ul li:first-child').offset().left});
+      bar.css({'width': tabBtn.width(), 'left': $('.tab_small ul li.active').offset().left});
 
       tabBtn.eq(index).on('click', ()=> {
         tabBtn.removeClass('active');
         tabBtn.eq(index).addClass('active');
 
         bar.css({'width': tabBtn.width(), 'left': $('.tab_small ul li.active').offset().left});
+
         $(window).on('resize load scroll', ()=> {
           bar.css({'width': tabBtn.width(), 'left': $('.tab_small ul li.active').offset().left});
         });
@@ -319,6 +321,7 @@ var commonEvent = {
           behavior: 'smooth',
         })
         
+        // 연혁페이지
         if ($('.HMhistory').length) {
           $('.HMhistory').removeClass('active');
           $('.HMhistory').eq(index).addClass('active');
