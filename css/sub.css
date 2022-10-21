@@ -1269,7 +1269,7 @@
 .recruit { overflow: hidden; }
 .recruit .sub_visual { background-image: url(../images/recruit/recruit_bg.png); }
 .recruit .contents { max-width: 144rem; width: 100%; margin: auto; }
-.recruit .tab_small { margin-bottom: 10rem; }
+.recruit .tab_small { margin-bottom: 6rem; }
 .recruit .banner { max-width: 144rem; background: #f7f8f9 url(../images/recruit/job_list_banner_img02.png)100% 100% no-repeat; padding: 9.3rem 13.6rem 0; height: 42rem; margin: 12rem auto; position: relative; overflow: visible; }
 .recruit .banner h2 { text-transform: uppercase; font-size: 6rem; color: #222222; font-weight: 450; line-height: 1.3; padding-top: 3rem; }
 .recruit .banner h2:before { content: ''; display: block; width: 5.5rem; height: .6rem; background: #005eb8; transform: skew(-45deg); position: absolute; top: 0; margin-left: .5rem; }
@@ -1292,15 +1292,28 @@
 .recruit .type p { font-size: 1.6rem; font-weight: 150; color: #666; line-height: 2; letter-spacing: -.08rem; }
 
 /* 직무소개 - 목록 */
-
-
-
-
-
-
-
-
-
+.recruit .job {  }
+.recruit .job ul { display: flex; justify-content: space-between; flex-wrap: wrap; }
+.recruit .job ul li { width: calc(100% / 3 - 2.5rem); height: 63.5rem; border: .1rem solid #e8e8e8; display: block; padding: 5rem 0; position: relative; transition: all ease .3s; margin-top: 4rem; }
+.recruit .job ul li h3 { padding: 0 4rem; font-size: 2.2rem; font-weight: 350; color: #005eb8; line-height: 1; }
+.recruit .job ul li h3 i { content: '|'; display: inline-block; width: .1rem; height: 1.7rem; background: #005eb8; margin: 0 1rem; }
+.recruit .job ul li h3 span { display: block; font-weight: 100; color: #000000; font-size: 1.6rem; padding-top: 1.4rem; }
+.recruit .job ul li p { font-size: 2rem; font-weight: 350; text-align: center; color: #555555; line-height: 1.6; padding-top: 4rem; }
+.recruit .job ul li > div { width: 33rem; height: 38.4rem; margin: auto; padding-top: 5.4rem; border-radius:33rem; position: relative; overflow: hidden; }
+.recruit .job ul li > div:after { content: ''; width: 33rem; height: 33rem; position: absolute; bottom: 0; background: #f4ebe2; display: block; border-radius: 100%; z-index: 0; }
+.recruit .job ul li > div img { position: absolute; bottom: -15rem; margin: auto; transition: all ease .6s; z-index: 1; }
+.recruit .job ul li > div img.wid0 { right: -2rem; }
+.recruit .job ul li > div img.widn { left: unset; right: unset; }
+.recruit .job ul li a { display: none; margin: 5rem auto 0; width: 17rem; height: 5rem; color: #ffffff; text-align: center; font-family: 'Montserrat', sans-serif; font-size: 1.4rem; align-items: center; justify-content: center; border: .1rem solid rgba(255, 255, 255, .6); border-radius: 2.5rem; }
+.recruit .job ul li a img { margin-left: 1.7rem; transition: all ease .3s; }
+.recruit .job ul li a:hover img { transform: rotate(90deg); }
+.recruit .job ul li:hover { background: #005eb8; }
+.recruit .job ul li:hover div img { bottom: -10rem; }
+.recruit .job ul li:hover h3,
+.recruit .job ul li:hover span { color: #ffffff;}
+.recruit .job ul li:hover p { display: none; }
+.recruit .job ul li:hover h3 i { background-color: #ffffff; }
+.recruit .job ul li:hover a { display: flex; }
 
 /* =========================================================================== */
 /* ===============================  Animation  =============================== */

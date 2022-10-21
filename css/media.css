@@ -333,7 +333,7 @@
     #mobile .title_area .con_tit > span::after { border-left: .75rem solid transparent; border-right: .75rem solid transparent; border-top: .75rem solid #1d1f1e; top: 0; }
     #mobile .title_area .sub_tit { font-size: 2.2rem; padding: 3rem 0 1rem; line-height: 1.36; }
     #mobile .title_area .sub_tit > b {  font-size: 2.3rem; }
-    #mobile .title_area .sub_txt { font-size: 1.5rem; line-height: 1.66; }
+    #mobile .title_area .sub_txt { font-size: 1.5rem; line-height: 1.66; padding-top: 3rem; }
     #mobile .title_area .download_btn { width: 17.5rem; font-size: 1.3rem; margin-top: 4.5rem; margin-bottom: 6.5rem;  }
     #mobile .title_area .download_btn > i { width: 1.45rem; height: 1.5rem; background: url(../images/common/icon_download.png) no-repeat; background-size: contain; margin-left: 2.1rem; }
     #mobile .title_area .download_btn::after { margin-top: 1.5rem; }
@@ -892,7 +892,8 @@
 #mobile .company .HMhistory .list > li dl dd { width: calc(100% - 4.65rem); }
 #mobile .company .HMhistory .list > li dl dd p:not(:first-child),
 #mobile .company .HMhistory .list > li dl dd img { margin-top: 1.5rem; width: 100%; }
-#mobile .company .greybox { height: 100vh; background: rgba(0, 0, 0, .6); position: fixed; top: 0; bottom: 0; left: 0; right: 0; margin: auto; padding: 11.25rem 1rem 3rem; z-index: 9999; align-items: center; overflow: auto; }
+#mobile .company .greybox { opacity: 0; visibility: hidden; height: 100vh; background: rgba(0, 0, 0, .6); position: fixed; top: 0; bottom: 0; left: 0; right: 0; margin: auto; padding: 11.25rem 1rem 3rem; z-index: 9999; align-items: center; overflow: auto; }
+#mobile .company .greybox.on { opacity: 1; visibility: visible; }
 #mobile .company .greybox .pop_close { display: block; position: absolute; top: 0; width: 5.25rem; height: 5.25rem; top: 3rem; left: 0; right: 0; margin: auto; transition: all ease .3s; }
 #mobile .company .greybox .pop_close:hover { transform: rotate(90deg); }
 #mobile .company .greybox .wrap { background: #f9f9f9 url(../images/company/greybox_bg.png) 55% 101% no-repeat; background-size: 200%; flex-direction: column; }

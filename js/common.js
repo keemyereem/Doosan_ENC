@@ -888,8 +888,8 @@ var companyEvent = {
 
         // *** Mobile
         if ($('#mobile').length) {
-          $('.greybox').addClass('popup')
-          $('.year, .list').find('li').removeClass('active');
+            $('.greybox').addClass('popup');
+            $('.year, .list').find('li').removeClass('active');
 
           const century = year.children('.century').text(),
                 yearChild = year.find('ul li');
