@@ -395,6 +395,40 @@
     #mobile .tb_view .btn_line { width: 100%; max-width: 21.1rem; height: 4.5rem; line-height: 4.5rem; }
     #mobile .tb_view .btn_line a { border-radius: 2.25rem; font-size: 1.3rem; }
 
+    /* SNS */
+    #mobile .channel .sns { padding-top: 5.5rem; padding-bottom: 10rem; overflow: hidden; }
+    #mobile .channel .sns .inner { width: 100%!important; }
+    #mobile .channel .sns .sns_tit { font-size: 2.2rem; margin-bottom: 2.5rem; padding-left: 2rem; }
+    #mobile .channel .sns .list { width: 80vw!important; overflow: visible; padding-bottom: 15rem; }
+    #mobile .channel .sns .sns_lists { width: fit-content!important; flex-wrap: nowrap; padding-left: .5rem; }
+    #mobile .channel .sns .sns_lists li { width: 80vw!important; margin-right: 0; padding: 0 1.5rem; }
+    #mobile .channel .sns .sns_lists li:nth-child(3n) { margin-right: 0; }
+    #mobile .channel .sns .sns_lists li a { height: fit-content; }
+    #mobile .channel .sns .sns_lists .border.bdt,
+    #mobile .channel .sns .sns_lists .border.bdb { height: .2rem; }
+    #mobile .channel .sns .sns_lists .border.bdl,
+    #mobile .channel .sns .sns_lists .border.bdr { width: .2rem; }
+    #mobile .channel .sns .sns_lists:not(.youtube) li:hover a { box-shadow: 4px 7px 10px 0px rgba(4, 0, 0, 0.16); }
+    #mobile .channel .sns .sns_lists .img { height: fit-content; }
+    #mobile .channel .sns .sns_lists.youtube .img { height: fit-content; }
+    #mobile .channel .sns .sns_lists .img .btn_play { width: 5rem; height: 5rem; }
+    #mobile .channel .sns .sns_lists .txt { overflow: hidden; padding: 1.5rem 2rem; }
+    #mobile .channel .sns .sns_lists .txt p { font-size: 1.5rem; }
+    #mobile .channel .sns .swiper-pagination { position: relative; margin-top: 3rem; width:100vw; }
+    #mobile .channel .sns .swiper-pagination-bullet { background: #005eb8; }
+    #mobile .channel .sns .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet { margin: 0 .6rem; }
+    #mobile .channel .sns .btn_line { display: none; }
+
+    #mobile .channel .sns .sns_wrap { position: relative; }
+    #mobile .channel .sns .sns_wrap+.sns_wrap { margin-top: 0; }
+    #mobile .channel .sns .go_sns { float:none; margin-top: 0; margin-bottom: 0; width: calc(100% - 4.5rem); max-width: 29rem; height: 5rem; border-radius: 2.5rem; line-height: 5rem; font-size: 1.5rem; position: absolute; bottom: 6rem; left: 50%; transform: translateX(-50%); }
+    #mobile .channel .sns .go_sns::before { margin-right: 10px; }
+    #mobile .channel .sns .go_yt:before { width: 2rem; height: 1.45rem; }
+    #mobile .channel .sns .go_insta:before { width: 1.55rem; height: 1.55rem; }
+    #mobile .channel .sns .go_fb:before { width: 1.5rem; height: 1.5rem; }
+    #mobile .channel .sns .go_sns b { font-weight: 400; line-height: 5rem; flex-shrink: 0; }
+
+
 
     /* ================================  고객센터  =============================== */
 
@@ -579,6 +613,7 @@
 @media screen and (max-width:330px) {
     #mobile .technology .ipr .tb_box .tb_row .patent_num { width: 100%; }
     #mobile .technology .ipr.ipr02 .tb_box .tb_row .download { width: 100%; position: initial; padding-top: 1rem; }
+    #mobile .channel .sns .go_sns { padding: 0 5vw; }
 } 
 @media screen and (max-width:305px) {
     #mobile .technology .ipr .tb_box .tb_row .class,

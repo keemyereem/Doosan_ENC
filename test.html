@@ -33,165 +33,242 @@
     <!-- Library CSS -->
 
     <link type="text/css" href="test.css" rel="stylesheet">
+    <link type="text/css" href="https://github.com/sindresorhus/github-markdown-css/blob/gh-pages/github-markdown.css" rel="stylesheet">
 
     <!-- Library JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-3.3.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 
+    <script src="https://demo-ochre.vercel.app/isotope-docs.min.js"></script>
     <script src="test.js"></script>
     
-    <!-- Initialized Include Path -->
-    <script>
-        $(document).ready( function() {
-            // JS importing
-            test.init();
-        });
-    </script>
 
 <style>
-* {
-    margin: 0;
-    list-style: none;
-    text-decoration: none;
-    padding: 0;
-    box-sizing: border-box; 
+body {
+  background-color: #2a2a2a;
+}
+.grid {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.grid > li {
+  width: calc(100% / 3 - 30px);
+  margin: 0px 15px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.filters {
+  margin-top: 40px;
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.grid li img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+.filters button {
+  padding: 10px 25px;
+  margin: 0px 5px;
+  background-color: #121212;
+  border: none;
+  border-radius: 10px;
+  transition: 150ms;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 700;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+}
+.filters button.is-checked {
+  background-color: #fff;
+  color: #121212;
+}
+.element-item > div {
+  padding: 20px 15px;
+  background-color: #121212;
+  color: #dddddd;
+}
+.element-item p {
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "Lato", sans-serif;
 }
 
-body {  
-    
-    background-color: #111;
-    background-image: 
-        linear-gradient(rgba(255, 255, 255, .2) 2px, transparent 2px),
-        linear-gradient(90deg, rgba(255, 255, 255, .2) 2px, transparent 2px),
-        linear-gradient(rgba(255, 255, 255, .1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, .1) 1px, transparent 1px);
-    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
-    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
-    padding-bottom: 1000px;
+@media (max-width: 767px) {
+  .filters button {
+    padding: 5px 10px;
+    margin: 5px;
+  }
+  .grid > li {
+    width: calc(100% - 30px);
+  }
+  .element-item p {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
-
-.box { 
-    width: 800px;
-    height: 300px;
-    background: #005EB8;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
- .box > li { background: #fff; width: 150px; height: 150px; border-radius: 100%; position: absolute; opacity: 0; }
- .box > li > ul { display: flex; flex-direction: column; justify-content: center; height: 100%; width: 100%; }
- .box > li > ul > li { text-align: center; position: relative; height: auto !important; }
- .box > li > ul > li img:not(:first-child),
- .box > li > ul > li p:not(:first-child) { position: absolute; left: 0; right: 0; margin: auto; top: 0; opacity: 0; }
- .box > li > ul > li:nth-child(2) p { font-size: 10px; padding: 10px 0 0; }
- .box > li > ul > li:nth-child(3) p { font-size: 24px; line-height: 1; }
- .box > li > ul > li:nth-child(3) p em { color: #005EB8; font-style: normal; }
-
- .four { z-index: 9; }
 </style>
 </head>
 
 <body>
-    <ul class="box">
-        <li class="one">
-            <ul>
-                <li><img src="images/common/icon_lang_b.png" alt=""></li>
-                <li><p>Future</p></li>
-                <li class="slogan">
-                    <p>We<em>ve</em></p>
-                    <p>ha<em>ve</em></p>
-                </li>
-            </ul>
-        </li>
-        <li class="two">
-            <ul>
-                <li><img src="images/common/icon_lang_b.png" alt=""></li>
-                <li><p>Comfort</p></li>
-                <li class="slogan">
-                    <p>We<em>ve</em></p>
-                    <p>li<em>ve</em></p>
-                </li>
-            </ul>
-        </li>
-        <li class="three">
-            <ul>
-                <li><img src="images/common/icon_lang_b.png" alt=""></li>
-                <li><p>Reduction</p></li>
-                <li class="slogan">
-                    <p>We<em>ve</em></p>
-                    <p>sa<em>ve</em></p>
-                </li>
-            </ul>
-        </li>
-        <li class="four">
-            <ul>
-                <li>
-                    <img src="images/common/icon_lang_b.png" alt="">
-                    <img src="images/common/weve_logo_b.png" alt="">
-                    <img src="images/common/weve_logo_w_m.png" alt="">
-                </li>
-                <li class="sub">
-                    <p>Solution</p>
-                    <p>Happiness</p>
-                </li>
-                <li class="slogan">
-                    <p>We<em>ve</em></p>
-                    <p>sol<em>ve</em></p>
-                    <p>lo<em>ve</em></p>
-                    <p>LOVE</p>
-                </li>
-            </ul>
-        </li>
-    </ul>
-
-<script>
-
-const tl1 = gsap.timeline({ repeat:-1, repeatDelay: 1 });
-
-tl1.to('.one', { x: -240 })
-.to('.one', { opacity: 1, duration: .5 })
-.to('.one .slogan p:first-child', { x : 0, opacity: 0, duration: .2 })
-.to('.one .slogan p:last-child', { x : 0, opacity: 1, duration: .3 }, "=-.1");
-
-tl1.to('.two', { x: -80 })
-.to('.two', { opacity: 1, duration: .5, delay: .5 })
-.to('.two .slogan p:first-child', { x : 0, opacity: 0, duration: .2 })
-.to('.two .slogan p:last-child', { x : 0, opacity: 1, duration: .3 }, "=-.1");
-
-tl1.to('.three', { x: 80})
-.to('.three', { opacity: 1, duration: .5, delay: .5 })
-.to('.three .slogan p:first-child', { x : 0, opacity: 0, duration: .2 })
-.to('.three .slogan p:last-child', { x : 0, opacity: 1, duration: .3 }, "=-.1");
-
-tl1.to('.four', { x: 240 })
-.to('.four', { opacity: 1, duration: .5, delay: .5 })
-.to('.four .slogan p:first-child', { x : 0, opacity: 0, duration: .2 })
-.to('.four .slogan p:nth-child(2)', { x : 0, opacity: 1, duration: .3 }, "=-.1");
-
-tl1.to('.box', { borderRadius: "50px", duration: .5, delay: .5 })
-.to('.box > li', { x: 0, y: 0, duration: 1, delay: .5 }, "=-1")
-.to('.box', { borderRadius: "300px", width: "300px", duration: 1 }, "=-1")
-.to('.four img:first-child, .slogan p:nth-child(2)', { opacity: 0, duration: .2 }, "=-.5")
-.to('.four img:nth-child(2), .slogan p:nth-child(3)', { opacity: 1, duration: .3 }, "=-.5");
-
-tl1.to('.box', { background: "rgba(235, 245, 255, 1)", duration: 1 })
-.to('.four', { background: "#005EB8", width: "250px", height: "250px", duration: .5, delay: .2 }, "=-1")
-.to('.four img:nth-child(2), .four .slogan p:nth-child(3), .four .sub p:first-child', { opacity: 0, duration: .2 }, "=-.5")
-.to('.four .sub p', { padding: "+=15 0 +=5", duration: .5, }, "=-.5")
-.to('.four .slogan p, .four .sub p', { duration: .5, fontSize: "+=10", color: "#fff" }, "=-.5")
-.to('.four img:nth-child(3), .four .slogan p:nth-child(4), .four .sub p:nth-child(2)', { opacity: 1, duration: .3 }, "=-.5")
-.to('.four li:not(:last-child)', { duration: .5, opacity: 0, delay: .5, height: "0 !important", padding: 0, overflow: "hidden" })
-.to('.four .slogan p', { duration: .5, fontSize: "+=20" }, "=-.5")
-
-</script>
+    <div data-js="hero-demo">
+        <div class="ui-group">
+          <div class="filters button-group js-radio-button-group device-type">
+            <button class="button is-checked" data-filter="*">All</button>
+            <button class="button" data-filter=".cat-1">Category 1</button>
+            <button class="button" data-filter=".cat-2">Category 2</button>
+            <button class="button" data-filter=".cat-3">Category 3</button>
+      
+          </div>
+        </div>
+      
+        <ul class="grid">
+          <li class="element-item cat-1" data-category="cat-1">
+            <div>
+              <img src="https://ucarecdn.com/9e704d29-30d9-4502-b33d-a3c1b929d769/img6.jpg" alt="gallery-img">
+              <h1>Title</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut.</p>
+            </div>
+          </li>
+          <li class="element-item cat-2" data-category="cat-2">
+            <div>
+              <img src="https://ucarecdn.com/26cc7225-68bb-4f79-b9ab-16c49baec093/img9.jpg" alt="gallery-img">
+              <h1>Title</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut.</p>
+            </div>
+          </li>
+          <li class="element-item cat-3" data-category="cat-3">
+            <div>
+              <img src="https://ucarecdn.com/f06773b7-929d-470f-b218-bcc23680b0fa/img7.jpg" alt="gallery-img">
+              <h1>Title</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut.</p>
+            </div>
+          </li>
+          <li class="element-item cat-1" data-category="cat-1">
+            <div>
+              <img src="https://ucarecdn.com/9138cc1d-7bfb-4725-9dc8-9e574cf8eac6/img9.jpg" alt="gallery-img">
+              <h1>Title</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut.</p>
+            </div>
+          </li>
+          <li class="element-item cat-2" data-category="cat-2">
+            <div>
+              <img src="https://ucarecdn.com/9e704d29-30d9-4502-b33d-a3c1b929d769/img7.jpg" alt="gallery-img">
+              <h1>Title</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut.</p>
+            </div>
+          </li>
+          <li class="element-item cat-3" data-category="cat-3">
+            <div>
+              <img src="https://ucarecdn.com/8e639197-7d0f-4ef0-add5-3ec748376da8/img6.jpg" alt="gallery-img">
+              <h1>Title</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut.</p>
+            </div>
+          </li>
+          <li class="element-item cat-1" data-category="cat-1">
+            <div>
+              <img src="https://ucarecdn.com/f06773b7-929d-470f-b218-bcc23680b0fa/img7.jpg" alt="gallery-img">
+              <h1>Title</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut.</p>
+            </div>
+          </li>
+          <li class="element-item cat-2" data-category="cat-2">
+            <div>
+              <img src="https://ucarecdn.com/9e704d29-30d9-4502-b33d-a3c1b929d769/img9.jpg" alt="gallery-img">
+              <h1>Title</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut.</p>
+            </div>
+          </li>
+          <li class="element-item cat-3" data-category="cat-3">
+            <div>
+              <img src="https://ucarecdn.com/26cc7225-68bb-4f79-b9ab-16c49baec093/img7.jpg" alt="gallery-img">
+              <h1>Title</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut.</p>
+            </div>
+          </li>
+          <li class="element-item cat-1" data-category="cat-1">
+            <div>
+              <img src="https://ucarecdn.com/9138cc1d-7bfb-4725-9dc8-9e574cf8eac6/img4.jpg" alt="gallery-img">
+              <h1>Title</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut.</p>
+            </div>
+          </li>
+          <li class="element-item cat-2" data-category="cat-2">
+            <div>
+              <img src="https://ucarecdn.com/9e704d29-30d9-4502-b33d-a3c1b929d769/img11.jpg" alt="gallery-img">
+              <h1>Title</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut.</p>
+            </div>
+          </li>
+          <li class="element-item cat-3" data-category="cat-3">
+            <div>
+              <img src="https://ucarecdn.com/f06773b7-929d-470f-b218-bcc23680b0fa/img7.jpg" alt="gallery-img">
+              <h1>Title</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut.</p>
+            </div>
+          </li>
+          <li class="element-item cat-1" data-category="cat-1">
+            <div>
+              <img src="https://ucarecdn.com/8e639197-7d0f-4ef0-add5-3ec748376da8/img6.jpg" alt="gallery-img">
+              <h1>Title</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut.</p>
+            </div>
+          </li>
+          <li class="element-item cat-2" data-category="cat-2">
+            <div>
+              <img src="https://ucarecdn.com/26cc7225-68bb-4f79-b9ab-16c49baec093/img9.jpg" alt="gallery-img">
+              <h1>Title</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut.</p>
+            </div>
+          </li>
+          <li class="element-item cat-3" data-category="cat-3">
+            <div>
+              <img src="https://ucarecdn.com/9e704d29-30d9-4502-b33d-a3c1b929d769/img11.jpg" alt="gallery-img">
+              <h1>Title</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut.</p>
+            </div>
+          </li>
+          <li class="element-item cat-1" data-category="cat-1">
+            <div>
+              <img src="https://ucarecdn.com/f06773b7-929d-470f-b218-bcc23680b0fa/img7.jpg" alt="gallery-img">
+              <h1>Title</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut.</p>
+            </div>
+          </li>
+          <li class="element-item cat-2" data-category="cat-2">
+            <div>
+              <img src="https://ucarecdn.com/8e639197-7d0f-4ef0-add5-3ec748376da8/img6.jpg" alt="gallery-img">
+              <h1>Title</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
 </body>
 </html>

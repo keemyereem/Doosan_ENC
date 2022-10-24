@@ -36,15 +36,12 @@
     <!-- Library JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-3.3.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 
     <script src="js/lib/jquery.fullPage.js"></script>
     <script src="js/lib/jquery.easings.min.js"></script>
-    <script src="js/lib/scrolloverflow.js"></script>
     <script src="js/lib/aos.js"></script>
-    <script src="js/lib/slick.min.js"></script>
-    
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
     <script src="js/common.js?v=1.0"></script>
 
     <!-- Initialized Include Path -->
@@ -56,6 +53,7 @@
 
             // JS importing
             commonEvent.init();
+            recruitEvent.init();
         });
     </script>
 </head>
@@ -63,7 +61,6 @@
 <body>
     <!-- wrap -->
     <div class="wrap" id="sub">
-
         <!-- header -->
         <div class="header wht"></div>
         <!-- //header -->
@@ -73,6 +70,21 @@
         <!-- //sitemap -->
 
         <div class="container recruit">
+            <!-- popup -->
+            <div class="popup">
+                <ul>
+                    <li>
+                        <dl class="pop_title">
+                            <dt></dt>
+                            <dd></dd>
+                        </dl>
+                        <div class="img">
+                            <span></span><span></span>
+                            <img src="../images/recruit/job_popup_person01.png" alt="">
+                        </div>  
+                    </li>
+                </ul>
+            </div>
             <div class="sub_visual">
                 <div class="inner">
                     <h1>인재채용</h1>
@@ -128,152 +140,171 @@
             </div>
 
             <div class="tab_small">
-              <ul>
-                <li class="active"><button type="button">전체직무</button></li>
-                <li><button type="button">건축</button></li>
-                <li><button type="button">토목</button></li>
-                <li><button type="button">경영지원</button></li>
-                <li><button type="button">안전/보건</button></li>
+              <ul class="btn_set">
+                <li class="active"><button type="button" data-filter="*">전체직무</button></li>
+                <li><button type="button" data-filter=".at">건축</button></li>
+                <li><button type="button" data-filter=".cv">토목</button></li>
+                <li><button type="button" data-filter=".bs">경영지원</button></li>
+                <li><button type="button" data-filter=".sh">안전/보건</button></li>
               </ul>
               <span class="bar"></span>
             </div>
 
             <div class="contents job">
-              <ul>
-                <li>
+              <ul class="isotope" data-aos="fade-up">
+                <li class="isotope_item at">
                     <h3>
                         건축<i></i>건축시공
                         <span>정은별 사원</span>
                     </h3>
-                    <div><img src="images/recruit/job_list_person01.png" alt="job_list_person01" class="wid0"></div>
-                    <p>공사 전반에 대해 관리감독 하는 <br>책임감과 자부심을 가질 수 있습니다.</p>
-                    <a href="javascript:;" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
+                    <div><img src="images/recruit/job_list_person01.png" alt="job_list_person01" data-popup-moving="160"></div>
+                    <p>공사 전반에 대해 <br class="pu_br">관리감독 하는 <br class="pu_indent">책임감과 <br class="pu_br">자부심을 가질 수 있습니다.</p>
+                    <a href="javascript:;" class="openPopup" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
+
+                    <article>
+                        <h4>팝업 인터뷰 데이터</h4>
+                        <p class="q1">
+                            건축시공 직무는 건물을 짓는데 필요한 모든 공정을 점검하고, 온전히 시공할 수 있도록 하는 관리감독자 직무입니다. 
+                            기본적으로는 공사 공정관리 및 원가관리부터, 하자가 없게끔 시공되는지에 대한 품질 관리, 그리고 현장 내에 작업자들의 위험도를 
+                            항시 파악하는 안전 관리까지 한 분야만이 아닌 상호 연관된 각 요소들을 통합적으로 관리할 수 있어야 합니다. 
+                            건설인으로서 공사 내 모든 작업에 대해 관리 감독한다는 책임감과 자부심을 가질 수 있는 직무입니다. 
+                        </p>
+                        <p class="q2">
+                            현장의 시작은 오전 7시입니다. 
+                            숙소에서 5시 40분에 일어나 준비 후 6시 30분까지 현장 사무실로 출근합니다. 
+                            당일 주 작업 공정에 대한 항목들을 정리한 후, 현장에서 7시에 협력사들과 함께 TOOL BOX MEETING을 갖습니다. 
+                            공정진행에 있어 필요한 사항들을 서로 공유한 후에 담당 동 및 구간을 돌며 공사의 공정, 품질을 파악하고 작업자의 안전 관리감독을 합니다.
+                            사무실에서는 각 공종별로 제출한 출력일보를 바탕으로 그날의 공사일보를 작성합니다. 
+                            또한 현장에서 파악한 공정에 차질이 있거나 체크해야 하는 사항들을 사무실에서 정리하고, 추후 해결할 수 있도록 파악합니다. 
+                            이후 팀 회의 및 공종회의를 마치면 하루 일과가 마무리됩니다.
+                        </p>
+                    </article>
                 </li>
-                <li>
+                <li class="isotope_item at">
                     <h3>
                         건축<i></i>기계시공
                         <span>정우재 사원</span>
                     </h3>
-                    <div><img src="images/recruit/job_list_person02.png" alt="job_list_person02" class="widn"></div>
+                    <div><img src="images/recruit/job_list_person02.png" alt="job_list_person02" data-popup-moving="160"></div>
                     <p>기계설비는 건축물에 <br>생명을 불어넣는 역할을 합니다.</p>
-                    <a href="javascript:;" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
+                    <a href="javascript:;" class="openPopup" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
                 </li>
-                <li>
+                <li class="isotope_item at">
                     <h3>
                         건축<i></i>전기시공
                         <span>김동훈 사원</span>
                     </h3>
-                    <div><img src="images/recruit/job_list_person03.png" alt="job_list_person03" class="wid0"></div>
+                    <div><img src="images/recruit/job_list_person03.png" alt="job_list_person03" data-popup-moving="160"></div>
                     <p>시간관리와 책임감 있는 자세가 <br>정말 중요합니다.</p>
-                    <a href="javascript:;" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
+                    <a href="javascript:;" class="openPopup" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
                 </li>
-                <li>
+                <li class="isotope_item at">
                     <h3>
                         건축<i></i>설계
                         <span>문종호 대리</span>
                     </h3>
-                    <div><img src="images/recruit/job_list_person04.png" alt="job_list_person04" class="widn"></div>
+                    <div class="mask04"><img src="images/recruit/job_list_person04.png" alt="job_list_person04" data-popup-moving="160"></div>
                     <p>현장의 시공성과 원가개선을 위해 <br>최선의 방법을 찾습니다.</p>
-                    <a href="javascript:;" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
+                    <a href="javascript:;" class="openPopup" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
                 </li>
-                <li>
+                <li class="isotope_item at">
                     <h3>
                         건축<i></i>상품개발
                         <span>김종훈 과장</span>
                     </h3>
-                    <div><img src="images/recruit/job_list_person05.png" alt="job_list_person05" class="widn"></div>
+                    <div><img src="images/recruit/job_list_person05.png" alt="job_list_person05" data-popup-moving="160"></div>
                     <p>견본주택을 시공해서 분양을 하는 일은 <br>항상 보람을 느끼게 합니다.</p>
-                    <a href="javascript:;" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
+                    <a href="javascript:;" class="openPopup" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
                 </li>
-                <li>
+                <li class="isotope_item at">
                     <h3>
                         건축<i></i>영업
                         <span>양지범 과장</span>
                     </h3>
-                    <div><img src="images/recruit/job_list_person06.png" alt="job_list_person06" class="widn"></div>
+                    <div><img src="images/recruit/job_list_person06.png" alt="job_list_person06" data-popup-moving="160"></div>
                     <p>재개발/재건축 수주를 비롯해 <br>정비사업 사업의전반을 관리합니다.</p>
-                    <a href="javascript:;" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
+                    <a href="javascript:;" class="openPopup" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
                 </li>
-                <li>
+                <li class="isotope_item at">
                     <h3>
                         건축<i></i>기획
                         <span>천소영 차장</span>
                     </h3>
-                    <div><img src="images/recruit/job_list_person07.png" alt="job_list_person07" class="widn"></div>
+                    <div><img src="images/recruit/job_list_person07.png" alt="job_list_person07" class="posr" data-popup-moving="160"></div>
                     <p>본사 팀 및 현장과의 가교역할을 하며 <br>업무역량을 키우고 있습니다.</p>
-                    <a href="javascript:;" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
+                    <a href="javascript:;" class="openPopup" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
                 </li>
-                <li>
+                <li class="isotope_item cv">
                     <h3>
                         토목<i></i>토목시공
                         <span>김형석 사원</span>
                     </h3>
-                    <div><img src="images/recruit/job_list_person08.png" alt="job_list_person08" class="widn"></div>
+                    <div class="mask08"><img src="images/recruit/job_list_person08.png" alt="job_list_person08" data-popup-moving="160"></div>
                     <p>준공된 성과물을 통해 오랜 기간 많은 <br>사람들에게 편의를 제공합니다.</p>
-                    <a href="javascript:;" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
+                    <a href="javascript:;" class="openPopup" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
                 </li>
-                <li>
+                <li class="isotope_item cv">
                     <h3>
                         토목<i></i>영업
                         <span>백승범 차장</span>
                     </h3>
-                    <div><img src="images/recruit/job_list_person09.png" alt="job_list_person09" class="widn"></div>
+                    <div><img src="images/recruit/job_list_person09.png" alt="job_list_person09" data-popup-moving="160"></div>
                     <p>현장의 준공 및 개통의 순간은 <br>잊을 수 없는 큰 보람입니다.</p>
-                    <a href="javascript:;" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
+                    <a href="javascript:;" class="openPopup" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
                 </li>
-                <li>
+                <li class="isotope_item bs">
                     <h3>
                         경영지원<i></i>HR
                         <span>윤영준 사원</span>
                     </h3>
-                    <div><img src="images/recruit/job_list_person10.png" alt="job_list_person10" class="widn"></div>
+                    <div><img src="images/recruit/job_list_person10.png" alt="job_list_person10" data-popup-moving="160"></div>
                     <p>인재채용 및 육성업무를 통해 <br>보람과 성취감을 느낍니다.</p>
-                    <a href="javascript:;" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
+                    <a href="javascript:;" class="openPopup" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
                 </li>
-                <li>
+                <li class="isotope_item bs">
                     <h3>
                         경영지원<i></i>회계
                         <span>서호진 사원</span>
                     </h3>
-                    <div><img src="images/recruit/job_list_person11.png" alt="job_list_person11" class="widn"></div>
+                    <div><img src="images/recruit/job_list_person11.png" alt="job_list_person11" data-popup-moving="160"></div>
                     <p>'정확성'과 '의사소통 능력'이 <br>요구되는 직무입니다.</p>
-                    <a href="javascript:;" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
+                    <a href="javascript:;" class="openPopup" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
                 </li>
-                <li>
+                <li class="isotope_item bs">
                     <h3>
                         경영지원<i></i>전략
                         <span>송유현 대리</span>
                     </h3>
-                    <div><img src="images/recruit/job_list_person12.png" alt="job_list_person12" class="widn"></div>
+                    <div><img src="images/recruit/job_list_person12.png" alt="job_list_person12" data-popup-moving="160"></div>
                     <p>회사의 비전과 중장기 전략을 <br>수립합니다.</p>
-                    <a href="javascript:;" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
+                    <a href="javascript:;" class="openPopup" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
                 </li>
-                <li>
+                <li class="isotope_item bs">
                     <h3>
                         경영지원<i></i>FA
                         <span>김규태 차장</span>
                     </h3>
-                    <div><img src="images/recruit/job_list_person13.png" alt="job_list_person13" class="widn"></div>
+                    <div><img src="images/recruit/job_list_person13.png" alt="job_list_person13" class="posr" data-popup-moving="160"></div>
                     <p>재무성과 창출 지원이 가장 주요한 <br>업무이자 큰 보람이죠.</p>
-                    <a href="javascript:;" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
+                    <a href="javascript:;" class="openPopup" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
                 </li>
-                <li>
+                <li class="isotope_item sh">
                     <h3>
                         안전/보건<i></i>안전
                         <span>박지용 사원</span>
                     </h3>
-                    <div><img src="images/recruit/job_list_person14.png" alt="job_list_person14" class="widn"></div>
+                    <div><img src="images/recruit/job_list_person14.png" alt="job_list_person14" class="posr" data-popup-moving="160"></div>
                     <p>현장의 재해예방을 위한 안전관리에 <br>최선을 다합니다.</p>
-                    <a href="javascript:;" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
+                    <a href="javascript:;" class="openPopup" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
                 </li>
-                <li>
+                <li class="isotope_item sh">
                     <h3>
                         안전/보건<i></i>기획
                         <span>나재우 대리</span>
                     </h3>
-                    <div><img src="images/recruit/job_list_person15.png" alt="job_list_person15" class="widn"></div>
+                    <div><img src="images/recruit/job_list_person15.png" alt="job_list_person15" data-popup-moving="160"></div>
                     <p>소통을 통한 안전 및 보건에 대한 <br>수준향상이 가장 큰 보람이죠!</p>
-                    <a href="javascript:;" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
+                    <a href="javascript:;" class="openPopup" title="view more">View more <img src="images/common/icon_plus_w_15x15.png" alt="icon_plus_w_15x15"></a>
                 </li>
               </ul>
             </div>

@@ -1094,3 +1094,99 @@ var customerEvent = {
     };
   },
 }
+
+var channelEvent = {
+  init: function() {
+    this.snsMobSwiper();
+  },
+
+  snsMobSwiper : function() {
+    if($('#mobile').length){
+      let snsSlider = new Swiper(".sns_wrap .swiper", {
+        slidesPerView: 1,
+        initialSlide: 0,
+        speed: 500,
+        observer: true,
+        observeParents: true,
+
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+
+      });
+    }
+  }
+}
+
+var recruitEvent = {
+  init: function() {
+    this.isotope();
+  },
+
+  isotope : function() {
+
+    $(document).ready( function() {   
+      $('.isotope').isotope({
+        itemSelector: '.isotope_item',
+      });
+
+      // filter items on button click
+      $('.btn_set').on( 'click', 'li', function() {
+        var filterValue = $(this).children().attr('data-filter');
+        $('.isotope').isotope({ filter: filterValue });
+        $('.btn_set li').removeClass('on');
+        $(this).addClass('on');
+      });
+
+    })
+
+    const img = $('.popup .img img');
+
+    $(".openPopup").on("click", function() {
+          const index = $(this).parent().index();
+          
+          let moving = $(this).siblings('div').children('img').attr('data-popup-moving'),
+              idxTitle = $(this).siblings('p').html(),
+              idxInfo = $(this).siblings('h3').html();
+
+          console.log(moving)
+
+          console.log(index);
+          $('.pop_title dt').html(idxTitle);
+          $('.pop_title dd').html(idxInfo);
+          img.attr('src', 'images/recruit/job_popup_person0' + (index + 1) + '.png');
+          img.css({'right': moving + 'px'})
+
+      });
+
+    const LayerPopup = $(".recruit .popup");
+
+    // 외부영역 클릭 시 팝업 닫기
+    $(document).mouseup(function (e){
+      if (LayerPopup.has(e.target).length === 0){
+        LayerPopup.removeClass("on");
+        closeProcessor();
+        img.css({'right': '0'})
+      }
+    });
+
+    // 팝업 닫기 function
+    function closeProcessor() {
+
+        $('html').removeClass('blockScroll');
+        $('.popup').removeClass('on');
+        
+        if ($('#mobile').length) { 
+            scrollPosition = body.style.top;
+            scrollPosition = scrollPosition.replace('px', '');
+
+            body.style.removeProperty('top');
+            window.scrollTo(0, -(scrollPosition));
+            $('header').show();
+            
+        }
+    }
+    
+  },
+}

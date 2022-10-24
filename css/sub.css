@@ -385,46 +385,47 @@
 .tb_view .btn_line a {border-radius: 3.2rem;}
 
 /* SNS */
+.channel .sns { padding-bottom: 20rem; }
 .channel .sns .sns_tit { font-size: 3.4rem; font-weight: 450; color: #222; letter-spacing: -.17rem; }
-.channel .sns .sns_lists { width: 100%; display: flex; flex-wrap: wrap; }
-.channel .sns .sns_lists li { width: calc((100% - 10rem) / 3); margin-bottom: 78px; margin-right: 5rem; }
+.channel .sns .list { width: 100%; }
+.channel .sns .sns_lists { width: 100%; height: fit-content; display: flex; flex-wrap: wrap; }
+.channel .sns .sns_lists li { width: calc((100% - 10rem) / 3); margin-right: 5rem; }
 .channel .sns .sns_lists li:nth-child(3n) { margin-right: 0; }
-.channel .sns .sns_lists li a { width: 100%; height: 100%; position: relative; }
+.channel .sns .sns_lists li a { display: block; width: 100%; height: 38.8rem; position: relative; }
 .channel .sns .sns_lists .border { position: absolute; z-index: 1; }
 .channel .sns .sns_lists .border.bdt,
 .channel .sns .sns_lists .border.bdb { width: 0; height: .4rem; transition: width .3s; }
 .channel .sns .sns_lists .border.bdl,
 .channel .sns .sns_lists .border.bdr { height: 0; width: .4rem; transition: height .3s; }
+.channel .sns .sns_lists:not(.youtube) li:hover a { box-shadow: 8px 14px 21px 0px rgba(4, 0, 0, 0.16); }
 .channel .sns .sns_lists li:hover .border.bdt,
-.channel .sns .sns_lists li:hover .border.bdb { width: 100%; height: .4rem; }
+.channel .sns .sns_lists li:hover .border.bdb { width: 100%; }
 .channel .sns .sns_lists li:hover .border.bdl,
-.channel .sns .sns_lists li:hover .border.bdr { height: 100%; width: .4rem; }
+.channel .sns .sns_lists li:hover .border.bdr { height: 100%; }
 .channel .sns .sns_lists .border.bdt { background: linear-gradient(to right, #007aee ,#007aee); top:0; left:0; }
 .channel .sns .sns_lists .border.bdr { background: linear-gradient(to bottom, #007aee ,#005eb8); bottom:0; right:0; }
 .channel .sns .sns_lists .border.bdb { background: linear-gradient(to left, #005eb8 ,#005eb8); bottom:0; right:0; }
 .channel .sns .sns_lists .border.bdl { background: linear-gradient(to top, #005eb8 ,#0079ee); top:0; left:0; }
-.channel .sns .sns_lists .img { overflow: hidden; height: 280px; position: relative; }
-.channel .sns .sns_lists.youtube .img { height: 243px; }
+.channel .sns .sns_lists .img { overflow: hidden; height: 28rem; position: relative; }
+.channel .sns .sns_lists.youtube .img { height: 25.2rem; }
 .channel .sns .sns_lists .img img { width: 100%; height: 100%; object-fit: cover; object-position: 50%; transition: transform .8s ease-in-out; }
 .channel .sns .sns_lists .img .btn_play { width: fit-content; height: fit-content; object-fit: contain; transition: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 .channel .sns .sns_lists:not(.youtube) li:hover .img img { transform: scale(1.1); }
-.channel .sns .sns_lists .txt { font-size: 2rem; color: #222; font-weight: 350; letter-spacing: -.1rem; line-height: 1.4; margin-top: 2.5rem; overflow: hidden; text-overflow: ellipsis; word-break: break-all; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.channel .sns .sns_lists .txt {  padding: 2.5rem 2rem 0; }
+.channel .sns .sns_lists .txt p { font-size: 2rem; color: #222; font-weight: 350; letter-spacing: -.1rem; line-height: 1.4; overflow: hidden; text-overflow: ellipsis; word-break: break-all; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
 .channel .sns .btn_line { display: block; width: 29.6rem; height: 7.4rem; line-height: 7.4rem; margin: 10rem auto 0; }
-.channel .sns .view_more { display: flex; justify-content: center; align-items: center; font-size: 2rem; border-radius: 3.7rem; border: 1px solid #222; }
-.channel .sns .view_more i { display: inline-block; width: 2.1rem; height: 2.1rem; background: url(../images/common/icon_plus_21x22.png); margin-left: 4.5rem; }
-.channel .sns .view_more:hover i { background: url(../images/common/icon_plus_w_21x22.png); }
+.channel .sns .view_more { font-family: 'Montserrat'; display: flex; justify-content: center; align-items: center; font-size: 2rem; border-radius: 3.7rem; border: 1px solid #222; }
+.channel .sns .view_more i { display: inline-block; width: 2.1rem; height: 2.1rem; background: url(../images/common/icon_plus_21x22.png); margin-left: 4.5rem; transition: transform .3s; }
+.channel .sns .view_more:hover i { background: url(../images/common/icon_plus_w_21x22.png); transform: rotate(180deg); }
 
-.channel .sns .sns_wrap+.sns_wrap { margin-top: 120px; }
-.channel .sns .sns_tit { font-family: 'Poppins'; font-size: 34px; font-weight: 400; color: #222; letter-spacing: -.85px; /* margin-bottom: 30px; */ }
-.channel .sns .go_sns { float: right; margin-top: -40px; margin-bottom: 40px; display: flex; align-items: center; width: fit-content; height: 50px; border: 1px solid #005eb8; border-radius: 25px; padding: 0 40px; line-height: 48px; font-size: 16px; color: #005eb8; }
+.channel .sns .sns_wrap+.sns_wrap { margin-top: 12rem; }
+.channel .sns .go_sns { float: right; margin-top: -4rem; margin-bottom: 3rem; display: flex; align-items: center; width: 31.1rem; height: 4.8rem; border: 1px solid #000; border-radius: 2.3rem; padding: 0 3rem; line-height: 4.6rem; font-size: 1.6rem; }
 .channel .sns .go_sns::before { content:''; display: inline-block; margin-right: 10px; }
 .channel .sns .go_insta:before { width: 20px; height: 20px; background: url(../images/channel/sns_icon_insta.png) no-repeat 50% 50%;  background-size: contain; }
 .channel .sns .go_fb:before { width: 19px; height: 19px; background: url(../images/channel/sns_icon_fb.png) no-repeat 50% 50%; background-size: contain; }
 .channel .sns .go_yt:before { width: 26px; height: 19px; background: url(../images/channel/sns_icon_yt.png) no-repeat 50% 50%; background-size: contain; }
-.channel .sns .go_sns b { font-weight: 400; }
-.channel .sns > ul+ul { margin-top: 120px; }
-.contents.sns .popup ul li:last-child { padding: 0; }
-
+.channel .sns .go_sns b { font-weight: 400; line-height: 4.8rem; }
+.channel .sns .go_sns::after { content:''; display: block; width: 1.5rem; height: 1.5rem; background: url(../images/common/icon_plus_21x22.png) 50% 50%; margin-left: auto; }
 
 /* ================================  고객센터  =============================== */
 
@@ -1275,6 +1276,36 @@
 .recruit .banner h2:before { content: ''; display: block; width: 5.5rem; height: .6rem; background: #005eb8; transform: skew(-45deg); position: absolute; top: 0; margin-left: .5rem; }
 .recruit .banner p { font-size: 2rem; color: #555555; line-height: 1.8; padding-top: 2rem; }
 .recruit .banner img { position: absolute; right: -7.7rem; top: -2.5rem; }
+.recruit .pu_br { display: none; }
+.cursor { display: none; position:absolute; top:0; left: 0; z-index: 9999; width: 1rem; height: 1rem; transform:translate(-50%, -50%); }
+
+/* 팝업 */
+.recruit .popup { cursor: url(../images/common/pop_close_70x70.png) 35 35, auto; width: 100vw; height: 100vh; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, .6); z-index: 1000; opacity: 0; visibility: hidden; transition:all ease .3s; }
+.recruit .popup .pu_br { display: block; }
+.recruit .popup .pu_indent { display: none; }
+.recruit .popup.on { opacity: 1; visibility: visible; }
+.recruit .popup ul { cursor: auto; max-width: 136rem; width: 100%; height: fit-content; background: #fff; position: fixed; top: 0; bottom: 0; right: 0; left: 0; margin: auto; }
+.recruit .popup ul li:first-child { display: flex; justify-content: space-between; height: 56rem; overflow: hidden; }
+.recruit .popup .pop_title { padding: 9rem 0 8.5rem 12rem; display: flex; flex-direction: column; justify-content: space-between; }
+.recruit .popup .pop_title dt { font-size: 5rem; color: #222222; line-height: 1.32; font-weight: 450; padding: 5.5rem 0; width: fit-content; position: relative; }
+.recruit .popup .pop_title dt::before,
+.recruit .popup .pop_title dt::after { content: ''; width: 4.5rem; height: 3.5rem; display: block; position: absolute; }
+.recruit .popup .pop_title dt::before { background: url(../images/recruit/quotation_start.png) 50% 50% no-repeat; top: 0; }
+.recruit .popup .pop_title dt::after { background: url(../images/recruit/quotation_end.png) 50% 50% no-repeat; bottom: 0; right: 0; }
+.recruit .popup .pop_title dd { font-size: 2.2rem; font-weight: 350; color: #005eb8; line-height: 1; }
+.recruit .popup .pop_title dd i { content: '|'; display: inline-block; width: .1rem; height: 1.7rem; background: #005eb8; margin: 0 1rem; }
+.recruit .popup .pop_title dd span { display: block; font-weight: 100; color: #000000; font-size: 1.6rem; padding-top: 2rem; }
+.recruit .popup .img { position: relative;  }
+.recruit .popup .img::before { content: ''; display: block; background: #005eb8; width: 42rem; height: 100%; position: absolute; transform: skew(-29deg); right: 18rem; }
+.recruit .popup .img::after { content: ''; display: block; background: #fbfbfb; width: 42rem; height: 100%; position: absolute; transform: skew(-29deg); left: -18rem; }
+.recruit .popup .img span { width: 9rem; display: block; position: absolute; transform: skew(-29deg); }
+.recruit .popup .img span:first-of-type{ height: 16rem; z-index: 10; right: 46rem; top: 3rem; background: linear-gradient(20deg, #005eb8 15%, #84c3ff); opacity: .5; }
+.recruit .popup .img span:last-of-type{ height: 30rem; z-index: 10; right: 19rem; bottom: 0; background: linear-gradient(0deg, #005eb8 10%, #fff); opacity: .4; }
+.recruit .popup .img img { position: absolute; right: 0; bottom: 0; transition: all ease .6s; }
+
+
+
+
 
 /* 인재상 */
 .recruit .type { padding: 10rem 0 20rem; }
@@ -1292,28 +1323,30 @@
 .recruit .type p { font-size: 1.6rem; font-weight: 150; color: #666; line-height: 2; letter-spacing: -.08rem; }
 
 /* 직무소개 - 목록 */
-.recruit .job {  }
-.recruit .job ul { display: flex; justify-content: space-between; flex-wrap: wrap; }
-.recruit .job ul li { width: calc(100% / 3 - 2.5rem); height: 63.5rem; border: .1rem solid #e8e8e8; display: block; padding: 5rem 0; position: relative; transition: all ease .3s; margin-top: 4rem; }
-.recruit .job ul li h3 { padding: 0 4rem; font-size: 2.2rem; font-weight: 350; color: #005eb8; line-height: 1; }
-.recruit .job ul li h3 i { content: '|'; display: inline-block; width: .1rem; height: 1.7rem; background: #005eb8; margin: 0 1rem; }
-.recruit .job ul li h3 span { display: block; font-weight: 100; color: #000000; font-size: 1.6rem; padding-top: 1.4rem; }
-.recruit .job ul li p { font-size: 2rem; font-weight: 350; text-align: center; color: #555555; line-height: 1.6; padding-top: 4rem; }
-.recruit .job ul li > div { width: 33rem; height: 38.4rem; margin: auto; padding-top: 5.4rem; border-radius:33rem; position: relative; overflow: hidden; }
+.recruit .contents.job { padding-bottom: 20rem; max-width: 148rem; }
+.recruit .job ul li { width: calc(100% / 3 - 4rem); height: 63.5rem; border: .1rem solid #e8e8e8; display: block; padding: 5rem 0; position: relative; margin: 4rem 2rem 0; transition:background ease .3s; }
+.recruit .job ul li > h3 { padding: 0 4rem; font-size: 2.2rem; font-weight: 350; color: #005eb8; line-height: 1; }
+.recruit .job ul li > h3 i { content: '|'; display: inline-block; width: .1rem; height: 1.7rem; background: #005eb8; margin: 0 1rem; }
+.recruit .job ul li > h3 span { display: block; font-weight: 100; color: #000000; font-size: 1.6rem; padding-top: 1.4rem; }
+.recruit .job ul li > p { font-size: 2rem; font-weight: 350; text-align: center; color: #555555; line-height: 1.6; padding-top: 4rem; }
+.recruit .job ul li > div { width: 33rem; height: 38.3rem; margin: auto; padding-top: 5.4rem; mask-image: url(../images/recruit/mask_frame.png); -webkit-mask-image: url(../images/recruit/mask_frame.png); position: relative; overflow: hidden; }
+.recruit .job ul li > div.mask04 { mask-image: url(../images/recruit/mask_frame04.png); -webkit-mask-image: url(../images/recruit/mask_frame04.png); } /* 손가락까지 마스킹 */
+.recruit .job ul li > div.mask08 { mask-image: url(../images/recruit/mask_frame08.png); -webkit-mask-image: url(../images/recruit/mask_frame08.png); } /* 팔 마스킹 풀기 */
 .recruit .job ul li > div:after { content: ''; width: 33rem; height: 33rem; position: absolute; bottom: 0; background: #f4ebe2; display: block; border-radius: 100%; z-index: 0; }
-.recruit .job ul li > div img { position: absolute; bottom: -15rem; margin: auto; transition: all ease .6s; z-index: 1; }
-.recruit .job ul li > div img.wid0 { right: -2rem; }
-.recruit .job ul li > div img.widn { left: unset; right: unset; }
-.recruit .job ul li a { display: none; margin: 5rem auto 0; width: 17rem; height: 5rem; color: #ffffff; text-align: center; font-family: 'Montserrat', sans-serif; font-size: 1.4rem; align-items: center; justify-content: center; border: .1rem solid rgba(255, 255, 255, .6); border-radius: 2.5rem; }
-.recruit .job ul li a img { margin-left: 1.7rem; transition: all ease .3s; }
-.recruit .job ul li a:hover img { transform: rotate(90deg); }
-.recruit .job ul li:hover { background: #005eb8; }
-.recruit .job ul li:hover div img { bottom: -10rem; }
-.recruit .job ul li:hover h3,
-.recruit .job ul li:hover span { color: #ffffff;}
-.recruit .job ul li:hover p { display: none; }
-.recruit .job ul li:hover h3 i { background-color: #ffffff; }
-.recruit .job ul li:hover a { display: flex; }
+.recruit .job ul li > div img { position: absolute; bottom: -14.8rem; margin: auto; transition: all ease .6s; z-index: 1; }
+.recruit .job ul li > div img.posr { right: 0; }
+.recruit .job ul li > a { display: none; margin: 5rem auto 0; width: 17rem; height: 5rem; color: #ffffff; text-align: center; font-family: 'Montserrat', sans-serif; font-size: 1.4rem; align-items: center; justify-content: center; border: .1rem solid rgba(255, 255, 255, .6); border-radius: 2.5rem; }
+.recruit .job ul li > a img { margin-left: 1.7rem; transition: all ease .3s; }
+.recruit .job ul li > a:hover img { transform: rotate(90deg); }
+.recruit .job ul li > article { display: none; }
+.recruit .job ul li:hover { background: #005eb8; box-shadow: 10px 12px 21px 0px rgba(4, 0, 0, 0.16); }
+.recruit .job ul li:hover > div img { bottom: -10rem; }
+.recruit .job ul li:hover > h3,
+.recruit .job ul li:hover > h3 span { color: #ffffff;}
+.recruit .job ul li:hover > p { display: none; }
+.recruit .job ul li:hover > h3 i { background-color: #ffffff; }
+.recruit .job ul li:hover > a { display: flex; }
+
 
 /* =========================================================================== */
 /* ===============================  Animation  =============================== */

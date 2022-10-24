@@ -56,6 +56,7 @@
 
             // JS importing
             commonEvent.init();
+            channelEvent.init();
         });
     </script>
 </head>
@@ -131,35 +132,44 @@
                     <div class="sns_wrap">
                         <p class="sns_tit">YouTube</p>
                         <a href="javascript:;" class="go_sns go_yt" title="두산건설 유튜브 바로가기"><b>두산건설 유튜브 </b> &nbsp;바로가기</a>
-                        <ul class="sns_lists youtube">
-                            <li>
-                                <a href="javascript:;" title="페이지 이동">
-                                    <div class="img">
-                                        <img src="https://img.youtube.com/vi/c4R93IfjR84/mqdefault.jpg" alt="sns 이미지"> <!-- youtube 썸네일 불러오기 -->
-                                        <img src="images/common/btn_play.png" alt="플레이 버튼" class="btn_play">
-                                    </div>
-                                    <div class="txt">신동백 두산위브더제니스, 용인 동백에 없던 신동백 두산위브더제니스, 용인 동백에 없던 신동백 두산위브더제니스, 용인 동백에 없던 신동백 두산위브더제니스, 용인 동백에 없던</div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;" title="페이지 이동">
-                                    <div class="img">
-                                        <img src="images/channel/sns_yt02.png" alt="sns 이미지">
-                                        <img src="images/common/btn_play.png" alt="플레이 버튼" class="btn_play">
-                                    </div>
-                                    <div class="txt">안양호계두산위브 홍보영상</div>
-                                </a>
-                            </li>     
-                            <li>
-                                <a href="javascript:;" title="페이지 이동">
-                                    <div class="img">
-                                        <img src="images/channel/sns_yt03.png" alt="sns 이미지">
-                                        <img src="images/common/btn_play.png" alt="플레이 버튼" class="btn_play">
-                                    </div>
-                                    <div class="txt">안양호계두산위브 모델하우스 오픈임박 영상</div>
-                                </a>
-                            </li>                 
-                        </ul>
+                        <div class="list swiper">
+                            <ul class="sns_lists youtube swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <a href="javascript:;" title="페이지 이동">
+                                        <div class="img">
+                                            <img src="https://img.youtube.com/vi/c4R93IfjR84/mqdefault.jpg" alt="sns 이미지"> <!-- youtube 썸네일 불러오기 -->
+                                            <img src="images/common/btn_play.png" alt="플레이 버튼" class="btn_play">
+                                        </div>
+                                        <div class="txt">
+                                            <p>신동백 두산위브더제니스, 용인 동백에 없던 신동백 두산위브더제니스, 용인 동백에 없던 신동백 두산위브더제니스, 용인 동백에 없던 신동백 두산위브더제니스, 용인 동백에 없던</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="javascript:;" title="페이지 이동">
+                                        <div class="img">
+                                            <img src="images/channel/sns_yt02.png" alt="sns 이미지">
+                                            <img src="images/common/btn_play.png" alt="플레이 버튼" class="btn_play">
+                                        </div>
+                                        <div class="txt">
+                                            <p>안양호계두산위브 홍보영상</p>
+                                        </div>
+                                    </a>
+                                </li>     
+                                <li class="swiper-slide">
+                                    <a href="javascript:;" title="페이지 이동">
+                                        <div class="img">
+                                            <img src="images/channel/sns_yt03.png" alt="sns 이미지">
+                                            <img src="images/common/btn_play.png" alt="플레이 버튼" class="btn_play">
+                                        </div>
+                                        <div class="txt">
+                                            <p>안양호계두산위브 모델하우스 오픈임박 영상</p>
+                                        </div>
+                                    </a>
+                                </li>                 
+                            </ul>
+                            <div class="swiper-pagination"></div>
+                        </div>
                         <div class="btn_line">
                             <a href="javascript:;" class="view_more" title="더보기">View more <i></i></a>
                         </div>
@@ -167,38 +177,47 @@
                     <div class="sns_wrap">
                         <p class="sns_tit">Instagram</p>
                         <a href="javascript:;" class="go_sns go_insta" title="두산건설 인스타그램 바로가기"><b>두산건설 인스타그램 </b> &nbsp;바로가기</a>
-                        <ul class="sns_lists instagram">
-                            <li>
-                                <a href="javascript:;" title="페이지 이동">
-                                    <div class="border bdt"></div>
-                                    <div class="border bdr"></div>
-                                    <div class="border bdl"></div>
-                                    <div class="border bdb"></div>
-                                    <div class="img"><img src="images/channel/sns_insta01.png" alt="sns 이미지"></div>
-                                    <div class="txt">두산위브더제니스 센트럴 사하 당첨자 발표</div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;" title="페이지 이동">
-                                    <div class="border bdt"></div>
-                                    <div class="border bdr"></div>
-                                    <div class="border bdl"></div>
-                                    <div class="border bdb"></div>
-                                    <div class="img"><img src="images/channel/sns_insta02.png" alt="sns 이미지"></div>
-                                    <div class="txt">뉴센트럴 두산위브더제니스 브랜드 프리미엄</div>
-                                </a>
-                            </li>     
-                            <li>
-                                <a href="javascript:;" title="페이지 이동">
-                                    <div class="border bdt"></div>
-                                    <div class="border bdr"></div>
-                                    <div class="border bdl"></div>
-                                    <div class="border bdb"></div>
-                                    <div class="img"><img src="images/channel/sns_insta03.png" alt="sns 이미지"></div>
-                                    <div class="txt">신동백 두산위브더제니스, 용인 동백에 없던 신동백 두산위브더제니스, 용인 동백에 없던 신동백 두산위브더제니스, 용인 동백에 없던</div>
-                                </a>
-                            </li>                 
-                        </ul>
+                        <div class="list swiper">
+                            <ul class="sns_lists instagram swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <a href="javascript:;" title="페이지 이동">
+                                        <div class="border bdt"></div>
+                                        <div class="border bdr"></div>
+                                        <div class="border bdl"></div>
+                                        <div class="border bdb"></div>
+                                        <div class="img"><img src="images/channel/sns_insta01.png" alt="sns 이미지"></div>
+                                        <div class="txt">
+                                            <p>두산위브더제니스 센트럴 사하 당첨자 발표</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="javascript:;" title="페이지 이동">
+                                        <div class="border bdt"></div>
+                                        <div class="border bdr"></div>
+                                        <div class="border bdl"></div>
+                                        <div class="border bdb"></div>
+                                        <div class="img"><img src="images/channel/sns_insta02.png" alt="sns 이미지"></div>
+                                        <div class="txt">
+                                            <p>뉴센트럴 두산위브더제니스 브랜드 프리미엄</p>
+                                        </div>
+                                    </a>
+                                </li>     
+                                <li class="swiper-slide">
+                                    <a href="javascript:;" title="페이지 이동">
+                                        <div class="border bdt"></div>
+                                        <div class="border bdr"></div>
+                                        <div class="border bdl"></div>
+                                        <div class="border bdb"></div>
+                                        <div class="img"><img src="images/channel/sns_insta03.png" alt="sns 이미지"></div>
+                                        <div class="txt">
+                                            <p>신동백 두산위브더제니스, 용인 동백에 없던 신동백 두산위브더제니스, 용인 동백에 없던 신동백 두산위브더제니스, 용인 동백에 없던</p>
+                                        </div>
+                                    </a>
+                                </li>                 
+                            </ul>
+                            <div class="swiper-pagination"></div>
+                        </div>
                         <div class="btn_line">
                             <a href="javascript:;" class="view_more" title="더보기">View more <i></i></a>
                         </div>
@@ -207,26 +226,47 @@
                     <div class="sns_wrap">
                         <p class="sns_tit">Facebook</p>
                         <a href="javascript:;" class="go_sns go_fb" title="두산건설 페이스북 바로가기"><b>두산건설 페이스북 </b> &nbsp;바로가기</a>
-                        <ul class="sns_lists facebook">
-                            <li>
-                                <a href="javascript:;" title="페이지 이동">
-                                    <div class="img"><img src="images/channel/sns_fb01.png" alt="sns 이미지"></div>
-                                    <div class="txt">두산위브더제니스 센트럴 사하 당첨자 발표</div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;" title="페이지 이동">
-                                    <div class="img"><img src="images/channel/sns_fb02.png" alt="sns 이미지"></div>
-                                    <div class="txt">뉴센트럴 두산위브더제니스 브랜드 프리미엄</div>
-                                </a>
-                            </li>     
-                            <li>
-                                <a href="javascript:;" title="페이지 이동">
-                                    <div class="img"><img src="images/channel/sns_fb03.png" alt="sns 이미지"></div>
-                                    <div class="txt">신동백 두산위브더제니스, 용인 동백에 없던 신동백 두산위브더제니스, 용인 동백에 없던 신동백 두산위브더제니스, 용인 동백에 없던</div>
-                                </a>
-                            </li>                 
-                        </ul>
+                        <div class="list swiper">
+                            <ul class="sns_lists facebook swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <a href="javascript:;" title="페이지 이동">
+                                        <div class="border bdt"></div>
+                                        <div class="border bdr"></div>
+                                        <div class="border bdl"></div>
+                                        <div class="border bdb"></div>
+                                        <div class="img"><img src="images/channel/sns_fb01.png" alt="sns 이미지"></div>
+                                        <div class="txt">
+                                            <p>두산위브더제니스 센트럴 사하 당첨자 발표</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="javascript:;" title="페이지 이동">
+                                                                            <div class="border bdt"></div>
+                                        <div class="border bdr"></div>
+                                        <div class="border bdl"></div>
+                                        <div class="border bdb"></div>
+                                        <div class="img"><img src="images/channel/sns_fb02.png" alt="sns 이미지"></div>
+                                        <div class="txt">
+                                            <p>뉴센트럴 두산위브더제니스 브랜드 프리미엄</p>
+                                        </div>
+                                    </a>
+                                </li>     
+                                <li class="swiper-slide">
+                                    <a href="javascript:;" title="페이지 이동">
+                                                                            <div class="border bdt"></div>
+                                        <div class="border bdr"></div>
+                                        <div class="border bdl"></div>
+                                        <div class="border bdb"></div>
+                                        <div class="img"><img src="images/channel/sns_fb03.png" alt="sns 이미지"></div>
+                                        <div class="txt">
+                                            <p>신동백 두산위브더제니스, 용인 동백에 없던 신동백 두산위브더제니스, 용인 동백에 없던 신동백 두산위브더제니스, 용인 동백에 없던</p>
+                                        </div>
+                                    </a>
+                                </li>                 
+                            </ul>
+                            <div class="swiper-pagination"></div>
+                        </div>
                         <div class="btn_line">
                             <a href="javascript:;" class="view_more" title="더보기">View more <i></i></a>
                         </div>
