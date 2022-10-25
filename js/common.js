@@ -332,6 +332,8 @@ var commonEvent = {
   },
 
   popup: ()=> {
+    const body = $('body');
+
     // 스크롤 값 추적
     let scrollPosition = 0,
         popupClose = $('.pop_close');
@@ -358,7 +360,7 @@ var commonEvent = {
         $('html').addClass('blockScroll');
 
         if ($('#mobile').length) {
-            body.style.top = `-${scrollPosition}px`;
+            $('body').css('top', `-${scrollPosition}px`);
             $('header').hide();
         }
     }
@@ -370,10 +372,10 @@ var commonEvent = {
         $('.popup').removeClass('on');
         
         if ($('#mobile').length) { 
-            scrollPosition = body.style.top;
+            scrollPosition = body.css('top');
             scrollPosition = scrollPosition.replace('px', '');
 
-            body.style.removeProperty('top');
+            body.removeProp('top');
             window.scrollTo(0, -(scrollPosition));
             $('header').show();
             
@@ -1116,7 +1118,11 @@ var channelEvent = {
 
       });
     }
-  }
+  },
+
+  // snsPopup : function() {
+
+  // }
 }
 
 var recruitEvent = {
@@ -1125,7 +1131,8 @@ var recruitEvent = {
   },
 
   isotope : function() {
-
+    "use strict"
+    // 탭버튼 분류 라이브러리 isotope
     $(document).ready( function() {   
       $('.isotope').isotope({
         itemSelector: '.isotope_item',
@@ -1141,33 +1148,55 @@ var recruitEvent = {
 
     })
 
+    $(".openPopup").children('img').attr('src', 'images/common/icon_plus_mob_hover_20x20.png');
+    // 팝업 컨트롤
     const img = $('.popup .img img');
 
     $(".openPopup").on("click", function() {
-          const index = $(this).parent().index();
-          
-          let moving = $(this).siblings('div').children('img').attr('data-popup-moving'),
-              idxTitle = $(this).siblings('p').html(),
-              idxInfo = $(this).siblings('h3').html();
+        const index = $(this).parent().index();
+        
+        let moving = $(this).siblings('div').children('img').attr('data-popup-moving'),
+            idxTitle = $(this).siblings('p').html(),
+            idxInfo = $(this).siblings('h3').html(),
+            idxArticle = $(this).siblings('article');
 
-          console.log(moving)
+        $(".popup").scrollTop(0);
+        
+        // 타이틀
+        $('.pop_title dt').html(idxTitle);
+        $('.pop_title dd').html(idxInfo);
 
-          console.log(index);
-          $('.pop_title dt').html(idxTitle);
-          $('.pop_title dd').html(idxInfo);
+        // 타이틀 이미지 및 애니메이션
+        if (index < 9) {
           img.attr('src', 'images/recruit/job_popup_person0' + (index + 1) + '.png');
-          img.css({'right': moving + 'px'})
+        } else {
+          img.attr('src', 'images/recruit/job_popup_person' + (index + 1) + '.png');
+        }
+        
+        // 이미지 나타나기
+        img.css({'right': moving + 'px'});
 
-      });
+        // 내용
+        $('.article').children('dl').each((index)=> {
+          let containsIdx = $('.article').children('dl').eq(index),
+              output = idxArticle.children('p').eq(index).html();
+          containsIdx.children('dd').html(output)
+        });
 
-    const LayerPopup = $(".recruit .popup");
+        // 팝업 가로 스크롤 포지션 초기화
+        $(window).on('scroll',function(){
+          $(".popup ul").css("left",0-$(this).scrollLeft());
+        });
+    });
 
     // 외부영역 클릭 시 팝업 닫기
+    const LayerPopup = $(".recruit .popup");
+    
     $(document).mouseup(function (e){
       if (LayerPopup.has(e.target).length === 0){
         LayerPopup.removeClass("on");
         closeProcessor();
-        img.css({'right': '0'})
+        img.css({'right': '0'});
       }
     });
 
@@ -1177,15 +1206,15 @@ var recruitEvent = {
         $('html').removeClass('blockScroll');
         $('.popup').removeClass('on');
         
-        if ($('#mobile').length) { 
-            scrollPosition = body.style.top;
-            scrollPosition = scrollPosition.replace('px', '');
+        // if ($('#mobile').length) { 
+        //     scrollPosition = body.style.top;
+        //     scrollPosition = scrollPosition.replace('px', '');
 
-            body.style.removeProperty('top');
-            window.scrollTo(0, -(scrollPosition));
-            $('header').show();
+        //     body.style.removeProperty('top');
+        //     window.scrollTo(0, -(scrollPosition));
+        //     $('header').show();
             
-        }
+        // }
     }
     
   },

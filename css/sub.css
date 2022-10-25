@@ -427,6 +427,15 @@
 .channel .sns .go_sns b { font-weight: 400; line-height: 4.8rem; }
 .channel .sns .go_sns::after { content:''; display: block; width: 1.5rem; height: 1.5rem; background: url(../images/common/icon_plus_21x22.png) 50% 50%; margin-left: auto; }
 
+.channel .sns .popup { width: 100vw; height: 100vh; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, .8); z-index: 1000; opacity: 0; visibility: hidden; transition:all ease .6s; }
+.channel .sns .popup.on { opacity: 1; visibility: visible; }
+.channel .sns .popup .pop_close { position: absolute; width: 70px; height: 70px; right: -110px; top: 50%; margin-top: -35px; transition: transform ease .3s; cursor: pointer; }
+.channel .sns .popup .pop_close img { width: 100%; object-fit: contain; }
+.channel .sns .popup .pop_close:hover { transform: rotate(90deg); }
+.channel .sns .popup .pop_wrap { width: 900px; height: fit-content; margin: auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+.channel .sns .popup .pop_cont iframe { width: 100%; }
+
+
 /* ================================  고객센터  =============================== */
 
 /* 공통 */
@@ -1277,15 +1286,14 @@
 .recruit .banner p { font-size: 2rem; color: #555555; line-height: 1.8; padding-top: 2rem; }
 .recruit .banner img { position: absolute; right: -7.7rem; top: -2.5rem; }
 .recruit .pu_br { display: none; }
-.cursor { display: none; position:absolute; top:0; left: 0; z-index: 9999; width: 1rem; height: 1rem; transform:translate(-50%, -50%); }
 
 /* 팝업 */
-.recruit .popup { cursor: url(../images/common/pop_close_70x70.png) 35 35, auto; width: 100vw; height: 100vh; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, .6); z-index: 1000; opacity: 0; visibility: hidden; transition:all ease .3s; }
+.recruit .popup { cursor: url(../images/common/pop_close_70x70.png) 35 35, auto; width: 100%; overflow: auto; height: 100vh; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, .6); z-index: 1000; opacity: 0; visibility: hidden; transition:all ease .3s; }
 .recruit .popup .pu_br { display: block; }
 .recruit .popup .pu_indent { display: none; }
 .recruit .popup.on { opacity: 1; visibility: visible; }
-.recruit .popup ul { cursor: auto; max-width: 136rem; width: 100%; height: fit-content; background: #fff; position: fixed; top: 0; bottom: 0; right: 0; left: 0; margin: auto; }
-.recruit .popup ul li:first-child { display: flex; justify-content: space-between; height: 56rem; overflow: hidden; }
+.recruit .popup ul { cursor: auto; width: 136rem; height: fit-content; background: #fff; position: relative; margin: 10rem auto; letter-spacing: -.15rem; }
+.recruit .popup ul li:first-child { display: flex; justify-content: space-between; height: 56rem; overflow: hidden; position: relative; background: #fbfbfb; }
 .recruit .popup .pop_title { padding: 9rem 0 8.5rem 12rem; display: flex; flex-direction: column; justify-content: space-between; }
 .recruit .popup .pop_title dt { font-size: 5rem; color: #222222; line-height: 1.32; font-weight: 450; padding: 5.5rem 0; width: fit-content; position: relative; }
 .recruit .popup .pop_title dt::before,
@@ -1295,16 +1303,19 @@
 .recruit .popup .pop_title dd { font-size: 2.2rem; font-weight: 350; color: #005eb8; line-height: 1; }
 .recruit .popup .pop_title dd i { content: '|'; display: inline-block; width: .1rem; height: 1.7rem; background: #005eb8; margin: 0 1rem; }
 .recruit .popup .pop_title dd span { display: block; font-weight: 100; color: #000000; font-size: 1.6rem; padding-top: 2rem; }
-.recruit .popup .img { position: relative;  }
-.recruit .popup .img::before { content: ''; display: block; background: #005eb8; width: 42rem; height: 100%; position: absolute; transform: skew(-29deg); right: 18rem; }
-.recruit .popup .img::after { content: ''; display: block; background: #fbfbfb; width: 42rem; height: 100%; position: absolute; transform: skew(-29deg); left: -18rem; }
+.recruit .popup .img { position: absolute; width: 100%; height: 100%; top: 0; right: 0; }
+.recruit .popup .img::before { content: ''; display: block; background: #005eb8; width: 42rem; height: 100%; position: absolute; transform: skew(-29deg); right: 17.5rem; }
+.recruit .popup .img::after { content: ''; display: block; background: #fbfbfb; width: 42rem; height: 100%; position: absolute; transform: skew(-29deg); right: -24.5rem; }
 .recruit .popup .img span { width: 9rem; display: block; position: absolute; transform: skew(-29deg); }
-.recruit .popup .img span:first-of-type{ height: 16rem; z-index: 10; right: 46rem; top: 3rem; background: linear-gradient(20deg, #005eb8 15%, #84c3ff); opacity: .5; }
+.recruit .popup .img span:first-of-type{ height: 16rem; z-index: 10; right: 47.5rem; top: 3rem; background: linear-gradient(20deg, #005eb8 15%, #84c3ff); opacity: .5; }
 .recruit .popup .img span:last-of-type{ height: 30rem; z-index: 10; right: 19rem; bottom: 0; background: linear-gradient(0deg, #005eb8 10%, #fff); opacity: .4; }
 .recruit .popup .img img { position: absolute; right: 0; bottom: 0; transition: all ease .6s; }
-
-
-
+.recruit .popup .article { padding: 4rem 6rem; }
+.recruit .popup .article dl { padding: 8rem 6rem; position: relative; }
+.recruit .popup .article dl:not(:last-child) { border-bottom: .1rem solid #e8e8e8; }
+.recruit .popup .article dl dt { font-size: 2.6rem; font-weight: 400; color: #222222; }
+.recruit .popup .article dl dt span { position: absolute; left: 0; font-family: 'Montserrat', sans-serif; font-weight: 450; font-size: 3rem; color: #005eb8; line-height: 1; }
+.recruit .popup .article dl dd { line-height: 1.8; font-size: 2rem; color: #777777; padding-top: 2rem; }
 
 
 /* 인재상 */
@@ -1324,7 +1335,7 @@
 
 /* 직무소개 - 목록 */
 .recruit .contents.job { padding-bottom: 20rem; max-width: 148rem; }
-.recruit .job ul li { width: calc(100% / 3 - 4rem); height: 63.5rem; border: .1rem solid #e8e8e8; display: block; padding: 5rem 0; position: relative; margin: 4rem 2rem 0; transition:background ease .3s; }
+.recruit .job ul li { width: calc(100% / 3 - 4rem); height: 63.5rem; border: .1rem solid #e8e8e8; display: block; padding: 5rem 0; margin: 4rem 2rem 0; transition:background ease .3s; }
 .recruit .job ul li > h3 { padding: 0 4rem; font-size: 2.2rem; font-weight: 350; color: #005eb8; line-height: 1; }
 .recruit .job ul li > h3 i { content: '|'; display: inline-block; width: .1rem; height: 1.7rem; background: #005eb8; margin: 0 1rem; }
 .recruit .job ul li > h3 span { display: block; font-weight: 100; color: #000000; font-size: 1.6rem; padding-top: 1.4rem; }
