@@ -23,6 +23,7 @@ $(function(){
 
   AOS.init({
     // 핸들링 참고: https://github.com/michalsnik/aos
+    disable: 'mobile',
     once : true,
     throttleDelay : 99,
     duration: 1000,
@@ -342,7 +343,7 @@ var commonEvent = {
         scrollPosition = window.pageYOffset;
     });
 
-    //공통 팝업코드
+    // 팝업 열기
     $('.openPopup').on('click', ()=> {
         openProcessor();
     });
@@ -355,8 +356,7 @@ var commonEvent = {
     // 팝업 열기 function
     function openProcessor() {
         scrollPosition = window.pageYOffset;
-
-        $(".popup").addClass('on');
+        $(".popup").fadeIn(300);
         $('html').addClass('blockScroll');
 
         if ($('#mobile').length) {
@@ -378,7 +378,7 @@ var commonEvent = {
             body.removeProp('top');
             window.scrollTo(0, -(scrollPosition));
             $('header').show();
-            
+            $(".popup").fadeOut(300);
         }
     }
 
@@ -625,6 +625,8 @@ var techEvent = {
       })
     }}),
           tl2 = gsap.timeline({stagger:1});
+          tl1.pause();
+          tl2.pause();
 
     $(window).on('load resize scroll', ()=> {
       let st = $(window).scrollTop(),
@@ -633,99 +635,96 @@ var techEvent = {
           trigger = st + $(window).height() / 2;
 
       // love motion trigger
-      if (trigger > motion01 && trigger < motion02) {
+      if (trigger > motion01) {
         tl1.play()
       } else {
-        tl1.reverse()
+        // tl1.reverse()
       }
 
       // have motion trigger
-      if(trigger > motion02 && trigger < $('.section1').offset().top) {
+      if(trigger > motion02) {
         tl2.play()
-      } else {
-        tl2.reverse()
-      }
+      } 
     })
       
-    tl1.to('.one', { x: -516, delay: 1 })
-    .to('.one', { opacity: 1, duration: .5 })
+    tl1.to('.one', { x: -516 })
+    .to('.one', { opacity: 1, duration: .2 })
     .to('.one .slogan p:first-child', { x : 0, opacity: 0, duration: .2 })
     .to('.one .slogan p:last-child', { x : 0, opacity: 1, duration: .3 }, "=-.1")
 
-    .to('.two', { x: -172 })
-    .to('.two', { opacity: 1, duration: .5, delay: .5 })
+    .to('.two', { x: -172 }, "=-1")
+    .to('.two', { opacity: 1, duration: .2 })
     .to('.two .slogan p:first-child', { x : 0, opacity: 0, duration: .2 })
     .to('.two .slogan p:last-child', { x : 0, opacity: 1, duration: .3 }, "=-.1")
 
-    .to('.three', { x: 172})
-    .to('.three', { opacity: 1, duration: .5, delay: .5 })
+    .to('.three', { x: 172}, "=-1")
+    .to('.three', { opacity: 1, duration: .2 })
     .to('.three .slogan p:first-child', { x : 0, opacity: 0, duration: .2 })
     .to('.three .slogan p:last-child', { x : 0, opacity: 1, duration: .3 }, "=-.1")
 
-    .to('.four', { x: 516 })
-    .to('.four', { opacity: 1, duration: .5, delay: .5 })
+    .to('.four', { x: 516 }, "=-1")
+    .to('.four', { opacity: 1, duration: .2 })
     .to('.four .slogan p:first-child', { x : 0, opacity: 0, duration: .2 })
     .to('.four .slogan p:nth-child(2)', { x : 0, opacity: 1, duration: .3 }, "=-.1")
 
-    .to('.box > li', { x: 0, y: 0, duration: 1, delay: .5 })
-    .to('.box', { borderRadius: "705px", width: "705px", duration: 1 }, "=-1")
-    .to('svg, .box p', { opacity: 0, duration: .2 }, "=-.7")
-    .to('svg:last-child, .slogan p:nth-child(3), .sub p:last-of-type', { opacity: 1, duration: .3 }, "=-.7")
+    .to('.box > li', { x: 0, y: 0, duration: .4 })
+    .to('.box', { borderRadius: "705px", width: "705px", duration: .4 }, "=-.4")
+    .to('svg, .box p', { opacity: 0, duration: .2 }, "=-.3")
+    .to('svg:last-child, .slogan p:nth-child(3), .sub p:last-of-type', { opacity: 1, duration: .3 }, "=-.3")
 
-    .to('.box', { background: "rgba(235, 245, 255, 1)", duration: 1, delay: .5 })
-    .to('.four li, .box > li:not(:last-child)', { opacity: 0, duration: .2, delay: .2 }, "=-1")
-    .to('.four', { scale: 1.9, background: "#005EB8", duration: .5 }, "=-1")
-    .to('.love span:first-child', { opacity: 1, duration: .5 }, "=-1")
-    .to('.box, .box > li, .four li p:last-child', { opacity: 0, background: "transparent", duration: .6 })
-    .to('.love span', { bottom: "auto", scale: 1.8, duration: 1, color: '#005EB8', fontWeight: 450 }, "=-.6")
-    .to('.love span:first-child', { opacity: 0, duration: .3 }, "=-1")
-    .to('.love span:last-child', { opacity: 1, duration: 1 }, "=-1")
+    .to('.box', { background: "rgba(235, 245, 255, 1)", duration: .6, delay: .2 })
+    .to('.four li, .box > li:not(:last-child)', { opacity: 0, duration: .2 }, "=-.6")
+    .to('.four', { scale: 1.9, background: "#005EB8", duration: .5 }, "=-.6")
+    .to('.love span:first-child', { opacity: 1, duration: .5 }, "=-.6")
+    .to('.box, .box > li, .four li p:last-child', { opacity: 0, background: "transparent", duration: .6, delay: .2 })
+    .to('.love span', { bottom: "auto", scale: 1.8, duration: .5, color: '#005EB8', fontWeight: 450 }, "=-.5")
+    .to('.love span:first-child', { opacity: 0, duration: .3 }, "=-.6")
+    .to('.love span:last-child', { opacity: 1, duration: 1 }, "=-.6")
 
-    .to('.line, .slogan p', {opacity: 1, duration: .6 })
-    .to('.line', {top: 200, duration: .6 })
-    .to('.love_motion > h2', {top: 190, opacity: 1, duration: .6 })
-    .to('.line', {top: 626, duration: .6, delay: .5 })
-    .to('.love', { height: 0 }, "=-.5")
-    .to('.box', { width: "100%", height: "40.8rem", opacity: 1 }, "=-.5")
-    .to('.one', { x: -516, duration: 0 }, "=-.5")
-    .to('.two', { x: -172, duration: 0 }, "=-.5")
-    .to('.three', { x: 172, duration: 0}, "=-.5")
-    .to('.four', { x: 516, scale: 1, duration: 0 }, "=-.5")
-    .to('.box > li > ul:first-child, .slogan p:not(:nth-child(2)), .sub p:last-of-type', { opacity: 0, duration:0 })
-    .to('.box > li', { opacity: 1, background: "#fff", border: "1px solid rgba(0, 0, 0, .15)", duration: 1 })
-    .to('.motion_menu, .motion_menu p', { opacity: 1, duration: 1 }, "=-1")
-    .to('.four li', { opacity: 1 }, "=-1")
+    .to('.line, .slogan p', {opacity: 1, duration: .6 }, "=-.3")
+    .to('.line', {top: 200, duration: .3 })
+    .to('.love_motion > h2', {top: 190, opacity: 1, duration: .3 })
+    .to('.line', {top: 626, duration: .6, delay: .3 })
+    .to('.love', { height: 0 }, "=-.3")
+    .to('.box', { width: "100%", height: "40.8rem", opacity: 1 }, "=-.3")
+    .to('.one', { x: -516, duration: 0 }, "=-.3")
+    .to('.two', { x: -172, duration: 0 }, "=-.3")
+    .to('.three', { x: 172, duration: 0}, "=-.3")
+    .to('.four', { x: 516, scale: 1, duration: 0 }, "=-.3")
+    .to('.box > li > ul:first-child, .slogan p:not(:nth-child(2)), .sub p:last-of-type', { opacity: 0, duration:0 }, "=-.5")
+    .to('.box > li', { opacity: 1, background: "#fff", border: "1px solid rgba(0, 0, 0, .15)", duration: .5 }, "=-.3")
+    .to('.motion_menu, .motion_menu p', { opacity: 1, duration: .5 }, "=-.5")
+    .to('.four li', { opacity: 1 }, "=-.5")
 
 
 
     /* have motion */
-    tl2
-    .to('.transform-box', { width: "11rem", height: "11rem", rotation: 90, x: "2rem", y: "3.5rem", duration: .8, delay: 1 }, 1)
-    .to('.we', { x: "-2rem", duration: .8, delay: 1 }, 1)
-    .to('.ve', { x: "2.5rem", duration: .8, delay: 1 }, 1)
+    tl2.to('.transform-box', { width: "11rem", height: "11rem", rotation: 90, x: "2rem", y: "3.5rem", duration: .5 })
+    .to('.we', { x: "-2rem", duration: .5 }, "=-.5")
+    .to('.ve', { x: "2.5rem", duration: .5 }, "=-.5")
     
-    .to('.transform-box .left, .transform-box .right', { opacity: "1", duration: "0" }, 3)
-    .to('.transform-box', { backgroundColor: "transparent", duration: .2 }, 3)
+    .to('.transform-box .left, .transform-box .right', { opacity: "1", duration: 0 })
+    .to('.transform-box', { backgroundColor: "transparent", duration: .2, delay: .5 })
 
-    .to('.transform-box .left', { y: "2.4rem",  duration: .5 }, 4)
-    .to('.have .transform-box .right', { y: "-20.5rem",  duration: .5 }, 4)
-    .to('.live .transform-box .right', { y: "-10rem",  duration: .5 }, 4)
-    .to('.save .transform-box .right', { y: "-17.5rem",  duration: .5 }, 4)
-    .to('.solve .transform-box .right', { y: "-22rem",  duration: .5 }, 4)
-    .to('.we', { x: "-4rem", duration: .5 }, 4)
-    .to('.ve', { x: "4rem", duration: .5 }, 4)
-    .to('.ha', { x: "-3.7rem", width: "auto" }, 4)
-    .to('.ha', { opacity: "1", delay: .5 }, 4)
+    .to('.transform-box .left', { y: "2.4rem",  duration: .5 })
+    .to('.have .transform-box .right', { y: "-20.5rem",  duration: .5 }, "=-.5")
+    .to('.live .transform-box .right', { y: "-10rem",  duration: .5 }, "=-.5")
+    .to('.save .transform-box .right', { y: "-17.5rem",  duration: .5 }, "=-.5")
+    .to('.solve .transform-box .right', { y: "-22rem",  duration: .5 }, "=-.5")
+    .to('.we', { x: "-4rem", duration: .5 }, "=-.5")
+    .to('.ve', { x: "4rem", duration: .5 }, "=-.5")
+    .to('.ha', { x: "-3.7rem", width: "auto" }, "=-.5")
+    .to('.ha', { opacity: "1", delay: .5 }, "=-.5")
 
-    .to('.transform-box .left, .transform-box .right', { display: "none", delay: .5}, 5)
-    .to('.transform-box', { width: "0", duration: .5, delay: .5}, 6)
-    .to('.we', { x: "0",  duration: .5, delay: .5}, 6)
-    .to('.ve', { x: "0",  duration: .5, delay: .5}, 6)
-    .to('.ha', { x: "1.6rem", delay: .5}, 6)
+    .to('.transform-box .left, .transform-box .right', { opacity: 0, duration: .5, delay: .5 })
+    .to('.transform-box', { width: "0", duration: .5}, "=-.5")
+    .to('.we', { x: "0",  duration: .5}, "=-.5")
+    .to('.ve', { x: "0",  duration: .5}, "=-.5")
+    .to('.ha', { x: "1.6rem"}, "=-.5")
 
-    .to('.we', { color:"#005eb8",  duration: .3, delay: .5}, 7)
-    .to('.ve', { color:"#005eb8",  duration: .3, delay: .5}, 7)
-    .to('.we', { color:"#000",  duration: .3, delay: 1}, 8)
+    .to('.we', { color:"#005eb8",  duration: .3, delay: .5}, "=-.5")
+    .to('.ve', { color:"#005eb8",  duration: .3, delay: .5}, "=-.5")
+    .to('.we', { color:"#000",  duration: .3, delay: 1}, "=-.5")
     
   },
 
@@ -1127,11 +1126,14 @@ var channelEvent = {
 
 var recruitEvent = {
   init: function() {
-    this.isotope();
+    this.job();
   },
 
-  isotope : function() {
+  job : function() {
     "use strict"
+
+
+
     // 탭버튼 분류 라이브러리 isotope
     $(document).ready( function() {   
       $('.isotope').isotope({
@@ -1148,33 +1150,28 @@ var recruitEvent = {
 
     })
 
-    $(".openPopup").children('img').attr('src', 'images/common/icon_plus_mob_hover_20x20.png');
     // 팝업 컨트롤
-    const img = $('.popup .img img');
+    const img = $('.popup .img img'),
+          popupClose = $('.pop_close');
 
+    // 팝업 이미지 초기화
+    img.attr('src', '');
+
+    // 더보기 버튼 클릭 시
     $(".openPopup").on("click", function() {
         const index = $(this).parent().index();
+
+        // 팝업 맨 위로
+        $(".popup").scrollTop(0);
         
         let moving = $(this).siblings('div').children('img').attr('data-popup-moving'),
             idxTitle = $(this).siblings('p').html(),
             idxInfo = $(this).siblings('h3').html(),
             idxArticle = $(this).siblings('article');
 
-        $(".popup").scrollTop(0);
-        
         // 타이틀
         $('.pop_title dt').html(idxTitle);
         $('.pop_title dd').html(idxInfo);
-
-        // 타이틀 이미지 및 애니메이션
-        if (index < 9) {
-          img.attr('src', 'images/recruit/job_popup_person0' + (index + 1) + '.png');
-        } else {
-          img.attr('src', 'images/recruit/job_popup_person' + (index + 1) + '.png');
-        }
-        
-        // 이미지 나타나기
-        img.css({'right': moving + 'px'});
 
         // 내용
         $('.article').children('dl').each((index)=> {
@@ -1183,38 +1180,83 @@ var recruitEvent = {
           containsIdx.children('dd').html(output)
         });
 
-        // 팝업 가로 스크롤 포지션 초기화
-        $(window).on('scroll',function(){
-          $(".popup ul").css("left",0-$(this).scrollLeft());
-        });
+        // 이미지 불러오기
+        img.attr('src', 'images/recruit/job_popup_person' + (index + 1) + '.png');
+
+        // 이미지 애니메이션
+        if ($('#pc').length) {  // 적응형 [PC]
+          img.css({'right': moving + 'px'});
+
+        } else {  // 적응형 [MOBILE]
+          setTimeout(()=> {
+            // 1. 정은별 사원, 2. 정우재 사원, 8. 김형석 사원, 13. 김규태 차장, 14. 박지용 사원, 15. 나재우 대리
+            img.css({'right': -moving / 100 + 'rem', 'opacity': 1});
+
+            // 특정 이미지 간격 조정
+            if (index === 2 || index === 5 || index === 6 || index === 11) {  // 3. 김동훈 사원, 6. 양지범 과장, 7. 천소영 차장, 12 송유현 대리
+              img.css({'right': 0});
+            } else if (index === 3 || index === 4) {  // 4. 문종호 대리, 5. 김종훈 과장
+              img.css({'right': -moving / 30 + 'rem'});
+            } else if (index === 8 || index === 9 || index === 10) {  // 9. 백승범 차장, 10. 윤영준 사원, 11. 서호진 사원
+              img.css({'right': moving / 100 + 'rem'});
+            }
+          }, 300);
+
+        }
     });
 
-    // 외부영역 클릭 시 팝업 닫기
-    const LayerPopup = $(".recruit .popup");
-    
-    $(document).mouseup(function (e){
-      if (LayerPopup.has(e.target).length === 0){
-        LayerPopup.removeClass("on");
+    // 적응형 [MOBILE]
+    if ($('#mobile').length) {
+      // 더보기 버튼 + 이미지 변경
+      $(".openPopup").children('img').attr('src', 'images/common/icon_plus_mob_hover_20x20.png');
+
+    } else {  // 적응형 [PC]
+
+      // 영역 밖 이동 시 마우스 닫기 버튼 보이기
+      const LayerPopup = $(".recruit .popup ul");
+            
+      $(document).mousemove(function (e){
+        console.log(LayerPopup.has(e.target).length)
+        if (LayerPopup.has(e.target).length === 0){
+          popupClose.css({'transform': 'scale(1)'});
+        } else {
+          popupClose.css({'transform': 'scale(0)'});
+        }
+      });
+
+      // 영영 밖 이동 시 마우스 닫기 버튼  커서 따라다니기
+      const circle = document.querySelector(".pop_close");
+        document.addEventListener("mousemove", (e) => { // mousemove이벤트를 이용해 움
+            // 마우스의 좌표는 clientX와 clientY를 이용해 알수 있다. -> 브라우저 window의 좌표값 위치를 전달한다.
+            // pageX, pageY와는 다름.
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+            circle.style.left = mouseX - 35 + 'px';
+            circle.style.top = mouseY - 35 + 'px';
+        });
+    }
+
+    // 팝업 닫기
+    popupClose.on('click', ()=> {
+        if ($('#mobile').length) {  // 적응형 [MOBILE]
+          // 팝업 이미지 원위치 및 초기화
+          img.css({'right': -100, 'opacity': 0});
+          setTimeout(()=> {
+            img.attr('src', '');
+          }, 300);
+
+        } else {  // 적응형 [PC]
+          // 팝업 이미지 원위치
+          img.css({'right': 0});
+        }
+
         closeProcessor();
-        img.css({'right': '0'});
-      }
     });
 
     // 팝업 닫기 function
     function closeProcessor() {
-
         $('html').removeClass('blockScroll');
-        $('.popup').removeClass('on');
-        
-        // if ($('#mobile').length) { 
-        //     scrollPosition = body.style.top;
-        //     scrollPosition = scrollPosition.replace('px', '');
-
-        //     body.style.removeProperty('top');
-        //     window.scrollTo(0, -(scrollPosition));
-        //     $('header').show();
-            
-        // }
+        $('.popup').fadeOut(300);
     }
     
   },

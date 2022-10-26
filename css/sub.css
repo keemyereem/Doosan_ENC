@@ -289,7 +289,7 @@
 /* 공통 */
 #wrap, .container { width: 100%; }
 .title_area { padding: 10rem 0; text-align: center; }
-.title_area .con_tit { font-size: 6rem; font-weight: 450; color: #0b0f14; letter-spacing: -.15rem; padding-bottom: 3rem; }
+.title_area .con_tit { font-size: 6rem; font-weight: 450; color: #0b0f14; letter-spacing: -.15rem; padding-bottom: 3rem; position: relative; }
 .title_area.single .con_tit { padding-bottom: 0; }
 .title_area .con_tit.pb0 { padding-bottom: 0; }
 .title_area .con_tit > em { color: #888; }
@@ -297,7 +297,7 @@
 .title_area .con_tit > span::after { content:''; display: inline-block; width: 0; height: 0; border-top: 1rem solid transparent; border-bottom: 1rem solid transparent; border-left: 1rem solid #1d1f1e; position: absolute; top: -.5rem; left: 0; }
 .title_area .sub_tit { font-size: 3.4rem; font-weight: 400; color: #0b0f14; letter-spacing: -.085rem; padding-bottom: 1rem; }
 .title_area .sub_tit > b { font-family: 'Montserrat'; font-size: 3.6rem; font-weight: 350; color: #005eb8; }
-.title_area .sub_txt { font-size: 2rem; font-weight: 150; color: #555; letter-spacing: -.05rem; line-height: 1.8; }
+.title_area .sub_txt { font-size: 2rem; font-weight: 150; color: #555; letter-spacing: -.05rem; line-height: 1.8; position: relative; }
 .title_area .download_btn { display: inline-block; width: 23.2rem; font-size: 1.6rem; color: #000; margin-top: 8rem;  }
 .title_area .download_btn > i { display: inline-block; width: 1.9rem; height: 2rem; background: url(../images/common/icon_download.png) no-repeat; margin-left: 4rem; vertical-align: baseline; }
 .title_area .download_btn::after { content:''; display: block; width: 0; height: 0.1rem; background: #000; margin-top: 2rem; transition: width .3s; }
@@ -1281,17 +1281,18 @@
 .recruit .contents { max-width: 144rem; width: 100%; margin: auto; }
 .recruit .tab_small { margin-bottom: 6rem; }
 .recruit .banner { max-width: 144rem; background: #f7f8f9 url(../images/recruit/job_list_banner_img02.png)100% 100% no-repeat; padding: 9.3rem 13.6rem 0; height: 42rem; margin: 12rem auto; position: relative; overflow: visible; }
-.recruit .banner h2 { text-transform: uppercase; font-size: 6rem; color: #222222; font-weight: 450; line-height: 1.3; padding-top: 3rem; }
+.recruit .banner h2 { text-transform: uppercase; font-size: 6rem; color: #222222; font-weight: 450; line-height: 1.3; padding-top: 3rem; position: relative; }
 .recruit .banner h2:before { content: ''; display: block; width: 5.5rem; height: .6rem; background: #005eb8; transform: skew(-45deg); position: absolute; top: 0; margin-left: .5rem; }
 .recruit .banner p { font-size: 2rem; color: #555555; line-height: 1.8; padding-top: 2rem; }
 .recruit .banner img { position: absolute; right: -7.7rem; top: -2.5rem; }
 .recruit .pu_br { display: none; }
 
 /* 팝업 */
-.recruit .popup { cursor: url(../images/common/pop_close_70x70.png) 35 35, auto; width: 100%; overflow: auto; height: 100vh; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, .6); z-index: 1000; opacity: 0; visibility: hidden; transition:all ease .3s; }
+.recruit .popup { cursor: none; width: 100%; padding: 0 3rem; overflow: auto; height: 100vh; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, .6); z-index: 1000; display: none; }
 .recruit .popup .pu_br { display: block; }
+.recruit .popup .pop_close { position: fixed; top: 0; left: 0; width: 7rem; height: 7rem; transform: scale(0); cursor: none; transition: transform ease .3s; }
+.recruit .popup .pop_close img { width: 100%; }
 .recruit .popup .pu_indent { display: none; }
-.recruit .popup.on { opacity: 1; visibility: visible; }
 .recruit .popup ul { cursor: auto; width: 136rem; height: fit-content; background: #fff; position: relative; margin: 10rem auto; letter-spacing: -.15rem; }
 .recruit .popup ul li:first-child { display: flex; justify-content: space-between; height: 56rem; overflow: hidden; position: relative; background: #fbfbfb; }
 .recruit .popup .pop_title { padding: 9rem 0 8.5rem 12rem; display: flex; flex-direction: column; justify-content: space-between; }
