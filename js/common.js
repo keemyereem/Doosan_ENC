@@ -717,13 +717,12 @@ var techEvent = {
     .to('.ha', { opacity: "1", delay: .5 }, "=-.5")
 
     .to('.transform-box .left, .transform-box .right', { opacity: 0, duration: .5, delay: .5 })
-    .to('.transform-box', { width: "0", duration: .5}, "=-.5")
-    .to('.we', { x: "0",  duration: .5}, "=-.5")
-    .to('.ve', { x: "0",  duration: .5}, "=-.5")
-    .to('.ha', { x: "1.6rem"}, "=-.5")
+    .to('.transform-box', { width: "0" },)
+    .to('.we', { x: "0",  duration: .3 }, "=-.5")
+    .to('.ve', { x: "0",  duration: .3 }, "=-.5")
+    .to('.ha', { x: "1.6rem", duration: .4 }, "=-.5")
 
-    .to('.we', { color:"#005eb8",  duration: .3, delay: .5}, "=-.5")
-    .to('.ve', { color:"#005eb8",  duration: .3, delay: .5}, "=-.5")
+    .to('.we, .ve', { color:"#005eb8",  duration: .3}, "=-.5")
     .to('.we', { color:"#000",  duration: .3, delay: 1}, "=-.5")
     
   },

@@ -46,6 +46,7 @@ br.br_t, br.br_m {display: none;}
 .indent { display: none; }
 .indentUp { transform: translateY(-10rem); }
 .blind { opacity: 0;}
+.nowrap { white-space: nowrap; }
 .none {display: none;}
 .blockScroll { overflow: hidden !Important; height: 100vh; }
 
