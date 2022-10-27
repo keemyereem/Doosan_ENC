@@ -608,6 +608,7 @@ var techEvent = {
   init: function(){
     this.motion();
     this.sectionNav();
+    this.loveMobSwiper();
   },
 
   motion : () => {
@@ -625,6 +626,7 @@ var techEvent = {
       })
     }}),
           tl2 = gsap.timeline({stagger:1});
+          tl4 = gsap.timeline({stagger:1});
           tl1.pause();
           tl2.pause();
 
@@ -636,14 +638,24 @@ var techEvent = {
 
       // love motion trigger
       if (trigger > motion01) {
-        tl1.play()
+        if($('#pc').length){
+          tl1.play()
+        }else {
+          
+        }
+        
       } else {
         // tl1.reverse()
       }
 
       // have motion trigger
       if(trigger > motion02) {
-        tl2.play()
+        if($('#pc').length){
+          tl2.play()
+        }else {
+          tl4.play()
+        }
+        
       } 
     })
       
@@ -699,13 +711,14 @@ var techEvent = {
 
 
     /* have motion */
-    tl2.to('.transform-box', { width: "11rem", height: "11rem", rotation: 90, x: "2rem", y: "3.5rem", duration: .5 })
+    tl2
+    .to('.transform-box', { width: "11rem", height: "11rem", rotation: 90, x: "2rem", y: "3.5rem", duration: .5, delay: 1 })
     .to('.we', { x: "-2rem", duration: .5 }, "=-.5")
     .to('.ve', { x: "2.5rem", duration: .5 }, "=-.5")
     
     .to('.transform-box .left, .transform-box .right', { opacity: "1", duration: 0 })
     .to('.transform-box', { backgroundColor: "transparent", duration: .2, delay: .5 })
-
+    
     .to('.transform-box .left', { y: "2.4rem",  duration: .5 })
     .to('.have .transform-box .right', { y: "-20.5rem",  duration: .5 }, "=-.5")
     .to('.live .transform-box .right', { y: "-10rem",  duration: .5 }, "=-.5")
@@ -714,17 +727,45 @@ var techEvent = {
     .to('.we', { x: "-4rem", duration: .5 }, "=-.5")
     .to('.ve', { x: "4rem", duration: .5 }, "=-.5")
     .to('.ha', { x: "-3.7rem", width: "auto" }, "=-.5")
-    .to('.ha', { opacity: "1", delay: .5 }, "=-.5")
+    .to('.ha', { opacity: "1", delay: .5 }, "=-.3")
 
-    .to('.transform-box .left, .transform-box .right', { opacity: 0, duration: .5, delay: .5 })
+    .to('.transform-box .left, .transform-box .right', { opacity: 0, duration: .5, delay: .5 }, "=-.5")
     .to('.transform-box', { width: "0" },)
     .to('.we', { x: "0",  duration: .3 }, "=-.5")
     .to('.ve', { x: "0",  duration: .3 }, "=-.5")
     .to('.ha', { x: "1.6rem", duration: .4 }, "=-.5")
-
-    .to('.we, .ve', { color:"#005eb8",  duration: .3}, "=-.5")
-    .to('.we', { color:"#000",  duration: .3, delay: 1}, "=-.5")
     
+    .to('.we, .ve', { color:"#005eb8",  duration: .3, delay: .5}, "=-.5")
+    .to('.we', { color:"#000",  duration: .3, delay: .5})
+
+    /* have motion 모바일 */
+    tl4
+    .to('#mobile .transform-box', { width: "4rem", height: "4rem",  rotation: 90, x: "0rem", y: "1.2rem", duration: .5, delay: 1 })
+    .to('#mobile .we', { x: "-.7rem", duration: .5 }, "=-.5")
+    .to('#mobile .ve', { x: ".7rem", duration: .5 }, "=-.5")
+    
+    .to('#mobile .transform-box .left, #mobile .transform-box .right', { opacity: "1", duration: 0 })
+    .to('#mobile .transform-box', { backgroundColor: "transparent", duration: .2, delay: .5 })
+    
+    .to('#mobile .transform-box .left', { y: "2.2rem",  duration: .5 })
+    .to('#mobile .have .transform-box .right', { y: "-6.5rem",  duration: .5 }, "=-.5")
+    .to('#mobile .live .transform-box .right', { y: "-2.8rem",  duration: .5 }, "=-.5")
+    .to('#mobile .save .transform-box .right', { y: "-5.5rem",  duration: .5 }, "=-.5")
+    .to('#mobile .solve .transform-box .right', { y: "-7.2rem",  duration: .5 }, "=-.5")
+    .to('#mobile .we', { x: "-2rem", duration: .5 }, "=-.5")
+    .to('#mobile .ve', { x: "1rem", duration: .5 }, "=-.5")
+    .to('#mobile .ha', { x: "-3.2rem", width: "auto" }, "=-.5")
+    .to('#mobile .ha', { opacity: "1", delay: .3 }, "=-.3")
+
+    .to('#mobile .transform-box .left, #mobile .transform-box .right', { opacity: 0, duration: .5, delay: .5 }, "=-.5")
+    .to('#mobile .transform-box', { width: "0" },)
+    .to('#mobile .we', { x: "0",  duration: .3 }, "=-.5")
+    .to('#mobile .ve', { x: "0",  duration: .3 }, "=-.5")
+    .to('#mobile .ha', { x: "0rem", duration: .4 }, "=-.5")
+    
+    .to('#mobile .we, .ve', { color:"#005eb8",  duration: .3}, "=-.5")
+    .to('#mobile .we', { color:"#000",  duration: .3, delay: .5})
+
   },
 
 
@@ -795,6 +836,23 @@ var techEvent = {
       }
     })
 
+  },
+
+  loveMobSwiper : function() {
+    if($('#mobile').length){
+      let loveSlider = new Swiper(".love_swiper", {
+        slidesPerView: 3,
+        speed: 500,
+        observer: true,
+        observeParents: true,
+
+        navigation: {
+          nextEl: '.love_swiper_wrap .swiper-button-next',
+          prevEl: '.love_swiper_wrap .swiper-button-prev'
+        },
+
+      });
+    }
   },
 
 };

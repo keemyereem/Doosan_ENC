@@ -884,6 +884,7 @@
 .technology .competence .love_motion .box > li.on ul .slogan { order: 0; margin-top: 1rem;}
 .technology .competence .love_motion .box > li.on ul .slogan p,
 .technology .competence .love_motion .box > li.on ul .slogan p em { color: #fff; font-weight: 350; }
+.technology .competence .love_motion .swiper-btn { display: none; }
 
 .technology .competence .weve_motion { margin-bottom: 12rem; }
 .technology .competence .weve_motion .inner { width: 100%; max-width: 136rem!important; height: 55.2rem!important; background-image: radial-gradient(rgba(15, 178, 138,.4) 20%, transparent 0); background-repeat: repeat; background-size: 8px 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
