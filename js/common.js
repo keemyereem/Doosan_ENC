@@ -357,6 +357,7 @@ var commonEvent = {
     function openProcessor() {
         scrollPosition = window.pageYOffset;
         $(".popup").fadeIn(300);
+        $(".popup").addClass('on');
         $('html').addClass('blockScroll');
 
         if ($('#mobile').length) {
