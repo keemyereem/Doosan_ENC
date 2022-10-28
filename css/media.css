@@ -929,7 +929,7 @@
 #mobile .technology .competence .love_motion .box > li > ul > .slogan p { font-size: 1.4rem; padding:0; }
 #mobile .technology .competence .love_motion .box > li > ul > .slogan p:first-of-type { display: none; }
 #mobile .technology .competence .love_motion .box > li.four > ul > .slogan p:last-of-type { display: none; }
-#mobile .technology .competence .love_motion .box > li > ul > li p:not(:first-child) { opacity: 1; }
+#mobile .technology .competence .love_motion .box > li > ul > li p:not(:first-child) { opacity: 1; position: initial; margin-top: 0.5rem; }
 #mobile .technology .competence .love_motion .box > li .motion_menu { display: none; }
 #mobile .technology .competence .love_motion .box > li .motion_menu li p { padding: 0; opacity: 1; }
 #mobile .technology .competence .love_motion .box > li .motion_menu li:nth-child(2) { display: none; }
