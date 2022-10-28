@@ -608,7 +608,7 @@ var techEvent = {
   init: function(){
     this.motion();
     this.sectionNav();
-    this.loveMobSwiper();
+    this.loveMoTab();
   },
 
   motion : () => {
@@ -629,6 +629,7 @@ var techEvent = {
           tl4 = gsap.timeline({stagger:1});
           tl1.pause();
           tl2.pause();
+          tl4.pause();
 
     $(window).on('load resize scroll', ()=> {
       let st = $(window).scrollTop(),
@@ -649,14 +650,21 @@ var techEvent = {
       }
 
       // have motion trigger
-      if(trigger > motion02) {
-        if($('#pc').length){
+
+      if($('#pc').length){
+        if(trigger > motion02){
           tl2.play()
         }else {
-          tl4.play()
+
         }
-        
-      } 
+      }else{
+        if(st > motion02 - 500){
+          tl4.play();
+        }else{
+
+        }
+      }
+
     })
       
     tl1.to('.one', { x: -516 })
@@ -838,21 +846,106 @@ var techEvent = {
 
   },
 
-  loveMobSwiper : function() {
-    if($('#mobile').length){
-      let loveSlider = new Swiper(".love_swiper", {
-        slidesPerView: 3,
-        speed: 500,
-        observer: true,
-        observeParents: true,
+  loveMoTab: () => {
+    // 유형1 (ex 사업영역) - 大분류
+    const tabContainer = $('#mobile .love_swiper_wrap > .love_swiper'),
+          tabBox = tabContainer.find('> .box'),
+          tabButton = tabBox.find('> li');
 
-        navigation: {
-          nextEl: '.love_swiper_wrap .swiper-button-next',
-          prevEl: '.love_swiper_wrap .swiper-button-prev'
-        },
+    let size = tabButton.length,
+        tbIndex = 0;
+
+    if (tabBox.length) {
+      $(document).ready(function(){
+        let tbOn = Math.floor(tabBox.find('> li').position().left),
+            tbWidth = tabButton.width();
+
+        tabContainer.animate({scrollLeft: tbOn - tbWidth}, 1000);
+      });
+
+      tabContainer.on('load resize scroll', ()=> {
+          tabBoxPosition = Math.abs(tabBox.position().left);
+
+          tabButton.each((index)=> {
+            tabButtonPosition = Math.floor(tabButton.eq(index).position().left);
+
+            if (size !== index + 1) {
+              nextIndexPosition = Math.floor(tabButton.eq(index).next().position().left);
+
+              if (tabBoxPosition > tabButtonPosition && tabBoxPosition <= nextIndexPosition) {
+                tbIndex = index;
+              }
+            }
+
+          });
 
       });
+
+      $('.control').on('click', function() {
+        if ($(this).hasClass('next')) {
+            tsMove = Math.floor(tabButton.eq(tbIndex).position().left);
+
+            tabContainer.animate({scrollLeft: tsMove}, 200)
+        } else {
+            tsmoveTrigger = Math.abs(tabBox.position().left);
+            
+            if (Math.ceil(tsmoveTrigger) == Math.floor(tabButton.eq(tbIndex).next().position().left)) {
+                tbIndex = tbIndex + 1;
+            } else {
+                tbIndex = tbIndex;
+            }
+
+            tsMove = Math.floor(tabButton.eq(tbIndex).next().position().left);
+            tabContainer.animate({scrollLeft: tsMove}, 200);
+        }
+      })
+
+      tabButton.eq(0).click(function(){
+        $(location).attr('href',"html/FD-02-01-01.html");
+      });
+      tabButton.eq(1).click(function(){
+        $(location).attr('href',"html/FD-02-01-02.html");
+      });
+      tabButton.eq(2).click(function(){
+        $(location).attr('href',"html/FD-02-01-03.html");
+      });
+      tabButton.eq(3).click(function(){
+        $(location).attr('href',"html/FD-02-01-04.html");
+      });
     }
+
+    // 유형2 (ex 연혁, 직무소개) - 小분류
+    const tabBtn = $('.tab_small ul li'),
+          bar = $('.tab_small .bar');
+
+    tabBtn.each((index)=> {
+      // initializing
+      tabBtn.css({'width': 'calc(100%/ ' + tabBtn.length + ')'})
+      bar.css({'width': tabBtn.width(), 'left': $('.tab_small ul li.active').offset().left});
+
+      tabBtn.eq(index).on('click', ()=> {
+        tabBtn.removeClass('active');
+        tabBtn.eq(index).addClass('active');
+
+        bar.css({'width': tabBtn.width(), 'left': $('.tab_small ul li.active').offset().left});
+
+        $(window).on('resize load scroll', ()=> {
+          bar.css({'width': tabBtn.width(), 'left': $('.tab_small ul li.active').offset().left});
+        });
+
+        window.scrollTo({
+          top: $('.tab_small').offset().top - $('.tab_small').outerHeight() * 2,
+          behavior: 'smooth',
+        })
+        
+        // 연혁페이지
+        if ($('.HMhistory').length) {
+          $('.HMhistory').removeClass('active');
+          $('.HMhistory').eq(index).addClass('active');
+        }
+      })
+    })
+
   },
 
 };
