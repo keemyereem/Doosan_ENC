@@ -917,12 +917,15 @@
 #mobile .technology .competence .love_motion .box { max-width: fit-content!important; width: fit-content!important; height: 7rem; background: transparent; position: absolute; left: 0; top: 0; transition: left .5s ease-out; }
 #mobile .technology .competence .love_motion .box > li { background: #fff; width: 24vw!important; height: 7rem; border: 0; border-radius: 0; position: initial; opacity: 1; border: 1px solid #e8e8e8; }
 #mobile .technology .competence .love_motion .box > li:not(:first-child) { margin-left: -.1rem; }
-#mobile .technology .competence .love_motion .box > li > ul { position: initial; }
+#mobile .technology .competence .love_motion .box > li > ul { position: relative; }
 #mobile .technology .competence .love_motion .box > li > ul > li:nth-child(1) svg { width: 1.9rem; height: 2.1rem;  }
 #mobile .technology .competence .love_motion .box > li > ul > li:nth-child(2) svg { width: 2.1rem; height: 2.1rem;  }
 #mobile .technology .competence .love_motion .box > li > ul > li:nth-child(3) svg { width: 2.2rem; height: 2.2rem;  }
 #mobile .technology .competence .love_motion .box > li > ul > li:nth-child(4) svg { width: 2.8rem; height: 2.3rem;  }
-#mobile .technology .competence .love_motion .box > li > ul > li:nth-child(2) { display: none; }
+#mobile .technology .competence .love_motion .box > li > ul > li:nth-child(2) { position: absolute; width: 100%; height: 100%; }
+#mobile .technology .competence .love_motion .box > li > ul > li:nth-child(2) p { display: none; }
+#mobile .technology .competence .love_motion .box > li > ul > li:nth-child(2) a { display: block; width: 100%; height: 100%; top: 0; }
+#mobile .technology .competence .love_motion .box > li > ul > li:nth-child(2) a::after { display: none; }
 #mobile .technology .competence .love_motion .box > li > ul > .slogan p { font-size: 1.4rem; padding:0; }
 #mobile .technology .competence .love_motion .box > li > ul > .slogan p:first-of-type { display: none; }
 #mobile .technology .competence .love_motion .box > li.four > ul > .slogan p:last-of-type { display: none; }
@@ -931,21 +934,22 @@
 #mobile .technology .competence .love_motion .box > li .motion_menu li p { padding: 0; opacity: 1; }
 #mobile .technology .competence .love_motion .box > li .motion_menu li:nth-child(2) { display: none; }
 #mobile .technology .competence .love_motion .box > li .motion_menu li:nth-child(3) p { display: none; }
-
 #mobile .technology .competence .love_motion .love { height: 5.7rem; font-size: 10rem; font-weight: 450; color: #005eb8; /* height: 5.5rem; */ text-align: center; position: relative; }
 #mobile .technology .competence .love_motion .love span { opacity: 1; position: initial; top: initial; bottom: 0; }
 #mobile .technology .competence .love_motion .love span:first-child { display: none; }
 #mobile .technology .competence .love_motion .love span:last-child { display: block; height: 5.7rem; padding: 0; }
 #mobile .technology .competence .love_motion .line { display: none; }
 #mobile .technology .competence .love_motion > h2 { font-size: 1.6rem; line-height: 1.56; position: initial; opacity: 1; margin: 2rem auto 4rem; }
-/* #mobile .technology .competence .love_motion .box > li.on { transition: all ease .3s; box-shadow: none; }
+/* 
+#mobile .technology .competence .love_motion .box > li.on { transition: all ease .3s; box-shadow: none; }
 #mobile .technology .competence .love_motion .box > li.on ul svg,
 #mobile .technology .competence .love_motion .box > li.on ul svg .st0 { fill:#fff; }
 #mobile .technology .competence .love_motion .box > li.on ul .sub { order: 1; }
 #mobile .technology .competence .love_motion .box > li.on ul .sub a { display: block; }
 #mobile .technology .competence .love_motion .box > li.on ul .slogan { order: 0; margin-top: 1rem;}
 #mobile .technology .competence .love_motion .box > li.on ul .slogan p,
-#mobile .technology .competence .love_motion .box > li.on ul .slogan p em { color: #fff; font-weight: 350; } */
+#mobile .technology .competence .love_motion .box > li.on ul .slogan p em { color: #fff; font-weight: 350; } 
+*/
 #mobile .technology .competence .love_motion .box > li:hover { background: #005eb8; }
 #mobile .technology .competence .love_motion .box > li:hover ul svg,
 #mobile .technology .competence .love_motion .box > li:hover ul svg .st0 { fill:#fff; }
@@ -993,17 +997,18 @@
 #mobile .technology .competence section .txt ul li { font-size: 1.4rem; line-height: 1.42; }
 #mobile .technology .competence section .txt ul li::before { margin: .6rem 1rem 0 0; flex-shrink: 0; }
 #mobile .technology .competence section .txt .btn { width: 21.1rem; height: 4.5rem; line-height: 4.5rem; border-radius: 2.25rem;padding: 0 3rem; margin-top: 3.5rem; font-size: 1.3rem; }
-#mobile .technology .competence section .txt .btn i { width: 1.5rem; height: 1.5rem; right: 3rem; }
+#mobile .technology .competence section .txt .btn i { width: 1.5rem; height: 1.5rem; right: 3rem; background: url(../images/common/icon_plus_15x15.png)50% 50% no-repeat; }
+#mobile .technology .competence section .txt .btn:hover i { background: url(../images/common/icon_plus_w_15x15.png)50% 50% no-repeat; }
 #mobile .technology .competence .section6 { padding: 5.5rem 0 0; }
 #mobile .technology .competence .section6 h3 { margin-top: 0; }
 #mobile .technology .competence .section6 ul { margin-top: 2.2rem; }
 #mobile .technology .competence .section6 ul li a { height: auto; min-height: 5.5rem; padding: 1.5rem 1rem; line-height: 1.57; position: relative; }
 #mobile .technology .competence .section6 ul li a em { display: none; }
 #mobile .technology .competence .section6 ul li .num { font-size: 1.5rem; padding-right: 1rem; }
-#mobile .technology .competence .section6 ul li .tit { font-size: 1.4rem; } 
-#mobile .technology .competence .section6 ul li .viewmore { width: 1.5rem; height: 1.5rem; background: url(../images/common/icon_plus_21x22.png) no-repeat 100% 100%; background-size: contain; position: absolute; top: 2rem; right: 1rem; }
+#mobile .technology .competence .section6 ul li .tit { font-size: 1.4rem; padding-right: 2.5rem; } 
+#mobile .technology .competence .section6 ul li .viewmore { width: 1.5rem; height: 1.5rem; background: url(../images/common/icon_plus_15x15.png) no-repeat 100% 100%; background-size: contain; position: absolute; top: 2rem; right: 1rem; }
 #mobile .technology .competence .section6 ul li .viewmore span { display: none; }
-#mobile .technology .competence .section6 ul li:hover .viewmore { background: url(../images/common/icon_plus_w_21x22.png)no-repeat 100% .15rem; background-size: 1.5rem; }
+#mobile .technology .competence .section6 ul li:hover .viewmore { background: url(../images/common/icon_plus_w_15x15.png)no-repeat 100% 100%; background-size: 1.5rem; }
 
 
 /* ================================  회사소개  =============================== */

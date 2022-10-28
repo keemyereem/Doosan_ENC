@@ -638,26 +638,25 @@ var techEvent = {
           trigger = st + $(window).height() / 2;
 
       // love motion trigger
-      if (trigger > motion01) {
-        if($('#pc').length){
-          tl1.play()
-        }else {
-          
-        }
+      if ($('#pc').length){
         
+        if (trigger > motion01) {
+          tl1.play()
+        } else {
+          // tl1.reverse()
+        }
       } else {
-        // tl1.reverse()
+        $('.love_motion .box > li > ul > li:nth-child(2) a').html('');
       }
 
       // have motion trigger
-
-      if($('#pc').length){
+      if ($('#pc').length){
         if(trigger > motion02){
           tl2.play()
         }else {
 
         }
-      }else{
+      } else {
         if(st > motion02 - 500){
           tl4.play();
         }else{
@@ -900,18 +899,18 @@ var techEvent = {
         }
       })
 
-      tabButton.eq(0).click(function(){
-        $(location).attr('href',"html/FD-02-01-01.html");
-      });
-      tabButton.eq(1).click(function(){
-        $(location).attr('href',"html/FD-02-01-02.html");
-      });
-      tabButton.eq(2).click(function(){
-        $(location).attr('href',"html/FD-02-01-03.html");
-      });
-      tabButton.eq(3).click(function(){
-        $(location).attr('href',"html/FD-02-01-04.html");
-      });
+      // tabButton.eq(0).click(function(){
+      //   $(location).attr('href',"html/FD-02-01-01.html");
+      // });
+      // tabButton.eq(1).click(function(){
+      //   $(location).attr('href',"html/FD-02-01-02.html");
+      // });
+      // tabButton.eq(2).click(function(){
+      //   $(location).attr('href',"html/FD-02-01-03.html");
+      // });
+      // tabButton.eq(3).click(function(){
+      //   $(location).attr('href',"html/FD-02-01-04.html");
+      // });
     }
 
     // 유형2 (ex 연혁, 직무소개) - 小분류
