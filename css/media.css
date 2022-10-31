@@ -84,9 +84,9 @@
     #mobile .header .weve_btn,
     #mobile .header .lang_select,
     #mobile .header .right_nav { display: none; }
-    #mobile .header .top_sitemap button { width: 2.7rem; height: 1.75rem; }
-    #mobile .header .top_sitemap button span { width: 1.95rem; height: 2.5rem; margin-left: .75rem; margin-bottom: 0.5rem; }
-    #mobile .header .top_sitemap button span:nth-child(2) { width: 2.7rem; margin-left: 0; }
+    #mobile .header .top_sitemap button { width: 2.7rem; /* height: 1.75rem; */ justify-content: center; }
+    #mobile .header .top_sitemap button span { width: 1.9rem; height: .2rem; margin-left: .75rem; margin-bottom: .5rem; }
+    #mobile .header .top_sitemap button span:nth-child(2) { width: 2.7rem; height: .2rem; margin-left: 0; }
 
     /* container*/
     #mobile #sub .container .inner { width: calc(100% - 4rem); /* padding: 0 0 5.3rem; */ padding: 0; }
@@ -136,8 +136,8 @@
     #mobile .footer .sec_tit > span { color: #005eb8; }
     #mobile .footer .sec_tit > span::after { content:''; display: block; width: 100%; height: .4rem; background-color: #005eb8; transform: skew(-40deg); transition: width ease-in-out .5s; }
     #mobile .footer .family_site { margin-top: 5rem; margin-bottom: 7rem; }
-    #mobile .footer .family_site .site_selected { font-size: 1.4rem; width: 11rem; }
-    #mobile .footer .family_site .site_selected::after { border-top: .35rem solid #fff; border-left: .35rem solid transparent; border-right: .35rem solid transparent; } 
+    #mobile .footer .family_site .site_selected { display: inline-block; font-size: 1.4rem; width: auto; min-width: 11rem; }
+    #mobile .footer .family_site .site_selected::after { border-top: .35rem solid #fff; border-left: .35rem solid transparent; border-right: .35rem solid transparent; vertical-align: middle; margin-left: 1.2rem; } 
     #mobile .footer .family_site .site_list { width: 11rem; top: 2rem; }
     #mobile .footer .family_site.open .site_list { padding: 1rem; }
     #mobile .footer .family_site .site_list li a { font-size: 1.4rem; }
@@ -195,7 +195,7 @@
     #mobile #main #fullpage .section02 .right { display: none; }
     #mobile #main #fullpage .section02 .big_img { width: 100%; max-width: 100%; height: 62vh; }
     #mobile #main #fullpage .section02 .big_img img { width: 100%; }
-    #mobile #main #fullpage .section02 .swiper-slide h2 { width: 100%; transform: translate(50%,0); margin: 2rem 0 2rem 2rem; font-size: 4rem; transition: opacity; }
+    #mobile #main #fullpage .section02 .swiper-slide h2 { width: 100%; transform: translate(50%,0); top:0; margin: 2rem 0 2rem 2rem; font-size: 4rem; transition: opacity; }
     #mobile #main #fullpage .section02/* .active */ .swiper-slide.swiper-slide-active h2,
     #mobile #main #fullpage .section02/* .active */ .swiper-slide.swiper-slide-duplicate-active h2 {opacity: 1; position: relative; left: 2rem; transform: translate(0,0);font-size: 4rem; transition: all ease-in-out .8s }
 
@@ -291,7 +291,7 @@
     #mobile #main #fullpage .section05 .interview_box li dl { margin: 2rem 0 0 1rem; }
     #mobile #main #fullpage .section05 .interview_box li dl dt { font-size: 1.6rem; }
     #mobile #main #fullpage .section05 .interview_box li dl dd { font-size: 1.3rem; padding-top: 1rem; }
-    #mobile #main #fullpage .section05 .interview_box li dl dd span:before { height: 1rem; margin: 0 1.5rem; vertical-align: initial; }
+    #mobile #main #fullpage .section05 .interview_box li dl dd span:before { height: 1rem; margin: 0 1.5rem; vertical-align: unset; }
 
     /* Section06 */
     #mobile #main #fullpage .section06 .inner { flex-direction: column; background: #f9f9f9; padding-bottom: 8rem; }
@@ -1219,6 +1219,11 @@
     #mobile .company .announce .tb_box .tb_row .date,
     #mobile .company .announce .tb_box .tb_row .period { width: 100%; }
 }
+
+@media screen and (max-width:320px) {
+    #mobile .footer .footer_wrap ul li:not(:last-child)::after { margin: 0 2.5vw; }
+}
+
 
 @media screen and (min-width:660px) and (max-width:1024px){
     /* 인재채용 - 직무소개 */

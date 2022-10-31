@@ -899,19 +899,6 @@ var techEvent = {
             tabContainer.animate({scrollLeft: tsMove}, 200);
         }
       })
-
-      // tabButton.eq(0).click(function(){
-      //   $(location).attr('href',"html/FD-02-01-01.html");
-      // });
-      // tabButton.eq(1).click(function(){
-      //   $(location).attr('href',"html/FD-02-01-02.html");
-      // });
-      // tabButton.eq(2).click(function(){
-      //   $(location).attr('href',"html/FD-02-01-03.html");
-      // });
-      // tabButton.eq(3).click(function(){
-      //   $(location).attr('href',"html/FD-02-01-04.html");
-      // });
     }
 
     // 유형2 (ex 연혁, 직무소개) - 小분류

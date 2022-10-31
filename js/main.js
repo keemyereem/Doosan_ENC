@@ -100,30 +100,11 @@ var mainEvent = {
         $(window).ready(() =>{
             $('body').addClass('blockScroll');
             $('#rightnavi').addClass('blind');
-        });
 
-        $(window).load(() => {
-            var backgroundImageUrl = "images/main/sec01_bg1.png";
-            
-            // checking if image is already there in cache 
-            if (sessionStorage.getItem(backgroundImageUrl)) {
-                console.log('-> intro animation start');
-
-                // after image showing, animation start
-                setTimeout(() => {
-                    $('.section01').addClass('ani');
-                }, 500);
-            } else {
-                var img = new Image();
-                    img.src = backgroundImageUrl;
-                    img.onload = function() {
-                    sessionStorage.setItem(backgroundImageUrl, true);
-                    img = undefined;
-                };
-
-                console.log('-X cannot found imgData.');
-                location.reload();
-            };
+            console.log('-> intro animation start');
+            setTimeout(() => {
+                $('.section01').addClass('ani');
+            }, 500);
 
             // after animation ended, initializing object
             var x = document.getElementById("intro_trigger");
