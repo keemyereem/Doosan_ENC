@@ -145,7 +145,7 @@
     #mobile .footer .footer_wrap { height: auto; padding: 5rem 0; }
     #mobile .footer .footer_wrap ul { width: 100%; display: flex; justify-content: center;align-items: center; padding: 0 2rem; text-align: center; }
     #mobile .footer .footer_wrap ul li { position: relative; display: inline-block; }
-    #mobile .footer .footer_wrap ul li:not(:last-child)::after { height: 1rem; margin: 0 1.7vw;}
+    #mobile .footer .footer_wrap ul li:not(:last-child)::after { height: 1rem; margin: 0 2.3vw;}
     #mobile .footer .footer_wrap ul li a { padding: 0; font-size: 1.3rem; }
     #mobile .footer .footer_wrap p { margin-top: 2.2rem; font-size: 1.2rem; }
 
@@ -291,7 +291,7 @@
     #mobile #main #fullpage .section05 .interview_box li dl { margin: 2rem 0 0 1rem; }
     #mobile #main #fullpage .section05 .interview_box li dl dt { font-size: 1.6rem; }
     #mobile #main #fullpage .section05 .interview_box li dl dd { font-size: 1.3rem; padding-top: 1rem; }
-    #mobile #main #fullpage .section05 .interview_box li dl dd span:before { height: 1rem; margin: 0 1.5rem; }
+    #mobile #main #fullpage .section05 .interview_box li dl dd span:before { height: 1rem; margin: 0 1.5rem; vertical-align: initial; }
 
     /* Section06 */
     #mobile #main #fullpage .section06 .inner { flex-direction: column; background: #f9f9f9; padding-bottom: 8rem; }

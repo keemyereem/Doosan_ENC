@@ -541,7 +541,7 @@ var mainEvent = {
                         if (index === 0) {
                             swiper.autoplay.start();
                             setTimeout(() => {
-                                $('.section01').addClass('ani');
+                                $('#mobile .section01').addClass('ani');
                             }, 500);
                         } else {
                             swiper.autoplay.stop();
