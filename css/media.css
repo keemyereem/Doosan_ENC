@@ -104,7 +104,7 @@
     /* sub_visual */
     #mobile .container .sub_visual { height: 47.5rem; }
     #mobile .container .sub_visual .sub_visual_menu.fixed { max-width: 76.8rem; left: 50%; transform: translateX(-50%); }
-    #mobile .container .sub_visual h1 { font-size: 4rem; transform: translateY(1.1rem); left: 0; }
+    #mobile .container .sub_visual h1 { font-size: 4rem; transform: translateY(1.1rem); left: 0; letter-spacing: 0; }
     #mobile .container .sub_visual .sub_visual_menu { width: 100%; height: 4.5rem; bottom: 9rem; }
     #mobile .container .sub_visual .sub_visual_menu .menu_inner { width: 100%; }
     #mobile .container .sub_visual .sub_visual_menu .home { width: 4.5rem; height: 4.5rem; background-size: 1.15rem 1.15rem; }
@@ -1123,6 +1123,10 @@
 #mobile .company .greeting .sign b { font-size: 1.7rem; margin: 1rem 1rem 0 0; }
 #mobile .company .greeting .sign img { width: 15rem; }
 
+/* ================================  사회책임경영  =============================== */
+
+/* 공통 */
+#mobile .sr .sub_visual { background-image: url(../images/social/sr_bg_m.png); }
 
 /* ================================  인재채용  =============================== */
 
