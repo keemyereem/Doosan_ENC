@@ -49,7 +49,29 @@ $(function(){
     );
   }); 
 
+  $(window).ready(()=> {
+    const page_url = document.location.href,
+          param = page_url.substring(page_url.indexOf('?') + 1).split('?');
+
+    if ($('.isotope').length) {
+      window.scrollTo({
+        top: $('.tab_small').offset().top - $('.tab_small').outerHeight() * 2,
+        behavior: 'smooth',
+      });
+
+      if (param == 'linkvia1') {
+        $(".isotope_item").eq(0).children('a').trigger("click");
+        
+      } else if (param == 'linkvia2') {
+        $(".isotope_item").eq(1).children('a').trigger("click");
+      }
+      history.replaceState({}, null, location.pathname);
+    }
+
+    
+  })
 });
+
 
 
 // 고객문의 => 국가선택 select
@@ -79,6 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
 var commonEvent = {
   init:function(){
     this.headerEvent();
+    this.sitemap();
     this.subVisual();
     this.submenuEvent();
     this.footerEvent();
@@ -140,6 +163,13 @@ var commonEvent = {
           }
         });
       }
+  },
+
+  sitemap: () => {
+    $(window).on('scroll',function(){
+      $(".sitemap").css("left",0-$(this).scrollLeft());
+    });
+
   },
 
   footerEvent: () => {
@@ -1353,7 +1383,6 @@ var recruitEvent = {
       const LayerPopup = $(".recruit .popup ul");
             
       $(document).mousemove(function (e){
-        console.log(LayerPopup.has(e.target).length)
         if (LayerPopup.has(e.target).length === 0){
           popupClose.css({'transform': 'scale(1)'});
         } else {

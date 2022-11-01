@@ -70,7 +70,6 @@
     #mobile .file_row label { width: 11.1rem; height: 3.5rem; line-height: 3.5rem; font-size: 1.3rem; font-weight: 150; border-radius: 1.7rem; }
     #mobile .file_row .upload_name { height: 3.5rem; font-size: 1.3rem; padding: 0 2rem; }
 
-
     /* device checker */
     #mobile { width: 100%; }
     #mobile .sub_visual { background-size: cover; }
@@ -252,7 +251,7 @@
     #mobile #main #fullpage .section04 .card { height: auto; flex-wrap: wrap; }
     #mobile #main #fullpage .section04 .card li { width: 50%; height: 16.5rem; text-align: center; opacity: 1; transform: translateY(0); }
     #mobile #main #fullpage .section04 .card li .bg { width: 100%; height: 100%; object-fit: cover; position: relative; }
-    #main #fullpage .section04 .card li:hover .bg { box-shadow: .4rem .3rem 2rem 0 rgba(0, 0, 0, 0.4); }
+    #mobile #main #fullpage .section04 .card li:hover .bg { box-shadow: .4rem .3rem 2rem 0 rgba(0, 0, 0, 0.4); }
     #mobile #main #fullpage .section04 .card li .icon,
     #mobile #main #fullpage .section04 .card li .icon_white { transform: translateY(-2.6rem); }
     #mobile #main #fullpage .section04 .card li:nth-child(1) .icon,
@@ -419,7 +418,6 @@
     #mobile .channel .sns .swiper-pagination-bullet { background: #005eb8; }
     #mobile .channel .sns .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet { margin: 0 .6rem; }
     #mobile .channel .sns .btn_line { display: none; }
-
     #mobile .channel .sns .sns_wrap { position: relative; }
     #mobile .channel .sns .sns_wrap+.sns_wrap { margin-top: 0; }
     #mobile .channel .sns .go_sns { float:none; margin-top: 0; margin-bottom: 0; width: calc(100% - 4.5rem); max-width: 29rem; height: 5rem; border-radius: 2.5rem; line-height: 5rem; font-size: 1.5rem; position: absolute; bottom: 6rem; left: 50%; transform: translateX(-50%); }
@@ -428,10 +426,11 @@
     #mobile .channel .sns .go_insta:before { width: 1.55rem; height: 1.55rem; }
     #mobile .channel .sns .go_fb:before { width: 1.5rem; height: 1.5rem; }
     #mobile .channel .sns .go_sns b { font-weight: 400; line-height: 5rem; flex-shrink: 0; }
-
     #mobile .channel .sns .popup .pop_close { width: 52px; height: 52px; top: -81px; right: initial; left: 50%; margin-top: 0; margin-left: -26px; }
     #mobile .channel .sns .popup .pop_wrap { width: calc(100% - 40px); }
     #mobile .channel .sns .popup iframe { height: 59vw; }
+
+
 
     /* ================================  고객센터  =============================== */
 
@@ -490,7 +489,6 @@
     #mobile .customer .btn_wrap a:first-child .txt > div:last-child { font-size: 1.8rem; }
     #mobile .customer .btn_wrap a:last-child .icon { width: 5rem; height: 3.25rem; }
     #mobile .customer .btn_wrap a:last-child:hover .icon { width: 5rem; height: 3.25rem; background-size: contain; }
-    
     #mobile .customer .cyber_audit { padding: 0 0 10rem 0; }
     #mobile .customer .cyber_audit .section1 { background: linear-gradient(to bottom, #f9f9f9, #f9f9f9 42.4rem, #fff 42.5rem, #fff 100% ); }
     #mobile .customer .cyber_audit section .inner { background: transparent; }
@@ -668,7 +666,6 @@
 #mobile .masterpiece .outline section .img { width: calc(100% + 2rem); margin-left: -1rem; }
 #mobile .masterpiece .outline section .img+span { font-size: 1.3rem; margin-top: 1rem; margin-left: -1rem; }
 #mobile .masterpiece .outline section .video { width: calc(100% + 2rem); margin-left: -1rem; }
-
 
 
 /* 해운대 */
@@ -902,6 +899,8 @@
 #mobile .card_popup .popup_inner .pop_cont .inner_nav .arrow:after { width: .8rem; height: .8rem; }
 #mobile .card_popup .popup_inner .pop_cont .inner_nav .counter_slider { font-size: 1.4rem; }
 
+
+
 /* ================================  기술개발  =============================== */
 
 /* 공통 */
@@ -940,16 +939,6 @@
 #mobile .technology .competence .love_motion .love span:last-child { display: block; height: 5.7rem; padding: 0; }
 #mobile .technology .competence .love_motion .line { display: none; }
 #mobile .technology .competence .love_motion > h2 { font-size: 1.6rem; line-height: 1.56; position: initial; opacity: 1; margin: 2rem auto 4rem; }
-/* 
-#mobile .technology .competence .love_motion .box > li.on { transition: all ease .3s; box-shadow: none; }
-#mobile .technology .competence .love_motion .box > li.on ul svg,
-#mobile .technology .competence .love_motion .box > li.on ul svg .st0 { fill:#fff; }
-#mobile .technology .competence .love_motion .box > li.on ul .sub { order: 1; }
-#mobile .technology .competence .love_motion .box > li.on ul .sub a { display: block; }
-#mobile .technology .competence .love_motion .box > li.on ul .slogan { order: 0; margin-top: 1rem;}
-#mobile .technology .competence .love_motion .box > li.on ul .slogan p,
-#mobile .technology .competence .love_motion .box > li.on ul .slogan p em { color: #fff; font-weight: 350; } 
-*/
 #mobile .technology .competence .love_motion .box > li:hover { background: #005eb8; }
 #mobile .technology .competence .love_motion .box > li:hover ul svg,
 #mobile .technology .competence .love_motion .box > li:hover ul svg .st0 { fill:#fff; }
@@ -957,20 +946,17 @@
 #mobile .technology .competence .love_motion .box > li:hover ul .slogan { margin-top: 0; }
 #mobile .technology .competence .love_motion .box > li:hover ul .slogan p,
 #mobile .technology .competence .love_motion .box > li:hover ul .slogan p em { color: #fff; font-weight: 350; }
-
 #mobile .technology .competence .love_motion .love_swiper_wrap .swiper-btn { display: block; width: 3rem; height: 7rem; top: 0; margin-top: 0; }
 #mobile .technology .competence .love_motion .love_swiper_wrap .swiper-button-prev { left: 0;  background: url(../images/common/arrow_l_13x21.png) no-repeat 50% 50%; background-size: .65rem 1.05rem; }
 #mobile .technology .competence .love_motion .love_swiper_wrap .swiper-button-next { right: 0; background: url(../images/common/arrow_r_13x21.png) no-repeat 50% 50%; background-size: .65rem 1.05rem; }
 #mobile .technology .competence .love_motion .love_swiper_wrap .swiper-button-next.swiper-button-disabled, 
 #mobile .technology .competence .love_motion .love_swiper_wrap .swiper-button-prev.swiper-button-disabled { opacity: 1; }
-
 #mobile .technology .competence .weve_motion { margin-bottom: 4.5rem; }
 #mobile .technology .competence .weve_motion .inner { height: 19.7rem!important; background-image: radial-gradient(rgba(15, 178, 138,.4) 20%, transparent 0); background-size: 3px 3px; }
 #mobile .technology .competence .weve_motion .weve span { font-size: 5.4rem; letter-spacing: -.324rem; }
 #mobile .technology .competence .weve_motion .transform-box { width: 1.2rem; height: 1.2rem; transform: rotate(31.8deg) translate(-1rem, 1.5rem); }
 #mobile .technology .competence .weve_motion .transform-box .left,
 #mobile .technology .competence .weve_motion .transform-box .right { width: 4rem; height: 4rem; }
-
 #mobile .technology .competence .weve_motion .transform-box .left::after,
 #mobile .technology .competence .weve_motion .transform-box .right::after { width: 2rem; }
 #mobile .technology .competence .weve_motion .transform-box .left::after { top: 1rem;  border-left: .8rem solid #005eb8; border-top: .8rem solid #005eb8; border-bottom: .8rem solid #005eb8; transform: rotate(-90deg) translate(0, 1rem); }
@@ -978,9 +964,7 @@
 #mobile .technology .competence .weve_motion .we { margin-right: 1.7rem; }
 #mobile .technology .competence .weve_motion .ve { margin-left: 0rem; }
 #mobile .technology .competence .weve_motion .txt { font-size: 1.5rem; margin-top: 1rem; line-height: 1.4; }
-
 #mobile .technology .competence .section_nav { display: none; }
-
 #mobile .technology .competence section h3 { font-size: 2.4rem; margin-top: 30px; }
 #mobile .technology .competence section h3::before { width: 4.8rem; height: .4rem; margin-bottom: 2rem;  }
 #mobile .technology .competence section h3 span { font-size: 2.5rem; }
@@ -992,7 +976,6 @@
 #mobile .technology .competence section:nth-of-type(2n) .txt { padding-left: 0; }
 #mobile .technology .competence section .inner > div { width: 100%; }
 #mobile .technology .competence section .txt p { font-size: 1.5rem; line-height: 1.73; padding: 1rem 0 0; }
-
 #mobile .technology .competence section .txt ul { margin-top: 3rem; }
 #mobile .technology .competence section .txt ul li { font-size: 1.4rem; line-height: 1.42; }
 #mobile .technology .competence section .txt ul li::before { margin: .6rem 1rem 0 0; flex-shrink: 0; }
@@ -1009,6 +992,7 @@
 #mobile .technology .competence .section6 ul li .viewmore { width: 1.5rem; height: 1.5rem; background: url(../images/common/icon_plus_15x15.png) no-repeat 100% 100%; background-size: contain; position: absolute; top: 2rem; right: 1rem; }
 #mobile .technology .competence .section6 ul li .viewmore span { display: none; }
 #mobile .technology .competence .section6 ul li:hover .viewmore { background: url(../images/common/icon_plus_w_15x15.png)no-repeat 100% 100%; background-size: 1.5rem; }
+
 
 
 /* ================================  회사소개  =============================== */
@@ -1123,10 +1107,14 @@
 #mobile .company .greeting .sign b { font-size: 1.7rem; margin: 1rem 1rem 0 0; }
 #mobile .company .greeting .sign img { width: 15rem; }
 
+
+
 /* ================================  사회책임경영  =============================== */
 
 /* 공통 */
 #mobile .sr .sub_visual { background-image: url(../images/social/sr_bg_m.png); }
+
+
 
 /* ================================  인재채용  =============================== */
 
