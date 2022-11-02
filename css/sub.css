@@ -444,9 +444,10 @@
 .channel .reference .sec_tit { font-size: 5rem; font-weight: 450; letter-spacing: -.125rem; }
 .channel .reference .sec_tit::before { content:''; display: block; width: 6.5rem; height: .6rem; background: #005eb8; transform: skew(-45deg); margin-bottom: 2rem; }
 .channel .reference .sec_tit b { color: #005eb8; }
-.channel .reference .sub { font-size: 2.8rem; color: #222; font-weight: 350; margin: 3rem 0 2rem; }
-.channel .reference p { font-size: 1.8rem; color: #555; font-weight: 150; line-height: 1.66; }
+.channel .reference .sub { font-size: 2.8rem; color: #222; font-weight: 350; letter-spacing: -.07rem; margin: 3rem 0 2rem; }
+.channel .reference p { font-size: 1.8rem; color: #555; font-weight: 150; line-height: 1.66; letter-spacing: -.045rem; }
 .channel .reference .img { position: relative; }
+.channel .reference .img img { box-shadow: 7px 12px 27px 0px rgba(0, 0, 0, 0.35); }
 .channel .reference .btn_wrap { display: flex; align-items: center; margin-top: 15.5rem; }
 .channel .reference .btn_wrap a { display: block; width: 23.2rem; height: 6rem; line-height: 6rem; font-size: 1.6rem; color: #000; text-indent: 1rem; position: relative; }
 .channel .reference .btn_wrap a:first-of-type { margin-right: 3rem; }
@@ -456,13 +457,32 @@
 
 /* CI/BI */
 .channel .title_area .cibi_tit { font-weight: 350; }
-.channel .cibi .sec_tit { font-family: 'Montserrat'; font-size: 5rem; font-weight: 400; }
-.channel .cibi .blue { font-family: 'Montserrat'; font-size: 2.6rem; font-weight: 350; color: #005eb8; }
-.channel .cibi .section01 { background: #f9f9f9; text-align: center; }
-
-
-
-
+.channel .cibi .sec_tit { font-family: 'Montserrat'; font-size: 5rem; font-weight: 400; text-align: center; }
+.channel .cibi .blue { font-family: 'Montserrat'; font-size: 2.6rem; font-weight: 350; color: #005eb8; text-align: center; letter-spacing: -.13rem; }
+.channel .cibi .download { display: block; width: 23.2rem; height: 6rem; line-height: 6rem; font-size: 1.6rem; color: #000; text-indent: 1rem; text-align: left; position: relative; }
+.channel .cibi .download i { display: inline-block; width: 1.9rem; height: 2rem; background: url(../images/common/icon_download.png) no-repeat; position: absolute; right: 1rem; top:50%; transform: translateY(-50%); }
+.channel .cibi .download::after { content:''; display: block; width: 100%; height: .1rem; background: #000; transition: width .3s; } 
+.channel .cibi .download:hover::after { width: 0; }
+.channel .cibi .logo_wrap { max-width: 144rem; margin: 0 auto; }
+.channel .cibi .section01 { background: #f9f9f9; text-align: center; padding: 9rem 0 10rem; }
+.channel .cibi .section01 h3 { font-size: 4rem; font-weight: 400; color: #222; }
+.channel .cibi .section01 .line { display: inline-block; width: 0.1rem; height: 4rem; background: #ccc; margin: 4rem auto 3rem; }
+.channel .cibi .section01 > p { font-size: 2rem; color: #555; line-height: 2; margin: 2.5rem 0 5.5rem; }
+.channel .cibi .section01 .download { margin: 0 auto; }
+.channel .cibi .section01 .logo_wrap ul { display: flex; justify-content: space-between; align-items: center; margin-top: 10rem; }
+.channel .cibi .section01 .logo_wrap ul li { width: calc(50% - 1.5rem); height: 26rem; background-image: url(../images/channel/cibi_linebg.png); display: flex; align-items: center; justify-content: center; }
+.channel .cibi .section01 .logo_wrap ul li:first-child { background: #fff url(../images/channel/cibi_linebg_g.png) repeat 50% 50%; border: 1px solid #ededed; }
+.channel .cibi .section01 .logo_wrap ul li:last-child { background: #005eb8 url(../images/channel/cibi_linebg_w.png) repeat 50% 50%; }
+.channel .cibi .section02 { padding: 11rem 0 20rem; }
+.channel .cibi .section02 .logo_wrap { margin-top: 10rem; }
+.channel .cibi .section02 .logo_wrap > div { display: flex; }
+.channel .cibi .section02 .logo_wrap > div > div { width: 50%; }
+.channel .cibi .section02 .logo_wrap .weve { padding-bottom: 10rem; border-bottom: 1px solid #e8e8e8; }
+.channel .cibi .section02 .logo_wrap .zenith { padding-top: 10rem; }
+.channel .cibi .section02 .logo_wrap > div .logo { display: flex; align-items: center; justify-content: center; height: 36rem; margin-right: 1.5rem; background: #fff url(../images/channel/cibi_linebg_g.png) repeat 50% 50%; border: 1px solid #ededed; }
+.channel .cibi .section02 .logo_wrap .txt { padding: 0 12rem 0 9rem; }
+.channel .cibi .section02 .logo_wrap .txt .name { font-size: 3.6rem; font-weight: 400; color: #222; margin: 1.5rem 0; }
+.channel .cibi .section02 .logo_wrap .txt p { font-size: 1.8rem; color: #555; line-height: 1.89; margin-bottom: 4rem; }
 
 
 /* ================================  고객센터  =============================== */

@@ -36,6 +36,7 @@ img {perspective:none; -ms-perspective:none; -o-perspective:none; -webkit-perspe
 br {font-family:dotum !important;}
 br.br_t, br.br_m {display: none;}
 .img_m {display: none;}
+.es {color: #005eb8;}
 
 /* common */
 .wrap {position: relative; width: 100%; overflow: hidden;}

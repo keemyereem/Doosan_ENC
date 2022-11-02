@@ -430,7 +430,48 @@
     #mobile .channel .sns .popup .pop_wrap { width: calc(100% - 40px); }
     #mobile .channel .sns .popup iframe { height: 59vw; }
 
+    /* 자료실 */
+    #mobile .channel .reference { padding: 6rem 0 10rem; margin-top: 5rem; } 
+    #mobile .channel .reference > img { top: initial; bottom: 0; right: 0; }
+    #mobile .channel .reference .inner { flex-direction: column; padding: 0 12rem; }
+    #mobile .channel .reference .inner .left { width: 100%; }
+    #mobile .channel .reference .sec_tit { font-size: 3rem; }
+    #mobile .channel .reference .sec_tit::before { width: 4.8rem; height: .4rem; margin-bottom: 1.5rem; }
+    #mobile .channel .reference .sub { font-size: 1.9rem; margin: 2.5rem 0 1.5rem; }
+    #mobile .channel .reference p { font-size: 1.4rem; line-height: 1.64; }
+    #mobile .channel .reference .btn_wrap { flex-direction: column; margin-top: 3rem; }
+    #mobile .channel .reference .btn_wrap a { width: 17.5rem; height: 4.5rem; line-height: 4.5rem; font-size: 1.3rem; text-indent: .5rem;}
+    #mobile .channel .reference .btn_wrap a:first-of-type { margin-right: 0; margin-bottom: 1.5rem; }
+    #mobile .channel .reference .btn_wrap a i { width: 1.5rem; height: 1.5rem; background-size: contain; }
+    #mobile .channel .reference .img { margin-top: 6rem; }
+    #mobile .channel .reference .img img { box-shadow: .35rem .6rem 1.3rem 0px rgba(0, 0, 0, 0.35); }
 
+    /* CI/BI */
+    #mobile .channel .cibi { margin-top: 5rem; }
+    #mobile .channel .cibi .sec_tit { font-size: 3rem; }
+    #mobile .channel .cibi .blue { font-size: 1.8rem; }
+    #mobile .channel .cibi .download { width: 17.5rem; height: 4.5rem; line-height: 4.5rem; font-size: 1.3rem; text-indent: .5rem; }
+    #mobile .channel .cibi .download i { width: 1.5rem; height: 1.5rem; background-size: contain; }
+    #mobile .channel .cibi .section01 { padding: 5.5rem 0 6rem; }
+    #mobile .channel .cibi .section01 h3 { font-size: 2.5rem; }
+    #mobile .channel .cibi .section01 .line { height: 2.5rem; margin: 2.4rem auto 2rem; }
+    #mobile .channel .cibi .section01 > p { font-size: 1.5rem; line-height: 1.66; letter-spacing: -.075rem; margin: 1.5rem 0 3rem; padding: 0 3rem; }
+    #mobile .channel .cibi .section01 .logo_wrap ul { flex-direction: column; margin-top: 5.5rem; padding: 0 2rem; }
+    #mobile .channel .cibi .section01 .logo_wrap ul li { width: 100%; height: 17rem; }
+    #mobile .channel .cibi .section01 .logo_wrap ul li:last-child { margin-top: 2rem; }
+    #mobile .channel .cibi .section01 .logo_wrap ul li img { max-width: 21rem; }
+    #mobile .channel .cibi .section02 { padding: 5.5rem 2rem 10rem; }
+    #mobile .channel .cibi .section02 .logo_wrap { margin-top: 5rem; }
+    #mobile .channel .cibi .section02 .logo_wrap > div { flex-direction: column; }
+    #mobile .channel .cibi .section02 .logo_wrap > div > div { width: 100%; }
+    #mobile .channel .cibi .section02 .logo_wrap .weve { padding-bottom: 5.5rem; }
+    #mobile .channel .cibi .section02 .logo_wrap .zenith { padding-top: 5.5rem; }
+    #mobile .channel .cibi .section02 .logo_wrap .weve .logo img { max-width: 16.3rem; }
+    #mobile .channel .cibi .section02 .logo_wrap .zenith .logo img { max-width: 22.4rem; }
+    #mobile .channel .cibi .section02 .logo_wrap > div .logo { height: 21rem; margin-right: 0; }
+    #mobile .channel .cibi .section02 .logo_wrap .txt { padding: 0 ; }
+    #mobile .channel .cibi .section02 .logo_wrap .txt .name { font-size: 2.3rem; margin: 2.8rem 0 1.4rem; }
+    #mobile .channel .cibi .section02 .logo_wrap .txt p { font-size: 1.4rem; line-height: 1.57; letter-spacing: -.07rem; margin-bottom: 2rem; }
 
     /* ================================  고객센터  =============================== */
 
