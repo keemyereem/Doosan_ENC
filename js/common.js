@@ -214,19 +214,22 @@ var commonEvent = {
 
     blocks.each((index)=> {
         let check_txt = blocks.eq(index).children('h3').text();
-
         if (!check_kor.test(check_txt)) {
             blocks.eq(index).children('h3').css('font-family', '"Montserrat", sans-serif');
         }
     });
-    
+
     $(window).on('scroll',function(){
       $(".sitemap").css("left",0-$(this).scrollLeft());
     });
 
     $('.top_sitemap').on('click', ()=> {
-      
       $('.sitemap').addClass('active');
+    })
+
+    $('.sitemap_main .block_le > ul > li').on('click', function() {
+      $(this).toggleClass('active');
+      $(this).siblings().removeClass('active')
     })
       
       
