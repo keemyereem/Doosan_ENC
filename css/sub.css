@@ -290,7 +290,7 @@
 /* 공통 */
 #wrap, .container { width: 100%; }
 .title_area { padding: 10rem 0; text-align: center; }
-.title_area .con_tit { font-size: 6rem; font-weight: 450; color: #0b0f14; letter-spacing: -.15rem; padding-bottom: 3rem; position: relative; }
+.title_area .con_tit { font-family: 'Montserrat','Pretendard'; font-size: 6rem; font-weight: 450; color: #0b0f14; letter-spacing: -.15rem; padding-bottom: 3rem; position: relative; }
 .title_area.single .con_tit { padding-bottom: 0; }
 .title_area .con_tit.pb0 { padding-bottom: 0; }
 .title_area .con_tit > em { color: #888; }
@@ -437,7 +437,8 @@
 .channel .sns .popup .pop_cont iframe { width: 100%; }
 
 /* 자료실 */
-.channel .reference { background: #f9f9f9; } 
+.channel .reference { background: #f9f9f9; padding: 12rem 0 20rem; position: relative; } 
+.channel .reference > img { position: absolute; top: 3.6rem; right: 2.6rem; }
 .channel .reference .inner { display: flex; justify-content: space-between; padding: 0 12rem; }
 .channel .reference .inner .left { width: 50%; }
 .channel .reference .sec_tit { font-size: 5rem; font-weight: 450; letter-spacing: -.125rem; }
@@ -452,6 +453,17 @@
 .channel .reference .btn_wrap a i { display: inline-block; width: 1.9rem; height: 2rem; background: url(../images/common/icon_download.png) no-repeat; position: absolute; right: 1rem; top:50%; transform: translateY(-50%); }
 .channel .reference .btn_wrap a::after { content:''; display: block; width: 100%; height: .1rem; background: #000; transition: width .3s; } 
 .channel .reference .btn_wrap a:hover::after { width: 0; } 
+
+/* CI/BI */
+.channel .title_area .cibi_tit { font-weight: 350; }
+.channel .cibi .sec_tit { font-family: 'Montserrat'; font-size: 5rem; font-weight: 400; }
+.channel .cibi .blue { font-family: 'Montserrat'; font-size: 2.6rem; font-weight: 350; color: #005eb8; }
+.channel .cibi .section01 { background: #f9f9f9; text-align: center; }
+
+
+
+
+
 
 /* ================================  고객센터  =============================== */
 
