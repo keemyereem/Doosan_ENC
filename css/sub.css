@@ -436,6 +436,22 @@
 .channel .sns .popup .pop_wrap { width: 900px; height: fit-content; margin: auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
 .channel .sns .popup .pop_cont iframe { width: 100%; }
 
+/* 자료실 */
+.channel .reference { background: #f9f9f9; } 
+.channel .reference .inner { display: flex; justify-content: space-between; padding: 0 12rem; }
+.channel .reference .inner .left { width: 50%; }
+.channel .reference .sec_tit { font-size: 5rem; font-weight: 450; letter-spacing: -.125rem; }
+.channel .reference .sec_tit::before { content:''; display: block; width: 6.5rem; height: .6rem; background: #005eb8; transform: skew(-45deg); margin-bottom: 2rem; }
+.channel .reference .sec_tit b { color: #005eb8; }
+.channel .reference .sub { font-size: 2.8rem; color: #222; font-weight: 350; margin: 3rem 0 2rem; }
+.channel .reference p { font-size: 1.8rem; color: #555; font-weight: 150; line-height: 1.66; }
+.channel .reference .img { position: relative; }
+.channel .reference .btn_wrap { display: flex; align-items: center; margin-top: 15.5rem; }
+.channel .reference .btn_wrap a { display: block; width: 23.2rem; height: 6rem; line-height: 6rem; font-size: 1.6rem; color: #000; text-indent: 1rem; position: relative; }
+.channel .reference .btn_wrap a:first-of-type { margin-right: 3rem; }
+.channel .reference .btn_wrap a i { display: inline-block; width: 1.9rem; height: 2rem; background: url(../images/common/icon_download.png) no-repeat; position: absolute; right: 1rem; top:50%; transform: translateY(-50%); }
+.channel .reference .btn_wrap a::after { content:''; display: block; width: 100%; height: .1rem; background: #000; transition: width .3s; } 
+.channel .reference .btn_wrap a:hover::after { width: 0; } 
 
 /* ================================  고객센터  =============================== */
 

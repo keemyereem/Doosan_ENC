@@ -115,6 +115,45 @@ var commonEvent = {
     $(window).on('scroll',function(){
       $(".header").css("left",0-$(this).scrollLeft());
     });
+
+    $('#sub .header .gnb > ul > li').mouseenter(function(){
+      if($('.header').hasClass('wht')){
+          $('.header').removeClass('wht');
+          $('.header').css({'background':'#fff'});
+      }
+    });
+    $('#sub .header .gnb > ul > li').mouseleave(function(){
+      $('.header').addClass('wht');
+      $('.header').css({'background':'transparent'});
+    });
+
+    $('#main .header .gnb > ul > li').mouseenter(function(){
+      if(!$('body').hasClass('fp-viewing-firstPage') && !$('body').hasClass('fp-viewing-fifthPage')){
+          $('.header').css({'background':'#fff'});
+          $('.header').removeClass('wht');
+      }else if($('body').hasClass('fp-viewing-firstPage')){
+        $('.header').removeClass('wht');
+        $('.header').css({'background':'#fff'});
+      }else if($('body').hasClass('fp-viewing-fifthPage')){
+        $('.header').removeClass('wht');
+        $('.header').css({'background':'#fff'});
+      }else{
+        $('.header').removeClass('wht');
+      }
+    });
+    $('#main .header .gnb > ul > li').mouseleave(function(){
+      if(!$('body').hasClass('fp-viewing-firstPage') && !$('body').hasClass('fp-viewing-fifthPage')){
+        $('.header').css({'background':'transparent'});
+      }else if($('body').hasClass('fp-viewing-firstPage')){
+        $('.header').addClass('wht');
+        $('.header').css({'background':'transparent'});
+      }else if($('body').hasClass('fp-viewing-fifthPage')){
+        $('.header').addClass('wht');
+        $('.header').css({'background':'transparent'});
+      }else{
+        // $('.header').removeClass('wht');
+      }
+    });
   },
 
   subVisual: () => {
@@ -166,16 +205,31 @@ var commonEvent = {
   },
 
   sitemap: () => {
+    const check_num = /[0-9]/,
+          check_eng = /[a-zA-Z]/,
+          check_kor = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/,
+          check_spc = /[~!@#\#$%<>^&*]/;
+    
+    let blocks = $('.block_br > ul > li');
+
+    blocks.each((index)=> {
+        let check_txt = blocks.eq(index).children('h3').text();
+
+        if (!check_kor.test(check_txt)) {
+            blocks.eq(index).children('h3').css('font-family', '"Montserrat", sans-serif');
+        }
+    });
+    
     $(window).on('scroll',function(){
       $(".sitemap").css("left",0-$(this).scrollLeft());
     });
 
-    $(document).ready(()=> {
-      setTimeout(()=> {
-        $('.sitemap').addClass('active');
-      }, 500)
+    $('.top_sitemap').on('click', ()=> {
       
+      $('.sitemap').addClass('active');
     })
+      
+      
 
   },
 

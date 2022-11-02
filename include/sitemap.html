@@ -1,6 +1,15 @@
 <div class="wrap">
     <section class="sitemap_main">
-
+        <div class="block_le">
+            <div class="lang_select">
+                <a href="javascript:;" class="lang_current" title="언어 선택"><i class="ico global"></i></a>
+                <ul class="lang_choice">
+                    <li class="on"><a href="javascript:;" title="국문 페이지로 이동">KR</a></li>
+                    <li><a href="javascript:;" title="영문 페이지로 이동">EN</a></li>
+                </ul>
+            </div>
+        </div>
+        
     </section>
 
     <section class="sitemap_sub">
@@ -54,19 +63,6 @@
 </div>
 
 <script>
-    const check_num = /[0-9]/,
-          check_eng = /[a-zA-Z]/,
-          check_kor = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/,
-          check_spc = /[~!@#\#$%<>^&*]/;
-    
-    let blocks = $('.block_br > ul > li');
-
-    blocks.each((index)=> {
-        let check_txt = blocks.eq(index).children('h3').text();
-
-        if (!check_kor.test(check_txt)) {
-            blocks.eq(index).children('h3').css('font-family', '"Montserrat", sans-serif');
-        }
-    });
+    commonEvent.sitemap();
 </script>
  
