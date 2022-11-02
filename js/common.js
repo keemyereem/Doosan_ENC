@@ -170,6 +170,13 @@ var commonEvent = {
       $(".sitemap").css("left",0-$(this).scrollLeft());
     });
 
+    $(document).ready(()=> {
+      setTimeout(()=> {
+        $('.sitemap').addClass('active');
+      }, 500)
+      
+    })
+
   },
 
   footerEvent: () => {
