@@ -54,21 +54,24 @@ $(function(){
           param = page_url.substring(page_url.indexOf('?') + 1).split('?');
 
     if ($('.isotope').length) {
-      window.scrollTo({
-        top: $('.tab_small').offset().top - $('.tab_small').outerHeight() * 2,
-        behavior: 'smooth',
-      });
 
       if (param == 'linkvia1') {
+        scrollFocus();
         $(".isotope_item").eq(0).children('a').trigger("click");
         
       } else if (param == 'linkvia2') {
+        scrollFocus();
         $(".isotope_item").eq(1).children('a').trigger("click");
       }
       history.replaceState({}, null, location.pathname);
     }
 
-    
+    function scrollFocus() {
+      window.scrollTo({
+        top: $('.tab_small').offset().top - $('.tab_small').outerHeight() * 2,
+        behavior: 'smooth',
+      });
+    }
   })
 });
 
@@ -154,6 +157,12 @@ var commonEvent = {
         // $('.header').removeClass('wht');
       }
     });
+
+    // 사이트맵 버튼 애니메이션
+    $('.top_sitemap').on('click', function() {
+      $(this).toggleClass('on');
+    })
+
   },
 
   subVisual: () => {
@@ -224,15 +233,19 @@ var commonEvent = {
     });
 
     $('.top_sitemap').on('click', ()=> {
-      $('.sitemap').addClass('active');
+      if ($('.top_sitemap').hasClass('on')) {
+        $('.sitemap').addClass('active');
+        $('.header .logo, .header .gnb, .header .gnb_menu > div:not(.top_sitemap)').addClass('sitemapOn');
+      } else {
+        $('.sitemap').removeClass('active');
+        $('.header .logo, .header .gnb, .header .gnb_menu > div:not(.top_sitemap)').removeClass('sitemapOn');
+      }
     })
 
-    $('.sitemap_main .block_le > ul > li').on('click', function() {
-      $(this).toggleClass('active');
-      $(this).siblings().removeClass('active')
+    $('.sitemap_main .block_le > ul > li > h2').on('click', function() {
+      $(this).parent().toggleClass('active');
+      $(this).parent().siblings().removeClass('active');
     })
-      
-      
 
   },
 
