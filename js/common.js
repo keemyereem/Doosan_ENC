@@ -4,7 +4,17 @@
 
 
 $(function(){
-    
+  $(function(){
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+    //resize
+    window.addEventListener('resize', ()=> {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    })
+  });
+
   const isMobile = () => {
     const user = navigator.userAgent;
     let isCheck = false;
@@ -158,9 +168,20 @@ var commonEvent = {
       }
     });
 
-    // 사이트맵 버튼 애니메이션
-    $('.top_sitemap').on('click', function() {
+    // 사이트맵/ 랭귀지 버튼 애니메이션
+    $('.top_sitemap, .header .lang_select a').on('click', function() {
       $(this).toggleClass('on');
+      if ($('#mobile').length && $('.top_sitemap').hasClass('on')) {
+        $('.header').addClass('mobileForm');
+      } else if (!$('.top_sitemap').hasClass('on')) {
+        $('.header').removeClass('mobileForm');
+      }
+
+      if ($('.header .lang_select a').hasClass('on')) {
+        $('.header .lang_choice').addClass('on');
+      } else {
+        $('.header .lang_choice').removeClass('on');
+      }
     })
 
   },
@@ -217,10 +238,48 @@ var commonEvent = {
     const check_num = /[0-9]/,
           check_eng = /[a-zA-Z]/,
           check_kor = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/,
-          check_spc = /[~!@#\#$%<>^&*]/;
+          check_spc = /[~!@#\#$%<>^&*]/,
+          body = $('body');
     
     let blocks = $('.block_br > ul > li');
+        scrollPosition = 0,
+        sitemap = $('.top_sitemap');
 
+    // *** Mobile
+    if ($('#mobile').length) {
+      const listMob = $('.sitemap_main .block_le > ul'),
+            moveBrlist = $('.sitemap_sub .block_br > ul > li .block_2depth');
+
+      $('.sitemap .lang_select').append($('.sitemap .weve_link .btn'));
+      moveBrlist.find('> li > a').wrap('<h4></h4>');
+      moveBrlist.children('li').addClass('empty');
+
+      listMob.append($('.sitemap_sub .block_br > ul > li'));
+      listMob.children('li').last().after($('.sitemap .family_site'));
+      listMob.find('> li h3').contents().unwrap().wrap('<h2></h2>');
+
+
+      listMob.find('.block_2depth > li').each((index)=> {
+        if (listMob.find('.block_2depth > li').eq(index).children('h4').siblings().length !== 0) {
+          listMob.find('.block_2depth > li').eq(index).find('h4 a').prop('href', 'javascript:;');
+          listMob.find('.block_2depth > li').eq(index).find('h4').addClass('btn_3dep');
+        }
+          
+      })
+      
+      listMob.find('.block_2depth > li > .btn_3dep').on('click', function() {
+        $(this).toggleClass('active');
+        $(this).siblings().toggleClass('active');
+        $(this).parent().siblings().children().removeClass('active');
+      })
+
+      $('.family_site').on('click', function() {
+        $(".sitemap .wrap").animate({ scrollTop: $('.family_site').offset().top }, "fast");
+      })
+
+    } // \\ mobile
+
+    // 폰트패밀리 혼용 구분
     blocks.each((index)=> {
         let check_txt = blocks.eq(index).children('h3').text();
         if (!check_kor.test(check_txt)) {
@@ -229,23 +288,61 @@ var commonEvent = {
     });
 
     $(window).on('scroll',function(){
+      scrollPosition = window.pageYOffset;
       $(".sitemap").css("left",0-$(this).scrollLeft());
     });
 
-    $('.top_sitemap').on('click', ()=> {
-      if ($('.top_sitemap').hasClass('on')) {
+    sitemap.on('click', ()=> {
+      if (sitemap.hasClass('on')) {
+        openProcessor();
         $('.sitemap').addClass('active');
         $('.header .logo, .header .gnb, .header .gnb_menu > div:not(.top_sitemap)').addClass('sitemapOn');
       } else {
-        $('.sitemap').removeClass('active');
+        closeProcessor();
+        $('.sitemap, .block_le > ul > li, .block_2depth > li > h4, .block_2depth > li > ul ').removeClass('active open');
         $('.header .logo, .header .gnb, .header .gnb_menu > div:not(.top_sitemap)').removeClass('sitemapOn');
+        $(".sitemap .wrap").stop().animate({ scrollTop: 0 }, "smooth");
       }
     })
 
     $('.sitemap_main .block_le > ul > li > h2').on('click', function() {
       $(this).parent().toggleClass('active');
       $(this).parent().siblings().removeClass('active');
+
+      if ($('#mobile').length && !$(this).parent().hasClass('active')) {
+        $(this).siblings().find('.btn_3dep, .block_3depth').removeClass('active');
+
+      } else if ($('#mobile').length && $('.sitemap_main .block_le > ul > li').hasClass('active')) {
+        $(this).parent().siblings().find('.btn_3dep, .block_3depth').removeClass('active');
+
+      }
     })
+
+
+    // 팝업 열기 function
+    function openProcessor() {
+      scrollPosition = window.pageYOffset;
+      $('html').addClass('blockScroll');
+
+      if ($('#mobile').length) {
+          $('body').css('top', `-${scrollPosition}px`);
+      }
+    }
+
+    // 팝업 닫기 function
+    function closeProcessor() {
+
+        $('html').removeClass('blockScroll');
+        $('.popup').removeClass('on');
+        
+        if ($('#mobile').length) { 
+            scrollPosition = body.css('top');
+            scrollPosition = scrollPosition.replace('px', '');
+
+            body.removeProp('top');
+            window.scrollTo(0, -(scrollPosition));
+        }
+    }
 
   },
 
