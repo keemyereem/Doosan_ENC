@@ -1012,11 +1012,9 @@
 
 /* 기술역량 */
 #mobile .technology .competence { padding-bottom: 20rem; }
-
 #mobile .technology .competence .love_motion { height: auto; margin-bottom: 4.5rem; margin-top: 3rem; }
 #mobile .technology .competence .love_motion .love_swiper_wrap {  position: relative; width: 100%; height: 7rem; }
-#mobile .technology .competence .love_motion .love_swiper { width: calc(100% - 6rem); height: 7rem; margin: 0 auto; overflow-x: auto; position: relative; transition: all ease 1s; /* overflow: hidden; */ }
-
+#mobile .technology .competence .love_motion .love_swiper { width: calc(100% - 6rem); height: 7.5rem; margin: 0 auto; overflow-x: auto; overflow-y: hidden; position: relative; transition: all ease 1s; }
 #mobile .technology .competence .love_motion .box { max-width: fit-content!important; width: fit-content!important; height: 7rem; background: transparent; position: absolute; left: 0; top: 0; transition: left .5s ease-out; }
 #mobile .technology .competence .love_motion .box > li { background: #fff; width: 24vw!important; height: 7rem; border: 0; border-radius: 0; position: initial; opacity: 1; border: 1px solid #e8e8e8; }
 #mobile .technology .competence .love_motion .box > li:not(:first-child) { margin-left: -.1rem; }
@@ -1142,7 +1140,7 @@
 #mobile .company .greybox .wrap .section02 { padding: 6rem 1rem 5rem; }
 #mobile .company .greybox .wrap .section02 img { box-shadow: 0 .7rem 1.35rem 0 rgba(0, 0, 0, .35); }
 
-/* 재무정보 - Custom Chart */
+/* 투자정보 - 재무정보 - Custom Chart */
 #mobile .company .financial { margin-top: 4.5rem; }
 #mobile .company #HMchart { padding:0 2rem 9rem; }
 #mobile .company #HMchart > li { width: 100%; height: 33rem; padding: 2.5rem 0; }
@@ -1163,7 +1161,7 @@
 #mobile .company #HMchart > li .graph .graph_bar .minus > p,
 #mobile .company #HMchart > li .graph .graph_bar .minus > span { transform: translate(50%, 0) scale(-1); }
 
-/* 전자공고 */
+/* 투자정보 - 전자공고 */
 #mobile .company .announce { padding-bottom: 10rem; }
 #mobile .company .announce .tb_top .search { width: 100%; display: flex; align-items: center; justify-content: space-between; margin-top: 3.7rem; }
 #mobile .company .announce .tb_top .search .select_row { width: 9rem; height: 3.5rem; margin-right: 0 }
@@ -1210,6 +1208,31 @@
 #mobile .company .greeting .sign p { font-size: 1.3rem; }
 #mobile .company .greeting .sign b { font-size: 1.7rem; margin: 1rem 1rem 0 0; }
 #mobile .company .greeting .sign img { width: 15rem; }
+
+/* 오시는 길 */
+#mobile #sub .company .location .inner { max-width: unset; }
+#mobile .company .location { background: linear-gradient(to bottom, #fff 15rem, #f9f9f9 0); padding:4.5rem 0 10rem; position: relative; }
+#mobile .company .location .map_loader > div .wrap_map,
+#mobile .company .location .map_loader > iframe { height: 20rem; }
+#mobile .company .location ul { margin-top: 5.5rem; flex-wrap: wrap; }
+#mobile .company .location ul li:first-child { width: 100%; border-right: none; border-bottom: .1rem solid #e8e8e8; padding-bottom: 5.5rem; }
+#mobile .company .location ul li:first-child h2 { padding-top: 1.75rem; font-size: 3rem; }
+#mobile .company .location ul li:first-child h2 span::before { width: 4.1rem; height: .35rem; }
+#mobile .company .location ul li:first-child a { margin-top: 4rem; width: 18rem; height: 4.5rem; line-height: 4.5rem; border-radius: 2.25rem; font-size: 1.3rem; }
+#mobile .company .location ul li:first-child a::after { background-size: contain; margin-left: 6.25rem; width: .65rem; height: 1.15rem; }
+#mobile .company .location ul li:last-child { padding-left: 0; padding-top: 6rem; }
+#mobile .company .location ul li:last-child div { padding-left: 2.25rem; }
+#mobile .company .location ul li:last-child div:not(:first-child) { margin-top: 2.5rem; }
+#mobile .company .location ul li:last-child div h3 { font-size: 1.4rem; }
+#mobile .company .location ul li:last-child div h3 img { width: 1.2rem; object-fit: scale-down; }
+#mobile .company .location ul li:last-child div p { font-size: 1.3rem; line-height: 1.54; padding-top: 1rem; }
+#mobile .company .location ul li:last-child div p i { font-size: 1.3rem; color: #cccccc; position: relative; bottom: .1rem; padding: 0 1rem; }
+#mobile .company .location ul li:last-child div em { font-size: 1.4rem; padding-top: 1.5rem; }
+#mobile .company .location ul li:last-child div em span { line-height: 1.8rem; width: 1.7rem; height: 1.7rem; margin-right: 1rem; font-size: 1.3rem; }
+
+
+
+
 
 
 

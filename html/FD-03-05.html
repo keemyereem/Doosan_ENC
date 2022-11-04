@@ -38,6 +38,7 @@
     <script src="https://code.jquery.com/jquery-migrate-3.3.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
 
     <script src="js/lib/jquery.fullPage.js"></script>
     <script src="js/lib/jquery.easings.min.js"></script>
@@ -46,8 +47,6 @@
     <script src="js/lib/slick.min.js"></script>
     
     <script src="js/common.js?v=1.0"></script>
-
-    <!-- Initialized Include Path -->
     <script>
         $(document).ready( function() {
             // Including HTML
@@ -94,7 +93,7 @@
                                 </ul>
                             </div>
                             <div class="depth depth2">
-                                <a href="javascript:;" class="dep_tit" title="하위메뉴 열기">투자정보</a>
+                                <a href="javascript:;" class="dep_tit" title="하위메뉴 열기">오시는 길</a>
                                 <ul class="drop_box">
                                     <li><a href="html/FD-03-01.html" title="경영이념 페이지로 이동">경영이념</a></li>
                                     <li><a href="html/FD-03-02.html" title="대표이사 인사말 페이지로 이동">대표이사 인사말</a></li>
@@ -113,64 +112,45 @@
             </div>
 
             <div class="title_area single">
-                <h2 class="con_tit" data-aos="fade-up">투자정보</h2>
+                <h2 class="con_tit" data-aos="fade-up">오시는 길</h2>
             </div>
 
-            <div class="tab_box" data-aos="fade-up">
+            <div class="contents location">
                 <div class="inner">
-                    <ul>
-                        <li><a href="html/FD-03-04-01.html" title="이사회 페이지로 이동">이사회</a></li>
-                        <li><a href="html/FD-03-04-02.html" title="재무정보 페이지로 이동">재무정보</a></li>
-                        <li class="on"><a href="javascript:;" title="전자공고 페이지로 이동">전자공고</a></li>
-                    </ul>
+                  <div class="map_loader">
+                    <!-- * 카카오맵 - 지도퍼가기 -->
+                    <!-- 1. 지도 노드 -->
+                    <div id="daumRoughmapContainer1667537921074" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+                    <script>
+                      new daum.roughmap.Lander({
+                        "timestamp" : "1667537921074",
+                        "key" : "2ce3o",
+                      }).render();
+                    </script>
+                  </div>
+                  
+                  <ul>
+                    <li>
+                      <h2><span>두산건설</span> 오시는 길을 <br>안내해드립니다.</h2>
+                      <a href="https://map.kakao.com/?urlX=507779.0&urlY=1116640.0&name=%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%96%B8%EC%A3%BC%EB%A1%9C%20726&map_type=TYPE_MAP&from=roughmap" title="지도 크게 보기">지도 크게 보기</a>
+                    </li>
+                    <li>
+                      <div>
+                        <h3><img src="images/company/loc_icon01.png" alt="loc_icon01">ADDRESS</h3>
+                        <p>서울특별시 강남구 언주로 726 (논현동)</p>
+                      </div>
+                      <div>
+                        <h3><img src="images/company/loc_icon02.png" alt="loc_icon02">PHONE</h3>
+                        <p>A/S 문의 : 02-3441-17201<i>|</i>분양문의 : 02-3441-1700</p>
+                      </div>
+                      <div>
+                        <h3><img src="images/company/loc_icon03.png" alt="loc_icon03">SUBWAY</h3>
+                        <em><span>7</span>학동역 / 강남구청역</em>
+                        <p>7호선 학동역 10번출구 도보 10분 <br>7호선 강남구청역 3번출구 도보 10분</p>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
-            </div>
-
-            <div class="contents announce">
-                <div class="inner">
-                    <div class="tb_top" data-aos="fade-in" data-delay="500">
-                        <div class="search">
-                            <div class="select_row">
-                                <label for="year">연도선택</label>
-                                <select id="year" class="selectBox">
-                                    <option value="">2022</option>
-                                    <option value="">2021</option>
-                                    <option value="">2020</option>
-                                    <option value="">2019</option>
-                                    <option value="">2018</option>
-                                    <option value="">2017</option>
-                                    <option value="">2016</option>
-                                    <option value="">2015</option>
-                                    <option value="">2014</option>
-                                    <option value="">2013</option>
-                                </select>
-                            </div>
-                            <div class="input_row input_search">
-                                <input type="text">
-                                <a href="javascript:;">검색</a>
-                            </div>
-                        </div>
-                        <div class="total">
-                            <!-- 검색결과 -->
-                            <span class=""><b class="blue">&lsquo;실적&rsquo;</b>에 대한 <b>0</b>개의 통합 검색결과입니다.</span>
-                        </div>
-                    </div>
-                    <div class="tb_box">
-                        <div class="tb_row row_head">
-                            <div class="tit">제목</div>
-                            <div class="date">일시</div>
-                            <div class="period">공고기간</div>
-                        </div>
-                        <!-- 검색결과 0 -->
-                        <div class="tb_row row_body null">
-                            등록된 내용이 없습니다.
-                        </div>
-                        <!-- .검색결과 0 -->
-                       
-                    </div>
-                </div>
-
-
             </div>
             <!-- footer -->
             <div class="footer"></div>

@@ -545,7 +545,7 @@
 /* 사이버 감사실 */
 .customer .btn_wrap { display: flex; justify-content: center; align-items: center; margin-top: 7rem; }
 .customer .btn_wrap a { display: flex; align-items: center; justify-content: center; width: 34rem; height: 10rem; border-radius: 5rem; text-align: left; font-size: 2rem; color: #005eb8; letter-spacing: -.05rem; }
-.customer .btn_wrap a:first-child { background: rgba(0, 94, 184,.05); margin-right: 4rem; cursor: default; }
+.customer .btn_wrap a:first-child { background: rgba(0, 94, 184,.05); margin-right: 4rem; }
 .customer .btn_wrap a:first-child .icon { width: 4.6rem; height: 4.2rem; margin-right: 2rem; background: url(../images/customer/audit_call_icon.png) no-repeat 50% 50%; background-size: contain; }
 .customer .btn_wrap a:first-child .txt > div:first-child { color: #555; }
 .customer .btn_wrap a:first-child .txt > div:last-child { font-family: 'Montserrat'; font-size: 2.6rem; font-weight: 400; }
@@ -897,11 +897,10 @@
 
 /* 기술역량 */
 .technology .competence { padding-bottom: 20rem; }
-
 .technology .competence .love_motion { width: auto; height: fit-content; position: relative; height: 70.5rem; margin-bottom: 12.3rem; }
 .technology .competence .love_motion em { color: #005EB8; font-style: normal; }
-.technology .competence .love_motion .box { max-width: 164rem; height: 70.5rem; background: #005EB8; position: absolute; margin: auto; top: auto; bottom: 0; left: 0; right: 0; display: flex; justify-content: center; align-items: center; }
-.technology .competence .love_motion .box > li { background: #fff; width: 32.8rem; height: 32.8rem; border-radius: 100%; position: absolute; opacity: 0; }
+.technology .competence .love_motion .box { max-width: 164rem; height: 70.5rem; background: transparent; position: absolute; margin: auto; top: auto; bottom: 0; left: 0; right: 0; display: flex; justify-content: center; align-items: center; }
+.technology .competence .love_motion .box > li { background: #fff; width: 32.8rem; height: 32.8rem; border-radius: 100%; position: absolute; opacity: 0; border: 1rem solid #005EB8; }
 .technology .competence .love_motion .box > li > ul { display: flex; flex-direction: column; justify-content: center; height: 100%; width: 100%; position: absolute; }
 .technology .competence .love_motion .box > li > ul > li { text-align: center; position: relative; }
 .technology .competence .love_motion .box > li > ul > li svg { width: 7.4rem; height: 7.4rem; }
@@ -913,14 +912,14 @@
 .technology .competence .love_motion .box > li > ul > li:nth-child(2) a:after { content: ''; background: url(../images/common/icon_plus_w_15x15.png) 50% 50% no-repeat; background-size: cover; width: 1.5rem; height: 1.5rem; display: inline-block; position: relative; margin-left: 2rem; top: .1rem; transition: all ease .3s; }
 .technology .competence .love_motion .box > li > ul > li:nth-child(2) a:hover:after { transform: rotate(90deg); }
 .technology .competence .love_motion .box > li > ul > .slogan p { font-size: 4.8rem; padding: 1.5rem 0 0; line-height: 1; font-weight: 400; }
-.technology .competence .love_motion .box > .four { z-index: 9; }
+.technology .competence .love_motion .box > .four { z-index: 0; }
 .technology .competence .love_motion .box > .four ul:first-child .slogan p:last-child { left: 50%; transform: translateX(-50%); line-height: 1; }
 .technology .competence .love_motion .box > li .motion_menu { opacity: 0; }
 .technology .competence .love_motion .box > li .motion_menu li p { padding: 0; }
 .technology .competence .love_motion .box > li .motion_menu li:nth-child(2) { width: 2.2rem; height: .5rem; transform: translateX(-50%) skew(-45deg); background: #000; left: 50%; margin: 4rem 0; }
 .technology .competence .love_motion .box > li .motion_menu li:nth-child(3) p { font-family: 'Pretendard'; font-size: 2.2rem; color: #0c1014; font-weight: 200; padding: 0 4rem; letter-spacing: -.1rem; line-height: 1.5; }
 .technology .competence .love_motion .love { font-family: 'Montserrat'; font-weight: 400; letter-spacing: .15rem; font-size: 13.7rem; width: 100%; height: 100%; color: #fff; margin: auto; z-index: 9; position: relative; }
-.technology .competence .love_motion .love span { position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; line-height: 1.2; width: fit-content; height: fit-content; opacity: 0; }
+.technology .competence .love_motion .love span { position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; line-height: 1.2; z-index: 10; width: fit-content; height: fit-content; opacity: 0; }
 .technology .competence .love_motion .love span:last-child { height: 8rem; line-height: .4; overflow: hidden; top: 3rem; opacity: 0; }
 .technology .competence .love_motion .line { margin: auto; left: 0; right: 0; top: 13rem; bottom: auto; width: fit-content; position: absolute; opacity: 0; }
 .technology .competence .love_motion .line img { width: 100%; }
@@ -1091,7 +1090,42 @@
 .company .greybox .wrap .section02 { padding: 0 0 7rem 8rem; }
 .company .greybox .wrap .section02 img { box-shadow: 0 1.4rem 2.7rem 0 rgba(0, 0, 0, .35); }
 
-/* 재무정보 - Custom Chart */
+/* 투자정보 - 이사회 */
+#sub .company .bod,
+#sub .company .bod .inner { max-width: 100%; }
+.company .bod .inner > div.inner_wrap { max-width: 144rem; margin: auto; }
+.company .bod .inner > div.inner_wrap > h1 { font-size: 3.8rem; color: #0b0f14; text-align: center; font-weight: 400; padding-bottom: 4rem; line-height: 1; }
+.company .bod .inner > div.inner_wrap > p { font-size: 2rem; font-weight: 150; color: #555555; text-align: center; line-height: 1; padding-bottom: 4.6rem; }
+.company .bod .inner > div.inner_wrap > ul { display: flex; flex-wrap: wrap; padding-bottom: 12rem; }
+.company .bod .inner > div.inner_wrap > ul > li { width: calc((100% - 8rem) / 3); height: 29.2rem; border: .1rem solid #eeeeee; box-shadow: 0 1.2rem 2.7rem 0 rgba(0, 0, 0, .08); margin-top: 4rem; padding: 4rem; transition: all ease .2s; }
+.company .bod .inner > div.inner_wrap > ul > li:nth-child(3n + 2) { margin: 4rem 4rem 0; }
+.company .bod .inner > div.inner_wrap > ul > li:hover { background: #005eb8; }
+.company .bod .inner > div.inner_wrap > ul > li > h2 { position: relative; font-size: 2.6rem; color: #005eb8; line-height: 1; padding-bottom: 3rem; background-image: linear-gradient(to right, #005eb8 .3rem, rgba(255,255,255,0) 0%); background-position: bottom left; background-size: 8px 1px; background-repeat: repeat-x; }
+.company .bod .inner > div.inner_wrap > ul > li > h2 span { display: block; font-size: 1.6rem; font-weight: 150; color: #666666; padding-bottom: 1rem; }
+.company .bod .inner > div.inner_wrap > ul > li .info { padding-top: 3rem; height: calc(100% - 8.2rem); display: flex; flex-direction: column; justify-content: space-between; }
+.company .bod .inner > div.inner_wrap > ul > li .info li { padding-left: 2rem; position: relative; font-size: 1.6rem; font-weight: 350; color: #222222; display: flex; justify-content: space-between; }
+.company .bod .inner > div.inner_wrap > ul > li .info li::before { content: ''; width: .5rem; height: .5rem; transform: rotate(15deg); background: #d9dfe9; display: inline-block; position: absolute; top: .5rem; left: 0; margin: auto; }
+.company .bod .inner > div.inner_wrap > ul > li .info li span { font-weight: 150; color: #666666; text-align: right; }
+.company .bod .inner > div.inner_wrap > ul > li .info li.hidden { display: none; }
+.company .bod .inner > div.inner_wrap > ul > li .info .hidden span { line-height: 1.9; margin-top: -.5rem; }
+.company .bod .inner > div.inner_wrap > ul > li > h2::before,
+.company .bod .inner > div.inner_wrap > ul > li > h2::after { content: ''; display: inline-block; width: 1.6rem; height: .1rem; background: #005eb8; position: absolute; right: 0; top: .7rem; margin: auto; transition: all ease .2s; }
+.company .bod .inner > div.inner_wrap > ul > li > h2::before { width: .1rem; height: 1.6rem; right: .7rem; top: 0; }
+.company .bod .inner > div.inner_wrap > ul > li:hover > h2 { background-image: linear-gradient(to right, #fff .3rem, rgba(255,255,255,0) 0%); color: #fff; }
+.company .bod .inner > div.inner_wrap > ul > li:hover > h2 span,
+.company .bod .inner > div.inner_wrap > ul > li:hover .info > li,
+.company .bod .inner > div.inner_wrap > ul > li:hover .info > li span { color: #fff; }
+.company .bod .inner > div.inner_wrap > ul > li:hover > h2::before { transform: rotate(90deg); opacity: 0; }
+.company .bod .inner > div.inner_wrap > ul > li:hover > h2::after,
+.company .bod .inner > div.inner_wrap > ul > li:hover > h2::before { background-color: #fff; }
+.company .bod .inner > div.inner_wrap > ul > li:hover .info .hidden { display: flex; }
+.company .bod .inner > div.inner_wrap ul > li:hover .info li:not(.hidden) { display: none; }
+
+.company .bod .inner:last-child { background: #f9f9f9; padding-top: 12rem; }
+.company .bod .inner:last-child {  }
+
+
+/* 투자정보 - 재무정보 - Custom Chart */
 .company .financial { margin-top: 4rem; }
 .company #HMchart { width: 100%; height: fit-content; display: flex; flex-wrap: wrap; justify-content: space-between; padding-bottom: 15rem; }
 .company #HMchart > li { width: calc(50% - 2.5rem); height: 50.5rem; margin-bottom: 5rem; border: .1rem solid #e8e8e8; padding: 4.5rem 0; position: relative; }
@@ -1112,7 +1146,7 @@
 .company #HMchart > li .graph .graph_bar .minus > p,
 .company #HMchart > li .graph .graph_bar .minus > span { transform: translate(50%, 0) scale(-1, -1); }
 
-/* 전자공고 */
+/* 투자정보 - 전자공고 */
 .company .tab_box { padding: 0 0 6rem 0; }
 .company .announce { padding-bottom: 20rem; }
 .company .announce .tb_top { position: relative; }
@@ -1158,6 +1192,36 @@
 .company .greeting .sign { width: fit-content; margin-left: auto; margin-top: 6rem; }
 .company .greeting .sign p { font-size: 1.6rem; color: #222; letter-spacing: -.04rem; }
 .company .greeting .sign b { font-size: 2.4rem; display: inline-block; margin: 1.5rem 1.5rem 0 0; }
+
+/* 오시는 길 */
+#sub .company .location .inner { max-width: 120rem; }
+.company .location { max-width: 100%; background: linear-gradient(to bottom, #fff 35rem, #f9f9f9 0); padding-bottom: 20rem; }
+.company .location .map_loader > div, 
+.company .location .map_loader > iframe { width: 100%; }
+.company .location .map_loader > div .wrap_map,
+.company .location .map_loader > iframe { height: 55rem; }
+.company .location .map_loader .wrap_btn_zoom,
+.company .location .map_loader .wrap_controllers,
+.company .location .map_loader .wrap_map .map > div:nth-child(2) { display: none; }
+.company .location ul { display: flex; margin-top: 10rem; }
+.company .location ul li:first-child { width: calc(50% - 7.3rem); border-right: .1rem solid #e8e8e8; }
+.company .location ul li:first-child h2 { padding-top: 3.5rem; font-size: 5rem; font-weight: 150; color: #222222; line-height: 1.4; position: relative; }
+.company .location ul li:first-child h2 span { font-weight: 350; color: #005eb8; }
+.company .location ul li:first-child h2 span::before { content: ''; display: block; position: absolute; top: 0; left: .6rem; transform: skew(-45deg); background: #005eb8; width: 5.5rem; height: .6rem; }
+.company .location ul li:first-child a { display: block; margin-top: 7.5rem; width: 23rem; height: 5.5rem; text-align: center; line-height: 5.5rem; border: .1rem solid #000000; border-radius: 2.8rem; font-size: 1.6rem; color: #222222; font-weight: 150; transition: all ease-out .2s; }
+.company .location ul li:first-child a:hover { background: #000000; color: #fff; }
+.company .location ul li:first-child a::after { content: ''; background: url(../images/common/arrow_9x15.png)50% 50% no-repeat; vertical-align: middle; transform: translateY(-.1rem); display: inline-block; margin-left: 5.2rem; width: .9rem; height: 1.5rem; }
+.company .location ul li:first-child a:hover::after { background: url(../images/common/arrow_9x15_w.png)50% 50% no-repeat; }
+.company .location ul li:last-child { padding-left: 8rem; }
+.company .location ul li:last-child div { position: relative; padding-left: 3.2rem; }
+.company .location ul li:last-child div:not(:first-child) { margin-top: 3.5rem; }
+.company .location ul li:last-child div h3 { font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 1.8rem; color: #222222; line-height: 1; display: flex; align-items: center; }
+.company .location ul li:last-child div h3 img { position: absolute; left: 0; }
+.company .location ul li:last-child div p { font-size: 1.6rem; font-weight: 150; color: #555555; line-height: 1.875; padding-top: 1rem; }
+.company .location ul li:last-child div p i { font-size: 1.3rem; color: #cccccc; position: relative; bottom: .1rem; padding: 0 1rem; }
+.company .location ul li:last-child div em { font-weight: 400; font-size: 1.8rem; color: #222222; display: flex; align-items: center; padding-top: 1.5rem; }
+.company .location ul li:last-child div em span { display: inline-block; text-align: center; line-height: 2.6rem; border-radius: 100%; width: 2.5rem; height: 2.5rem; margin-right: 1.6rem; background: #697215; color: #fff; font-size: 1.6rem; }
+
 
 
 /* ================================  사회책임경영  =============================== */
