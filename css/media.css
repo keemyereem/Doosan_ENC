@@ -76,6 +76,9 @@
 
     /* header */
     #mobile .header { padding: 0 2rem; width: 100vw; }
+    #mobile .header.bg { background: #005eb8; }
+    #mobile .header.bg .logo { background: url(../images/common/logo_w.png) no-repeat; }
+    #mobile .header.bg .top_sitemap button span::before { background-color: #fff; }
     #mobile .header .header_wrap { width: 100%; height: 6rem; justify-content: space-between; }
     #mobile .header .logo { width: 7.7rem; height: 2.1rem; margin-right: 0; background-size: contain !important; }
     #mobile .header .logo.sitemapOn { background: url(../images/common/logo_w.png) no-repeat; }
@@ -369,7 +372,8 @@
     #mobile #main #fullpage .section06 .right { width: calc(100% - 2rem); padding: 3rem 1rem 2rem; background: #fff; box-shadow: 1px 2px 18px 2px rgba(34, 34, 34, 0.1); }
     #mobile #main #fullpage .section06 .right .tab { margin-left: 0; width: auto; margin-bottom: 3rem; justify-content: left; }
     #mobile #main #fullpage .section06 .right .tab li { text-align: left; }
-    #mobile #main #fullpage .section06 .right .tab li:nth-child(1) { padding-right: 3rem; padding-left: 1rem; }
+    #mobile #main #fullpage .section06 .right .tab li:nth-child(1) { padding-left: 1rem; }
+    #mobile #main #fullpage .section06 .right .tab li:nth-child(2) { padding-right: 3rem; }
     #mobile #main #fullpage .section06 .right .tab li a {font-size: 1.35rem;}
     #mobile #main #fullpage .section06 .right .tab li a::before { width: .4rem; height: .4rem; position: initial; vertical-align: middle; margin-right: 1rem; }
     #mobile #main #fullpage .section06 .right .contents .tag { font-size: 1.3rem; }
@@ -1105,6 +1109,22 @@
 #mobile .company .tab_box > .inner { width: calc(100% - 4rem)!important; }
 #mobile .company .tab_box ul { width: 100%; }
 
+/* 대표이사 인사말 */
+#mobile .company .greeting { background: linear-gradient(to bottom, #f9f9f9, #f9f9f9 46rem, #fff 46.1rem, #fff 100%); padding: 6.5rem 0 10rem; margin-top: 6rem; }
+#mobile .company .greeting .inner { margin: 0 auto!important; }
+#mobile .company .greeting .tit { font-size:2.4rem; margin-left: 2.4rem; margin-bottom: 0; }
+#mobile .company .greeting .tit span { font-size: 2.6rem; }
+#mobile .company .greeting .tit span:first-of-type { top: -.3rem; left: -2.4rem; }
+#mobile .company .greeting .tit span:last-of-type { bottom: 0rem; right: 3.8rem; }
+#mobile .company .greeting .txt { font-size: 1.4rem; line-height: 1.57; }
+#mobile .company .greeting .txt:first-of-type { margin-left: 0; margin-top: 1.5rem; }
+#mobile .company .greeting .txt:last-of-type { margin-top: 2rem; }
+#mobile .company .greeting .picture { width: calc(100% + 4rem); position: initial; margin-top: -3rem; margin-left: -2rem; }
+#mobile .company .greeting .sign {  margin-top: 3rem; }
+#mobile .company .greeting .sign p { font-size: 1.3rem; }
+#mobile .company .greeting .sign b { font-size: 1.7rem; margin: 1rem 1rem 0 0; }
+#mobile .company .greeting .sign img { width: 15rem; }
+
 /* 연혁 */
 #mobile .company .history { margin-top: 8rem; overflow: hidden; }
 #mobile .company .btn_mob { display: block; border: .1rem solid #222222; border-radius: 3.8rem; line-height: 2rem; text-align: center; padding: .75rem 2.1rem; font-size: 1.5rem; font-weight: 150; margin: 4.5rem auto 0; transition: all ease .3s; }
@@ -1139,6 +1159,45 @@
 #mobile .company .greybox .wrap .section01 div a img { width: 1.5rem; height: 1.6rem; }
 #mobile .company .greybox .wrap .section02 { padding: 6rem 1rem 5rem; }
 #mobile .company .greybox .wrap .section02 img { box-shadow: 0 .7rem 1.35rem 0 rgba(0, 0, 0, .35); }
+
+/* 투자정보 - 이사회 */
+#mobile .company .bod .inner > div.inner_wrap { padding-top: 4.5rem; }
+#mobile .company .bod .inner > div.inner_wrap > h1 { font-size: 2.4rem; padding-bottom: 2.5rem; }
+#mobile .company .bod .inner > div.inner_wrap > p { font-size: 1.5rem; line-height: 1.7; padding-bottom: 4rem; }
+#mobile .company .bod .inner:first-child > div.inner_wrap > ul { padding-bottom: 6.5rem; }
+#mobile .company .bod .inner:first-child > div.inner_wrap > ul > li { width: 100%; height: 20.45rem; box-shadow: 0 .6rem 1.35rem 0 rgba(0, 0, 0, .08); margin-top: 2.5rem; padding: 2.5rem; }
+#mobile .company .bod .inner:first-child > div.inner_wrap > ul > li:nth-child(3n + 2) { margin: 2.5rem 0 0; }
+#mobile .company .bod .inner:first-child > div.inner_wrap > ul > li > h2 { font-size: 1.8rem; padding-bottom: 2rem; background-image: linear-gradient(to right, #005eb8 .4rem, rgba(255,255,255,0) 0%); background-size: 7px 1px; }
+#mobile .company .bod .inner:first-child > div.inner_wrap > ul > li > h2 span { font-size: 1.3rem; }
+#mobile .company .bod .inner:first-child > div.inner_wrap > ul > li .info { padding-top: 2rem; height: calc(100% - 6.1rem); }
+#mobile .company .bod .inner:first-child > div.inner_wrap > ul > li .info li { padding-left: 1.5rem; font-size: 1.3rem; }
+#mobile .company .bod .inner:first-child > div.inner_wrap > ul > li .info li::before { width: .4rem; height: .4rem; top: .5rem; }
+#mobile .company .bod .inner:first-child > div.inner_wrap > ul > li .info .hidden span { line-height: 1.5; margin-top: -.3rem; }
+#mobile .company .bod .inner:first-child > div.inner_wrap > ul > li > h2::before,
+#mobile .company .bod .inner:first-child > div.inner_wrap > ul > li > h2::after { width: 1.5rem; }
+#mobile .company .bod .inner:first-child > div.inner_wrap > ul > li > h2::before { width: .1rem; height: 1.5rem; }
+#mobile .company .bod .inner:first-child > div.inner_wrap > ul > li:hover > h2 { background-image: linear-gradient(to right, #fff .3rem, rgba(255,255,255,0) 0%); color: #fff; }
+#mobile #sub .company .bod .inner:last-child { width: 100%; padding: 2rem 0 10rem; position: relative; }
+#mobile .company .bod .inner:last-child > div.inner_wrap { width: calc(100% - 4rem); margin: auto; }
+#mobile .company .bod .inner:last-child > div.inner_wrap > h1 { padding-bottom: 5rem; }
+#mobile .company .bod .inner:last-child .inner_wrap .tab_le { width: 100%; height: 9rem; display: flex; justify-content: center; align-items: center; padding-bottom: 5.7rem; }
+#mobile .company .bod .inner:last-child .inner_wrap .tab_le li { font-size: 2.6rem; flex-direction: column-reverse; padding: 0 1.25rem; }
+#mobile .company .bod .inner:last-child .inner_wrap .tab_le li.on { font-size: 4.1rem; position: relative; }
+#mobile .company .bod .inner:last-child .inner_wrap .tab_le li.on::before { width: .7rem; height: .7rem; margin-right: 0; position: absolute; bottom: -1.7rem; }
+#mobile .company .bod .inner:last-child .inner_wrap .tab_le li:not(:first-child) { margin-top: 0; }
+#mobile .company .bod .inner:last-child .inner_wrap .accordion { width: 100%; border-top: .2rem solid #000000; }
+#mobile .company .bod .inner:last-child .inner_wrap .accordion .band:not(:first-child) { margin-top: 1.5rem; }
+#mobile .company .bod .inner:last-child .inner_wrap .accordion .band h2 { font-size: 1.5rem; padding: 1.85rem 2.5rem; }
+#mobile .company .bod .inner:last-child .inner_wrap .accordion .band h2 span { font-size: 1.3rem; padding-right: 1.2rem; }
+#mobile .company .bod .inner:last-child .inner_wrap .accordion .band h2 span::after { margin: 0 2.5rem; }
+#mobile .company .bod .inner:last-child .inner_wrap .accordion .band h2::before,
+#mobile .company .bod .inner:last-child .inner_wrap .accordion .band h2::after { width: 1.3rem; height: .1rem; right: 2.5rem; }
+#mobile .company .bod .inner:last-child .inner_wrap .accordion .band h2::before { width: .1rem; height: 1.3rem; right: 3.1rem; }
+#mobile .company .bod .inner:last-child .inner_wrap .accordion .bind { font-size: 1.3rem; padding: 0 2.5rem 2.5rem; }
+#mobile .company .bod .inner:last-child .inner_wrap .accordion .bind dt { padding: 2.5rem 0 1.5rem; }
+#mobile .company .bod .inner:last-child .inner_wrap .accordion .bind dt:not(:first-of-type) { padding: 4.5rem 0 1.5rem; }
+#mobile .company .bod .inner:last-child .inner_wrap .accordion .bind dt::before { width: .4rem; height: .4rem; }
+#mobile .company .bod .inner:last-child .inner_wrap .accordion .bind dd { line-height: 1.5; padding-top: 1.5rem; align-items: center; }
 
 /* 투자정보 - 재무정보 - Custom Chart */
 #mobile .company .financial { margin-top: 4.5rem; }
@@ -1193,22 +1252,6 @@
 #mobile .company .announce .tb_box .tb_row .download a { width: 1.15rem; height: 1.2rem; }
 #mobile .company .announce.detail_pg { padding-top: 4.5rem; }
 
-/* 대표이사 인사말 */
-#mobile .company .greeting { background: linear-gradient(to bottom, #f9f9f9, #f9f9f9 46rem, #fff 46.1rem, #fff 100%); padding: 6.5rem 0 10rem; margin-top: 6rem; }
-#mobile .company .greeting .inner { margin: 0 auto!important; }
-#mobile .company .greeting .tit { font-size:2.4rem; margin-left: 2.4rem; margin-bottom: 0; }
-#mobile .company .greeting .tit span { font-size: 2.6rem; }
-#mobile .company .greeting .tit span:first-of-type { top: -.3rem; left: -2.4rem; }
-#mobile .company .greeting .tit span:last-of-type { bottom: 0rem; right: 3.8rem; }
-#mobile .company .greeting .txt { font-size: 1.4rem; line-height: 1.57; }
-#mobile .company .greeting .txt:first-of-type { margin-left: 0; margin-top: 1.5rem; }
-#mobile .company .greeting .txt:last-of-type { margin-top: 2rem; }
-#mobile .company .greeting .picture { width: calc(100% + 4rem); position: initial; margin-top: -3rem; margin-left: -2rem; }
-#mobile .company .greeting .sign {  margin-top: 3rem; }
-#mobile .company .greeting .sign p { font-size: 1.3rem; }
-#mobile .company .greeting .sign b { font-size: 1.7rem; margin: 1rem 1rem 0 0; }
-#mobile .company .greeting .sign img { width: 15rem; }
-
 /* 오시는 길 */
 #mobile #sub .company .location .inner { max-width: unset; }
 #mobile .company .location { background: linear-gradient(to bottom, #fff 15rem, #f9f9f9 0); padding:4.5rem 0 10rem; position: relative; }
@@ -1247,7 +1290,7 @@
 
 /* 공통 */
 #mobile .recruit .sub_visual { background-image: url(../images/recruit/recruit_bg.png); }
-#mobile .recruit .contents { max-width: 144rem; width: 100%; margin: auto; }
+#mobile .recruit .contents { max-width: 100%; width: 100%; margin: auto; }
 #mobile .recruit .tab_small { margin-bottom: 3rem; }
 #mobile .recruit .banner { width: calc(100% - 4rem); background-size: cover; background-position: 140px 0; padding: 4.2rem 2rem; height: fit-content; margin: 6.5rem auto 0; }
 #mobile .recruit .banner h2 { font-size: 2.7rem; padding-top: 2rem; }
@@ -1322,13 +1365,92 @@
 #mobile .recruit .job ul li:hover { box-shadow: 5px 6px 10.5px 0px rgba(4, 0, 0, 0.16); }
 #mobile .recruit .job ul li:hover > div img { bottom: unset; top: 0; }
 
+/* 인사제도 */
+#mobile .recruit .personnel { padding: 6.5rem 0 10rem; margin-top: 6rem; }
+#mobile .recruit .personnel .inner { flex-direction: column; padding: 0 2rem; }
+#mobile .recruit .personnel .step01 { display: flex; justify-content: space-between; }
+#mobile .recruit .personnel .step01 .box { width: calc(50% - 1.75rem); min-height: 17.55rem; border-radius: .5rem; padding: 0 1.8rem; margin-left: 0; }
+#mobile .recruit .personnel .step01 .box:last-of-type { margin-top: 0; }
+#mobile .recruit .personnel .step01 .box:last-of-type::before { width: 3.5rem; height: 16.7rem; background: url(../images/recruit/personnel_line01_m.png) no-repeat 50% 50%; background-size: contain; top: 50%; left: -3.5rem; }
+#mobile .recruit .personnel .step01 .box .tit { font-size: 2rem; }
+#mobile .recruit .personnel .step01 .box p { font-size: 1.4rem; letter-spacing: -.07rem; line-height: 1.35; margin-top: 1.5rem; }
+#mobile .recruit .personnel .step02 { width: 20.4rem; height: 18.8rem; background: url(../images/recruit/personnel_ellipse_m.png) no-repeat 50% 50%; background-size: contain; margin-left: 0; margin-top: 7.9rem; }
+#mobile .recruit .personnel .step02 .tit { font-size: 2rem; top: calc(50% - .85rem); left: 0; }
+#mobile .recruit .personnel .arrows { display: flex; }
+#mobile .recruit .personnel .arrows > div { width: 2.5rem; height: 3.6rem; }
+#mobile .recruit .personnel .arrows > div > span::after { width: .9rem; height: .9rem; border-bottom-width: .4rem; border-right-width: .4rem; transform: rotate(63deg);  }
+#mobile .recruit .personnel .arrows > div > span:nth-of-type(1):after { left: .75rem; top: 0rem; }
+#mobile .recruit .personnel .arrows > div > span:nth-of-type(2):after { left: .35rem; top: 1.1rem; }
+#mobile .recruit .personnel .arrows > div > span:nth-of-type(3):after { left: 0; top: 2.2rem; }
+#mobile .recruit .personnel .arrows > div:last-of-type { margin-top: 0; margin-left: 7rem; }
+#mobile .recruit .personnel .arrows > div:last-of-type > span::after { transform: rotate(27.5deg); }
+#mobile .recruit .personnel .arrows > div:last-of-type > span:nth-of-type(1):after { left: 0; top: 0; }
+#mobile .recruit .personnel .arrows > div:last-of-type > span:nth-of-type(2):after { left: 0.35rem; top: 1.1rem; }
+#mobile .recruit .personnel .arrows > div:last-of-type > span:nth-of-type(3):after { left: 0.75rem; top: 2.2rem; }
+#mobile .recruit .personnel .step03 { display: flex; }
+#mobile .recruit .personnel .step03 .circle { width: 10rem; height: 10rem; margin-left: 0; margin-top: 1.1rem; }
+#mobile .recruit .personnel .step03 .circle:first-of-type .icon { width: 2.2rem; height: 3.5rem; background: url(../images/recruit/personnel_icon01_m.png) no-repeat 50% 50%; background-size: contain; }
+#mobile .recruit .personnel .step03 .circle:last-of-type { margin-top: 1.1rem; margin-left: 5.5rem; }
+#mobile .recruit .personnel .step03 .circle:last-of-type .icon { width: 3.1rem; height: 3.5rem; background: url(../images/recruit/personnel_icon02_m.png) no-repeat 50% 50%; background-size: contain; }
+#mobile .recruit .personnel .step03 .circle .txt { font-size: 1.5rem; margin-top: 1rem; }
+#mobile .recruit .personnel .step03 .circle::after { width: .5rem; height: 2.6rem; background: url(../images/recruit/personnel_line02_m.png) no-repeat 50% 50%; background-size: contain; right: calc(50% - .3rem); bottom: -2.6rem; }
+#mobile .recruit .personnel .step04 { display: flex; justify-content: center; width: 100%; }
+#mobile .recruit .personnel .step04 .box { width: calc(50% - .9rem); max-width: 13.7rem; height: 7rem; border-radius: .5rem; margin-left: 0; margin-top: 3.6rem; }
+#mobile .recruit .personnel .step04 .box p { font-size: 1.4rem; letter-spacing: -.07rem; line-height: 1.35; }
+#mobile .recruit .personnel .step04 .box:last-of-type { margin-top: 3.6rem; margin-left: 1.8rem; }
 
+/* 복리후생 */
+#mobile .recruit .benefits { margin: 6rem auto 10rem; padding: 0 2rem; }
+#mobile .recruit .benefits ul { box-shadow: 0px 5px 25px 0.5px rgba(0, 0, 0, 0.1); }
+#mobile .recruit .benefits ul li { width: 100%; padding: 5.5rem 0; }
+#mobile .recruit .benefits ul li:nth-child(4),
+#mobile .recruit .benefits ul li:nth-child(8) { background: #fff; }
+#mobile .recruit .benefits ul li:nth-child(1),
+#mobile .recruit .benefits ul li:nth-child(5),
+#mobile .recruit .benefits ul li:nth-child(2n-1) { background: rgba(0, 94, 184, .05); }
+#mobile .recruit .benefits ul li .num { font-size: 2.5rem; margin-left: -7.5rem; }
+#mobile .recruit .benefits ul li .tit { font-size: 2rem; margin: 2rem 0 1.5rem; } 
+#mobile .recruit .benefits ul li p { font-size: 1.4rem; line-height: 1.42; }
+#mobile .recruit .benefits ul li:nth-child(1) .icon { width: 5rem; height: 4.2rem; }
+#mobile .recruit .benefits ul li:nth-child(2) .icon { width: 5rem; height: 3.45rem; }
+#mobile .recruit .benefits ul li:nth-child(3) .icon { width: 5rem; height: 4.5rem; margin-top: 0rem; }
+#mobile .recruit .benefits ul li:nth-child(4) .icon { width: 5rem; height: 4.65rem; margin-top: -.5rem; }
+#mobile .recruit .benefits ul li:nth-child(5) .icon { width: 4.45rem; height: 5rem; margin-top: -.5rem; }
+#mobile .recruit .benefits ul li:nth-child(6) .icon { width: 5.8rem; height: 4.05rem; margin-top: 0rem; }
+#mobile .recruit .benefits ul li:nth-child(7) .icon { width: 5rem; height: 4.4rem; margin-top: -.5rem; }
+#mobile .recruit .benefits ul li:nth-child(8) .icon { width: 5rem; height: 4.95rem; margin-top: -.5rem; }
 
+/* 개인정보처리방침 */
+#mobile .graybox { padding: 6.5rem 0; }
+#mobile .graybox .policy > .inner { text-align: center; margin-top: 6.5rem; }
+#mobile .graybox .policy > .inner > ul li { height: 4.5rem; line-height: 4.5rem; }
+#mobile .graybox .policy > .inner > ul li.on { box-shadow: 0px 0px 16px 4px rgba(34, 34, 34, 0.2); }
+#mobile .graybox .policy > .inner > ul li a { font-size: 1.35rem; letter-spacing: -.135rem; }
+#mobile .graybox .policy > .inner .select_row { max-width: 22rem; width: 100%; position: initial; transform: translateY(0); border: 0; border-bottom: 2px solid #222; margin: 3rem auto 0; }
+#mobile .graybox .policy > .inner .select_row::after { right: 1rem; }
+#mobile .graybox .policy > .inner .select_row select { padding: 0 1rem; }
+#mobile .graybox .policy > .inner .select_row label { font-size: 1.5rem; padding: 0 1rem; }
 
-
-
-
-
+#mobile .graybox .policy .box { margin: 2.7rem auto 10rem; padding: 3.5rem .9rem; width: calc(100% - 2rem); }
+#mobile .graybox .policy .box h3 { font-size: 1.7rem; margin-bottom: 2.5rem; }
+#mobile .graybox .policy .box ol > li+li { margin-top: 2.5rem; }
+#mobile .graybox .policy .box ol > li:not(:last-child) { padding-bottom: 2.5rem; }
+#mobile .graybox .policy .box ol > li .tit { font-size: 1.5rem; }
+#mobile .graybox .policy .box ol > li > p { font-size: 1.3rem; line-height: 1.53; margin-top: 1.5rem; position: relative; }
+#mobile .graybox .policy .box ol > li > p.gray { padding-left: 1rem; }
+#mobile .graybox .policy .box ol > li > p.gray span { position: absolute; top: 0; left: 0; }
+#mobile .graybox .policy .box ol > li > p .inner_tit { display: inline-block; width: fit-content; }
+#mobile .graybox .policy .box ol > li .sub_tit { font-size: 1.4rem; }
+#mobile .graybox .policy .box ol > li > p+.sub_tit,
+#mobile .graybox .policy .box ol > li > ul+.sub_tit { margin-top: 2rem; }
+#mobile .graybox .policy .box ol > li > .sub_tit+ul { margin-top: 1.5rem; }
+#mobile .graybox .policy .box ol > li > ul > li { padding-left: 1rem; font-size: 1.3rem; line-height: 1.53; }
+#mobile .graybox .policy .box ol > li dl { font-size: 1.3rem; line-height: 1.53; display: flex; }
+#mobile .graybox .policy .box ol > li dl dt { width: 5.5rem; flex-shrink: 0; }
+#mobile .graybox .policy .box ol > li .download { padding: 0 1rem 1.6rem .5rem; font-size: 1.3rem; width: 17.5rem; margin-top: 2.5rem; }
+#mobile .graybox .policy .box ol > li .download i { width: 1.5rem; height: 1.5rem; background-size: contain; }
+#mobile .graybox .privacy .box ol > li > .tit+p:first-of-type { margin-bottom: 2rem; }
+#mobile .graybox .privacy .box ol > li:first-child > .tit+p:first-of-type { margin-bottom: 0; }
 /* ================================  Special Responsive  =============================== */
 @media screen and (max-width:316px) {
     #mobile .company .announce .tb_box .tb_row .date,

@@ -136,8 +136,13 @@ var commonEvent = {
       }
     });
     $('#sub .header .gnb > ul > li').mouseleave(function(){
-      $('.header').addClass('wht');
-      $('.header').css({'background':'transparent'});
+      if(!$('.container').hasClass('graybox')){
+        $('.header').addClass('wht');
+        $('.header').css({'background':'transparent'});
+      }else {
+
+      }
+
     });
 
     $('#main .header .gnb > ul > li').mouseenter(function(){
@@ -1144,8 +1149,27 @@ var techEvent = {
 
 var companyEvent = {
   init: function(){
+    this.bod();
     this.history();
     this.chart();
+  },
+
+  bod: ()=> {
+    $(".tab_le li").click(function() {
+      let idx = $(this).index();
+
+      $(this).addClass('on').siblings().removeClass('on');
+      $('.accordion').eq(idx).addClass('on').siblings().removeClass('on');
+      $('.accordion').children().removeClass('on');
+      $('.accordion').children().find('.bind').slideUp(300);
+    });
+    
+    $(".band").click(function() {
+      $(this).children(".bind").stop().slideToggle(300);
+      $(this).toggleClass('on').siblings().removeClass('on');
+      $(this).siblings().children(".bind").slideUp(300); // 1개씩 펼치기
+    });
+    
   },
 
   history: ()=> {
@@ -1601,4 +1625,26 @@ var recruitEvent = {
     }
     
   },
+}
+
+var policyEvent = {
+  init:function(){
+    this.privacyTab();
+  },
+
+  privacyTab: function(){
+    $('.privacy .inner ul li').click(function(){
+      $('.privacy .inner ul li').removeClass('on');
+      $(this).addClass('on');
+
+      var Tabs_cont = $('.privacy .inner ul li').index(this)+1;
+      $('.box_cont').removeClass('on');
+      $('.privacy0' + Tabs_cont).addClass('on');
+      $('.privacy .select_wrap .select_row').removeClass('active');
+      $('.select_wrap .select0' + Tabs_cont).addClass('active');
+      console.log(Tabs_cont);
+
+    });
+  },
+
 }

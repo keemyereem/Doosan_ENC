@@ -44,10 +44,8 @@
     <script src="js/lib/scrolloverflow.js"></script>
     <script src="js/lib/aos.js"></script>
     <script src="js/lib/slick.min.js"></script>
-
+    
     <script src="js/common.js?v=1.0"></script>
-
-    <!-- Initialized Include Path -->
     <script>
         $(document).ready( function() {
             // Including HTML
@@ -57,6 +55,7 @@
 
             // JS importing
             commonEvent.init();
+            companyEvent.init();
         });
     </script>
 </head>
@@ -73,15 +72,15 @@
         <div class="sitemap"></div>
         <!-- //sitemap -->
 
-        <div class="container channel">
+        <div class="container company">
             <div class="sub_visual">
                 <div class="inner">
-                    <h1>Channel</h1>
+                    <h1>회사소개</h1>
                     <div class="sub_visual_menu">
                         <div class="menu_inner">
                             <div class="home"></div>
                             <div class="depth depth1">
-                                <a href="javascript:;" class="dep_tit" title="하위메뉴 열기">Channel</a>
+                                <a href="javascript:;" class="dep_tit" title="하위메뉴 열기">회사소개</a>
                                 <ul class="drop_box">
                                     <li><a href="html/FD-01-01-01.html" title="사업영역 페이지로 이동">사업영역</a></li>
                                     <li><a href="html/FD-02-01-01.html" title="기술개발 페이지로 이동">기술개발</a></li>
@@ -93,12 +92,14 @@
                                 </ul>
                             </div>
                             <div class="depth depth2">
-                                <a href="javascript:;" class="dep_tit" title="하위메뉴 열기">자료실</a>
+                                <a href="javascript:;" class="dep_tit" title="하위메뉴 열기">경영이념</a>
                                 <ul class="drop_box">
-                                    <li><a href="html/FD-HEAD-01-01.html" title="뉴스 페이지로 이동">뉴스</a></li>
-                                    <!-- <li><a href="html/FD-HEAD-01-02.html" title="SNS 페이지로 이동">SNS</a></li> -->
-                                    <li><a href="html/FD-HEAD-01-03.html" title="자료실 페이지로 이동">자료실</a></li>
-                                    <li><a href="html/FD-HEAD-01-04.html" title="CI/BI 페이지로 이동">CI/BI</a></li>
+                                    <li><a href="html/FD-03-01.html" title="경영이념 페이지로 이동">경영이념</a></li>
+                                    <li><a href="html/FD-03-02.html" title="대표이사 인사말 페이지로 이동">대표이사 인사말</a></li>
+                                    <li><a href="html/FD-03-03.html" title="연혁 페이지로 이동">연혁</a></li>
+                                    <li><a href="html/FD-03-04-01.html" title="투자정보 페이지로 이동">투자정보</a></li>
+                                    <li><a href="html/FD-03-05.html" title="오시는 길 페이지로 이동">오시는 길</a></li>
+                                    <li><a href="html/FD-03-06.html" title="스포츠구단 페이지로 이동">스포츠구단</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -110,38 +111,63 @@
             </div>
 
             <div class="title_area single">
-                <h2 class="con_tit" data-aos="fade-up">자료실</h2>
+                <h2 class="con_tit" data-aos="fade-up">경영이념</h2>
             </div>
 
-            <div class="contents reference">
-                <img src="images/channel/ref_bg.png" alt="배경" class="img_pc">
-                <img src="images/channel/ref_bg_m.png" alt="배경" class="img_m">
+            <div class="contents philosophy">
                 <div class="inner">
-                    <div class="left">
-                        <div class="sec_tit" data-aos="fade-up"><b>2022</b> 두산건설 브로슈어</div>
-                        <div class="sub" data-aos="fade-up">'더 좋은 세상의 시작, 더 나은 미래를 짓습니다.'</div>
-                        <p data-aos="fade-up">
-                            우리가 만드는 공간을 매일의<br class="br_m"> 일터와 삶터로 삼는 사람들에게 주목합니다.<br>
-                            두산건설은 사람들의 머무는 모든 공간이 보다 안전하고 쾌적하길 바라며,<br class="br_pc">
-                            남다른 방식으로 공간의 새로운 가치를 창조하기 위해 끊임없이 변화하고<br class="br_pc">
-                            혁신합니다.
-                        </p>
-                        <div class="btn_wrap" data-aos="fade-in">
-                            <a href="download/doosanenc_brochure_220510_ko.pdf" title="국문 다운로드" download="두산건설 국문 브로슈어">국문 다운로드<i></i></a>
-                            <a href="download/doosanenc_brochure_220510_eng.pdf" title="영문 다운로드" download="두산건설 영문 브로슈어">영문 다운로드<i></i></a>
-                        </div>
-                    </div>
-                    <div class="img" data-aos="fade-up"><img src="images/channel/ref_brochure.png" alt="2022두산건설 브로슈어"></div>
+                  <ul>
+                    <li>
+                      <h1>Infra Solutions Provider</h1>
+                      <h2><span>더 좋은 세상</span>의 시작, <span>더 나은 미래</span>를 짓습니다</h2>
+                      <p>
+                        1960년 창사 이래 대한민국 건설사업의 역사와 함께 성장해 온 두산건설은 풍부한 경험과 <br>
+                        뛰어난 기술력을 바탕으로 건축, 주택, 토목분야에서 눈부실 실적을 쌓으며 역량을 키워왔습니다. <br> 
+                        이제 두산건설은 기존 사업의 기반을 더욱 견고히 하는 한편 지속가능한 성장을 위해 <br>
+                        새로운 기회를 발굴하며 100년 기업을 향한 여정을 시작했습니다. <br>
+                        또한 남보다 앞서, 남다른 방식으로 공간이 지닌 가치를 창출하여 <br>
+                        더 나은 내일을 짓고자 끊임없이 변화하고 혁신하며 혼신의 노력을 다할 것입니다.
+                      </p>
+                    </li>
+
+                    <li>
+                      <h2>경영원칙</h2>
+                      <ul>
+                        <li>
+                          <div>
+                            <img src="images/company/mp_icon01.png" alt="mp_icon01">
+                            <img src="images/company/mp_icon01_hover.png" alt="mp_icon01_hover">
+                          </div>
+                          <h4>투명경영 확립 및 정착</h4>
+                          <p>
+                            두산건설은 구성원과 함께 높은 수준의 투명경영 확립 및 <br>
+                            정착을 강한 원동력으로 삼아 성장하며, <br>
+                            이에 따라 구성원은 공정한 평가와 보상을 받는다.
+                          </p>
+                        </li>
+                        <li>
+                          <div>
+                            <img src="images/company/mp_icon02.png" alt="mp_icon02">
+                            <img src="images/company/mp_icon02_hover.png" alt="mp_icon02_hover">
+                          </div>
+                          
+                          <h4>신뢰받는 품질과 브랜드</h4>
+                          <p>
+                            두산건설의 구성원은 <br>
+                            신뢰받는 품질과 브랜드로 <br>
+                            고객의 Needs를 충족한다.
+                          </p>
+                        </li>
+                      </ul>
+                      
+                    </li>
+                  </ul>
+                      
                 </div>
             </div>
             <!-- footer -->
-            <section class="footer">
-                <h3 class="indent">footer</h3>
-            </section> 
+            <div class="footer"></div>
         </div>
-
     </div>
-
 </body>
-
 </html>
