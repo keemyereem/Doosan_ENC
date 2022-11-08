@@ -258,14 +258,23 @@ br {font-family:dotum !important;}
 .sitemap .wrap .sitemap_sub .block_tr .weve_link a:first-child::after { content: ''; display: inline-block; transform: rotate(180deg); opacity: .5; width: 1.2rem; height: 2.1rem; background: url(../images/common/interview_arrow_13x21_w.png)50% 50% no-repeat; position: relative; left: 3rem; transition: left ease .3s; }
 .sitemap .wrap .sitemap_sub .block_tr .weve_link a:hover::after { left: 5rem; }
 .sitemap .wrap .sitemap_sub .block_tr .weve_link .btn { width: 22rem; height:6.7rem; border-radius: 3.3rem; border: 1px solid #fff;background: url(../images/common/sitemap_weve.png) no-repeat 50% 50%; background-size: 7.4rem 4.7rem;}
-.sitemap .wrap .sitemap_sub .block_tr .family_site { position: relative; margin-top: 6vh; }
+/* .sitemap .wrap .sitemap_sub .block_tr .family_site { position: relative; margin-top: 6vh; }
 .sitemap .wrap .sitemap_sub .block_tr .family_site .site_selected { font-family: 'Montserrat'; font-size: 1.8rem; font-weight: 800; color: #fff; width: 15rem; display: flex; justify-content: space-between; align-items: center; }
 .sitemap .wrap .sitemap_sub .block_tr .family_site .site_selected::after { content: ''; display: inline-block; width: 0; height: 0; border-top: .7rem solid #fff; border-left: .7rem solid transparent; border-right: .7rem solid transparent; transition: transform ease .3s;}
 .sitemap .wrap .sitemap_sub .block_tr .family_site.open .site_selected::after { transform: rotate3d(1, 0, 0, 180deg);}
 .sitemap .wrap .sitemap_sub .block_tr .family_site .site_list {display: block;position: absolute;top: 3.3rem;left: 0; overflow: hidden; width: 15rem; height: 0; text-align: center; transition: all .3s;}
 .sitemap .wrap .sitemap_sub .block_tr .family_site.open .site_list {height: auto;padding: 2rem;border: .1rem solid rgba(232, 232, 232, .2); background: rgb(0, 0, 0, .6); z-index: 1;}
 .sitemap .wrap .sitemap_sub .block_tr .family_site .site_list li a { font-size: 1.6rem; color: #fff; }
-.sitemap .wrap .sitemap_sub .block_tr .family_site .site_list li a:hover { color: #ececec; }
+.sitemap .wrap .sitemap_sub .block_tr .family_site .site_list li a:hover { color: #ececec; } */
+
+.sitemap .wrap .sitemap_sub .block_tr .family_site { position: relative; margin-top: 6vh; }
+.sitemap .wrap .sitemap_sub .block_tr .family_site .site_selected { font-family: 'Montserrat'; font-size: 1.8rem; font-weight: 800; color: #fff; width: 15rem; display: flex; justify-content: space-between; align-items: center; }
+.sitemap .wrap .sitemap_sub .block_tr .family_site .site_selected::after { content: ''; display: inline-block; width: 0; height: 0; border-top: .7rem solid #fff; border-left: .7rem solid transparent; border-right: .7rem solid transparent; transition: transform ease .3s;}
+.sitemap .wrap .sitemap_sub .block_tr .family_site.open .site_selected::after { transform: rotate3d(1, 0, 0, 180deg);}
+.sitemap .wrap .sitemap_sub .block_tr .family_site .site_list {display: block;position: absolute;top: 3.3rem;left: 0; overflow: hidden; width: 15rem; height: 0; text-align: center; transition: all .3s;}
+.sitemap .wrap .sitemap_sub .block_tr .family_site.open .site_list {height: auto;padding: 1rem 0;border: .1rem solid #808080;}
+.sitemap .wrap .sitemap_sub .block_tr .family_site .site_list li a { display: block; font-size: 1.6rem; color: #fff; padding: 1rem 2rem; }
+
 .sitemap .wrap .sitemap_sub .block_br { background: #f9f9f9; height: 100%; display: flex; flex-direction: column; overflow: auto; right: -100%; }
 .sitemap .wrap .sitemap_sub .block_br > ul { padding-top: 2.5vh; }
 .sitemap .wrap .sitemap_sub .block_br > ul > li { padding: 4vh 0; border-bottom: .1rem solid #e8e8e8; }
