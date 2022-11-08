@@ -291,6 +291,7 @@
 #wrap, .container { width: 100%; }
 .title_area { padding: 10rem 0; text-align: center; }
 .title_area .con_tit { font-family: 'Montserrat','Pretendard'; font-size: 6rem; font-weight: 450; color: #0b0f14; letter-spacing: -.15rem; padding-bottom: 3rem; position: relative; }
+.title_area .eng_tit { font-weight: 400; }
 .title_area.single .con_tit { padding-bottom: 0; }
 .title_area .con_tit.pb0 { padding-bottom: 0; }
 .title_area .con_tit > em { color: #888; }
@@ -437,7 +438,7 @@
 .channel .sns .popup .pop_cont iframe { width: 100%; }
 
 /* 자료실 */
-.channel .reference { background: #f9f9f9; padding: 12rem 0 20rem; position: relative; } 
+.channel .reference { background: #f9f9f9; padding: 12rem 0 20rem; position: relative; overflow: hidden; } 
 .channel .reference > img { position: absolute; top: 3.6rem; right: 2.6rem; }
 .channel .reference .inner { display: flex; justify-content: space-between; padding: 0 12rem; }
 .channel .reference .inner .left { width: 50%; }
@@ -456,7 +457,6 @@
 .channel .reference .btn_wrap a:hover::after { width: 0; } 
 
 /* CI/BI */
-.channel .title_area .cibi_tit { font-weight: 350; }
 .channel .cibi .sec_tit { font-family: 'Montserrat'; font-size: 5rem; font-weight: 400; text-align: center; }
 .channel .cibi .blue { font-family: 'Montserrat'; font-size: 2.6rem; font-weight: 350; color: #005eb8; text-align: center; letter-spacing: -.13rem; }
 .channel .cibi .download { display: block; width: 23.2rem; height: 6rem; line-height: 6rem; font-size: 1.6rem; color: #000; text-indent: 1rem; text-align: left; position: relative; }
@@ -572,7 +572,7 @@
 .customer .cyber_audit .section3 .cont ul li:last-child { border-right: 1px solid #e8e8e8; border-left: 0; }
 .customer .cyber_audit .cont ul li .tit { font-size: 1.8rem; font-weight: 300; color: #222; letter-spacing: -.045rem; text-align: center; margin-top: 2.5rem; }
 .customer .cyber_audit .cont ul li a { display: none; align-items: center; justify-content: center; width: 14rem; height: 4rem; box-sizing: border-box; border-radius: 2rem; border: 1px solid rgba(255, 255, 255,.5); font-size: 1.4rem; letter-spacing: .07rem; color: #fff; }
-.customer .cyber_audit .cont ul li a span { transition: transform .3s; display: inline-block; width: 1.3rem; height: 1.3rem; background: url(../images/common/icon_plus_w_21x22.png) 50% 50%; background-size: contain; margin-left: 1.5rem; }
+.customer .cyber_audit .cont ul li a span { transition: transform .3s; display: inline-block; width: 1.3rem; height: 1.3rem; background: url(../images/common/icon_plus_w_15x15.png) 50% 50%; background-size: 100% 100%; margin-left: 1.5rem; }
 .customer .cyber_audit .cont ul li a:hover span { transform: rotate(180deg); }
 .customer .cyber_audit .cont ul li:hover { background: #005eb8; box-shadow: 6px 6px 9px 0px rgba(0, 0, 0, 0.23); border-color: #005eb8; }
 .customer .cyber_audit .cont ul li:hover .icon { display: none; }
@@ -1040,7 +1040,42 @@
 .technology .ipr.ipr04 .tb_box .tb_row .cell07 { width: 28%; }
 
 /* 기술연구소 */
-
+#sub .technology .iot,
+#sub .technology .iot .inner { max-width: 100%; }
+.technology .iot { padding: 2rem 0 4rem; }
+.technology .iot .inner > div.inner_wrap { max-width: 144rem; margin: auto; }
+.technology .iot .inner .sub_tit { text-align: center; font-size: 3.8rem; line-height: 1; }
+.technology .iot .inner:first-child { padding-bottom: 12rem; }
+.technology .iot .inner:first-child .sub_par { text-align: center; font-size: 2rem; font-weight: 150; color: #555555; padding-top: 5.5rem; line-height: 1.8; }
+.technology .iot .inner:first-child .statistics { display: flex; margin-top: 8.5rem; }
+.technology .iot .inner:first-child .statistics li { width: calc(100% / 4); display: flex; justify-content: center; padding: 3rem 0; }
+.technology .iot .inner:first-child .statistics li:not(:last-child) { border-right: .1rem solid #e8e8e8; }
+.technology .iot .inner:first-child .statistics li img { object-fit: scale-down; }
+.technology .iot .inner:first-child .statistics li div { padding-left: 4.5rem; }
+.technology .iot .inner:first-child .statistics li div h4 { font-size: 1.8rem; font-weight: 150; color: #666666; line-height: 1; }
+.technology .iot .inner:first-child .statistics li div h4 span { font-family: 'Montserrat', sans-serif; font-size: 5rem; font-weight: 450; color: #005eb8; margin-right: 1rem; }
+.technology .iot .inner:first-child .statistics li div > span { color: #222222; font-size: 2rem; font-weight: 150; padding-top: 1rem; display: block; }
+.technology .iot .inner:nth-child(2) { background: #f9f9f9; padding: 10rem 0; }
+.technology .iot .inner:nth-child(2) > div.inner_wrap { max-width: 120rem; display: flex; justify-content: space-between; }
+.technology .iot .inner:nth-child(2) > div.inner_wrap > div {  }
+.technology .iot .inner:nth-child(2) .sec2_le h3 { padding-top: 4.5rem; position: relative; font-size: 4rem; font-weight: 450; color: #000000; line-height: 1.35; }
+.technology .iot .inner:nth-child(2) .sec2_le h3::before { content: ''; position: absolute; top: 0; left: .3rem; width: 5.5rem; height: .6rem; background: #005eb8; transform: skew(-45deg); }
+.technology .iot .inner:nth-child(2) .sec2_le p { font-size: 1.8rem; font-weight: 150; color: #555555; line-height: 1.8; padding-top: 3.5rem; }
+.technology .iot .inner:nth-child(2) .sec2_le a { font-size: 1.6rem; color: #000; line-height: 1; padding: 2rem 1rem; width: 25rem; margin-top: 3.5rem; display: flex; justify-content: space-between; align-items: center; position: relative; }
+.technology .iot .inner:nth-child(2) .sec2_le a::after { content: ''; width: 0; background: #000000; height: .1rem; display: block; position: absolute; bottom: 0; left: 0; transition: all ease .3s; }
+.technology .iot .inner:nth-child(2) .sec2_le a:hover::after { width: 100%; }
+.technology .iot .inner:nth-child(2) .sec2_ri img { box-shadow: 0 1.4rem 2.7rem 0 rgba(0, 0, 0, 0.35); }
+.technology .iot .inner:nth-child(2) .sec2_ri span { display: block; position: relative; padding-left: 1.5rem; color: #fe961c; font-size: 1.6rem; font-weight: 300; margin-top: 3rem; }
+.technology .iot .inner:nth-child(2) .sec2_ri span::before { content: ''; width: .5rem; height: .5rem; transform: rotate(15deg); background: #fe961c; display: inline-block; position: absolute; top: .6rem; left: 0; margin: auto; }
+.technology .iot .inner:last-child { padding: 12rem; }
+.technology .iot .inner:last-child .inner_wrap > ul > li { margin-top: 8rem; background: linear-gradient(to bottom, #f9f9f9 51.7rem, #fff 1rem); padding: 8rem 0 4rem; }
+.technology .iot .inner:last-child .inner_wrap > ul > li h4 { line-height: 1; font-size: 3rem; font-weight: 350; color: #222222; text-align: center; }
+.technology .iot .inner:last-child .inner_wrap > ul > li h4 span { margin:0 auto 3rem; display: block; width: 4.1rem; height: 4.1rem; background: #005eb8; font-family: 'Montserrat', sans-serif; font-size: 2.2rem; color: #fff; font-weight: 350; border-radius: 100%; text-align: center; line-height: 4.1rem; }
+.technology .iot .inner:last-child .inner_wrap .card { display: flex; justify-content: center; margin-top: 8rem; }
+.technology .iot .inner:last-child .inner_wrap .card li { border-top: .4rem solid #005eb8; background: #fff; width: 38rem; height: 53.3rem; text-align: center; padding-top: 6rem; box-shadow: 0 1.4rem 2.7rem 0 rgba(0, 0, 0, 0.05); }
+.technology .iot .inner:last-child .inner_wrap .card li:nth-child(2) { margin: 0 3rem; }
+.technology .iot .inner:last-child .inner_wrap .card li h5 { padding-top: 5rem; color: #222222; font-size: 2rem; font-weight: 400; }
+.technology .iot .inner:last-child .inner_wrap .card li p { padding-top: 2rem; font-weight: 150; color: #777777; font-size: 1.8rem; line-height: 1.7; }
 
 
 /* ================================  회사소개  =============================== */
@@ -1052,9 +1087,8 @@
 
 /* 경영이념 */
 .company .philosophy { max-width: 100%; background: #f9f9f9; position: relative; padding: 12rem 0 20rem; }
-.company .philosophy .inner > ul {  }
 .company .philosophy .inner > ul > li:first-child { text-align: center; padding-bottom: 13rem; border-bottom: .1rem solid #cccccc; }
-.company .philosophy .inner > ul > li:first-child h1 { font-size: 7rem; padding-top: 6rem; position: relative; font-family: 'Montserrat', sans-serif; line-height: .9; }
+.company .philosophy .inner > ul > li:first-child h1 { font-size: 7rem; padding-top: 6rem; position: relative; font-family: 'Montserrat', sans-serif; line-height: .9; font-weight: 450; }
 .company .philosophy .inner > ul > li:first-child h1::before { content: ''; display: block; width: 5.5rem; height: .6rem; background: #005eb8; transform: skew(-45deg); position: absolute; top: 0; left: 0; right: 0; margin: auto; }
 .company .philosophy .inner > ul > li:first-child h2 { font-size: 3.4rem; font-weight: 350; color: #555555; padding-top: 2.5rem; line-height: 1; }
 .company .philosophy .inner > ul > li:first-child h2 span { color: #005eb8; }
@@ -1062,7 +1096,7 @@
 .company .philosophy .inner > ul > li:last-child { padding-top: 14rem; }
 .company .philosophy .inner > ul > li:last-child h2 { font-size: 3.8rem; font-weight: 400; color: #000; text-align: center; line-height: 1; }
 .company .philosophy .inner > ul > li:last-child ul { display: flex; height: 45.2rem; position: relative; margin-top: 8rem; }
-.company .philosophy .inner > ul > li:last-child ul li { width: calc(50% + .1rem); border: .1rem solid #dcdcdc; position: relative; display: flex; justify-content: center; top: 0; align-items: center; flex-direction: column; transition: all ease .3s; }
+.company .philosophy .inner > ul > li:last-child ul li { width: calc(50% + .1rem); border: .1rem solid #dcdcdc; background: #fff; position: relative; display: flex; justify-content: center; top: 0; align-items: center; flex-direction: column; transition: all ease .3s; }
 .company .philosophy .inner > ul > li:last-child ul li::after { content: ''; display: block; position: absolute; width: 100%; height: 100%; background: url(../images/company/mp_bg01.png) 50% 50% no-repeat; opacity: 0; transition: all ease .6s; z-index: -1;}
 .company .philosophy .inner > ul > li:last-child ul li:last-child::after { background: url(../images/company/mp_bg02.png) 50% 50% no-repeat; }
 .company .philosophy .inner > ul > li:last-child ul li:last-child { right: .1rem; }
@@ -1078,6 +1112,8 @@
 .company .philosophy .inner > ul > li:last-child ul li:hover h4 { color: #fff; }
 .company .philosophy .inner > ul > li:last-child ul li:hover h4::before { background: #fff; }
 .company .philosophy .inner > ul > li:last-child ul li:hover p { display: block; }
+
+
 
 /* 대표이사 인사말 */
 .company .greeting { max-width: 100%; background: linear-gradient(to bottom, #f9f9f9, #f9f9f9 89.7rem, #fff 89.8rem, #fff 100%); position: relative; padding: 12rem 0 20rem; }
