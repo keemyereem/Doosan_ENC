@@ -28,6 +28,7 @@ var mainEvent = {
         this.sec06Tab();
         this.headerEvent();
         this.footerEvent();
+        this.mobile();
     },
 
     createFullpage: () => {
@@ -504,22 +505,22 @@ var mainEvent = {
     },
 
     mobile: () => {
-        if($('#mobile').length){
 
+        if($('#mobile').length){
             // section toggle active when swipe to arrive each offsetTop
             $(window).on('load scroll resize', ()=> {
-                const section = $('#mobile section');
-
-                section.each((index)=> {
+                const section = $('#mobile .section');
+                
+                section.each(function(index) {
                     let sectionTop = section.eq(index).offset().top - 200,
                         sectionNextTop = section.eq(index).next().offset().top - 200,
                         st = $(window).scrollTop();
 
-                    if ( st < sectionNextTop && st > sectionTop ) {
+                    if ( st > sectionTop && st < sectionNextTop ) {
                         section.eq(index).addClass('active');
 
-
                         if (index === 0) {
+                            // mainEvent.mainSwiper()
                             swiper.autoplay.start();
                             setTimeout(() => {
                                 $('#mobile .section01').addClass('ani');
