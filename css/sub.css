@@ -14,11 +14,24 @@
 .fp-viewing-firstPage .header.wht .gnb > ul > li > a,
 .fp-viewing-fifthPage .header.wht .gnb > ul > li > a,
 .fp-viewing-firstPage .header.wht .gnb_menu .right_nav ul li a,
-.fp-viewing-fifthPage .header.wht .gnb_menu .right_nav ul li a  {color: #fff; }
+.fp-viewing-fifthPage .header.wht .gnb_menu .right_nav ul li a  {color: #fff;position: relative; }
+.fp-viewing-firstPage .header.wht .gnb_menu .right_nav ul li a::before,
+.fp-viewing-fifthPage .header.wht .gnb_menu .right_nav ul li a::before {content:'';display: inline-block;width: 0;height: .1rem;background: #fff;position: absolute;bottom: -.2rem;left: 1.9rem;transition: width .3s;}
+.fp-viewing-firstPage .header.wht .gnb_menu .right_nav ul li a:hover::before,
+.fp-viewing-fifthPage .header.wht .gnb_menu .right_nav ul li a:hover::before { width: 60%; }
+
 .fp-viewing-firstPage .header.wht .lang_select .lang_current .ico.global,
 .fp-viewing-fifthPage .header.wht .lang_select .lang_current .ico.global {background: url(../images/common/icon_lang_w.png) 0 0 no-repeat;}
 .fp-viewing-firstPage .header.wht .gnb_menu .weve_btn a,
 .fp-viewing-fifthPage .header.wht .gnb_menu .weve_btn a {border: 1px solid #fff;background: url(../images/common/weve_logo_w.png) no-repeat 50% 50%;}
+
+.fp-viewing-firstPage .header.wht .gnb_menu .weve_btn a:hover,
+.fp-viewing-fifthPage .header.wht .gnb_menu .weve_btn a:hover {background: url(../images/common/weve_logo_b.png) no-repeat 50% 50%;border: 0;}
+.fp-viewing-firstPage .header.wht .gnb_menu .weve_btn a::before,
+.fp-viewing-fifthPage .header.wht .gnb_menu .weve_btn a::before {content: "";display: block;position: absolute;left: 0;top: 0;bottom: 0;right: 0;transform: scaleX(0);z-index: -1;background-color: #fff;transition:all .2s ease-out;transform-origin:0 50%;}
+.fp-viewing-firstPage .header.wht .gnb_menu .weve_btn a:hover::before,
+.fp-viewing-fifthPage .header.wht .gnb_menu .weve_btn a:hover::before {transform:scaleX(1);}
+
 .fp-viewing-firstPage .header.wht .gnb_menu .right_nav ul li:first-child a:after,
 .fp-viewing-fifthPage .header.wht .gnb_menu .right_nav ul li:first-child a:after,
 .fp-viewing-firstPage .header.wht .top_sitemap button span::before, .fp-viewing-firstPage .header.wht .top_sitemap button span::after,
@@ -852,7 +865,7 @@
 .civil_engineer .business_lists .list_img .list_hover .name::before { content:''; display: block; width: 0; height: 0.6rem; background: #005eb8; margin: 0 auto 4.5rem; transform: skew(-40deg); transition: width .3s; }
 .civil_engineer .business_lists .list_img:hover .list_hover { width: 100%; height: 100%; opacity: 1; z-index: 1; }
 .civil_engineer .business_lists .list_img:hover .list_hover .name::before { width: 6.5rem; }
-.civil_engineer .business_lists .list_img .list_hover .date { color: #fff; opacity: .8; font-size: 2.2rem; font-weight: 300; margin-top: 1rem; overflow: hidden; transition: all ease .2s; }
+.civil_engineer .business_lists .list_img .list_hover .date { font-family: 'Montserrat'; color: #fff; opacity: .8; font-size: 2.2rem; font-weight: 300; margin-top: 1rem; overflow: hidden; transition: all ease .2s; }
 .civil_engineer .business_lists .view_more { display: block; width: 17rem; height: 5rem; line-height: 5rem; border: 1px solid rgba(255, 255, 255,.5); border-radius: 2.5rem; font-family: 'Montserrat'; font-size: 1.4rem; color: #fff; padding: 0 2.8rem; margin: 4.5rem auto 0; position: relative; }
 .civil_engineer .business_lists .view_more::after { content:''; display: inline-block; width: 1.3rem; height: 1.3rem; background: url(../images/business/list_plus_w.png) no-repeat; margin-left: 1.7rem; position: absolute; top: 50%; margin-top: -.65rem;  transition: transform .3s; }
 .civil_engineer .business_lists .view_more:hover::after { transform: rotate(90deg); }
@@ -1319,7 +1332,7 @@
 
 /* 공통 */
 .sr .sub_visual { background-image: url(../images/social/sr_bg.png); }
-.sr .contents { max-width: 144rem; width: 100%; margin: auto; letter-spacing: -.15rem; }
+.sr .contents { max-width: 144rem; width: 100%; margin: auto; }
 .sr .btn_mob { display: none; }
 .sr section > h3 { text-align: center; font-size: 3.8rem; font-weight: 450; padding-bottom: 6rem; }
 .sr .board { max-width: 120rem; width: 100%; margin: 0 auto 12rem; box-shadow: .2rem .3rem 5rem 0 rgba(41, 41, 41, 0.2); border-top: .8rem solid #005eb8; padding: 9.8rem 0 8rem; background: #fff; }
@@ -1348,7 +1361,7 @@
 .sr .certList ul li dl dt p { font-family: 'Pretendard', sans-serif; font-size: 1.8rem; font-weight: 150; color: #555555; line-height: 1.9; padding-top: 2rem; }
 .sr .certList ul li dl dd:not(:last-child) { font-size: 1.8rem; font-weight: 150; line-height: 2; }
 .sr .certList ul li dl dd:not(:last-child)::before { content: ''; background: url(../images/social/single_dot.png) 50% 50% no-repeat; width: .6rem; height: .6rem; display: inline-block; margin: -.2rem 1rem 0 0; vertical-align: middle; }
-.sr .certList ul li dl dd:last-child { margin-top: 8.5rem; }
+.sr .certList ul li dl dd:last-child { margin-top: 6rem; }
 .sr .certList ul li dl dd:last-child a { font-size: 1.6rem; display: inline-block; color: #000000; height: 6.4rem; line-height: 6.4rem; width: 28.3rem; text-align: center; border: .1rem solid #000; border-radius: 3.5rem; transition: all ease .3s; }
 .sr .certList ul li dl dd:last-child a:after { content: ''; display: inline-block; background: url(../images/common/icon_plus_21x22.png)50% 50% no-repeat; width: 1.9rem; height: 1.9rem; position: relative; top: .3rem; margin-left: 11.5rem; }
 .sr .certList ul li dl dd:last-child a:hover { background: #000000; color: #fff; }
@@ -1367,12 +1380,25 @@
 .sr .prologue .board_inner li > span { margin-right: 4.5rem; font-weight: 400; }
 
 /* 안전보건경영 */
-.sr .hsm { max-width: 100%; }
+.sr .hsm { max-width: 100%; background: #f9f9f9; padding-top: 12rem; }
 .sr .hsm .section01 .board_inner { background: rgba(0, 94, 184, .02); }
 .sr .hsm .section01.board .sign p:nth-child(2) { padding: 1rem 0; }
 .sr .hsm .section01.board .sign p:nth-child(2) span { font-family: 'Montserrat', sans-serif; margin-right: 1rem; text-transform: uppercase; }
 .sr .hsm .section01.board .sign p:nth-child(2) img { margin-left: 2.2rem; }
-.sr .hsm .section02 { background: #f9f9f9; padding: 12rem 0 20rem; }
+.sr .hsm .section02 { background: #fff; padding: 11rem 0 12rem; }
+.sr .hsm .section02 ul { max-width: 144rem; height: auto; margin: auto; width: 100%; display: flex; border: 1rem solid #f5f5f5; position: relative; }
+.sr .hsm .section02 ul li { width: fit-content; display: flex; flex-direction: column; align-items: center; height: 48.8rem; position: relative; }
+.sr .hsm .section02 ul li:first-child { padding: 8rem 12rem 0; }
+.sr .hsm .section02 ul li:nth-child(2) { padding: 8rem 11rem 0; }
+.sr .hsm .section02 ul li:last-child { padding-left: 8rem; padding-top: 8rem; }
+.sr .hsm .section02 ul li:not(:last-child)::after { content: ''; width: .1rem; height: calc(100% - 17rem); display: inline-block; position: absolute; right: 0; top: 8rem; background-image: linear-gradient(to bottom, #e8e8e8 .5rem, rgba(255,255,255,0) .1rem); background-position: right; background-size: 1px 6px; background-repeat: repeat-y; }
+.sr .hsm .section02 ul li dl { text-align: left; margin-top: 2.4rem; position: relative; }
+.sr .hsm .section02 ul li:first-child dl { width: 19.5rem; }
+.sr .hsm .section02 ul li:last-child dl { width: 27.5rem; }
+.sr .hsm .section02 ul li dl dt { font-size: 2.6rem; font-weight: 450; color: #222222; line-height: 1; padding-bottom: 2rem; }
+.sr .hsm .section02 ul li dl dd { position: relative; padding-left: 1.5rem; font-size: 1.8rem; color: #555555; line-height: 2; white-space: nowrap; }
+.sr .hsm .section02 ul li dl dd::before { content: ''; width: .5rem; height: .5rem; transform: rotate(15deg); background: #d9dfe9; display: inline-block; position: absolute; top: 0; bottom: 0; left: 0; margin: auto; }
+.sr .hsm .section03 { padding: 12rem 0 20rem; }
 
 /* 환경경영 */
 .sr .em { max-width: 100%; background: #f9f9f9; }
