@@ -207,7 +207,7 @@ br {font-family:dotum !important;}
 .wht .gnb_menu .right_nav ul li a  {color: #fff;position: relative; }
 .wht .gnb_menu .right_nav ul li a::before {content:'';display: inline-block;width: 0;height: .1rem;background: #fff;position: absolute;bottom: -.2rem;left: 1.9rem;transition: width .3s;}
 .wht .lang_select .lang_current .ico.global {background: url(../images/common/icon_lang_w.png) 0 0 no-repeat;}
-.wht .gnb_menu .weve_btn a {border: 1px solid #fff;background: url(../images/common/weve_logo_w.png) no-repeat 50% 50%;overflow: hidden;position: relative;}
+.wht .gnb_menu .weve_btn a {border: 1px solid #fff;background: url(../images/common/weve_logo_w.png) no-repeat 50% 50%;overflow: hidden;position: relative; transition: all ease-out .2s;}
 .wht .gnb_menu .weve_btn a:hover {background: url(../images/common/weve_logo_b.png) no-repeat 50% 50%;border: 0;}
 .wht .gnb_menu .weve_btn a::before {content: "";display: block;position: absolute;left: 0;top: 0;bottom: 0;right: 0;transform: scaleX(0);z-index: -1;background-color: #fff;transition:all .2s ease-out;transform-origin:0 50%;}
 .wht .gnb_menu .weve_btn a:hover::before {transform:scaleX(1);}

@@ -67,11 +67,11 @@ $(function(){
 
       if (param == 'linkvia1') {
         scrollFocus();
-        $(".isotope_item").eq(0).children('a').trigger("click");
+        $(".isotope_item").eq(8).children('a').trigger("click");
         
       } else if (param == 'linkvia2') {
         scrollFocus();
-        $(".isotope_item").eq(1).children('a').trigger("click");
+        $(".isotope_item").eq(0).children('a').trigger("click");
       }
       history.replaceState({}, null, location.pathname);
     } else if ($('.privacy').length) {
@@ -739,7 +739,8 @@ var civilEngineerEvent = {
 
   popupMouse: () => {
     // 영역 밖 이동 시 마우스 닫기 버튼 보이기
-    const LayerPopup = $(".card_popup01 .popup_inner .pop_cont .inner_box");
+    const LayerPopup = $(".card_popup01 .popup_inner"),
+          popupClose = $('.pop_close');
 
     $(document).mousemove(function (e){
       if (LayerPopup.has(e.target).length === 0){
@@ -757,8 +758,8 @@ var civilEngineerEvent = {
         // pageX, pageY와는 다름.
         const mouseX = e.clientX;
         const mouseY = e.clientY;
-        circle.style.left = mouseX - 315 + 'px';
-        circle.style.top = mouseY - 45 + 'px';
+        circle.style.left = mouseX - 52.5 + 'px';
+        circle.style.top = mouseY - 52.5 + 'px';
     });
   },
 
@@ -1636,14 +1637,15 @@ var recruitEvent = {
 
       // 영영 밖 이동 시 마우스 닫기 버튼  커서 따라다니기
       const circle = document.querySelector(".pop_close");
-        document.addEventListener("mousemove", (e) => { // mousemove이벤트를 이용해 움
-            // 마우스의 좌표는 clientX와 clientY를 이용해 알수 있다. -> 브라우저 window의 좌표값 위치를 전달한다.
-            // pageX, pageY와는 다름.
-            const mouseX = e.clientX;
-            const mouseY = e.clientY;
-            circle.style.left = mouseX - 35 + 'px';
-            circle.style.top = mouseY - 35 + 'px';
-        });
+
+      document.addEventListener("mousemove", (e) => { // mousemove이벤트를 이용해 움
+          // 마우스의 좌표는 clientX와 clientY를 이용해 알수 있다. -> 브라우저 window의 좌표값 위치를 전달한다.
+          // pageX, pageY와는 다름.
+          const mouseX = e.clientX;
+          const mouseY = e.clientY;
+          circle.style.left = mouseX - 35 + 'px';
+          circle.style.top = mouseY - 35 + 'px';
+      });
     }
 
     // 팝업 닫기

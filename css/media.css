@@ -260,7 +260,7 @@
     #mobile #main #fullpage .section02 .right { display: none; }
     #mobile #main #fullpage .section02 .big_img { width: 100%; max-width: 100%; height: 62vh; }
     #mobile #main #fullpage .section02 .big_img img { width: 100%; }
-    #mobile #main #fullpage .section02 .swiper-slide h2 { width: 100%; transform: translate(50%,0); top:0; margin: 2rem 0 2rem 2rem; font-size: 4rem; transition: opacity; }
+    #mobile #main #fullpage .section02 .swiper-slide h2 { width: 100%; height: auto; transform: translate(50%,0); top:0; margin: 2rem 0 2rem 2rem; font-size: 4rem; transition: opacity; }
     #mobile #main #fullpage .section02/* .active */ .swiper-slide.swiper-slide-active h2,
     #mobile #main #fullpage .section02/* .active */ .swiper-slide.swiper-slide-duplicate-active h2 {opacity: 1; position: relative; left: 2rem; transform: translate(0,0);font-size: 4rem; transition: all ease-in-out .8s }
 
@@ -988,7 +988,7 @@
 #mobile .civil_engineer .business_lists .list_more::after { width: 1.6rem; height: 1.6rem; background-size: contain; right: 3rem; }
 
 /* 사업실적 리스트 팝업 */
-#mobile .card_popup .popup_inner { width: calc(100% - 2rem); }
+#mobile .card_popup .popup_inner { width: calc(100% - 2rem);height: auto; }
 #mobile .card_popup .popup_inner .pop_close { width: 5.25rem; height: 5.2rem; top: -3rem; left: 50%; right: initial; transform: translate(-50%,-100%); }
 #mobile .card_popup .popup_inner .pop_cont { max-width: 100%; width: 100%; flex-direction: column; height: 125vw; overflow-y: scroll; background: #fff; }
 #mobile .card_popup .popup_inner .pop_cont .inner_box { width: 100%; height: fit-content; min-height: 125vw; padding: 1rem; background: #f5f5f5; }
