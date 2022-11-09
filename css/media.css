@@ -7,7 +7,6 @@
 
 @media screen and (max-width:1600px) {
     .card_popup .popup_inner .pop_cont .inner_box .list img { width: 100%; object-fit: contain; }
-    .card_popup .popup_inner .pop_close { top: -3rem; left: 50%; right: initial; transform: translate(-50%,-100%); }
 }
 
 @media screen and (max-width:1680px) {
@@ -19,7 +18,7 @@
 }
 
 @media screen and (max-width:1440px) {
-    #pc { overflow-x: auto; width: 144rem;}
+    #pc { overflow-x: auto !important; width: 144rem;}
     .container .sub_visual h1 { left: 5rem; }
     #sub .container .inner { padding: 0 5rem; width: 144rem; }
     #sub .container .footer .inner { padding: 15.21vh 4rem 0; }
@@ -1000,6 +999,7 @@
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_des { font-size: 1.3rem; line-height: 1.69; height: 10.8rem; overflow-y: auto; }
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_mark { flex-wrap: wrap; padding: 3rem 0; }
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_mark li { width: 50%; }
+#mobile .card_popup .popup_inner .pop_cont .txt_box .card_mark li:not(:first-child) { margin-left: 0; }
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_mark li img { width: fit-content; }
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_mark li:nth-child(n+1):nth-child(-n+2) { margin-bottom: 2.5rem; }
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_tb th { font-size: 1.25rem; }
@@ -1369,15 +1369,16 @@
 #mobile .sr .certList ul li dl { padding: 3rem 2rem; }
 #mobile .sr .certList ul li dl dt { font-size: 2rem; padding-top: 2.9rem; }
 #mobile .sr .certList ul li dl dt::before { width: 4.2rem; height: .4rem; left: .4rem; }
-
 #mobile .sr .certList ul li dl dt p { font-size: 1.4rem; font-weight: 150; color: #555555; line-height: 1.9; padding-top: 2rem; }
-
 #mobile .sr .certList ul li dl dd:not(:last-child) { font-size: 1.4rem; line-height: 1.64; }
 #mobile .sr .certList ul li dl dd:not(:last-child)::before { width: .5rem; height: .5rem; margin: -.1rem 1rem 0 0; background-size: contain;}
 #mobile .sr .certList ul li dl dd:last-child { margin-top: 2.5rem; }
 #mobile .sr .certList ul li dl dd:last-child a { font-size: 1.3rem; height: 4.5rem; line-height: 4.5rem; width: 21.1rem; border-radius: 4.5rem; }
 #mobile .sr .certList ul li dl dd:last-child a:after { background: url(../images/common/icon_plus_15x15.png)50% 50% no-repeat; width: 1.5rem; height: 1.5rem; position: relative; top: .2rem; margin-left: 8rem; }
 #mobile .sr .certList ul li dl dd:last-child a:hover:after { background: url(../images/common/icon_plus_w_15x15.png)50% 50% no-repeat; }
+#mobiel .sr .social_mob_img { display: block; }
+#mobile .sr .social_pc_img { display: none; }
+
 
 /* 프롤로그(사회책임경영 원칙) */
 #mobile .sr .prologue { box-shadow: .1rem .15rem 2.5rem 0 rgba(41, 41, 41, 0.2); margin-bottom: 10rem; margin-top: 3.5rem; }
@@ -1456,8 +1457,93 @@
 #mobile .sr .qm .section03 { padding: 5.5rem 0 10rem; }
 #mobile .sr .qm .section03 ul li dl { padding: 3rem 2rem; }
 
+/* 상생경영 */
+#mobile .sr .ww { width: 100%; margin-top: 5.5rem; }
+#mobile .sr .ww section { padding: 5.5rem 0; }
+#mobile .sr .ww .section01 > h2 { width: calc(100% - 4rem); margin: auto 2rem; padding: 2.25rem 0 0; font-size: 1.8rem; line-height: 1.5; }
+#mobile .sr .ww .section01 > h2 span { font-size: 1.7rem; padding-top: 1.5rem; }
+#mobile .sr .ww .section01 > h2::before { width: 4.1rem; height: .4rem; }
+#mobile .sr .ww .section02 > .social_mob_img { width: calc(100% - 2rem); margin: auto; } 
+#mobile .sr .ww .section02 > h3 { padding-bottom: 2.5rem; }
+#mobile .sr .ww .section03 > h3 { padding-bottom: .5rem; }
+#mobile .sr .ww .section03 > p { font-size: 1.5rem; line-height: 1.73; padding: 0 2rem; }
+#mobile .sr .ww .section03 .ww_info2 { width: calc(100% - 2rem); margin: 2.5rem auto 0; }
+#mobile .sr .ww .section04 > ul { flex-direction: column; width: calc(100% - 4rem); margin: auto; }
+#mobile .sr .ww .section04 > ul > li { width: 100%; }
+#mobile .sr .ww .section04 > ul > li:not(:first-child) { margin-top: 1rem; }
+#mobile .sr .ww .section04 > ul > li::before { height: .5rem; background-size: contain; }
+#mobile .sr .ww .section04 > ul > li > div { padding: 3rem 0 3rem 10rem; flex-wrap: wrap; }
+#mobile .sr .ww .section04 > ul > li > div span { font-size: 1.3rem; padding-bottom: .5rem; order: 1; }
+#mobile .sr .ww .section04 > ul > li > div img { width: 4.3rem; order:0; position: absolute; left: 2.5rem; }
+#mobile .sr .ww .section04 > ul > li > div h3 { font-size: 1.9rem; order: 2; padding-top: 0; }
+#mobile .sr .ww .section04 > ul > li .block2 { padding: .5rem 2.5rem; }
+#mobile .sr .ww .section04 > ul > li .block2 li { padding: 2rem 0 2rem .5rem; font-size: 1.4rem; line-height: 1.42; }
+#mobile .sr .ww .section04 > ul > li .block2 li:not(:first-child) { background-image: linear-gradient(to left, #cccccc 4px, rgba(255,255,255,0) 2px); }
+#mobile .sr .ww .section04 > ul > li .block2 li span { width: 10rem; }
+#mobile .sr .ww .section05 { padding: 5.5rem 0 10rem; background: #f9f9f9; }
+#mobile #sub .sr .ww .section05 > ul { flex-direction: column; width: calc(100% - 2rem); padding-bottom: 17.75rem; }
+#mobile .sr .ww .section05 > ul > li { width: 100%; }
+#mobile .sr .ww .section05 > ul > li:first-child { order: 1; margin-top: 4rem; }
+#mobile .sr .ww .section05 > ul > .info { right: 1rem; width: calc(100% - 2rem); height: auto; padding: 1rem 2.5rem 2.5rem; }
+#mobile .sr .ww .section05 > ul > .info li { line-height: 1.4; padding: 1.5rem 0 1.5rem 8rem; font-size: 1.5rem; white-space: unset; }
+#mobile .sr .ww .section05 > ul > .info li span { font-size: 1.4rem; }
+#mobile .sr .ww .section05 > ul > .info > span { padding-top: .5rem; font-size: 1.25rem; line-height: 1.36; white-space: unset; display: flex; }
+#mobile .sr .ww .section05 > ul > .info > span i { margin-right:.25rem; }
+#mobile .sr .ww .section05 > ul > li p { padding-top: 2.5rem; margin: 0; font-size: 1.9rem; line-height: 1.47; text-align: center; }
+#mobile .sr .ww .section05 > ul > li p span { font-size: 1.5rem; padding-top: 2rem; line-height: 1.46; }
+#mobile .sr .ww .section05 > ul > li p::before { width: 2.25rem; height: .3rem;left: 0rem; right: 0 }
 
+/* 윤리경영 */
+#mobile .sr .etm { width: 100%; margin-top: 5.5rem; }
+#mobile .sr .etm section { width: 100%; padding: 5.5rem 0; }
+#mobile .sr .etm section p,
+#mobile .sr .etm section img { width: calc(100% - 4rem); margin: auto; }
+#mobile .sr .etm .section01 { padding: 5.5rem 0 4.5rem; }
+#mobile .sr .etm .section01 p { font-size: 1.4rem; padding: 2.5rem 1rem; }
+#mobile .sr .etm .section01 img { margin-top: 4.5rem; }
+#mobile .sr .etm .section02 h3 { padding-bottom: 2.5rem; }
+#mobile .sr .etm .section02 p span { font-size: 1.6rem; line-height: 1.68; padding-bottom: .5rem; }
+#mobile .sr .etm .section02 p { font-size: 1.5rem; line-height: 1.73; padding-top: 3rem; }
+#mobile .sr .etm .section03 { padding: 5.5rem 0 10rem; }
+#mobile .sr .etm .section03 h3 { padding-bottom: .5rem; }
+#mobile .sr .etm .section03 p { font-size: 1.5rem; line-height: 1.73; }
+#mobile .sr .etm .section03 img { margin-top: 4.5rem; }
 
+/* 사회공헌 */
+#mobile .sr .sc { width: 100%; margin-top: 5rem; }
+#mobile .sr .sc .section01 { background: #f9f9f9; padding-top: 2.5rem; padding-bottom: 2.5rem; }
+#mobile .sr .sc .section01 ul { flex-direction: column; padding: 0 2rem; }
+#mobile .sr .sc .section01 ul li { flex: initial; width: 25rem; height: 15rem;}
+#mobile .sr .sc .section01 ul li+li { margin-top: 1.5rem; }
+#mobile .sr .sc .section01 ul li:not(:first-child) { margin-left: 0; }
+#mobile .sr .sc .section01 ul li:nth-child(2n) { margin-top: 1.5rem; margin-left: 7.5rem; }
+#mobile .sr .sc .section01 ul li .count { font-size: 5rem; line-height: 3.6rem; }
+#mobile .sr .sc .section01 ul li .num span { font-size: 1.5rem; }
+#mobile .sr .sc .section01 ul li .tit { font-size: 1.6rem; margin: 1.5rem 0 1rem; }
+#mobile .sr .sc .section01 ul li .date { font-size: 1.4rem; }
+#mobile .sr .sc .section01 ul li .date::before { width: 1.1rem; height: 1.1rem; margin-right: 0.5rem; background: url(../images/social/contri_icon_clock_m.png) no-repeat; background-size: contain; }
+#mobile .sr .sc .section01 ul li:hover { background: url(../images/social/contri_onbg.png) no-repeat 50% 50%; }
+#mobile .sr .sc .section01 ul li:hover .date::before { background: url(../images/social/contri_icon_clock_wm.png) no-repeat; background-size: contain; }
+#mobile .sr .sc .top { padding: 5.5rem 0 0; }
+#mobile .sr .sc .top h3 { font-size: 2.4rem; }
+#mobile .sr .sc .top p { font-size: 1.5rem; line-height: 1.73; letter-spacing: -.075rem; margin-top: .5rem; }
+#mobile .sr .sc .section .box_wrap { margin-top: 2rem; flex-direction: column; padding: 0 1rem; }
+#mobile .sr .sc .section .box_wrap .box { width: 100%; min-height: auto; padding: 2rem 2rem 3rem; }
+#mobile .sr .sc .section .box_wrap .box .tit { font-size: 2.4rem; margin-top: 2.5rem; }
+#mobile .sr .sc .section .box_wrap .box p { font-size: 1.5rem; line-height: 1.6; letter-spacing: -.1rem; margin-top: 1rem; }
+#mobile .sr .sc .section .box_wrap .box:last-of-type { margin-top: 1rem; }
+#mobile .sr .sc .section02 .box_wrap .box:first-of-type { padding: 2rem 2rem 3rem; flex-direction: column-reverse; }
+#mobile .sr .sc .section03 .box_wrap .box:last-of-type { padding: 2rem 2rem 3rem; flex-direction: column-reverse; }
+#mobile .sr .sc .section04 { padding-bottom: 10rem; padding-top: 5.5rem; margin-top: 2rem; flex-direction: column; display: flex; }
+#mobile .sr .sc .section04 h3 { font-size: 2.4rem; order: 1;  }
+#mobile .sr .sc .section04 p { font-size: 1.5rem; line-height: 1.73; letter-spacing: -.075rem; margin-top: 1.5rem; order: 3; padding: 0 1rem; }
+#mobile .sr .sc .section04 .box_wrap { width: calc(100% - 2rem); height: 17.4rem; border-radius: 6.5rem; margin: 2.5rem auto 0; padding: 1.5rem 1rem; box-shadow: 1.5px 2.5px 4px 0.5px rgba(0, 0, 0, 0.05); order: 2; }
+#mobile .sr .sc .section04 .box_wrap .tit { font-size: 1.5rem; }
+#mobile .sr .sc .section04 .box_wrap ul { width: calc(100% - 2rem); margin: 1rem auto 0; }
+#mobile .sr .sc .section04 .box_wrap ul li { width: calc(50% + 1.8rem); height: 12rem; border-radius: 6rem; box-shadow: 1.5px 2.5px 4px 0.5px rgba(0, 0, 0, 0.1); }
+#mobile .sr .sc .section04 .box_wrap ul li:first-child .icon img { width: 4.5rem; }
+#mobile .sr .sc .section04 .box_wrap ul li:last-child .icon img { width: 4.1rem; }
+#mobile .sr .sc .section04 .box_wrap ul li .txt { font-size: 1.4rem; margin-top: 1.5rem; }
 
 /* ================================  인재채용  =============================== */
 
@@ -1599,7 +1685,13 @@
 #mobile .graybox .policy > .inner > ul li { height: 4.5rem; line-height: 4.5rem; }
 #mobile .graybox .policy > .inner > ul li.on { box-shadow: 0px 0px 16px 4px rgba(34, 34, 34, 0.2); }
 #mobile .graybox .policy > .inner > ul li a { font-size: 1.35rem; letter-spacing: -.135rem; }
+#mobile .graybox .policy > .inner .select_wrap { top: 6.5rem; right: 50%; transform: translateX(50%); width: 100%; }
+#mobile .graybox .policy > .inner .terms_site .site_list { min-width: auto; }
+#mobile .graybox .policy > .inner .terms_site.select01 { width: 100%; max-width: 19rem; text-align: center; margin: 0 auto; }
+#mobile .graybox .policy > .inner .terms_site.select02 { width: 100%; max-width: 25rem; text-align: center; margin: 0 auto; }
 #mobile .graybox .policy > .inner .select_row { max-width: 22rem; width: 100%; position: initial; transform: translateY(0); border: 0; border-bottom: 2px solid #222; margin: 3rem auto 0; }
+#mobile .graybox .policy > .inner .terms_site .site_selected { font-size: 1.3rem; line-height: 4rem; padding: 0 1rem; }
+#mobile .graybox .policy > .inner .terms_site .site_list li a { font-size: 1.3rem; }
 #mobile .graybox .policy > .inner .select_row::after { right: 1rem; }
 #mobile .graybox .policy > .inner .select_row select { padding: 0 1rem; }
 #mobile .graybox .policy > .inner .select_row label { font-size: 1.5rem; padding: 0 1rem; }

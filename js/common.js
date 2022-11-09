@@ -37,7 +37,7 @@ $(function(){
     once : true,
     throttleDelay : 99,
     duration: 1000,
-    anchorPlacement: 'center-bobttom',
+    anchorPlacement: 'bottom-bobttom',
     startEvent: "load",
 
   });
@@ -414,7 +414,7 @@ var commonEvent = {
         var footerTop = $('.footer').offset().top - $(window).outerHeight(),
             pos = $('.footer').outerHeight() + Number(80),
             pos_intw = $('.footer').outerHeight() + Number(196),
-            pos_m = $('.footer').outerHeight() + Number(35);
+            pos_m = $('.footer').outerHeight() + Number(25);
         
         if($(this).scrollTop() > footerTop){
             if ($(window).width()>767) {
@@ -705,6 +705,7 @@ var businessEvent = {
 var civilEngineerEvent = {
   init: function(){
     this.civilSwiper();
+    this.popupMouse();
   },
 
   civilSwiper: () => {
@@ -736,6 +737,31 @@ var civilEngineerEvent = {
     });
   },
 
+  popupMouse: () => {
+    // 영역 밖 이동 시 마우스 닫기 버튼 보이기
+    const LayerPopup = $(".card_popup01 .popup_inner .pop_cont .inner_box");
+
+    $(document).mousemove(function (e){
+      if (LayerPopup.has(e.target).length === 0){
+        popupClose.css({'transform': 'scale(1)'});
+      } else {
+        popupClose.css({'transform': 'scale(0)'});
+      }
+    });
+
+    // 영영 밖 이동 시 마우스 닫기 버튼  커서 따라다니기
+    const circle = document.querySelector(".pop_close");
+    
+    document.addEventListener("mousemove", (e) => { // mousemove이벤트를 이용해 움
+        // 마우스의 좌표는 clientX와 clientY를 이용해 알수 있다. -> 브라우저 window의 좌표값 위치를 전달한다.
+        // pageX, pageY와는 다름.
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
+        circle.style.left = mouseX - 315 + 'px';
+        circle.style.top = mouseY - 45 + 'px';
+    });
+  },
+
 };
 
 //사업실적 팝업
@@ -754,6 +780,7 @@ function popupbusiness(popConts) {
         $('.pop_cont .list img').css({'transform':'scale(1)'});
       }, 200);
   });
+
 }
 
 var civilOutline = {
@@ -1570,13 +1597,14 @@ var recruitEvent = {
         if ($('#pc').length) {  // 적응형 [PC]
           img.css({'right': moving + 'px'});
 
+
         } else {  // 적응형 [MOBILE]
           setTimeout(()=> {
-            // 1. 정은별 사원, 2. 정우재 사원, 8. 김형석 사원, 13. 김규태 차장, 14. 박지용 사원, 15. 나재우 대리
+            // 2. 정우재 사원, 8. 김형석 사원, 13. 김규태 차장, 14. 박지용 사원, 15. 나재우 대리
             img.css({'right': -moving / 100 + 'rem', 'opacity': 1});
 
             // 특정 이미지 간격 조정
-            if (index === 2 || index === 5 || index === 6 || index === 11) {  // 3. 김동훈 사원, 6. 양지범 과장, 7. 천소영 차장, 12 송유현 대리
+            if (index === 0 || index === 2 || index === 5 || index === 6 || index === 11) {  // 1. 정은별 사원, 3. 김동훈 사원, 6. 양지범 과장, 7. 천소영 차장, 12 송유현 대리
               img.css({'right': 0});
             } else if (index === 3 || index === 4) {  // 4. 문종호 대리, 5. 김종훈 과장
               img.css({'right': -moving / 30 + 'rem'});
@@ -1641,6 +1669,36 @@ var recruitEvent = {
         $('.popup').fadeOut(300);
     }
     
+  },
+}
+
+var socialEvent = {
+  init: function(){
+    this.counting();
+  },
+
+  counting: () => {
+    setTimeout(()=>{
+      $('.count').each(function() { 
+        var $this = $(this),
+            countTo = $this.attr('data-count');
+             
+        $({ countNum: $this.text()}).animate({
+          countNum: countTo 
+        },
+        {
+          duration: 2000, 
+          easing:'linear',
+          step: function() {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function() { 
+            $this.text(this.countNum);
+          }
+        });  
+      });
+    },1000)
+  
   },
 }
 

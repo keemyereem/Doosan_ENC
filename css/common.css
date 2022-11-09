@@ -34,7 +34,7 @@ table {width:100%; border-collapse:collapse; table-layout:fixed;}
 img, select, input, button {vertical-align:top;}
 img {perspective:none; -ms-perspective:none; -o-perspective:none; -webkit-perspective:none; -moz-perspective:none;}
 br {font-family:dotum !important;}
-::-webkit-scrollbar { width: 5px; height: 2px; }
+::-webkit-scrollbar { width: 5px; height: 5px; }
 ::-webkit-scrollbar-track { border:5px solid transparent; background: transparent; }
 ::-webkit-scrollbar-thumb { background: #005eb8; border-radius: 10px; }
 ::-webkit-scrollbar-thumb:hover { background: #014099; }
@@ -323,7 +323,7 @@ br {font-family:dotum !important;}
     .container .sub_visual.ani {background-size: auto 100%;}
 }
 .container .sub_visual .inner { position: relative; }
-.container .sub_visual h1 { font-size: 7rem; font-weight: 400; color: #fff; line-height: 1; letter-spacing: -.35rem; position: absolute; top: 50%; left: 0; transform: translateY(-2rem); }
+.container .sub_visual h1 { font-family: 'Montserrat','Pretendard'; font-size: 7rem; font-weight: 400; color: #fff; line-height: 1; letter-spacing: -.35rem; position: absolute; top: 50%; left: 0; transform: translateY(-2rem); }
 .container .sub_visual .sub_visual_menu { width: 62rem; height: 6rem; background: #fff; position: absolute; bottom: 16rem; display: flex; }
 .container .sub_visual .sub_visual_menu.fixed { position: fixed; top: 0; z-index: 99; width: 100%; left:0; border-bottom: 1px solid #e8e8e8; }
 .container .sub_visual .sub_visual_menu .menu_inner {display: flex; position: relative; z-index: 30;}
@@ -334,7 +334,7 @@ br {font-family:dotum !important;}
 .container .sub_visual .sub_visual_menu.fixed .depth { border:0; }
 .container .sub_visual .sub_visual_menu.fixed .depth2 { border-bottom: 1px solid #000; }
 .container .sub_visual .sub_visual_menu .depth.open { box-shadow: 1px 2px 9.5px 0.5px rgba(51, 51, 51, 0.1); height: auto; }
-.container .sub_visual .sub_visual_menu .depth > a { color: #777; display: block; width:100%; height: 6rem; padding-left: 4rem; line-height: 6rem; background: transparent; position: relative; }
+.container .sub_visual .sub_visual_menu .depth > a { font-family: 'Montserrat','Pretendard'; color: #777; display: block; width:100%; height: 6rem; padding-left: 4rem; line-height: 6rem; background: transparent; position: relative; }
 .container .sub_visual .sub_visual_menu .depth.open > a { background: #fff; }
 .container .sub_visual .sub_visual_menu .depth > a:before { content:''; width: 0; height: 0; border-top: .7rem solid #777; border-left: .7rem solid transparent; border-right: .7rem solid transparent; position: absolute; right: 3rem; top: 2.7rem; }
 .container .sub_visual .sub_visual_menu .depth.open > a:before {transform: rotate(180deg);}
@@ -342,7 +342,7 @@ br {font-family:dotum !important;}
 .container .sub_visual .sub_visual_menu .depth.open > a:after {display: block;}
 .container .sub_visual .sub_visual_menu .depth .drop_box { padding: 0 0 0 4rem; width: 100%; height: 0; background: #fff; position: relative; z-index:11; overflow: hidden; transition: all .3s; }
 .container .sub_visual .sub_visual_menu .depth.open .drop_box { height: auto; padding: 2rem 0 2rem 4rem; box-shadow: 1px 2px 9.5px 0.5px rgba(51, 51, 51, 0.1); }
-.container .sub_visual .sub_visual_menu .depth .drop_box li a { display: inline-block; padding: 1.5rem 0; width: 100%; height: 100%; position: relative; color: #777; }
+.container .sub_visual .sub_visual_menu .depth .drop_box li a { display: inline-block; padding: 1.5rem 0; width: 100%; height: 100%; position: relative; font-family: 'Montserrat','Pretendard'; color: #777; }
 .container .sub_visual .sub_visual_menu .depth .drop_box li a:after { content:''; display: none; width: .9rem; height: .1rem; background: #fff; position: absolute; top: 50%; right: 4.8rem; transform: translateY(-50%);}
 .container .sub_visual .sub_visual_menu .depth .drop_box li a:hover { color: #222; font-weight: 300; }
 .container .sub_visual .sub_visual_menu .depth .drop_box li a:hover:after { display: inline-block; }
