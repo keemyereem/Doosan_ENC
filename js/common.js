@@ -30,7 +30,7 @@ $(function(){
     console.log('*Mobile environment')
     $('html').attr('id', 'mobile')
   }
-
+    
   AOS.init({
     // 핸들링 참고: https://github.com/michalsnik/aos
     disable: 'mobile',
@@ -67,11 +67,16 @@ $(function(){
 
       if (param == 'linkvia1') {
         scrollFocus();
-        $(".isotope_item").eq(8).children('a').trigger("click");
+        setTimeout(()=> {
+          $(".isotope_item").eq(8).children('a').trigger("click");
+        }, 700)
+        
         
       } else if (param == 'linkvia2') {
         scrollFocus();
-        $(".isotope_item").eq(0).children('a').trigger("click");
+        setTimeout(()=> {
+          $(".isotope_item").eq(0).children('a').trigger("click");
+        }, 700)
       }
       history.replaceState({}, null, location.pathname);
     } else if ($('.privacy').length) {
@@ -738,29 +743,31 @@ var civilEngineerEvent = {
   },
 
   popupMouse: () => {
-    // 영역 밖 이동 시 마우스 닫기 버튼 보이기
-    const LayerPopup = $(".card_popup01 .popup_inner"),
-          popupClose = $('.pop_close');
+    if ($('.popup').length) {
+      // 영역 밖 이동 시 마우스 닫기 버튼 보이기
+      const LayerPopup = $(".card_popup01 .popup_inner"),
+            popupClose = $('.pop_close');
 
-    $(document).mousemove(function (e){
-      if (LayerPopup.has(e.target).length === 0){
-        popupClose.css({'transform': 'scale(1)'});
-      } else {
-        popupClose.css({'transform': 'scale(0)'});
-      }
-    });
+      $(document).mousemove(function (e){
+        if (LayerPopup.has(e.target).length === 0){
+          popupClose.css({'transform': 'scale(1)'});
+        } else {
+          popupClose.css({'transform': 'scale(0)'});
+        }
+      });
 
-    // 영영 밖 이동 시 마우스 닫기 버튼  커서 따라다니기
-    const circle = document.querySelector(".pop_close");
-    
-    document.addEventListener("mousemove", (e) => { // mousemove이벤트를 이용해 움
-        // 마우스의 좌표는 clientX와 clientY를 이용해 알수 있다. -> 브라우저 window의 좌표값 위치를 전달한다.
-        // pageX, pageY와는 다름.
-        const mouseX = e.clientX;
-        const mouseY = e.clientY;
-        circle.style.left = mouseX - 52.5 + 'px';
-        circle.style.top = mouseY - 52.5 + 'px';
-    });
+      // 영영 밖 이동 시 마우스 닫기 버튼  커서 따라다니기
+      const circle = document.querySelector(".pop_close");
+      
+      document.addEventListener("mousemove", (e) => { // mousemove이벤트를 이용해 움
+          // 마우스의 좌표는 clientX와 clientY를 이용해 알수 있다. -> 브라우저 window의 좌표값 위치를 전달한다.
+          // pageX, pageY와는 다름.
+          const mouseX = e.clientX;
+          const mouseY = e.clientY;
+          circle.style.left = mouseX - 52.5 + 'px';
+          circle.style.top = mouseY - 52.5 + 'px';
+      });
+    }
   },
 
 };
@@ -1596,7 +1603,7 @@ var recruitEvent = {
 
         // 이미지 애니메이션
         if ($('#pc').length) {  // 적응형 [PC]
-          img.css({'right': moving + 'px'});
+          img.css({'right': moving + 'px', 'opacity': 1});
 
 
         } else {  // 적응형 [MOBILE]
@@ -1651,17 +1658,16 @@ var recruitEvent = {
     // 팝업 닫기
     popupClose.on('click', ()=> {
         if ($('#mobile').length) {  // 적응형 [MOBILE]
-          // 팝업 이미지 원위치 및 초기화
+          // 팝업 이미지 원위치
           img.css({'right': -100, 'opacity': 0});
-          setTimeout(()=> {
-            img.attr('src', '');
-          }, 300);
 
         } else {  // 적응형 [PC]
-          // 팝업 이미지 원위치
-          img.css({'right': 0});
+          img.css({'right': 0, 'opacity': 0});
+          
         }
-
+        setTimeout(()=> {
+          img.attr('src', '');
+        }, 300);
         closeProcessor();
     });
 
