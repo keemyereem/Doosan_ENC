@@ -819,6 +819,7 @@
 .civil_engineer .section_nav .total_page::before { content:''; display: block; width: 0.1rem; height: 3.7rem; background: #999; margin: 0 0 2rem 1rem; }
 .civil_engineer .section_nav .button.next { padding-top: 6rem; cursor: pointer; }
 .civil_engineer .outline .section .graybx { background: #f9f9f9; position: absolute; width: 18rem; height: 100%; }
+.civil_engineer .outline .section .graybx.right { right: 0; }
 .civil_engineer .outline .section .inner { padding: 10rem 4rem 11rem; }
 .civil_engineer .outline .section .tit { font-size: 3.8rem; font-weight: 450; color: #222; padding: 7rem 0 2rem; }
 .civil_engineer .outline .section p { display: flex; justify-content: space-between; }
@@ -832,6 +833,7 @@
 .civil_engineer .outline .section p .btn:hover > i { background: #fff; }
 .civil_engineer .outline .section .swiper .img { width: 100%; height: 100%; }
 .civil_engineer .outline .section .swiper .img img { width: 100%; height: 100%; object-fit: contain; transition: all ease .8s; }
+.civil_engineer .outline .section .swiper .img:hover {  }
 .civil_engineer .outline .section .swiper .img:hover img { transform: scale(1.1); }
 .civil_engineer .outline .section .swiper { position: relative; overflow: hidden; }
 .civil_engineer .outline .section .swiper .swiper-nav { width: 26.2rem; display: flex; justify-content: space-between; align-items: center; position: absolute; bottom: 4rem; right: 5rem; z-index: 10; }
@@ -1541,7 +1543,8 @@
 .sr .ww .section05 > ul > .info li { color: rgba(255, 255, 255, .8); line-height: 1.5; padding: 2.5rem 0 2.5rem 14rem; font-size: 1.8rem; display: flex; white-space: nowrap; }
 .sr .ww .section05 > ul > .info li:not(:first-child) { background-image: linear-gradient(to left, rgba(204,204,204, .5) 5px, rgba(255,255,255,0) 1px); background-size: 6px 1px; background-repeat: repeat-x; }
 .sr .ww .section05 > ul > .info li span { display: block; position: absolute; left: 0; font-size: 2rem; color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 350; }
-.sr .ww .section05 > ul > .info > span { padding-top: 2.5rem; color: #fc9f35; font-size: 1.5rem; white-space: nowrap; display: block; letter-spacing: -.07rem; }
+.sr .ww .section05 > ul > .info > span { padding-top: .5rem; color: #fc9f35; font-size: 1.5rem; white-space: nowrap; display: block; letter-spacing: -.07rem; }
+.sr .ww .section05 > ul > .info > span:first-of-type { padding-top: 2.5rem; }
 .sr .ww .section05 > ul > li p { padding-top: 3.5rem; margin: 6rem 0 0 6rem; position: relative; font-size: 2.8rem; font-weight: 400; line-height: 1.64; }
 .sr .ww .section05 > ul > li p em { color: #005eb8; }
 .sr .ww .section05 > ul > li p span { display: block; color: #777777; font-size: 2rem; font-weight: 200; padding-top: 2rem; line-height: 1.7; }

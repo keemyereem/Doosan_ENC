@@ -819,6 +819,15 @@
 #mobile .mp02 .outline .section6 p { position: relative; top: 0; left: 0; padding-left: 0rem; order: 1; margin-bottom: 4.5rem; }
 #mobile .mp02 .outline .section6 .left { order: 2; margin-bottom: 2.5rem; }
 #mobile .mp02 .outline .section6 .right { padding-left: 0; order: 3; }
+
+@media screen and (max-width:1720px) {
+    .civil_engineer .outline .section .graybx { width: 4vw; /* background: transparent; */ }
+    .civil_engineer .section_nav.on { left: 1.35vw; }
+}
+@media screen and (max-width:1480px) {
+    .civil_engineer .outline .section .graybx { background: transparent; }
+}
+
 #mobile .mp02 .outline .section7 { padding-top: 5.5rem; }
 #mobile .mp02 .outline .section7 h3 { margin-bottom: 2rem; }
 #mobile .mp02 .outline .section8 { padding: 5.5rem 0 10rem; }
