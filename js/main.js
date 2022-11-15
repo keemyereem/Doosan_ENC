@@ -209,6 +209,7 @@ var mainEvent = {
         swiper.on('transitionStart', ()=> {
             let $this = $('.swiper-pagination-bullet-active').position().left;
             $('.bullet_hr').css('left', ($this / 10) + 'rem');
+            swiper.autoplay.start();
         });
 
         // Next, Prev버튼 클릭 시 오토플레이 재개
