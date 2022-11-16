@@ -2,21 +2,47 @@
 /* --------------------- DoosanENC Released 2022.08.08 --------------------- */
 /* ----------------------- Published by 4m Creative ------------------------ */
 
+.container.en .sub_visual .sub_visual_menu .depth2 { width: 34rem; }
+.header_en .logo { margin-right: 3vw; }
+.header_en .gnb { width: 100%; margin-right: 3vw; }
+.header_en .gnb > ul > li { line-height: 1.2; display: table; flex: auto; }
+.header_en .gnb > ul > li a { display: table-cell; vertical-align: middle; text-align: center; padding: 0 2rem; }
+.header_en .gnb_menu { width: 35rem; }
+.header_en .gnb_menu .right_nav ul li:first-child:after { display: none; }
+.header_en .gnb_menu .right_nav ul li a { padding: 0; }
+.header_en .gnb_menu .right_nav ul li a::before { left: 0; }
+.header_en .gnb_menu .right_nav ul li a:hover::before { width: 100%; }
+
+.footer_en .right ul { padding-left: 8rem; }
+.footer_en .right ul li a { max-width: 100%; }
+.footer_en .family_site .site_selected { font-family: 'Montserrat'; font-weight: 450; }
 
 
+/* About Us */
+.company.en .greeting .picture { top: 30rem; }
+.company.en .greeting .tit span:last-of-type { right: initial; }
 
+.company.en .greybox .wrap .section01 h2 { line-height: 1.2; }
+
+.company.en .bod .inner > div.inner_wrap > p { line-height: 1.3; }
+
+.company.en #HMchart > li .graph .graph_bar li > p { width: 100%; }
 
 /* -------------------- Responsive -------------------- */
 
 
-@media screen and (max-width:1400px) { 
-
-
+@media screen and (max-width:1440px) { 
+    .header_en { padding: 0 2rem; }
+    .header_en .header_wrap { width: 140rem; }
 }
 
 
 /* -------------------- Mobile -------------------- */
 @media screen and (max-width:767px) {
 
+    #mobile .company.en #HMchart > li .graph .graph_bar li > p { bottom: -5.7rem; }
+    #mobile .company.en .greeting .tit span:last-of-type { right: initial; }
+    #mobile .company.en .greeting .picture { margin-top: 1rem; }
+    #mobile .company.en .greeting .txt:first-of-type { margin-top: 0; }
 
 }

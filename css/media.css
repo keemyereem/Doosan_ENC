@@ -204,9 +204,9 @@
     #mobile .footer .family_site { margin-top: 5rem; margin-bottom: 7rem; }
     #mobile .footer .family_site .site_selected { display: inline-block; font-size: 1.4rem; width: auto; min-width: 11rem; }
     #mobile .footer .family_site .site_selected::after { border-top: .35rem solid #fff; border-left: .35rem solid transparent; border-right: .35rem solid transparent; vertical-align: middle; margin-left: 1.2rem; } 
-    #mobile .footer .family_site .site_list { width: 11rem; top: 2rem; }
+    #mobile .footer .family_site .site_list { width: auto; top: 2rem; }
     #mobile .footer .family_site.open .site_list { padding: 1rem; }
-    #mobile .footer .family_site .site_list li a { font-size: 1.4rem; }
+    #mobile .footer .family_site .site_list li a { font-size: 1.4rem; padding: 1rem; }
     #mobile .footer .right { display: none; }
     #mobile .footer .footer_wrap { height: auto; padding: 5rem 0; }
     #mobile .footer .footer_wrap ul { width: 100%; display: flex; justify-content: center;align-items: center; padding: 0 2rem; text-align: center; }
