@@ -596,13 +596,18 @@
     #mobile .customer .notice .tb_box .tb_row.none { display: none; }
 
     /* 사이버 감사실 */
+    #mobile .customer .pb0 .guide { max-width: 100%; margin: 3rem auto 2rem; padding: 3.5rem 2rem; }
+    #mobile .customer .pb0 .guide dt { font-size: 1.7rem; padding-bottom: 1.5rem; }
+    #mobile .customer .pb0 .guide dd { font-size: 1.3rem; white-space: normal; line-height: 1.6; display: flex; }
+    #mobile .customer .pb0 .guide dd i { display: inline-block; padding-right: .2rem; }
     #mobile .customer .btn_wrap { flex-direction: column; margin-top: 2.5rem; padding-bottom: 6.5rem; }
+    #mobile .customer .btn_wrap span { padding-bottom: 1.5rem; font-size: 1.2rem; line-height: 1.4; }
     #mobile .customer .btn_wrap a { width: 100%; max-width: 25rem; height: 7.5rem; border-radius: 3.75rem; font-size: 1.5rem; }
-    #mobile .customer .btn_wrap a:first-child { margin-right: 0; margin-bottom: 2rem; }
-    #mobile .customer .btn_wrap a:first-child .icon { width: 3.7rem; height: 3.25rem; }
-    #mobile .customer .btn_wrap a:first-child .txt > div:last-child { font-size: 1.8rem; }
-    #mobile .customer .btn_wrap a:last-child .icon { width: 5rem; height: 3.25rem; }
-    #mobile .customer .btn_wrap a:last-child:hover .icon { width: 5rem; height: 3.25rem; background-size: contain; }
+    #mobile .customer .btn_wrap a:first-of-type { margin-right: 0; margin-bottom: 2rem; }
+    #mobile .customer .btn_wrap a:first-of-type .icon { width: 3.7rem; height: 3.25rem; }
+    #mobile .customer .btn_wrap a:first-of-type .txt > div:last-child { font-size: 1.8rem; }
+    #mobile .customer .btn_wrap a:last-of-type .icon { width: 5rem; height: 3.25rem; }
+    #mobile .customer .btn_wrap a:last-of-type:hover .icon { width: 5rem; height: 3.25rem; background-size: contain; }
     #mobile .customer .cyber_audit { padding: 0 0 10rem 0; }
     #mobile .customer .cyber_audit .section1 { background: linear-gradient(to bottom, #f9f9f9, #f9f9f9 42.4rem, #fff 42.5rem, #fff 100% ); }
     #mobile .customer .cyber_audit section .inner { background: transparent; }
