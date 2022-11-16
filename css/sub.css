@@ -132,7 +132,7 @@
 #main #fullpage .section03 .inner { max-width: 147.5rem; margin: 5rem auto 0; transform: translateX(-1.75rem); position: relative; transition: opacity .3s 1s; }
 #main #fullpage .section03 .sec_tit { margin-left: 3.5rem; position: absolute; top: 0; }
 #main #fullpage .section03 .bus_swiper > .swiper-wrapper > .swiper-slide { display: flex; align-items: flex-start; height: fit-content; padding-bottom: 4rem; padding-top: 1.8rem; }
-#main #fullpage .section03 .bus_swiper .left { width: 46rem; min-height: 55.4rem; height: fit-content;background: #fff;border: 1px solid #005eb8; box-shadow: 5px 4px 20px 0px rgba(54, 63, 72, 0.5); padding: 3rem 3rem 7rem; transform: translate(-40%, 8.5rem); opacity: 0; transition: all ease-in-out .3s; margin-left: 3.5rem; margin-top: 3.5rem; }
+#main #fullpage .section03 .bus_swiper .left { width: 46rem; min-height: 55.4rem; height: fit-content;background: #fff;border: 1px solid #005eb8; box-shadow: 5px 4px 20px 0px rgba(54, 63, 72, 0.5); padding: 3rem 3rem 7rem; transform: translate(-40%, 8.5rem); opacity: 0; transition: all ease-in-out .3s; margin-left: 3.5rem; margin-top: 3.5rem; position: relative; }
 #main #fullpage .section03 .bus_swiper .left .img { width: 38rem; height: fit-content; overflow: hidden; }
 #main #fullpage .section03 .bus_swiper .left .img img { transition: transform 1s }
 #main #fullpage .section03 .bus_swiper .left .tit { font-weight: 450; font-size: 2.4rem; color: #0e1115; letter-spacing: -.06rem; margin: 3rem 0; }
@@ -141,8 +141,8 @@
 #main #fullpage .section03 .bus_swiper .left ul li b::before { content:''; display: inline-block; width: .5rem; height: .5rem; background: #d9dfe9; vertical-align: middle; margin-right: 1.5rem; position: absolute; top: 50%; left: 0; transform: rotate(15deg)translateY(-50%); }
 #main #fullpage .section03 .bus_swiper .left ul li b { font-size: 1.6rem; color: #0e1115; font-weight: 400; letter-spacing: -.032rem; display: inline-block; width: 10rem; flex-shrink: 0; position: relative; padding-left: 2rem; }
 #main #fullpage .section03 .bus_swiper .left ul li span { font-weight: 300; font-size: 1.6rem; color: #777; letter-spacing: -.032rem; }
-#main #fullpage .section03 .bus_swiper .left > a { display: inline-block; font-family: 'Montserrat'; font-size: 1.4rem; color: #222; position: relative; margin-top: 5rem; }
-#main #fullpage .section03 .bus_swiper .left > a::after { content:''; display: inline-block; width: .9rem; height: 1.5rem; background: url(../images/main/sec06_arrow.png) no-repeat; position: absolute; top: 50%; left: 100%; transform: translateX(4rem); margin-top: -.75rem; }
+#main #fullpage .section03 .bus_swiper .left > a { display:block; width: 100%; height: 7.5rem; line-height: 7.5rem; padding: 0 6rem; font-family: 'Montserrat'; font-size: 1.4rem; color: #222; position: absolute; bottom: 0; left: 0; margin-top: 5rem; background: rgba(0, 94, 184,.05); }
+#main #fullpage .section03 .bus_swiper .left > a::after { content:''; display: inline-block; width: .9rem; height: 1.5rem; background: url(../images/main/sec06_arrow.png) no-repeat; position: absolute; top: 50%; right: 10rem; transform: translateX(4rem); margin-top: -.75rem; }
 #main #fullpage .section03 .bus_swiper .left:hover {background: #005eb8;}
 #main #fullpage .section03 .bus_swiper .left:hover .img img { transform: scale(1.1); }
 #main #fullpage .section03 .bus_swiper .left:hover .tit,
@@ -291,8 +291,8 @@
 #main #fullpage .section06 .right .contents .tag > .date { font-weight: 300; color: #999; }
 #main #fullpage .section06 .right .contents .tag > .date::before { content:''; display: inline-block; width: .1rem; height: 1rem; background: #ccc; margin: 0 2rem; }
 #main #fullpage .section06 .right .contents > ul li .txt p { font-weight: 400; color: #222; font-size: 2.2rem; letter-spacing: -.055rem; margin: 2.5rem 0 3.8rem; line-height: 1.6; }
-#main #fullpage .section06 .right .contents > ul li .txt a { font-family: 'Montserrat'; font-size: 1.4rem; color: #222; position: relative; }
-#main #fullpage .section06 .right .contents > ul li .txt a::after { content:''; display: inline-block; width: .9rem; height: 1.5rem; background: url(../images/main/sec06_arrow.png) no-repeat; position: absolute; top: 50%; left: 100%; transform: translateX(4rem); margin-top: -.75rem; }
+#main #fullpage .section06 .right .contents > ul li .txt a { display: block; width: 13.5rem; font-family: 'Montserrat'; font-size: 1.4rem; color: #222; position: relative; }
+#main #fullpage .section06 .right .contents > ul li .txt a::after { content:''; display: inline-block; width: .9rem; height: 1.5rem; background: url(../images/main/sec06_arrow.png) no-repeat; position: absolute; top: 50%; right: 4rem; transform: translateX(4rem); margin-top: -.75rem; }
 #main #fullpage .section06 .right .contents > ul li .txt a:hover::after { animation: arrwRight 1.2s ease-in-out infinite; }
 
 
