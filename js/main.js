@@ -371,35 +371,35 @@ var mainEvent = {
                 swp.autoplay.start();
             });
         });
+        //추후 주석 제거 
+        // innerSwiper3 = new Swiper(".section03 .inner_swiper", {
+        //     speed: 500,
+        //     loop: false,
+        //     autoplayDisableOnInteraction: false,
+        //     slidesPerView: 1, 
+        //     watchOverflow: true,
+        //     watchSlidesProgress: true,
+        //     watchSlidesVisibility: true,
+        //     observer: true,
+        //     observeParents: true,
 
-        innerSwiper3 = new Swiper(".section03 .inner_swiper", {
-            speed: 500,
-            loop: false,
-            autoplayDisableOnInteraction: false,
-            slidesPerView: 1, 
-            watchOverflow: true,
-            watchSlidesProgress: true,
-            watchSlidesVisibility: true,
-            observer: true,
-            observeParents: true,
-
-            pagination: {
-                el: '.section03 .inner_swiper .swiper-pagination',
-                clickable: 'true',
-                type: 'bullets',
+        //     pagination: {
+        //         el: '.section03 .inner_swiper .swiper-pagination',
+        //         clickable: 'true',
+        //         type: 'bullets',
             
-            },
-        });
+        //     },
+        // });
 
-        $(".section03 .inner_swiper").each(function(elem, target){
-            var innerswp = target.swiper;
+        // $(".section03 .inner_swiper").each(function(elem, target){
+        //     var innerswp = target.swiper;
 
-            $('.swiper-pagination-sec03 > span').on('click', function(){
-                setTimeout(() => {
-                innerswp.slideTo(0,0);
-                }, 200);
-            });
-        });
+        //     $('.swiper-pagination-sec03 > span').on('click', function(){
+        //         setTimeout(() => {
+        //         innerswp.slideTo(0,0);
+        //         }, 200);
+        //     });
+        // });
 
     },
 
@@ -543,6 +543,31 @@ var mainEvent = {
                         } else {
                             swiper3.autoplay.stop();
                             swiper3.slideTo(1);
+                        }
+
+                        if(index === 3){
+                            $(".counting").each(function () {
+                                var $this = $(this),
+                                  countTo = $this.attr("data-count");
+                        
+                                $({ countNum: $this.text() }).animate(
+                                  {
+                                    countNum: countTo,
+                                  },
+                                  {
+                                    duration: 1000,
+                                    easing: "linear",
+                                    step: function () {
+                                      $this.text(Math.floor(this.countNum));
+                                    },
+                                    complete: function () {
+                                      $this.text(this.countNum);
+                                    },
+                                  }
+                                );
+                            });
+                        }else {
+
                         }
                     } else {
                         section.eq(index).removeClass('active');
