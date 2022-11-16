@@ -558,17 +558,23 @@
 .customer .notice .tb_box .tb_row.null {font-size: 1.6rem;color: #222;text-align: center;padding: 24rem 0;}
 
 /* 사이버 감사실 */
-.customer .btn_wrap { display: flex; justify-content: center; align-items: center; margin-top: 7rem; }
+.customer .pb0  { padding: 10rem 0 12rem; }
+.customer .pb0 .guide { background: #f9f9f9; max-width: 116rem; margin: 7rem auto 4rem; padding: 5rem 18rem; letter-spacing: -.05rem; }
+.customer .pb0 .guide dt { font-size: 2.4rem; font-weight: 400; color: #222222; padding-bottom: 2rem; }
+.customer .pb0 .guide dd { text-align: left; font-size: 1.6rem; color: #666666; white-space: nowrap; line-height: 2; }
+.customer .btn_wrap { display: flex; justify-content: center; flex-wrap: wrap; align-items: center; }
+.customer .btn_wrap span { display: block; width: 100%; text-align: center; padding-bottom: 2.7rem; font-size: 1.4rem; color: #666666; }
 .customer .btn_wrap a { display: flex; align-items: center; justify-content: center; width: 34rem; height: 10rem; border-radius: 5rem; text-align: left; font-size: 2rem; color: #005eb8; letter-spacing: -.05rem; }
-.customer .btn_wrap a:first-child { background: rgba(0, 94, 184,.05); margin-right: 4rem; }
-.customer .btn_wrap a:first-child .icon { width: 4.6rem; height: 4.2rem; margin-right: 2rem; background: url(../images/customer/audit_call_icon.png) no-repeat 50% 50%; background-size: contain; }
-.customer .btn_wrap a:first-child .txt > div:first-child { color: #555; }
-.customer .btn_wrap a:first-child .txt > div:last-child { font-family: 'Montserrat'; font-size: 2.6rem; font-weight: 400; }
-.customer .btn_wrap a:last-child { border: 1px solid #005eb8; transition: all .2s; }
-.customer .btn_wrap a:last-child .icon { width: 7.5rem; height: 4.9rem; margin-right: 2rem; background: url(../images/customer/audit_weve_icon.png) no-repeat 50% 50%; background-size: contain; }
-.customer .btn_wrap a:last-child .txt > div:first-child { font-weight: 400; }
-.customer .btn_wrap a:last-child:hover { background: #005eb8; color: #fff; }
-.customer .btn_wrap a:last-child:hover .icon { background: url(../images/customer/audit_weve_icon_w.png) no-repeat 50% 50%; }
+.customer .btn_wrap a:first-of-type { background: rgba(0, 94, 184,.05); margin-right: 4rem; }
+.customer .btn_wrap a:first-of-type .icon { width: 4.6rem; height: 4.2rem; margin-right: 2rem; background: url(../images/customer/audit_call_icon.png) no-repeat 50% 50%; background-size: contain; }
+.customer .btn_wrap a:first-of-type .txt > div:first-child { color: #005eb8; }
+.customer .btn_wrap a:first-of-type .txt > div:first-child em { font-family: 'Montserrat', sans-serif; font-size: 1.9rem; }
+.customer .btn_wrap a:first-of-type .txt > div:last-child { font-family: 'Montserrat'; font-size: 2.6rem; font-weight: 400; }
+.customer .btn_wrap a:last-of-type { border: 1px solid #005eb8; transition: all .2s; }
+.customer .btn_wrap a:last-of-type .icon { width: 7.5rem; height: 4.9rem; margin-right: 2rem; background: url(../images/customer/audit_weve_icon.png) no-repeat 50% 50%; background-size: contain; }
+.customer .btn_wrap a:last-of-type .txt > div:first-child { font-weight: 400; }
+.customer .btn_wrap a:last-of-type:hover { background: #005eb8; color: #fff; }
+.customer .btn_wrap a:last-of-type:hover .icon { background: url(../images/customer/audit_weve_icon_w.png) no-repeat 50% 50%; }
 
 .customer .cyber_audit { padding: 0 0 20rem 0; }
 .customer .cyber_audit .section1 { background: linear-gradient(to bottom, #f9f9f9, #f9f9f9 71.3rem, #fff 61.4rem, #fff 100% ); }
