@@ -2,7 +2,7 @@
 /* --------------------- DoosanENC Released 2022.08.08 --------------------- */
 /* ----------------------- Published by 4m Creative ------------------------ */
 
-.container.en .sub_visual .sub_visual_menu .depth2 { width: 34rem; }
+.en .sub_visual .sub_visual_menu .depth2 { width: 34rem; }
 .header_en .logo { margin-right: 3vw; }
 .header_en .gnb { width: 100%; margin-right: 3vw; }
 .header_en .gnb > ul > li { line-height: 1.2; display: table; flex: auto; }
@@ -12,6 +12,8 @@
 .header_en .gnb_menu .right_nav ul li a { padding: 0; }
 .header_en .gnb_menu .right_nav ul li a::before { left: 0; }
 .header_en .gnb_menu .right_nav ul li a:hover::before { width: 100%; }
+
+.sitemap_en .wrap .sitemap_main .block_le ul li:nth-child(2) .block_2depth > li:not(.empty) { padding-left: 32rem; }
 
 .footer_en .right ul { padding-left: 8rem; }
 .footer_en .right ul li a { max-width: 100%; }
@@ -25,6 +27,7 @@
 .company.en .greybox .wrap .section01 h2 { line-height: 1.2; }
 
 .company.en .bod .inner > div.inner_wrap > p { line-height: 1.3; }
+.company.en .bod .inner:first-child > div.inner_wrap > ul { padding-bottom: 0; }
 
 .company.en #HMchart > li .graph .graph_bar li > p { width: 100%; }
 
@@ -39,6 +42,19 @@
 
 /* -------------------- Mobile -------------------- */
 @media screen and (max-width:767px) {
+
+    #mobile .en .sub_visual .sub_visual_menu .depth > .dep_tit { display: flex; width: 100%; align-items: center; line-height: 1.2; font-size: 1.3rem; }
+    #mobile .en .sub_visual .sub_visual_menu .depth > a:before { right: 1rem; }
+    #mobile .en .sub_visual .sub_visual_menu .depth > a { padding-left: 1rem; padding-right: 1rem; }
+    #mobile .en .sub_visual .sub_visual_menu .depth.open .drop_box { padding: 1rem 0 1rem 1rem; }
+
+    #mobile .sitemap_en .wrap .sitemap_main .block_le > ul > li > h2 { font-size: 2.3rem; }
+    #mobile .sitemap_en .wrap .sitemap_main .block_le > ul > li > h2::after { flex-shrink: 0; }
+
+    /* About Us */
+    #mobile .company.en .philosophy .inner > ul > li:last-child ul li { height: auto; min-height: 21rem; padding: 2rem 0; }
+
+    #mobile .company.en .bod .inner { margin-top: 5rem; }
 
     #mobile .company.en #HMchart > li .graph .graph_bar li > p { bottom: -5.7rem; }
     #mobile .company.en .greeting .tit span:last-of-type { right: initial; }
