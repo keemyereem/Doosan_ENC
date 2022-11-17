@@ -680,6 +680,10 @@
 .masterpiece .outline .section { display: flex; align-items: center; }
 .masterpiece .outline section .line { width: 6.5rem; height: .6rem; background: #000; transform: skew(-45deg); margin-bottom: 3.5rem; }
 .masterpiece .outline section p { font-size: 2rem; color: #555; line-height: 1.7; }
+.masterpiece .outline section .left h3,
+.masterpiece .outline section .left p { padding-right: 2rem; }
+.masterpiece .outline section .right h3,
+.masterpiece .outline section .right p { padding-left: 2rem; }
 .masterpiece .outline section h3 { font-size: 6rem; font-weight: 400; color: #222; margin-bottom: 6rem; }
 .masterpiece .outline section h3 em { font-family: 'Montserrat'; }
 .masterpiece .outline section .img { overflow: hidden; }
@@ -708,6 +712,7 @@
 .mp01 .outline .section4 { margin-top: 12rem; }
 .mp01 .outline .section5 { margin: 10rem 0 13rem; }
 .mp01 .outline .section5 .left { width: 40%; }
+.mp01 .outline .section5 .right { width: 60%; }
 .mp01 .outline .section6 { margin: 11rem 0 9rem; }
 .mp01 .outline .section6 h3 { text-align: center; }
 .mp01 .outline .section6 .cont_area { display: flex; align-items: center; justify-content: space-between; }
@@ -751,8 +756,11 @@
 .mp03 .outline .section1 p:last-of-type { padding-left: 9rem; }
 .mp03 .outline .section1 ul { display: flex; justify-content: space-between; width: 100%; margin-top: 13rem; }
 .mp03 .outline .section3 { margin: 12rem 0 6rem; }
+.mp03 .outline .section3 .right { width: 41%; }
+.mp03 .outline .section4 .left { width: 43%; }
 .mp03 .outline .section5 { margin: 8rem 0 12rem; }
 .mp03 .outline .section7 { margin: 12rem 0 10rem; }
+.mp03 .outline .section7 .right { padding-left: 8rem; }
 
 
 /* 마스터피스 - 인터뷰 - 공통 */
@@ -772,7 +780,7 @@
 .interview .contents .wrap { max-width: 136rem; width: 100%; margin: auto; }
 .interview .contents .wrap .left { float: left; }
 .interview .contents .wrap .right { float: right; }
-.interview .contents .wrap .img { width: calc(50% - 3rem); overflow: hidden; margin-top: .5rem; padding-bottom: 3rem; }
+.interview .contents .wrap .img { width: calc(50% - 3rem); overflow: hidden; margin-top: .5rem; margin-bottom: 3rem; }
 .interview .contents .wrap .img img { width: 100%; transition: all ease 1s; }
 .interview .contents .wrap .img:hover img { transform: scale(1.1); }
 .interview .contents .wrap .dl50 { width: calc(50% - 3rem); }
