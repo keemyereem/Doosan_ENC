@@ -772,13 +772,13 @@
 .interview .contents .wrap { max-width: 136rem; width: 100%; margin: auto; }
 .interview .contents .wrap .left { float: left; }
 .interview .contents .wrap .right { float: right; }
-.interview .contents .wrap .img { width: calc(50% - 3rem); overflow: hidden; margin-top: .5rem; }
+.interview .contents .wrap .img { width: calc(50% - 3rem); overflow: hidden; margin-top: .5rem; padding-bottom: 3rem; }
 .interview .contents .wrap .img img { width: 100%; transition: all ease 1s; }
 .interview .contents .wrap .img:hover img { transform: scale(1.1); }
 .interview .contents .wrap .dl50 { width: calc(50% - 3rem); }
 .interview .contents .wrap .dl100 { width: 100%; }
 .interview .contents .wrap dl { padding-left: 6.7rem; position: relative; height: fit-content; margin-bottom: 6.5rem; }
-.interview .contents .wrap dl dt { font-size: 2.6rem; font-weight: 400; color: #222222; white-space: nowrap; line-height: 1.5; }
+.interview .contents .wrap dl dt { font-size: 2.6rem; font-weight: 400; color: #222222; white-space: normal; line-height: 1.5; }
 .interview .contents .wrap dl dt span { display: inline-block; position: absolute; left: 0; line-height: 1.2; font-family: 'Montserrat', sans-serif; font-size: 3.2rem; font-weight: 450; color: #005eb8; }
 .interview .contents .wrap dl dd { font-size: 2rem; color: #777777; margin-top: 1rem; line-height: 1.8; letter-spacing: -.125rem; }
 .interview .contents .wrap dl dd span { font-size: 1.6rem; color: #005eb8; display: block; line-height: 2.25; margin-top: 1rem; }

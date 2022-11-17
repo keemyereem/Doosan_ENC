@@ -874,7 +874,7 @@
 #mobile .interview .contents { padding: 20rem 0 10rem; }
 #mobile .interview .contents:before { display: none; }
 #mobile .interview .contents .wrap { padding: 0 2rem; display: flex; flex-direction: column; }
-#mobile .interview .contents .wrap .img { width: 100%; margin-top: 0; margin-bottom: 4.5rem; }
+#mobile .interview .contents .wrap .img { width: 100%; margin-top: 0; margin-bottom: 4.5rem; padding-bottom: 0; }
 #mobile .interview .contents .wrap .img img { width: 100%; transition: all ease 1s; }
 #mobile .interview .contents .wrap .img:hover img { transform: scale(1.1); }
 #mobile .interview .contents .wrap .dl50,
