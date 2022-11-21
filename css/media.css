@@ -22,9 +22,10 @@
     .container .sub_visual h1 { left: 5rem; }
     #sub .container .inner { padding: 0 5rem; width: 144rem; }
     #sub .container .footer .inner { padding: 15.21vh 4rem 0; }
-    .footer .inner { padding: 15.21vh 4rem 0; }
-    .civil_engineer .business_lists > .inner { padding: 0!important; }
-    .civil_engineer .business_lists ul { width: 144rem; }
+    #sub .footer .inner { padding: 15.21vh 4rem 0; }
+    #sub .civil_engineer .business_lists > .inner { padding: 0!important; }
+    #sub .civil_engineer .business_lists ul { width: 144rem; }
+    #sub .company .bod .inner:last-child { padding: 12rem 5rem 20rem; }
 }
 
 
