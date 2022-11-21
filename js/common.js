@@ -302,6 +302,7 @@ var commonEvent = {
   },
 
   sitemap: () => {
+    // 메인페이지에서 사이트맵 구현 오류 > main.js에 추가 중복코드 삽입.
     $(window).load(() => {
       $(".sitemap").show();
     });
