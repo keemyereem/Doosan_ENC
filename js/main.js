@@ -10,11 +10,6 @@ $(function () {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
   });
-
-  // common.js에서 사이트맵 구현 오류 > 추가 중복코드 삽입.
-  $(window).load(() => {
-    $(".sitemap").show();
-  });
 });
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -29,7 +24,6 @@ var mainEvent = {
     this.sec06Tab();
     this.headerEvent();
     this.footerEvent();
-    this.mobile();
   },
 
   createFullpage: () => {
@@ -103,42 +97,52 @@ var mainEvent = {
   },
 
   intro: () => {
-    $(document).ready(() => {
-      $("body").addClass("blockScroll");
-      $("#rightnavi").addClass("blind");
+    $("body").addClass("blockScroll");
+    // common.js에서 사이트맵 구현 오류 > 추가 중복코드 삽입.
+    $(".sitemap").show();
+    $("#rightnavi, .header").addClass("blind");
 
-      console.log("-> intro animation start");
+    console.log("-> intro animation start");
+
+    img = new Image();
+    img.onload = function () {
       setTimeout(() => {
-        $(".section01").addClass("ani");
-      }, 1000);
+        $(".clip-css").css("opacity", 1);
+        $(".clip-css").on(
+          "transitionend webkitTransitionEnd oTransitionEnd",
+          function () {
+            setTimeout(() => {
+              $(".section01").addClass("ani");
+            }, 500);
+          }
+        );
+      }, 200);
+    };
+    img.src = "images/main/sec01_bg1.png";
 
-      // after animation ended, initializing object
-      var x = document.getElementById("intro_trigger");
-      x.addEventListener("animationend", () => {
-        console.log("-> intro animation end");
+    // after animation ended, initializing object
+    const x = document.getElementById("intro_trigger");
+    x.addEventListener("animationend", () => {
+      console.log("-> intro animation end");
 
-        $("body").removeClass("blockScroll");
-        $(".header").addClass("wht");
-        $("#rightnavi").removeClass("blind");
+      $(".clip-wrap").addClass("indent");
+      $("body").removeClass("blockScroll");
+      $(".header").addClass("wht");
+      $("#rightnavi, .header").removeClass("blind");
 
+      if ($("#mobile").length) {
         setTimeout(() => {
-          $(".clip-wrap").addClass("indent");
-        }, 0);
+          $("#main #fullpage .section01").addClass("active");
+        }, 500);
+      }
 
-        if ($("#mobile").length) {
-          setTimeout(() => {
-            $("#main #fullpage .section01").addClass("active");
-          }, 500);
-        }
+      mainEvent.mainSwiper();
 
-        mainEvent.mainSwiper();
-
-        if (!$("#mobile").length) {
-          mainEvent.createFullpage();
-        } else {
-          mainEvent.mobile();
-        }
-      });
+      if (!$("#mobile").length) {
+        mainEvent.createFullpage();
+      } else {
+        mainEvent.mobile();
+      }
     });
   },
 

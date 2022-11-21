@@ -61,8 +61,8 @@
 /* Section01 */
 #main #fullpage .section01 { position: relative; }
 #main #fullpage .section01 .clip-wrap { width: 100vw; height: 100%; position: absolute; z-index: 9; background: #fff; overflow: hidden; }
-#main #fullpage .section01 .clip-css {width: 100%;height: 100%;background: url(../images/main/sec01_bg1.png)no-repeat 50% 50%; background-size: auto 100%; z-index: 100; -webkit-clip-path: polygon(0% 75%, 25% 0%, 100% 25%, 75% 100%); clip-path: polygon(0% 75%, 25% 0%, 100% 25%, 75% 100%); position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; width: 66.9rem; height: 65.6rem; object-fit: none; }
-#main #fullpage .section01.ani .clip-css { animation: intro 1.3s alternate; -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); width: 100%; height: 100%; }
+#main #fullpage .section01 .clip-css {width: 100%;height: 100%; transition: all ease .2s; opacity: 0; background: url(../images/main/sec01_bg1.png)no-repeat 50% 50%; background-size: auto 100%; z-index: 100; -webkit-clip-path: polygon(0% 75%, 25% 0%, 100% 25%, 75% 100%); clip-path: polygon(0% 75%, 25% 0%, 100% 25%, 75% 100%); position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; width: 66.9rem; height: 65.6rem; object-fit: none; }
+#main #fullpage .section01.ani .clip-css { animation: intro 1s alternate; -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); width: 100%; height: 100%; }
 #main #fullpage .section01.active .clip-css { transform: translateY(0); }
 #main #fullpage .section01 .center,
 #main #fullpage .section01 .center .inner,
@@ -1846,12 +1846,12 @@
         clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
         width: 66.9rem; height: 65.6rem;
     }
-    70% {
+    /* 70% {
         -webkit-clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
         clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
         width: 100%;
         height: 100%;
-    }
+    } */
     100% {
         -webkit-clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
         clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
