@@ -1096,8 +1096,8 @@
 .technology .iot .inner:nth-child(2) .sec2_le h3::before { content: ''; position: absolute; top: 0; left: .3rem; width: 5.5rem; height: .6rem; background: #005eb8; transform: skew(-45deg); }
 .technology .iot .inner:nth-child(2) .sec2_le p { font-size: 1.8rem; font-weight: 150; color: #555555; line-height: 1.8; padding-top: 3.5rem; }
 .technology .iot .inner:nth-child(2) .sec2_le a { font-size: 1.6rem; color: #000; line-height: 1; padding: 2rem 1rem; width: 25rem; margin-top: 3.5rem; display: flex; justify-content: space-between; align-items: center; position: relative; }
-.technology .iot .inner:nth-child(2) .sec2_le a::after { content: ''; width: 0; background: #000000; height: .1rem; display: block; position: absolute; bottom: 0; left: 0; transition: all ease .3s; }
-.technology .iot .inner:nth-child(2) .sec2_le a:hover::after { width: 100%; }
+.technology .iot .inner:nth-child(2) .sec2_le a::after { content: ''; width: 100%; background: #000000; height: .1rem; display: block; position: absolute; bottom: 0; left: 0; transition: all ease .3s; }
+.technology .iot .inner:nth-child(2) .sec2_le a:hover::after { width: 0; }
 .technology .iot .inner:nth-child(2) .sec2_ri img { box-shadow: 0 1.4rem 2.7rem 0 rgba(0, 0, 0, 0.35); }
 .technology .iot .inner:nth-child(2) .sec2_ri span { display: block; position: relative; padding-left: 1.5rem; color: #fe961c; font-size: 1.6rem; font-weight: 300; margin-top: 3rem; }
 .technology .iot .inner:nth-child(2) .sec2_ri span::before { content: ''; width: .5rem; height: .5rem; transform: rotate(15deg); background: #fe961c; display: inline-block; position: absolute; top: .6rem; left: 0; margin: auto; }
