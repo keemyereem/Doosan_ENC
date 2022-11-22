@@ -514,7 +514,7 @@
     #mobile .channel .reference > img { top: initial; bottom: 0; right: 0; }
     #mobile .channel .reference .inner { flex-direction: column; padding: 0 12rem; }
     #mobile .channel .reference .inner .left { width: 100%; }
-    #mobile .channel .reference .sec_tit { font-size: 3rem; }
+    #mobile .channel .reference .sec_tit { font-size: 3rem; margin-top: 0; }
     #mobile .channel .reference .sec_tit::before { width: 4.8rem; height: .4rem; margin-bottom: 1.5rem; }
     #mobile .channel .reference .sub { font-size: 1.9rem; margin: 2.5rem 0 1.5rem; }
     #mobile .channel .reference p { font-size: 1.4rem; line-height: 1.64; }
@@ -1132,8 +1132,8 @@
 #mobile .technology .competence .section6 ul li:hover .viewmore { background: url(../images/common/icon_plus_w_15x15.png)no-repeat 100% 100%; background-size: 1.5rem; }
 
 /* 기술연구소 */
-#mobile #sub .technology .iot,
-#mobile #sub .technology .iot .inner { max-width: 100%; }
+#mobile #sub .technology .iot { max-width: 100%; }
+#mobile #sub .technology .iot .inner { max-width: 100%; width: calc(100% - 4rem); }
 #mobile .technology .iot { padding: 6.5rem 0 4rem; position: relative; }
 #mobile .technology .iot .inner .sub_tit { font-size: 2.4rem; }
 #mobile .technology .iot .inner:first-child .sub_par { font-size: 1.5rem; padding-top: 3rem; line-height: 1.5; }
@@ -1169,7 +1169,7 @@
 #mobile .technology .iot .inner:last-child .inner_wrap .card li:nth-child(2) { margin: 2.25rem 0; }
 #mobile .technology .iot .inner:last-child .inner_wrap .card li img { width: 7rem; }
 #mobile .technology .iot .inner:last-child .inner_wrap .card li h5 { padding-top: 3.2rem; font-size: 1.5rem; }
-#mobile .technology .iot .inner:last-child .inner_wrap .card li p { padding-top: 1.5rem; font-size: 1.4rem; line-height: 1.5; }
+#mobile .technology .iot .inner:last-child .inner_wrap .card li p { padding-top: 1.5rem; font-size: 1.4rem; line-height: 1.5; letter-spacing: -.07rem; }
 
 
 
