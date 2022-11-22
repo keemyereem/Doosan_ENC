@@ -156,7 +156,7 @@
     #mobile .sitemap .wrap::-webkit-scrollbar-thumb { background: #e8e8e8; border-radius: 100%; }
 
     /* container*/
-    #mobile #sub .container .inner { width: calc(100% - 6rem); /* padding: 0 0 5.3rem; */ padding: 0; }
+    #mobile #sub .container .inner { width: calc(100% - 6rem); padding: 0; }
     #mobile #sub .container .inner1200 { padding: 0 2rem; }
 
     /* pagination */
@@ -411,16 +411,21 @@
     #mobile .title_area .download_btn { width: 17.5rem; font-size: 1.3rem; margin-top: 4.5rem; margin-bottom: 6.5rem;  }
     #mobile .title_area .download_btn > i { width: 1.45rem; height: 1.5rem; background: url(../images/common/icon_download.png) no-repeat; background-size: contain; margin-left: 2.1rem; }
     #mobile .title_area .download_btn::after { margin-top: 1.5rem; }
-    #mobile .tab_box { position: relative; width: 100%; height: 4.5rem; }
-    #mobile .tab_box > .inner { overflow-x: auto; position: absolute; top:0; left: 3rem; height: 5rem; }
-    #mobile .tab_box ul { width: fit-content; position: absolute; left: 0; top: 0; }
+    #mobile .tab_box { position: relative; width: 100%; height: 6.5rem; display: flex; justify-content: center; }
+    #mobile .tab_box.shadow_align.right::before { opacity: 0; }
+    #mobile .tab_box.shadow_align.left::after { opacity: 0; }
+    #mobile .tab_box.shadow_align::before,
+    #mobile .tab_box.shadow_align::after { transition: all ease .2s; opacity: 1; content: ''; display: inline-block; position: absolute; height: 100%; width: 3rem; pointer-events: none; border-radius: 20px 0 0 20px; background: transparent; right: 3rem; z-index: 1; box-shadow: -15px 0 15px -20px rgb(0 0 0 / 20%) inset; }
+    #mobile .tab_box.shadow_align::before { right: 0; left: 3rem; box-shadow: 15px 0 15px -20px rgb(0 0 0 / 20%) inset; border-radius: 0 20px 20px 0; }
+    #mobile .tab_box > .inner { overflow-x: auto; position: absolute; top:0; height: 7rem; }
+    #mobile .tab_box ul { width: fit-content; position: absolute; left: 0; top: 1rem; }
     #mobile .tab_box ul li { flex: initial; flex-shrink: 0!important; width: calc(100% / 3); height: 4.5rem; display: table; }
     #mobile .tab_box ul.tab_slide li { width: calc((100vw - 6rem) / 3); }
     #mobile .tab_box ul li:not(:last-child) { border-right: 0; }
     #mobile .tab_box ul li a { font-size: 1.35rem; }
-    #mobile .tab_box ul li.on { box-shadow: 0px -.8rem 1.4rem .4rem rgba(34, 34, 34, 0.2); }
+    #mobile .tab_box ul li.on { box-shadow: 0px 0rem 1rem .2rem rgba(34, 34, 34, 0.2); }
     #mobile .tab_box ul li.on a { font-weight: 200; }
-    #mobile .tab_box .control { width: 3rem; height:4.5rem; font-size: 0; position: absolute; top: 0; display: block; }
+    #mobile .tab_box .control { width: 3rem; height:4.5rem; font-size: 0; position: absolute; top: 1rem; display: block; }
     #mobile .tab_box .prev { background: url(../images/common/arrow_l_13x21.png) no-repeat 50% 50%; background-size: .65rem 1.05rem; left: 0; }
     #mobile .tab_box .next { background: url(../images/common/arrow_r_13x21.png) no-repeat 50% 50%; background-size: .65rem 1.05rem; right: 0; }
 
@@ -681,7 +686,7 @@
     /* 기술역량 */
 
     /* 지식재산권 */
-    #mobile .technology .tab_box { margin-top: 4.5rem; }
+    #mobile .technology .tab_box { margin-top: 3.5rem; }
     #mobile .technology .ipr { padding-top: 4.5rem; padding-bottom: 10rem; }
     #mobile .technology .ipr .tb_box { border-top: .1rem solid #000; }
     #mobile .technology .ipr .tb_box .tb_row { display: block; width: 100%; }
@@ -962,7 +967,7 @@
 
 /* 사업소개(개요) */
 #mobile .civil_engineer .sub_visual {  background-image: url(../images/business/business_bg_m.png); background-size: cover; }
-#mobile .civil_engineer .tab_box { /* padding: 3rem 0; */ position: relative; height: 4.5rem; }
+#mobile .civil_engineer .tab_box { position: relative; padding: 0; }
 #mobile .civil_engineer.bus_outline .tab_box { padding: 4.5rem 0; height: 13.5rem; }
 #mobile .civil_engineer.bus_outline .tab_box > .inner { top: 4.5rem; }
 #mobile .civil_engineer.bus_outline .tab_box .control { top: 4.5rem; }
@@ -990,7 +995,7 @@
 #mobile .civil_engineer .outline .section .swiper .swiper-nav > div:first-of-type::after { height: 1rem; margin-left: 1rem; }
 
 /* 사업실적 리스트 */
-#mobile .civil_engineer .top { display: flex; flex-direction: column-reverse; padding-top: 7.5rem; }
+#mobile .civil_engineer .top { display: flex; flex-direction: column-reverse; padding-top: 6.5rem; }
 #mobile .civil_engineer .search { padding-top: 3.7rem; }
 #mobile .civil_engineer .search .input_search { width: 100%; max-width: 22.5rem; }
 #mobile .civil_engineer .search .input_search input { width: calc(100% - 2.8rem); height: 3.5rem; border: 0; }
@@ -1173,8 +1178,8 @@
 /* 공통 */
 #mobile .company .sub_visual { background-image: url(../images/company/company_bg_m.png); }
 #mobile .company .tab_box { padding: 0; margin-top: 4rem; }
-#mobile .company .tab_box > .inner { width: calc(100% - 4rem)!important; }
-#mobile .company .tab_box ul { width: 100%; }
+#mobile #sub .company .tab_box > .inner { width: calc(100% - 4rem); }
+#mobile .company .tab_box ul { width: 100%; justify-content: space-between; }
 
 /* 경영이념 */
 #mobile .company .philosophy { padding: 6rem 0 10rem; margin-top: 5rem; }

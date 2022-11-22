@@ -576,6 +576,20 @@ var commonEvent = {
             }
           }
         });
+
+        if (tabBox.children().length > 3) {
+          tabBox.parents(".tab_box").addClass("shadow_align");
+          if (tabContainer.scrollLeft() == 0) {
+            tabBox.parents(".tab_box").addClass("right");
+          } else if (
+            Math.round(tabBox.width() - tabContainer.scrollLeft()) ===
+            tabContainer.width()
+          ) {
+            tabBox.parents(".tab_box").addClass("left");
+          } else {
+            tabBox.parents(".tab_box").removeClass("left right");
+          }
+        }
       });
 
       $(".control").on("click", function () {
@@ -2112,11 +2126,3 @@ var policyEvent = {
     });
   },
 };
-// function privacySel01 (){
-//   $(document).ready(function(){
-//     $('.privacy .inner > ul li').eq(0).addClass('on');
-//     $('.privacy .privacy01').addClass('on');
-//     $('.privacy .select_wrap .select01').addClass('active');
-//   });
-
-// }
