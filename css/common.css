@@ -331,6 +331,7 @@ br {font-family:dotum !important;}
 .container .sub_visual .sub_visual_menu .menu_inner {display: flex; position: relative; z-index: 30;}
 .container .sub_visual .sub_visual_menu.fixed .menu_inner {width: 144rem; margin: 0 auto; }
 .container .sub_visual .sub_visual_menu .home { width: 6rem; height: 6rem; background: #fff url(../images/common/vis_home.png) no-repeat 50% 50%; background-size: 1.6rem; border: 1px solid #e8e8e8; position: relative; }
+.container .sub_visual .sub_visual_menu .home a { display: block; width: 100%; height: 100%; }
 .container .sub_visual .sub_visual_menu .depth  { position: relative; width: 26rem; height: auto; border-top: .1rem solid #e8e8e8; border-bottom: .1rem solid #e8e8e8; font-size:1.8rem; color: #777; }
 .container .sub_visual .sub_visual_menu.fixed .home { border-top: 0; }
 .container .sub_visual .sub_visual_menu.fixed .depth { border:0; }
