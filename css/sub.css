@@ -650,7 +650,8 @@
 /* 마스터피스 - 개요 */
 
 /* 공통 */
-.masterpiece .sub_visual { height: 100vh; }
+.masterpiece .sub_visual { height: 100vh; background-size: auto 120%; }
+.masterpiece .sub_visual.ani { height: 100vh; background-size: auto 100%; }
 .masterpiece .masterpiece_menu { width: 100%; height: fit-content; position: absolute; bottom:0; background: rgba(0,0,0,.5); }
 .masterpiece .masterpiece_menu.fixed { position: fixed; top: 0; left: 0; z-index: 999; }
 .masterpiece .masterpiece_menu ul { display: flex; max-width: 144rem; margin: 0 auto; }
