@@ -29,15 +29,16 @@ $(function () {
     $("html").attr("id", "mobile");
   }
 
-  AOS.init({
-    // 핸들링 참고: https://github.com/michalsnik/aos
-    disable: "mobile",
-    once: true,
-    throttleDelay: 99,
-    duration: 1000,
-    anchorPlacement: "bottom-bobttom",
-    startEvent: "load",
-  });
+  // 버그 문제 다수 발견으로 운영중지
+  // AOS.init({
+  //   // 핸들링 참고: https://github.com/michalsnik/aos
+  //   disable: "mobile",
+  //   once: true,
+  //   throttleDelay: 99,
+  //   duration: 1000,
+  //   anchorPlacement: "bottom-bobttom",
+  //   startEvent: "load",
+  // });
 
   addEventListener("fetch", (event) => {
     event.respondWith(
@@ -746,6 +747,7 @@ var businessEvent = {
 
       $(window).on("scroll", function () {
         let st = $(window).scrollTop();
+        let s0 = $('.masterpiece .section0').offset().top;
 
         if (st >= fixMenu) {
           subMenu.classList.add("fixed");
@@ -758,6 +760,13 @@ var businessEvent = {
         } else {
           $(".header").removeClass("indentUp");
         }
+
+        if(st >= s0 -500){
+          $('.masterpiece .section0').addClass('active');
+        }else{
+
+        }
+        console.log(st);
       });
 
       if ($("#mobile").length) {
