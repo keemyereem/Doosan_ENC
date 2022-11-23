@@ -110,7 +110,7 @@
 
     /* sitemap */
     #mobile .sitemap { min-width: 100%; top: 6rem; opacity: 1; visibility: visible; height: 0; transition: height ease .3s; z-index: 100; display: none; }
-    #mobile .sitemap.active { height: calc(var(--vh, 1vh) * 100 - 6rem); }
+    #mobile .sitemap.active { height: calc(var(--vh, 1vh) * 100 - 6rem); display: block; }
     #mobile .sitemap.active::before { content: ''; width: calc(100% - 4rem); height: .1rem; display: block; top: 0; left: 2rem; position: absolute; z-index: 1; background:  rgba(255, 255, 255, .1);  }
     #mobile .sitemap .wrap { flex-direction: column; justify-content: flex-start; overflow: auto; }
     #mobile .sitemap .wrap .sitemap_main { width: 100%; min-width: 100%; left: 0; }

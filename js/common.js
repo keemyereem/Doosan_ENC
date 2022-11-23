@@ -397,8 +397,8 @@ var commonEvent = {
     });
 
     $(".sitemap_main .block_le > ul > li > h2").on("click", function () {
-      $(this).parent().toggleClass("active");
       $(this).parent().siblings().removeClass("active");
+      $(this).parent().toggleClass("active");
 
       if ($("#mobile").length && !$(this).parent().hasClass("active")) {
         $(this)
