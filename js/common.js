@@ -29,7 +29,6 @@ $(function () {
     $("html").attr("id", "mobile");
   }
 
-  // 버그 문제 다수 발견으로 운영중지
   // AOS.init({
   //   // 핸들링 참고: https://github.com/michalsnik/aos
   //   disable: "mobile",
@@ -766,7 +765,7 @@ var businessEvent = {
         }else{
 
         }
-        console.log(st);
+
       });
 
       if ($("#mobile").length) {
