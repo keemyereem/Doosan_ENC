@@ -534,8 +534,28 @@ var mainEvent = {
   mobile: () => {
     if ($("#mobile").length) {
       // section toggle active when swipe to arrive each offsetTop
+      $(document).on("click", "#topButton", function () {
+        $("html").animate({ scrollTop: 0 }, "300");
+      });
+      
       $(window).on("load scroll resize", () => {
         const section = $("#mobile .section");
+
+        // top button controll
+        if ($(this).scrollTop() > 400) {
+          $("#topButton").fadeIn();
+        } else {
+          $("#topButton").fadeOut();
+        }
+        var footerTop = $(".footer").offset().top - $(window).outerHeight(),
+        pos_m = $(".footer").outerHeight() + Number(25);
+
+        if ($(this).scrollTop() > footerTop) {
+          $("#topButton").addClass("on").css({ bottom: pos_m });
+        } else {
+          $("#topButton").removeClass("on").css({ bottom: "3.5rem" });
+        }
+
 
         section.each(function (index) {
           let sectionTop = section.eq(index).offset().top - 200,

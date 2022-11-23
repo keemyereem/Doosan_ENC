@@ -423,5 +423,3 @@ br {font-family:dotum !important;}
     100% {opacity: 1;transform: translateY(0rem);}
 }
 
-.section0 .fadeUp { opacity: 0; transform: translateY(7rem); transition: all .3s ease-in-out; }
-.section0.active .fadeUp { opacity: 1;transform: translateY(0rem); }

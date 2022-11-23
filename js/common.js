@@ -761,7 +761,7 @@ var businessEvent = {
           $(".header").removeClass("indentUp");
         }
 
-        if(st >= s0 -500){
+        if(st >= s0 -600){
           $('.masterpiece .section0').addClass('active');
         }else{
 
