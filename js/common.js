@@ -146,35 +146,6 @@ var commonEvent = {
       $(".header").css("left", 0 - $(this).scrollLeft());
     });
 
-    // $('#sub .header .gnb > ul > li').mouseenter(function(){
-    //   if($('.header').hasClass('wht')){
-    //       $('.header').removeClass('wht');
-    //       $('.header').css({'background':'#fff'});
-    //       // $('.header').addClass('bg');
-    //   }
-    // });
-    // $('#sub .header .gnb > ul > li').mouseleave(function(){
-    //   if(!$('.container').hasClass('graybox')){
-
-    //     if($('.header').hasClass('bg')){
-    //       $('.header').removeClass('wht');
-
-    //       $('.header').css({'background':'#fff'});
-    //     }else {
-    //       $('.header').removeClass('bg');
-    //     $('.header').css({'background':'transparent'});
-
-    //     }
-    //     $('.header').css({'background':'transparent'});
-    //     $('.header').addClass('wht');
-    //     // $('.header').removeClass('bg');
-
-    //   }else {
-
-    //   }
-
-    // });
-
     $("#sub .header .gnb > ul > li").hover(
       function () {
         if ($(".header").hasClass("wht")) {
@@ -301,9 +272,13 @@ var commonEvent = {
     }
   },
 
+  // -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  // --------------------------------------------------------------------------- 사이트맵 ----------------------------------------------------------------------------
+  // -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
   sitemap: () => {
     // 메인페이지에서 사이트맵 구현 오류 > main.js에 추가 중복코드 삽입.
-    $(window).load(() => {
+    $(document).ready(() => {
       $(".sitemap").show();
     });
 
@@ -327,7 +302,11 @@ var commonEvent = {
 
       listMob.append($(".sitemap_sub .block_br > ul > li"));
       listMob.children("li").last().after($(".sitemap .family_site"));
-      listMob.find("> li h3").contents().unwrap().wrap("<h2></h2>");
+      listMob
+        .find("> li h3")
+        .contents()
+        .unwrap()
+        .wrap("<h2 class='sitemap_btn'></h2>");
 
       listMob.find(".block_2depth > li").each((index) => {
         if (
@@ -347,11 +326,14 @@ var commonEvent = {
         }
       });
 
-      listMob.find(".block_2depth > li > .btn_3dep").on("click", function () {
-        $(this).toggleClass("active");
-        $(this).siblings().toggleClass("active");
-        $(this).parent().siblings().children().removeClass("active");
-      });
+      listMob
+        .find(".block_2depth > li > .btn_3dep")
+        .off("click")
+        .on("click", function () {
+          $(this).toggleClass("active");
+          $(this).siblings().toggleClass("active");
+          $(this).parent().siblings().children().removeClass("active");
+        });
 
       $(".family_site").on("click", function () {
         $(".sitemap .wrap").animate(
@@ -396,26 +378,23 @@ var commonEvent = {
       }
     });
 
-    $(".sitemap_main .block_le > ul > li > h2").on("click", function () {
-      $(this).parent().siblings().removeClass("active");
-      $(this).parent().toggleClass("active");
+    $(".sitemap_btn")
+      .off("click")
+      .on("click", function (event) {
+        console.log("1. 클릭 자체 동작여부");
 
-      if ($("#mobile").length && !$(this).parent().hasClass("active")) {
-        $(this)
-          .siblings()
-          .find(".btn_3dep, .block_3depth")
-          .removeClass("active");
-      } else if (
-        $("#mobile").length &&
-        $(".sitemap_main .block_le > ul > li").hasClass("active")
-      ) {
-        $(this)
-          .parent()
-          .siblings()
-          .find(".btn_3dep, .block_3depth")
-          .removeClass("active");
-      }
-    });
+        $(this).parent().toggleClass("active").siblings().removeClass("active");
+        if ($("#mobile").length) {
+          let activeIdx = $(".block_le > ul > li.active").index();
+
+          $(".block_le > ul > li")
+            .not(":eq(" + activeIdx + ")")
+            .find(".btn_3dep, .block_3depth")
+            .removeClass("active");
+        }
+
+        event.stopPropagation();
+      });
 
     // 팝업 열기 function
     function openProcessor() {
@@ -657,6 +636,10 @@ var commonEvent = {
     });
   },
 
+  // -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  // ----------------------------------------------------------------------------- 팝업 ------------------------------------------------------------------------------
+  // -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
   popup: () => {
     const body = $("body");
 
@@ -746,7 +729,7 @@ var businessEvent = {
 
       $(window).on("scroll", function () {
         let st = $(window).scrollTop();
-        let s0 = $('.masterpiece .section0').offset().top;
+        let s0 = $(".masterpiece .section0").offset().top;
 
         if (st >= fixMenu) {
           subMenu.classList.add("fixed");
@@ -760,12 +743,10 @@ var businessEvent = {
           $(".header").removeClass("indentUp");
         }
 
-        if(st >= s0 -600){
-          $('.masterpiece .section0').addClass('active');
-        }else{
-
+        if (st >= s0 - 600) {
+          $(".masterpiece .section0").addClass("active");
+        } else {
         }
-
       });
 
       if ($("#mobile").length) {

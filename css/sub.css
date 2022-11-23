@@ -256,8 +256,8 @@
 #main #fullpage .section06 .inner { max-width: 144rem; width: 100%; height: 100%; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
 #main #fullpage .section06 .left .sub_tit { font-size: 3rem; color: #555; line-height: 1.53; margin: 1.5rem 0 7rem; font-weight: 150; }
 #main #fullpage .section06 .left .viewmore { display: block; width: 13.6rem; font-family: 'Montserrat'; font-size: 1.4rem; color: #222; position: relative; }
-#main #fullpage .section06 .left .viewmore::after { content:''; display: block; width: 0; height: .1rem; background: #000; margin-top: 1rem; transition: all .3s; }
-#main #fullpage .section06 .left .viewmore:hover::after { width: 100%; }
+#main #fullpage .section06 .left .viewmore::after { content:''; display: block; width: 100%; height: .1rem; background: #000; margin-top: 1rem; transition: all .3s; }
+#main #fullpage .section06 .left .viewmore:hover::after { width: 0; }
 #main #fullpage .section06 .left .viewmore > span { display: inline-block; width: 1.2rem; height: .1rem; background: #000; position: absolute; right: 0; bottom: 2rem; }
 #main #fullpage .section06 .left ul { width: 34rem; display: flex; justify-content: space-between; margin-top: 10rem; }
 #main #fullpage .section06 .left ul li .pg_name { font-size: 1.6rem; color: #222; text-align: center; margin-top: 2rem; font-weight: 300; }
@@ -1170,7 +1170,7 @@
 .company .greeting .picture { position: absolute; top: 19.3rem; left: 0; }
 .company .greeting .sign { width: fit-content; margin-left: auto; margin-top: 6rem; }
 .company .greeting .sign p { font-size: 1.6rem; color: #222; letter-spacing: -.04rem; }
-.company .greeting .sign b { font-size: 2.4rem; display: inline-block; margin: 1.5rem 1.5rem 0 0; }
+.company .greeting .sign b { font-size: 2.4rem; display: inline-block; margin: 1.5rem 1.5rem 0 0; font-weight: 400; }
 
 /* 연혁 */
 .company .history { margin-top: 14rem; overflow: hidden; position: relative; }

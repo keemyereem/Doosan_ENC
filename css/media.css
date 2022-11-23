@@ -76,7 +76,7 @@
 
     /* header */
     #mobile .header { padding: 0 2rem; width: 100vw; }
-    #mobile .header::before { content: ''; width: 100vw; height: 0; top: 0; left: 0; position: fixed; background: #005eb8; z-index: -100; transition: all ease .3s; }
+    #mobile .header::before { content: ''; width: 100vw; height: 0; top: 6rem; left: 0; position: fixed; background: linear-gradient(to bottom, #005eb8 50%, transparent 50%); z-index: -100; transition: all ease .3s; }
     #mobile .header.bg { background: #fff;box-shadow: none; }
     #mobile .header.bg .logo { background: url(../images/common/logo_b.png) no-repeat; }
     #mobile .header.bg .top_sitemap button span::before { background-color: #222; }
@@ -94,7 +94,7 @@
     #mobile .header .top_sitemap button span:nth-child(2) { width: 2.7rem; height: .2rem; margin-left: 0; }
     #mobile .header::after { content: ''; display: block; position: absolute; left: 0; width: 100%; height: 7rem; background: #005eb8; transform: scaleY(0); z-index: -1; bottom: 0; transition: transform ease .3s; transform-origin: 0 100%; }
     #mobile .header.mobileForm::after { transform: scaleY(1); width: 100%; }
-    #mobile .header.mobileForm::before { height: 50vh; }
+    #mobile .header.mobileForm::before { height: calc(var(--vh, 1vh) * 100 - 6rem); }
     #mobile .header .top_sitemap button span:nth-child(1){animation:manuAnimate01_1 0.8s forwards; }
     #mobile .header .top_sitemap button span:nth-child(2){animation:manuAnimate02_1 0.8s forwards; }
     #mobile .header .top_sitemap button span:nth-child(3){animation:manuAnimate03_1 0.8s forwards; }
@@ -423,7 +423,7 @@
     #mobile .tab_box.shadow_align::before,
     #mobile .tab_box.shadow_align::after { transition: all ease .2s; opacity: 1; content: ''; display: inline-block; position: absolute; height: 100%; width: 3rem; pointer-events: none; border-radius: 20px 0 0 20px; background: transparent; right: 3rem; z-index: 1; box-shadow: -15px 0 15px -20px rgb(0 0 0 / 20%) inset; }
     #mobile .tab_box.shadow_align::before { right: 0; left: 3rem; box-shadow: 15px 0 15px -20px rgb(0 0 0 / 20%) inset; border-radius: 0 20px 20px 0; }
-    #mobile .tab_box > .inner { overflow-x: auto; position: absolute; top:0; height: 7rem; }
+    #mobile .tab_box > .inner { overflow-x: auto; position: absolute; top:0; height: 6rem; }
     #mobile .tab_box ul { width: fit-content; position: absolute; left: 0; top: 1rem; }
     #mobile .tab_box ul li { flex: initial; flex-shrink: 0!important; width: calc(100% / 3); height: 4.5rem; display: table; }
     #mobile .tab_box ul.tab_slide li { width: calc((100vw - 6rem) / 3); }
