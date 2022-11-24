@@ -2,6 +2,7 @@
 /* --------------------- Published by 4m Creative --------------------- */
 
 $(function () {
+  // 모바일 높이값 상하 확장 UI 제외한 실측 크기 환산
   $(function () {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
@@ -13,6 +14,7 @@ $(function () {
     });
   });
 
+  // PC/모바일 구분 코드 (ID로 표기)
   const isMobile = () => {
     const user = navigator.userAgent;
     let isCheck = false;
@@ -29,15 +31,15 @@ $(function () {
     $("html").attr("id", "mobile");
   }
 
-  AOS.init({
-    // 핸들링 참고: https://github.com/michalsnik/aos
-    disable: "mobile",
-    once: true,
-    throttleDelay: 99,
-    duration: 1000,
-    anchorPlacement: "bottom-bobttom",
-    startEvent: "load",
-  });
+  // AOS.init({
+  //   // 핸들링 참고: https://github.com/michalsnik/aos
+  //   disable: "mobile",
+  //   once: true,
+  //   throttleDelay: 99,
+  //   duration: 1000,
+  //   anchorPlacement: "bottom-bobttom",
+  //   startEvent: "load",
+  // });
 
   addEventListener("fetch", (event) => {
     event.respondWith(
@@ -56,10 +58,12 @@ $(function () {
     );
   });
 
+  // 다른페이지 링크 후 해당페이지에서 이벤트 발생시키기 (href 뒤에 ?text 표기)
   $(window).ready(() => {
     const page_url = document.location.href,
       param = page_url.substring(page_url.indexOf("?") + 1).split("?");
 
+    // 메인페이지 직무소개 이동후 팝업열기
     if ($(".isotope").length) {
       if (param == "linkvia1") {
         scrollFocus();
@@ -73,6 +77,8 @@ $(function () {
         }, 700);
       }
       history.replaceState({}, null, location.pathname);
+
+      // 개인정보 처리방침 현재,이전 탭박스 및 슬라이드 변경
     } else if ($(".privacy").length) {
       if (param == "media") {
         $(".graybox .policy .box .box_cont").eq(0).removeClass("on");
@@ -83,6 +89,8 @@ $(function () {
         $(".graybox .policy > .inner > ul li").last().addClass("on");
         $(".graybox .policy > .inner .terms_site").last().addClass("active");
       }
+
+      // 사업영역 각 탭별 이동 후 스크롤 포커싱
     } else if ($(".civil_engineer").length) {
       if (param == "linkvia3") {
         window.scrollTo({
@@ -142,39 +150,12 @@ var commonEvent = {
   },
 
   headerEvent: () => {
+    // 1400px 이하 가로스크롤 이동 시 헤더 위치 변경(fixed 속성 대안)
     $(window).on("scroll", function () {
       $(".header").css("left", 0 - $(this).scrollLeft());
     });
 
-    // $('#sub .header .gnb > ul > li').mouseenter(function(){
-    //   if($('.header').hasClass('wht')){
-    //       $('.header').removeClass('wht');
-    //       $('.header').css({'background':'#fff'});
-    //       // $('.header').addClass('bg');
-    //   }
-    // });
-    // $('#sub .header .gnb > ul > li').mouseleave(function(){
-    //   if(!$('.container').hasClass('graybox')){
-
-    //     if($('.header').hasClass('bg')){
-    //       $('.header').removeClass('wht');
-
-    //       $('.header').css({'background':'#fff'});
-    //     }else {
-    //       $('.header').removeClass('bg');
-    //     $('.header').css({'background':'transparent'});
-
-    //     }
-    //     $('.header').css({'background':'transparent'});
-    //     $('.header').addClass('wht');
-    //     // $('.header').removeClass('bg');
-
-    //   }else {
-
-    //   }
-
-    // });
-
+    // 헤더 UI 화이트모드 및 마우스오버 이벤트
     $("#sub .header .gnb > ul > li").hover(
       function () {
         if ($(".header").hasClass("wht")) {
@@ -197,6 +178,7 @@ var commonEvent = {
       }
     );
 
+    // 메인페이지 fullpage 각 섹션별 화이트모드/노멀모드 적용 및 마우스오버 이벤트
     $("#main .header .gnb > ul > li").mouseenter(function () {
       if (
         !$("body").hasClass("fp-viewing-firstPage") &&
@@ -252,16 +234,19 @@ var commonEvent = {
   },
 
   subVisual: () => {
+    // 서브페이지 로드 시 상단 이미지 줌아웃 효과
     $(window).load(() => {
       $(".sub_visual").addClass("ani");
     });
   },
 
   submenuEvent: () => {
+    // 서브페이지 서브메뉴 온오프
     $(document).on("click", ".sub_visual_menu .depth", function () {
       $(this).toggleClass("open");
     });
 
+    // 서브메뉴 클릭 시 해당메뉴 맨 위로 표기
     $(document).on(
       "click",
       ".sub_visual_menu .depth .drop_box li a",
@@ -272,14 +257,15 @@ var commonEvent = {
       }
     );
 
+    // 스크롤다운 버튼 클릭 시 내용화면으로 스크롤
     $(document).on("click", ".scroll_down", function () {
       var titleTop = $(".title_area").offset().top;
       $("html, body") /* .removeClass('smooth') */
         .animate({ scrollTop: titleTop }, "300");
     });
 
+    // 서브 비주얼 스크롤 패스 시 서브메뉴 상단 고정 및 헤더메뉴 숨김
     const subMenu = document.querySelector(".sub_visual_menu");
-
     if ($(".sub_visual_menu").length) {
       let fixMenu = subMenu.offsetTop;
 
@@ -301,11 +287,17 @@ var commonEvent = {
     }
   },
 
+  // -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  // --------------------------------------------------------------------------- 사이트맵 ----------------------------------------------------------------------------
+  // -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
   sitemap: () => {
-    $(window).load(() => {
+    // 메인페이지에서 사이트맵 구현 오류 > main.js에 추가 중복코드 삽입.
+    $(document).ready(() => {
       $(".sitemap").show();
     });
 
+    // 변수선언 - 정규식 구분/ 스크롤 체크용 바디/ 사이트맵 
     const check_num = /[0-9]/,
       check_eng = /[a-zA-Z]/,
       check_kor = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/,
@@ -315,7 +307,7 @@ var commonEvent = {
     let blocks = $(".block_br > ul > li");
     (scrollPosition = 0), (sitemap = $(".top_sitemap"));
 
-    // *** Mobile
+    // *** Mobile 사이트맵 구조 변경 메인틀(pc버전 왼쪽 큰 창)에 모든 요소 재정렬
     if ($("#mobile").length) {
       const listMob = $(".sitemap_main .block_le > ul"),
         moveBrlist = $(".sitemap_sub .block_br > ul > li .block_2depth");
@@ -326,7 +318,11 @@ var commonEvent = {
 
       listMob.append($(".sitemap_sub .block_br > ul > li"));
       listMob.children("li").last().after($(".sitemap .family_site"));
-      listMob.find("> li h3").contents().unwrap().wrap("<h2></h2>");
+      listMob
+        .find("> li h3")
+        .contents()
+        .unwrap()
+        .wrap("<h2 class='sitemap_btn'></h2>");
 
       listMob.find(".block_2depth > li").each((index) => {
         if (
@@ -346,11 +342,15 @@ var commonEvent = {
         }
       });
 
-      listMob.find(".block_2depth > li > .btn_3dep").on("click", function () {
-        $(this).toggleClass("active");
-        $(this).siblings().toggleClass("active");
-        $(this).parent().siblings().children().removeClass("active");
-      });
+      // 3뎁스
+      listMob
+        .find(".block_2depth > li > .btn_3dep")
+        .off("click")
+        .on("click", function () {
+          $(this).toggleClass("active");
+          $(this).siblings().toggleClass("active");
+          $(this).parent().siblings().children().removeClass("active");
+        });
 
       $(".family_site").on("click", function () {
         $(".sitemap .wrap").animate(
@@ -371,11 +371,13 @@ var commonEvent = {
       }
     });
 
+    // PC 1400px이하 가로 스크롤 및 사이트맵 오픈 시 body 스크롤 방지
     $(window).on("scroll", function () {
       scrollPosition = window.pageYOffset;
       $(".sitemap").css("left", 0 - $(this).scrollLeft());
     });
 
+    // 사이트맵 온오프
     sitemap.on("click", () => {
       if (sitemap.hasClass("on")) {
         openProcessor();
@@ -395,26 +397,22 @@ var commonEvent = {
       }
     });
 
-    $(".sitemap_main .block_le > ul > li > h2").on("click", function () {
-      $(this).parent().toggleClass("active");
-      $(this).parent().siblings().removeClass("active");
+    // 2뎁스
+    $(".sitemap_btn")
+      .off("click")
+      .on("click", function (event) {
+        $(this).parent().toggleClass("active").siblings().removeClass("active");
+        if ($("#mobile").length) {
+          let activeIdx = $(".block_le > ul > li.active").index();
 
-      if ($("#mobile").length && !$(this).parent().hasClass("active")) {
-        $(this)
-          .siblings()
-          .find(".btn_3dep, .block_3depth")
-          .removeClass("active");
-      } else if (
-        $("#mobile").length &&
-        $(".sitemap_main .block_le > ul > li").hasClass("active")
-      ) {
-        $(this)
-          .parent()
-          .siblings()
-          .find(".btn_3dep, .block_3depth")
-          .removeClass("active");
-      }
-    });
+          $(".block_le > ul > li")
+            .not(":eq(" + activeIdx + ")")
+            .find(".btn_3dep, .block_3depth")
+            .removeClass("active");
+        }
+
+        event.stopPropagation();
+      });
 
     // 팝업 열기 function
     function openProcessor() {
@@ -478,7 +476,7 @@ var commonEvent = {
 
   goTopEvent: () => {
     $(window).scroll(function () {
-      // top button controll
+      // top button control
       if ($(this).scrollTop() > 400) {
         $("#topButton").fadeIn();
       } else {
@@ -575,6 +573,20 @@ var commonEvent = {
             }
           }
         });
+
+        if (tabBox.children().length > 3) {
+          tabBox.parents(".tab_box").addClass("shadow_align");
+          if (tabContainer.scrollLeft() == 0) {
+            tabBox.parents(".tab_box").addClass("right");
+          } else if (
+            Math.round(tabBox.width() - tabContainer.scrollLeft()) ===
+            tabContainer.width()
+          ) {
+            tabBox.parents(".tab_box").addClass("left");
+          } else {
+            tabBox.parents(".tab_box").removeClass("left right");
+          }
+        }
       });
 
       $(".control").on("click", function () {
@@ -641,6 +653,10 @@ var commonEvent = {
       });
     });
   },
+
+  // -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  // ----------------------------------------------------------------------------- 팝업 ------------------------------------------------------------------------------
+  // -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   popup: () => {
     const body = $("body");
@@ -731,6 +747,7 @@ var businessEvent = {
 
       $(window).on("scroll", function () {
         let st = $(window).scrollTop();
+        let s0 = $(".masterpiece .section0").offset().top;
 
         if (st >= fixMenu) {
           subMenu.classList.add("fixed");
@@ -742,6 +759,11 @@ var businessEvent = {
           $(".header").addClass("indentUp");
         } else {
           $(".header").removeClass("indentUp");
+        }
+
+        if (st >= s0 - 600) {
+          $(".masterpiece .section0").addClass("active");
+        } else {
         }
       });
 
@@ -781,6 +803,7 @@ var businessEvent = {
     });
   },
 
+  //스크롤 down: header 사라짐, 스크롤 up: header 등장
   headerScroll: () => {
     let before = 0;
 
@@ -1820,10 +1843,11 @@ var companyEvent = {
 var customerEvent = {
   init: function () {
     this.inqEmail();
+    this.namechk();
   },
 
   inqEmail: function () {
-    //selectbox
+    //이메일 직접입력 선택시 입력칸 추가
     var selectType = $(".select_row>select");
     selectType.addClass("selectBox");
     selectChange(selectType);
@@ -1843,6 +1867,17 @@ var customerEvent = {
         }
       });
     }
+  },
+
+  //익명 선택시 "익명" 비선택시 초기화
+  namechk: function () {
+    $("#anonymous").change(function () {
+      if ($("#anonymous").is(":checked")) {
+        $("#name").val("익명");
+      } else {
+        $("#name").val("");
+      }
+    });
   },
 };
 
@@ -2028,6 +2063,7 @@ var socialEvent = {
     this.counting();
   },
 
+  //숫자 카운팅 효과
   counting: () => {
     setTimeout(() => {
       $(".count").each(function () {
@@ -2111,11 +2147,3 @@ var policyEvent = {
     });
   },
 };
-// function privacySel01 (){
-//   $(document).ready(function(){
-//     $('.privacy .inner > ul li').eq(0).addClass('on');
-//     $('.privacy .privacy01').addClass('on');
-//     $('.privacy .select_wrap .select01').addClass('active');
-//   });
-
-// }
