@@ -86,14 +86,30 @@ var mainEvent = {
         }
 
         // footer
-        if (index == 7) {
-          setTimeout(() => {
-            $(".footer .sec_tit > span").addClass("fin");
-          }, 200);
+        if (!$(".container").hasClass("en")) {
+          //국문
+          if (index == 7) {
+            setTimeout(() => {
+              $(".footer .sec_tit > span").addClass("fin");
+            }, 200);
+          } else {
+          }
         } else {
+          //영문
+          if (index == 6) {
+            setTimeout(() => {
+              $(".footer_en .sec_tit > span").addClass("fin");
+            }, 200);
+
+            $("#rightnavi, .header_en").addClass("indent");
+          } else {
+            $("#rightnavi, .header_en").removeClass("indent");
+          }
         }
       },
     });
+
+
   },
 
   intro: () => {
@@ -342,6 +358,7 @@ var mainEvent = {
 
   sec03Swiper: () => {
     var listArray = ["주택사업", "건축사업", "토목사업"];
+    var listEnArray = ["Housing", "Architecture", "Civil Engineering"];
 
     swiper3 = new Swiper(".section03 .bus_swiper", {
       speed: 500,
@@ -363,15 +380,32 @@ var mainEvent = {
         clickable: "true",
         type: "bullets",
         renderBullet: function (index, className) {
-          return (
-            '<span class="' +
-            className +
-            '">' +
-            "<em>" +
-            listArray[index] +
-            "</em>" +
-            "</span>"
-          );
+          
+          if(!$('.container').hasClass('en')){
+            //국문
+            return (
+              '<span class="' +
+              className +
+              '">' +
+              "<em>" +
+              listArray[index] +
+              "</em>" +
+              "</span>"
+            );
+          }else {
+            //영문
+            return (
+              '<span class="' +
+              className +
+              '">' +
+              "<em>" +
+              listEnArray[index] +
+              "</em>" +
+              "</span>"
+            );
+          }
+
+
         },
       },
       autoplay: {
@@ -537,7 +571,7 @@ var mainEvent = {
       $(document).on("click", "#topButton", function () {
         $("html").animate({ scrollTop: 0 }, "300");
       });
-      
+
       $(window).on("load scroll resize", () => {
         const section = $("#mobile .section");
 
@@ -548,14 +582,13 @@ var mainEvent = {
           $("#topButton").fadeOut();
         }
         var footerTop = $(".footer").offset().top - $(window).outerHeight(),
-        pos_m = $(".footer").outerHeight() + Number(25);
+          pos_m = $(".footer").outerHeight() + Number(25);
 
         if ($(this).scrollTop() > footerTop) {
           $("#topButton").addClass("on").css({ bottom: pos_m });
         } else {
           $("#topButton").removeClass("on").css({ bottom: "3.5rem" });
         }
-
 
         section.each(function (index) {
           let sectionTop = section.eq(index).offset().top - 200,
