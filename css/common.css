@@ -51,7 +51,7 @@ br {font-family:dotum !important;}
 .blind { opacity: 0;}
 .nowrap { white-space: nowrap; }
 .none {display: none;}
-.blockScroll { overflow: hidden !Important; height: 100vh; }
+.blockScroll { overflow: hidden !important; height: 100vh; }
 
 
 /* selectbox */
@@ -110,7 +110,7 @@ br {font-family:dotum !important;}
 
 
 /* header */
-.header {width: 100%;position: fixed;top: 0;left: 0;z-index: 99;padding: 0 5rem; transition: all ease .2s; }
+.header {width: 100%;position: fixed;top: 0;left: 0;z-index: 99;padding: 0 5rem; transition: transform ease .2s, background ease .2s, color ease .2s; }
 .header .header_wrap {height: 10rem;display: flex;align-items: center;font-size: 1.8rem;color: #222;}
 .header .logo {display: block;width: 10.3rem;height: 2.8rem;background: url(../images/common/logo_b.png) no-repeat;font-size: 0;margin-right: 7vw; transition: all ease .3s;}
 .header .gnb {width: 73rem;height: 100%;}
