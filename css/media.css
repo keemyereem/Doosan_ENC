@@ -1408,9 +1408,8 @@
 #mobile .sr .certList ul li dl dd:not(:last-child) { font-size: 1.4rem; line-height: 1.64; }
 #mobile .sr .certList ul li dl dd:not(:last-child)::before { width: .5rem; height: .5rem; margin: -.1rem 1rem 0 0; background-size: contain;}
 #mobile .sr .certList ul li dl dd:last-child { margin-top: 2.5rem; }
-#mobile .sr .certList ul li dl dd:last-child a { font-size: 1.3rem; height: 4.5rem; line-height: 4.5rem; width: 21.1rem; border-radius: 4.5rem; }
-#mobile .sr .certList ul li dl dd:last-child a:after { background: url(../images/common/icon_plus_15x15.png)50% 50% no-repeat; width: 1.5rem; height: 1.5rem; position: relative; top: .2rem; margin-left: 8rem; }
-#mobile .sr .certList ul li dl dd:last-child a:hover:after { background: url(../images/common/icon_plus_w_15x15.png)50% 50% no-repeat; }
+#mobile .sr .certList ul li dl dd:last-child a { width: 17.5rem; height: 4.5rem; line-height: 4.5rem; font-size: 1.3rem; text-indent: .5rem; }
+#mobile .sr .certList ul li dl dd:last-child a i { width: 1.5rem; height: 1.5rem; background-size: contain; right: 1rem; }
 #mobiel .sr .social_mob_img { display: block; }
 #mobile .sr .social_pc_img { display: none; }
 
@@ -1531,10 +1530,10 @@
 /* 윤리경영 */
 #mobile .sr .etm { width: 100%; margin-top: 5.5rem; }
 #mobile .sr .etm section { width: 100%; padding: 5.5rem 0; }
-#mobile .sr .etm section p,
+#mobile .sr .etm section > p,
 #mobile .sr .etm section img { width: calc(100% - 4rem); margin: auto; }
 #mobile .sr .etm .section01 { padding: 5.5rem 0 4.5rem; }
-#mobile .sr .etm .section01 p { font-size: 1.4rem; padding: 2.5rem 1rem; }
+#mobile .sr .etm .section01 > p { font-size: 1.4rem; padding: 2.5rem 1rem; }
 #mobile .sr .etm .section01 img { margin-top: 4.5rem; }
 #mobile .sr .etm .section02 h3 { padding-bottom: 2.5rem; }
 #mobile .sr .etm .section02 p span { font-size: 1.6rem; line-height: 1.68; padding-bottom: .5rem; }

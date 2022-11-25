@@ -1392,11 +1392,11 @@
 .sr .certList ul li dl dt p { font-family: 'Pretendard', sans-serif; font-size: 1.8rem; font-weight: 150; color: #555555; line-height: 1.9; padding-top: 2rem; }
 .sr .certList ul li dl dd:not(:last-child) { font-size: 1.8rem; font-weight: 150; line-height: 2; }
 .sr .certList ul li dl dd:not(:last-child)::before { content: ''; background: url(../images/social/single_dot.png) 50% 50% no-repeat; width: .6rem; height: .6rem; display: inline-block; margin: -.2rem 1rem 0 0; vertical-align: middle; }
-.sr .certList ul li dl dd:last-child { margin-top: 6rem; }
-.sr .certList ul li dl dd:last-child a { font-size: 1.6rem; display: inline-block; color: #000000; height: 6.4rem; line-height: 6.4rem; width: 28.3rem; text-align: center; border: .1rem solid #000; border-radius: 3.5rem; transition: all ease .3s; }
-.sr .certList ul li dl dd:last-child a:after { content: ''; display: inline-block; background: url(../images/common/icon_plus_21x22.png)50% 50% no-repeat; width: 1.9rem; height: 1.9rem; position: relative; top: .3rem; margin-left: 11.5rem; }
-.sr .certList ul li dl dd:last-child a:hover { background: #000000; color: #fff; }
-.sr .certList ul li dl dd:last-child a:hover:after { background: url(../images/common/icon_plus_w_21x22.png)50% 50% no-repeat; }
+.sr .certList ul li dl dd:last-child { margin-top: 7rem; }
+.sr .certList ul li dl dd:last-child a { display: block; width: 21rem; height: 6rem; line-height: 6rem; font-size: 1.6rem; color: #000; text-indent: 1rem; letter-spacing: 0; text-align: left; position: relative; }
+.sr .certList ul li dl dd:last-child a i { display: inline-block; width: 1.9rem; height: 2rem; background: url(../images/common/icon_download.png) no-repeat; position: absolute; right: 2rem; top:50%; transform: translateY(-50%); }
+.sr .certList ul li dl dd:last-child a::after { content:''; display: block; width: 100%; height: .1rem; background: #000; transition: width .3s; } 
+.sr .certList ul li dl dd:last-child a:hover::after { width: 0; }
 
 /* 프롤로그(사회책임경영 원칙) */
 .sr .prologue { height: auto; box-shadow: 2px 3px 50px 0px rgba(41, 41, 41, 0.2); margin-bottom: 20rem; }
@@ -1579,7 +1579,7 @@
 .sr .etm section { width: 100%; padding: 12rem 0; position: relative; text-align: center; }
 .sr .etm .section01,
 .sr .etm .section03 { background: #f9f9f9; }
-.sr .etm .section01 p { max-width: 136rem; margin: auto; font-size: 2rem; color: #555555; line-height: 1.8; background: #fff; padding: 6rem 0; border: .1rem dashed #cccccc; }
+.sr .etm .section01 > p { max-width: 136rem; margin: auto; font-size: 2rem; color: #555555; line-height: 1.8; background: #fff; padding: 6rem 0; border: .1rem dashed #cccccc; }
 .sr .etm .section01 img { margin-top: 6rem; }
 .sr .etm .section02 p span { display: block; font-size: 2.2rem; font-weight: 400; color: #222222; line-height: 1.63; padding-bottom: 1rem; }
 .sr .etm .section02 p { font-size: 2rem; color: #555555; line-height: 1.8; padding-top: 2.5rem; }
