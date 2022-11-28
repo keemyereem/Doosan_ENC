@@ -242,6 +242,8 @@
 
     /* Win-Win Partnership */
     #mobile .sr.en .ww section > h3 { padding-left: 1rem; padding-right: 1rem; }
+    #mobile .sr.en .ww .section04 > ul > li > div { height: auto; }
+    #mobile .sr.en .ww .section04 > ul > li > div h3 {  }
 
     /* Social Contribution */
     #mobile .sr.en .sc .section01 ul li { height: auto; padding: 3rem 0; }

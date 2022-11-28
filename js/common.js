@@ -715,10 +715,13 @@ var commonEvent = {
   // -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   english: () => {
+    // 영문사이트 폰트 굵기 값 추적 및 변경
     if ($(".header_en, .sitemap_en, .en").length) {
-      if ($("html *").css("font-weight") == "150") {
-        $("html *").css({ "font-weight": "100", border: "1px solid red" });
-      }
+      $("html *").each(function (index) {
+        if ($("html *").eq(index).css("font-weight") === "150") {
+          $("html *").eq(index).css("font-weight", "100");
+        }
+      });
     }
   },
 };
