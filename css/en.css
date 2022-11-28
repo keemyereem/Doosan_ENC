@@ -62,7 +62,8 @@
 .company.en .bod .inner:first-child > div.inner_wrap > ul > li .info li span { font-weight: 100; text-align: left; }
 .company.en .bod .inner:first-child > div.inner_wrap > ul > li .info .hidden span { line-height: 1.5; margin-top: 1rem; }
 
-.company.en #HMchart > li .graph .graph_bar li > p { width: 100%; }
+.company.en #HMchart > li .graph .graph_bar li > p { width: 100%; bottom: -6rem; }
+
 
 
 /* Social Responsibility */
@@ -116,27 +117,20 @@
 .sr.en .ww .section04 > ul > li > div { height: 40rem; }
 .sr.en .ww .section04 > ul > li .block2 li { flex-direction: column; }
 .sr.en .ww .section04 > ul > li .block2 li span { width: auto; }
-
-.sr.en .ww .section05 { padding: 11rem 0 20rem; background: linear-gradient(to bottom, #f9f9f9 88.3rem, #fff 1rem); }
-.sr.en .ww .section05 > ul { display: flex; position: relative; justify-content: space-between; padding-bottom: 7.2rem; }
-.sr.en .ww .section05 > ul > li { width: calc(50% - 2rem); }
-.sr.en .ww .section05 > ul > .info { position: absolute; bottom: 0; right: 4rem; width: 74rem; height: 38.7rem; background: #005eb8; padding: 5rem 9rem 6rem; }
-.sr.en .ww .section05 > ul > .info > ul { position: relative; }
-.sr.en .ww .section05 > ul > .info li { color: rgba(255, 255, 255, .8); line-height: 1.5; padding: 2.5rem 0 2.5rem 14rem; font-size: 1.8rem; display: flex; white-space: nowrap; }
-.sr.en .ww .section05 > ul > .info li:not(:first-child) { background-image: linear-gradient(to left, rgba(204,204,204, .5) 5px, rgba(255,255,255,0) 1px); background-size: 6px 1px; background-repeat: repeat-x; }
-.sr.en .ww .section05 > ul > .info li span { display: block; position: absolute; left: 0; font-size: 2rem; color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 350; }
-.sr.en .ww .section05 > ul > .info > span { padding-top: .5rem; color: #fc9f35; font-size: 1.5rem; white-space: nowrap; display: block; letter-spacing: -.07rem; }
-.sr.en .ww .section05 > ul > .info > span:first-of-type { padding-top: 2.5rem; }
-.sr.en .ww .section05 > ul > li p { padding-top: 3.5rem; margin: 6rem 0 0 6rem; position: relative; font-size: 2.8rem; font-weight: 400; line-height: 1.64; }
-.sr.en .ww .section05 > ul > li p em { color: #005eb8; }
-.sr.en .ww .section05 > ul > li p span { display: block; color: #777777; font-size: 2rem; font-weight: 200; padding-top: 2rem; line-height: 1.7; }
-.sr.en .ww .section05 > ul > li p::before { content: ''; display: block; width: 5.5rem; height: .6rem; background: #005eb8; transform: skew(-45deg); position: absolute; left: .4rem; top: 0; margin: auto; }
+.sr.en .ww .section05 > ul { padding-bottom: 20.2rem; }
+.sr.en .ww .section05 > ul > .info { width: 85rem; height: auto; }
+.sr.en .ww .section05 > ul > .info li { white-space: normal; }
+.sr.en .ww .section05 > ul > .info > span { white-space: normal; display: flex; }
+.sr.en .ww .section05 > ul > .info > span:first-of-type { padding-top: 0rem; }
+.sr.en .ww .section05 > ul > .info > span i { margin-right: .5rem; }
+.sr.en .ww .section05 > ul > li p { margin: 6rem 0 0 6rem; }
 
 /* Ethics & Compliance Management */
 .sr.en .etm .section01 ul { display: none; }
 
 /* Social Contribution */
 .sr.en .sc .section01 ul li .tit { text-align: center; }
+.sr.en .sc .section01 ul li .num span { line-height: 1; padding-bottom: .5rem; }
 .sr.en .sc .section04 .box_wrap { width: 90rem; height: 38rem; }
 .sr.en .sc .section02 .box_wrap .box:first-of-type p { padding-bottom: 4rem; }
 .sr.en .sc .section03 .box_wrap .box:first-of-type .txt { padding-top: 4rem; }
@@ -154,6 +148,8 @@
 @media screen and (max-width:1440px) { 
     .header_en { padding: 0 2rem; }
     .header_en .header_wrap { width: 140rem; }
+
+    #sub .sr.en .ww .section05 > ul { padding-bottom: 28.2rem; }
 }
 
 
@@ -214,7 +210,6 @@
     #mobile .sr.en .hsm .section02.activity ul li dl { margin-top: 1rem; margin-left: 0; }
     #mobile .sr.en .hsm .section02.activity ul li dl dt { text-align: left; line-height: 1.2; }
     
-
     /* Environmental Management */
     #mobile .sr.en .em .section01 .emInfo { height: 139vw; width: calc(100% - 2rem); margin-bottom: 4.5rem; background: url(../images/social/em_info_mob_en.png)50% 50% no-repeat; background-size: contain;}
     #mobile .sr.en .em .section02 > p { padding: 0 2rem 3rem; }
@@ -243,10 +238,12 @@
     /* Win-Win Partnership */
     #mobile .sr.en .ww section > h3 { padding-left: 1rem; padding-right: 1rem; }
     #mobile .sr.en .ww .section04 > ul > li > div { height: auto; }
-    #mobile .sr.en .ww .section04 > ul > li > div h3 {  }
+    #mobile .sr.en .ww .section04 > ul > li > div h3 { padding-right: 1rem; }
+    #mobile #sub .sr.en .ww .section05 > ul { padding-bottom: 33.75rem; }
 
     /* Social Contribution */
     #mobile .sr.en .sc .section01 ul li { height: auto; padding: 3rem 0; }
+    #mobile .sr.en .sc .section01 ul li .num span { padding-bottom: 0rem; }
     #mobile .sr.en .sc .top h3,
     #mobile .sr.en .sc .top p,
     #mobile .sr.en .sc .section04 h3 { padding-left: 1rem; padding-right: 1rem; }
