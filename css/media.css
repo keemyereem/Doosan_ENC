@@ -1189,9 +1189,8 @@
 /* 경영이념 */
 #mobile .company .philosophy { padding: 6rem 0 10rem; margin-top: 5rem; }
 #mobile .company .philosophy .inner > ul > li:first-child { padding-bottom: 6rem; }
-#mobile .company .philosophy .inner > ul > li:first-child h1 { font-size: 3.7rem; padding-top: 3.5rem; line-height: 1.1; }
+#mobile .company .philosophy .inner > ul > li:first-child h1 { font-size: 3.7rem; padding-top: 3rem; line-height: 1.2; }
 #mobile .company .philosophy .inner > ul > li:first-child h1::before { width: 4.1rem; height: .35rem; }
-#mobile .company .philosophy .inner > ul > li:first-child h2 { font-size: 2.2rem; padding-top: 2rem; line-height: 1.4; }
 #mobile .company .philosophy .inner > ul > li:first-child p { font-size: 1.7rem; line-height: 1.52; padding-top: 2.5rem; }
 #mobile .company .philosophy .inner > ul > li:last-child { padding-top: 6.5rem; }
 #mobile .company .philosophy .inner > ul > li:last-child h2 { font-size: 2.4rem; }

@@ -1698,10 +1698,11 @@ var companyEvent = {
     "use strict";
 
     const graph = $("#HMchart .graph"),
-      graphBarColor = ["#999999", "#f78600", "#e73100", "purple"],
+      graphBarColor = ["#dbe2e8", "#aeb8be", "#6a7b88", "purple"],
       transitionEnd =
         "transitionend webkitTransitionEnd oTransitionEnd otransitionend",
       barSpeed = 1000,
+      customTooltip = 3, // 추가1) 배경색 동일하게 적용할 경우, (어두운색) 그래프바 n번째 지정 - 2022.11.29
       deviceChecker = $("#mobile");
 
     // 그래프 별 작동 토글
@@ -1802,7 +1803,15 @@ var companyEvent = {
             .text(barNum)
             .css({
               border: ".1rem solid" + graphBarColor[i],
-              color: "" + graphBarColor[i],
+              // color: "" + graphBarColor[i],
+            });
+          bar // 추가1) 배경색 동일하게 적용할 경우, (어두운색) 그래프바 n번째 커스텀 - 2022.11.29
+            .eq(customTooltip - 1)
+            .find("> span")
+            .css({
+              background: graphBarColor[i],
+              color: "#fff",
+              fontWeight: "350",
             });
         }
 
