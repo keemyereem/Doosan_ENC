@@ -358,7 +358,7 @@ var mainEvent = {
 
   sec03Swiper: () => {
     var listArray = ["주택사업", "건축사업", "토목사업"];
-    var listEnArray = ["Housing", "Architecture", "Civil Engineering"];
+    var listEnArray = ["Housing", "Architecture", "Infrastructure"];
 
     swiper3 = new Swiper(".section03 .bus_swiper", {
       speed: 500,

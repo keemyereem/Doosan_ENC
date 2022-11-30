@@ -771,7 +771,7 @@
 
 
 /* 마스터피스 - 인터뷰 - 공통 */
-.interview .sub_visual h1 { font-family: 'Montserrat', sans-serif; font-size: 6rem; font-weight: 350; line-height: 1.3; text-align: center; right: 0; transform: translateY(calc(-50% + .4rem)); letter-spacing: -.1rem; }
+.interview .sub_visual h1 { /* font-family: 'Montserrat', sans-serif; */ font-size: 6rem; font-weight: 350; line-height: 1.3; text-align: center; right: 0; transform: translateY(calc(-50% + .4rem)); letter-spacing: -.1rem; }
 .interview .sub_visual h1 span { display: block; font-size: 3.8rem; font-weight: 100; letter-spacing: 1rem; line-height: 1; letter-spacing: .5rem; margin-top: 2.3rem; }
 .interview .sub_visual ul { max-width: 136rem; width: 100%; height: 21rem; margin: auto; position: absolute; left: 0; right: 0; bottom: -10.5rem; display: flex; box-shadow: .5rem .9rem 4.3rem 0 rgba(0, 0, 0, .34); z-index: 9; transform: translateY(10rem); opacity: 0; transition: opacity,transform 1s; }
 .interview .sub_visual.ani ul { opacity: 1; transform: translateY(0); }
