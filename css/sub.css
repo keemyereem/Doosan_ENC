@@ -489,7 +489,7 @@
 .channel .cibi .section01 .logo_wrap ul { display: flex; justify-content: space-between; align-items: center; margin-top: 10rem; }
 .channel .cibi .section01 .logo_wrap ul li { width: calc(50% - 1.5rem); height: 26rem; background-image: url(../images/channel/cibi_linebg.png); display: flex; align-items: center; justify-content: center; }
 .channel .cibi .section01 .logo_wrap ul li:first-child { background: #fff url(../images/channel/cibi_linebg_g.png) repeat 50% 50%; border: 1px solid #ededed; }
-.channel .cibi .section01 .logo_wrap ul li:last-child { background: #005eb8 url(../images/channel/cibi_linebg_w.png) repeat 50% 50%; }
+.channel .cibi .section01 .logo_wrap ul li:last-child { background: #004098 url(../images/channel/cibi_linebg_w.png) repeat 50% 50%; }
 .channel .cibi .section02 { padding: 11rem 0 20rem; }
 .channel .cibi .section02 .logo_wrap { margin-top: 10rem; }
 .channel .cibi .section02 .logo_wrap > div { display: flex; }
@@ -771,8 +771,8 @@
 
 
 /* 마스터피스 - 인터뷰 - 공통 */
-.interview .sub_visual h1 { /* font-family: 'Montserrat', sans-serif; */ font-size: 6rem; font-weight: 350; line-height: 1.3; text-align: center; right: 0; transform: translateY(calc(-50% + .4rem)); letter-spacing: -.1rem; }
-.interview .sub_visual h1 span { display: block; font-size: 3.8rem; font-weight: 100; letter-spacing: 1rem; line-height: 1; letter-spacing: .5rem; margin-top: 2.3rem; }
+.interview .sub_visual h1 { /* font-family: 'Montserrat', sans-serif; */ font-size: 7rem; font-weight: 350; line-height: 1.3; text-align: center; right: 0; transform: translateY(calc(-50% + .4rem)); letter-spacing: -.1rem; }
+.interview .sub_visual h1 span { display: block; font-size: 3.8rem; font-weight: 100; letter-spacing: 1rem; line-height: 1; letter-spacing: .5rem; margin-top: 1.5rem; }
 .interview .sub_visual ul { max-width: 136rem; width: 100%; height: 21rem; margin: auto; position: absolute; left: 0; right: 0; bottom: -10.5rem; display: flex; box-shadow: .5rem .9rem 4.3rem 0 rgba(0, 0, 0, .34); z-index: 9; transform: translateY(10rem); opacity: 0; transition: opacity,transform 1s; }
 .interview .sub_visual.ani ul { opacity: 1; transform: translateY(0); }
 .interview .sub_visual ul li:first-child { width: 70%; position: relative; }

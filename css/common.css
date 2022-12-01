@@ -220,7 +220,7 @@ br {font-family:dotum !important;}
 
 
 /* sitemap */
-.header .logo.sitemapOn { background: url(../images/common/logo_b.png) no-repeat; }
+.header .logo.sitemapOn { background: url(../images/common/logo_b.png) no-repeat !important; }
 .header .gnb.sitemapOn,
 .header .right_nav.sitemapOn,
 .header .lang_select.sitemapOn,

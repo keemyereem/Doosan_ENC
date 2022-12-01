@@ -2,12 +2,15 @@
 /* --------------------- DoosanENC Released 2022.08.08 --------------------- */
 /* ----------------------- Published by 4m Creative ------------------------ */
 
+
 .en *, .header_en *, .sitemap_en *, .footer_en * { font-family: 'Montserrat', sans-serif !important; }
 
 .en .sub_visual .sub_visual_menu .depth { width: 27rem; }
 .en .sub_visual .sub_visual_menu .depth2 { width: 40rem; }
 
-.header_en .logo { margin-right: 3vw; }
+.header_en .logo { margin-right: 3vw; width: 18.7rem; background: url(../images/common/logo_b_en.png) no-repeat; }
+.header_en.wht .logo { background: url(../images/common/logo_w_en.png) no-repeat; }
+.header_en .logo.sitemapOn { background: url(../images/common/logo_b_en.png) no-repeat !important; }
 .header_en .gnb { width: 100%; margin-right: 3vw; }
 .header_en .gnb > ul > li { line-height: 1.2; display: table; flex: auto; }
 .header_en .gnb > ul > li > a { display: table-cell; vertical-align: middle; text-align: center; padding: 0 2rem; }
@@ -35,6 +38,8 @@
 /* .en .title_area .sub_txt { font-weight: 100; } */
 
 /* main */
+.fp-viewing-firstPage .header_en.wht .logo,
+.fp-viewing-fifthPage .header_en.wht .logo {background: url(../images/common/logo_w_en.png) no-repeat;}
 .en #rightnavi li:nth-child(6) { display: none; }
 #main .en #fullpage .section01.active .swiper-slide-active h2 span:nth-child(5) { transition: .5s 2.2s; }
 #main .en #fullpage .section01 .swiper .sec01_controller { bottom: 20%; }
@@ -172,6 +177,8 @@
 
 /* -------------------- Mobile -------------------- */
 @media screen and (max-width:767px) {
+    #mobile .header_en .logo,
+    #mobile .header_en .logo.sitemapOn {  width: 13.5rem; background: url(../images/common/logo_w_mob_en.png) no-repeat !important; background-size: contain !important; }
 
     #mobile .en .sub_visual h1 { transform: translateY(0); }
     #mobile .en .sub_visual .sub_visual_menu .depth > .dep_tit { display: flex; width: 100%; align-items: center; line-height: 1.2; font-size: 1.3rem; }

@@ -83,7 +83,7 @@
     #mobile .header .top_sitemap.on button span::before { background-color: #fff; }
     #mobile .header .header_wrap { width: 100%; height: 6rem; justify-content: space-between; }
     #mobile .header .logo { width: 7.7rem; height: 2.1rem; margin-right: 0; background-size: contain !important; }
-    #mobile .header .logo.sitemapOn { background: url(../images/common/logo_w_mob.png) no-repeat; }
+    #mobile .header .logo.sitemapOn { background: url(../images/common/logo_w_mob.png) no-repeat !important; background-size: contain !important; }
     #mobile .header .gnb_menu { width: auto; margin-left: initial; display: block; }
     #mobile .header .gnb,
     #mobile .header .weve_btn,
@@ -882,8 +882,8 @@
 
 
 /* 마스터피스 - 인터뷰 - 공통 */
-#mobile .interview .sub_visual h1 { transform: translateY(calc(-50% + -2.3rem)); font-size: 3.5rem; line-height: 1.14; }
-#mobile .interview .sub_visual h1 span { font-size: 2.4rem; margin-top: 2.7rem; }
+#mobile .interview .sub_visual h1 { transform: translateY(calc(-50% + -2.3rem)); font-size: 4rem; line-height: 1.3; }
+#mobile .interview .sub_visual h1 span { font-size: 2.4rem; margin-top: 2rem; }
 #mobile .interview .sub_visual ul { width: calc(100% - 2rem); height: fit-content; bottom: -15.25rem; flex-direction: column; box-shadow: .25rem .45rem 2.15rem 0 rgba(0, 0, 0, .17); }
 #mobile .interview .sub_visual ul li { width: 100%; }
 #mobile .interview .sub_visual ul li:first-child { height: 15rem; }
