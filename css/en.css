@@ -5,7 +5,7 @@
 
 .en *, .header_en *, .sitemap_en *, .footer_en * { font-family: 'Montserrat', sans-serif !important; }
 
-.en .sub_visual .sub_visual_menu .depth { width: 27rem; }
+.en .sub_visual .sub_visual_menu .depth { width: 30rem; }
 .en .sub_visual .sub_visual_menu .depth2 { width: 40rem; }
 
 .header_en .logo { margin-right: 3vw; width: 18.7rem; background: url(../images/common/logo_b_en.png) no-repeat; }
@@ -83,6 +83,13 @@
 .company.en #HMchart > li .graph > span { margin-top: 0.8rem; }
 .company.en #HMchart > li .graph .graph_bar li > p { width: 100%; bottom: -6rem; }
 
+/* Technology Innovation */
+
+/* Technology Competence */
+.technology.en .competence .love_motion > h2 { line-height: 1.2; }
+.technology.en .competence .love_motion .box > li .motion_menu { justify-content: flex-start; padding-top: 6rem; }
+.technology.en .competence .love_motion .box > li .motion_menu li:nth-child(2) { margin: 1.5rem 0; }
+.technology.en .competence .love_motion .box > li .motion_menu li:nth-child(3) p { font-size: 2rem; line-height: 1.4; padding: 0 3rem; }
 
 
 /* Social Responsibility */
@@ -177,8 +184,8 @@
 
 /* -------------------- Mobile -------------------- */
 @media screen and (max-width:767px) {
-    #mobile .header_en .logo,
-    #mobile .header_en .logo.sitemapOn {  width: 13.5rem; background: url(../images/common/logo_w_mob_en.png) no-repeat !important; background-size: contain !important; }
+    #mobile .header_en .logo { width: 13.5rem; }
+    #mobile .header_en .logo.sitemapOn { background: url(../images/common/logo_w_mob_en.png) no-repeat !important; background-size: contain !important; }
 
     #mobile .en .sub_visual h1 { transform: translateY(0); }
     #mobile .en .sub_visual .sub_visual_menu .depth > .dep_tit { display: flex; width: 100%; align-items: center; line-height: 1.2; font-size: 1.3rem; }
