@@ -2,10 +2,15 @@
 /* --------------------- DoosanENC Released 2022.08.08 --------------------- */
 /* ----------------------- Published by 4m Creative ------------------------ */
 
+
 .en *, .header_en *, .sitemap_en *, .footer_en * { font-family: 'Montserrat', sans-serif !important; }
 
+.en .sub_visual .sub_visual_menu .depth { width: 30rem; }
 .en .sub_visual .sub_visual_menu .depth2 { width: 40rem; }
-.header_en .logo { margin-right: 3vw; }
+
+.header_en .logo { margin-right: 3vw; width: 18.7rem; background: url(../images/common/logo_b_en.png) no-repeat; }
+.header_en.wht .logo { background: url(../images/common/logo_w_en.png) no-repeat; }
+.header_en .logo.sitemapOn { background: url(../images/common/logo_b_en.png) no-repeat !important; }
 .header_en .gnb { width: 100%; margin-right: 3vw; }
 .header_en .gnb > ul > li { line-height: 1.2; display: table; flex: auto; }
 .header_en .gnb > ul > li > a { display: table-cell; vertical-align: middle; text-align: center; padding: 0 2rem; }
@@ -28,13 +33,21 @@
 .footer_en .right ul li a { max-width: 100%; }
 .footer_en .family_site .site_selected { font-family: 'Montserrat'; font-weight: 450; }
 
+.en .file_row label { width: 17rem; }
 
 /* .en .title_area .sub_txt { font-weight: 100; } */
 
 /* main */
+.fp-viewing-firstPage .header_en.wht .logo,
+.fp-viewing-fifthPage .header_en.wht .logo {background: url(../images/common/logo_w_en.png) no-repeat;}
 .en #rightnavi li:nth-child(6) { display: none; }
 #main .en #fullpage .section01.active .swiper-slide-active h2 span:nth-child(5) { transition: .5s 2.2s; }
 #main .en #fullpage .section01 .swiper .sec01_controller { bottom: 20%; }
+#main .en #fullpage .section02 .big_img { flex-shrink: 0; }
+#main .en #fullpage .section02 .right .contents a { align-items: center; }
+#main .en #fullpage .section02 .right .contents .thumb_img { flex-shrink: 0; }
+#main .en #fullpage .section02.active .swiper-slide.swiper-slide-active .con_txt { margin: 0 0 0 4rem; }
+#main .en #fullpage .section02 .right .contents .con_txt dd { padding-right: 5rem; }
 #main .en #fullpage .section03 .bus_swiper .left ul { margin-bottom: 2rem; }
 #main .en #fullpage .section03 .bus_swiper .left ul li { flex-direction: column; }
 #main .en #fullpage .section03 .bus_swiper .left ul li b { width: 100%; }
@@ -44,9 +57,17 @@
 #main .en #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span > em::after { display: block; margin-top: .5rem; }
 #main .en #fullpage .section04 .card li p { text-align: center; }
 
+/* Business Areas */
+.masterpiece.en .outline .section0 .cont_area ul li { flex: 1; }
+.interview.en .sub_visual ul li:last-child p { top: 2.5rem; }
+
+.civil_engineer.en .section_nav .page_name { transform: rotate(270deg) translate(-100%,-11rem); top: -2rem; }
+.civil_engineer.en .outline .section p .btn { padding: 0 2rem; flex-shrink: 0; margin-left: 1rem; }
+
 /* About Us */
 .company.en .philosophy .inner > ul > li:first-child p { font-weight: 100; }
-.company.en .philosophy .inner > ul > li:last-child ul li p { padding: 0 2rem; }
+.company.en .philosophy .inner > ul > li:last-child ul li p { padding: 1rem 2rem 0; }
+.company.en .philosophy .inner > ul > li:last-child ul li h4 { text-align: center; }
 
 .company.en .greeting .picture { top: 32rem; }
 .company.en .greeting .tit span:last-of-type { right: initial; }
@@ -62,8 +83,16 @@
 .company.en .bod .inner:first-child > div.inner_wrap > ul > li .info li span { font-weight: 100; text-align: left; }
 .company.en .bod .inner:first-child > div.inner_wrap > ul > li .info .hidden span { line-height: 1.5; margin-top: 1rem; }
 
+.company.en #HMchart > li .graph > span { margin-top: 0.8rem; }
 .company.en #HMchart > li .graph .graph_bar li > p { width: 100%; bottom: -6rem; }
 
+/* Technology Innovation */
+
+/* Technology Competence */
+.technology.en .competence .love_motion > h2 { line-height: 1.2; }
+.technology.en .competence .love_motion .box > li .motion_menu { justify-content: flex-start; padding-top: 6rem; }
+.technology.en .competence .love_motion .box > li .motion_menu li:nth-child(2) { margin: 1.5rem 0; }
+.technology.en .competence .love_motion .box > li .motion_menu li:nth-child(3) p { font-size: 2rem; line-height: 1.4; padding: 0 3rem; }
 
 
 /* Social Responsibility */
@@ -138,7 +167,10 @@
 .sr.en .sc .section04 .box_wrap ul li { width: 39rem; }
 .sr.en .sc .section04 .box_wrap ul li .txt { text-align: center; }
 
-
+/* Privacy Policy */
+.en .policy > .inner > ul li a { vertical-align: middle; line-height: initial; }
+.en .policy > .inner .terms_site { width: 32rem;}
+.en .policy > .inner .terms_site .site_selected{ line-height: initial; min-height: 4.8rem; }
 
 
 
@@ -155,7 +187,10 @@
 
 /* -------------------- Mobile -------------------- */
 @media screen and (max-width:767px) {
+    #mobile .header_en .logo { width: 13.5rem; }
+    #mobile .header_en .logo.sitemapOn { background: url(../images/common/logo_w_mob_en.png) no-repeat !important; background-size: contain !important; }
 
+    #mobile .en .sub_visual h1 { transform: translateY(0); }
     #mobile .en .sub_visual .sub_visual_menu .depth > .dep_tit { display: flex; width: 100%; align-items: center; line-height: 1.2; font-size: 1.3rem; }
     #mobile .en .sub_visual .sub_visual_menu .depth > a:before { right: 1rem; }
     #mobile .en .sub_visual .sub_visual_menu .depth > a { padding-left: 1rem; padding-right: 1rem; }
@@ -164,6 +199,10 @@
     #mobile .sitemap_en .wrap .sitemap_main .block_le > ul > li > h2 { font-size: 2.3rem; }
     #mobile .sitemap_en .wrap .sitemap_main .block_le > ul > li > h2::after { flex-shrink: 0; }
 
+    #mobile .en .file_row label { width: 13rem; }
+
+    #mobile .en .tab_box > .inner { height: 6.3rem; }
+    #mobile .en .tab_box ul li { height: auto; min-height: 4.5rem; }
 
     /* Main */
     #mobile #main .en #fullpage .section01 .swiper-slide h2 { font-size: 3.2rem; transform: translateY(-3rem); padding-right: 2rem; }
@@ -177,6 +216,9 @@
     #mobile #main .en #fullpage .section03 .bus_swiper .left ul { margin-bottom: 0; }
     #mobile #main .en #fullpage .section03 .bus_swiper .left ul li b { width: 100%; }
     #mobile #main .en #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span > em { padding-bottom: .5rem; height: 4.5rem; display: flex; align-items: center; justify-content: center; }
+
+    /* Business Areas */
+    #mobile .civil_engineer.en .outline .section p .btn { width: 25rem; }
 
     /* About Us */
     #mobile .company.en .philosophy .inner > ul > li:last-child ul li { height: auto; min-height: 21rem; padding: 2rem 0; }
@@ -252,4 +294,8 @@
     #mobile .sr.en .sc .section04 .box_wrap ul li .txt { width: 70%; text-align: left; margin-top: 0; }
     #mobile .sr.en .sc .section04 .box_wrap ul li:nth-child(2) { margin-top: 1rem; }
     #mobile .sr.en .sc .section04 .box_wrap ul li:nth-child(2) .icon { margin-left: .5rem; }
+
+
+    /* Contact Us */
+    #mobile .customer.en .customer_inquiry .section1 .agree_row input[type="checkbox"] + label:first-of-type { width: 10.5rem; }
 }   

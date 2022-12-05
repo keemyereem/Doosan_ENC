@@ -539,7 +539,7 @@ var commonEvent = {
   },
 
   tabEvent: () => {
-    // 유형1 (ex 사업영역) - 大분류
+    // 유형1 (ex 사업영역, 기술역량) - 大분류
     const tabContainer = $("#mobile .tab_box > .inner"),
       tabBox = tabContainer.find("> .tab_slide"),
       tabButton = tabBox.find("> li");
@@ -577,6 +577,7 @@ var commonEvent = {
 
         if (tabBox.children().length > 3) {
           tabBox.parents(".tab_box").addClass("shadow_align");
+
           if (tabContainer.scrollLeft() == 0) {
             tabBox.parents(".tab_box").addClass("right");
           } else if (
@@ -1091,6 +1092,12 @@ var techEvent = {
       }
     });
 
+    // 기술역량 love모션 중 파란색 밑줄라인 간격 조정(영문길이 2줄로 초과됨에 따라)
+    let enSpecific = 130;
+    if ($(".technology").hasClass("en")) {
+      enSpecific += 40;
+    }
+
     tl1
       .to(".one", { x: -516 })
       .to(".one", { opacity: 1, duration: 0.2 })
@@ -1131,7 +1138,7 @@ var techEvent = {
       .to(".box > li", { x: 0, y: 0, duration: 0.4 })
       .to(
         ".box",
-        { borderRadius: "705px", width: "705px", duration: 0.4 },
+        { borderRadius: "635px", width: "635px", duration: 0.4 },
         "=-.4"
       )
       .to("svg, .box p", { opacity: 0, duration: 0.2 }, "=-.3")
@@ -1178,7 +1185,7 @@ var techEvent = {
         ".love span",
         {
           bottom: "auto",
-          scale: 1.8,
+          scale: 1.2,
           duration: 0.5,
           color: "#005EB8",
           fontWeight: 450,
@@ -1187,11 +1194,11 @@ var techEvent = {
       )
       .to(".love span:first-child", { opacity: 0, duration: 0.3 }, "=-.6")
       .to(".love span:last-child", { opacity: 1, duration: 1 }, "=-.6")
-
-      .to(".line, .slogan p", { opacity: 1, duration: 0.6 }, "=-.3")
-      .to(".line", { top: 200, duration: 0.3 })
-      .to(".love_motion > h2", { top: 190, opacity: 1, duration: 0.3 })
-      .to(".line", { top: 626, duration: 0.6, delay: 0.3 })
+      .to(".love span:last-child em", { color: "#0b0f14", duration: 0.3 })
+      .to(".line, .slogan p", { opacity: 1, duration: 0.6, delay: 0.3 }, "=-.3")
+      .to(".line", { top: enSpecific, duration: 0.3 })
+      .to(".love_motion > h2", { top: 150, opacity: 1, duration: 0.3 })
+      .to(".line", { top: 560, duration: 0.6, delay: 0.3 })
       .to(".love", { height: 0 }, "=-.3")
       .to(".box", { width: "100%", height: "40.8rem", opacity: 1 }, "=-.3")
       .to(".one", { x: -516, duration: 0 }, "=-.3")

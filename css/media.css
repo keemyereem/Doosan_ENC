@@ -83,7 +83,7 @@
     #mobile .header .top_sitemap.on button span::before { background-color: #fff; }
     #mobile .header .header_wrap { width: 100%; height: 6rem; justify-content: space-between; }
     #mobile .header .logo { width: 7.7rem; height: 2.1rem; margin-right: 0; background-size: contain !important; }
-    #mobile .header .logo.sitemapOn { background: url(../images/common/logo_w_mob.png) no-repeat; }
+    #mobile .header .logo.sitemapOn { background: url(../images/common/logo_w_mob.png) no-repeat !important; background-size: contain !important; }
     #mobile .header .gnb_menu { width: auto; margin-left: initial; display: block; }
     #mobile .header .gnb,
     #mobile .header .weve_btn,
@@ -158,7 +158,8 @@
     #mobile .sitemap .wrap::-webkit-scrollbar-thumb { background: #e8e8e8; border-radius: 100%; }
 
     /* container*/
-    #mobile #sub .container .inner { width: calc(100% - 4rem); padding: 0; }
+    #mobile #sub .container .inner { width: calc(100% - 6rem); padding: 0; }
+    #mobile #sub .container .inner::-webkit-scrollbar { height: 2px; }
     #mobile #sub .container .inner1200 { padding: 0 2rem; }
 
     /* pagination */
@@ -470,6 +471,7 @@
     #mobile .tb_view .tb_row.row_head .tit { font-size: 2.5rem; }
     #mobile .tb_view .tb_row.row_head .date { font-size: 1.3rem; padding: 2.5rem 0; }
     #mobile .tb_view .view_box .view_info { min-height: 10rem; padding: 5rem 0 5rem; font-size: 1.4rem; line-height: 1.71; }
+    #mobile .tb_view .view_box .view_info span { font-size: 1.3rem; line-height: 1.4; padding: 1.5rem 0 0; }
     #mobile .tb_view .view_box .file_box { padding: 0 0 7rem 0; }
     #mobile .tb_view .view_box .file_box .file_download a { padding: .5rem 0 .5rem 2.2rem; font-size: 1.4rem; background-size: 1.45rem 1.5rem; }
     #mobile .tb_view .view_nav dl { height: 4.6rem; }
@@ -718,10 +720,12 @@
     #mobile .technology .ipr .tb_box .tb_row.row_body .cell07 { display: block; padding-left: 0; }
     #mobile .technology .ipr.ipr02 .tb_box .tb_row { position: relative; }
     #mobile .technology .ipr.ipr02 .tb_box .tb_row .download { width: 29%; position: absolute; top: 1.5rem; left: calc(65% + 1rem); }
+
     #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell02,
-    #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell04 { width: 60%; }
     #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell03,
-    #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell05 { width: 39%; }
+    #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell04,
+    #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell05 { width: 100%; }
+
     #mobile .technology .ipr.ipr04 .tb_box .tb_row.row_body .cell02,
     #mobile .technology .ipr.ipr04 .tb_box .tb_row.row_body .cell04 { width: 57%; }
     #mobile .technology .ipr.ipr04 .tb_box .tb_row.row_body .cell03,
@@ -732,7 +736,7 @@
     #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell02,
     #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell03,
     #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell04,
-    #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell05 { width: fit-content; }
+    #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell05 { width: 100%; }
     #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell02,
     #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell04 { padding-right: 1rem; }
 }
@@ -882,8 +886,8 @@
 
 
 /* 마스터피스 - 인터뷰 - 공통 */
-#mobile .interview .sub_visual h1 { transform: translateY(calc(-50% + -2.3rem)); font-size: 3.5rem; line-height: 1.14; }
-#mobile .interview .sub_visual h1 span { font-size: 2.4rem; margin-top: 2.7rem; }
+#mobile .interview .sub_visual h1 { transform: translateY(calc(-50% + -2.3rem)); font-size: 4rem; line-height: 1.3; }
+#mobile .interview .sub_visual h1 span { font-size: 2.4rem; margin-top: 2rem; }
 #mobile .interview .sub_visual ul { width: calc(100% - 2rem); height: fit-content; bottom: -15.25rem; flex-direction: column; box-shadow: .25rem .45rem 2.15rem 0 rgba(0, 0, 0, .17); }
 #mobile .interview .sub_visual ul li { width: 100%; }
 #mobile .interview .sub_visual ul li:first-child { height: 15rem; }
@@ -1049,13 +1053,23 @@
 /* ================================  기술개발  =============================== */
 
 /* 공통 */
+#mobile #sub .competence .inner { width: calc(100% - 4rem); }
 #mobile .technology .sub_visual { background-image: url(../images/technology/tech_bg_m.png); background-size: cover; }
+#mobile .competence .title_area::after { width: 9.5rem; background-size: contain; }
+#mobile .competence .title_area .sub_tit { font-size: 2rem; line-height: 1.5; padding: 3rem 0 4.5rem; }
+#mobile .competence .title_area .sub_tit span::after { height: 1rem; }
 
 /* 기술역량 */
-#mobile .technology .competence { padding-bottom: 20rem; }
+#mobile .technology .competence { padding-bottom: 20rem; margin-top: 4rem; }
 #mobile .technology .competence .love_motion { height: auto; margin-bottom: 4.5rem; margin-top: 3rem; }
-#mobile .technology .competence .love_motion .love_swiper_wrap {  position: relative; width: 100%; height: 7rem; }
+#mobile .technology .competence .love_motion .love_swiper_wrap { position: relative; width: 100%; height: 7rem; }
+#mobile .technology .competence .love_motion .love_swiper_wrap.shadow_align.right::before { opacity: 0; }
+#mobile .technology .competence .love_motion .love_swiper_wrap.shadow_align.left::after { opacity: 0; }
+#mobile .technology .competence .love_motion .love_swiper_wrap.shadow_align::before,
+#mobile .technology .competence .love_motion .love_swiper_wrap.shadow_align::after { transition: all ease .2s; opacity: 1; content: ''; display: inline-block; position: absolute; height: 100%; width: 3rem; pointer-events: none; border-radius: 20px 0 0 20px; background: transparent; right: 3rem; z-index: 1; box-shadow: -15px 0 15px -20px rgb(0 0 0 / 20%) inset; }
+#mobile .technology .competence .love_motion .love_swiper_wrap.shadow_align::before { right: 0; left: 3rem; box-shadow: 15px 0 15px -20px rgb(0 0 0 / 20%) inset; border-radius: 0 20px 20px 0; }
 #mobile .technology .competence .love_motion .love_swiper { width: calc(100% - 6rem); height: 7.5rem; margin: 0 auto; overflow-x: auto; overflow-y: hidden; position: relative; transition: all ease 1s; }
+#mobile .technology .competence .love_motion .love_swiper::-webkit-scrollbar { height: 2px; }
 #mobile .technology .competence .love_motion .box { max-width: fit-content!important; width: fit-content!important; height: 7rem; background: transparent; position: absolute; left: 0; top: 0; transition: left .5s ease-out; }
 #mobile .technology .competence .love_motion .box > li { background: #fff; width: 24vw!important; height: 7rem; border: 0; border-radius: 0; position: initial; opacity: 1; border: 1px solid #e8e8e8; }
 #mobile .technology .competence .love_motion .box > li:not(:first-child) { margin-left: -.1rem; }
@@ -1076,12 +1090,13 @@
 #mobile .technology .competence .love_motion .box > li .motion_menu li p { padding: 0; opacity: 1; }
 #mobile .technology .competence .love_motion .box > li .motion_menu li:nth-child(2) { display: none; }
 #mobile .technology .competence .love_motion .box > li .motion_menu li:nth-child(3) p { display: none; }
-#mobile .technology .competence .love_motion .love { height: 5.7rem; font-size: 10rem; font-weight: 450; color: #005eb8; /* height: 5.5rem; */ text-align: center; position: relative; }
+#mobile .technology .competence .love_motion .love { height: 5.7rem; font-size: 9rem; font-weight: 450; color: #005eb8; /* height: 5.5rem; */ text-align: center; position: relative; }
 #mobile .technology .competence .love_motion .love span { opacity: 1; position: initial; top: initial; bottom: 0; }
 #mobile .technology .competence .love_motion .love span:first-child { display: none; }
 #mobile .technology .competence .love_motion .love span:last-child { display: block; height: 5.7rem; padding: 0; }
+#mobile .technology .competence .love_motion .love em { color: #000; }
 #mobile .technology .competence .love_motion .line { display: none; }
-#mobile .technology .competence .love_motion > h2 { font-size: 1.6rem; line-height: 1.56; position: initial; opacity: 1; margin: 2rem auto 4rem; }
+#mobile .technology .competence .love_motion > h2 { font-size: 1.5rem; line-height: 1.5; position: initial; opacity: 1; margin: 2rem auto 4rem; }
 #mobile .technology .competence .love_motion .box > li:hover { background: #005eb8; }
 #mobile .technology .competence .love_motion .box > li:hover ul svg,
 #mobile .technology .competence .love_motion .box > li:hover ul svg .st0 { fill:#fff; }
@@ -1119,6 +1134,7 @@
 #mobile .technology .competence section:nth-of-type(2n) .txt { padding-left: 0; }
 #mobile .technology .competence section .inner > div { width: 100%; }
 #mobile .technology .competence section .txt p { font-size: 1.5rem; line-height: 1.73; padding: 1rem 0 0; }
+#mobile .technology .competence section .txt > span { font-size: 1.8rem; white-space: normal; }
 #mobile .technology .competence section .txt ul { margin-top: 3rem; }
 #mobile .technology .competence section .txt ul li { font-size: 1.4rem; line-height: 1.42; }
 #mobile .technology .competence section .txt ul li::before { margin: .6rem 1rem 0 0; flex-shrink: 0; }

@@ -388,6 +388,8 @@
 .tb_view .view_box {position: relative;}
 .tb_view .view_box .view_info {min-height: 20rem; padding:5rem 0 10rem;font-size: 1.8rem;color: #222;line-height: 2.1;}
 .tb_view .view_box .view_info img{max-width: 100%; object-fit: contain; display: block; margin: 0 auto;}
+.tb_view .view_box .view_info img.left { margin: 0; }
+.tb_view .view_box .view_info span { font-size: 1.6rem; color: #005eb8; line-height: 2.4; padding: .5rem 0; display: block; letter-spacing: -.05rem; }
 .tb_view .view_box .file_box {padding: 9rem 0 11rem;}
 .tb_view .view_box .file_box .file_download:first-child {margin-top: 0;}
 .tb_view .view_box .file_box .file_download a {display: inline-block;padding: .5rem 0 .5rem 3.5rem;background: url(../images/common/icon_download.png) 0 50% no-repeat;background-size: 1.9rem 2rem;font-size: 1.8rem;font-weight: 400;color: #005eb8;}
@@ -489,7 +491,7 @@
 .channel .cibi .section01 .logo_wrap ul { display: flex; justify-content: space-between; align-items: center; margin-top: 10rem; }
 .channel .cibi .section01 .logo_wrap ul li { width: calc(50% - 1.5rem); height: 26rem; background-image: url(../images/channel/cibi_linebg.png); display: flex; align-items: center; justify-content: center; }
 .channel .cibi .section01 .logo_wrap ul li:first-child { background: #fff url(../images/channel/cibi_linebg_g.png) repeat 50% 50%; border: 1px solid #ededed; }
-.channel .cibi .section01 .logo_wrap ul li:last-child { background: #005eb8 url(../images/channel/cibi_linebg_w.png) repeat 50% 50%; }
+.channel .cibi .section01 .logo_wrap ul li:last-child { background: #004098 url(../images/channel/cibi_linebg_w.png) repeat 50% 50%; }
 .channel .cibi .section02 { padding: 11rem 0 20rem; }
 .channel .cibi .section02 .logo_wrap { margin-top: 10rem; }
 .channel .cibi .section02 .logo_wrap > div { display: flex; }
@@ -771,8 +773,8 @@
 
 
 /* 마스터피스 - 인터뷰 - 공통 */
-.interview .sub_visual h1 { font-family: 'Montserrat', sans-serif; font-size: 6rem; font-weight: 350; line-height: 1.3; text-align: center; right: 0; transform: translateY(calc(-50% + .4rem)); letter-spacing: -.1rem; }
-.interview .sub_visual h1 span { display: block; font-size: 3.8rem; font-weight: 100; letter-spacing: 1rem; line-height: 1; letter-spacing: .5rem; margin-top: 2.3rem; }
+.interview .sub_visual h1 { /* font-family: 'Montserrat', sans-serif; */ font-size: 7rem; font-weight: 350; line-height: 1.3; text-align: center; right: 0; transform: translateY(calc(-50% + .4rem)); letter-spacing: -.1rem; }
+.interview .sub_visual h1 span { display: block; font-size: 3.8rem; font-weight: 100; letter-spacing: 1rem; line-height: 1; letter-spacing: .5rem; margin-top: 1.5rem; }
 .interview .sub_visual ul { max-width: 136rem; width: 100%; height: 21rem; margin: auto; position: absolute; left: 0; right: 0; bottom: -10.5rem; display: flex; box-shadow: .5rem .9rem 4.3rem 0 rgba(0, 0, 0, .34); z-index: 9; transform: translateY(10rem); opacity: 0; transition: opacity,transform 1s; }
 .interview .sub_visual.ani ul { opacity: 1; transform: translateY(0); }
 .interview .sub_visual ul li:first-child { width: 70%; position: relative; }
@@ -935,13 +937,19 @@
 /* 공통 */
 .technology .sub_visual { background-image: url(../images/technology/tech_bg.png); }
 .technology .con_tit { padding-bottom: 0; }
+.competence .title_area { position: relative; }
+.competence .title_area .sub_tit { font-size: 3rem; line-height: 1.53; padding-top: 5rem; }
+.competence .title_area::after { content: ''; background: url(../images/social/board_dot.png) 50% 50% no-repeat; width: 12.4rem; height: 0.8rem; position: absolute; left: 0; right: 0; bottom: 0; margin: auto; }
+.competence .title_area .sub_tit span { color: #005eb8; position: relative; }
+.competence .title_area .sub_tit span:after { content: ''; width: 100%; height: 1.5rem; background-color: #005eb8; opacity: .08; display: block; position: absolute; bottom: 0; left: 0; }
+
 
 /* 기술역량 */
 .technology .competence #tech_top { display: block; padding-bottom: 10rem; margin-top: -10rem; }
-.technology .competence { padding-bottom: 20rem; }
-.technology .competence .love_motion { width: auto; height: fit-content; position: relative; height: 70.5rem; margin-bottom: 12.3rem; }
+.technology .competence { padding-bottom: 20rem; margin-top: 9rem; }
+.technology .competence .love_motion { width: auto; height: fit-content; position: relative; height: 63.5rem; margin-bottom: 12.3rem; }
 .technology .competence .love_motion em { color: #005EB8; font-style: normal; }
-.technology .competence .love_motion .box { max-width: 164rem; height: 70.5rem; background: transparent; position: absolute; margin: auto; top: auto; bottom: 0; left: 0; right: 0; display: flex; justify-content: center; align-items: center; }
+.technology .competence .love_motion .box { max-width: 164rem; height: 63.5rem; background: transparent; position: absolute; margin: auto; top: auto; bottom: 0; left: 0; right: 0; display: flex; justify-content: center; align-items: center; }
 .technology .competence .love_motion .box > li { background: #fff; width: 32.8rem; height: 32.8rem; border-radius: 100%; position: absolute; opacity: 0; border: 1rem solid #005EB8; }
 .technology .competence .love_motion .box > li > ul { display: flex; flex-direction: column; justify-content: center; height: 100%; width: 100%; position: absolute; }
 .technology .competence .love_motion .box > li > ul > li { text-align: center; position: relative; }
@@ -963,9 +971,9 @@
 .technology .competence .love_motion .love { font-family: 'Montserrat'; font-weight: 400; letter-spacing: .15rem; font-size: 13.7rem; width: 100%; height: 100%; color: #fff; margin: auto; z-index: 9; position: relative; }
 .technology .competence .love_motion .love span { position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; line-height: 1.2; z-index: 10; width: fit-content; height: fit-content; opacity: 0; }
 .technology .competence .love_motion .love span:last-child { height: 8rem; line-height: .4; overflow: hidden; top: 3rem; opacity: 0; }
-.technology .competence .love_motion .line { margin: auto; left: 0; right: 0; top: 13rem; bottom: auto; width: fit-content; position: absolute; opacity: 0; }
+.technology .competence .love_motion .line { margin: auto; left: 0; right: 0; top: 10rem; bottom: auto; width: fit-content; position: absolute; opacity: 0; }
 .technology .competence .love_motion .line img { width: 100%; }
-.technology .competence .love_motion > h2 { color: #0c1014; letter-spacing: -.15rem; font-size: 3.2rem; line-height: 1; font-weight: 350; text-align: center;  margin: auto; left: 0; right: 0; top: 17rem; bottom: auto; width: fit-content; position: absolute; opacity: 0; }
+.technology .competence .love_motion > h2 { color: #555555; letter-spacing: -.15rem; font-size: 2.2rem; line-height: 1; font-weight: 350; text-align: center;  margin: auto; left: 0; right: 0; top: 15rem; bottom: auto; width: fit-content; position: absolute; opacity: 0; }
 .technology .competence .love_motion .box > li.on { transition: all ease .3s; box-shadow: 0px 13px 40px 0px rgba(0, 0, 0, 0.28); }
 .technology .competence .love_motion .box > li.on ul svg,
 .technology .competence .love_motion .box > li.on ul svg .st0 { fill:#fff; }
@@ -1005,6 +1013,7 @@
 .technology .competence .section_nav .button.next { padding-top: 5rem; cursor: pointer; }
 
 .technology .competence section h3 { font-family: 'Montserrat','Pretendard'; font-size: 3.8rem; font-weight: 400; letter-spacing: -.095rem; }
+.technology .competence section .txt > span { font-size: 2.6rem; line-height: 1.4; font-weight: 400; color: #005eb8; padding-top: .6rem; display: block; white-space: nowrap; }
 .technology .competence section.section5 h3 { letter-spacing: -.152rem; }
 .technology .competence section h3::before { content:''; display: block; width: 6.5rem; height: 0.6rem; background: #005eb8; transform: skew(-45deg); margin-bottom: 2rem;  }
 .technology .competence section h3 span { font-family: 'Montserrat'; font-size: 4rem; font-weight: 450; letter-spacing: 0; }
@@ -1066,13 +1075,16 @@
 .technology .ipr .tb_box .tb_row .download { width: 8%; border-right: 0; }
 .technology .ipr .tb_box .tb_row .cell07 { border-right: 0; }
 .technology .ipr .tb_box .tb_row.row_body .cell07 { text-align: left; padding-left: 5rem; }
-.technology .ipr.ipr03 .tb_box .tb_row .cell01 { width: 8%; }
-.technology .ipr.ipr03 .tb_box .tb_row .cell02 { width: 18%; }
-.technology .ipr.ipr03 .tb_box .tb_row .cell03 { width: 11%; }
-.technology .ipr.ipr03 .tb_box .tb_row .cell04 { width: 15%; }
+.technology .ipr.ipr03 .tb_box .tb_row .cell01 { width: 10%; }
+.technology .ipr.ipr03 .tb_box .tb_row .cell02 { width: 35%; }
+.technology .ipr.ipr03 .tb_box .tb_row .cell03 { width: 15%; }
+.technology .ipr.ipr03 .tb_box .tb_row .cell04 { width: 40%; }
+/* 
 .technology .ipr.ipr03 .tb_box .tb_row .cell05 { width: 11%; }
 .technology .ipr.ipr03 .tb_box .tb_row .cell06 { width: 15%; }
-.technology .ipr.ipr03 .tb_box .tb_row .cell07 { width: 22%; }
+.technology .ipr.ipr03 .tb_box .tb_row .cell07 { width: 22%; } 
+*/
+
 .technology .ipr.ipr04 .tb_box .tb_row .cell01 { width: 8%; }
 .technology .ipr.ipr04 .tb_box .tb_row .cell02 { width: 14%; }
 .technology .ipr.ipr04 .tb_box .tb_row .cell03 { width: 10%; }
