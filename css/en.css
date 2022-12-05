@@ -61,8 +61,8 @@
 .masterpiece.en .outline .section0 .cont_area ul li { flex: 1; }
 .interview.en .sub_visual ul li:last-child p { top: 2.5rem; }
 
-.civil_engineer.en .section_nav .page_name { transform: rotate(270deg) translate(-100%,-200%) }
-.civil_engineer.en .outline .section p .btn { padding: 0 2rem; flex-shrink: 0; }
+.civil_engineer.en .section_nav .page_name { transform: rotate(270deg) translate(-100%,-11rem); top: -2rem; }
+.civil_engineer.en .outline .section p .btn { padding: 0 2rem; flex-shrink: 0; margin-left: 1rem; }
 
 /* About Us */
 .company.en .philosophy .inner > ul > li:first-child p { font-weight: 100; }
@@ -201,6 +201,9 @@
 
     #mobile .en .file_row label { width: 13rem; }
 
+    #mobile .en .tab_box > .inner { height: 6.3rem; }
+    #mobile .en .tab_box ul li { height: auto; min-height: 4.5rem; }
+
     /* Main */
     #mobile #main .en #fullpage .section01 .swiper-slide h2 { font-size: 3.2rem; transform: translateY(-3rem); padding-right: 2rem; }
     #mobile #main .en #fullpage .section01 .swiper-slide h2 span { display: inline; width: auto; }
@@ -215,7 +218,7 @@
     #mobile #main .en #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span > em { padding-bottom: .5rem; height: 4.5rem; display: flex; align-items: center; justify-content: center; }
 
     /* Business Areas */
-    #mobile .civil_engineer.en .outline .section p .btn
+    #mobile .civil_engineer.en .outline .section p .btn { width: 25rem; }
 
     /* About Us */
     #mobile .company.en .philosophy .inner > ul > li:last-child ul li { height: auto; min-height: 21rem; padding: 2rem 0; }
