@@ -34,8 +34,9 @@ table {width:100%; border-collapse:collapse; table-layout:fixed;}
 img, select, input, button {vertical-align:top;}
 img {perspective:none; -ms-perspective:none; -o-perspective:none; -webkit-perspective:none; -moz-perspective:none;}
 br {font-family:dotum !important;}
+body { overflow: overlay; }
 ::-webkit-scrollbar { width: 5px; height: 5px; }
-::-webkit-scrollbar-track { border:5px solid transparent; background: transparent; }
+::-webkit-scrollbar-track { border:5px solid transparent; }
 ::-webkit-scrollbar-thumb { background: #005eb8; border-radius: 10px; }
 ::-webkit-scrollbar-thumb:hover { background: #014099; }
 

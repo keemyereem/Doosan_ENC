@@ -935,11 +935,11 @@
 /* 공통 */
 .technology .sub_visual { background-image: url(../images/technology/tech_bg.png); }
 .technology .con_tit { padding-bottom: 0; }
-.technology .title_area { position: relative; }
-.technology .title_area .sub_tit { font-size: 3rem; line-height: 1.53; padding-top: 5rem; }
-.technology .title_area::after { content: ''; background: url(../images/social/board_dot.png) 50% 50% no-repeat; width: 12.4rem; height: 0.8rem; position: absolute; left: 0; right: 0; bottom: 0; margin: auto; }
-.technology .title_area .sub_tit span { color: #005eb8; position: relative; }
-.technology .title_area .sub_tit span:after { content: ''; width: 100%; height: 1.5rem; background-color: #005eb8; opacity: .08; display: block; position: absolute; bottom: 0; left: 0; }
+.competence .title_area { position: relative; }
+.competence .title_area .sub_tit { font-size: 3rem; line-height: 1.53; padding-top: 5rem; }
+.competence .title_area::after { content: ''; background: url(../images/social/board_dot.png) 50% 50% no-repeat; width: 12.4rem; height: 0.8rem; position: absolute; left: 0; right: 0; bottom: 0; margin: auto; }
+.competence .title_area .sub_tit span { color: #005eb8; position: relative; }
+.competence .title_area .sub_tit span:after { content: ''; width: 100%; height: 1.5rem; background-color: #005eb8; opacity: .08; display: block; position: absolute; bottom: 0; left: 0; }
 
 
 /* 기술역량 */

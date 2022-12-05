@@ -539,7 +539,7 @@ var commonEvent = {
   },
 
   tabEvent: () => {
-    // 유형1 (ex 사업영역) - 大분류
+    // 유형1 (ex 사업영역, 기술역량) - 大분류
     const tabContainer = $("#mobile .tab_box > .inner"),
       tabBox = tabContainer.find("> .tab_slide"),
       tabButton = tabBox.find("> li");
@@ -577,6 +577,7 @@ var commonEvent = {
 
         if (tabBox.children().length > 3) {
           tabBox.parents(".tab_box").addClass("shadow_align");
+
           if (tabContainer.scrollLeft() == 0) {
             tabBox.parents(".tab_box").addClass("right");
           } else if (
