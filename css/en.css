@@ -56,6 +56,29 @@
 #main .en #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span > em { padding-bottom: 1rem; }
 #main .en #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span > em::after { display: block; margin-top: .5rem; }
 #main .en #fullpage .section04 .card li p { text-align: center; }
+#main .en #fullpage .section05 { background: linear-gradient(#f9f9f9, #f9f9f9 60rem, #000 60.1rem, #000 100%); }
+#main .en #fullpage .section05 .center { position: relative; }
+#main .en #fullpage .section05 .inner { transform: translateY(0); }
+#main .en #fullpage .section05 .map { position: absolute; top: 50%; right: 0; transform: translateY(-50%); width: 51%; height: 64rem; overflow: hidden; }
+#main .en #fullpage .section05 .map iframe { width: 100%; height: 100%; }
+#main .en #fullpage .section05 .text { width: 49%; }
+#main .en #fullpage .section05 .sec_tit { font-size: 6rem; font-weight: 450; color: #222; position: relative; }
+#main .en #fullpage .section05 p { font-size: 2.2rem; font-weight: 350; color: #333; line-height: 1.45; letter-spacing: -.066rem; margin-top: 2.5rem; }
+#main .en #fullpage .section05 p > b { color: #005eb8; font-weight: 400; }
+#main .en #fullpage .section05 .btn { display: flex; align-items: center; justify-content: space-between; width: 21.3rem; height: 6.4rem; border-radius: 3.2rem; border: 1px solid #000; font-size: 1.6rem; font-weight: 300; color: #000; padding: 0 3rem; margin: 4.5rem 0 7rem; transition: all .2s; position: relative; overflow: hidden; }
+#main .en #fullpage .section05 .btn:before {content: "";display: block;position: absolute;left: 0;top: 0;bottom: 0;right: 0;transform: scaleX(0);z-index: -1;background-color: #000;transition:all .2s ease-out;transform-origin:0 50%;}
+#main .en #fullpage .section05 .btn > i { display: block; width: .9rem; height: 1.5rem; background: url(../images/common/arrow_9x15.png) no-repeat 50% 50%; }
+#main .en #fullpage .section05 .btn:hover { color: #fff;z-index: 3; }
+#main .en #fullpage .section05 .btn:hover:before { transform:scaleX(1) }
+#main .en #fullpage .section05 .btn:hover > i { background: url(../images/common/arrow_9x15_w.png) no-repeat 50% 50%; }
+#main .en #fullpage .section05 .contact_info { padding-top: 6rem; }
+#main .en #fullpage .section05 .contact_info dl { display: flex; font-size: 1.8rem; color: #fff; letter-spacing: -.018rem; }
+#main .en #fullpage .section05 .contact_info dl+dl { margin-top: 3rem; }
+#main .en #fullpage .section05 .contact_info dl dt { width: 13.8rem; font-weight: 450; }
+#main .en #fullpage .section05 .contact_info dl dd { opacity: .5; line-height: 1.66; }
+
+/* PR Center */
+.channel.en .reference .sec_tit b { font-weight: 450; }
 
 /* Business Areas */
 .masterpiece.en .outline .section0 .cont_area ul li { flex: 1; }
@@ -65,8 +88,18 @@
 .civil_engineer.en .outline .section p .btn { padding: 0 2rem; flex-shrink: 0; margin-left: 1rem; }
 
 /* Technology Innovation */
+
+/* Technology Competence */
+.technology.en .competence .love_motion > h2 { line-height: 1.2; }
+.technology.en .competence .love_motion .box > li .motion_menu { justify-content: flex-start; padding-top: 6rem; }
+.technology.en .competence .love_motion .box > li .motion_menu li:nth-child(2) { margin: 1.5rem 0; }
+.technology.en .competence .love_motion .box > li .motion_menu li:nth-child(3) p { font-size: 2rem; line-height: 1.4; padding: 0 3rem; }
 .technology.en .competence .section_nav .page_name { width: 27rem; white-space: initial; transform: rotate(270deg) translate(-100%, -11.5rem); top: -2rem; }
 .technology.en .competence .section6 ul li .viewmore { width: 13rem; }
+
+/* Institute of Technology */
+.technology.en .iot .inner:nth-child(2) > div.inner_wrap > .sec2_ri { padding-left: 5rem; }
+.technology.en .iot .inner:last-child .inner_wrap .card li { height: auto; padding: 6rem 2rem 3rem; }
 
 /* About Us */
 .company.en .philosophy .inner > ul > li:first-child p { font-weight: 100; }
@@ -87,17 +120,8 @@
 .company.en .bod .inner:first-child > div.inner_wrap > ul > li .info li span { font-weight: 100; text-align: left; }
 .company.en .bod .inner:first-child > div.inner_wrap > ul > li .info .hidden span { line-height: 1.5; margin-top: 1rem; }
 
-.company.en #HMchart > li .graph > span { margin-top: 0.8rem; }
+.company.en #HMchart > li h2 { margin-bottom: .8rem; }
 .company.en #HMchart > li .graph .graph_bar li > p { width: 100%; bottom: -6rem; }
-
-/* Technology Innovation */
-
-/* Technology Competence */
-.technology.en .competence .love_motion > h2 { line-height: 1.2; }
-.technology.en .competence .love_motion .box > li .motion_menu { justify-content: flex-start; padding-top: 6rem; }
-.technology.en .competence .love_motion .box > li .motion_menu li:nth-child(2) { margin: 1.5rem 0; }
-.technology.en .competence .love_motion .box > li .motion_menu li:nth-child(3) p { font-size: 2rem; line-height: 1.4; padding: 0 3rem; }
-
 
 /* Social Responsibility */
 
@@ -225,11 +249,18 @@
     #mobile .civil_engineer.en .outline .section p .btn { width: 25rem; }
 
     /* Technology Innovation */
-    #mobile .technology.en .competence section .txt ul li { position: relative; padding-left: 1rem; display: block; }
+    #mobile .technology.en .competence section .txt ul li { position: relative; padding-left: 1rem; flex-direction: column; }
     #mobile .technology.en .competence section .txt ul li::before { position: absolute; top: 0; left: 0; }
+
     #mobile .technology.en .ipr .tb_box .tb_row.row_body b.mob { font-weight: 400; }
     #mobile .technology.en .ipr .tb_box .tb_row .class { width: 64%; max-width: 17.5rem; }
     #mobile .technology.en .ipr .tb_box .tb_row .num { width: 36%; }
+    #mobile .technology.en .ipr.ipr03 .tb_box .tb_row.row_body .cell02 b.mob { display: block; }
+    #mobile .technology.en .ipr.ipr04 .tb_box .tb_row.row_body > div { width: 100%; }
+
+    #mobile .technology.en .iot .inner:nth-child(2) > div.inner_wrap > .sec2_ri { padding-left: 0; }
+    #mobile .technology.en .iot .inner:last-child .inner_wrap .card li { height: auto; }
+    
 
     /* About Us */
     #mobile .company.en .philosophy .inner > ul > li:last-child ul li { height: auto; min-height: 21rem; padding: 2rem 0; }

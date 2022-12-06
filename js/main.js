@@ -44,15 +44,32 @@ var mainEvent = {
       scrollingSpeed: 800,
 
       onLeave: function (index, nextIndex, direction) {
-        if (nextIndex == 1 || nextIndex == 5) {
-          setTimeout(() => {
-            $(".header").addClass("wht");
-          }, 500);
-        } else {
-          setTimeout(() => {
-            $(".header").removeClass("wht");
-          }, 500);
+
+        if(!$(".container").hasClass("en")){
+          //국문
+          if (nextIndex == 1 || nextIndex == 5) {
+            setTimeout(() => {
+              $(".header").addClass("wht");
+            }, 500);
+          } else {
+            setTimeout(() => {
+              $(".header").removeClass("wht");
+            }, 500);
+          }
+        }else {
+          //영문
+          if (nextIndex == 1 ) {
+            setTimeout(() => {
+              $(".header").addClass("wht");
+            }, 500);
+          } else {
+            setTimeout(() => {
+              $(".header").removeClass("wht");
+            }, 500);
+          }
         }
+
+
 
         // footer
         if (nextIndex == 7) {

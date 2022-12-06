@@ -206,8 +206,10 @@ var commonEvent = {
       } else if ($("body").hasClass("fp-viewing-firstPage")) {
         $(".header").addClass("wht");
         $(".header").css({ background: "transparent" });
-      } else if ($("body").hasClass("fp-viewing-fifthPage")) {
+      } else if ($("body").hasClass("fp-viewing-fifthPage") && !$('.container').hasClass('en')) {
         $(".header").addClass("wht");
+        $(".header").css({ background: "transparent" });
+      } else if ($("body").hasClass("fp-viewing-fifthPage") && $('.container').hasClass('en')) {
         $(".header").css({ background: "transparent" });
       } else {
         // $('.header').removeClass('wht');
