@@ -56,7 +56,7 @@
 #main .en #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span > em { padding-bottom: 1rem; }
 #main .en #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span > em::after { display: block; margin-top: .5rem; }
 #main .en #fullpage .section04 .card li p { text-align: center; }
-#main .en #fullpage .section05 { background: linear-gradient(#f9f9f9, #f9f9f9 60rem, #000 60.1rem, #000 100%); }
+#main .en #fullpage .section05 { background: linear-gradient(#f9f9f9, #f9f9f9 61vh, #000 61.1vh, #000 100%); }
 #main .en #fullpage .section05 .center { position: relative; }
 #main .en #fullpage .section05 .inner { transform: translateY(0); }
 #main .en #fullpage .section05 .map { position: absolute; top: 50%; right: 0; transform: translateY(-50%); width: 51%; height: 64rem; overflow: hidden; }
@@ -199,8 +199,8 @@
 .en .policy > .inner > ul li a { vertical-align: middle; line-height: initial; }
 .en .policy > .inner .terms_site { width: 32rem;}
 .en .policy > .inner .terms_site .site_selected{ line-height: initial; min-height: 4.8rem; }
-
-
+.en .privacy > p { max-width: 144rem; margin: 0 auto; font-size: 1.6rem; font-weight: 150; color: #555; line-height: 1.875; letter-spacing: -.04rem; margin-top: 1rem; }
+.en .policy > .inner > ul { max-width: 100%; margin: 8rem auto; }
 
 /* -------------------- Responsive -------------------- */
 
@@ -216,6 +216,7 @@
 /* -------------------- Mobile -------------------- */
 @media screen and (max-width:767px) {
     #mobile .header_en .logo { width: 13.5rem; }
+    #mobile .header.bg .logo { background: url(../images/common/logo_b_mob_en.png) no-repeat 50% 50%; background-size: contain; }
     #mobile .header_en .logo.sitemapOn { background: url(../images/common/logo_w_mob_en.png) no-repeat !important; background-size: contain !important; }
 
     #mobile .en .sub_visual h1 { transform: translateY(0); }
@@ -244,6 +245,22 @@
     #mobile #main .en #fullpage .section03 .bus_swiper .left ul { margin-bottom: 0; }
     #mobile #main .en #fullpage .section03 .bus_swiper .left ul li b { width: 100%; }
     #mobile #main .en #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span > em { padding-bottom: .5rem; height: 4.5rem; display: flex; align-items: center; justify-content: center; }
+
+    #mobile #main .en #fullpage .section05 { background: linear-gradient(#fff, #fff 39rem, #000 39.1rem, #000 100%); }
+    #mobile #main .en #fullpage .section05 .center { display: block; }
+    #mobile #main .en #fullpage .section05 .inner { padding: 6rem 2rem 0; }
+    #mobile #main .en #fullpage .section05 .map { position: initial; width: calc(100% - 2rem); height: 32rem; transform: translateY(0); margin: 3.5rem auto 6rem; }
+    #mobile #main .en #fullpage .section05 .text { width: 100%; }
+    #mobile #main .en #fullpage .section05 .sec_tit { font-size: 3.5rem; padding-left: 0; }
+    #mobile #main .en #fullpage .section05 p { font-size: 1.8rem; line-height: 1.38; margin-top: 1rem; }
+    #mobile #main .en #fullpage .section05 .btn {width: 21.1rem; height: 4.5rem; border-radius: 2.2rem; font-size: 1.3rem; padding: 0 3rem 0 2rem; margin: 3rem 0 5rem; }
+    #mobile #main .en #fullpage .section05 .btn > i { display: block; width: .9rem; height: 1.5rem; background: url(../images/common/arrow_9x15.png) no-repeat 50% 50%; }
+    #mobile #main .en #fullpage .section05 .btn:hover > i { background: url(../images/common/arrow_9x15_w.png) no-repeat 50% 50%; }
+    #mobile #main .en #fullpage .section05 .contact_info { padding-top: 3rem; }
+    #mobile #main .en #fullpage .section05 .contact_info dl { font-size: 1.4rem; }
+    #mobile #main .en #fullpage .section05 .contact_info dl+dl { margin-top: 1.5rem; }
+    #mobile #main .en #fullpage .section05 .contact_info dl dt { width: 10rem; }
+    #mobile #main .en #fullpage .section05 .contact_info dl dd { line-height: 1.5; }
 
     /* Business Areas */
     #mobile .civil_engineer.en .outline .section p .btn { width: 25rem; }
@@ -340,4 +357,10 @@
 
     /* Contact Us */
     #mobile .customer.en .customer_inquiry .section1 .agree_row input[type="checkbox"] + label:first-of-type { width: 10.5rem; }
+
+    /* privacy policy */
+    #mobile .en .policy > .inner { width: calc(100% - 4rem)!important; overflow-x: auto; }
+    #mobile .en .policy > .inner > ul { width: auto!important; margin: 0 auto; }
+    #mobile .en .policy > .inner > ul li { flex: none; width: 20rem; height: 5rem; padding: 0 1rem; }
+    #mobile .en .policy > p { font-size: 1.3rem; line-height: 1.53; padding: 0 2rem; }
 }   
