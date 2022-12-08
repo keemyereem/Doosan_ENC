@@ -946,7 +946,7 @@
 
 /* 기술역량 */
 .technology .competence #tech_top { display: block; padding-bottom: 10rem; margin-top: -10rem; }
-.technology .competence { padding-bottom: 20rem; margin-top: 9rem; }
+.technology .competence { /* padding-bottom: 20rem; */ margin-top: 9rem; }
 .technology .competence .love_motion { width: auto; height: fit-content; position: relative; height: 63.5rem; margin-bottom: 12.3rem; }
 .technology .competence .love_motion em { color: #005EB8; font-style: normal; }
 .technology .competence .love_motion .box { max-width: 164rem; height: 63.5rem; background: transparent; position: absolute; margin: auto; top: auto; bottom: 0; left: 0; right: 0; display: flex; justify-content: center; align-items: center; }
@@ -1038,6 +1038,7 @@
 .technology .competence section .txt .btn:hover > i { background: url(../images/common/icon_plus_w_21x22.png) 50% 50%; }
 .technology .competence section .img img { width: 100%; object-fit: contain; }
 .technology .competence section:nth-of-type(2n).section6 { background: #fff; padding-bottom: 0; }
+.technology .competence .section6 { padding-bottom: 20rem; }
 .technology .competence .section6 h3::before { display: none; }
 .technology .competence .section6 ul { border-top: .3rem solid #000; border-bottom: .3rem solid #000; margin-top: 3.5rem; }
 /* .technology .competence .section6 ul li:before {content: "";display: block;position: absolute;left: 0;top: 0;bottom: 0;right: 0;transform: scaleX(0);z-index: -1;background-color: #000;transition:all .2s ease-out;transform-origin:0 50%;} */

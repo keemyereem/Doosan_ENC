@@ -56,6 +56,7 @@
 #main .en #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span > em { padding-bottom: 1rem; }
 #main .en #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span > em::after { display: block; margin-top: .5rem; }
 #main .en #fullpage .section04 .card li p { text-align: center; }
+#main .en #fullpage .section04 .card li:nth-child(2) h3 span:last-child { display: inline-block; width: 10rem; }
 #main .en #fullpage .section05 { background: linear-gradient(#f9f9f9, #f9f9f9 61vh, #000 61.1vh, #000 100%); }
 #main .en #fullpage .section05 .center { position: relative; }
 #main .en #fullpage .section05 .inner { transform: translateY(0); }
@@ -245,6 +246,10 @@
     #mobile #main .en #fullpage .section03 .bus_swiper .left ul { margin-bottom: 0; }
     #mobile #main .en #fullpage .section03 .bus_swiper .left ul li b { width: 100%; }
     #mobile #main .en #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span > em { padding-bottom: .5rem; height: 4.5rem; display: flex; align-items: center; justify-content: center; }
+
+    #mobile #main .en #fullpage .section04 .card li h3 span { overflow: visible; }
+    #mobile #main .en #fullpage .section04 .card li:nth-child(2) h3 span:last-child { width: auto; }
+    #mobile #main .en #fullpage .section04 .card li h3 span:last-child { text-align: left; }
 
     #mobile #main .en #fullpage .section05 { background: linear-gradient(#fff, #fff 39rem, #000 39.1rem, #000 100%); }
     #mobile #main .en #fullpage .section05 .center { display: block; }
