@@ -1073,6 +1073,7 @@
 .technology .ipr .tb_box .tb_row .num { width: 11%; }
 .technology .ipr .tb_box .tb_row .cert { width: 8%; border-right: 0; }
 .technology .ipr .tb_box .tb_row .patent_num { width: 20%; }
+.technology .ipr .tb_box .tb_row .date { width: 12%; }
 .technology .ipr .tb_box .tb_row .download { width: 8%; border-right: 0; }
 .technology .ipr .tb_box .tb_row .cell07 { border-right: 0; }
 .technology .ipr .tb_box .tb_row.row_body .cell07 { text-align: left; padding-left: 5rem; }

@@ -707,7 +707,7 @@
     #mobile .technology .ipr .tb_box .tb_row.row_body .mob { display: inline-block; }
     #mobile .technology .ipr .tb_box .tb_row.row_body b.mob { padding-right: 1rem; }
     #mobile .technology .ipr .tb_box .tb_row.row_body .tit { display: block; width: 100%; margin-top: 1rem; padding-left: 0; line-height: 1.53; }
-    #mobile .technology .ipr .tb_box .tb_row .class { width: 39%; max-width: 13.1rem; display: inline-block; }
+    #mobile .technology .ipr .tb_box .tb_row .class { width: 39%; max-width: 8rem; display: inline-block; }
     #mobile .technology .ipr .tb_box .tb_row .num { width: 50%; display: inline-block; }
     #mobile .technology .ipr .tb_box .tb_row .patent_num { display: inline-block; width: 65%; max-width: 20.7rem; }
     #mobile .technology .ipr .tb_box .tb_row .date  { display: inline-block; width: 48%; }
@@ -726,10 +726,8 @@
     #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell04,
     #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell05 { width: 100%; }
 
-    #mobile .technology .ipr.ipr04 .tb_box .tb_row.row_body .cell02,
+    #mobile .technology .ipr.ipr04 .tb_box .tb_row.row_body .cell03 { width: 42%; }
     #mobile .technology .ipr.ipr04 .tb_box .tb_row.row_body .cell04 { width: 57%; }
-    #mobile .technology .ipr.ipr04 .tb_box .tb_row.row_body .cell03,
-    #mobile .technology .ipr.ipr04 .tb_box .tb_row.row_body .cell05 { width: 42%; }
 }
 /* responsive */
 @media screen and (max-width:380px) {
