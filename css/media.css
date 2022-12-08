@@ -1060,7 +1060,7 @@
 #mobile .competence .title_area .sub_tit span::after { height: 1rem; }
 
 /* 기술역량 */
-#mobile .technology .competence { padding-bottom: 20rem; margin-top: 4rem; }
+#mobile .technology .competence { /* padding-bottom: 20rem; */ margin-top: 4rem; }
 #mobile .technology .competence .love_motion { height: auto; margin-bottom: 4.5rem; margin-top: 3rem; }
 #mobile .technology .competence .love_motion .love_swiper_wrap { position: relative; width: 100%; height: 7rem; }
 #mobile .technology .competence .love_motion .love_swiper_wrap.shadow_align.right::before { opacity: 0; }
@@ -1141,7 +1141,7 @@
 #mobile .technology .competence section .txt .btn { width: 21.1rem; height: 4.5rem; line-height: 4.5rem; border-radius: 2.25rem;padding: 0 3rem; margin-top: 3.5rem; font-size: 1.3rem; }
 #mobile .technology .competence section .txt .btn i { width: 1.5rem; height: 1.5rem; right: 3rem; background: url(../images/common/icon_plus_15x15.png)50% 50% no-repeat; }
 #mobile .technology .competence section .txt .btn:hover i { background: url(../images/common/icon_plus_w_15x15.png)50% 50% no-repeat; }
-#mobile .technology .competence .section6 { padding: 5.5rem 0 0; }
+#mobile .technology .competence .section6 { padding: 5.5rem 0 10rem; }
 #mobile .technology .competence .section6 h3 { margin-top: 0; }
 #mobile .technology .competence .section6 ul { margin-top: 2.2rem; }
 #mobile .technology .competence .section6 ul li a { height: auto; min-height: 5.5rem; padding: 1.5rem 1rem; line-height: 1.57; position: relative; }
