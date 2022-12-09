@@ -60,8 +60,8 @@
 
 /* Section01 */
 #main #fullpage .section01 { position: relative; }
-#main #fullpage .section01 .clip-wrap { width: 100vw; height: 100%; position: absolute; z-index: 9; background: #fff; overflow: hidden; }
-#main #fullpage .section01 .clip-css {width: 100%;height: 100%; transition: all ease .2s; opacity: 0; background: url(../images/main/sec01_bg1.png)no-repeat 50% 50%; background-size: auto 100%; z-index: 100; -webkit-clip-path: polygon(0% 75%, 25% 0%, 100% 25%, 75% 100%); clip-path: polygon(0% 75%, 25% 0%, 100% 25%, 75% 100%); position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; width: 66.9rem; height: 65.6rem; object-fit: none; }
+#main #fullpage .section01 .clip-wrap { width: 100%; height: 100%; position: absolute; z-index: 9; background: #fff; overflow: hidden; }
+#main #fullpage .section01 .clip-css {width: 100%;height: 100vh; transition: all ease .2s; opacity: 0; background: url(../images/main/sec01_bg1.png)no-repeat 50% 50%; /* background-size: auto 100%; */ background-size: cover; z-index: 100; -webkit-clip-path: polygon(0% 75%, 25% 0%, 100% 25%, 75% 100%); clip-path: polygon(0% 75%, 25% 0%, 100% 25%, 75% 100%); position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; width: 66.9rem; height: 65.6rem; object-fit: none; }
 #main #fullpage .section01.ani .clip-css { animation: intro 1s alternate; -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); width: 100%; height: 100%; }
 #main #fullpage .section01.active .clip-css { transform: translateY(0); }
 #main #fullpage .section01 .center,
@@ -69,12 +69,14 @@
 #main #fullpage .section01 .swiper { width: 100%; height: 100%; }
 #main #fullpage .section01 .swiper-slide { width: 100%; height: 100%; background-position: center; background-size: auto 100%; overflow: hidden; display: flex; position: relative; z-index: 0;}
 #main #fullpage .section01 .swiper-slide .slide-inner { position: absolute; width: 100%; height: 100%; top: 0; left: 0; }
-#main #fullpage .section01.active .swiper-slide .slide-inner.scaleOn { background-size: auto 120%; }
-#main #fullpage .section01 .swiper-slide .bg01 { background: url(../images/main/sec01_bg1.png) no-repeat 50% 50%; background-size: auto 100%; }
+/* #main #fullpage .section01.active .swiper-slide .slide-inner { background-size: auto 100%; } */
+#main #fullpage .section01.active .swiper-slide .slide-inner img { transform: scale(1); width: 100%; height: 100%; object-fit: cover; }
+#main #fullpage .section01.active .swiper-slide .slide-inner.scaleOn img { transform: scale(1.2); transition: transform 6s; }
+/* #main #fullpage .section01 .swiper-slide .bg01 { background: url(../images/main/sec01_bg1.png) no-repeat 50% 50%; background-size: auto 100%; }
 #main #fullpage .section01 .swiper-slide .bg02 { background: url(../images/main/sec01_bg2.png) no-repeat 50% 50%; background-size: auto 100%; }
 #main #fullpage .section01 .swiper-slide .bg03 { background: url(../images/main/sec01_bg3.png) no-repeat 50% 50%; background-size: auto 100%; }
 #main #fullpage .section01 .swiper-slide .bg04 { background: url(../images/main/sec01_bg4.png) no-repeat 50% 50%; background-size: auto 100%; }
-#main #fullpage .section01 .swiper-slide .bg05 { background: url(../images/main/sec01_bg5.png) no-repeat 50% 50%; background-size: auto 100%; }
+#main #fullpage .section01 .swiper-slide .bg05 { background: url(../images/main/sec01_bg5.png) no-repeat 50% 50%; background-size: auto 100%; } */
 #main #fullpage .section01 .swiper-slide h2 { font-size: 6.6rem; color: #fff; position: absolute; top: 0; bottom: 0; left: 10%; margin: auto; height: fit-content; transform: translateY(-6rem); font-weight: 150; }
 #main #fullpage .section01 .swiper-slide h2 span { position: relative; width: 100%; bottom: -30px; opacity: 0; transition: .3s; display: block; line-height: 1.4; }
 #main #fullpage .section01.active .swiper-slide-active h2 span { bottom: 0px; opacity: 1; transition: .5s 1s; }
