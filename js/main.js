@@ -487,6 +487,7 @@ var mainEvent = {
           $(this).find(".icon").hide();
           $(this).find(".icon_white").show();
           $(this).find("h3 span").last().addClass("on");
+          $(this).find("h3").css({'opacity':'1'});
 
           var idx = $(".card li").index(this);
           $(".counting").each(function () {
@@ -502,24 +503,29 @@ var mainEvent = {
                 duration: 800,
                 easing: "linear",
                 step: function () {
-                  $this.text(Math.floor(this.countNum));
+                  // $this.text(Math.floor(this.countNum));
+                  $this.text(numComma(Math.ceil(this.countNum)));
                 },
                 complete: function () {
-                  $this.text(this.countNum);
+                  // $this.text(this.countNum);
+                  $this.text(numComma(Math.ceil(this.countNum)));
                 },
               }
             );
           });
+          function numComma(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g,",")
+          }
         },
         function () {
           $(this).find(".icon").show();
           $(this).find(".icon_white").hide();
           $(this).find("h3 span").last().removeClass("on");
+          $(this).find("h3").css({'opacity':'0'});
 
           var idx = $(".card li").index(this);
           $(".counting").each(function () {
             var $this = $(".card li").eq(idx).find(".counting");
-
             $({ countNum: $this.text() }).animate(
               {
                 countNum: 0,
@@ -529,7 +535,7 @@ var mainEvent = {
                 duration: 800,
                 easing: "linear",
                 step: function () {
-                  $this.text(Math.floor(this.countNum));
+                  $this.text(numComma(Math.ceil(this.countNum)));
                 },
                 complete: function () {
                   $this.text(this.countNum);
@@ -537,6 +543,9 @@ var mainEvent = {
               }
             );
           });
+          function numComma(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g,",")
+          }
         }
       );
     } else {
@@ -588,6 +597,9 @@ var mainEvent = {
       $(document).on("click", "#topButton", function () {
         $("html").animate({ scrollTop: 0 }, "300");
       });
+
+      // 섹션4 social responsibility 토글변수
+      var countTrigger = true;
 
       $(window).on("load scroll resize", () => {
         const section = $("#mobile .section");
@@ -641,26 +653,43 @@ var mainEvent = {
             }
 
             if (index === 3) {
-              $(".counting").each(function () {
-                var $this = $(this),
-                  countTo = $this.attr("data-count");
+              // 섹션4 social responsibility 토글변수가 자동 true로 반환
+              if (countTrigger === true) {
 
-                $({ countNum: $this.text() }).animate(
-                  {
-                    countNum: countTo,
-                  },
-                  {
-                    duration: 1000,
-                    easing: "linear",
-                    step: function () {
-                      $this.text(Math.floor(this.countNum));
+                // 토글변수 true일 때, 카운트 func 시작
+                $(".counting").each(function () {
+                  var $this = $(this),
+                    countTo = $this.attr("data-count")
+
+                  $({ countNum: $this.text() }).animate(
+                    {
+                      countNum: countTo
                     },
-                    complete: function () {
-                      $this.text(this.countNum);
-                    },
+                    {
+                      duration: 1000,
+                      easing: "linear",
+                      step: function () {
+                        //$this.text(this.countNum);
+                        $this.text(numComma(Math.ceil(this.countNum)));
+
+                      },
+                      complete: function () {
+                        //$this.text(this.countNum);
+                        $this.text(numComma(Math.ceil(this.countNum)));
+                      },
+                    }
+                  )
+                  function numComma(x) {
+                    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g,",");
                   }
-                );
-              });
+                  
+                });
+
+                // 카운트 func 종료 후 토글변수 false로 전환 = 스크롤 시 카운트 재시작 방지
+                countTrigger = false;
+              }
+              
+              
             } else {
             }
           } else {
@@ -668,6 +697,7 @@ var mainEvent = {
           }
         });
       });
+      
     }
   },
 };
