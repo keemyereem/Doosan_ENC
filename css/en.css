@@ -88,6 +88,8 @@
 .civil_engineer.en .section_nav .page_name { transform: rotate(270deg) translate(-100%,-11rem); top: -2rem; }
 .civil_engineer.en .outline .section p .btn { padding: 0 2rem; flex-shrink: 0; margin-left: 1rem; }
 
+.mp01.en .outline .section5 .left h3 { margin-bottom: 0; }
+
 /* Technology Innovation */
 
 /* Technology Competence */
@@ -110,6 +112,8 @@
 .company.en .greeting .picture { top: 32rem; }
 .company.en .greeting .tit span:last-of-type { right: initial; }
 .company.en .greeting .txt:last-of-type { margin-top: 52rem; }
+
+.company.en .HMhistory .list > li dl dt { flex-shrink: 0; }
 
 .company.en .greybox .wrap .section01 h2 { line-height: 1.2; }
 
