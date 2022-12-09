@@ -312,7 +312,7 @@
 .title_area .con_tit > em { color: #888; }
 .title_area .con_tit > span { display: inline-block; width: 1rem; height: 2rem; vertical-align: middle; position: relative; margin: 0 3.5rem; }
 .title_area .con_tit > span::after { content:''; display: inline-block; width: 0; height: 0; border-top: 1rem solid transparent; border-bottom: 1rem solid transparent; border-left: 1rem solid #1d1f1e; position: absolute; top: -.5rem; left: 0; }
-.title_area .sub_tit { font-size: 3.4rem; font-weight: 400; color: #0b0f14; letter-spacing: -.085rem; padding-bottom: 1rem; }
+.title_area .sub_tit { font-size: 3.4rem; font-weight: 400; color: #0b0f14; letter-spacing: -.085rem; padding-bottom: 3rem; }
 .title_area .sub_tit > b { font-family: 'Montserrat'; font-size: 3.6rem; font-weight: 350; color: #005eb8; }
 .title_area .sub_txt { font-size: 2rem; font-weight: 150; color: #555; letter-spacing: -.05rem; line-height: 1.8; position: relative; }
 .title_area .download_btn { display: inline-block; width: 23.2rem; font-size: 1.6rem; color: #000; margin-top: 8rem;  }
@@ -350,8 +350,9 @@
 .channel .news .news_list .total {font-size: 1.6rem; font-weight: 150; width: 44.7rem; margin: 2rem auto 0; padding-left: 2rem; }
 .channel .news .news_list .total b.blue {color: #005eb8;font-weight: 350;}
 .channel .news .news_list .null { width: 100%; background: #f9f9f9; font-size: 1.6rem; color: #222; padding: 24rem 0; text-align: center; margin-top: 4rem; }
-.channel .news .news_list ul { width: 100%; height: fit-content; display: flex; flex-wrap: wrap; justify-content: space-between; margin-top: 4rem; }
+.channel .news .news_list ul { width: 100%; height: fit-content; display: flex; flex-wrap: wrap; margin-top: 4rem; }
 .channel .news .news_list ul li { position: relative; width: calc((100% - 10rem) / 3); height: 44.8rem; margin-bottom: 5rem; overflow: hidden; }
+.channel .news .news_list ul li:nth-child(3n+2) { margin: 0 5rem; }
 .channel .news .news_list ul li:nth-last-child(n+1):nth-last-child(-n+3) { margin-bottom: 0; }
 .channel .news .news_list ul li .img { height: 31rem; overflow: hidden; }
 .channel .news .news_list ul li .img img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s; }
@@ -903,13 +904,13 @@
 .card_popup .popup_inner {position:absolute;top:50%;left:50%;max-width: 136rem;width: calc(100% - 4rem);height: 84rem;transform:translate(-50%, -50%);z-index: 1004; cursor: auto;}
 .card_popup .pop_close { /* position: fixed; top: 0; left: 0; width: 7rem; height: 7rem; transform: scale(0); cursor: none; transition: transform ease .3s; */ position: absolute; top: 2rem; right: 2rem; }
 .card_popup .popup_inner .pop_close img { width: 100%; object-fit: contain; }
-.card_popup .popup_inner .pop_cont { max-width: 136rem;width: 100%;height:100%;background: #f5f5f5;/* padding: 6rem 10rem 6rem 6rem; */display: flex;justify-content: space-between;align-items: center; }
+.card_popup .popup_inner .pop_cont { max-width: 136rem;width: 100%;height:100%;background: linear-gradient(to right, #f5f5f5, #f5f5f5 50%, #fff 50.1%, #fff 100%); /* background: #f5f5f5; *//* padding: 6rem 10rem 6rem 6rem; */display: flex;justify-content: space-between;align-items: center; }
 .card_popup .popup_inner .pop_cont .inner_box {width: 50%;height: auto;/* background: #f5f5f5; */padding: 6rem;overflow: hidden;}
 .card_popup .popup_inner .pop_cont .inner_box .inner_slider { width: 100%; }
 .card_popup .popup_inner .pop_cont .inner_box .list {width: 100%; height: fit-content; overflow: hidden; }
 .card_popup .popup_inner .pop_cont .inner_box .list > img {transition: transform .8s;}
 .card_popup .popup_inner .pop_cont .inner_box .list:hover > img {transform: scale(1.1);}
-.card_popup .popup_inner .pop_cont .txt_box {width: 50%;height: 100%; padding: 6rem 10rem 6rem 6rem;background: #fff;}
+.card_popup .popup_inner .pop_cont .txt_box {width: 50%;height: 100%; padding: 6rem 10rem 6rem 6rem;background: #fff; overflow-y: auto;}
 .card_popup .popup_inner .pop_cont .txt_box .card_tit {font-size: 4rem;font-weight: 400;color: #222;letter-spacing: -.1rem;margin-bottom: 2rem;}
 .card_popup .popup_inner .pop_cont .txt_box .card_tit:before {content:'';display: block;width: 6.5rem;height: .6rem;background: #005eb8;transform: skew(-40deg);margin-bottom: 2.5rem;}
 .card_popup .popup_inner .pop_cont .txt_box .card_des {width: 100%;overflow-y: scroll;font-size: 1.6rem;font-weight: 150; color: #555;line-height: 1.875;letter-spacing: -.04rem;height: 14.4rem;}
