@@ -279,10 +279,14 @@
     #mobile .technology.en .competence section .txt ul li::before { position: absolute; top: 0; left: 0; }
 
     #mobile .technology.en .ipr .tb_box .tb_row.row_body b.mob { font-weight: 400; }
+    #mobile .technology.en .ipr .tb_box .tb_row .patent_num { width: 100%; max-width: 100%; }
+    #mobile .technology.en .ipr .tb_box .tb_row .date { width: 100%; }
     #mobile .technology.en .ipr .tb_box .tb_row .class { width: 64%; max-width: 17.5rem; }
     #mobile .technology.en .ipr .tb_box .tb_row .num { width: 36%; }
-    #mobile .technology.en .ipr.ipr03 .tb_box .tb_row.row_body .cell02 b.mob { display: block; }
+    /* #mobile .technology.en .ipr.ipr03 .tb_box .tb_row.row_body .cell02 b.mob { display: block; } */
     #mobile .technology.en .ipr.ipr04 .tb_box .tb_row.row_body > div { width: 100%; }
+    #mobile .technology.en .ipr.ipr03 .tb_box .tb_row.row_body .cell04,
+    #mobile .technology.en .ipr.ipr04 .tb_box .tb_row.row_body .cell07 { margin-top: 1rem; }
 
     #mobile .technology.en .iot .inner:nth-child(2) > div.inner_wrap > .sec2_ri { padding-left: 0; }
     #mobile .technology.en .iot .inner:last-child .inner_wrap .card li { height: auto; }
