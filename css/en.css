@@ -27,7 +27,7 @@
 .header_en .gnb_menu .right_nav ul li a::before { left: 0; }
 .header_en .gnb_menu .right_nav ul li a:hover::before { width: 100%; }
 
-.sitemap_en .wrap .sitemap_main .block_le ul li:nth-child(2) .block_2depth > li:not(.empty) { padding-left: 34rem; }
+.sitemap_en .wrap .sitemap_main .block_le ul li:nth-child(2) .block_2depth > li:not(.empty) { padding-left: 29rem; }
 
 .footer_en .sec_tit { font-family: 'Montserrat', sans-serif !important; }
 .footer_en .right ul { padding-left: 8rem; }
