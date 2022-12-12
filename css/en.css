@@ -7,6 +7,7 @@
 
 .en .sub_visual .sub_visual_menu .depth { width: 30rem; }
 .en .sub_visual .sub_visual_menu .depth2 { width: 40rem; }
+.en .sub_visual .sub_visual_menu .depth .drop_box li a:after { right: 3rem; }
 
 .header_en .logo { margin-right: 3vw; width: 18.7rem; background: url(../images/common/logo_b_en.png) no-repeat; }
 .header_en.wht .logo { background: url(../images/common/logo_w_en.png) no-repeat; }
@@ -43,6 +44,7 @@
 .en #rightnavi li:nth-child(6) { display: none; }
 #main .en #fullpage .section01.active .swiper-slide-active h2 span:nth-child(5) { transition: .5s 2.2s; }
 #main .en #fullpage .section01 .swiper .sec01_controller { bottom: 20%; }
+#main .en #fullpage .section03 .bus_swiper > .swiper-wrapper > .swiper-slide { padding-bottom: 0; }
 #main .en #fullpage .section02 .big_img { flex-shrink: 0; }
 #main .en #fullpage .section02 .right .contents a { align-items: center; }
 #main .en #fullpage .section02 .right .contents .thumb_img { flex-shrink: 0; }
@@ -99,6 +101,10 @@
 .technology.en .competence .love_motion .box > li .motion_menu li:nth-child(3) p { font-size: 2rem; line-height: 1.4; padding: 0 3rem; }
 .technology.en .competence .section_nav .page_name { width: 27rem; white-space: initial; transform: rotate(270deg) translate(-100%, -11.5rem); top: -2rem; }
 .technology.en .competence .section6 ul li .viewmore { width: 13rem; }
+
+/* Intellectual Property Rights */
+.technology.en .ipr .tb_box .tb_row .class { width: 12%; }
+.technology.en .ipr .tb_box .tb_row .num { width: 20%; }
 
 /* Institute of Technology */
 .technology.en .iot .inner:nth-child(2) > div.inner_wrap > .sec2_ri { padding-left: 5rem; }
@@ -281,8 +287,8 @@
     #mobile .technology.en .ipr .tb_box .tb_row.row_body b.mob { font-weight: 400; }
     #mobile .technology.en .ipr .tb_box .tb_row .patent_num { width: 100%; max-width: 100%; }
     #mobile .technology.en .ipr .tb_box .tb_row .date { width: 100%; }
-    #mobile .technology.en .ipr .tb_box .tb_row .class { width: 64%; max-width: 17.5rem; }
-    #mobile .technology.en .ipr .tb_box .tb_row .num { width: 36%; }
+    #mobile .technology.en .ipr .tb_box .tb_row .class { width: 100%; max-width: 100%; }
+    #mobile .technology.en .ipr .tb_box .tb_row .num { width: 100%; }
     /* #mobile .technology.en .ipr.ipr03 .tb_box .tb_row.row_body .cell02 b.mob { display: block; } */
     #mobile .technology.en .ipr.ipr04 .tb_box .tb_row.row_body > div { width: 100%; }
     #mobile .technology.en .ipr.ipr03 .tb_box .tb_row.row_body .cell04,

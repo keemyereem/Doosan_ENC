@@ -1040,7 +1040,7 @@
 .technology .competence section .txt .btn:hover:before { transform:scaleX(1) }
 .technology .competence section .txt .btn:hover > i { background: url(../images/common/icon_plus_w_21x22.png) 50% 50%; }
 .technology .competence section .img img { width: 100%; object-fit: contain; }
-.technology .competence section:nth-of-type(2n).section6 { background: #fff; padding-bottom: 0; }
+.technology .competence section:nth-of-type(2n).section6 { background: #fff; /* padding-bottom: 0; */ }
 .technology .competence .section6 { padding-bottom: 20rem; }
 .technology .competence .section6 h3::before { display: none; }
 .technology .competence .section6 ul { border-top: .3rem solid #000; border-bottom: .3rem solid #000; margin-top: 3.5rem; }
