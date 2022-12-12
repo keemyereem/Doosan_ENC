@@ -109,7 +109,7 @@
     @keyframes manuAnimate03_1 { 0%{transform: translateY(-10px) rotate(135deg); width: 4rem; margin-left: 0;} 50%{transform: translateY(-10px) rotate(0deg);} 100%{transform: translateY(0px) rotate(0deg); width: 2.6rem; margin-left: 1rem;} }
 
     /* sitemap */
-    #mobile .sitemap { min-width: 100%; top: 6rem; opacity: 1; visibility: visible; height: 0; transition: height ease .3s; z-index: 100; display: none; }
+    #mobile .sitemap { min-width: 100%; top: 6rem; opacity: 1; visibility: visible; height: 0; transition: height ease .3s; z-index: 1000; display: none; }
     #mobile .sitemap.active { height: calc(var(--vh, 1vh) * 100 - 6rem); display: block; }
     #mobile .sitemap.active::before { content: ''; width: calc(100% - 4rem); height: .1rem; display: block; top: 0; left: 2rem; position: absolute; z-index: 1; background:  rgba(255, 255, 255, .1);  }
     #mobile .sitemap .wrap { flex-direction: column; justify-content: flex-start; overflow: auto; }
@@ -252,7 +252,8 @@
     #mobile #main #fullpage .section01 .clip-wrap { width: 100%; height: 100%; position: absolute; z-index: 9; background: #fff; }
     #mobile #main #fullpage .section01 .clip-css { width: 33.4rem; height: 32.8rem; transform: translateY(0); }
     #mobile #main #fullpage .section01.ani .clip-css { animation: intro_mobile 1s alternate; width: 100%; height: 100%; }
-    #mobile #main #fullpage .section01.active .clip-css { transform: translateY(0); }
+    #mobile #main #fullpage .section01.active .clip-css { transform: translateY(0); height: 100%; }
+    #mobile #main #fullpage .section01 .swiper-slide .slide-inner img { height: 100vh; object-fit: cover; }
 
     /* Section02 */
     #mobile #main #fullpage .section02 { padding-bottom: 5.8rem; }
@@ -448,6 +449,7 @@
     #mobile .channel .news .news_list .search .input_search a { width: 2.8rem; height: 3.6rem; background-size: 1.8rem; }
     #mobile .channel .news .news_list .total {font-size: 1.3rem; width: 100%; max-width: 22.5rem; margin: 1.5rem auto 0; padding-left: .8rem; }
     #mobile .channel .news .news_list ul li { width: 100%; height: 33.1rem; }
+    #mobile .channel .news .news_list ul li:nth-child(3n+2) { margin: 0 0 5rem 0; }
     #mobile .channel .news .news_list ul li:nth-last-child(n+1):nth-last-child(-n+3) { margin-bottom: 5rem; }
     #mobile .channel .news .news_list ul li:last-child { margin-bottom: 0!important; }
     #mobile .channel .news .news_list ul li .img { height: 23.25rem; }
@@ -707,7 +709,7 @@
     #mobile .technology .ipr .tb_box .tb_row.row_body .mob { display: inline-block; }
     #mobile .technology .ipr .tb_box .tb_row.row_body b.mob { padding-right: 1rem; }
     #mobile .technology .ipr .tb_box .tb_row.row_body .tit { display: block; width: 100%; margin-top: 1rem; padding-left: 0; line-height: 1.53; }
-    #mobile .technology .ipr .tb_box .tb_row .class { width: 39%; max-width: 13.1rem; display: inline-block; }
+    #mobile .technology .ipr .tb_box .tb_row .class { width: 39%; max-width: 8rem; display: inline-block; }
     #mobile .technology .ipr .tb_box .tb_row .num { width: 50%; display: inline-block; }
     #mobile .technology .ipr .tb_box .tb_row .patent_num { display: inline-block; width: 65%; max-width: 20.7rem; }
     #mobile .technology .ipr .tb_box .tb_row .date  { display: inline-block; width: 48%; }
@@ -726,10 +728,8 @@
     #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell04,
     #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell05 { width: 100%; }
 
-    #mobile .technology .ipr.ipr04 .tb_box .tb_row.row_body .cell02,
+    #mobile .technology .ipr.ipr04 .tb_box .tb_row.row_body .cell03 { width: 42%; }
     #mobile .technology .ipr.ipr04 .tb_box .tb_row.row_body .cell04 { width: 57%; }
-    #mobile .technology .ipr.ipr04 .tb_box .tb_row.row_body .cell03,
-    #mobile .technology .ipr.ipr04 .tb_box .tb_row.row_body .cell05 { width: 42%; }
 }
 /* responsive */
 @media screen and (max-width:380px) {
@@ -1027,12 +1027,12 @@
 #mobile .civil_engineer .business_lists .list_more::after { width: 1.6rem; height: 1.6rem; background-size: contain; right: 3rem; }
 
 /* 사업실적 리스트 팝업 */
-#mobile .card_popup .popup_inner { width: calc(100% - 2rem);height: auto; }
+#mobile .card_popup .popup_inner { width: calc(100% - 2rem);height: auto;min-height: initial; }
 #mobile .card_popup .popup_inner .pop_close { width: 5.25rem; height: 5.2rem; top: -1.5rem; left: 50%; right: initial; transform: translate(-50%,-100%); }
 #mobile .card_popup .popup_inner .pop_cont { max-width: 100%; width: 100%; flex-direction: column; height: 125vw; overflow-y: scroll; background: #fff; }
 #mobile .card_popup .popup_inner .pop_cont .inner_box { width: 100%; height: fit-content; min-height: 125vw; padding: 1rem; background: #f5f5f5; }
 #mobile .card_popup .popup_inner .pop_cont .inner_box .inner_slider .list img { width: 100%; object-fit: contain; }
-#mobile .card_popup .popup_inner .pop_cont .txt_box { width: 100%; padding: 3rem 1rem 4rem 2rem; }
+#mobile .card_popup .popup_inner .pop_cont .txt_box { width: 100%; padding: 3rem 1rem 4rem 2rem; overflow-y: initial; }
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_tit { font-size: 2.5rem; margin-bottom: 1rem; }
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_tit:before { width: 4.8rem; height: .4rem; margin-bottom: 1.8rem; }
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_des { font-size: 1.3rem; line-height: 1.69; height: 10.8rem; overflow-y: auto; }
@@ -1060,7 +1060,7 @@
 #mobile .competence .title_area .sub_tit span::after { height: 1rem; }
 
 /* 기술역량 */
-#mobile .technology .competence { padding-bottom: 20rem; margin-top: 4rem; }
+#mobile .technology .competence { /* padding-bottom: 20rem; */ margin-top: 4rem; }
 #mobile .technology .competence .love_motion { height: auto; margin-bottom: 4.5rem; margin-top: 3rem; }
 #mobile .technology .competence .love_motion .love_swiper_wrap { position: relative; width: 100%; height: 7rem; }
 #mobile .technology .competence .love_motion .love_swiper_wrap.shadow_align.right::before { opacity: 0; }
@@ -1141,7 +1141,7 @@
 #mobile .technology .competence section .txt .btn { width: 21.1rem; height: 4.5rem; line-height: 4.5rem; border-radius: 2.25rem;padding: 0 3rem; margin-top: 3.5rem; font-size: 1.3rem; }
 #mobile .technology .competence section .txt .btn i { width: 1.5rem; height: 1.5rem; right: 3rem; background: url(../images/common/icon_plus_15x15.png)50% 50% no-repeat; }
 #mobile .technology .competence section .txt .btn:hover i { background: url(../images/common/icon_plus_w_15x15.png)50% 50% no-repeat; }
-#mobile .technology .competence .section6 { padding: 5.5rem 0 0; }
+#mobile .technology .competence .section6 { padding: 5.5rem 0 10rem; }
 #mobile .technology .competence .section6 h3 { margin-top: 0; }
 #mobile .technology .competence .section6 ul { margin-top: 2.2rem; }
 #mobile .technology .competence .section6 ul li a { height: auto; min-height: 5.5rem; padding: 1.5rem 1rem; line-height: 1.57; position: relative; }
@@ -1729,7 +1729,7 @@
 #mobile .recruit .benefits ul li:nth-child(8) .icon { width: 5rem; height: 4.95rem; margin-top: -.5rem; }
 
 /* 개인정보처리방침 */
-#mobile .graybox { padding: 6.5rem 0; }
+#mobile .graybox { padding: 6.5rem 0 0; }
 #mobile .graybox .policy > .inner { text-align: center; margin-top: 6.5rem; }
 #mobile .graybox .policy > .inner > ul li { height: 4.5rem; line-height: 4.5rem; }
 #mobile .graybox .policy > .inner > ul li.on { box-shadow: 0px 0px 16px 4px rgba(34, 34, 34, 0.2); }

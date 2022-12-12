@@ -60,8 +60,8 @@
 
 /* Section01 */
 #main #fullpage .section01 { position: relative; }
-#main #fullpage .section01 .clip-wrap { width: 100vw; height: 100%; position: absolute; z-index: 9; background: #fff; overflow: hidden; }
-#main #fullpage .section01 .clip-css {width: 100%;height: 100%; transition: all ease .2s; opacity: 0; background: url(../images/main/sec01_bg1.png)no-repeat 50% 50%; background-size: auto 100%; z-index: 100; -webkit-clip-path: polygon(0% 75%, 25% 0%, 100% 25%, 75% 100%); clip-path: polygon(0% 75%, 25% 0%, 100% 25%, 75% 100%); position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; width: 66.9rem; height: 65.6rem; object-fit: none; }
+#main #fullpage .section01 .clip-wrap { width: 100%; height: 100%; position: absolute; z-index: 9; background: #fff; overflow: hidden; }
+#main #fullpage .section01 .clip-css {width: 100%;height: 100vh; transition: all ease .2s; opacity: 0; background: url(../images/main/sec01_bg1.png)no-repeat 50% 50%; /* background-size: auto 100%; */ background-size: cover; z-index: 100; -webkit-clip-path: polygon(0% 75%, 25% 0%, 100% 25%, 75% 100%); clip-path: polygon(0% 75%, 25% 0%, 100% 25%, 75% 100%); position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; width: 66.9rem; height: 65.6rem; object-fit: none; }
 #main #fullpage .section01.ani .clip-css { animation: intro 1s alternate; -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); width: 100%; height: 100%; }
 #main #fullpage .section01.active .clip-css { transform: translateY(0); }
 #main #fullpage .section01 .center,
@@ -69,12 +69,14 @@
 #main #fullpage .section01 .swiper { width: 100%; height: 100%; }
 #main #fullpage .section01 .swiper-slide { width: 100%; height: 100%; background-position: center; background-size: auto 100%; overflow: hidden; display: flex; position: relative; z-index: 0;}
 #main #fullpage .section01 .swiper-slide .slide-inner { position: absolute; width: 100%; height: 100%; top: 0; left: 0; }
-#main #fullpage .section01.active .swiper-slide .slide-inner.scaleOn { background-size: auto 120%; }
-#main #fullpage .section01 .swiper-slide .bg01 { background: url(../images/main/sec01_bg1.png) no-repeat 50% 50%; background-size: auto 100%; }
+/* #main #fullpage .section01.active .swiper-slide .slide-inner { background-size: auto 100%; } */
+#main #fullpage .section01.active .swiper-slide .slide-inner img { transform: scale(1); width: 100%; height: 100%; object-fit: cover; }
+#main #fullpage .section01.active .swiper-slide .slide-inner.scaleOn img { transform: scale(1.2); transition: transform 6s; }
+/* #main #fullpage .section01 .swiper-slide .bg01 { background: url(../images/main/sec01_bg1.png) no-repeat 50% 50%; background-size: auto 100%; }
 #main #fullpage .section01 .swiper-slide .bg02 { background: url(../images/main/sec01_bg2.png) no-repeat 50% 50%; background-size: auto 100%; }
 #main #fullpage .section01 .swiper-slide .bg03 { background: url(../images/main/sec01_bg3.png) no-repeat 50% 50%; background-size: auto 100%; }
 #main #fullpage .section01 .swiper-slide .bg04 { background: url(../images/main/sec01_bg4.png) no-repeat 50% 50%; background-size: auto 100%; }
-#main #fullpage .section01 .swiper-slide .bg05 { background: url(../images/main/sec01_bg5.png) no-repeat 50% 50%; background-size: auto 100%; }
+#main #fullpage .section01 .swiper-slide .bg05 { background: url(../images/main/sec01_bg5.png) no-repeat 50% 50%; background-size: auto 100%; } */
 #main #fullpage .section01 .swiper-slide h2 { font-size: 6.6rem; color: #fff; position: absolute; top: 0; bottom: 0; left: 10%; margin: auto; height: fit-content; transform: translateY(-6rem); font-weight: 150; }
 #main #fullpage .section01 .swiper-slide h2 span { position: relative; width: 100%; bottom: -30px; opacity: 0; transition: .3s; display: block; line-height: 1.4; }
 #main #fullpage .section01.active .swiper-slide-active h2 span { bottom: 0px; opacity: 1; transition: .5s 1s; }
@@ -312,7 +314,7 @@
 .title_area .con_tit > em { color: #888; }
 .title_area .con_tit > span { display: inline-block; width: 1rem; height: 2rem; vertical-align: middle; position: relative; margin: 0 3.5rem; }
 .title_area .con_tit > span::after { content:''; display: inline-block; width: 0; height: 0; border-top: 1rem solid transparent; border-bottom: 1rem solid transparent; border-left: 1rem solid #1d1f1e; position: absolute; top: -.5rem; left: 0; }
-.title_area .sub_tit { font-size: 3.4rem; font-weight: 400; color: #0b0f14; letter-spacing: -.085rem; padding-bottom: 1rem; }
+.title_area .sub_tit { font-size: 3.4rem; font-weight: 400; color: #0b0f14; letter-spacing: -.085rem; padding-bottom: 3rem; }
 .title_area .sub_tit > b { font-family: 'Montserrat'; font-size: 3.6rem; font-weight: 350; color: #005eb8; }
 .title_area .sub_txt { font-size: 2rem; font-weight: 150; color: #555; letter-spacing: -.05rem; line-height: 1.8; position: relative; }
 .title_area .download_btn { display: inline-block; width: 23.2rem; font-size: 1.6rem; color: #000; margin-top: 8rem;  }
@@ -350,8 +352,9 @@
 .channel .news .news_list .total {font-size: 1.6rem; font-weight: 150; width: 44.7rem; margin: 2rem auto 0; padding-left: 2rem; }
 .channel .news .news_list .total b.blue {color: #005eb8;font-weight: 350;}
 .channel .news .news_list .null { width: 100%; background: #f9f9f9; font-size: 1.6rem; color: #222; padding: 24rem 0; text-align: center; margin-top: 4rem; }
-.channel .news .news_list ul { width: 100%; height: fit-content; display: flex; flex-wrap: wrap; justify-content: space-between; margin-top: 4rem; }
+.channel .news .news_list ul { width: 100%; height: fit-content; display: flex; flex-wrap: wrap; margin-top: 4rem; }
 .channel .news .news_list ul li { position: relative; width: calc((100% - 10rem) / 3); height: 44.8rem; margin-bottom: 5rem; overflow: hidden; }
+.channel .news .news_list ul li:nth-child(3n+2) { margin: 0 5rem; }
 .channel .news .news_list ul li:nth-last-child(n+1):nth-last-child(-n+3) { margin-bottom: 0; }
 .channel .news .news_list ul li .img { height: 31rem; overflow: hidden; }
 .channel .news .news_list ul li .img img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s; }
@@ -903,13 +906,13 @@
 .card_popup .popup_inner {position:absolute;top:50%;left:50%;max-width: 136rem;width: calc(100% - 4rem);height: 84rem;transform:translate(-50%, -50%);z-index: 1004; cursor: auto;}
 .card_popup .pop_close { /* position: fixed; top: 0; left: 0; width: 7rem; height: 7rem; transform: scale(0); cursor: none; transition: transform ease .3s; */ position: absolute; top: 2rem; right: 2rem; }
 .card_popup .popup_inner .pop_close img { width: 100%; object-fit: contain; }
-.card_popup .popup_inner .pop_cont { max-width: 136rem;width: 100%;height:100%;background: #f5f5f5;/* padding: 6rem 10rem 6rem 6rem; */display: flex;justify-content: space-between;align-items: center; }
+.card_popup .popup_inner .pop_cont { max-width: 136rem;width: 100%;height:100%;background: linear-gradient(to right, #f5f5f5, #f5f5f5 50%, #fff 50.1%, #fff 100%); /* background: #f5f5f5; *//* padding: 6rem 10rem 6rem 6rem; */display: flex;justify-content: space-between;align-items: center; }
 .card_popup .popup_inner .pop_cont .inner_box {width: 50%;height: auto;/* background: #f5f5f5; */padding: 6rem;overflow: hidden;}
 .card_popup .popup_inner .pop_cont .inner_box .inner_slider { width: 100%; }
 .card_popup .popup_inner .pop_cont .inner_box .list {width: 100%; height: fit-content; overflow: hidden; }
 .card_popup .popup_inner .pop_cont .inner_box .list > img {transition: transform .8s;}
 .card_popup .popup_inner .pop_cont .inner_box .list:hover > img {transform: scale(1.1);}
-.card_popup .popup_inner .pop_cont .txt_box {width: 50%;height: 100%; padding: 6rem 10rem 6rem 6rem;background: #fff;}
+.card_popup .popup_inner .pop_cont .txt_box {width: 50%;height: 100%; padding: 6rem 10rem 6rem 6rem;background: #fff; overflow-y: auto;}
 .card_popup .popup_inner .pop_cont .txt_box .card_tit {font-size: 4rem;font-weight: 400;color: #222;letter-spacing: -.1rem;margin-bottom: 2rem;}
 .card_popup .popup_inner .pop_cont .txt_box .card_tit:before {content:'';display: block;width: 6.5rem;height: .6rem;background: #005eb8;transform: skew(-40deg);margin-bottom: 2.5rem;}
 .card_popup .popup_inner .pop_cont .txt_box .card_des {width: 100%;overflow-y: scroll;font-size: 1.6rem;font-weight: 150; color: #555;line-height: 1.875;letter-spacing: -.04rem;height: 14.4rem;}
@@ -946,7 +949,7 @@
 
 /* 기술역량 */
 .technology .competence #tech_top { display: block; padding-bottom: 10rem; margin-top: -10rem; }
-.technology .competence { padding-bottom: 20rem; margin-top: 9rem; }
+.technology .competence { /* padding-bottom: 20rem; */ margin-top: 9rem; }
 .technology .competence .love_motion { width: auto; height: fit-content; position: relative; height: 63.5rem; margin-bottom: 12.3rem; }
 .technology .competence .love_motion em { color: #005EB8; font-style: normal; }
 .technology .competence .love_motion .box { max-width: 164rem; height: 63.5rem; background: transparent; position: absolute; margin: auto; top: auto; bottom: 0; left: 0; right: 0; display: flex; justify-content: center; align-items: center; }
@@ -1038,6 +1041,7 @@
 .technology .competence section .txt .btn:hover > i { background: url(../images/common/icon_plus_w_21x22.png) 50% 50%; }
 .technology .competence section .img img { width: 100%; object-fit: contain; }
 .technology .competence section:nth-of-type(2n).section6 { background: #fff; padding-bottom: 0; }
+.technology .competence .section6 { padding-bottom: 20rem; }
 .technology .competence .section6 h3::before { display: none; }
 .technology .competence .section6 ul { border-top: .3rem solid #000; border-bottom: .3rem solid #000; margin-top: 3.5rem; }
 /* .technology .competence .section6 ul li:before {content: "";display: block;position: absolute;left: 0;top: 0;bottom: 0;right: 0;transform: scaleX(0);z-index: -1;background-color: #000;transition:all .2s ease-out;transform-origin:0 50%;} */
@@ -1072,6 +1076,7 @@
 .technology .ipr .tb_box .tb_row .num { width: 11%; }
 .technology .ipr .tb_box .tb_row .cert { width: 8%; border-right: 0; }
 .technology .ipr .tb_box .tb_row .patent_num { width: 20%; }
+.technology .ipr .tb_box .tb_row .date { width: 12%; }
 .technology .ipr .tb_box .tb_row .download { width: 8%; border-right: 0; }
 .technology .ipr .tb_box .tb_row .cell07 { border-right: 0; }
 .technology .ipr .tb_box .tb_row.row_body .cell07 { text-align: left; padding-left: 5rem; }
