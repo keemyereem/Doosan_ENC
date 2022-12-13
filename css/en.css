@@ -25,7 +25,12 @@
 .header_en .gnb_menu .right_nav ul li:first-child:after { display: none; }
 .header_en .gnb_menu .right_nav ul li a { padding: 0; }
 .header_en .gnb_menu .right_nav ul li a::before { left: 0; }
+.fp-viewing-firstPage .header_en.wht .gnb_menu .right_nav ul li a::before,
+.fp-viewing-fifthPage .header_en.wht .gnb_menu .right_nav ul li a::before { left: 0; }
+.fp-viewing-firstPage .header_en.wht .gnb_menu .right_nav ul li a:hover::before,
+.fp-viewing-fifthPage .header_en.wht .gnb_menu .right_nav ul li a:hover::before,
 .header_en .gnb_menu .right_nav ul li a:hover::before { width: 100%; }
+.header_en .gnb > ul > li .depth_box.about_box .depth_wrap .depth_list { padding-bottom: 2rem; }
 
 .sitemap_en .wrap .sitemap_main .block_le ul li:nth-child(2) .block_2depth > li:not(.empty) { padding-left: 29rem; }
 
