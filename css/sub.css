@@ -1032,7 +1032,7 @@
 
 .technology .competence section .txt ul li { font-size: 1.8rem; font-weight: 300; line-height: 2; position: relative; display: flex; }
 .technology .competence section .txt ul li span { flex-shrink: 0; }
-.technology .competence section .txt ul li::before { content:''; display: inline-block; width: 0.5rem; height: 0.5rem; background: #000; transform: rotate(15deg); margin: 1.4rem 1rem 0 0; }
+.technology .competence section .txt ul li::before { content:''; display: inline-block; flex-shrink: 0; width: 0.5rem; height: 0.5rem; background: #000; transform: rotate(15deg); margin: 1.4rem 1rem 0 0; }
 .technology .competence section .txt .btn { display: block; width: 28.3rem; height: 6.4rem; line-height: 6.4rem; border-radius: 3.2rem; border: 1px solid #000; padding: 0 4rem; margin-top: 4rem; font-size: 1.6rem; font-weight: 150; letter-spacing: -.04rem; position: relative; transition: all .2s; overflow: hidden; }
 .technology .competence section .txt .btn:before {content: "";display: block;position: absolute;left: 0;top: 0;bottom: 0;right: 0;transform: scaleX(0);z-index: -1;background-color: #000;transition:all .2s ease-out;transform-origin:0 50%;}
 .technology .competence section .txt .btn i { display: inline-block; width: 1.9rem; height: 1.9rem; background: url(../images/common/icon_plus_21x22.png) 50% 50%; position: absolute; top: 50%; right: 4rem; transform: translateY(-50%); transition: all .2s; }

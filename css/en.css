@@ -89,8 +89,15 @@
 .channel.en .reference .sec_tit b { font-weight: 450; }
 
 /* Business Areas */
+.masterpiece.en .outline .section0 .cont_area ul { align-items: flex-start; }
 .masterpiece.en .outline .section0 .cont_area ul li { flex: 1; }
+.masterpiece.en .outline .section0 .cont_area ul li::after { height: 10rem; }
+.mp01.en .outline .section0 .cont_area ul li::after { height: 11rem; }
 .interview.en .sub_visual ul li:last-child p { top: 2.5rem; }
+
+.en .title_area .download_btn { width: 47rem; position: relative; display: inline-flex; justify-content: space-between; align-items: center; padding: 0 1rem 2rem; }
+.en .title_area .download_btn::after { position: absolute; left: 0; bottom: 0; }
+.en .title_area .download_btn > i { margin-left: auto; background-size: contain; flex-shrink: 0; }
 
 .civil_engineer.en .section_nav .page_name { transform: rotate(270deg) translate(-100%,-11rem); top: -2rem; }
 .civil_engineer.en .outline .section p .btn { padding: 0 2rem; flex-shrink: 0; margin-left: 1rem; }
@@ -260,7 +267,7 @@
     #mobile #main .en #fullpage .section03 .bus_swiper > .swiper-wrapper > .swiper-slide { padding-bottom: 2rem; }
     #mobile #main .en #fullpage .section03 .bus_swiper .left ul { margin-bottom: 0; }
     #mobile #main .en #fullpage .section03 .bus_swiper .left ul li b { width: 100%; }
-    #mobile #main .en #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span > em { padding-bottom: .5rem; height: 4.5rem; display: flex; align-items: center; justify-content: center; }
+    #mobile #main .en #fullpage .section03 .bus_swiper .swiper-pagination-sec03 > span > em { padding-bottom: 0; height: 4.5rem; display: flex; align-items: center; justify-content: center; }
 
     #mobile #main .en #fullpage .section04 .card li h3 span { overflow: visible; }
     #mobile #main .en #fullpage .section04 .card li:nth-child(2) h3 span:last-child { width: auto; }
@@ -274,7 +281,7 @@
     #mobile #main .en #fullpage .section05 .sec_tit { font-size: 3.5rem; padding-left: 0; }
     #mobile #main .en #fullpage .section05 p { font-size: 1.8rem; line-height: 1.38; margin-top: 1rem; }
     #mobile #main .en #fullpage .section05 .btn {width: 21.1rem; height: 4.5rem; border-radius: 2.2rem; font-size: 1.3rem; padding: 0 3rem 0 2rem; margin: 3rem 0 5rem; }
-    #mobile #main .en #fullpage .section05 .btn > i { display: block; width: .9rem; height: 1.5rem; background: url(../images/common/arrow_9x15.png) no-repeat 50% 50%; }
+    #mobile #main .en #fullpage .section05 .btn > i { display: block; width: .65rem; height: 1.05rem; background: url(../images/common/arrow_9x15.png) no-repeat 50% 50%; background-size: 100% 100%; }
     #mobile #main .en #fullpage .section05 .btn:hover > i { background: url(../images/common/arrow_9x15_w.png) no-repeat 50% 50%; }
     #mobile #main .en #fullpage .section05 .contact_info { padding-top: 3rem; }
     #mobile #main .en #fullpage .section05 .contact_info dl { font-size: 1.4rem; }
@@ -283,7 +290,19 @@
     #mobile #main .en #fullpage .section05 .contact_info dl dd { line-height: 1.5; }
 
     /* Business Areas */
+    #mobile .en .title_area .download_btn { width: 24rem; padding-bottom: 1.5rem; }
+
     #mobile .civil_engineer.en .outline .section p .btn { width: 25rem; }
+    #mobile .masterpiece.en .masterpiece_menu ul li { padding-left: 1.5rem; }
+    #mobile .masterpiece.en .masterpiece_menu ul li.on { padding-right: 1.5rem; }
+    #mobile .masterpiece.en .masterpiece_menu ul li.on::after { right: 1.5rem; }
+    #mobile .mp01.en .masterpiece_menu ul li.on a { display: flex; align-items: center; }
+    #mobile .mp01.en .masterpiece_menu ul li.on a b { align-self: flex-start; margin-top: 0.7rem; }
+    #mobile .masterpiece.en .masterpiece_menu ul li a b { margin-right: 1rem; }
+
+    #mobile .civil_engineer.en .outline .section p .btn { width: 100%; text-align: left; margin-left: 0; padding: 0 2rem; }
+    #mobile .civil_engineer.en .outline .section p .btn > i { margin-left: auto; }
+    
 
     /* Technology Innovation */
     #mobile .technology.en .competence section .txt ul li { position: relative; padding-left: 1rem; flex-direction: column; }
