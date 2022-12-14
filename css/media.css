@@ -1149,7 +1149,7 @@
 #mobile .technology .competence .section6 { padding: 5.5rem 0 10rem; }
 #mobile .technology .competence .section6 h3 { margin-top: 0; }
 #mobile .technology .competence .section6 ul { margin-top: 2.2rem; }
-#mobile .technology .competence .section6 ul li a { height: auto; min-height: 5.5rem; padding: 1.5rem 1rem; line-height: 1.57; position: relative; }
+#mobile .technology .competence .section6 ul li a { height: auto; min-height: 5.5rem; padding: 1.5rem 1rem; line-height: 1.57; position: relative; align-items: flex-start; }
 #mobile .technology .competence .section6 ul li a em { display: none; }
 #mobile .technology .competence .section6 ul li .num { font-size: 1.5rem; padding-right: 1rem; }
 #mobile .technology .competence .section6 ul li .tit { font-size: 1.4rem; padding-right: 2.5rem; } 
@@ -1387,7 +1387,7 @@
 #mobile .company .location ul li:last-child div p { font-size: 1.3rem; line-height: 1.54; padding-top: 1rem; }
 #mobile .company .location ul li:last-child div p i { font-size: 1.3rem; color: #cccccc; position: relative; bottom: .1rem; padding: 0 1rem; }
 #mobile .company .location ul li:last-child div em { font-size: 1.4rem; padding-top: 1.5rem; }
-#mobile .company .location ul li:last-child div em span { line-height: 1.8rem; width: 1.7rem; height: 1.7rem; margin-right: 1rem; font-size: 1.3rem; }
+#mobile .company .location ul li:last-child div em span { line-height: 1.8rem; width: 1.7rem; height: 1.7rem; margin-right: 1rem; font-size: 1.3rem; flex-shrink: 0; }
 
 
 
