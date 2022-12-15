@@ -421,7 +421,8 @@
     #mobile .title_area .sub_tit { font-size: 2.2rem; padding: 3rem 0 1rem; line-height: 1.36; }
     #mobile .title_area .sub_tit > b {  font-size: 2.3rem; }
     #mobile .title_area .sub_txt { font-size: 1.5rem; line-height: 1.66; padding-top: 3rem; }
-    #mobile .title_area .download_btn { width: 17.5rem; font-size: 1.3rem; margin-top: 4.5rem; margin-bottom: 6.5rem;  }
+    #mobile .title_area .download_btn { width: 17.5rem; font-size: 1.3rem; margin-top: 4.5rem; margin-bottom: 3.5rem;  }
+    #mobile .bus_outline .title_area .download_btn { margin-bottom: 10rem; }
     #mobile .title_area .download_btn > i { width: 1.45rem; height: 1.5rem; background: url(../images/common/icon_download.png) no-repeat; background-size: contain; margin-left: 2.1rem; }
     #mobile .title_area .download_btn::after { margin-top: 1.5rem; }
     #mobile .tab_box { position: relative; width: 100%; height: 6.5rem; display: flex; justify-content: center; }
@@ -984,10 +985,11 @@
 #mobile .civil_engineer .sub_visual {  background-image: url(../images/business/business_bg_m.png); background-size: cover; }
 #mobile .civil_engineer .tab_box { position: relative; padding: 0; }
 #mobile .civil_engineer.bus_outline .title_area { position: relative; }
-#mobile .civil_engineer.bus_outline .title_area::before { content: ''; width: 100%; height: 6.5rem; bottom: -11rem; position: absolute; background: #f9f9f9; left: 0; padding: 4.5rem 0; }
+#mobile .civil_engineer.bus_outline .title_area::before { content: ''; width: 100%; height: 6.5rem; bottom: -11rem; position: absolute; background: #f9f9f9; left: 0; padding: 4rem 0; }
 #mobile .civil_engineer .section_nav { display: none; }
-#mobile .civil_engineer .outline .section { padding: 4.5rem 0 6.5rem; }
+#mobile .civil_engineer .outline .section { padding: 5.5rem 0; }
 #mobile .civil_engineer .outline .section01 { padding-top: 7.5rem; }
+#mobile .civil_engineer .outline .section04 { padding-bottom: 10rem; }
 #mobile .civil_engineer .outline .section .graybx { display: none; }
 #mobile .civil_engineer .outline .section .inner { padding: 0!important; }
 #mobile .civil_engineer .outline .section .swiper,
@@ -998,8 +1000,8 @@
 #mobile .civil_engineer .outline .section .tit { font-size: 2.4rem; padding: 3rem 0 1rem; }
 #mobile .civil_engineer .outline .section p { flex-direction: column; }
 #mobile .civil_engineer .outline .section p > span { font-size: 1.5rem; line-height: 1.73; }
-#mobile .civil_engineer .outline .section p .btn { width: 21.1rem; height: 4.5rem; margin-top: 3.5rem; font-size: 1.3rem; padding: 0 3rem 0 2rem; }
-#mobile .civil_engineer .outline .section p .btn > i { width: 1.5rem; margin-left: 3.7rem; }
+#mobile .civil_engineer .outline .section p .btn { width: fit-content; height: 4.5rem; margin-top: 3.5rem; font-size: 1.3rem; padding: 0 3rem 0 2rem; }
+#mobile .civil_engineer .outline .section p .btn > i { width: 1.5rem; margin-left: 3.5rem; }
 #mobile .civil_engineer .outline .section .swiper .swiper-nav { width: 15.5rem; bottom: 1.5rem; right: 2rem; align-items: center!important; }
 #mobile .civil_engineer .outline .section .swiper .swiper-nav > div { font-size: 1.05rem; }
 #mobile .civil_engineer .outline .section .swiper .swiper-nav > div i { width: .65rem; height: 1.05rem; display: inline-block; }
@@ -1010,7 +1012,7 @@
 
 /* 사업실적 리스트 */
 #mobile .civil_engineer .top { display: flex; flex-direction: column-reverse; padding-top: 6.5rem; }
-#mobile .civil_engineer .search { padding-top: 3.7rem; }
+#mobile .civil_engineer .search { padding-top: 2.5rem; }
 #mobile .civil_engineer .search .input_search { width: 100%; max-width: 22.5rem; }
 #mobile .civil_engineer .search .input_search input { width: calc(100% - 2.8rem); height: 3.5rem; border: 0; }
 #mobile .civil_engineer .search .input_search a { width: 2.8rem; height: 3.5rem; background-size: 1.8rem 1.75rem; }

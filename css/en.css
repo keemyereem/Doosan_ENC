@@ -92,9 +92,15 @@
 /* Masterpiece */
 .masterpiece.en .outline .section0 .cont_area ul { align-items: flex-start; }
 .masterpiece.en .outline .section0 .cont_area ul li { flex: 1; }
-.masterpiece.en .outline .section0 .cont_area ul li::after { height: 10rem; }
-.mp01.en .outline .section0 .cont_area ul li::after { height: 11rem; }
+.mp01.en .outline .section0 .cont_area ul li::after { height: 12rem; }
+.mp02.en .outline .section0 .cont_area ul li::after { height: 10rem; }
+.mp03.en .outline .section0 .cont_area ul li::after { height: 15.5rem; }
 .mp01.en .outline .section5 .left h3 { margin-bottom: 0; }
+.mp02.en .outline .bg-green { background: linear-gradient(to bottom, #f2faf6 1515px, #fff 1516px, #fff 100%); }
+.mp03.en .outline .section1 h3 { display: block; position: relative; margin-bottom: 6rem; }
+.mp03.en .outline .section1 h3::after { position: absolute; top: 0; right: 0; width: 43%; }
+.mp03.en .outline .section1 p:first-of-type { width: 45%; padding-left: 4rem; }
+.mp03.en .outline .section1 p:last-of-type { width: 50%; padding-left: 10rem; }
 .interview.en .sub_visual ul li:last-child p { top: 2.5rem; }
 .interview.en .sub_visual ul li:first-child p em:nth-of-type(2) { padding-left: 6rem; }
 
@@ -227,6 +233,7 @@
 .sr.en .sc .section04 .box_wrap ul li .txt { text-align: center; }
 
 /* Privacy Policy */
+.en .policy > .inner > ul li:not(:first-child) { margin-left: -1px; }
 .en .policy > .inner > ul li a { vertical-align: middle; line-height: initial; }
 .en .policy > .inner .terms_site { width: 32rem;}
 .en .policy > .inner .terms_site .site_selected{ line-height: initial; min-height: 4.8rem; }
@@ -307,22 +314,20 @@
     #mobile .masterpiece.en .masterpiece_menu ul li a b { margin-right: 1rem; }
     #mobile .mp01.en .masterpiece_menu ul li.on a { display: flex; align-items: center; }
     #mobile .mp01.en .masterpiece_menu ul li.on a b { align-self: flex-start; margin-top: 0.7rem; }
+    #mobile .mp03.en .outline .section1 p:first-of-type,
+    #mobile .mp03.en .outline .section1 p:last-of-type { width: 100%; }
+
+    #mobile .interview.en .sub_visual ul li:last-child p { padding: 2.5rem 1.5rem 2.9rem; left: 0; }
+    #mobile .interview.en .sub_visual ul li:first-child p { padding: 0 2rem; text-align: center; }
+    #mobile .interview.en .sub_visual ul li:first-child p em { display: inline; font-size: 2.1rem; }
+    #mobile .interview.en .sub_visual ul li:first-child p em:nth-of-type(2) { padding-left: 0; }
+    #mobile .shinbundangline.en .sub_visual ul li:first-child { height: 17rem; }
 
     /* Housing / Architecture / Infrastructure */
     #mobile .en .title_area .download_btn { width: 24rem; padding-bottom: 1.5rem; }
     #mobile .civil_engineer.en .outline .section p .btn { width: 25rem; }
-    #mobile .civil_engineer.en .outline .section p .btn { width: 100%; text-align: left; margin-left: 0; padding: 0 2rem; }
+    #mobile .civil_engineer.en .outline .section p .btn { /* width: 100%; */ text-align: left; margin-left: 0; padding: 0 2rem; }
     #mobile .civil_engineer.en .outline .section p .btn > i { margin-left: auto; }
-    #mobile .interview.en .sub_visual ul li:last-child p { padding: 2.5rem 1.5rem 2.9rem; left: 0; }
-    /* #mobile .interview.en .sub_visual ul li:first-child p em { font-size: 2.2rem; } */
-    /*#mobile .haeundae.en .sub_visual ul li:first-child p em:nth-of-type(1) { padding-left: 1rem; }
-    #mobile .haeundae.en .sub_visual ul li:first-child p em:nth-of-type(2) { padding-left: 2.5rem; }
-    #mobile .haeundae.en .sub_visual ul li:first-child p em:nth-of-type(3) { display: inline-block; }
-    #mobile .haeundae.en .sub_visual ul li:first-child p em:nth-of-type(4) { padding-left: 4rem; }
-    #mobile .bundang.en .sub_visual ul li:first-child p em:nth-of-type(3) { padding-left: 0; } */
-    #mobile .interview.en .sub_visual ul li:first-child p { padding: 0 2rem; text-align: center; }
-    #mobile .interview.en .sub_visual ul li:first-child p em { display: inline; }
-    #mobile .haeundae.en .sub_visual ul li:first-child p em:nth-of-type(2) { padding-left: 0; }
 
     /* Technology Innovation */
 
