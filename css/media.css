@@ -69,6 +69,11 @@
     /* file */
     #mobile .file_row label { width: 11.1rem; height: 3.5rem; line-height: 3.5rem; font-size: 1.3rem; font-weight: 150; border-radius: 1.7rem; }
     #mobile .file_row .upload_name { height: 3.5rem; font-size: 1.3rem; padding: 0 2rem; }
+	#mobile .file_row form { align-items: flex-end; }
+	#mobile .file_row .file-list { width: calc(100% - 11rem); height: auto; min-height: 3.5rem; padding: 0 1rem; flex-direction: column; align-items: flex-start; justify-content: center; }
+	#mobile .file-list .filebox { display: flex; max-width: 100%; }
+	#mobile .file-list .filebox p { max-width: 100%; font-size: 1.3rem!important; line-height: 1.8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+	#mobile .file-list .filebox .delete { flex-shrink: 0; }
 
     /* device checker */
     #mobile { width: 100%; }
@@ -416,7 +421,8 @@
     #mobile .title_area .sub_tit { font-size: 2.2rem; padding: 3rem 0 1rem; line-height: 1.36; }
     #mobile .title_area .sub_tit > b {  font-size: 2.3rem; }
     #mobile .title_area .sub_txt { font-size: 1.5rem; line-height: 1.66; padding-top: 3rem; }
-    #mobile .title_area .download_btn { width: 17.5rem; font-size: 1.3rem; margin-top: 4.5rem; margin-bottom: 6.5rem;  }
+    #mobile .title_area .download_btn { width: 17.5rem; font-size: 1.3rem; margin-top: 4.5rem; margin-bottom: 3.5rem;  }
+    #mobile .bus_outline .title_area .download_btn { margin-bottom: 10rem; }
     #mobile .title_area .download_btn > i { width: 1.45rem; height: 1.5rem; background: url(../images/common/icon_download.png) no-repeat; background-size: contain; margin-left: 2.1rem; }
     #mobile .title_area .download_btn::after { margin-top: 1.5rem; }
     #mobile .tab_box { position: relative; width: 100%; height: 6.5rem; display: flex; justify-content: center; }
@@ -979,10 +985,11 @@
 #mobile .civil_engineer .sub_visual {  background-image: url(../images/business/business_bg_m.png); background-size: cover; }
 #mobile .civil_engineer .tab_box { position: relative; padding: 0; }
 #mobile .civil_engineer.bus_outline .title_area { position: relative; }
-#mobile .civil_engineer.bus_outline .title_area::before { content: ''; width: 100%; height: 6.5rem; bottom: -11rem; position: absolute; background: #f9f9f9; left: 0; padding: 4.5rem 0; }
+#mobile .civil_engineer.bus_outline .title_area::before { content: ''; width: 100%; height: 6.5rem; bottom: -11rem; position: absolute; background: #f9f9f9; left: 0; padding: 4rem 0; }
 #mobile .civil_engineer .section_nav { display: none; }
-#mobile .civil_engineer .outline .section { padding: 4.5rem 0 6.5rem; }
+#mobile .civil_engineer .outline .section { padding: 5.5rem 0; }
 #mobile .civil_engineer .outline .section01 { padding-top: 7.5rem; }
+#mobile .civil_engineer .outline .section04 { padding-bottom: 10rem; }
 #mobile .civil_engineer .outline .section .graybx { display: none; }
 #mobile .civil_engineer .outline .section .inner { padding: 0!important; }
 #mobile .civil_engineer .outline .section .swiper,
@@ -993,8 +1000,8 @@
 #mobile .civil_engineer .outline .section .tit { font-size: 2.4rem; padding: 3rem 0 1rem; }
 #mobile .civil_engineer .outline .section p { flex-direction: column; }
 #mobile .civil_engineer .outline .section p > span { font-size: 1.5rem; line-height: 1.73; }
-#mobile .civil_engineer .outline .section p .btn { width: 21.1rem; height: 4.5rem; margin-top: 3.5rem; font-size: 1.3rem; padding: 0 3rem 0 2rem; }
-#mobile .civil_engineer .outline .section p .btn > i { width: 1.5rem; margin-left: 3.7rem; }
+#mobile .civil_engineer .outline .section p .btn { width: fit-content; height: 4.5rem; margin-top: 3.5rem; font-size: 1.3rem; padding: 0 3rem 0 2rem; }
+#mobile .civil_engineer .outline .section p .btn > i { width: 1.5rem; margin-left: 3.5rem; }
 #mobile .civil_engineer .outline .section .swiper .swiper-nav { width: 15.5rem; bottom: 1.5rem; right: 2rem; align-items: center!important; }
 #mobile .civil_engineer .outline .section .swiper .swiper-nav > div { font-size: 1.05rem; }
 #mobile .civil_engineer .outline .section .swiper .swiper-nav > div i { width: .65rem; height: 1.05rem; display: inline-block; }
@@ -1005,7 +1012,7 @@
 
 /* 사업실적 리스트 */
 #mobile .civil_engineer .top { display: flex; flex-direction: column-reverse; padding-top: 6.5rem; }
-#mobile .civil_engineer .search { padding-top: 3.7rem; }
+#mobile .civil_engineer .search { padding-top: 2.5rem; }
 #mobile .civil_engineer .search .input_search { width: 100%; max-width: 22.5rem; }
 #mobile .civil_engineer .search .input_search input { width: calc(100% - 2.8rem); height: 3.5rem; border: 0; }
 #mobile .civil_engineer .search .input_search a { width: 2.8rem; height: 3.5rem; background-size: 1.8rem 1.75rem; }
@@ -1144,7 +1151,7 @@
 #mobile .technology .competence .section6 { padding: 5.5rem 0 10rem; }
 #mobile .technology .competence .section6 h3 { margin-top: 0; }
 #mobile .technology .competence .section6 ul { margin-top: 2.2rem; }
-#mobile .technology .competence .section6 ul li a { height: auto; min-height: 5.5rem; padding: 1.5rem 1rem; line-height: 1.57; position: relative; }
+#mobile .technology .competence .section6 ul li a { height: auto; min-height: 5.5rem; padding: 1.5rem 1rem; line-height: 1.57; position: relative; align-items: flex-start; }
 #mobile .technology .competence .section6 ul li a em { display: none; }
 #mobile .technology .competence .section6 ul li .num { font-size: 1.5rem; padding-right: 1rem; }
 #mobile .technology .competence .section6 ul li .tit { font-size: 1.4rem; padding-right: 2.5rem; } 
@@ -1382,7 +1389,7 @@
 #mobile .company .location ul li:last-child div p { font-size: 1.3rem; line-height: 1.54; padding-top: 1rem; }
 #mobile .company .location ul li:last-child div p i { font-size: 1.3rem; color: #cccccc; position: relative; bottom: .1rem; padding: 0 1rem; }
 #mobile .company .location ul li:last-child div em { font-size: 1.4rem; padding-top: 1.5rem; }
-#mobile .company .location ul li:last-child div em span { line-height: 1.8rem; width: 1.7rem; height: 1.7rem; margin-right: 1rem; font-size: 1.3rem; }
+#mobile .company .location ul li:last-child div em span { line-height: 1.8rem; width: 1.7rem; height: 1.7rem; margin-right: 1rem; font-size: 1.3rem; flex-shrink: 0; }
 
 
 
