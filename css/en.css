@@ -90,6 +90,7 @@
 /* Business Areas */
 
 /* Masterpiece */
+.masterpiece.en .outline .section0 .tit_area h2 { font-size: 7.5rem; }
 .masterpiece.en .outline .section0 .cont_area ul { align-items: flex-start; }
 .masterpiece.en .outline .section0 .cont_area ul li { flex: 1; }
 .mp01.en .outline .section0 .cont_area ul li::after { height: 12rem; }
