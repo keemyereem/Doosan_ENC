@@ -255,7 +255,7 @@
 /* -------------------- Mobile -------------------- */
 @media screen and (max-width:767px) {
     #mobile .header_en .logo { width: 13.5rem; }
-    #mobile .header.bg .logo { background: url(../images/common/logo_b_mob_en.png) no-repeat 50% 50%; background-size: contain; }
+    #mobile .header_en.bg .logo { background: url(../images/common/logo_b_mob_en.png) no-repeat 50% 50%; background-size: contain; }
     #mobile .header_en .logo.sitemapOn { background: url(../images/common/logo_w_mob_en.png) no-repeat !important; background-size: contain !important; }
 
     #mobile .en .sub_visual h1 { transform: translateY(0); }
