@@ -785,7 +785,7 @@
 #mobile .masterpiece .masterpiece_menu ul li a { font-size: 1.5rem; height: 5rem; }
 #mobile .masterpiece .masterpiece_menu ul li a b { margin-right: 1.2rem; }
 #mobile .masterpiece .outline { padding-top: 6.5rem; }
-#mobile .masterpiece .outline .interviewBtn { width: calc(100% - 7.5rem); max-width: 30rem; height: 6.5rem; border-radius: 3.2rem; bottom: 10rem; right: initial; left: 50%; transform: translateX(-50%); }
+#mobile .masterpiece .outline .interviewBtn { width: calc(100% - 10rem); max-width: 30rem; height: 6.5rem; border-radius: 3.2rem; bottom: 10rem; right: initial; left: 50%; transform: translateX(-50%); }
 #mobile .masterpiece .outline .interviewBtn .icon { flex-shrink: 0; width: 3.35rem; height: 3.15rem; background: url(../images/business/icon_interview_m.png) no-repeat 50% 50%; background-size: contain; margin-right: 2rem; }
 #mobile .masterpiece .outline .interviewBtn p { font-size: 1.2rem; font-weight: 350; }
 #mobile .masterpiece .outline .interviewBtn span { font-size: 1.5rem; }
@@ -1044,9 +1044,10 @@
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_tit:before { width: 4.8rem; height: .4rem; margin-bottom: 1.8rem; }
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_des { font-size: 1.3rem; line-height: 1.69; height: 10.8rem; overflow-y: auto; }
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_mark { flex-wrap: wrap; padding: 3rem 0; }
-#mobile .card_popup .popup_inner .pop_cont .txt_box .card_mark li { width: 50%; }
-#mobile .card_popup .popup_inner .pop_cont .txt_box .card_mark li:not(:first-child) { margin-left: 0; }
-#mobile .card_popup .popup_inner .pop_cont .txt_box .card_mark li img { width: fit-content; }
+#mobile .card_popup .popup_inner .pop_cont .txt_box .card_mark li { width: 50%; margin-right: 0; margin-bottom: 0; }
+#mobile .card_popup .popup_inner .pop_cont .txt_box .card_mark li img { width: 3.75rem; height: 3.75rem; }
+#mobile .card_popup .popup_inner .pop_cont .txt_box .card_mark li .txt { margin: 1rem 0 0 2rem; }
+
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_mark li:nth-child(n+1):nth-child(-n+2) { margin-bottom: 2.5rem; }
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_tb th { font-size: 1.25rem; }
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_tb td { font-size: 1.25rem;  line-height: 1.48; padding: 1rem 0 1rem 2rem; }
