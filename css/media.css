@@ -38,8 +38,8 @@
     /* common */
     br.br_pc, br.br_t {display: none;}
     br.br_m {display: block;}
-    .img_pc {display: none;}
-    .img_m {display: inline-block;}
+    #mobile .img_pc {display: none;}
+    #mobile .img_m {display: inline-block;}
     img { width: 100%; object-fit: contain; }
     #mobile .g-recaptcha { transform:scale(0.77); transform-origin:0 0; }
 
