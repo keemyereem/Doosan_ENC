@@ -90,6 +90,7 @@
 /* Business Areas */
 
 /* Masterpiece */
+.masterpiece.en .outline .section0 .tit_area h2 { font-size: 7.5rem; }
 .masterpiece.en .outline .section0 .cont_area ul { align-items: flex-start; }
 .masterpiece.en .outline .section0 .cont_area ul li { flex: 1; }
 .mp01.en .outline .section0 .cont_area ul li::after { height: 12rem; }
@@ -254,7 +255,7 @@
 /* -------------------- Mobile -------------------- */
 @media screen and (max-width:767px) {
     #mobile .header_en .logo { width: 13.5rem; }
-    #mobile .header.bg .logo { background: url(../images/common/logo_b_mob_en.png) no-repeat 50% 50%; background-size: contain; }
+    #mobile .header_en.bg .logo { background: url(../images/common/logo_b_mob_en.png) no-repeat 50% 50%; background-size: contain; }
     #mobile .header_en .logo.sitemapOn { background: url(../images/common/logo_w_mob_en.png) no-repeat !important; background-size: contain !important; }
 
     #mobile .en .sub_visual h1 { transform: translateY(0); }
@@ -312,6 +313,7 @@
     #mobile .masterpiece.en .masterpiece_menu ul li.on { padding-right: 1.5rem; }
     #mobile .masterpiece.en .masterpiece_menu ul li.on::after { right: 1.5rem; }
     #mobile .masterpiece.en .masterpiece_menu ul li a b { margin-right: 1rem; }
+    #mobile .masterpiece.en .outline .interviewBtn { width: calc(100% - 9rem); }
     #mobile .mp01.en .masterpiece_menu ul li.on a { display: flex; align-items: center; }
     #mobile .mp01.en .masterpiece_menu ul li.on a b { align-self: flex-start; margin-top: 0.7rem; }
     #mobile .mp03.en .outline .section1 p:first-of-type,

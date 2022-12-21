@@ -919,8 +919,17 @@
 .card_popup .popup_inner .pop_cont .txt_box .card_des {width: 100%;overflow-y: scroll;font-size: 1.6rem;font-weight: 150; color: #555;line-height: 1.875;letter-spacing: -.04rem;height: 14.4rem;}
 .card_popup .popup_inner .pop_cont .txt_box .card_des::-webkit-scrollbar {width: .5rem;}
 .card_popup .popup_inner .pop_cont .txt_box .card_des::-webkit-scrollbar-thumb {background: #e1e1e1;}
-.card_popup .popup_inner .pop_cont .txt_box .card_mark {display: flex;flex-wrap: wrap;justify-content: flex-start; align-items: center;padding: 5rem 0 7rem;}
-.card_popup .popup_inner .pop_cont .txt_box .card_mark li:not(:first-child) { margin-left: 4rem; }
+.card_popup .popup_inner .pop_cont .txt_box .card_mark {display: flex;flex-wrap: wrap;justify-content: flex-start; align-items: center;padding: 5rem 0; }
+.card_popup .popup_inner .pop_cont .txt_box .card_mark li { position: relative; margin-right: 4rem; margin-bottom: 1rem; }
+.card_popup .popup_inner .pop_cont .txt_box .card_mark li img { position: absolute; top: 0; left: 0; }
+.card_popup .popup_inner .pop_cont .txt_box .card_mark li .txt { background: #fff; width: auto; height: auto; padding: .5rem; margin: 1.2rem 0 0 2rem; position: relative; z-index: 1; }
+.card_popup .popup_inner .pop_cont .txt_box .card_mark li .txt b { text-transform: uppercase; font-family: 'Montserrat'; font-weight: 450; font-size: 1.2rem; letter-spacing: -.06rem; }
+.card_popup .popup_inner .pop_cont .txt_box .card_mark li.green .txt b { color: #00ad83; }
+.card_popup .popup_inner .pop_cont .txt_box .card_mark li.skyblue .txt b { color: #00a5d7; }
+.card_popup .popup_inner .pop_cont .txt_box .card_mark li.blue .txt b { color: #005eb8; }
+.card_popup .popup_inner .pop_cont .txt_box .card_mark li.pink .txt b { color: #d21a79; }
+.card_popup .popup_inner .pop_cont .txt_box .card_mark li .txt p { font-size: 1.2rem; color: #555; letter-spacing: -.03rem; width: fit-content; }
+
 .card_popup .popup_inner .pop_cont .txt_box .card_tb::before {content:'';display: block;width: 100%;height: .1rem;background: #000;position: relative;z-index: 10;}
 .card_popup .popup_inner .pop_cont .txt_box .card_tb tr {border-bottom: 1px solid #e8e8e8;}
 .card_popup .popup_inner .pop_cont .txt_box .card_tb th {background: #f9f9f9;width: 27%;font-size: 1.5rem;color: #222;}
