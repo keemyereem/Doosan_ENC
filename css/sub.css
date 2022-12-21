@@ -879,6 +879,7 @@
 .civil_engineer .total > span { display: block; width: 44.7rem; margin: 0 auto; text-align: left; padding: 2rem 0 0 2rem; }
 .civil_engineer .total b.blue {color: #005eb8;font-weight: 350;}
 .civil_engineer .business_lists { background: #f9f9f9; padding-top: 8rem; padding-bottom: 20rem; }
+.civil_engineer .business_lists .null { font-size: 1.6rem; text-align: center; padding: 5rem 0; }
 .civil_engineer .business_lists ul { display: flex; flex-wrap: wrap; width: 100%; }
 .civil_engineer .business_lists ul > li { cursor: pointer; margin-bottom: 10rem; width: calc(100% / 3); max-width: 42rem; height: fit-content; }
 .civil_engineer .business_lists ul > li:nth-child(3n-1) { margin: 0 9rem; }
