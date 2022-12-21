@@ -921,7 +921,7 @@
 .card_popup .popup_inner .pop_cont .txt_box .card_des::-webkit-scrollbar {width: .5rem;}
 .card_popup .popup_inner .pop_cont .txt_box .card_des::-webkit-scrollbar-thumb {background: #e1e1e1;}
 .card_popup .popup_inner .pop_cont .txt_box .card_mark {display: flex;flex-wrap: wrap;justify-content: flex-start; align-items: center;padding: 5rem 0; }
-.card_popup .popup_inner .pop_cont .txt_box .card_mark li { position: relative; margin-right: 4rem; margin-bottom: 1rem; }
+.card_popup .popup_inner .pop_cont .txt_box .card_mark li { position: relative; /* margin-right: 4rem; */ margin-bottom: 1rem; width: calc(100% / 3); }
 .card_popup .popup_inner .pop_cont .txt_box .card_mark li img { position: absolute; top: 0; left: 0; }
 .card_popup .popup_inner .pop_cont .txt_box .card_mark li .txt { background: #fff; width: auto; height: auto; padding: .5rem; margin: 1.2rem 0 0 2rem; position: relative; z-index: 1; }
 .card_popup .popup_inner .pop_cont .txt_box .card_mark li .txt b { text-transform: uppercase; font-family: 'Montserrat'; font-weight: 450; font-size: 1.2rem; letter-spacing: -.06rem; }

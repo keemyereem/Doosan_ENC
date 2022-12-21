@@ -1045,11 +1045,11 @@
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_tit:before { width: 4.8rem; height: .4rem; margin-bottom: 1.8rem; }
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_des { font-size: 1.3rem; line-height: 1.69; height: 10.8rem; overflow-y: auto; }
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_mark { flex-wrap: wrap; padding: 3rem 0; }
-#mobile .card_popup .popup_inner .pop_cont .txt_box .card_mark li { width: 50%; margin-right: 0; margin-bottom: 0; }
+#mobile .card_popup .popup_inner .pop_cont .txt_box .card_mark li { width: 50%; margin-right: 0; }
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_mark li img { width: 3.75rem; height: 3.75rem; }
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_mark li .txt { margin: 1rem 0 0 2rem; }
 
-#mobile .card_popup .popup_inner .pop_cont .txt_box .card_mark li:nth-child(n+1):nth-child(-n+2) { margin-bottom: 2.5rem; }
+/* #mobile .card_popup .popup_inner .pop_cont .txt_box .card_mark li:nth-child(n+1):nth-child(-n+2) { margin-bottom: 2.5rem; } */
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_tb th { font-size: 1.25rem; }
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_tb td { font-size: 1.25rem;  line-height: 1.48; padding: 1rem 0 1rem 2rem; }
 #mobile .card_popup .popup_inner .pop_cont .inner_nav { width: calc(100% - 6rem); margin: 3rem auto 0; padding-bottom: 4rem; }
