@@ -760,7 +760,7 @@
 .mp03 .outline .section { justify-content: space-between; }
 .mp03 .outline .bg-green { background: #f7faf2; border-top: 1px solid #e8e8e8; padding: 11rem 0 20rem; }
 .mp03 .outline .bg-gray { padding: 45rem 0 12.5rem; margin-top: -36rem; }
-.mp03 .outline .section1 h3 { padding-left: 4rem; margin-bottom: -2rem; width: 100%; display: flex; justify-content: space-between; }
+.mp03 .outline .section1 h3 { padding-left: 4rem; margin-bottom: -2rem; width: 100%; display: flex; justify-content: space-between; white-space: nowrap; }
 .mp03 .outline .section1 h3::after { content:''; display: block; width: 50%; height: 1px; margin-top: 3.5rem; background: #222; }
 .mp03 .outline .section1 .cont_area { display: flex; flex-wrap: wrap; }
 .mp03 .outline .section1 p:first-of-type { padding-left: 22%; }
