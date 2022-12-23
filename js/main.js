@@ -10,6 +10,14 @@ $(function () {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
   });
+
+  
+  $(window).load(()=> {
+    if ($('#mobile').length) {
+      var changeUrl = $('.mainSwiper .swiper-slide .bg01 img').attr('src').replace('_bg1', '_bg1_m');
+      $('.mainSwiper .swiper-slide .bg01 img').attr('src', changeUrl);
+    }
+  })
 });
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -263,6 +271,7 @@ var mainEvent = {
     $(document).on("click", ".swiper-button", () => {
       swiper.autoplay.start();
     });
+
   },
 
   sec02Swiper: () => {
