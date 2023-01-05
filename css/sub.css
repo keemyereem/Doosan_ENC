@@ -532,6 +532,10 @@
 .customer .customer_inquiry .section2 .row+.row { margin-top: 2rem; }
 .customer .customer_inquiry .section2 .row .tit_cell { font-size: 1.8rem; color: #222; width: 13rem; flex-shrink: 0; }
 .customer .customer_inquiry .section2 .row .ipt_cell { width: 100%; }
+.customer .customer_inquiry .section2 .row.row_email { display: flex; align-items: center; width: 100rem; }
+.customer .customer_inquiry .section2 .row.row_email .ipt_cell span { font-size: 1.6rem; margin: 0 .7rem; }
+.customer .customer_inquiry .section2 .row.row_email .input_row { width: 26rem; }
+.customer .customer_inquiry .section2 .row.row_email .select_row { width: 26rem; margin-left: 1rem; }
 .customer .customer_inquiry .section2 .file_row .upload_name { width: calc(100% - 18.2rem); }
 .customer .customer_inquiry .section2 .file_row+.info { font-size: 1.6rem; color: #777; margin-top: 1rem; margin-bottom: 2rem; display: block; }
 .customer .customer_inquiry .section2 .btn_box { margin-top: 12rem; }

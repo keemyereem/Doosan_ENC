@@ -1894,14 +1894,26 @@ var customerEvent = {
         var select_name = $(this).children("option:selected").text();
         $(this).siblings("label").text(select_name);
 
-        if (select_name === "직접입력") {
+        if (select_name === "직접입력" || select_name === "Direct input") {
           $(
-            ".customer .cyber_report .row .ipt_cell.email_cell > div:nth-of-type(2)"
+            ".customer .customer_inquiry .row .ipt_cell.email_cell > div:nth-of-type(2)"
           ).show();
+          if($('#pc').length){
+            $(".customer .customer_inquiry .row .ipt_cell.email_cell > div:nth-of-type(3)").css('margin-left','1rem');
+          }else {
+            $(".customer .customer_inquiry .row .ipt_cell.email_cell > div:nth-of-type(n+1):nth-of-type(-n+2)").css({'width':'32%'});
+            $(".customer .customer_inquiry .row .ipt_cell.email_cell > div:nth-of-type(3)").css({'width':'28%'});
+          }
         } else {
           $(
-            ".customer .cyber_report .row .ipt_cell.email_cell > div:nth-of-type(2)"
+            ".customer .customer_inquiry .row .ipt_cell.email_cell > div:nth-of-type(2)"
           ).hide();
+          if($('#pc').length){
+            $(".customer .customer_inquiry .row .ipt_cell.email_cell > div:nth-of-type(3)").css({'margin-left':'0'});
+          }else {
+            $(".customer .customer_inquiry .row .ipt_cell.email_cell > div").css({'width':'47%'});
+          }
+          
         }
       });
     }
