@@ -381,6 +381,7 @@
 .channel .news .news_list .btn_line a { border-radius: 3.7rem; font-family: 'Montserrat'; font-size: 2rem; font-weight: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 5rem 0 6rem; }
 .channel .news .news_list .btn_line a span { display: inline-block; width: 2.1rem; height: 2.2rem; background: url(../images/common/icon_plus_21x22.png) no-repeat 50% 50%; background-size: contain; transition:all .2s ease-out; }
 .channel .news .news_list .btn_line a:hover span { background: url(../images/common/icon_plus_w_21x22.png) no-repeat 50% 50%; background-size: contain; }
+.channel .news.detail_pg { font-family: 'NS'; }
 
 /* 상세페이지 공통 */
 .detail_pg { padding-top: 11rem; }
