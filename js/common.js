@@ -1886,7 +1886,7 @@ var customerEvent = {
 
   inqEmail: function () {
     //이메일 직접입력 선택시 입력칸 추가
-    var selectType = $(".select_row>select");
+    var selectType = $(".select_row>#email_self");
     selectType.addClass("selectBox");
     selectChange(selectType);
     function selectChange(type) {
