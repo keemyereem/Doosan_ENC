@@ -441,6 +441,8 @@
 
     /* Contact Us */
     #mobile .customer.en .customer_inquiry .section1 .agree_row input[type="checkbox"] + label:first-of-type { width: 10.5rem; }
+    #mobile .customer.en .customer_inquiry .section2 .row.row_email .ipt_cell span { font-size: 1.3rem; }
+    #mobile .customer.en .customer_inquiry .section2 .row.row_email .select_row label { font-size: 1.1rem; white-space: nowrap; }
 
     /* privacy policy */
     #mobile .en .policy > .inner { width: calc(100% - 4rem)!important; overflow-x: auto; }

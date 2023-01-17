@@ -57,6 +57,7 @@
 
             // JS importing
             commonEvent.init();
+            customerEvent.inqEmail();
         });
     </script>
 </head>
@@ -230,11 +231,47 @@
                                 </div>
                             </div>
                         </div>   -->
+
+                        <div class="row row_short">
+                            <div class="tit_cell">이름<span class="es">*</span></div>
+                            <div class="ipt_cell">
+                                <div class="input_row">
+                                    <label><input type="text" id="name" placeholder="이름을 입력해 주세요."></label>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="row row_email">
+                            <div class="tit_cell">이메일<span class="es">*</span></div>
+                            <div class="ipt_cell email_cell">
+                                <div class="input_row">
+                                    <label><input type="text" id="email_front" value="" ></label>
+                                </div>
+                                <span>@</span>
+                                <div class="input_row" id="selboxDirect">
+                                    <label><input type="text" id="email_address" value="" ></label>
+                                </div>
+                                <div class="select_row">
+                                    <label for="email_self">직접입력</label>
+                                    <select id="email_self" class="selectBox">
+                                        <option selected value="">직접입력</option>
+                                        <option value="naver.com">naver.com</option>
+                                        <option value="daum.net">daum.net</option>
+                                        <option value="hanmail.net">hanmail.net</option>
+                                        <option value="nate.com">nate.com</option>
+                                        <option value="gmail.com">gmail.com</option>
+                                        <option value="empal.com">empal.com</option>
+                                        <option value="hotmail.com">hotmail.com</option>
+                                        <option value="korea.kr">korea.kr</option>
+                                        <option value="yahoo.com">yahoo.com</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div> 
                         <div class="row">
                             <div class="tit_cell">제목<span class="es">*</span></div>
                             <div class="ipt_cell">
                                 <div class="input_row">
-                                    <input type="text" id="title" placeholder="제목을 입력해 주세요.">
+                                    <label><input type="text" id="title" placeholder="제목을 입력해 주세요."></label>
                                 </div>
                             </div>
                         </div> 
@@ -242,8 +279,8 @@
                             <div class="tit_cell">내용<span class="es">*</span></div>
                             <div class="ipt_cell">
                                 <div class="area_row">
-                                    <textarea placeholder="내용을 입력해 주세요."></textarea>
-                                  </div>
+                                    <label><textarea placeholder="내용을 입력해 주세요."></textarea></label>
+                                </div>
                             </div>
                         </div> 
                         <div class="row">

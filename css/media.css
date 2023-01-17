@@ -592,6 +592,14 @@
     #mobile .customer .customer_inquiry .section2 .row+.row { margin-top: 2rem; }
     #mobile .customer .customer_inquiry .section2 .row .tit_cell { font-size: 1.4rem; width: 100%; flex-shrink: 1; margin-bottom: 1rem; }
     #mobile .customer .customer_inquiry .section2 .row.cont_row .tit_cell { margin-top: 0; }
+    #mobile .customer .customer_inquiry .section2 .row.row_email { width: 100%; }
+    #mobile .customer .customer_inquiry .section2 .row.row_email .ipt_cell span { font-size: 1.3rem; margin: 0; }
+    #mobile .customer .customer_inquiry .section2 .row.row_email .input_row { width: 32%; }
+    #mobile .customer .customer_inquiry .section2 .row.row_email .input_row input { padding: 0 1rem; }
+    #mobile .customer .customer_inquiry .section2 .row.row_email .select_row { width: 28%; margin-left: 0; }
+    #mobile .customer .customer_inquiry .section2 .row.row_email .select_row::after { right: 1rem; }
+    #mobile .customer .customer_inquiry .section2 .row.row_email .select_row select,
+    #mobile .customer .customer_inquiry .section2 .row.row_email .select_row label { padding: 0 1rem; }
     #mobile .customer .customer_inquiry .section2 .file_row .upload_name { width: calc(100% - 11.1rem); padding: 0; }
     #mobile .customer .customer_inquiry .section2 .file_row+.info { font-size: 1.3rem; margin-bottom: 0; }
     #mobile .customer .customer_inquiry .section2 .btn_box { margin-top: 6.4rem; }
