@@ -575,6 +575,7 @@
 .customer .pb0 .guide dt { font-size: 2.4rem; font-weight: 400; color: #222222; padding-bottom: 2rem; }
 .customer .pb0 .guide dd { text-align: left; font-size: 1.6rem; color: #666666; white-space: nowrap; line-height: 2; }
 .customer .btn_wrap { display: flex; justify-content: center; flex-wrap: wrap; align-items: center; }
+.customer .btn_wrap02 { padding-bottom: 5rem; }
 .customer .btn_wrap span { display: block; width: 100%; text-align: center; padding-bottom: 2.7rem; font-size: 1.4rem; color: #666666; }
 .customer .btn_wrap a { display: flex; align-items: center; justify-content: center; width: 34rem; height: 10rem; border-radius: 5rem; text-align: left; font-size: 2rem; color: #005eb8; letter-spacing: -.05rem; }
 .customer .btn_wrap a:first-of-type { background: rgba(0, 94, 184,.05); margin-right: 4rem; }
