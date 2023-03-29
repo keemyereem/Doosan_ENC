@@ -37,9 +37,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-3.3.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
     <script class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
 
     <script src="js/lib/jquery.fullPage.js"></script>
@@ -66,7 +63,7 @@
 
 <body>
     <!-- wrap -->
-    <div class="wrap scroll-container" id="sub">
+    <div class="wrap" id="sub">
 
         <!-- header -->
         <div class="header wht"></div>
@@ -76,39 +73,76 @@
         <div class="sitemap"></div>
         <!-- //sitemap -->
 
-        <div class="container golf">
-            <div class="sub_visual">
-                <div class="inner">
-                    <p>두산건설 We've 골프단 공식 사이트</p>
-                    <h1>C<i>O</i>MING</h1>
-                    <br>
-                    <h1>SOON</h1>
-                    <p><b>5</b>월<b>오픈</b><span>(예정)</span></p>
-                </div>
+        <div class="container">
+            <div id="fullpage">
+                <section class="section section1">
+                    <article>
+                        <p>두산건설 We've 골프단 공식 사이트</p>
+                        <h1>C<i>O</i>MING</h1>
+                        <h1>SOON</h1>
+                        <p><b>5</b>월<b>오픈</b></p>
+                    </article>
 
-                <img src="images/golf/players.jpg" alt="선수들" class="players">
+                    <img src="images/golf/players.png" alt="선수들" class="players">
 
-                <a href="javascript:;" title="Scroll Down" class="scroll_down">
-                    <span>SCROLL</span>
-                </a>
+                    <a href="html/FD-03-06.html#secondPage" title="Scroll Down" class="scroll_down">
+                        <span>SCROLL</span>
+                    </a>
+                </section>
+
+                <section class="section section2">
+                    <article>
+                        <p ><span>두산건설</span> We've <span>골프단</span></p>
+                        <h2>We’ve got <br class="br_m">everything.</h2>
+                        <ul>
+                            <li>have</li>
+                            <li></li>
+                            <li>live</li>
+                            <li></li>
+                            <li>love</li>
+                            <li></li>
+                            <li>save</li>
+                            <li></li>
+                            <li>solve</li>
+                        </ul>
+                    </article>
+                </section>
+
+                <section class="section section3">
+                    <article>
+                        <h1>we <span>have</span></h1>
+                        <p>
+                            평소 투어프로로서 경험 뿐 아니라 방송, 모델, 인플루언서 등 <br>
+                            풍부하고 <b>다양한 경험을 ‘가져보고(have)’</b> 싶다고 생각했어요.
+                        </p>
+                        <h3 class="name_card"><b>유현주</b>프로</h3>
+                    </article>
+
+                    <article>
+                        <img src="images/golf/yhj_pro.png" alt="유현주 프로">
+                    </article>
+                </section>
+
+                <section class="section section4">
+                    <article>
+                        4
+                    </article>
+                </section>
+
+                <!-- footer -->
+                <section class="section footer">
+                    <h2 class="indent">footer</h2>
+                </section>
+
+                <ul id="rightnavi" class="indent">
+                    <li data-menuanchor="firstPage" class="active"><a href="html/FD-03-06.html#firstPage"><span></span></a></li>
+                    <li data-menuanchor="secondPage" class="active"><a href="html/FD-03-06.html#secondPage"><span></span></a></li>
+                    <li data-menuanchor="thirdPage"><a href="html/FD-03-06.html#thirdPage"><span></span></a></li>
+                    <li data-menuanchor="fourthPage"><a href="html/FD-03-06.html#fourthPage"><span></span></a></li>
+                    <li data-menuanchor="fifthPage"><a href="html/FD-03-06.html#fifthPage"><span></span></a></li>
+                    <li data-menuanchor="sixthPage"><a href="html/FD-03-06.html#sixthPage"><span></span></a></li>
+                </ul>
             </div>
-
-            <section class="section1">
-                
-                <article class="gsap3">
-                    <p>두산건설 We've 골프단</p>
-                    <h2 class="gsap3-1">We’ve<span class="gsap3-2"> got <br class="br_m">everything.</span></h2>
-                </article>
-            </section>
-
-            <div class="contents">
-                <div class="inner">
-                  
-                  
-                </div>
-            </div>
-            <!-- footer -->
-            <div class="footer"></div>
         </div>
     </div>
 </body>

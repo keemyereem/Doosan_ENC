@@ -2207,74 +2207,62 @@ var policyEvent = {
 // 골프단 신규 - 2023.03.28
 var golfPlayers = {
   init: function () {
-    this.gsap();
+    this.createFullPageGolf();
   },
 
-  gsap: function () {
-    gsap.registerPlugin(ScrollTrigger);
+  createFullPageGolf: function() {
+    $('body').addClass('golf');
 
-    // ************************************************** 초기 시작 값
+    $("#fullpage").fullpage({
+      anchors: [
+        "firstPage",
+        "secondPage",
+        "thirdPage",
+        "fourthPage",
+        "fifthPage",
+        "sixthPage",
+        "seventhPage",
+      ],
+      menu: "#rightnavi",
+      verticalCentered: false,
+      scrollOverflow: false,
+      css3: true,
+      scrollingSpeed: 800,
 
-    gsap.to(".scroll-container", {
-      opacity: 1,
-      duration: 1,
-      delay: 1,
-      // yPercent: -100,
-      // y: "100vh",
-      // scrollTrigger: {
-      //   scrub: 1,
-      //   trigger: ".scroll-container",
-      //   start: "top top",
-      //   end: document.querySelector(".scroll-container").clientHeight,
-      // }
+      onLeave: function (index, nextIndex, lastIndex) {
+        // 앵커별 추가기능 조정
+        if (nextIndex == 1) {
+          setHeaderWhite()
+        } else if (nextIndex == $(".section").length) {
+          $('.header').fadeOut(500);
+        } else {
+          removeHeaderWhite()
+          $('.header').fadeIn(500);
+        }
+
+        // footer: 위에 앵커와 함께 작성할 경우 푸터에 도달하고 뒤늦게 꺼지는 현상 -> 따로 제어
+        if (nextIndex == 1 || nextIndex == $(".section").length) {
+          $("#rightnavi").addClass("indent");
+        } else {
+          $("#rightnavi").removeClass("indent");
+        }
+        
+        // 헤더스타일 화이트/ 노말 함수
+        function setHeaderWhite() {
+          setTimeout(() => {
+            $(".header").addClass("wht");
+          }, 500);
+        }
+        function removeHeaderWhite() {
+          setTimeout(() => {
+            $(".header").removeClass("wht");
+          }, 500);
+        }
+      }
     });
     
-    const tl1 = gsap.timeline();
-
-    ScrollTrigger.create({
-      animation: tl1,
-      trigger: ".section1",
-      pin: true, // 특정 element가 고정되도록 만들어조는 속성/ true시 트리거가 고정됨/ '.selector' 입력 시 특정 엘리먼트가 고정됨
-      pinSpacing: true, // 고정되는 엘리먼트 아래에 padding을 줘서 스크롤이 끝난 후 다음 엘리먼트가 이어서 보일 수 있도록 만들어줌/ "margin"으로 입력하면 padding대신 margin을 준다.
-      start: "0% 0%", // 첫번째 : trigger 지정태그 기준 애니메이션 시작 및 끝 지점/ 두번째 : 스크롤 트리거 위치
-      end: "+=150%", // markers 옵션을 켜서 상세설정 확인 가능
-      scrub: 1.5, // 스크롤에 따른 민감도 조절/ trigger 지정태그를 벗어날 경우, 모든 이벤트를 원상복귀함
-
-      // toggleClass: {                                 // pin 도달시 클래스를 부여/ pin 이탈시 클래스를 삭제
-      // targets: '.section2',                          // 클래스를 부여할 태그 타겟 설정
-      // className: "active",                           // 태그 타겟에 부여할 클래스 명
-      // },
-
-      // toggleClass: "active",                         // start 시점에서 class가 추가되고 end에서 class가 삭제된다.
-      // markers: true,                                 // 스크롤이 시작되고 끝나는 시점을 마킹해준다/ true 입력 시, 기본 스타일로 마커가 생성된다.
-      // {                                              // 마커 스타일 변경 시, 좌측의 예시처럼 변경 가능 (true 지우고 그 자리부터 괄호 시작)
-      // startColor: 'yellow',
-      // endColor: 'black',
-      // fontSize: '32px',
-      // indent: 200
-      // }
-
-    });
-
-    let gsap3_1 = 140,
-        maxW = 0,
-        maxH = 0;
-
-    if ($('#pc').length) {
-      maxW = 2000;
-      maxH = 2000;
-    } else if ($('#mobile').length) {
-      gsap3_1 = 85;
-      maxW = 2000;
-      maxH = 0;
-    }
-
-    tl1
-      .to(".gsap3-1", { opacity: 1, transform: "translateY(0)", duration: .4, })
-      .to(".gsap3-2", { maxWidth: maxW, maxHeight: maxH, duration: 1, delay: .2 })
-      // .to(".gsap3-1", { height: gsap3_1, duration: 0.2, })
-      // .to(".gsap3", { zIndex: 1, delay: 0.1, });
-
-
   },
+
+
+  
 };
