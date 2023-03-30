@@ -2211,7 +2211,6 @@ var golfPlayers = {
 
   createFullPageGolf: function() {
     $('body').addClass('golf');
-    
 
     $("#fullpage").fullpage({
       anchors: [

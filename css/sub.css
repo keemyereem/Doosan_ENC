@@ -1947,7 +1947,7 @@
 .golf .section1 { background: linear-gradient(to bottom, #C5CED5 1%, #DDE6EB); }
 .golf .section1 .scroll_down { font-family: 'Montserrat'; font-size: 1.8rem; color: #fff; display: block; writing-mode: vertical-rl; letter-spacing: .18rem; position: absolute; right: 8rem; bottom: 13.3rem; }
 .golf .section1 .scroll_down::after { content:''; display: block; width: 2.3rem; height: 3rem; background: url(../images/common/visual_scroll_arrow.png) no-repeat; position: absolute; bottom: -5.3rem; left: 0; margin-left: .2rem; animation: scrollDwn 1s infinite; }
-.golf .section1 .players { position: relative; margin: auto; bottom: -25vh; opacity: 0; transform: translateX(30rem); }
+.players { position: relative; margin: auto; bottom: -25vh; opacity: 0; transform: translateX(30rem); }
 .golf .section1 article { width: fit-content; height: fit-content; position: absolute; left: 0; right: 0; margin: auto; transform: translate(-43rem, 3rem); letter-spacing: -.25rem; display: flex; flex-direction: column; }
 .golf .section1 article p { font-weight: 400; font-size: 3.2rem; line-height: 1; }
 .golf .section1 article p:last-of-type { background: url(../images/golf/icon_open.png) 0% 50% no-repeat; font-size: 3.8rem; height: 6.5rem; display: flex; align-items: flex-end; margin-top: 4rem; padding-left: 9rem; }
@@ -1958,7 +1958,7 @@
 .golf .section1 article h2:last-of-type::before { content: ''; width: 0; height: .1rem; background-color: #999999; display: block; bottom: 0; position: absolute; transition: width ease 0s; }
 .golf .section1 article h2 i { opacity: 0; }
 .golf .section1 article *:not(.players) { transform: scaleY(0); transform-origin: 0 100%; }
-.golf .section1.fp-completely .players { bottom: -17vh; opacity: 1; transition: .6s all ease .2s; }
+.golf .section1.fp-completely .players { bottom: -17vh; opacity: 1; transition: .6s all ease .3s; }
 .golf .section1.fp-completely article *:not(.players) { animation: .4s textUp .6s ease-in-out; animation-fill-mode: forwards; }
 .golf .section1.fp-completely article *:nth-child(2) { animation-delay: 1s; }
 .golf .section1.fp-completely article *:nth-child(2)::before { animation:1s jump 1.8s; animation-iteration-count: 3; }
