@@ -2255,15 +2255,17 @@ var golfPlayers = {
         if (nextIndex == 1) {
           setHeaderWhite()
           $('.header').fadeIn(500);
+          $(".golf #topButton").fadeOut(500);
         } else if (nextIndex == $(".section").length || nextIndex !== 1) {
           $('.header').fadeOut(500);
+          $(".golf #topButton").fadeIn(500);
         }
 
         // footer: 위에 앵커와 함께 작성할 경우 푸터에 도달하고 뒤늦게 꺼지는 현상 -> 따로 제어
         if (nextIndex == 1 || nextIndex == 2 || nextIndex == $(".section").length) {
-          $(".golf #rightnavi, .golf #topButton").fadeOut(500);
+          $(".golf #rightnavi").fadeOut(500);
         } else {
-          $(".golf #rightnavi, .golf #topButton").fadeIn(500);
+          $(".golf #rightnavi").fadeIn(500);
         }
         
         // 헤더스타일 화이트/ 노말 함수
