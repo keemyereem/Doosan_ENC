@@ -2206,11 +2206,33 @@ var policyEvent = {
 // 골프단 신규 - 2023.03.28
 var golfPlayers = {
   init: function () {
+    this.settingResponsive();
     this.createFullPageGolf();
   },
 
+  settingResponsive: function() {
+    $(window).ready(()=> {
+      $('body').addClass('golf');
+    });
+
+    var playersSection = $('.section').not('.section1, .section2, .footer');
+    if ($('#mobile').length) {
+      playersSection.each(function(index) {
+        let golfImgUrl = playersSection.eq(index).find('img');
+        let mobileUrl = golfImgUrl.attr('src').replace('.png', '_mob.png');
+        golfImgUrl.attr('src', mobileUrl)
+      });
+    }
+
+    $(document).on("click", "#topButton", function () {
+      var goTop = location.href.split('#')
+      window.location = goTop[0] + '#firstPage';
+    });
+
+  },
+
   createFullPageGolf: function() {
-    $('body').addClass('golf');
+    
 
     $("#fullpage").fullpage({
       anchors: [
@@ -2232,18 +2254,16 @@ var golfPlayers = {
         // 앵커별 추가기능 조정
         if (nextIndex == 1) {
           setHeaderWhite()
-        } else if (nextIndex == $(".section").length) {
-          $('.header').fadeOut(500);
-        } else {
-          removeHeaderWhite()
           $('.header').fadeIn(500);
+        } else if (nextIndex == $(".section").length || nextIndex !== 1) {
+          $('.header').fadeOut(500);
         }
 
         // footer: 위에 앵커와 함께 작성할 경우 푸터에 도달하고 뒤늦게 꺼지는 현상 -> 따로 제어
         if (nextIndex == 1 || nextIndex == 2 || nextIndex == $(".section").length) {
-          $("#rightnavi").addClass("indent");
+          $(".golf #rightnavi, .golf #topButton").fadeOut(500);
         } else {
-          $("#rightnavi").removeClass("indent");
+          $(".golf #rightnavi, .golf #topButton").fadeIn(500);
         }
         
         // 헤더스타일 화이트/ 노말 함수
@@ -2251,11 +2271,13 @@ var golfPlayers = {
           setTimeout(() => {
             $(".header").addClass("wht");
           }, 500);
+          
         }
         function removeHeaderWhite() {
           setTimeout(() => {
             $(".header").removeClass("wht");
           }, 500);
+          
         }
       }, afterLoad: function (anchorLink, index) {
         if (index == $(".section").length) {

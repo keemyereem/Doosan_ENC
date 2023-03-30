@@ -1859,3 +1859,58 @@
     50% { left: 4rem; }
     100% { left: 3rem; }
 }
+
+
+
+/* ================================  두산건설 We've 골프단 - 2023.03.28 =============================== */
+
+#mobile .players { left: 0; transform: translate(0); top: auto; bottom: -25rem; }
+#mobile .golf .section article { padding: 0 2rem; }
+#mobile .golf .section1 article { transform: translate(0); top: 14vh; letter-spacing: -.1rem; }
+#mobile .golf .section1 article p { font-size: 2.1rem; padding-bottom: 1.5rem; }
+#mobile .golf .section1 article p:last-of-type { height: 3.2rem; padding-left: 4.5rem; padding-bottom: 0; margin-top: 4rem; background-size: 3.6rem 3.2rem; right: 0; font-size: 2.4rem; }
+#mobile .golf .section1 article p:last-of-type b:first-child { font-size: 3.6rem; line-height: .75; }
+#mobile .golf .section1 article p:last-of-type b:last-child { font-size: 3.5rem; }
+#mobile .golf .section1 article p:last-of-type::before { top: -2.5rem; animation: .8s wideMob ease-in-out; }
+#mobile .golf .section1 article h2 { font-size: 7.2rem; letter-spacing: -.2rem; filter: drop-shadow(.1rem .15rem .25rem rgba(47, 48, 53, .3)); line-height: .95; }
+#mobile .golf .section1 article h2:first-of-type::before { width: 5.8rem; height: 5.8rem; left: 5.3rem; background-size: cover; }
+#mobile .golf .section1 .scroll_down { left: 0; right: 0; margin: auto; bottom: 6.3rem; }
+#mobile .golf .section1 .scroll_down::after { right: 0; margin: auto; width: 1.5rem; height: 2.2rem; background-size: contain; }
+#mobile .golf .section1 .scroll_down span { display: none; }
+#mobile .golf .section1.fp-completely .players { bottom: -35vh; }
+#mobile .golf .section1.fp-completely article *:nth-child(2)::before { animation: 1s jumpMob 1.8s; animation-iteration-count: 3; }
+#mobile .golf .section1.fp-completely article *:nth-child(4)::before { animation-delay: 1.6s; animation-fill-mode: forwards; }
+#mobile .golf .section2 article p { font-size: 2.5rem; letter-spacing: -.1rem; }
+#mobile .golf .section2 article h2 { font-size: 5.5rem; margin-top: 1.5rem; line-height: 1.1; }
+#mobile .golf .section2 article ul { padding-top: 3.5rem; font-size: 2rem; }
+#mobile .golf .section2 article ul li:nth-child(even) { width: .3rem; height: .3rem; margin: 0 .9rem; transform: translateY(0) rotate(15deg); }
+#mobile .golf .section:not(.footer) { flex-direction: column; }
+#mobile .golf .section:not(.section1, .section2, .footer) article { position: relative; transform: translateX(0); width: 100%; }
+#mobile .golf .section:not(.section1, .section2, .footer) article h2 { font-size: 6rem; margin-left: -1rem; letter-spacing: -.05rem; }
+#mobile .golf .section:not(.section1, .section2, .footer) article h2::before { width: 4.8rem; height: .4rem; margin-left: 1rem; }
+#mobile .golf .section:not(.section1, .section2, .footer) article p { font-size: 1.5rem; line-height: 1.53; letter-spacing: -.05rem; padding-top: 2.35rem; }
+#mobile .golf .section:not(.section1, .section2, .footer) article h3 { width: 11rem; height: 3rem; font-size: 1.6rem; margin-top: 3rem; }
+#mobile .golf .section:not(.section1, .section2, .footer) article h3 span { font-size: 1.85rem; padding-right: .2rem; }
+#mobile .golf .section:not(.section1, .section2, .footer) article:first-of-type { margin-top: 8.5vh; }
+#mobile .golf .section:not(.section1, .section2, .footer) article:last-child { justify-content: center; }
+#mobile .golf .section:not(.section1, .section2, .footer) article:last-child img { height: 90%; bottom: 0; left: -8vw; }
+#mobile .golf .section:not(.section1, .section2, .footer) article:last-child::after { width: 73vw; height: 73vw; transform: translateY(0); position: absolute; top: 9.5vh; }
+#mobile .golf .section5 article:last-child img { left: 0 !important; } /* 박결 프로 단독 좌우 조정 */
+#mobile .golf #rightnavi { left: 2rem; top: unset; bottom: 0.75rem; transform: translateY(0); }
+#mobile .golf #rightnavi li { margin: 1.25rem 0; width: .6rem; height: .6rem; }
+#mobile .golf #rightnavi li a { width: .6rem; height: .6rem; }
+#mobile .golf #rightnavi li a span { font-size: 1.4rem; }
+#mobile .golf #rightnavi li.active { padding-bottom: 6rem; }
+#mobile .golf #rightnavi li.active a span { margin-top: 1.5rem; }
+
+@keyframes jumpMob{
+    50% { margin-top: -12rem; -webkit-animation-timing-function: ease-in; transform: rotate(90deg); }
+    90% { margin-top: -1rem; height: 5.8rem; -webkit-animation-timing-function:ease-out; transform: rotate(270deg); }
+    95% { margin-top: 1rem; height: 5rem; border-radius:70% / 60%; -webkit-animation-timing-function:ease-in; transform: rotate(360deg); }
+    100% { margin-top:0; -webkit-animation-timing-function:ease-in; transform: rotate(360deg); }
+}
+
+@keyframes wideMob{
+    0% { width: 0; }
+    100% { width: 27rem; }
+}
