@@ -464,7 +464,6 @@ var commonEvent = {
     $(window).on("scroll", function () {
       let st = $(window).scrollTop(),
         footer = document.querySelector(".footer").offsetTop;
-
       if ($(window).width() > 768) {
         footer = footer - 300;
 
@@ -2212,6 +2211,7 @@ var golfPlayers = {
 
   createFullPageGolf: function() {
     $('body').addClass('golf');
+    
 
     $("#fullpage").fullpage({
       anchors: [
@@ -2241,7 +2241,7 @@ var golfPlayers = {
         }
 
         // footer: 위에 앵커와 함께 작성할 경우 푸터에 도달하고 뒤늦게 꺼지는 현상 -> 따로 제어
-        if (nextIndex == 1 || nextIndex == $(".section").length) {
+        if (nextIndex == 1 || nextIndex == 2 || nextIndex == $(".section").length) {
           $("#rightnavi").addClass("indent");
         } else {
           $("#rightnavi").removeClass("indent");
@@ -2257,6 +2257,12 @@ var golfPlayers = {
           setTimeout(() => {
             $(".header").removeClass("wht");
           }, 500);
+        }
+      }, afterLoad: function (anchorLink, index) {
+        if (index == $(".section").length) {
+          setTimeout(() => {
+            $(".footer .sec_tit > span").addClass("fin");
+          }, 200);
         }
       }
     });

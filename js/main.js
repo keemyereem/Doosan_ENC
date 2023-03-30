@@ -119,7 +119,6 @@ var mainEvent = {
             setTimeout(() => {
               $(".footer .sec_tit > span").addClass("fin");
             }, 200);
-          } else {
           }
         } else {
           //영문
