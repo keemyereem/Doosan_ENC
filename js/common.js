@@ -2229,6 +2229,15 @@ var golfPlayers = {
       window.location = goTop[0] + '#firstPage';
     });
 
+    $('.golf .header').mouseleave(function() {
+      if ($('.golf .header').hasClass('wht')) {
+        console.log('dqoiwdjkqowidkqpo')
+      } else {
+        console.log('qod')
+      }
+      $(".header").removeClass("wht");
+    })
+
   },
 
   createFullPageGolf: function() {
@@ -2250,38 +2259,72 @@ var golfPlayers = {
       css3: true,
       scrollingSpeed: 800,
 
-      onLeave: function (index, nextIndex, lastIndex) {
+      onLeave: function (index, nextIndex, direction) {
         // 앵커별 추가기능 조정
         if (nextIndex == 1) {
-          setHeaderWhite()
+          // 첫번째 페이지
           $('.header').fadeIn(500);
           $(".golf #topButton").fadeOut(500);
-        } else if (nextIndex == $(".section").length || nextIndex !== 1) {
+
+        } else if (nextIndex == $(".section").length) {
+          // 마지막(푸터) 페이지
           $('.header').fadeOut(500);
+          $(".golf #topButton").fadeOut(500);
+
+        } else {
+          // 그 외 나머지
+          $("#mobile").length ? $('.header').fadeOut(500) : $('.header').fadeIn(500);
           $(".golf #topButton").fadeIn(500);
         }
 
         // footer: 위에 앵커와 함께 작성할 경우 푸터에 도달하고 뒤늦게 꺼지는 현상 -> 따로 제어
         if (nextIndex == 1 || nextIndex == 2 || nextIndex == $(".section").length) {
-          $(".golf #rightnavi").fadeOut(500);
+          $(".golf #rightnavi").hide();
         } else {
           $(".golf #rightnavi").fadeIn(500);
         }
-        
-        // 헤더스타일 화이트/ 노말 함수
+
+        // 헤더스타일 화이트/ 노말 제어(1)
+        if (nextIndex !== 1) {
+          unsetHeaderWhite();
+        } else {
+          setHeaderWhite();
+        }
+        // 헤더스타일 화이트/ 노말 함수(2)
         function setHeaderWhite() {
           setTimeout(() => {
             $(".header").addClass("wht");
           }, 500);
-          
+          $(".golf #sub .header .gnb > ul > li").hover(
+            function () {},
+            function () {
+              $(".header").addClass("wht");
+              $(".header").css({ background: "transparent" });
+            }
+          );  
         }
-        function removeHeaderWhite() {
+
+        function unsetHeaderWhite() {
           setTimeout(() => {
             $(".header").removeClass("wht");
-          }, 500);
-          
+          }, 500);   
+          $(".golf #sub .header .gnb > ul > li").hover(
+            function () {
+              $(".header").css({ background: "#ffffff" });
+            },
+            function () {
+              $(".header").removeClass("wht");
+              $(".header").css({ background: "transparent" });
+              
+            }
+          );  
         }
+
       }, afterLoad: function (anchorLink, index) {
+        if (index == index) {
+          $('.section').eq(index - 1).addClass('ani')
+        }
+
         if (index == $(".section").length) {
           setTimeout(() => {
             $(".footer .sec_tit > span").addClass("fin");
