@@ -1189,8 +1189,6 @@
 .company .philosophy .inner > ul > li:last-child ul li:hover h4::before { background: #fff; }
 .company .philosophy .inner > ul > li:last-child ul li:hover p { display: block; }
 
-
-
 /* 대표이사 인사말 */
 .company .greeting { max-width: 100%; background: linear-gradient(to bottom, #f9f9f9, #f9f9f9 89.7rem, #fff 89.8rem, #fff 100%); position: relative; padding: 12rem 0 20rem; }
 .company .greeting .inner { max-width: 168rem!important; margin: 0!important; }
@@ -1937,4 +1935,94 @@
     0% { left: 6rem; }
     50% { left: 8rem; }
     100% { left: 6rem; }
+}
+
+
+/* ================================  두산건설 We've 골프단 - 2023.03.28 =============================== */
+.golf .section:not(.footer) { width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; overflow: hidden; }
+.golf #rightnavi { right: 0; left: 5rem; width: fit-content; }
+.golf #rightnavi li.active { padding-bottom: 7.5rem; }
+.golf #rightnavi li a span { font-family: 'Pretendard'; letter-spacing: -.1rem; }
+.golf #topButton {  }
+.golf .section1 { background: linear-gradient(to bottom, #C5CED5 1%, #DDE6EB); }
+.golf .section1 .scroll_down { font-family: 'Montserrat'; font-size: 1.8rem; color: #fff; display: block; writing-mode: vertical-rl; letter-spacing: .18rem; position: absolute; right: 8rem; bottom: 13.3rem; }
+.golf .section1 .scroll_down::after { content:''; display: block; width: 2.3rem; height: 3rem; background: url(../images/common/visual_scroll_arrow.png) no-repeat; position: absolute; bottom: -5.3rem; left: 0; margin-left: .2rem; animation: scrollDwn 1s infinite; }
+.players { position: relative; margin: auto; opacity: 0; transform: translateX(30rem); bottom: -20vh; }
+.golf .section1 article { width: fit-content; height: fit-content; position: absolute; left: 0; right: 0; margin: auto; transform: translate(-43rem, 3rem); letter-spacing: -.25rem; display: flex; flex-direction: column; }
+.golf .section1 article p { font-weight: 400; font-size: 3.2rem; line-height: 1; }
+.golf .section1 article p:last-of-type { background: url(../images/golf/icon_open.png) 0% 50% no-repeat; font-size: 3.8rem; height: 6.5rem; display: flex; align-items: flex-end; margin-top: 6rem; padding-left: 9rem; }
+.golf .section1 article p:last-of-type b:first-child { font-family: 'Montserrat'; font-size: 6.2rem; font-weight: 350; color: #005eb8; line-height: .7; margin-right: .2rem; }
+.golf .section1 article p:last-of-type b:last-child { font-size: 6rem; color: #005eb8; font-weight: 500; line-height: .8; margin-left: 1rem; }
+.golf .section1 article p:last-of-type::before { content: ''; animation: 1s wide ease-in-out; width: 0; height: .1rem; background-color: #999999; display: block; top: -4rem; left: 0; position: absolute; transition: width ease 0s; }
+.golf .section1 article h2 { position: relative; right: .5rem; display: inline-flex; align-items: center; font-family: 'Montserrat'; letter-spacing: -.35rem; /*font-weight: 500;*/ font-size: 13.4rem; line-height: 1; background-image: -webkit-linear-gradient(left, #00A5D7, #0061BA); -webkit-text-fill-color: transparent; -webkit-background-clip: text; filter: drop-shadow(.2rem .3rem .5rem rgba(47, 48, 53, .3)); }
+.golf .section1 article h2:first-of-type::before { content: ''; background: url(../images/golf/ball.png) 50% 50% no-repeat; width: 10.4rem; height: 10.4rem; display: inline-block; border-radius: 100%; position: absolute; left: 10rem; }
+.golf .section1 article h2 i { opacity: 0; }
+.golf .section1 article * { transform: translateY(5rem); opacity: 0; }
+.golf .section1.fp-completely .players { opacity: 1; bottom: -17vh; transition: .6s all ease .3s; }
+.golf .section1.fp-completely article * { animation: .4s fadeUp .6s ease-in-out; animation-fill-mode: forwards; }
+.golf .section1.fp-completely article *:nth-child(2) { animation-delay: 1s; }
+.golf .section1.fp-completely article *:nth-child(2)::before { animation:1s jump 1.8s; animation-iteration-count: 3; }
+.golf .section1.fp-completely article *:nth-child(3) { animation-delay: 1.2s; }
+.golf .section1.fp-completely article *:nth-child(4) { animation-delay: 1.4s; }
+.golf .section1.fp-completely article *:nth-child(4)::before { animation-delay: 1.6s; animation-fill-mode: forwards; }
+.golf .section2 article { text-align: center; font-family: 'Montserrat'; overflow: hidden; }
+.golf .section2 article p { font-size: 4rem; color: #005eb8; font-weight: 350; }
+.golf .section2 article p span { font-family: 'Pretendard'; font-weight: 400; }
+.golf .section2 article h2 { font-style: italic; font-size: 10rem; color: #005EB8; font-weight: 450; margin-top: .5rem; }
+.golf .section2 article ul { display: flex; justify-content: center; font-weight: 500; font-size: 4rem; color: #999999; align-items: center; line-height: 1; padding-top: 5rem; }
+.golf .section2 article ul li:nth-child(even) { width: .6rem; height: .6rem; background: #999999; transform: translateY(.3rem) rotate(15deg); margin: 0 2.4rem; opacity: 0; }
+.golf .section2 article ul li:nth-child(odd) { transform: scaleY(0); transform-origin: 0 100%; /*font-weight: 400;*/ }
+.golf .section2 article > *:not(ul) { opacity: 0; transform: translateY(5rem); }
+.golf .section2.fp-completely article > * { animation: fadeUp .4s ease-in-out; animation-fill-mode: forwards; }
+.golf .section2.fp-completely article > *:nth-child(2) { animation-delay: .4s; }
+.golf .section2.fp-completely article ul li:nth-child(odd) { animation: .4s fadeUp ease-in-out; animation-fill-mode: forwards; }
+.golf .section2.fp-completely article ul li:nth-child(even) { animation: .4s opacity ease-in-out; animation-fill-mode: forwards; }
+.golf .section2.fp-completely article ul li:nth-child(1) { animation-delay: .8s; }
+.golf .section2.fp-completely article ul li:nth-child(2) { animation-delay: 1s; }
+.golf .section2.fp-completely article ul li:nth-child(3) { animation-delay: 1.2s; }
+.golf .section2.fp-completely article ul li:nth-child(4) { animation-delay: 1.4s; }
+.golf .section2.fp-completely article ul li:nth-child(5) { animation-delay: 1.6s; }
+.golf .section2.fp-completely article ul li:nth-child(6) { animation-delay: 1.8s; }
+.golf .section2.fp-completely article ul li:nth-child(7) { animation-delay: 2s; }
+.golf .section2.fp-completely article ul li:nth-child(8) { animation-delay: 2.2s; }
+.golf .section2.fp-completely article ul li:nth-child(9) { animation-delay: 2.4s; }
+.golf .section2.fp-completely article ul li:nth-child(10) { animation-delay: 2.6s; }
+.golf .section:not(.section1, .section2, .footer) { background: #eff4fb; }
+.golf .section:not(.section1, .section2, .footer) article { width: fit-content; position: absolute; margin: auto; left: 0; right: 0; transform: translateX(-39rem); }
+.golf .section:not(.section1, .section2, .footer) article h2 { font-size: 11rem; font-family: 'Montserrat'; font-style: italic; font-weight: 450; line-height: .8; margin-left: -1.5rem; }
+.golf .section:not(.section1, .section2, .footer) article h2::before { content: ''; display: block; width: 5.5rem; height: .6rem; background: #005eb8; transform: skew(-45deg); margin-bottom: 2.7rem; margin-left: 1.5rem; }
+.golf .section:not(.section1, .section2, .footer) article h2 span { color: #005eb8; }
+.golf .section:not(.section1, .section2, .footer) article p { font-size: 2rem; color: #555555; line-height: 1.8; padding-top: 3rem; }
+.golf .section:not(.section1, .section2, .footer) article p b { color: #005eb8; font-weight: 400; }
+.golf .section:not(.section1, .section2, .footer) article h3 { width: 18.1rem; height: 5rem; display: flex; align-items: center; justify-content: center; background: #fff; margin-top: 5.5rem; font-weight: 200; border-radius: 2.5rem; font-size: 2.2rem; color: #555555; }
+.golf .section:not(.section1, .section2, .footer) article h3 span { color: #005eb8; font-size: 2.7rem; font-weight: 400; display: inline-block; padding-right: .5rem; }
+.golf .section:not(.section1, .section2, .footer) article:last-child { position: relative; height: 100%; display: flex; align-items: center; transform: translateX(35rem); }
+.golf .section:not(.section1, .section2, .footer) article:last-child::after { content: ''; width: 55rem; height: 55rem; border-radius: 100%; background: #fff; display: block; transform: translateY(6.4rem); }
+.golf .section:not(.section1, .section2, .footer) article:last-child img { z-index: 1; position: absolute; top: auto; bottom: -2rem; left: 0; right: 0; margin: auto; }
+.golf .section:not(.section1, .section2, .footer) article > * { opacity: 0; transform: translateY(5rem); }
+.golf .section:not(.section1, .section2, .footer).fp-completely article > * { animation: .6s fadeUp ease-in-out; animation-fill-mode: forwards; }
+.golf .section:not(.section1, .section2, .footer).fp-completely article > *:nth-child(2) { animation-delay: .6s; }
+.golf .section:not(.section1, .section2, .footer).fp-completely article:last-child > *:nth-child(2) { animation-delay: .4s; }
+.golf .section:not(.section1, .section2, .footer).fp-completely article > *:nth-child(3) { animation-delay: .8s; }
+
+@keyframes jump{
+    50% { margin-top: -20rem; -webkit-animation-timing-function: ease-in; transform: rotate(90deg); }
+    90% { margin-top: -2rem; height: 10.4rem; -webkit-animation-timing-function:ease-out; transform: rotate(270deg); }
+    95% { margin-top: 1rem; height: 9.8rem; border-radius:70% / 60%; -webkit-animation-timing-function:ease-in; transform: rotate(360deg); }
+    100% { margin-top:0; -webkit-animation-timing-function:ease-in; transform: rotate(360deg); }
+}
+
+@keyframes fadeUp{
+    0% { transform: translateY(5rem); opacity: 0;}
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes opacity{
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes wide{
+    0% { width: 0; }
+    100% { width: 50rem; }
 }

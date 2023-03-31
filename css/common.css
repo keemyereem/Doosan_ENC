@@ -138,6 +138,7 @@ body { overflow: overlay; }
 .header .gnb > ul > li .depth_box .depth_wrap .depth_list {padding-bottom: 3.6rem; padding-left: 8rem;}
 .header .gnb > ul > li .depth_box.social_box .depth_wrap { padding: 5rem 0; }
 .header .gnb > ul > li .depth_box.social_box .depth_wrap .depth_list { padding-bottom: 2rem; }
+.header .gnb > ul > li .depth_box.about_box .depth_wrap .depth_list { padding-bottom: 2.6rem; }
 .header .gnb > ul > li .depth_box .depth_wrap .depth_list > .list_tit {display:block;font-size: 2rem;font-weight: 350; width: 100%;position: relative;}
 .header .gnb > ul > li .depth_box .depth_wrap .depth_list > .list_tit::after {content:'';display: inline-block;width: .9rem;height: 1.5rem;background: url(../images/common/header_arrow.png) no-repeat 50% 50%;background-size: contain;position: absolute;top: 50%;right: 8rem;transform: translateY(-50%);}
 .header .gnb > ul > li .depth_box .depth_wrap .depth_list > .list_tit:hover::after {background: url(../images/main/sec06_arrow.png) no-repeat 50% 50%;}

@@ -464,7 +464,6 @@ var commonEvent = {
     $(window).on("scroll", function () {
       let st = $(window).scrollTop(),
         footer = document.querySelector(".footer").offsetTop;
-
       if ($(window).width() > 768) {
         footer = footer - 300;
 
@@ -2201,4 +2200,98 @@ var policyEvent = {
       $(".select_wrap .select02").addClass("active");
     });
   },
+};
+
+
+// 골프단 신규 - 2023.03.28
+var golfPlayers = {
+  init: function () {
+    this.settingResponsive();
+    this.createFullPageGolf();
+  },
+
+  settingResponsive: function() {
+    $(window).ready(()=> {
+      $('body').addClass('golf');
+    });
+
+    var playersSection = $('.section').not('.section1, .section2, .footer');
+    if ($('#mobile').length) {
+      playersSection.each(function(index) {
+        let golfImgUrl = playersSection.eq(index).find('img');
+        let mobileUrl = golfImgUrl.attr('src').replace('.png', '_mob.png');
+        golfImgUrl.attr('src', mobileUrl)
+      });
+    }
+
+    $(document).on("click", "#topButton", function () {
+      var goTop = location.href.split('#')
+      window.location = goTop[0] + '#firstPage';
+    });
+
+  },
+
+  createFullPageGolf: function() {
+    
+
+    $("#fullpage").fullpage({
+      anchors: [
+        "firstPage",
+        "secondPage",
+        "thirdPage",
+        "fourthPage",
+        "fifthPage",
+        "sixthPage",
+        "seventhPage",
+      ],
+      menu: "#rightnavi",
+      verticalCentered: false,
+      scrollOverflow: false,
+      css3: true,
+      scrollingSpeed: 800,
+
+      onLeave: function (index, nextIndex, lastIndex) {
+        // 앵커별 추가기능 조정
+        if (nextIndex == 1) {
+          setHeaderWhite()
+          $('.header').fadeIn(500);
+          $(".golf #topButton").fadeOut(500);
+        } else if (nextIndex == $(".section").length || nextIndex !== 1) {
+          $('.header').fadeOut(500);
+          $(".golf #topButton").fadeIn(500);
+        }
+
+        // footer: 위에 앵커와 함께 작성할 경우 푸터에 도달하고 뒤늦게 꺼지는 현상 -> 따로 제어
+        if (nextIndex == 1 || nextIndex == 2 || nextIndex == $(".section").length) {
+          $(".golf #rightnavi").fadeOut(500);
+        } else {
+          $(".golf #rightnavi").fadeIn(500);
+        }
+        
+        // 헤더스타일 화이트/ 노말 함수
+        function setHeaderWhite() {
+          setTimeout(() => {
+            $(".header").addClass("wht");
+          }, 500);
+          
+        }
+        function removeHeaderWhite() {
+          setTimeout(() => {
+            $(".header").removeClass("wht");
+          }, 500);
+          
+        }
+      }, afterLoad: function (anchorLink, index) {
+        if (index == $(".section").length) {
+          setTimeout(() => {
+            $(".footer .sec_tit > span").addClass("fin");
+          }, 200);
+        }
+      }
+    });
+    
+  },
+
+
+  
 };
