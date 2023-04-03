@@ -393,7 +393,8 @@
 .tb_view .view_box .view_info {min-height: 20rem; padding:5rem 0 10rem;font-size: 1.8rem;color: #222;line-height: 2.1;}
 .tb_view .view_box .view_info img{max-width: 100%; object-fit: contain; display: block; margin: 0 auto;}
 .tb_view .view_box .view_info img.left { margin: 0; }
-.tb_view .view_box .view_info span { font-size: 1.6rem; color: #005eb8; line-height: 2.4; padding: .5rem 0; display: block; letter-spacing: -.05rem; }
+.tb_view .view_box .view_info .blue { font-size: 1.6rem; color: #005eb8; line-height: 2.4; padding: .5rem 0; display: block; letter-spacing: -.05rem; text-align: center; }
+.tb_view .view_box .view_info .blue.left {text-align: left;}
 .tb_view .view_box .file_box {padding: 9rem 0 11rem;}
 .tb_view .view_box .file_box .file_download:first-child {margin-top: 0;}
 .tb_view .view_box .file_box .file_download a {display: inline-block;padding: .5rem 0 .5rem 3.5rem;background: url(../images/common/icon_download.png) 0 50% no-repeat;background-size: 1.9rem 2rem;font-size: 1.8rem;font-weight: 400;color: #005eb8;}
