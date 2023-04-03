@@ -1877,9 +1877,9 @@
 #mobile .golf .section1 .scroll_down { left: 0; right: 0; margin: auto; bottom: 6.3rem; }
 #mobile .golf .section1 .scroll_down::after { right: 0; margin: auto; width: 1.5rem; height: 2.2rem; background-size: contain; }
 #mobile .golf .section1 .scroll_down span { display: none; }
-#mobile .golf .section1.fp-completely .players { bottom: -35vh; }
-#mobile .golf .section1.fp-completely article *:nth-child(2)::before { animation: 1s jumpMob 1.8s; animation-iteration-count: 3; }
-#mobile .golf .section1.fp-completely article *:nth-child(4)::before { animation-delay: 1.6s; animation-fill-mode: forwards; }
+#mobile .golf .section1.ani .players { bottom: -35vh; }
+#mobile .golf .section1.ani article *:nth-child(2)::before { animation: 1s jumpMob 1.8s; animation-iteration-count: 3; }
+#mobile .golf .section1.ani article *:nth-child(4)::before { animation-delay: 1.6s; animation-fill-mode: forwards; }
 #mobile .golf .section2 article p { font-size: 2.5rem; letter-spacing: -.1rem; }
 #mobile .golf .section2 article h2 { font-size: 5.5rem; margin-top: 1.5rem; line-height: 1.1; }
 #mobile .golf .section2 article ul { padding-top: 3.5rem; font-size: 2rem; }
