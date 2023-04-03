@@ -479,6 +479,7 @@
     #mobile .tb_view { margin-top: 0; }
     #mobile .tb_view .tb_row.row_head .tit { font-size: 2.5rem; }
     #mobile .tb_view .tb_row.row_head .date { font-size: 1.3rem; padding: 2.5rem 0; }
+    #mobile .tb_view .view_box .view_text {font-size: 1.3rem;}
     #mobile .tb_view .view_box .view_info { min-height: 10rem; padding: 5rem 0 5rem; font-size: 1.4rem; line-height: 1.71; }
     #mobile .tb_view .view_box .view_info span { font-size: 1.3rem; line-height: 1.4; padding: 1.5rem 0 0; }
     #mobile .tb_view .view_box .file_box { padding: 0 0 7rem 0; }
