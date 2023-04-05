@@ -390,8 +390,8 @@
 .tb_view .tb_row.row_head .tit {font-size: 4rem;font-weight: 400;color: #222;}
 .tb_view .tb_row.row_head .date {font-size: 1.6rem;font-weight: 200;color: #777;padding: 3rem 0;}
 .tb_view .view_box {position: relative;}
-.tb_view .view_box .view_info {min-height: 20rem; padding:5rem 0 10rem;font-size: 1.8rem;color: #222;line-height: 2.1;}
-.tb_view .view_box .view_info img{max-width: 100%; object-fit: contain; display: block; margin: 0 auto;}
+.tb_view .view_box .view_info {min-height: 20rem; padding:5rem 0 10rem;font-size: 1.8rem;color: #222;line-height: 2.1; letter-spacing: -.45px; }
+/* .tb_view .view_box .view_info img{max-width: 100%; object-fit: contain; display: block; margin: 0 auto;} */
 .tb_view .view_box .view_info img.left { margin: 0; }
 .tb_view .view_box .view_info .blue { font-size: 1.6rem; color: #005eb8; line-height: 2.4; padding: .5rem 0; display: block; letter-spacing: -.05rem; text-align: center; }
 .tb_view .view_box .view_info .blue.left {text-align: left;}
