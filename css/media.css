@@ -230,8 +230,6 @@
     #mobile #topButton::after { width: 1.8rem; height: 2.3rem; }
 
 
-
-
     /* =========================================================================== */
     /* ===============================  Main Page  =============================== */
     /* =========================================================================== */
@@ -245,7 +243,6 @@
     /* Section01 */
     #mobile #main #fullpage .section01 { height: calc(var(--vh, 1vh) * 100); overflow: hidden; transition: height ease .3s; }
     #mobile #main #fullpage .section01 .swiper .sec01_controller { left: 0; right: 0; bottom: 4rem; margin: auto; width: calc(100% - 7.4rem); height: 4rem; }
-    /* #mobile #main #fullpage .section01.ani .swiper .sec01_controller { opacity: 1; transition-delay: .6s; } */
     #mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-pagination-sec01 { width: calc(100% - 6rem); }
     #mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-pagination-sec01:after { width: calc(100% - 10rem); }
     #mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-pagination-sec01 .swiper-pagination-bullet { width: .9rem; height: .9rem; padding: 2rem; }
@@ -275,7 +272,6 @@
     #mobile #main #fullpage .section02 .swiper-slide h2 { width: 100%; height: auto; transform: translate(50%,0); top:0; margin: 2rem 0 2rem 2rem; font-size: 4rem; transition: opacity; }
     #mobile #main #fullpage .section02/* .active */ .swiper-slide.swiper-slide-active h2,
     #mobile #main #fullpage .section02/* .active */ .swiper-slide.swiper-slide-duplicate-active h2 {opacity: 1; position: relative; left: 2rem; transform: translate(0,0);font-size: 4rem; transition: all ease-in-out .8s }
-
     #mobile #main #fullpage .section02 .moving_tab { width: 100%; height: 8.5rem; align-items: start; position: relative; top:0; left: 0; transform: translateY(0); overflow: auto; }
     #mobile #main #fullpage .section02 .moving_tab .swiper-pagination-sec02 { width: fit-content; margin-left: 1rem; }
     #mobile #main #fullpage .section02 .swiper-pagination-bullet { width: 18rem; margin-right: 3rem; flex-shrink: 0; top: 2rem; }
@@ -344,8 +340,6 @@
     #mobile #main #fullpage .section04 .card li:nth-child(3) .icon_white {  width: 5.2rem; }
     #mobile #main #fullpage .section04 .card li:nth-child(4) .icon,
     #mobile #main #fullpage .section04 .card li:nth-child(4) .icon_white {  width: 5.3rem; }
-    /* #mobile #main #fullpage .section04 .card li:nth-child(5) .icon,
-    #mobile #main #fullpage .section04 .card li:nth-child(5) .icon_white {  width: 6.3rem; } */
     #mobile #main #fullpage .section04 .card li p { position: initial; margin: 0 0 0 13.4rem; transform: translateY(0); text-align: left; font-size: 1.7rem; color: #fff; }
     #mobile #main #fullpage .section04 .card li:hover p { transform: translateY(0); }
     #mobile #main #fullpage .section04 .card li h3 { position: relative; transform: translateY(0); margin: 0 0 0 13.4rem; display: flex; align-items: flex-end; }
@@ -407,7 +401,6 @@
     #mobile #main #fullpage .section06 .right .contents > ul li .txt a::after { width: .65rem; height: 1.05rem; position: relative; background-size: .65rem 1.05rem; margin-left: 3rem; top: .15rem; transform: none; right: unset; transition: all ease .3s; }
     #mobile #main #fullpage .section06 .right .contents > ul li .txt a:hover::after { transform: none; animation: none; margin-left: 4rem; }
     #mobile #main #fullpage .section06 .right .contents > ul li .img { display: none; }
-
 
 
     /* =========================================================================== */
@@ -569,6 +562,7 @@
     #mobile .channel .cibi .section02 .logo_wrap .txt .name { font-size: 2.3rem; margin: 2.8rem 0 1.4rem; }
     #mobile .channel .cibi .section02 .logo_wrap .txt p { font-size: 1.4rem; line-height: 1.57; letter-spacing: -.07rem; margin-bottom: 2rem; }
 
+
     /* ================================  고객센터  =============================== */
 
     /* 고객문의 */
@@ -705,7 +699,6 @@
     #mobile .customer .cyber_report .section2 .btn_blk a { border-radius: 2.25rem; }
     
 
-
     /* ================================  기술개발  =============================== */
 
     /* 기술역량 */
@@ -737,15 +730,14 @@
     #mobile .technology .ipr .tb_box .tb_row.row_body .cell07 { display: block; padding-left: 0; }
     #mobile .technology .ipr.ipr02 .tb_box .tb_row { position: relative; }
     #mobile .technology .ipr.ipr02 .tb_box .tb_row .download { width: 29%; position: absolute; top: 1.5rem; left: calc(65% + 1rem); }
-
     #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell02,
     #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell03,
     #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell04,
     #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell05 { width: 100%; }
-
     #mobile .technology .ipr.ipr04 .tb_box .tb_row.row_body .cell03 { width: 42%; }
     #mobile .technology .ipr.ipr04 .tb_box .tb_row.row_body .cell04 { width: 57%; }
 }
+
 /* responsive */
 @media screen and (max-width:380px) {
     #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell02,
@@ -770,9 +762,6 @@
     #mobile .technology .ipr .tb_box .tb_row .class,
     #mobile .technology .ipr .tb_box .tb_row .num { width: 100%; }
 }
-
-/* 기술연구소 */
-
 
 
 /* ================================  사업영역  =============================== */
@@ -820,7 +809,6 @@
 #mobile .masterpiece .outline section .img { width: calc(100% + 2rem); margin-left: -1rem; }
 #mobile .masterpiece .outline section .img+span { font-size: 1.3rem; margin-top: 1rem; margin-left: -1rem; }
 #mobile .masterpiece .outline section .video { width: calc(100% + 2rem); margin-left: -1rem; }
-
 
 /* 해운대 */
 #mobile .mp01 .sub_visual { background-image: url(../images/business/masterpiece01_outline_visual.png); background-size: cover; }
@@ -898,7 +886,6 @@
 #mobile .mp03 .outline .section6 .left { margin-top: 4.5rem; }
 #mobile .mp03 .outline .section7 { margin: 4.5rem 0 5.5rem; }
 #mobile .mp03 .outline .section7 .right { margin-top: 4.5rem; padding-left: 0; }
-
 
 /* 마스터피스 - 인터뷰 - 공통 */
 #mobile .interview .sub_visual h1 { transform: translateY(calc(-50% + -2.3rem)); font-size: 4rem; line-height: 1.3; }
@@ -989,7 +976,6 @@
 #mobile .shinbundangline .contents .wrap dl:nth-of-type(10),
 #mobile .shinbundangline .contents .wrap dl:nth-of-type(11) { order: 2; }
 
-
 /* 사업소개(개요) */
 #mobile .civil_engineer .sub_visual {  background-image: url(../images/business/business_bg_m.png); background-size: cover; }
 #mobile .civil_engineer .tab_box { position: relative; padding: 0; }
@@ -1057,15 +1043,12 @@
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_mark li { width: 50%; margin-right: 0; }
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_mark li img { width: 3.75rem; height: 3.75rem; }
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_mark li .txt { margin: 1rem 0 0 2rem; }
-
-/* #mobile .card_popup .popup_inner .pop_cont .txt_box .card_mark li:nth-child(n+1):nth-child(-n+2) { margin-bottom: 2.5rem; } */
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_tb th { font-size: 1.25rem; }
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_tb td { font-size: 1.25rem;  line-height: 1.48; padding: 1rem 0 1rem 2rem; }
 #mobile .card_popup .popup_inner .pop_cont .inner_nav { width: calc(100% - 6rem); margin: 3rem auto 0; padding-bottom: 4rem; }
 #mobile .card_popup .popup_inner .pop_cont .inner_nav .arrow { font-size: 1.2rem; }
 #mobile .card_popup .popup_inner .pop_cont .inner_nav .arrow:after { width: .8rem; height: .8rem; }
 #mobile .card_popup .popup_inner .pop_cont .inner_nav .counter_slider { font-size: 1.4rem; }
-
 
 
 /* ================================  기술개발  =============================== */
@@ -1209,7 +1192,6 @@
 #mobile .technology .iot .inner:last-child .inner_wrap .card li img { width: 7rem; }
 #mobile .technology .iot .inner:last-child .inner_wrap .card li h5 { padding-top: 3.2rem; font-size: 1.5rem; }
 #mobile .technology .iot .inner:last-child .inner_wrap .card li p { padding-top: 1.5rem; font-size: 1.4rem; line-height: 1.5; letter-spacing: -.07rem; }
-
 
 
 /* ================================  회사소개  =============================== */
@@ -1403,11 +1385,6 @@
 #mobile .company .location ul li:last-child div em span { line-height: 1.8rem; width: 1.7rem; height: 1.7rem; margin-right: 1rem; font-size: 1.3rem; flex-shrink: 0; }
 
 
-
-
-
-
-
 /* ================================  사회책임경영  =============================== */
 
 /* 공통 */
@@ -1445,7 +1422,6 @@
 #mobile .sr .certList ul li dl dd:last-child a i { width: 1.5rem; height: 1.5rem; background-size: contain; right: 1rem; }
 #mobiel .sr .social_mob_img { display: block; }
 #mobile .sr .social_pc_img { display: none; }
-
 
 /* 프롤로그(사회책임경영 원칙) */
 #mobile .sr .prologue { box-shadow: .1rem .15rem 2.5rem 0 rgba(41, 41, 41, 0.2); margin-bottom: 10rem; margin-top: 3.5rem; }
@@ -1612,6 +1588,7 @@
 #mobile .sr .sc .section04 .box_wrap ul li:last-child .icon img { width: 4.1rem; }
 #mobile .sr .sc .section04 .box_wrap ul li .txt { font-size: 1.4rem; margin-top: 1.5rem; }
 
+
 /* ================================  인재채용  =============================== */
 
 /* 공통 */
@@ -1762,7 +1739,6 @@
 #mobile .graybox .policy > .inner .select_row::after { right: 1rem; }
 #mobile .graybox .policy > .inner .select_row select { padding: 0 1rem; }
 #mobile .graybox .policy > .inner .select_row label { font-size: 1.5rem; padding: 0 1rem; }
-
 #mobile .graybox .policy .box { margin: 2.7rem auto 10rem; padding: 3.5rem .9rem; width: calc(100% - 2rem); }
 #mobile .graybox .policy .box h3 { font-size: 1.7rem; margin-bottom: 2.5rem; }
 #mobile .graybox .policy .box ol > li+li { margin-top: 2.5rem; }
@@ -1791,6 +1767,7 @@
 #mobile .error p { font-size: 1.4rem; line-height: 1.57; }
 #mobile .error a { margin-top: 3rem; width: 17.4rem; height: 3.5rem; border-radius: 1.6rem; font-size: 1.3rem; line-height: 3.5rem; }
 
+
 /* ================================  Special Responsive  =============================== */
 @media screen and (max-width:316px) {
     #mobile .company .announce .tb_box .tb_row .date,
@@ -1816,7 +1793,6 @@
     #mobile .recruit .popup .img::after { width: 30rem; right: -32rem; }
     #mobile .recruit .job ul li { width: calc(100% / 3 - 4rem); }
 }
-
 
 
 /* =========================================================================== */
