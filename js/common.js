@@ -1982,7 +1982,7 @@ var recruitEvent = {
 
     // 팝업 컨트롤
     const img = $(".popup .img img"),
-      popupClose = $(".pop_close");
+          popupClose = $(".pop_close");
 
     // 팝업 이미지 초기화
     img.attr("src", "");
@@ -2058,9 +2058,8 @@ var recruitEvent = {
     } else {
       // 적응형 [PC]
 
+      let LayerPopup = $('.recruit .popup ul');
       // 영역 밖 이동 시 마우스 닫기 버튼 보이기
-      const LayerPopup = $(".recruit .popup ul");
-
       $(document).mousemove(function (e) {
         if (LayerPopup.has(e.target).length === 0) {
           popupClose.css({ transform: "scale(1)" });
@@ -2070,14 +2069,14 @@ var recruitEvent = {
       });
 
       // 영영 밖 이동 시 마우스 닫기 버튼  커서 따라다니기
-      const circle = document.querySelector(".pop_close");
+      let circle = document.querySelector(".pop_close");
 
       document.addEventListener("mousemove", (e) => {
         // mousemove이벤트를 이용해 움
         // 마우스의 좌표는 clientX와 clientY를 이용해 알수 있다. -> 브라우저 window의 좌표값 위치를 전달한다.
         // pageX, pageY와는 다름.
-        const mouseX = e.clientX;
-        const mouseY = e.clientY;
+        let mouseX = e.clientX;
+        let mouseY = e.clientY;
         circle.style.left = mouseX - 35 + "px";
         circle.style.top = mouseY - 35 + "px";
       });
@@ -2202,13 +2201,15 @@ var policyEvent = {
   },
 };
 
-
-// 골프단 신규 - 2023.03.28
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////                                                  **골프단 신규 - 2023.03.28**                                                      ///////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var golfPlayers = {
   init: function () {
     this.settingResponsive();
     this.createFullPageGolf();
     this.swipersForGolf();
+    this.popupForGolf();
   },
 
   settingResponsive: function() {
@@ -2256,6 +2257,7 @@ var golfPlayers = {
       menu: "#rightnavi",
       verticalCentered: false,
       scrollOverflow: false,
+      normalScrollElements: '.popup',
       css3: true,
       scrollingSpeed: 800,
 
@@ -2358,11 +2360,13 @@ var golfPlayers = {
         slideChangeTransitionStart: function() {  // 넘기기 시작할 때 
           // 텍스트 슬라이드 애니메이션 클래스 부여(시작)
           $('.txtPiece span').addClass('slideUp');
+
           // 텍스트 슬라이드 애니메이션이 끝나는 시점
           $('.txtPiece span').on('transitionend', function() {
             let selTit = $(".swiper-slide-active h2").html(),
                 selTitSplit = selTit.split('<br>'),
                 selTitParent = $('.golfMain .section1 article');
+
             // 이전 슬라이드 내용이 담긴 태그를 모두 삭제
             selTitParent.children('h2').remove();
 
@@ -2390,10 +2394,53 @@ var golfPlayers = {
           $('.txtPiece span').removeClass('slideUp');
         },
       }
-
-      
     });
 
+
+    var swiperGolf2 = new Swiper(".swiperGolf2", {
+      spaceBetween: 0,
+      slidesPerView: 'auto',
+      speed: 500,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+
+  },
+
+
+  popupForGolf: function() {
+    let LayerPopup = $('.popup ul'),
+        popupClose = $(".pop_close");
+
+    // 영역 밖 이동 시 마우스 닫기 버튼 보이기
+    $(document).on('mousemove', function (e) {
+      if (LayerPopup.has(e.target).length === 0) {
+        popupClose.css({ transform: "scale(1)" });
+      } else {
+        popupClose.css({ transform: "scale(0)" });
+      }
+    });
+
+    // 영영 밖 이동 시 마우스 닫기 버튼  커서 따라다니기
+    let circle = document.querySelector(".pop_close");
+
+    document.addEventListener("mousemove", (e) => {
+      // mousemove이벤트를 이용해 움
+      // 마우스의 좌표는 clientX와 clientY를 이용해 알수 있다. -> 브라우저 window의 좌표값 위치를 전달한다.
+      // pageX, pageY와는 다름.
+      let mouseX = e.clientX;
+      let mouseY = e.clientY;
+      circle.style.left = mouseX - 35 + "px";
+      circle.style.top = mouseY - 35 + "px";
+    });
+
+    popupClose.on("click", () => {
+      // 팝업 닫기 function
+      $("html").removeClass("blockScroll");
+      $(".popup").fadeOut(300);
+    });
   },
 
 
