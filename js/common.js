@@ -2343,45 +2343,52 @@ var golfPlayers = {
       effect: "fade",
       speed: 500,
       loop: true,
-      // autoplay: {
-      //   delay: 1000,
-      // },
+      autoplay: {
+        delay: 3000,
+      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
       on: {
-        init: function() {
+        init: function() {  // 초기값 - 필요시 작업
 
         },
 
-        slideChangeTransitionStart: function() {
-          
+        slideChangeTransitionStart: function() {  // 넘기기 시작할 때 
+          // 텍스트 슬라이드 애니메이션 클래스 부여(시작)
           $('.txtPiece span').addClass('slideUp');
-
+          // 텍스트 슬라이드 애니메이션이 끝나는 시점
           $('.txtPiece span').on('transitionend', function() {
+            let selTit = $(".swiper-slide-active h2").html(),
+                selTitSplit = selTit.split('<br>'),
+                selTitParent = $('.golfMain .section1 article');
+            // 이전 슬라이드 내용이 담긴 태그를 모두 삭제
+            selTitParent.children('h2').remove();
 
-            let selTit = $(".swiper-slide-active h2").html();
-            let selTitSplit = selTit.split('<br>');
-            
-            $('.txtPiece').remove()
-
+            // 각 슬라이드 내부 h2태그의 띄어쓰기 기준으로 분리한 텍스트 배열들의 개수만큼 태그 생성 및 내용 삽입 
             for (var i=selTitSplit.length-1; i >= 0; i--) {
-              $('.golfMain .section1 article').prepend('<h2 class="txtPiece"><span class="slideUp">' + selTitSplit[i] + '</span></h2>');
-              
-              if ($('.txtPiece').length < selTitSplit.length) {
+              selTitParent.prepend('<h2 class="txtPiece"><span class="slideUp">' + selTitSplit[i] + '</span></h2>');
+
+              if ($('.txtPiece').length < selTitSplit.length) { // 기존 h2태그가 분리한 텍스트 배열 개수보다 낮을 때 = 텍스트 배열 개수만큼 생성
                 i = (selTitSplit.length - 1) - $('.txtPiece').length;
-                $('.golfMain .section1 article').prepend('<h2 class="txtPiece"><span class="slideUp">' + selTitSplit[i] + '</span></h2>');
+                selTitParent.prepend('<h2 class="txtPiece"><span class="slideUp">' + selTitSplit[i] + '</span></h2>');
+              } else if ($('.txtPiece').length === 1) { // 분리한 텍스트 배열 개수가 1개일 때 = 전체 프레임 높이값 맞추기 위해 공백의 h2태그 1개 생성
+                i = 0;
+                selTitParent.children('h2').after('<h2>&nbsp;</h2>');
               }
             }
           })
         },
 
-        slideChangeTransitionEnd: function() {
+        slideChangeTransitionEnd: function() {  // 넘긴 슬라이드가 완전히 자리 잡았을 때
+          // 텍스트별 슬라이드 시간차 주고 자연스럽게 
+          for (var i=0; i<= $('.txtPiece').length; i++) {
+            $('.txtPiece').eq(i).children('span').css('transition-delay', i * 0.06 + 's');
+          }
+          // 텍스트 슬라이드 애니메이션 클래스 삭제(원위치로 내려옴)
           $('.txtPiece span').removeClass('slideUp');
-          
         },
-        
       }
 
       
