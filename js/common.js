@@ -61,7 +61,7 @@ $(function () {
   // 다른페이지 링크 후 해당페이지에서 이벤트 발생시키기 (href 뒤에 ?text 표기)
   $(window).ready(() => {
     const page_url = document.location.href,
-      param = page_url.substring(page_url.indexOf("?") + 1).split("?");
+          param = page_url.substring(page_url.indexOf("?") + 1).split("?");
 
     // 메인페이지 직무소개 이동후 팝업열기
     if ($(".isotope").length) {
@@ -2208,6 +2208,7 @@ var golfPlayers = {
   init: function () {
     this.settingResponsive();
     this.createFullPageGolf();
+    this.swipersForGolf();
   },
 
   settingResponsive: function() {
@@ -2242,7 +2243,6 @@ var golfPlayers = {
 
   createFullPageGolf: function() {
     
-
     $("#fullpage").fullpage({
       anchors: [
         "firstPage",
@@ -2333,6 +2333,60 @@ var golfPlayers = {
       }
     });
     
+  },
+
+
+  swipersForGolf: function() {
+
+    var swiperGolf = new Swiper(".swiperGolf1", {
+      spaceBetween: 30,
+      effect: "fade",
+      speed: 500,
+      loop: true,
+      // autoplay: {
+      //   delay: 1000,
+      // },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      on: {
+        init: function() {
+
+        },
+
+        slideChangeTransitionStart: function() {
+          
+          $('.txtPiece span').addClass('slideUp');
+
+          $('.txtPiece span').on('transitionend', function() {
+
+            let selTit = $(".swiper-slide-active h2").html();
+            let selTitSplit = selTit.split('<br>');
+            
+            $('.txtPiece').remove()
+
+            for (var i=selTitSplit.length-1; i >= 0; i--) {
+              $('.golfMain .section1 article').prepend('<h2 class="txtPiece"><span class="slideUp">' + selTitSplit[i] + '</span></h2>');
+              
+              if ($('.txtPiece').length < selTitSplit.length) {
+                i = (selTitSplit.length - 1) - $('.txtPiece').length;
+                $('.golfMain .section1 article').prepend('<h2 class="txtPiece"><span class="slideUp">' + selTitSplit[i] + '</span></h2>');
+              }
+            }
+          })
+        },
+
+        slideChangeTransitionEnd: function() {
+          $('.txtPiece span').removeClass('slideUp');
+          
+        },
+        
+      }
+
+      
+    });
+
   },
 
 

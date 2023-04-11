@@ -1900,70 +1900,86 @@
 
 /* ================================  두산건설 We've 골프단 - 2023.03.28 =============================== */
 
-.golf .section:not(.footer) { width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; overflow: hidden; }
+/* 공통 */
 .golf #rightnavi { right: 0; left: 5rem; width: fit-content; }
 .golf #rightnavi li.active { padding-bottom: 7.5rem; }
 .golf #rightnavi li a span { font-family: 'Pretendard'; letter-spacing: -.1rem; }
-.golf .section1 { background: linear-gradient(to bottom, #C5CED5 1%, #DDE6EB); }
-.golf .section1 .scroll_down { font-family: 'Montserrat'; font-size: 1.8rem; color: #fff; display: block; writing-mode: vertical-rl; letter-spacing: .18rem; position: absolute; right: 8rem; bottom: 13.3rem; }
-.golf .section1 .scroll_down::after { content:''; display: block; width: 2.3rem; height: 3rem; background: url(../images/common/visual_scroll_arrow.png) no-repeat; position: absolute; bottom: -5.3rem; left: 0; margin-left: .2rem; animation: scrollDwn 1s infinite; }
-.players { position: relative; margin: auto; opacity: 0; transform: translateX(30rem); bottom: -20vh; }
-.golf .section1 article { width: fit-content; height: fit-content; position: absolute; left: 0; right: 0; margin: auto; transform: translate(-43rem, 3rem); letter-spacing: -.25rem; display: flex; flex-direction: column; }
-.golf .section1 article p { font-weight: 400; font-size: 3.2rem; line-height: 1; }
-.golf .section1 article p:last-of-type { background: url(../images/golf/icon_open.png) 0% 50% no-repeat; font-size: 3.8rem; height: 6.5rem; display: flex; align-items: flex-end; margin-top: 6rem; padding-left: 9rem; }
-.golf .section1 article p:last-of-type b:first-child { font-family: 'Montserrat'; font-size: 6.2rem; font-weight: 350; color: #005eb8; line-height: .7; margin-right: .2rem; }
-.golf .section1 article p:last-of-type b:last-child { font-size: 6rem; color: #005eb8; font-weight: 500; line-height: .8; margin-left: 1rem; }
-.golf .section1 article p:last-of-type::before { content: ''; animation: 1s wide ease-in-out; width: 0; height: .1rem; background-color: #999999; display: block; top: -4rem; left: 0; position: absolute; transition: width ease 0s; }
-.golf .section1 article h2 { position: relative; right: .5rem; display: inline-flex; align-items: center; font-family: 'Montserrat'; letter-spacing: -.35rem; font-weight: 500; font-size: 13.4rem; line-height: 1; background-image: -webkit-linear-gradient(left, #00A5D7, #0061BA); -webkit-text-fill-color: transparent; -webkit-background-clip: text; filter: drop-shadow(.2rem .3rem .5rem rgba(47, 48, 53, .3)); }
-.golf .section1 article h2:first-of-type::before { content: ''; background: url(../images/golf/ball.png) 50% 50% no-repeat; width: 10.4rem; height: 10.4rem; display: inline-block; border-radius: 100%; position: absolute; left: 10rem; }
-.golf .section1 article h2 i { opacity: 0; }
-.golf .section1 article * { transform: translateY(5rem); opacity: 0; }
-.golf .section1.ani .players { opacity: 1; bottom: -16vh; transition: .6s all ease .3s; }
-.golf .section1.ani article * { animation: .4s fadeUp .6s ease-in-out; animation-fill-mode: forwards; }
-.golf .section1.ani article *:nth-child(2) { animation-delay: 1s; }
-.golf .section1.ani article *:nth-child(2)::before { animation:1s jump 1.8s; animation-iteration-count: 3; }
-.golf .section1.ani article *:nth-child(3) { animation-delay: 1.2s; }
-.golf .section1.ani article *:nth-child(4) { animation-delay: 1.4s; }
-.golf .section1.ani article *:nth-child(4)::before { animation-delay: 1.6s; animation-fill-mode: forwards; }
-.golf .section2 article { text-align: center; font-family: 'Montserrat'; overflow: hidden; }
-.golf .section2 article p { font-size: 4rem; color: #005eb8; font-weight: 350; }
-.golf .section2 article p span { font-family: 'Pretendard'; font-weight: 400; }
-.golf .section2 article h2 { font-style: italic; font-size: 10rem; color: #005EB8; font-weight: 450; margin: .5rem 1rem 0; }
-.golf .section2 article ul { display: flex; justify-content: center; font-weight: 500; font-size: 4rem; color: #999999; align-items: center; line-height: 1; padding-top: 5rem; }
-.golf .section2 article ul li:nth-child(even) { width: .6rem; height: .6rem; background: #999999; transform: translateY(.3rem) rotate(15deg); margin: 0 2.4rem; opacity: 0; }
-.golf .section2 article ul li:nth-child(odd) { transform: scaleY(0); transform-origin: 0 100%; font-weight: 400; }
-.golf .section2 article > *:not(ul) { opacity: 0; transform: translateY(5rem); }
-.golf .section2.ani article > * { animation: fadeUp .4s ease-in-out; animation-fill-mode: forwards; }
-.golf .section2.ani article > *:nth-child(2) { animation-delay: .4s; }
-.golf .section2.ani article ul li:nth-child(odd) { animation: .4s fadeUp ease-in-out; animation-fill-mode: forwards; }
-.golf .section2.ani article ul li:nth-child(even) { animation: .4s opacity ease-in-out; animation-fill-mode: forwards; }
-.golf .section2.ani article ul li:nth-child(1) { animation-delay: .8s; }
-.golf .section2.ani article ul li:nth-child(2) { animation-delay: 1s; }
-.golf .section2.ani article ul li:nth-child(3) { animation-delay: 1.2s; }
-.golf .section2.ani article ul li:nth-child(4) { animation-delay: 1.4s; }
-.golf .section2.ani article ul li:nth-child(5) { animation-delay: 1.6s; }
-.golf .section2.ani article ul li:nth-child(6) { animation-delay: 1.8s; }
-.golf .section2.ani article ul li:nth-child(7) { animation-delay: 2s; }
-.golf .section2.ani article ul li:nth-child(8) { animation-delay: 2.2s; }
-.golf .section2.ani article ul li:nth-child(9) { animation-delay: 2.4s; }
-.golf .section2.ani article ul li:nth-child(10) { animation-delay: 2.6s; }
-.golf .section:not(.section1, .section2, .footer) { background: #eff4fb; }
-.golf .section:not(.section1, .section2, .footer) article { width: fit-content; position: absolute; margin: auto; left: 0; right: 0; transform: translateX(-39rem); }
-.golf .section:not(.section1, .section2, .footer) article h2 { font-size: 11rem; font-family: 'Montserrat'; font-style: italic; font-weight: 450; line-height: .8; margin-left: -1.5rem; }
-.golf .section:not(.section1, .section2, .footer) article h2::before { content: ''; display: block; width: 5.5rem; height: .6rem; background: #005eb8; transform: skew(-45deg); margin-bottom: 2.7rem; margin-left: 1.5rem; }
-.golf .section:not(.section1, .section2, .footer) article h2 span { color: #005eb8; }
-.golf .section:not(.section1, .section2, .footer) article p { font-size: 2rem; color: #555555; line-height: 1.8; padding-top: 3rem; }
-.golf .section:not(.section1, .section2, .footer) article p b { color: #005eb8; font-weight: 400; }
-.golf .section:not(.section1, .section2, .footer) article h3 { width: 18.1rem; height: 5rem; display: flex; align-items: center; justify-content: center; background: #fff; margin-top: 5.5rem; font-weight: 200; border-radius: 2.5rem; font-size: 2.2rem; color: #555555; }
-.golf .section:not(.section1, .section2, .footer) article h3 span { color: #005eb8; font-size: 2.7rem; font-weight: 400; display: inline-block; padding-right: .5rem; }
-.golf .section:not(.section1, .section2, .footer) article:last-child { position: relative; height: 100%; display: flex; align-items: center; transform: translateX(35rem); }
-.golf .section:not(.section1, .section2, .footer) article:last-child::after { content: ''; width: 55rem; height: 55rem; border-radius: 100%; background: #fff; display: block; transform: translateY(6.4rem); }
-.golf .section:not(.section1, .section2, .footer) article:last-child img { z-index: 1; position: absolute; top: auto; bottom: -2rem; left: 0; right: 0; margin: auto; }
-.golf .section:not(.section1, .section2, .footer) article > * { opacity: 0; transform: translateY(5rem); }
-.golf .section:not(.section1, .section2, .footer).ani article > * { animation: .6s fadeUp ease-in-out; animation-fill-mode: forwards; }
-.golf .section:not(.section1, .section2, .footer).ani article > *:nth-child(2) { animation-delay: .6s; }
-.golf .section:not(.section1, .section2, .footer).ani article:last-child > *:nth-child(2) { animation-delay: .4s; }
-.golf .section:not(.section1, .section2, .footer).ani article > *:nth-child(3) { animation-delay: .8s; }
+
+/* 티저 */
+.golfTeaser .players { position: relative; margin: auto; opacity: 0; transform: translateX(30rem); bottom: -20vh; }
+.golf .golfTeaser .section:not(.footer) { width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; overflow: hidden; }
+.golf .golfTeaser .section1 { background: linear-gradient(to bottom, #C5CED5 1%, #DDE6EB); }
+.golf .golfTeaser .section1 .scroll_down { font-family: 'Montserrat'; font-size: 1.8rem; color: #fff; display: block; writing-mode: vertical-rl; letter-spacing: .18rem; position: absolute; right: 8rem; bottom: 13.3rem; }
+.golf .golfTeaser .section1 .scroll_down::after { content:''; display: block; width: 2.3rem; height: 3rem; background: url(../images/common/visual_scroll_arrow.png) no-repeat; position: absolute; bottom: -5.3rem; left: 0; margin-left: .2rem; animation: scrollDwn 1s infinite; }
+.golf .golfTeaser .section1 article { width: fit-content; height: fit-content; position: absolute; left: 0; right: 0; margin: auto; transform: translate(-43rem, 3rem); letter-spacing: -.25rem; display: flex; flex-direction: column; }
+.golf .golfTeaser .section1 article p { font-weight: 400; font-size: 3.2rem; line-height: 1; }
+.golf .golfTeaser .section1 article p:last-of-type { background: url(../images/golf/icon_open.png) 0% 50% no-repeat; font-size: 3.8rem; height: 6.5rem; display: flex; align-items: flex-end; margin-top: 6rem; padding-left: 9rem; }
+.golf .golfTeaser .section1 article p:last-of-type b:first-child { font-family: 'Montserrat'; font-size: 6.2rem; font-weight: 350; color: #005eb8; line-height: .7; margin-right: .2rem; }
+.golf .golfTeaser .section1 article p:last-of-type b:last-child { font-size: 6rem; color: #005eb8; font-weight: 500; line-height: .8; margin-left: 1rem; }
+.golf .golfTeaser .section1 article p:last-of-type::before { content: ''; animation: 1s wide ease-in-out; width: 0; height: .1rem; background-color: #999999; display: block; top: -4rem; left: 0; position: absolute; transition: width ease 0s; }
+.golf .golfTeaser .section1 article h2 { position: relative; right: .5rem; display: inline-flex; align-items: center; font-family: 'Montserrat'; letter-spacing: -.35rem; font-weight: 500; font-size: 13.4rem; line-height: 1; background-image: -webkit-linear-gradient(left, #00A5D7, #0061BA); -webkit-text-fill-color: transparent; -webkit-background-clip: text; filter: drop-shadow(.2rem .3rem .5rem rgba(47, 48, 53, .3)); }
+.golf .golfTeaser .section1 article h2:first-of-type::before { content: ''; background: url(../images/golf/ball.png) 50% 50% no-repeat; width: 10.4rem; height: 10.4rem; display: inline-block; border-radius: 100%; position: absolute; left: 10rem; }
+.golf .golfTeaser .section1 article h2 i { opacity: 0; }
+.golf .golfTeaser .section1 article * { transform: translateY(5rem); opacity: 0; }
+.golf .golfTeaser .section1.ani .players { opacity: 1; bottom: -16vh; transition: .6s all ease .3s; }
+.golf .golfTeaser .section1.ani article * { animation: .4s fadeUp .6s ease-in-out; animation-fill-mode: forwards; }
+.golf .golfTeaser .section1.ani article *:nth-child(2) { animation-delay: 1s; }
+.golf .golfTeaser .section1.ani article *:nth-child(2)::before { animation:1s jump 1.8s; animation-iteration-count: 3; }
+.golf .golfTeaser .section1.ani article *:nth-child(3) { animation-delay: 1.2s; }
+.golf .golfTeaser .section1.ani article *:nth-child(4) { animation-delay: 1.4s; }
+.golf .golfTeaser .section1.ani article *:nth-child(4)::before { animation-delay: 1.6s; animation-fill-mode: forwards; }
+.golf .golfTeaser .section2 article { text-align: center; font-family: 'Montserrat'; overflow: hidden; }
+.golf .golfTeaser .section2 article p { font-size: 4rem; color: #005eb8; font-weight: 350; }
+.golf .golfTeaser .section2 article p span { font-family: 'Pretendard'; font-weight: 400; }
+.golf .golfTeaser .section2 article h2 { font-style: italic; font-size: 10rem; color: #005EB8; font-weight: 450; margin: .5rem 1rem 0; }
+.golf .golfTeaser .section2 article ul { display: flex; justify-content: center; font-weight: 500; font-size: 4rem; color: #999999; align-items: center; line-height: 1; padding-top: 5rem; }
+.golf .golfTeaser .section2 article ul li:nth-child(even) { width: .6rem; height: .6rem; background: #999999; transform: translateY(.3rem) rotate(15deg); margin: 0 2.4rem; opacity: 0; }
+.golf .golfTeaser .section2 article ul li:nth-child(odd) { transform: scaleY(0); transform-origin: 0 100%; font-weight: 400; }
+.golf .golfTeaser .section2 article > *:not(ul) { opacity: 0; transform: translateY(5rem); }
+.golf .golfTeaser .section2.ani article > * { animation: fadeUp .4s ease-in-out; animation-fill-mode: forwards; }
+.golf .golfTeaser .section2.ani article > *:nth-child(2) { animation-delay: .4s; }
+.golf .golfTeaser .section2.ani article ul li:nth-child(odd) { animation: .4s fadeUp ease-in-out; animation-fill-mode: forwards; }
+.golf .golfTeaser .section2.ani article ul li:nth-child(even) { animation: .4s opacity ease-in-out; animation-fill-mode: forwards; }
+.golf .golfTeaser .section2.ani article ul li:nth-child(1) { animation-delay: .8s; }
+.golf .golfTeaser .section2.ani article ul li:nth-child(2) { animation-delay: 1s; }
+.golf .golfTeaser .section2.ani article ul li:nth-child(3) { animation-delay: 1.2s; }
+.golf .golfTeaser .section2.ani article ul li:nth-child(4) { animation-delay: 1.4s; }
+.golf .golfTeaser .section2.ani article ul li:nth-child(5) { animation-delay: 1.6s; }
+.golf .golfTeaser .section2.ani article ul li:nth-child(6) { animation-delay: 1.8s; }
+.golf .golfTeaser .section2.ani article ul li:nth-child(7) { animation-delay: 2s; }
+.golf .golfTeaser .section2.ani article ul li:nth-child(8) { animation-delay: 2.2s; }
+.golf .golfTeaser .section2.ani article ul li:nth-child(9) { animation-delay: 2.4s; }
+.golf .golfTeaser .section2.ani article ul li:nth-child(10) { animation-delay: 2.6s; }
+.golf .golfTeaser .section:not(.section1, .section2, .footer) { background: #eff4fb; }
+.golf .golfTeaser .section:not(.section1, .section2, .footer) article { width: fit-content; position: absolute; margin: auto; left: 0; right: 0; transform: translateX(-39rem); }
+.golf .golfTeaser .section:not(.section1, .section2, .footer) article h2 { font-size: 11rem; font-family: 'Montserrat'; font-style: italic; font-weight: 450; line-height: .8; margin-left: -1.5rem; }
+.golf .golfTeaser .section:not(.section1, .section2, .footer) article h2::before { content: ''; display: block; width: 5.5rem; height: .6rem; background: #005eb8; transform: skew(-45deg); margin-bottom: 2.7rem; margin-left: 1.5rem; }
+.golf .golfTeaser .section:not(.section1, .section2, .footer) article h2 span { color: #005eb8; }
+.golf .golfTeaser .section:not(.section1, .section2, .footer) article p { font-size: 2rem; color: #555555; line-height: 1.8; padding-top: 3rem; }
+.golf .golfTeaser .section:not(.section1, .section2, .footer) article p b { color: #005eb8; font-weight: 400; }
+.golf .golfTeaser .section:not(.section1, .section2, .footer) article h3 { width: 18.1rem; height: 5rem; display: flex; align-items: center; justify-content: center; background: #fff; margin-top: 5.5rem; font-weight: 200; border-radius: 2.5rem; font-size: 2.2rem; color: #555555; }
+.golf .golfTeaser .section:not(.section1, .section2, .footer) article h3 span { color: #005eb8; font-size: 2.7rem; font-weight: 400; display: inline-block; padding-right: .5rem; }
+.golf .golfTeaser .section:not(.section1, .section2, .footer) article:last-child { position: relative; height: 100%; display: flex; align-items: center; transform: translateX(35rem); }
+.golf .golfTeaser .section:not(.section1, .section2, .footer) article:last-child::after { content: ''; width: 55rem; height: 55rem; border-radius: 100%; background: #fff; display: block; transform: translateY(6.4rem); }
+.golf .golfTeaser .section:not(.section1, .section2, .footer) article:last-child img { z-index: 1; position: absolute; top: auto; bottom: -2rem; left: 0; right: 0; margin: auto; }
+.golf .golfTeaser .section:not(.section1, .section2, .footer) article > * { opacity: 0; transform: translateY(5rem); }
+.golf .golfTeaser .section:not(.section1, .section2, .footer).ani article > * { animation: .6s fadeUp ease-in-out; animation-fill-mode: forwards; }
+.golf .golfTeaser .section:not(.section1, .section2, .footer).ani article > *:nth-child(2) { animation-delay: .6s; }
+.golf .golfTeaser .section:not(.section1, .section2, .footer).ani article:last-child > *:nth-child(2) { animation-delay: .4s; }
+.golf .golfTeaser .section:not(.section1, .section2, .footer).ani article > *:nth-child(3) { animation-delay: .8s; }
+
+/* 메인 */
+.golf .golfMain .section:not(.footer) { overflow: hidden; }
+.golf .golfMain .section1 article { border: 1px solid red; position: absolute; bottom: 20rem; left: 20rem; z-index: 9999; display: flex; flex-wrap: wrap; flex-direction: column; }
+.golf .golfMain .section1 article * { color: #fff; }
+.golf .golfMain .section1 article h2 { font-size: 7rem; display: block; overflow: hidden; order: 1; }
+.golf .golfMain .section1 article h2:last-of-type { font-weight: 300; }
+.golf .golfMain .section1 article h2 span { position: relative; top: 0; bottom: 0; left: 0; right: auto; margin: auto; transition: top ease-in-out .3s; }
+.golf .golfMain .section1 article h2:last-of-type span { transition-delay: .025s; }
+.golf .golfMain .section1 article h2 span.slideUp { top: -10rem; }
+.golf .golfMain .section1 article p { font-size: 3rem; order: 0; }
+.golf .golfMain .section1 article div { order: 2; }
+.golf .golfMain .section1 article div * { position: relative; right: unset; left: unset; top: unset; margin-top: 5rem; display: inline-block; }
 
 @keyframes jump{
     50% { margin-top: -20rem; -webkit-animation-timing-function: ease-in; transform: rotate(90deg); }
