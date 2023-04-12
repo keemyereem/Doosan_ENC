@@ -38,6 +38,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-3.3.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script><!-- swiper 구버전 최적화 문제로 최신버전 적용 -->
+    <script src="https://player.vimeo.com/api/player.js"></script>
 
     <script src="js/lib/jquery.fullPage.js"></script>
     <script src="js/lib/jquery.easings.min.js"></script>
@@ -152,9 +153,12 @@
 
                 <!-- inner video -->
                 <li class="video">
-                  <video id="my-video" class="video-js" controls preload="auto" poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" data-setup='' loop>
-                    <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type='video/mp4'>
-                  </video>
+                  <div data-vimeo-id="212690002" id="yoo-hyun-joo" class="videoFrame active"></div>
+                  <div data-vimeo-id="193832453" id="yoo-hyo-joo" class="videoFrame"></div>
+                  <div data-vimeo-id="166500954" id="park-kyul" class="videoFrame"></div>
+                  <div data-vimeo-id="62604372" id="kim-min-sol" class="videoFrame"></div>
+                  <div data-vimeo-id="108980280" id="lim-hee-jung" class="videoFrame"></div>
+                  <button id="btn-play"><img src="images/main/video_play.png" alt="play"></button>
                 </li>
                 <!-- //inner video -->
 
@@ -193,9 +197,9 @@
                   </ul>
 
                   <ul class="desc_pagination">
-                    <li><a href="javascript:;" title="이전선수 프로필 이동">PREV</a></li>
+                    <li><a href="javascript:;" title="이전선수 프로필 이동" class="desc_pagination_prev">PREV</a></li>
                     <li><span>1</span> / 5</li>
-                    <li><a href="javascript:;" title="다음선수 프로필 이동">NEXT</a></li>
+                    <li><a href="javascript:;" title="다음선수 프로필 이동" class="desc_pagination_next">NEXT</a></li>
                   </ul>
                 </li>
                 <!-- //desc -->

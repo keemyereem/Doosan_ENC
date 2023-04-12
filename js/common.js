@@ -2210,6 +2210,7 @@ var golfPlayers = {
     this.createFullPageGolf();
     this.swipersForGolf();
     this.popupForGolf();
+    this.videoAndTabs();
   },
 
   settingResponsive: function() {
@@ -2443,6 +2444,89 @@ var golfPlayers = {
     });
   },
 
+  videoAndTabs: function() {
+    let playBtn = $('#btn-play'),
+        videoFrames = $('.videoFrame');
 
-  
+    let selectPlayers = ['yoo-hyun-joo', 'yoo-hyo-joo', 'park-kyul', 'kim-min-sol', 'lim-hee-jung'],
+        selPnum = $('.videoFrame.active').index();
+
+    var initialSet = {
+      controls: false,
+      title: false,
+      byline: false,
+      background: false,
+      portrait: false,
+      autopause: true,
+    };
+
+    for (var i=0; i<=selectPlayers.length-1; i++) {
+      console.log('플레이어 [' + i + '] 생성')
+      new Vimeo.Player(selectPlayers[i], initialSet);
+    }
+
+    // ------------------------------------- 처음 로드될 때 첫 프레임은 재생 안됨.
+    let player = new Vimeo.Player(selectPlayers[selPnum]);
+        
+    function vimeoRender() {
+      player = new Vimeo.Player(selectPlayers[selPnum]);
+
+      // 해당 영상의 프레임 띄우기
+      videoFrames.not(':eq(' + selPnum + ')').removeClass('active');
+      videoFrames.eq(selPnum).addClass('active');
+
+      // 컨트롤러 관련 프레임 옵션 변경 불가로 파라미터값 추출 및 변경 
+      var selFrame = videoFrames.eq(selPnum).children('iframe'),
+          selFrameUrl = selFrame.attr('src'),
+          //useCtr = selFrameUrl.replace('&controls=0', '&controls=1').replace('background=0', 'background=1');
+          useCtr = selFrameUrl.replace(/(controls=0|background=0)/g, function(vl){
+            switch(vl){
+              case "controls=0": return "controls=1";
+              case "background=0": return "background=1";
+            }
+          });
+          
+
+      playBtn.on('click', function() {
+        selFrame.attr('src', useCtr);
+        selFrame.on('load', ()=> {
+          playBtn.fadeOut(100);
+          player.play();
+        });
+      });
+    }
+    
+    // ------------------------------------- 다음 프레임으로 넘어갈 때 - 컨트롤 바 사라지게 하기 및 버튼 초기화.
+    $('.desc_pagination_next').on('click', function() {
+      player.pause();
+
+      selPnum >= selectPlayers.length-1 ? selPnum = 0 : selPnum += 1;
+      console.log(selPnum + 1 + '번째 플레이어');
+      vimeoRender();
+      
+      
+      playBtn.fadeIn(100);
+    });
+    
+    $('.desc_pagination_prev').on('click', function() {
+      selPnum <= 0 ? selPnum = selectPlayers.length-1 : selPnum -= 1;
+      console.log(selPnum + 1 + '번째 플레이어');
+      vimeoRender();
+    })
+
+
+    // ------------------------------------- 이 부분 작동하지 않음 - 손볼 것.
+    player.on('play', function() {
+      playBtn.fadeOut(100);
+      alert('a')
+
+    });
+    player.on('pause', function() {    
+      playBtn.fadeIn(100);
+    });
+    player.on('ended', function() {
+      playBtn.fadeIn(100);
+    });
+
+  },
 };
