@@ -156,7 +156,11 @@
 
                   <!-- inner video -->
                   <div class="video">
-                    <iframe src="https://player.vimeo.com/video/212690002?title=0&byline=0&controls=0&portrait=0" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    <div data-vimeo-id="212690002" id="yoo-hyun-joo" class="videoFrame active"></div>
+                    <div data-vimeo-id="193832453" id="yoo-hyo-joo" class="videoFrame"></div>
+                    <div data-vimeo-id="166500954" id="park-kyul" class="videoFrame"></div>
+                    <div data-vimeo-id="62604372" id="kim-min-sol" class="videoFrame"></div>
+                    <div data-vimeo-id="108980280" id="lim-hee-jung" class="videoFrame"></div>
                     <button id="btn-play"><img src="images/main/video_play.png" alt="play"></button>
                   </div>
                   <!-- //inner video -->
@@ -218,5 +222,102 @@
     <!-- //wrap -->
 
     <div id="topButton" style="cursor: pointer">TOP</div>
+
+
+
+    <script>
+    // 재생버튼, 각 선수들의 동영상 프레임
+    let playBtn = $('#btn-play'),
+        videoFrames = $('.videoFrame');
+
+    // 각 선수들 이름(아이디), 활성화된 동영상 프레임 인덱스 번호
+    let selectPlayers = ['yoo-hyun-joo', 'yoo-hyo-joo', 'park-kyul', 'kim-min-sol', 'lim-hee-jung'],
+        selPnum = $('.videoFrame.active').index();
+        
+    // Vimeo 초기 세팅값 - 아무것도 안보이게 하고, 루프 돌리고, 오토플레이 X
+    var initialSet = {
+      controls: false,
+      title: false,
+      byline: false,
+      background: false,
+      portrait: false,
+      autopause: true,
+      loop: true,
+      autoplay: false,
+    };
+
+    // 필요한 동영상의 데이터를 수집 후 미리 셋팅
+    for (var i=0; i<=selectPlayers.length-1; i++) {
+      console.log('| Vimeo rendering count : ' + i + ' |')
+      new Vimeo.Player(selectPlayers[i], initialSet);
+    }
+
+    // 팝업 켜면 해당 인덱스의 영상을 호이스트
+    let player = new Vimeo.Player(selectPlayers[selPnum]);
+    player.setVolume(0);
+
+    // Vimeo 동영상 아이프레임 생성 완료 후 [비디오 플레이어 함수] 실행 및 재생버튼 나오기 
+    $(window).on('load', function() {
+      console.log('| Vimeo render complete |')
+      playBtn.fadeIn(100);
+      vimeoRender();
+    })
+
+    // 이전, 다음버튼 클릭 시
+    $('.desc_pagination').on('click', function(e) {
+      playBtn.fadeIn(200);
+      selPnum = $(this).hasClass('next') ? (selPnum + 1) % selectPlayers.length : (selPnum + selectPlayers.length - 1) % selectPlayers.length;
+      vimeoRender();
+    });
+
+    // [비디오 플레이어 함수]
+    function vimeoRender() {
+      // Next, Prev버튼 클릭 시 해당 활성화 인덱스
+      player = new Vimeo.Player(selectPlayers[selPnum]);
+      player.setCurrentTime(0);
+      player.unload();
+
+      // 해당 영상의 프레임 띄우기
+      videoFrames.not(':eq(' + selPnum + ')').removeClass('active');
+      videoFrames.eq(selPnum).addClass('active');
+      
+      // 1. 컨트롤러 관련 프레임 옵션 변경 불가
+      // 2. 활성화 인덱스 안의 아이프레임 src 추출 및 변수화
+      // 3. src 파라미터값 추출 및 변경 - 컨트롤바 보이게 하기 
+      selFrame = videoFrames.eq(selPnum).children('iframe'),
+      selFrameUrl = selFrame.attr('src'),
+      useCtr = selFrameUrl.replace(/(controls=0|background=0)/g, function(vl){
+        switch(vl){
+          case "controls=0": return "controls=1";
+          case "background=0": return "background=1";
+        }
+      });
+
+      // 재생버튼 클릭 시
+      playBtn.on('click', function(e) {
+        e.stopImmediatePropagation();
+        
+        // 변경한 src파라미터값 삽입
+        selFrame.attr('src', useCtr);
+        console.log('1. Play setting start');
+
+        // 동영상이 모두 로드되었을 때 재생버튼 사라지고 영상 플레이 시작
+        selFrame.on('load', ()=> {
+          console.log('2. Controls initiating complete')
+          playBtn.fadeOut(200);
+          setTimeout(()=> {
+            player.play();
+          }, 500)
+        });
+      });
+
+      // Stop the player from automatically playing when going back to hidden slide
+      player.on('loaded', function() {
+        player.pause();
+      });
+    }
+
+  
+</script>
 </body>
 </html>

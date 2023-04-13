@@ -2444,89 +2444,81 @@ var golfPlayers = {
     });
   },
 
+
+
+
+
+
   videoAndTabs: function() {
-    let playBtn = $('#btn-play'),
-        videoFrames = $('.videoFrame');
+    // 재생버튼, 각 선수들의 동영상 프레임
+    const playBtn = $('#btn-play');
 
-    let selectPlayers = ['yoo-hyun-joo', 'yoo-hyo-joo', 'park-kyul', 'kim-min-sol', 'lim-hee-jung'],
-        selPnum = $('.videoFrame.active').index();
+    // 각 선수들 이름(아이디), 활성화된 동영상 프레임 인덱스 번호
+    const selectPlayers = ['212690002', '193832453', '166500954', '62604372', '108980280'];
+    
+    // 팝업 켜면 해당 인덱스의 영상을 호이스트
+    const iframe = $('iframe');
+    const player = new Vimeo.Player(iframe);
 
-    var initialSet = {
-      controls: false,
-      title: false,
-      byline: false,
-      background: false,
-      portrait: false,
-      autopause: true,
-    };
 
-    for (var i=0; i<=selectPlayers.length-1; i++) {
-      console.log('플레이어 [' + i + '] 생성')
-      new Vimeo.Player(selectPlayers[i], initialSet);
-    }
+    let selPnum = 2,
+        selFrameUrl = iframe.attr('src'),
+        vurl = selFrameUrl.match(/player.vimeo.com\/video\/?([0-9]+)/i);
 
-    // ------------------------------------- 처음 로드될 때 첫 프레임은 재생 안됨.
-    let player = new Vimeo.Player(selectPlayers[selPnum]);
-        
-    function vimeoRender() {
-      player = new Vimeo.Player(selectPlayers[selPnum]);
+        selFrameUrl = selFrameUrl.replace(vurl[1], selectPlayers[selPnum]);
 
-      // 해당 영상의 프레임 띄우기
-      videoFrames.not(':eq(' + selPnum + ')').removeClass('active');
-      videoFrames.eq(selPnum).addClass('active');
-
-      // 컨트롤러 관련 프레임 옵션 변경 불가로 파라미터값 추출 및 변경 
-      var selFrame = videoFrames.eq(selPnum).children('iframe'),
-          selFrameUrl = selFrame.attr('src'),
-          //useCtr = selFrameUrl.replace('&controls=0', '&controls=1').replace('background=0', 'background=1');
-          useCtr = selFrameUrl.replace(/(controls=0|background=0)/g, function(vl){
-            switch(vl){
-              case "controls=0": return "controls=1";
-              case "background=0": return "background=1";
-            }
-          });
-          
-
-      playBtn.on('click', function() {
-        selFrame.attr('src', useCtr);
-        selFrame.on('load', ()=> {
-          playBtn.fadeOut(100);
-          player.play();
+    let useCtr = selFrameUrl.replace(/(controls=0|background=0)/g, function(vl){
+          switch(vl){
+            case "controls=0": return "controls=1";
+            case "background=0": return "background=1";
+          }
         });
+
+
+
+        console.log(useCtr);
+
+    playBtn.on('click', function(e) {
+      e.stopImmediatePropagation();
+      
+      // 변경한 src파라미터값 삽입
+      iframe.attr('src', useCtr);
+      console.log('1. Play setting start');
+
+      // 동영상이 모두 로드되었을 때 재생버튼 사라지고 영상 플레이 시작
+      iframe.on('load', ()=> {
+        console.log('2. Controls initiating complete')
+        playBtn.fadeOut(200);
+        setTimeout(()=> {
+          player.play();
+        }, 500)
+      });
+    });
+
+    // 이전, 다음버튼 클릭 시
+    $('.desc_pagination').on('click', function(e) {
+      playBtn.fadeIn(200);
+      selPnum = $(this).hasClass('next') ? 
+      (selPnum + 1) % selectPlayers.length : (selPnum + selectPlayers.length - 1) % selectPlayers.length;
+      vimeoRender();
+     console.log(' ', iframe)
+    });
+
+    // [비디오 플레이어 함수]
+    function vimeoRender() {
+      // 1. 컨트롤러 관련 프레임 옵션 변경 불가
+      // 2. 활성화 인덱스 안의 아이프레임 src 추출 및 변수화
+      // 3. src 파라미터값 추출 및 변경 - 컨트롤바 보이게 하기 
+      
+
+      // 재생버튼 클릭 시
+      
+
+      // Stop the player from automatically playing when going back to hidden slide
+      player.on('loaded', function() {
+        player.pause();
       });
     }
-    
-    // ------------------------------------- 다음 프레임으로 넘어갈 때 - 컨트롤 바 사라지게 하기 및 버튼 초기화.
-    $('.desc_pagination_next').on('click', function() {
-      player.pause();
-
-      selPnum >= selectPlayers.length-1 ? selPnum = 0 : selPnum += 1;
-      console.log(selPnum + 1 + '번째 플레이어');
-      vimeoRender();
-      
-      
-      playBtn.fadeIn(100);
-    });
-    
-    $('.desc_pagination_prev').on('click', function() {
-      selPnum <= 0 ? selPnum = selectPlayers.length-1 : selPnum -= 1;
-      console.log(selPnum + 1 + '번째 플레이어');
-      vimeoRender();
-    })
-
-
-    // ------------------------------------- 이 부분 작동하지 않음 - 손볼 것.
-    player.on('play', function() {
-      playBtn.fadeOut(100);
-      alert('a')
-
-    });
-    player.on('pause', function() {    
-      playBtn.fadeIn(100);
-    });
-    player.on('ended', function() {
-      playBtn.fadeIn(100);
-    });
 
   },
 };

@@ -1989,17 +1989,18 @@
 .golf .golfMain .popup .pop_close img { width: 100%; }
 .golf .golfMain .popup > ul { cursor: auto; width: 136rem; height: calc(100vh - 20rem); overflow: hidden; background: #fff; position: relative; margin: 10rem auto; letter-spacing: -.15rem; display: flex; }
 .golf .golfMain .popup > ul > li { height: 100%; overflow: hidden; }
-.golf .golfMain .popup .swiperGolf2 { width: 30%; }
-.golf .golfMain .popup .swiperGolf2 .swiper-slide { text-align: center; font-size: 18px; background: #fff; }
-.golf .golfMain .popup .swiperGolf2 .swiper-slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.golf .golfMain .popup .video { width: 30%; position: absolute; left: 0; z-index: 1; cursor: pointer; background: #000;  }
-.golf .golfMain .popup .video .videoFrame,
-.golf .golfMain .popup .video .videoFrame > * { width: 100%; height: 100%; position: absolute; top: 0; left: 0; transition: all ease .2s; }
-.golf .golfMain .popup .video .videoFrame:not(.active) { opacity: 0; visibility: hidden; }
-.golf .golfMain .popup .video .videoFrame.active { opacity: 1; visibility: visible; }
-.golf .golfMain .popup .video #btn-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; border-radius: 100%; transition: all ease .2s; z-index: 1; }
-.golf .golfMain .popup .video #btn-play:active { width: 70px; height: 70px; }
-.golf .golfMain .popup .video #btn-play img { width: 100%; }
+.golf .golfMain .popup .tab { width: 30%; position: relative; }
+.golf .golfMain .popup .tab .swiperGolf2 { height: 100%; }
+.golf .golfMain .popup .tab .swiperGolf2 .swiper-slide { text-align: center; font-size: 18px; background: #fff; }
+.golf .golfMain .popup .tab .swiperGolf2 .swiper-slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.golf .golfMain .popup .tab .video { width: 100%; height: 100%; position: absolute; left: 0; top: 0; z-index: 1; cursor: pointer; background: #000;  }
+.golf .golfMain .popup .tab .video .videoFrame,
+.golf .golfMain .popup .tab .video .videoFrame > * { width: 100%; height: 100%; position: absolute; top: 0; left: 0; transition: all ease .1s; }
+.golf .golfMain .popup .tab .video .videoFrame:not(.active) { opacity: 0; visibility: hidden; }
+.golf .golfMain .popup .tab .video .videoFrame.active { opacity: 1; visibility: visible; }
+.golf .golfMain .popup .tab .video #btn-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; border-radius: 100%; transition: all ease .2s; z-index: 1; }
+.golf .golfMain .popup .tab .video #btn-play:active { width: 70px; height: 70px; }
+.golf .golfMain .popup .tab .video #btn-play img { width: 100%; }
 .golf .golfMain .popup .desc { width: 70%; }
 
 
