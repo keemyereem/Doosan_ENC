@@ -2210,7 +2210,8 @@ var golfPlayers = {
     this.createFullPageGolf();
     this.swipersForGolf();
     this.popupForGolf();
-    this.videoAndTabs();
+    this.renderVimeo();
+    this.tabsFunc();
   },
 
   settingResponsive: function() {
@@ -2405,8 +2406,12 @@ var golfPlayers = {
       loop: true,
       pagination: {
         el: ".swiper-pagination",
-      },
+      }
     });
+    
+    swiperGolf2Class = $('.swiperGolf2').attr('class').split(/\s+/);
+
+    console.log(swiperGolf2Class)
 
   },
 
@@ -2444,81 +2449,135 @@ var golfPlayers = {
     });
   },
 
+  renderVimeo: function() {
+    // 재생버튼, 페이지네이션 버튼, 각 선수들의 동영상 프레임 ID
+    const playBtn = $('#btn-play'),
+          navBtn = $('.desc_pagination'),
+          navNum = $('.desc_number'),
+          tabCont = $('.tab_container'),
+          $swiper = $('.swiperGolf2'),
+          selectPlayers = ['212690002', '193832453', '18237484', '304719209', '108980280'];
 
+    // 아이프레임 정보
+    let iframe = $('iframe'),
+        selFrameUrl = iframe.attr('src');
 
-
-
-
-  videoAndTabs: function() {
-    // 재생버튼, 각 선수들의 동영상 프레임
-    const playBtn = $('#btn-play');
-
-    // 각 선수들 이름(아이디), 활성화된 동영상 프레임 인덱스 번호
-    const selectPlayers = ['212690002', '193832453', '166500954', '62604372', '108980280'];
+    // 활성화 인덱스 넘버, 플레이어 변수 초기화
+    let selPnum = 1,
+        player = null,
+        videoCheckIntervalId;
     
-    // 팝업 켜면 해당 인덱스의 영상을 호이스트
-    const iframe = $('iframe');
-    const player = new Vimeo.Player(iframe);
+    // [vimeoRender함수] 실행, 활성화 인덱스 비디오 플레이어 출력
+    vimeoRender();
 
+    // 팝업 클릭 시 스와이퍼 클래스 생성
+    let currentClass = `player${selPnum + 1}`;
+    $swiper.addClass(currentClass);
+    navNum.children('span').text(selPnum + 1);
+    
 
-    let selPnum = 2,
-        selFrameUrl = iframe.attr('src'),
-        vurl = selFrameUrl.match(/player.vimeo.com\/video\/?([0-9]+)/i);
+    // 페이지네이션 버튼 클릭 시 
+    // 활성화 인덱스 증감, [vimeoRender함수] 실행
+    navBtn.on('click', function() {
+      currentClass = `player${selPnum + 1}`;
 
-        selFrameUrl = selFrameUrl.replace(vurl[1], selectPlayers[selPnum]);
-
-    let useCtr = selFrameUrl.replace(/(controls=0|background=0)/g, function(vl){
-          switch(vl){
-            case "controls=0": return "controls=1";
-            case "background=0": return "background=1";
-          }
-        });
-
-
-
-        console.log(useCtr);
-
-    playBtn.on('click', function(e) {
-      e.stopImmediatePropagation();
+      // 이전, 다음버튼 클릭 시 selPnum증감
+      selPnum = $(this).hasClass('next') ? (selPnum + 1) % selectPlayers.length : (selPnum + selectPlayers.length - 1) % selectPlayers.length;
+      let nextClass = `player${selPnum + 1}`;
       
-      // 변경한 src파라미터값 삽입
-      iframe.attr('src', useCtr);
-      console.log('1. Play setting start');
-
-      // 동영상이 모두 로드되었을 때 재생버튼 사라지고 영상 플레이 시작
-      iframe.on('load', ()=> {
-        console.log('2. Controls initiating complete')
-        playBtn.fadeOut(200);
-        setTimeout(()=> {
-          player.play();
-        }, 500)
-      });
-    });
-
-    // 이전, 다음버튼 클릭 시
-    $('.desc_pagination').on('click', function(e) {
-      playBtn.fadeIn(200);
-      selPnum = $(this).hasClass('next') ? 
-      (selPnum + 1) % selectPlayers.length : (selPnum + selectPlayers.length - 1) % selectPlayers.length;
+      // 스와이퍼에 플레이어 클래스 교체 
+      $swiper.removeClass(currentClass).addClass(nextClass);
+      navNum.children('span').text(selPnum + 1);
       vimeoRender();
-     console.log(' ', iframe)
+    });
+    
+    // 플레이버튼 클릭 시
+    playBtn.on('click', function(e) {
+      e.preventDefault();
+
+      // 플레이어 변수 감지 후 초기화
+      if (player === null) {
+        player = new Vimeo.Player(iframe);
+      }
+
+      // 컨트롤 바 생성
+      let useCtr = selFrameUrl.replace(/(controls=0)/g, function(vl){
+        switch(vl){ case "controls=0": return "controls=1"; }
+      });
+
+      // 컨트롤바를 생성한 아이프레임 리렌더링
+      let newIframe = $('<iframe/>', {
+        src: useCtr,
+        width: '100%',
+        height: '100%',
+        frameborder: '0',
+        webkitallowfullscreen: '',
+        mozallowfullscreen: '',
+        allowfullscreen: '',
+        allow: 'autoplay',
+        class: 'vimeo01',
+      });
+
+      // 기존 아이프레임을 리렌더링된 아이프레임으로 교체
+      iframe.replaceWith(newIframe);
+      iframe = newIframe;
+
+      // 교체된 아이프레임으로 플레이어 생성
+      player = new Vimeo.Player(iframe);
+      
+      // 플레이어가 재생될 준비가 되면 재생버튼 사라짐/ 플레이 시작
+      player.ready().then(() => {
+        playBtn.fadeOut(200);
+        player.play();
+      });
+
+      player.on('pause', function() {
+        console.log('헤헤헤헤')
+      })
     });
 
-    // [비디오 플레이어 함수]
+    // [vimeoRender함수]
     function vimeoRender() {
-      // 1. 컨트롤러 관련 프레임 옵션 변경 불가
-      // 2. 활성화 인덱스 안의 아이프레임 src 추출 및 변수화
-      // 3. src 파라미터값 추출 및 변경 - 컨트롤바 보이게 하기 
-      
+      // 현재 아이프레임 src값에서 ../video/ 이후 id값을 추출
+      let vurl = selFrameUrl.match(/player.vimeo.com\/video\/?([0-9]+)/i);
 
-      // 재생버튼 클릭 시
-      
+      // 추출한 id값을 활성화된 인덱스(선수) id값으로 교체
+      selFrameUrl = selFrameUrl.replace(vurl[1], selectPlayers[selPnum]);
 
-      // Stop the player from automatically playing when going back to hidden slide
-      player.on('loaded', function() {
-        player.pause();
-      });
+      // 교체한 src값을 아이프레임 src값에 치환
+      iframe.attr('src', selFrameUrl);
+
+      // 위의 단계를 모두 완료한 시점(준비된 상태)이면 재생버튼 나타남
+      iframe.load(function() {
+        playBtn.fadeIn(200);
+      }) 
     }
 
+
+    // 팝업이 열려있는 동안 비디오탭이 작동중인지 확인
+    $(".openPopup").on("click", () => {
+      videoCheckIntervalId = setInterval(function() {
+        // 확인도중 비디오가 꺼져있다면 플레이어 초기화
+        if(!$('.video').hasClass('on')) {
+          vimeoRender();
+        }
+      }, 500); // 0.5초마다 체크
+    });
+
+    // 팝업을 닫으면 플레이어 초기화
+    $(".pop_close").on('click', function() {
+      clearInterval(videoCheckIntervalId);
+      vimeoRender();
+    });
+  },
+
+
+  tabsFunc: function() {
+    const tabCont = $('.tab_container');
+
+    tabCont.children().on('click', function() {
+     $(this).index() !== 0 ? $('.video').addClass('on') : $('.video').removeClass('on');
+    })
+    
   },
 };
