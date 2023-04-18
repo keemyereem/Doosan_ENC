@@ -16,8 +16,7 @@ var golfPlayers = {
     this.createFullPageGolf();
     this.popupForGolf();
     this.swipersForGolf();
-    this.renderVimeo();
-    this.tabsFunc();
+    this.popup01();
   },
 
   settingResponsive: function() {
@@ -238,27 +237,86 @@ var golfPlayers = {
     });
 
 
-    var swiperGolf2 = new Swiper(".swiperGolf2", {
-      spaceBetween: 0,
-      slidesPerView: 'auto',
-      speed: 500,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-      }
-    });
+    // var swiperGolf2 = new Swiper(".swiperGolf2", {
+    //   spaceBetween: 0,
+    //   slidesPerView: 'auto',
+    //   speed: 500,
+    //   loop: true,
+    //   pagination: {
+    //     el: ".swiper-pagination",
+    //   }
+    // });
 
   },
 
-  renderVimeo: function() {
+  popup01: function() {
     // ●● const ●● 재생버튼, 페이지네이션 버튼, 각 선수들의 동영상 프레임 ID
     const playBtn = $('#btn-play'),
           navBtn = $('.desc_pagination'),
           popBtn = $('.golf2List').children(),
           navNum = $('.desc_number'),
-          $swiper = $('.swiperGolf2');
+          imageCont = $('.tab .img'),
+          tabCont = $('.tab_container');
           
-    const selectPlayers = ['212690002', '193832453', '18237484', '304719209', '108980280'];
+    // 각 선수 정보(개발반영시 변경 예상)
+    // 0 동영상/ 1 이미지/ 2 이름/ 3 영문이름/ 4 인터뷰/ 5 생년월일/ 6 입회년도/ 7 데뷔전/ 8 명칭 풀네임
+    const selectPlayers = [
+      [
+        "818591181", 
+        "images/golf/player_yhj.png", 
+        "유현주", 
+        "Yoo Hyunju", 
+        "“평소 투어프로로서 경험 뿐 아니라 방송, 모델, 인플루언서 등 <br>풍부하고 다양한 경험을 ‘가져보고(have)’ 싶다고 생각했어요.”",
+        "1994년 02월 28일",
+        "2011년 10월",
+        "2012년 제5회 롯데마트 여자오픈",
+        "유현주 프로"
+      ], 
+      [
+        "818598210", 
+        "images/golf/player_yhyoj.png",
+        "유효주", 
+        "Yoo Hyoju", 
+        "“골프라는 동반자와 즐거운 인생을 ‘살고(live)’ 싶고, <br>언젠가는 We've에 제 집을 마련해서 살고 싶어요.”",
+        "1997년 04월 21일",
+        "2015년 10월",
+        "2017년 롯데렌터카 여자오픈",
+        "유효주 프로"
+      ], 
+      [
+        "818590506", 
+        "images/golf/player_pk.png",
+        "박결", 
+        "Park Gyeol", 
+        "“어릴 때부터 골프를 너무나 사랑해서 골프선수가 되었고, <br>또 골프선수이기에 많은 팬분들의 사랑을 받고 있다고 생각해요. <br>그런 의미에서 골프는 저에게 ‘love’나 다름없죠.”",
+        "1996년 01월 09일",
+        "2014년 10월",
+        "2015년 제8회 롯데마트 여자오픈",
+        "박결 프로"
+      ], 
+      [
+        "818589792", 
+        "images/golf/player_kms.png",
+        "김민솔", 
+        "Kim Minsol", 
+        "“아직 부족한 점이 많기 때문에 한 타 한 타 착실하게 <br>save 하는 것처럼 체력, 스킬, 멘탈도 ‘키우고(save)’ <br>관리하려고 해요.”",
+        "2006년 06월 15일",
+        " ",
+        " ",
+        "김민솔 아마"
+      ], 
+      [
+        "818599469", 
+        "images/golf/player_lhj.png",
+        "임희정", 
+        "Lim Heejeong", 
+        "“투어를 다니면서 최고의 성과를 얻기 위해 <br>여러 문제에 직면했을 때도 항상 최선의 답을 찾아 <br>‘해결하는(solve)’ 임희정이 되고 싶어요.”",
+        "2000년 09월 02일",
+        "2018년 10월",
+        "2018년 효성 챔피언십",
+        "임희정 프로"
+      ]
+    ];
 
     // ●● let ●● 아이프레임 정보
     let iframe = $('iframe'),
@@ -274,55 +332,11 @@ var golfPlayers = {
       // selPnum값 부여
       selPnum = $(this).index();
     
-      // swiper 모든 player 클래스 제거
-      $swiper.removeClass(function (index, className) {
-        return (className.match(/(^|\s)player\d+/g) || []).join(' ');
-      });
-    
-      // 활성화 인덱스 넘버로 player 클래스 생성
-      let currentClass = `player${selPnum + 1}`;
-      $swiper.addClass(currentClass);
-      navNum.children('span').text(selPnum + 1);
-
-      // player + selPnum 클래스를 찾기 위한 셀렉터
-      var playerClass = 'player';
-      var selector = '.' + playerClass + (selPnum + 1);
-      
-      var swiper = document.querySelector('.swiperGolf2' + selector); // 선택된 swiper 객체를 가져옵니다.
-      
-      if (swiper) { // swiper 객체가 존재하는 경우에만 실행합니다.
-        // 이미지 경로 설정
-        var imgPath = "img/golf/";
-        var imgArray = [
-          ["pl1.png", "pl2.png", "pl3.png"], // 플레이어 1 이미지
-          ["pl4.png", "pl5.png"], // 플레이어 2 이미지
-          // 플레이어 3 ~ 100 이미지 배열
-        ];
-
-        // 특정 플레이어 이미지 변경 함수
-        function changePlayerImg(selPnum) {
-          var playerImgs = imgArray[selPnum-1];
-          var swiperSlides = document.querySelectorAll('.swiperGolf2 .swiper-slide');
-          for (var i = 0; i < swiperSlides.length; i++) {
-            swiperSlides[i].querySelector('img').setAttribute('src', imgPath + playerImgs[i]);
-          }
-        }
-
-        // 선택된 플레이어에 따라서 이미지 변경
-        var playerButtons = document.querySelectorAll('.playerButton');
-        for (var i = 0; i < playerButtons.length; i++) {
-          playerButtons[i].addEventListener('click', function() {
-            selPnum = parseInt(this.getAttribute('data-pnum'));
-            changePlayerImg(selPnum);
-            swiper.update();
-          });
-        }
-
-      }
-
-    
-      // function/vimeoRender ● - 활성화 인덱스 비디오 플레이어 출력
+      tabCont.children().first().addClass('on');
+      // function vimeoRender/imageRender/descRender ● - 활성화 인덱스 비디오 플레이어 출력
+      imageRender();
       vimeoRender();
+      descRender();
 
       // 팝업이 열려있는 동안 비디오탭이 작동중인지 확인
       videoCheckIntervalId = setInterval(function() {
@@ -331,13 +345,23 @@ var golfPlayers = {
           console.log('checking')
           vimeoRender();
         }
-      }, 500); // 0.5초마다 체크
-    })
+      }, 1000); // 0.5초마다 체크
+    });
+
+    // ●● click ●● 탭버튼 클릭 시 
+    tabCont.children().on('click', function() {
+      tabCont.children().removeClass('on');
+      $(this).addClass('on')
+      $(this).index() !== 0 ? $('.video').addClass('on') : $('.video').removeClass('on');
+    });
     
 
     // ●● click ●● 페이지네이션 버튼 클릭 시 
     navBtn.on('click', function() {
       $('.video').removeClass('on');
+      tabCont.children().last().removeClass('on');
+      tabCont.children().first().addClass('on');
+
       currentClass = `player${selPnum + 1}`;
 
       // 이전, 다음버튼 클릭 시 selPnum증감
@@ -345,11 +369,13 @@ var golfPlayers = {
       let nextClass = `player${selPnum + 1}`;
       
       // 스와이퍼에 플레이어 클래스 교체 
-      $swiper.removeClass(currentClass).addClass(nextClass);
+      imageCont.removeClass(currentClass).addClass(nextClass);
       navNum.children('span').text(selPnum + 1);
 
-      // function/vimeoRender ●
+      // function vimeoRender/imageRender/descRender ●
       vimeoRender();
+      imageRender();
+      descRender();
     });
     
     // ●● click ●● 플레이버튼 클릭 시
@@ -393,7 +419,7 @@ var golfPlayers = {
       });
 
       player.on('pause', function() {
-        console.log('헤헤헤헤')
+        console.log('중지상태')
       })
     });
 
@@ -403,7 +429,7 @@ var golfPlayers = {
       let vurl = selFrameUrl.match(/player.vimeo.com\/video\/?([0-9]+)/i);
 
       // 추출한 id값을 활성화된 인덱스(선수) id값으로 교체
-      selFrameUrl = selFrameUrl.replace(vurl[1], selectPlayers[selPnum]);
+      selFrameUrl = selFrameUrl.replace(vurl[1], selectPlayers[selPnum][0]);
 
       // 교체한 src값을 아이프레임 src값에 치환
       iframe.attr('src', selFrameUrl);
@@ -414,20 +440,55 @@ var golfPlayers = {
       }) 
     }
 
+    // ●● function/imageRender ●●
+    function imageRender() {
+      // imgBox 모든 player 클래스 제거
+      imageCont.removeClass(function (index, className) {
+        return (className.match(/(^|\s)player\d+/g) || []).join(' ');
+      });
+    
+      // 활성화 인덱스 넘버로 player 클래스 생성
+      let currentClass = `player${selPnum + 1}`;
+      imageCont.addClass(currentClass);
+      navNum.children('span').text(selPnum + 1);
+
+      // player + selPnum 클래스를 찾기 위한 셀렉터
+      var playerClass = 'player';
+      var selector = '.' + playerClass + (selPnum + 1);
+
+      // 선택된 객체를 가져옴
+      var selPlayer = document.querySelector('.img' + selector); 
+      
+      if (selPlayer) { // swiper 객체가 존재하는 경우에만 실행합니다.
+        imageCont.children('img').attr('src', selectPlayers[selPnum][1]);
+      }
+    }
+
+    function descRender() {
+      let descName = $('.desc_inner li:first-child h2'),
+          descParph = $('.desc_inner li:first-child p'),
+          descBirth = $('.desc_inner .info p:first-child span'),
+          descEnter = $('.desc_inner .info p:nth-child(2) span'),
+          descDebut = $('.desc_inner .info p:last-child span');
+          tabBtn = tabCont.find('span');
+
+      descName.html(selectPlayers[selPnum][2] + '<span>' + selectPlayers[selPnum][3] + '</span>');
+      descParph.html(selectPlayers[selPnum][4]);
+      descBirth.html(selectPlayers[selPnum][5]);
+      descEnter.html(selectPlayers[selPnum][6]);
+      descDebut.html(selectPlayers[selPnum][7]);
+      tabBtn.html(selectPlayers[selPnum][8]);
+
+    }
+
     // 팝업을 닫으면 플레이어 초기화
     $(".pop_close").on('click', function() {
       clearInterval(videoCheckIntervalId);
+      tabCont.children().removeClass('on');
       vimeoRender();
+      imageRender();
     });
   },
 
 
-  tabsFunc: function() {
-    const tabCont = $('.tab_container')
-
-    tabCont.children().on('click', function() {
-     $(this).index() !== 0 ? $('.video').addClass('on') : $('.video').removeClass('on');
-    });
-
-  },
 };
