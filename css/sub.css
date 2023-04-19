@@ -1988,7 +1988,7 @@
 
 /* 팝업 */
 .golf .golfMain .openPopup { display: flex; align-items: center; justify-content: center; border: 1px solid red; position: absolute; width: 200px; height: 200px; font-size: 40px; }
-.golf .golfMain .popup { cursor: none; width: 100%; padding: 0 3rem; overflow: auto; height: 100vh; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, .6); z-index: 1000; display: block; }
+.golf .golfMain .popup { cursor: none; width: 100%; padding: 0 3rem; overflow: auto; height: 100vh; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, .6); z-index: 1000; display: none; }
 .golf .golfMain .popup .pop_close { position: fixed; top: 0; left: 0; width: 7rem; height: 7rem; transform: scale(0); cursor: none; transition: transform ease .3s; }
 .golf .golfMain .popup .pop_close img { width: 100%; }
 .golf .golfMain .popup > ul { cursor: auto; width: 136rem; height: calc(100vh - 20rem); overflow: hidden; background: #fff; position: relative; margin: 10rem auto; letter-spacing: -.15rem; display: flex; }

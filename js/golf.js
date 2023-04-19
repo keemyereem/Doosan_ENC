@@ -2,7 +2,7 @@
 /* --------------------- Published by 4m Creative --------------------- */
 
 $(function () {
-
+console.log('test')
 
 });
 
