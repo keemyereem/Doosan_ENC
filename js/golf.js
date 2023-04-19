@@ -2,7 +2,6 @@
 /* --------------------- Published by 4m Creative --------------------- */
 
 $(function () {
-console.log('test222222')
 
 });
 
@@ -10,7 +9,7 @@ console.log('test222222')
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////                                                  **골프단 신규 - 2023.03.28**                                                      ///////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-var golfPlayers = {
+let golfPlayers = {
   init: function () {
     this.settingResponsive();
     this.createFullPageGolf();
@@ -24,7 +23,7 @@ var golfPlayers = {
       $('body').addClass('golf');
     });
 
-    var playersSection = $('.section').not('.section1, .section2, .footer');
+    let playersSection = $('.section').not('.section1, .section2, .footer');
     if ($('#mobile').length) {
       playersSection.each(function(index) {
         let golfImgUrl = playersSection.eq(index).find('img');
@@ -34,7 +33,7 @@ var golfPlayers = {
     }
 
     $(document).on("click", "#topButton", function () {
-      var goTop = location.href.split('#')
+      let goTop = location.href.split('#')
       window.location = goTop[0] + '#firstPage';
     });
 
@@ -211,7 +210,7 @@ var golfPlayers = {
             selTitParent.children('h2').remove();
 
             // 각 슬라이드 내부 h2태그의 띄어쓰기 기준으로 분리한 텍스트 배열들의 개수만큼 태그 생성 및 내용 삽입 
-            for (var i=selTitSplit.length-1; i >= 0; i--) {
+            for (let i=selTitSplit.length-1; i >= 0; i--) {
               selTitParent.prepend('<h2 class="txtPiece"><span class="slideUp">' + selTitSplit[i] + '</span></h2>');
 
               if ($('.txtPiece').length < selTitSplit.length) { // 기존 h2태그가 분리한 텍스트 배열 개수보다 낮을 때 = 텍스트 배열 개수만큼 생성
@@ -259,7 +258,7 @@ var golfPlayers = {
           tabCont = $('.tab_container');
           
     // 각 선수 정보(개발반영시 변경 예상)
-    // 0 동영상/ 1 이미지/ 2 이름/ 3 영문이름/ 4 인터뷰/ 5 생년월일/ 6 입회년도/ 7 데뷔전/ 8 명칭 풀네임
+    // 0 동영상/ 1 이미지/ 2 이름/ 3 영문이름/ 4 인터뷰/ 5 생년월일/ 6 입회년도/ 7 데뷔전/ 8 명칭 풀네임/ 9 주요성적
     const selectPlayers = [
       [
         "818591181", 
@@ -270,7 +269,13 @@ var golfPlayers = {
         "1994년 02월 28일",
         "2011년 10월",
         "2012년 제5회 롯데마트 여자오픈",
-        "유현주 프로"
+        "유현주 프로",
+        [
+          ['2020', '제주삼다수 마스터스 25위'],
+          ['2017', 'MY 문영 퀸즈파크 챔피언십 2017 25위'],
+          ['2016', '팬텀 클래식 With YTN 27위'],
+          ['2012', 'BS금융그룹 부산은행ㆍ서울경제 여자오픈 14위']
+        ]
       ], 
       [
         "818598210", 
@@ -281,7 +286,12 @@ var golfPlayers = {
         "1997년 04월 21일",
         "2015년 10월",
         "2017년 롯데렌터카 여자오픈",
-        "유효주 프로"
+        "유효주 프로",
+        [
+          ['2022', '<b>WEMIX 챔피언십 with 와우매니지먼트그룹 SBS Golf 우승</b>'],
+          ['2021', '롯데 오픈 7위'],
+          ['2017', 'KB금융 스타챔피언십 3위']
+        ]
       ], 
       [
         "818590506", 
@@ -292,7 +302,24 @@ var golfPlayers = {
         "1996년 01월 09일",
         "2014년 10월",
         "2015년 제8회 롯데마트 여자오픈",
-        "박결 프로"
+        "박결 프로",
+        [
+          ['2022', '넥센∙세인트나인 마스터즈 2022 3위 '],
+          ['2021', '셀트리온 퀸즈 마스터즈 9위'],
+          ['2020', '제14회 S-OIL 챔피언십 6위'],
+          ['2019', '제8회 KG∙이데일리 레이디스 오픈 with KFC 6위'],
+          [
+            '2018', '<b>SK네트웍스∙서울경제 레이디스 클래식 우승</b> <br>' +
+            '제12회 S-OIL 챔피언십 2위 <br>' +
+            '효성 챔피언십 with SBS 2위'
+          ],
+          ['2017', '삼천리 Together Open 2017 2위'],
+          ['2016', '초정탄산수 용평리조트 오픈 with SBS 2위'],
+          [
+            '2015', '제16회 하이트진로 챔피언십 2위 <br>' +
+            '2015 NH투자증권 레이디스 챔피언십 2위'
+          ]
+        ]
       ], 
       [
         "818589792", 
@@ -303,7 +330,18 @@ var golfPlayers = {
         "2006년 06월 15일",
         " ",
         " ",
-        "김민솔 아마"
+        "김민솔 선수",
+        [
+          ['2023', '제5회 WAAP(위민스 아마추어 아시아 퍼시픽 선수권) 2위'],
+          [
+            '2022', '제103회 전국체육대회 3위 <br>' +
+            '<b>제29회 송암배 아마추어골프선수권대회 우승</b> <br>' +
+            '<b>블루원배 제39회 한국주니어골프선수권대회 우승</b> <br>' +
+            '강민구배 제46회 한국여자아마추어골프선수권대회 3위 <br>' +
+            '제20회 빛고을중흥배 아마추어골프선수권대회 4위 <br>' +
+            '제1회 대한골프협회장배 아마추어골프선수권대회 5위'
+          ]
+        ]
       ], 
       [
         "818599469", 
@@ -314,7 +352,25 @@ var golfPlayers = {
         "2000년 09월 02일",
         "2018년 10월",
         "2018년 효성 챔피언십",
-        "임희정 프로"
+        "임희정 프로",
+        [
+          ['2022', '<b>DB그룹 제36회 한국여자오픈 골프선수권대회 우승</b>'],
+          [
+            '2021', 'BMW Ladies Championship 2위 <br>' +
+            '제21회 하이트진로 챔피언십 2위 <br>' +
+            '<b>국민쉼터 하이원 리조트 여자오픈 2021 우승</b> <br>' +
+            '대유위니아∙MBN 여자오픈 2위 <br>'
+          ],
+          [
+            '2020', '아이에스동서 부산오픈 2위 <br>' +
+            '제42회 KLPGA 챔피언십 2위 <br>'
+          ],
+          [
+            '2019', '<b>KB금융 스타챔피언십 우승</b> <br>' +
+            '<b>올포유∙레노마 챔피언십 2019 우승</b> <br>' +
+            '<b>하이원리조트 여자오픈 2019 우승</b>'
+          ]
+        ]
       ]
     ];
 
@@ -324,52 +380,30 @@ var golfPlayers = {
 
     // ●● let ●● 활성화 인덱스 넘버, 플레이어 변수 초기화
     let selPnum = 0,
-        player = null,
-        videoCheckIntervalId;
+        player = null;
 
     // ●● click ●● 팝업 오픈 시 
     popBtn.on('click', function() {
       // selPnum값 부여
       selPnum = $(this).index();
-    
-      tabCont.children().first().addClass('on');
+      navNum.children('span').text(selPnum + 1);
+
       // function vimeoRender/imageRender/descRender ● - 활성화 인덱스 비디오 플레이어 출력
       imageRender();
       vimeoRender();
       descRender();
-
-      // 팝업이 열려있는 동안 비디오탭이 작동중인지 확인
-      videoCheckIntervalId = setInterval(function() {
-        // 확인도중 비디오가 꺼져있다면 플레이어 초기화
-        if(!$('.video').hasClass('on')) {
-          console.log('checking')
-          vimeoRender();
-        }
-      }, 1000); // 0.5초마다 체크
     });
 
     // ●● click ●● 탭버튼 클릭 시 
     tabCont.children().on('click', function() {
-      tabCont.children().removeClass('on');
-      $(this).addClass('on')
-      $(this).index() !== 0 ? $('.video').addClass('on') : $('.video').removeClass('on');
+      $(this).addClass('on').siblings().removeClass('on');
+      $(this).index() !== 0 ? $('.video').addClass('on') : ($('.video').removeClass('on'), vimeoRender())
     });
-    
 
     // ●● click ●● 페이지네이션 버튼 클릭 시 
     navBtn.on('click', function() {
-      $('.video').removeClass('on');
-      tabCont.children().last().removeClass('on');
-      tabCont.children().first().addClass('on');
-
-      currentClass = `player${selPnum + 1}`;
-
       // 이전, 다음버튼 클릭 시 selPnum증감
       selPnum = $(this).hasClass('next') ? (selPnum + 1) % selectPlayers.length : (selPnum + selectPlayers.length - 1) % selectPlayers.length;
-      let nextClass = `player${selPnum + 1}`;
-      
-      // 스와이퍼에 플레이어 클래스 교체 
-      imageCont.removeClass(currentClass).addClass(nextClass);
       navNum.children('span').text(selPnum + 1);
 
       // function vimeoRender/imageRender/descRender ●
@@ -432,36 +466,31 @@ var golfPlayers = {
       selFrameUrl = selFrameUrl.replace(vurl[1], selectPlayers[selPnum][0]);
 
       // 교체한 src값을 아이프레임 src값에 치환
-      iframe.attr('src', selFrameUrl);
+      iframe.attr('src', selFrameUrl).fadeOut(100);
+
+      // 로딩전까지 다음/이전버튼 비활성화 및 재생버튼 감추기
+      navBtn.addClass('disable');
+      playBtn.hide();
 
       // 위의 단계를 모두 완료한 시점(준비된 상태)이면 재생버튼 나타남
       iframe.load(function() {
-        playBtn.fadeIn(200);
+        playBtn.fadeIn(100);
+        iframe.fadeIn(100);
+        navBtn.removeClass('disable');
       }) 
     }
 
     // ●● function/imageRender ●●
     function imageRender() {
-      // imgBox 모든 player 클래스 제거
-      imageCont.removeClass(function (index, className) {
-        return (className.match(/(^|\s)player\d+/g) || []).join(' ');
-      });
-    
-      // 활성화 인덱스 넘버로 player 클래스 생성
-      let currentClass = `player${selPnum + 1}`;
-      imageCont.addClass(currentClass);
-      navNum.children('span').text(selPnum + 1);
+      // Preload the new image
+      let newImage = new Image(),
+          image = imageCont.children('img');
 
-      // player + selPnum 클래스를 찾기 위한 셀렉터
-      var playerClass = 'player';
-      var selector = '.' + playerClass + (selPnum + 1);
+      newImage.src = selectPlayers[selPnum][1];
 
-      // 선택된 객체를 가져옴
-      var selPlayer = document.querySelector('.img' + selector); 
-      
-      if (selPlayer) { // swiper 객체가 존재하는 경우에만 실행합니다.
-        imageCont.children('img').attr('src', selectPlayers[selPnum][1]);
-      }
+      newImage.onload = function() {
+        image.attr('src', newImage.src);
+      };
     }
 
     function descRender() {
@@ -469,7 +498,8 @@ var golfPlayers = {
           descParph = $('.desc_inner li:first-child p'),
           descBirth = $('.desc_inner .info p:first-child span'),
           descEnter = $('.desc_inner .info p:nth-child(2) span'),
-          descDebut = $('.desc_inner .info p:last-child span');
+          descDebut = $('.desc_inner .info p:last-child span'),
+          descRecord = $('.desc_inner li:last-child .history'),
           tabBtn = tabCont.find('span');
 
       descName.html(selectPlayers[selPnum][2] + '<span>' + selectPlayers[selPnum][3] + '</span>');
@@ -479,12 +509,27 @@ var golfPlayers = {
       descDebut.html(selectPlayers[selPnum][7]);
       tabBtn.html(selectPlayers[selPnum][8]);
 
+      descRecord.children().remove();
+      for(const element of selectPlayers[selPnum][9]) {
+        descRecord.append('<p><span>' + element[0] + '<i>년</i></span>' + element[1] + '</p>');
+      }
+      descRecord.animate({scrollTop : 0})
+      $('.desc').removeClass('on');
+
+      if (!$('.desc').hasClass('on')) {
+        setTimeout(()=> {
+          $('.desc').addClass('on');
+        }, 100);
+
+      }
+
+
     }
 
     // 팝업을 닫으면 플레이어 초기화
     $(".pop_close").on('click', function() {
-      clearInterval(videoCheckIntervalId);
-      tabCont.children().removeClass('on');
+      tabCont.children().first().addClass('on').siblings().removeClass('on');
+
       vimeoRender();
       imageRender();
     });
