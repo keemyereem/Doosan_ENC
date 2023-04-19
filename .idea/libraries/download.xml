@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="download">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/download/doosan.zip!/" />
+      <root url="jar://$PROJECT_DIR$/download/thezenith.zip!/" />
+      <root url="jar://$PROJECT_DIR$/download/doosan_en.zip!/" />
+      <root url="jar://$PROJECT_DIR$/download/privacy_form.zip!/" />
+      <root url="jar://$PROJECT_DIR$/download/weve.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
