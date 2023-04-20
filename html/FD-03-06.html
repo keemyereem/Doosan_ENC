@@ -33,12 +33,14 @@
     <!-- Library CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"><!-- swiper 구버전 최적화 문제로 최신버전 적용 -->
-    
+    <link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
     <!-- Library JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-3.3.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script><!-- swiper 구버전 최적화 문제로 최신버전 적용 -->
     <script src="https://player.vimeo.com/api/player.js"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <script src="js/lib/jquery.fullPage.js"></script>
     <script src="js/lib/jquery.easings.min.js"></script>
@@ -120,19 +122,19 @@
 
                 <section class="section section2">
                   <h2 class="indent">Section2</h2>
-                  <div class="swiper swiperGolf2">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">Slide 1</div>
-                      <div class="swiper-slide">Slide 2</div>
-                      <div class="swiper-slide">Slide 3</div>
-                      <div class="swiper-slide">Slide 4</div>
-                      <div class="swiper-slide">Slide 5</div>
-                    </div>
-                    <div class="swiper-pagination"></div>
+
+                  <div class="controller">
+                    <div class="navi"></div>
                   </div>
-                  <div>
-                    <div class="swiper2-button-prev">PREV</div>
-                    <div class="swiper2-button-next">NEXT</div>
+
+                  <div class="carousel-wrap">
+                    <div class="owl-carousel">
+                      <div class="item"><img src="images/golf/sec02_yhj.png"></div>
+                      <div class="item"><img src="images/golf/sec02_yhyoj.png"></div>
+                      <div class="item"><img src="images/golf/sec02_pk.png"></div>
+                      <div class="item"><img src="images/golf/sec02_kms.png"></div>
+                      <div class="item"><img src="images/golf/sec02_lhj.png"></div>
+                    </div>
                   </div>
                 </section>
 
@@ -155,7 +157,7 @@
             <!-- popup start -->
             <div class="popup">
               <button class="pop_close" type="button"><img src="images/common/pop_close.png" alt="pop_close"></button>
-              <ul>
+              <ul class="pop_players">
                 <li class="tab">
                   <div class="img">
                     <img src="images/golf/player_yhj_01.png" alt="선수 이미지">
@@ -191,7 +193,7 @@
                   </ul>
                   <ul class="desc_pagination_wrap">
                     <li><a href="javascript:;" title="이전선수 프로필 이동" class="desc_pagination prev">PREV</a></li>
-                    <li class="desc_number"><span>1</span> / &nbsp;5</li>
+                    <li class="desc_number"><span></span> / &nbsp;5</li>
                     <li><a href="javascript:;" title="다음선수 프로필 이동" class="desc_pagination next">NEXT</a></li>
                   </ul>
                 </li>

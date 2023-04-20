@@ -1982,14 +1982,23 @@
 .golf .golfMain .section1 article div * { position: relative; right: unset; left: unset; top: unset; margin-top: 5rem; display: inline-block; background: none; }
 .golf .golfMain .section1 .swiper-slide { height: 100vh; overflow: hidden; }
 
-.golf .golfMain .section2 .swiperGolf2 {width:calc(100% - 15rem); height:100%; }
-.golf .golfMain .section2 .swiper-slide { text-align:center; font-size:18px; background:#fff; display:flex; justify-content:center; align-items:center; background: red; }
-.golf .golfMain .section2 .swiper-slide img { display:block;width:100%;height:100%;object-fit:cover}
-.golf .golfMain .section2 .swiper-slide { width:20%}
+/* 선수소개 */
+.golf .golfMain .section2 .owl-carousel-wrap { position: relative; top: 50%; height:fit-content; border: 1px solid red; width: calc(100% - 15rem); }
+.golf .golfMain .section2 .controller { position:absolute; top: 19.5rem; right: 12.5vw; z-index: 2; border: 1px solid green; height: fit-content; }
+.golf .golfMain .section2 .controller .navi { overflow:hidden; display:flex; }
+.golf .golfMain .section2 .controller .navi button { display:block; position:relative; padding: 2rem 1.6rem; }
+.golf .golfMain .section2 .controller .navi button span { text-indent: -9999px; display: block; }
+.golf .golfMain .section2 .controller .navi button:after {content:""; display:block; width: 0; height: 0; position:absolute; left: 0; right: 0; bottom: 0; top: 0; margin: auto; border-style: solid; }
+.golf .golfMain .section2 .controller .navi button.owl-prev:after { border-width: 6px 10.4px 6px 0; border-color: transparent #005fb8 transparent transparent; }
+.golf .golfMain .section2 .controller .navi button.owl-next:after { border-width: 6px 0 6px 10.4px; border-color: transparent transparent transparent #005fb8; }
+
+.carousel-wrap { position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; width: calc(100% - 15rem); }
+.owl-carousel .item { position: relative; }
+.owl-item.active.center { border: 1px solid green; box-sizing:border-box; }
 
 
 /* 팝업 */
-.golf .golfMain .openPopup { display: flex; align-items: center; justify-content: center; border: 1px solid red; position: absolute; width: 100%; height: 100%; font-size: 40px; border: 1px solid red; }
+.golf .golfMain .openPopup { display: block; }
 .golf .golfMain .popup { cursor: none; width: 100%; padding: 0 3rem; overflow: auto; height: 100vh; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, .6); z-index: 1000; display: none; }
 .golf .golfMain .popup .pop_close { position: fixed; top: 0; left: 0; width: 7rem; height: 7rem; transform: scale(0); cursor: none; transition: transform ease .3s; }
 .golf .golfMain .popup .pop_close img { width: 100%; }

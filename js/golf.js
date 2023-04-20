@@ -180,7 +180,7 @@ let golfPlayers = {
 
   swipersForGolf: function() {
     // 메인 배너
-    let banner = new Swiper(".swiperGolf1", {
+    new Swiper(".swiperGolf1", {
       spaceBetween: 30,
       effect: "fade",
       speed: 500,
@@ -236,19 +236,31 @@ let golfPlayers = {
       }
     });
 
-
-    // 선수 소개 - loop/centered 슬라이드복제 버그로 스와이퍼 생성 매커니즘 수정 및 함수화
-    new Swiper(".swiperGolf2", {
-      slidesPerView: 5,
-      initialSlide: 1,
-      spaceBetween: 30,
-      centeredSlides: true,
-      roundLengths: true,
-      autoplay: {
-        delay: 500,
+    // 선수소개 슬라이드
+    let swiperGolf2 = $(".section2 .owl-carousel");
+    swiperGolf2.owlCarousel({
+      loop: true,
+      nav: true,
+      smartSpeed: 1000,
+      center: true,
+      navContainer: $(".section2 .navi"),
+      // autoWidth:true,
+      // autoplay: true,
+      // autoplayTimeout: 5000,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2,
+          margin: 20
+        },
+        900: {
+          items: 5,
+          margin: 30
+        }
       }
     });
-
   },
 
 
@@ -389,10 +401,8 @@ let golfPlayers = {
     // ●● click ●● 팝업 오픈 시 
     popBtn.on('click', function() {
       // selPnum값 부여
-      selPnum = $(this).parent().attr('data-swiper-slide-index');
-      navNum.children('span').text(selPnum + 1);
-
-      console.log(selPnum)
+      selPnum = $(this).parent().attr('data-index');
+      navNum.children('span').text(Number(selPnum) + 1);
 
       // function vimeoRender/imageRender/descRender ● - 활성화 인덱스 비디오 플레이어 출력
       imageRender();
@@ -496,6 +506,7 @@ let golfPlayers = {
 
       newImage.onload = function() {
         image.attr('src', newImage.src);
+        console.log('완료')
       };
     }
 
