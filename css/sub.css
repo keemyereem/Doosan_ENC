@@ -1982,13 +1982,15 @@
 .golf .golfMain .section1 article div * { position: relative; right: unset; left: unset; top: unset; margin-top: 5rem; display: inline-block; background: none; }
 .golf .golfMain .section1 .swiper-slide { height: 100vh; overflow: hidden; }
 
-.golf .golfMain .section2 .golf2List { display: flex; width: 100%; height: 100%; align-items: center; }
-.golf .golfMain .section2 .golf2List li { width: 200px; height: 200px; position: relative; }
+.golf .golfMain .section2 .swiperGolf2 {width:calc(100% - 15rem); height:100%; }
+.golf .golfMain .section2 .swiper-slide { text-align:center; font-size:18px; background:#fff; display:flex; justify-content:center; align-items:center; background: red; }
+.golf .golfMain .section2 .swiper-slide img { display:block;width:100%;height:100%;object-fit:cover}
+.golf .golfMain .section2 .swiper-slide { width:20%}
 
 
 /* 팝업 */
-.golf .golfMain .openPopup { display: flex; align-items: center; justify-content: center; border: 1px solid red; position: absolute; width: 200px; height: 200px; font-size: 40px; }
-.golf .golfMain .popup { cursor: none; width: 100%; padding: 0 3rem; overflow: auto; height: 100vh; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, .6); z-index: 1000; display: block; }
+.golf .golfMain .openPopup { display: flex; align-items: center; justify-content: center; border: 1px solid red; position: absolute; width: 100%; height: 100%; font-size: 40px; border: 1px solid red; }
+.golf .golfMain .popup { cursor: none; width: 100%; padding: 0 3rem; overflow: auto; height: 100vh; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, .6); z-index: 1000; display: none; }
 .golf .golfMain .popup .pop_close { position: fixed; top: 0; left: 0; width: 7rem; height: 7rem; transform: scale(0); cursor: none; transition: transform ease .3s; }
 .golf .golfMain .popup .pop_close img { width: 100%; }
 .golf .golfMain .popup > ul { cursor: auto; width: 136rem; height: calc(100vh - 9.2rem); overflow: hidden; background: #fff; position: relative; margin: 4.6rem auto; letter-spacing: -.15rem; display: flex; }
@@ -2007,7 +2009,6 @@
 .golf .golfMain .popup .tab .tab_container button { width: 50%; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; font-weight: 400; opacity: .5; }
 .golf .golfMain .popup .tab .tab_container button.on { opacity: 1; }
 .golf .golfMain .popup .tab .tab_container button span { font-weight: 200; padding: 0 .5rem 0 2rem; }
-
 .golf .golfMain .popup .desc { width: 70%; }
 .golf .golfMain .popup .desc .desc_inner { height: calc(100% - 9.2rem); position: relative; padding: 6rem 4rem 0; }
 .golf .golfMain .popup .desc .desc_inner li:first-child {  }
@@ -2040,18 +2041,27 @@
 .golf .golfMain .popup .desc .desc_pagination_wrap .desc_number { padding: 0 10rem; font-size: 1.8rem; font-weight: 300; color: #000000; }
 .golf .golfMain .popup .desc .desc_pagination_wrap .desc_number span { color: #005eb8; }
 .golf .golfMain .popup .desc .desc_pagination_wrap .desc_pagination.disable { pointer-events: none; }
-
 .golf .golfMain .popup .desc.on .desc_inner li:first-child h2,
 .golf .golfMain .popup .desc.on .desc_inner li:first-child p,
 .golf .golfMain .popup .desc.on .desc_inner li:nth-child(2) p span,
 .golf .golfMain .popup .desc.on .desc_inner li:last-child .history { animation: fadeUp alternate .8s; animation-fill-mode: forwards; }
-
 .golf .golfMain .popup .desc.on .desc_inner li:first-child p { animation-delay: .2s }
-.golf .golfMain .popup .desc.on .desc_inner li:nth-child(2) p:first-child span { animation-delay: .4s }
-.golf .golfMain .popup .desc.on .desc_inner li:nth-child(2) p:nth-child(2) span { animation-delay: .5s }
-.golf .golfMain .popup .desc.on .desc_inner li:nth-child(2) p:nth-child(3) span { animation-delay: .6s }
-.golf .golfMain .popup .desc.on .desc_inner li:last-child .history { animation-delay: .8s; }
+.golf .golfMain .popup .desc.on .desc_inner li:nth-child(2) p:first-child span { animation-delay: .3s }
+.golf .golfMain .popup .desc.on .desc_inner li:nth-child(2) p:nth-child(2) span { animation-delay: .4s }
+.golf .golfMain .popup .desc.on .desc_inner li:nth-child(2) p:nth-child(3) span { animation-delay: .5s }
+.golf .golfMain .popup .desc.on .desc_inner li:last-child .history { animation-delay: .6s; }
 
+
+
+@keyframes rotate{
+    0%{transform:rotate(0);}
+    100%{transform:rotate(360deg);}
+}
+
+.m_about .slide_wrap .slide_ctn .item.slick_now{padding-top: 0;}
+.m_about .slide_wrap .slide_ctn .item.slick_now .img_box h3:not(.on){transform:translateY(140%)}
+.m_about .slide_wrap .slide_ctn .item.slick_now .img_box .on{transform:translateX(0)}
+.m_about .slide_wrap .slide_ctn .item.slick_now .down_txt{transform:translateY(0);}
 
 
 @keyframes jump{

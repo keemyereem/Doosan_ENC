@@ -160,7 +160,7 @@ let golfPlayers = {
     let circle = document.querySelector(".pop_close");
 
     document.addEventListener("mousemove", (e) => {
-      // mousemove이벤트를 이용해 움
+      // mousemove 이벤트를 이용해 움
       // 마우스의 좌표는 clientX와 clientY를 이용해 알수 있다. -> 브라우저 window의 좌표값 위치를 전달한다.
       // pageX, pageY와는 다름.
       let mouseX = e.clientX;
@@ -179,7 +179,8 @@ let golfPlayers = {
   },
 
   swipersForGolf: function() {
-    var swiperGolf = new Swiper(".swiperGolf1", {
+    // 메인 배너
+    let banner = new Swiper(".swiperGolf1", {
       spaceBetween: 30,
       effect: "fade",
       speed: 500,
@@ -226,7 +227,7 @@ let golfPlayers = {
 
         slideChangeTransitionEnd: function() {  // 넘긴 슬라이드가 완전히 자리 잡았을 때
           // 텍스트별 슬라이드 시간차 주고 자연스럽게 
-          for (var i=0; i<= $('.txtPiece').length; i++) {
+          for (let i=0; i<= $('.txtPiece').length; i++) {
             $('.txtPiece').eq(i).children('span').css('transition-delay', i * 0.06 + 's');
           }
           // 텍스트 슬라이드 애니메이션 클래스 삭제(원위치로 내려옴)
@@ -236,23 +237,26 @@ let golfPlayers = {
     });
 
 
-    // var swiperGolf2 = new Swiper(".swiperGolf2", {
-    //   spaceBetween: 0,
-    //   slidesPerView: 'auto',
-    //   speed: 500,
-    //   loop: true,
-    //   pagination: {
-    //     el: ".swiper-pagination",
-    //   }
-    // });
+    // 선수 소개 - loop/centered 슬라이드복제 버그로 스와이퍼 생성 매커니즘 수정 및 함수화
+    new Swiper(".swiperGolf2", {
+      slidesPerView: 5,
+      initialSlide: 1,
+      spaceBetween: 30,
+      centeredSlides: true,
+      roundLengths: true,
+      autoplay: {
+        delay: 500,
+      }
+    });
 
   },
+
 
   popup01: function() {
     // ●● const ●● 재생버튼, 페이지네이션 버튼, 각 선수들의 동영상 프레임 ID
     const playBtn = $('#btn-play'),
           navBtn = $('.desc_pagination'),
-          popBtn = $('.golf2List').children(),
+          popBtn = $('.openPopup'),
           navNum = $('.desc_number'),
           imageCont = $('.tab .img'),
           tabCont = $('.tab_container');
@@ -385,8 +389,10 @@ let golfPlayers = {
     // ●● click ●● 팝업 오픈 시 
     popBtn.on('click', function() {
       // selPnum값 부여
-      selPnum = $(this).index();
+      selPnum = $(this).parent().attr('data-swiper-slide-index');
       navNum.children('span').text(selPnum + 1);
+
+      console.log(selPnum)
 
       // function vimeoRender/imageRender/descRender ● - 활성화 인덱스 비디오 플레이어 출력
       imageRender();
