@@ -2210,6 +2210,7 @@ var golfPlayers = {
     this.createFullPageGolf();
     this.swipersForGolf();
     this.popupForGolf();
+    this.playerSwiper();
   },
 
   settingResponsive: function() {
@@ -2443,6 +2444,104 @@ var golfPlayers = {
     });
   },
 
+  // playerSwiper: function(){
+  //   var swiperGolf = new Swiper(".players_swiper", {
+  //     spaceBetween: 20,
+  //     speed: 500,
+  //     slidesPerView: 5,
+  //     // initialSlide: 2,
+  //      // watchOverflow: true,
+  //     // centeredSlides: true,
+  //     loop: true,
+  //     navigation: {
+  //       nextEl: ".players_swiper .swiper-button-next",
+  //       prevEl: ".players_swiper .swiper-button-prev",
+  //     },
+  //   });
+  // },
 
+  playerSwiper: function() {
+    var slides = $('.slide_wrapper .slides'),
+        slide = $('.slide_wrapper .slides li'),
+        currentIdx = 0,
+        slideCount = slide.length,
+        slideWidth = 200,
+        slideMargin = 20,
+        prevBtn = $('.prev'),
+        nextBtn = $('.next');
+
+    makeClone();
+    // autoSlides();
+
+    function makeClone() {
+      //원래 슬라이드 뒤에 복사본 슬라이드 만들기
+      for(var i = 0; i < slideCount; i++){
+        var cloneSlide = slide.eq(i).clone(true);
+        cloneSlide.addClass('clone');
+        slides.append(cloneSlide);
+      }
+      //원래 슬라이드 앞에 복사본 슬라이드 만들기
+      for(var i = slideCount -1; i>=0; i--){
+        var cloneSlide = slide.eq(i).clone(true);
+        cloneSlide.addClass('clone');
+        slides.prepend(cloneSlide);
+      }
+      updateWidth();
+      setInitialPos();
+      setTimeout(function(){
+        slides.addClass('animated');
+      },100)
+    }
+    //슬라이드 앞뒤 복사본 만들었을때 총 넓이 구하기
+    function updateWidth() {
+      var currentSlides = $('.slide_wrapper .slides li'),
+          newSlideCount = currentSlides.length,
+          newWidth = (slideWidth + slideMargin) * newSlideCount - slideMargin + 'px';
+      slides.css('width',newWidth);
+    }
+    //복사본 말고 기존 가운데 슬라이드 세트로 초기 위치값 설정
+    function setInitialPos() {
+      var initialTranslateValue = -(slideWidth + slideMargin) * slideCount;
+      slides.css('transform','translateX('+initialTranslateValue+'px)');
+    }
+    nextBtn.on('click',function(){
+      moveSlide(currentIdx+1);
+    });
+    prevBtn.on('click',function(){
+      moveSlide(currentIdx-1);
+    });
+
+    function moveSlide(num) {
+      //num이 양수일경우 (다음버튼 클릭시) 왼쪽으로 이동 & 음수일 경우(이전버튼 클릭시) 오른쪽으로 이동 
+      slides.css('left',-num*(slideWidth + slideMargin)+'px');
+      currentIdx = num;
+      // console.log(currentIdx,slideCount);
+
+      //복사본 슬라이드의 맨 마지막과 처음일 때 다시 기존슬라이드로 이동 
+      if(currentIdx==slideCount || currentIdx==-slideCount){
+        //기존 슬라이드 세트쪽으로 이동한 다음 
+        setTimeout(function(){
+          slides.removeClass('animated');
+          slides.css('left','0');
+          currentIdx = 0;
+        },500)
+        //옆으로 이동되는 모션 추가
+        setTimeout(function(){
+          slides.addClass('animated');
+        },600)
+
+      }
+    }
+    
+    function autoSlides (){
+      //자동슬라이드
+      setTimeout(function(){
+        setInterval(function(){
+          moveSlide(currentIdx+1);
+        },3000)
+      },500)
+    }
+
+  },
   
 };

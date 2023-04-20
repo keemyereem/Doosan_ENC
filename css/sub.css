@@ -1982,6 +1982,13 @@
 .golf .golfMain .section1 article div * { position: relative; right: unset; left: unset; top: unset; margin-top: 5rem; display: inline-block; background: none; }
 .golf .golfMain .section1 .swiper-slide { height: 100vh; overflow: hidden; }
 
+.golf .golfMain .section2 .slide_wrapper { position: relative;width: 640px;height: 480px;margin: 0 auto;border: 1px solid red; }
+.golf .golfMain .section2 .slide_wrapper .slides { display: flex;position: absolute;left: 0;top: 0; }
+.golf .golfMain .section2 .slide_wrapper .slides.animated { transition: .5s ease-out; }
+.golf .golfMain .section2 .slide_wrapper .slides li { background: #eee;width: 200px;height: 480px;font-size: 16px;}
+.golf .golfMain .section2 .slide_wrapper .slides li:not(:last-child) { margin-right: 20px; }
+.golf .golfMain .section2 .controls>div {font-size: 20px;}
+
 /* 팝업 */
 .golf .golfMain .openPopup { display: flex; align-items: center; justify-content: center; border: 1px solid red; position: absolute; top: 50%; width: 200px; height: 200px; font-size: 40px; }
 .golf .golfMain .popup { cursor: none; width: 100%; padding: 0 3rem; overflow: auto; height: 100vh; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, .6); z-index: 1000; display: none; }
