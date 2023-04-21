@@ -145,7 +145,11 @@ let golfPlayers = {
 
   popupForGolf: function() {
     let LayerPopup = $('.popup ul'),
-        popupClose = $(".pop_close");
+        popupClose = $(".pop_close"),
+        $section2Cursor = $(".seciton2_cursor");
+
+    let popup = document.querySelector(".popup"),
+        circle = document.querySelector(".pop_close");
 
     // 영역 밖 이동 시 마우스 닫기 버튼 보이기
     $(document).on('mousemove', function (e) {
@@ -154,17 +158,24 @@ let golfPlayers = {
       } else {
         popupClose.css({ transform: "scale(0)" });
       }
+
+      let $section2Active = $('.owl-item.active.center');
+      if ($section2Active.has(e.target).length === 0) {
+        $section2Cursor.css({ transform: "scale(0)" });
+      } else {
+        let ctlX = e.clientX - 45,
+            crlY = e.clientY - 45;
+
+        $section2Cursor.css({ transform: "scale(1)", left: ctlX, top: crlY });
+        e.stopPropagation();
+      }
     });
 
     // 영영 밖 이동 시 마우스 닫기 버튼  커서 따라다니기
-    let circle = document.querySelector(".pop_close");
-
-    document.addEventListener("mousemove", (e) => {
-      // mousemove 이벤트를 이용해 움
-      // 마우스의 좌표는 clientX와 clientY를 이용해 알수 있다. -> 브라우저 window의 좌표값 위치를 전달한다.
-      // pageX, pageY와는 다름.
+    popup.addEventListener("mousemove", (e) => {
       let mouseX = e.clientX;
       let mouseY = e.clientY;
+
       circle.style.left = mouseX - 35 + "px";
       circle.style.top = mouseY - 35 + "px";
     });
@@ -173,7 +184,7 @@ let golfPlayers = {
       // 팝업 닫기 function
       $("html").removeClass("blockScroll");
       $(".popup").fadeOut(300);
-      LayerPopup.find('.video').length ? LayerPopup.find('.video').removeClass('on') : null;
+      // LayerPopup.find('.video').length ? LayerPopup.find('.video').removeClass('on') : null;
       
     });
   },
@@ -241,7 +252,7 @@ let golfPlayers = {
     swiperGolf2.owlCarousel({
       loop: true,
       nav: true,
-      smartSpeed: 1000,
+      smartSpeed: 700,
       center: true,
       navContainer: $(".section2 .navi"),
       // autoWidth:true,
@@ -252,10 +263,10 @@ let golfPlayers = {
           items: 1
         },
         600: {
-          items: 2,
+          items: 5,
           margin: 20
         },
-        900: {
+        1440: {
           items: 5,
           margin: 30
         }
@@ -398,8 +409,13 @@ let golfPlayers = {
     let selPnum = 0,
         player = null;
 
-    // ●● click ●● 팝업 오픈 시 
-    popBtn.on('click', function() {
+setInterval(()=> {
+  console.log(selPnum)
+}, 500)
+
+    // ●● click ●● 팝업 오픈 시
+    popBtn.on('click', function(e) {
+      console.log('클릭한 숫자 : ' + selPnum)
       // selPnum값 부여
       selPnum = $(this).parent().attr('data-index');
       navNum.children('span').text(Number(selPnum) + 1);
@@ -408,6 +424,7 @@ let golfPlayers = {
       imageRender();
       vimeoRender();
       descRender();
+
     });
 
     // ●● click ●● 탭버튼 클릭 시 
@@ -421,6 +438,8 @@ let golfPlayers = {
       // 이전, 다음버튼 클릭 시 selPnum증감
       selPnum = $(this).hasClass('next') ? (selPnum + 1) % selectPlayers.length : (selPnum + selectPlayers.length - 1) % selectPlayers.length;
       navNum.children('span').text(selPnum + 1);
+
+
 
       // function vimeoRender/imageRender/descRender ●
       vimeoRender();
@@ -506,7 +525,6 @@ let golfPlayers = {
 
       newImage.onload = function() {
         image.attr('src', newImage.src);
-        console.log('완료')
       };
     }
 
@@ -539,8 +557,6 @@ let golfPlayers = {
         }, 100);
 
       }
-
-
     }
 
     // 팝업을 닫으면 플레이어 초기화
