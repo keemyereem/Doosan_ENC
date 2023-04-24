@@ -144,8 +144,9 @@ let golfPlayers = {
   },
 
   popupForGolf: function() {
-    let LayerPopup = $('.popup ul'),
+    let LayerPopup = $('.popup .pop_players'),
         popupClose = $(".pop_close"),
+        popBtn = $('.openPopup'),
         $section2Cursor = $(".seciton2_cursor");
 
     let popup = document.querySelector(".popup"),
@@ -159,7 +160,7 @@ let golfPlayers = {
         popupClose.css({ transform: "scale(0)" });
       }
 
-      let $section2Active = $('.owl-item.active.center');
+      let $section2Active = $('.splide__slide.is-active');
       if ($section2Active.has(e.target).length === 0) {
         $section2Cursor.css({ transform: "scale(0)" });
       } else {
@@ -180,11 +181,15 @@ let golfPlayers = {
       circle.style.top = mouseY - 35 + "px";
     });
 
+    popBtn.on('click', function() {
+      $(this).closest('.splide__slide').length ? LayerPopup.css('display', 'flex') : console.log('nay');
+    })
+
     popupClose.on("click", () => {
       // 팝업 닫기 function
       $("html").removeClass("blockScroll");
-      $(".popup").fadeOut(300);
-      // LayerPopup.find('.video').length ? LayerPopup.find('.video').removeClass('on') : null;
+      $(".popup, .popup > ul").fadeOut(300);
+      LayerPopup.find('.video').length ? LayerPopup.find('.video').removeClass('on') : null;
       
     });
   },
@@ -247,31 +252,65 @@ let golfPlayers = {
       }
     });
 
-    // 선수소개 슬라이드
-    let swiperGolf2 = $(".section2 .owl-carousel");
-    swiperGolf2.owlCarousel({
-      loop: true,
-      nav: true,
-      smartSpeed: 700,
-      center: true,
-      navContainer: $(".section2 .navi"),
-      // autoWidth:true,
-      // autoplay: true,
-      // autoplayTimeout: 5000,
-      responsive: {
-        0: {
-          items: 1
+    // // 선수소개 슬라이드
+    var splide = new Splide( '.splide', {
+      type   : 'loop',
+      perPage: 5,
+      perMove: 1,
+      focus  : 'center',
+      snap   : true,
+      speed: 500,
+      easing: 'cubic-bezier(0,0,.23,1)',
+      autoWidth: true,
+      pagination: false,
+      updateOnMove: true,
+      autoplay: true,
+      interval: 1000,
+      flickPower: 50,
+      breakpoints: {
+        640: {
+          autoWidth: false,
+          perPage: 1,
         },
-        600: {
-          items: 5,
-          margin: 20
-        },
-        1440: {
-          items: 5,
-          margin: 30
+        1024: {
+          autoWidth: true,
+          perPage: 3,
         }
       }
+
+    }).mount();
+
+    const navBtn = $('.desc_pagination');
+
+    let $section2Active = $('.splide__slide.is-active'),
+        $section2Cursor = $('.seciton2_cursor'),
+        popBtn = $('.openPopup'),
+        popClose = $('.pop_close');
+
+    const { Autoplay } = splide.Components;
+
+    // ●● click ●● 페이지네이션 버튼 클릭 시
+    navBtn.on('click', function() {
+      // 이전, 다음버튼 클릭 시 splide 슬라이더 동작
+      $(this).hasClass('next') ? splide.go( '+1' ) : splide.go( '-1' );
     });
+
+    popBtn.on('click', ()=> {
+      $('.popup').hasClass('on') ? Autoplay.pause() : null;
+    })
+
+    popClose.on('click', function() {
+      Autoplay.play();
+    })
+
+    // view more 버튼 플러스 아이콘 트랜지션
+    $section2Active.on('mousedown', function() {
+      $section2Cursor.children('img').css('transform', 'rotate(90deg)');
+    });
+    $section2Active.on('mouseup mouseleave', function() {
+      $section2Cursor.children('img').css('transform', 'rotate(0deg)');
+    })
+
   },
 
 
@@ -409,23 +448,21 @@ let golfPlayers = {
     let selPnum = 0,
         player = null;
 
-setInterval(()=> {
-  console.log(selPnum)
-}, 500)
 
     // ●● click ●● 팝업 오픈 시
     popBtn.on('click', function(e) {
-      console.log('클릭한 숫자 : ' + selPnum)
-      // selPnum값 부여
-      selPnum = $(this).parent().attr('data-index');
-      navNum.children('span').text(Number(selPnum) + 1);
+      if ($('.pop_players').css('display') === 'flex') {
+        // selPnum값 부여
+        selPnum = $(this).parent().attr('data-index');
+        navNum.children('span').text(Number(selPnum) + 1);
 
-      // function vimeoRender/imageRender/descRender ● - 활성화 인덱스 비디오 플레이어 출력
-      imageRender();
-      vimeoRender();
-      descRender();
-
+        // function vimeoRender/imageRender/descRender ● - 활성화 인덱스 비디오 플레이어 출력
+        imageRender();
+        vimeoRender();
+        descRender();
+      }
     });
+
 
     // ●● click ●● 탭버튼 클릭 시 
     tabCont.children().on('click', function() {
@@ -433,13 +470,13 @@ setInterval(()=> {
       $(this).index() !== 0 ? $('.video').addClass('on') : ($('.video').removeClass('on'), vimeoRender())
     });
 
-    // ●● click ●● 페이지네이션 버튼 클릭 시 
+    // ●● click ●● 페이지네이션 버튼 클릭 시
     navBtn.on('click', function() {
+      selPnum = navNum.children('span').text() - 1;
+
       // 이전, 다음버튼 클릭 시 selPnum증감
       selPnum = $(this).hasClass('next') ? (selPnum + 1) % selectPlayers.length : (selPnum + selectPlayers.length - 1) % selectPlayers.length;
-      navNum.children('span').text(selPnum + 1);
-
-
+      navNum.children('span').text(Number(selPnum) + 1);
 
       // function vimeoRender/imageRender/descRender ●
       vimeoRender();
@@ -505,6 +542,7 @@ setInterval(()=> {
 
       // 로딩전까지 다음/이전버튼 비활성화 및 재생버튼 감추기
       navBtn.addClass('disable');
+      navBtn.parents('.desc_pagination_wrap').css('cursor', 'progress');
       playBtn.hide();
 
       // 위의 단계를 모두 완료한 시점(준비된 상태)이면 재생버튼 나타남
@@ -512,6 +550,7 @@ setInterval(()=> {
         playBtn.fadeIn(100);
         iframe.fadeIn(100);
         navBtn.removeClass('disable');
+        navBtn.parents('.desc_pagination_wrap').css('cursor', 'auto');
       }) 
     }
 
