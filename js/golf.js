@@ -16,6 +16,7 @@ let golfPlayers = {
     this.popupForGolf();
     this.swipersForGolf();
     this.popup01();
+    this.popup02();
   },
 
   settingResponsive: function() {
@@ -39,9 +40,9 @@ let golfPlayers = {
 
     $('.golf .header').mouseleave(function() {
       if ($('.golf .header').hasClass('wht')) {
-        console.log('dqoiwdjkqowidkqpo')
+
       } else {
-        console.log('qod')
+
       }
       $(".header").removeClass("wht");
     })
@@ -144,7 +145,8 @@ let golfPlayers = {
   },
 
   popupForGolf: function() {
-    let LayerPopup = $('.popup .pop_players'),
+    let LayerPopup1 = $('.popup .pop_players'),
+        LayerPopup2 = $('.popup .pop_news'),
         popupClose = $(".pop_close"),
         popBtn = $('.openPopup'),
         $section2Cursor = $(".seciton2_cursor");
@@ -154,7 +156,7 @@ let golfPlayers = {
 
     // 영역 밖 이동 시 마우스 닫기 버튼 보이기
     $(document).on('mousemove', function (e) {
-      if (LayerPopup.has(e.target).length === 0) {
+      if ($('.popup').children('ul').has(e.target).length === 0) {
         popupClose.css({ transform: "scale(1)" });
       } else {
         popupClose.css({ transform: "scale(0)" });
@@ -181,15 +183,23 @@ let golfPlayers = {
       circle.style.top = mouseY - 35 + "px";
     });
 
+    $(window).on("scroll", function () {
+      scrollPosition = window.pageYOffset;
+      $(".popup > ul").css("left", 0 - $(this).scrollLeft());
+    });
+
     popBtn.on('click', function() {
-      $(this).closest('.splide__slide').length ? LayerPopup.css('display', 'flex') : console.log('nay');
-    })
+      $(this).closest('.splide__slide').length ?
+          LayerPopup1.css('display', 'flex') : $(this).closest('.news_list').length ?
+              LayerPopup2.css('display', 'block') : console.log('nay');
+    });
+
 
     popupClose.on("click", () => {
       // 팝업 닫기 function
       $("html").removeClass("blockScroll");
       $(".popup, .popup > ul").fadeOut(300);
-      LayerPopup.find('.video').length ? LayerPopup.find('.video').removeClass('on') : null;
+      LayerPopup1.find('.video').length ? LayerPopup1.find('.video').removeClass('on') : null;
       
     });
   },
@@ -210,15 +220,17 @@ let golfPlayers = {
       },
       on: {
         init: function() {  // 초기값 - 필요시 작업
-
+          chkWord();
         },
 
-        slideChangeTransitionStart: function() {  // 넘기기 시작할 때 
+        slideChangeTransitionStart: function() {  // 넘기기 시작할 때
+          let txtPieceChild = $('.txtPiece span');
+
           // 텍스트 슬라이드 애니메이션 클래스 부여(시작)
-          $('.txtPiece span').addClass('slideUp');
+          txtPieceChild.addClass('slideUp');
 
           // 텍스트 슬라이드 애니메이션이 끝나는 시점
-          $('.txtPiece span').on('transitionend', function() {
+          txtPieceChild.on('transitionend', function() {
             let selTit = $(".swiper-slide-active h2").html(),
                 selTitSplit = selTit.split('<br>'),
                 selTitParent = $('.golfMain .section1 article');
@@ -237,6 +249,8 @@ let golfPlayers = {
                 i = 0;
                 selTitParent.children('h2').after('<h2>&nbsp;</h2>');
               }
+
+              chkWord();
             }
           })
         },
@@ -251,6 +265,20 @@ let golfPlayers = {
         },
       }
     });
+
+    function chkWord() {
+      let txtPiece = $('.txtPiece'),
+          check_kor = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
+
+      // 폰트패밀리 혼용 구분
+      txtPiece.each((index) => {
+        let check_txt = txtPiece.eq(index).text();
+        if (!check_kor.test(check_txt)) {
+          txtPiece.eq(index).css("font-family", '"Montserrat", sans-serif');
+        }
+      });
+    }
+
 
     // // 선수소개 슬라이드
     var splide = new Splide( '.splide', {
@@ -536,7 +564,7 @@ let golfPlayers = {
 
       // 추출한 id값을 활성화된 인덱스(선수) id값으로 교체
       selFrameUrl = selFrameUrl.replace(vurl[1], selectPlayers[selPnum][0]);
-
+0
       // 교체한 src값을 아이프레임 src값에 치환
       iframe.attr('src', selFrameUrl).fadeOut(100);
 
@@ -606,6 +634,68 @@ let golfPlayers = {
       imageRender();
     });
   },
+
+  popup02: function() {
+    const popup = $('.popup'),
+          popBtn = $('.openPopup'),
+          popNews = $('.pop_news'),
+          newsList = $('.news_list');
+
+    let selNnum = 0,
+        nTarget = null,
+        popPagi =  popNews.find('.pagination div');
+
+
+    // ●● click ●● 팝업 오픈 시
+    popBtn.on('click', function(e) {
+      e.preventDefault();
+      popup.scrollTop(0);
+
+      if (popNews.css('display') === 'block') {
+        selNnum = $(this).parent().attr('data-index');
+        nTarget = newsList.eq(selNnum).children('.openPopup');
+        console.log('팝업켜면? ' + selNnum)
+        newsRender();
+      }
+    });
+
+    popPagi.children().on('click', function() {
+      selNnum = $(this).hasClass('next') ? Number(selNnum) + 1 : Number(selNnum) - 1;
+      console.log(selNnum);
+      nTarget = newsList.eq(selNnum).children('.openPopup');
+      popup.animate({scrollTop: 0}, 500);
+      newsRender();
+    })
+
+    function newsRender() {
+      let newsData = nTarget.children('.txt_box'),
+          nd_title = newsData.children('p').text(),
+          nd_date = newsData.children('span').text(),
+          nd_next = nTarget.parent().next(),
+          nd_prev = nTarget.parent().prev();
+
+      // title set
+      popNews.find('.title h2').text(nd_title);
+      popNews.find('.title span').text(nd_date);
+
+      // pagination set
+      popPagi.removeClass('indent');
+      popPagi.first().find('span').text(nd_prev.find('.txt_box p').text());
+      popPagi.last().find('span').text(nd_next.find('.txt_box p').text());
+
+      if (!nd_next.length) {
+        popPagi.last().addClass('indent');
+      } else if (!nd_prev.length) {
+        popPagi.first().addClass('indent');
+      }
+    }
+
+
+    $(".pop_close").on('click', function() {
+
+    });
+
+  }
 
 
 };
