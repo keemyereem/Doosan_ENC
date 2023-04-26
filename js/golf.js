@@ -17,6 +17,7 @@ let golfPlayers = {
     this.swipersForGolf();
     this.popup01();
     this.popup02();
+    this.popup03();
   },
 
   settingResponsive: function() {
@@ -147,6 +148,7 @@ let golfPlayers = {
   popupForGolf: function() {
     let LayerPopup1 = $('.popup .pop_players'),
         LayerPopup2 = $('.popup .pop_news'),
+        LayerPopup3 = $('.popup .pop_gallery'),
         popupClose = $(".pop_close"),
         popBtn = $('.openPopup'),
         $section2Cursor = $(".seciton2_cursor");
@@ -169,8 +171,15 @@ let golfPlayers = {
         let ctlX = e.clientX - 45,
             crlY = e.clientY - 45;
 
-        $section2Cursor.css({ transform: "scale(1)", left: ctlX, top: crlY });
+        $section2Cursor.css({transform: "scale(1)", left: ctlX, top: crlY});
         e.stopPropagation();
+      }
+
+      let $section4 = $('.pop_gallery');
+      if ($section4.children().has(e.target).length !== 0) {
+        //console.log('18')
+      } else {
+        //console.log('28')
       }
     });
 
@@ -184,14 +193,18 @@ let golfPlayers = {
     });
 
     $(window).on("scroll", function () {
-      scrollPosition = window.pageYOffset;
       $(".popup > ul").css("left", 0 - $(this).scrollLeft());
+      $section2Cursor.css('margin-left', 0 + $(this).scrollLeft());
+
+      if ($(".popup > ul").hasClass('pop_gallery')) {
+        LayerPopup3.css("margin-left", 0 - $(this).scrollLeft());
+      }
     });
 
     popBtn.on('click', function() {
       $(this).closest('.splide__slide').length ?
           LayerPopup1.css('display', 'flex') : $(this).closest('.news_list').length ?
-              LayerPopup2.css('display', 'block') : console.log('nay');
+              LayerPopup2.css('display', 'block') : LayerPopup3.css('display', 'flex');
     });
 
 
@@ -654,14 +667,12 @@ let golfPlayers = {
       if (popNews.css('display') === 'block') {
         selNnum = $(this).parent().attr('data-index');
         nTarget = newsList.eq(selNnum).children('.openPopup');
-        console.log('팝업켜면? ' + selNnum)
         newsRender();
       }
     });
 
     popPagi.children().on('click', function() {
       selNnum = $(this).hasClass('next') ? Number(selNnum) + 1 : Number(selNnum) - 1;
-      console.log(selNnum);
       nTarget = newsList.eq(selNnum).children('.openPopup');
       popup.animate({scrollTop: 0}, 500);
       newsRender();
@@ -690,10 +701,102 @@ let golfPlayers = {
       }
     }
 
+    $(".golf_pagination ol li").on('click', function() {
+      $(this).addClass('on').siblings().removeClass('on')
+    })
 
-    $(".pop_close").on('click', function() {
+  },
 
+  popup03: function() {
+    const popup = $('.popup'),
+          popBtn = $('.openPopup'),
+          popGallery = $('.pop_gallery'),
+          galFrame = $('.gallery_frame'),
+          galVideo = $('.vimeo02'),
+          tabBtn = $('.golf_tab').children();
+
+    let selGnum = 0,
+        galActive = galFrame.children('.active'),
+        gTarget = null,
+        popPagi =  popGallery.children().not('.img');
+
+    tabBtn.on('click', function() {
+      let tabIdx = $(this).index();
+      $(this).addClass('on').siblings().removeClass('on')
+      galFrame.children().eq(tabIdx).addClass('active').siblings().removeClass('active');
+    })
+
+    // ●● click ●● 팝업 오픈 시
+    popBtn.on('click', function(e) {
+      e.preventDefault();
+
+      if (popGallery.css('display') === 'flex') {
+        selGnum = $(this).parent().attr('data-index');
+
+        galActive = galFrame.children('.active');
+        gTarget = galActive.find('li[data-index="' + selGnum + '"]').children('.openPopup');
+
+        galleryRender();
+      }
     });
+
+    popPagi.children().on('click', function() {
+      let current = galActive.find('li[data-index="' + selGnum + '"]'),
+          galNext = current.next(),
+          galPrev = current.prev();
+
+      selGnum = $(this).hasClass('next') ? galNext.attr('data-index') : galPrev.attr('data-index');
+      gTarget = galActive.find('li[data-index="' + selGnum + '"]').children('.openPopup');
+      galleryRender();
+
+    })
+    function galleryRender() {
+      let galData = gTarget.children('.img'),
+          gd_img = galData.children('img').attr('src'),
+          gd_title = gTarget.children('h3').text(),
+          gd_next = gTarget.parent().next(),
+          gd_prev = gTarget.parent().prev();
+
+      let vurl = gd_img.split('/'),
+          pid = gTarget.parent().attr('data-popup-image');
+
+      // title set
+      vurl = vurl[vurl.length - 1];
+      popGallery.find('.img h2').text(gd_title);
+      popGallery.find('.img img').attr('src', gd_img.replace(vurl, 'gallery/' + pid + '.jpg'));
+
+      if (galData.hasClass('video')) {
+        let newIframe = $('<iframe/>', {
+          src: 'https://player.vimeo.com/video/818598210?rel=0&title=0&showinfo=0&byline=0&controls=1&portrait=0&autopause=1&',
+          width: '100%',
+          height: '100%',
+          frameborder: '0',
+          webkitallowfullscreen: '',
+          mozallowfullscreen: '',
+          allowfullscreen: '',
+          allow: 'autoplay',
+          class: 'vimeo02',
+        });
+
+        popGallery.find('.img img').replaceWith(newIframe);
+      } else {
+        let changeImg = new Image();
+        changeImg.src = gd_img.replace(vurl, 'gallery/' + pid + '.jpg');
+
+        popGallery.find('.img iframe').replaceWith(changeImg);
+      }
+
+
+      // pagination set
+      popPagi.removeClass('disabled');
+
+      if (!gd_next.length) {
+        popPagi.last().addClass('disabled');
+      } else if (!gd_prev.length) {
+        popPagi.first().addClass('disabled');
+      }
+    }
+
 
   }
 

@@ -282,7 +282,7 @@
                       </li>
                     </ul>
 
-                    <ol>
+                    <ol class="golf_pagination_wrap">
                       <li><button><img src="images/common/arrow_front.png" alt="맨 앞으로"></button></li>
                       <li><button><img src="images/common/arrow_prev.png" alt="이전"></button></li>
                       <li class="golf_pagination">
@@ -310,9 +310,293 @@
                     <h1>갤러리</h1>
                   </div>
 
-                  <div>
-                    <a href="javascript:;" class="openPopup" title="상세페이지 보기">팝업</a>
+                  <div class="golf_gallery">
+                    <div class="golf_search">
+                      <label for="searchGallery" class="indent">골프단 갤러리 검색</label>
+                      <input type="text" id="searchGallery" onkeyup="" placeholder="검색어를 입력해 주세요.">
+                      <button type="submit" name="click" value=""><img src="images/common/icon_search_blk.png" alt="검색하기"></button>
+                    </div>
+
+                    <div class="golf_tab">
+                      <button class="on">All</button>
+                      <button>두산건설 we've 골프단</button>
+                      <button>2023년 대회</button>
+<!--                      <button>2024년 대회</button>-->
+<!--                      <button>2025년 대회</button>-->
+                    </div>
+
+                    <ul class="gallery_frame">
+<!-- 탭버튼 - 전체 -->
+                      <li class="active">
+                        <ul class="gallery_inner">
+                          <li class="border_frame" data-index="2" data-popup-image="002">
+                            <span class="border bdt"></span>
+                            <span class="border bdl"></span>
+                            <span class="border bdr"></span>
+                            <span class="border bdb"></span>
+                            <a href="javascript:;" class="openPopup">
+                              <div class="img">
+                                <img src="images/golf/sec04_sample03.png" alt="박결 프로 프로필 사진">
+                                <img src="images/common/btn_play.png" alt="플레이 버튼" class="btn_play">
+                              </div>
+                              <h3>박결 프로 프로필 사진</h3>
+                            </a>
+                          </li>
+                          <li class="border_frame" data-index="4" data-popup-image="004">
+                            <span class="border bdt"></span>
+                            <span class="border bdl"></span>
+                            <span class="border bdr"></span>
+                            <span class="border bdb"></span>
+                            <a href="javascript:;" class="openPopup">
+                              <div class="img">
+                                <img src="images/golf/sec04_sample05.png" alt="임희정 프로 프로필 사진">
+                                <img src="images/common/btn_play.png" alt="플레이 버튼" class="btn_play">
+                              </div>
+                              <h3>임희정 프로 프로필 사진</h3>
+                            </a>
+                          </li>
+                          <li class="border_frame" data-index="6" data-popup-image="006">
+                            <span class="border bdt"></span>
+                            <span class="border bdl"></span>
+                            <span class="border bdr"></span>
+                            <span class="border bdb"></span>
+                            <a href="javascript:;" class="openPopup">
+                              <div class="img video"><!-- video 태그 전용 클래스 추가 -->
+                                <img src="images/golf/sec04_sample07.png" alt="두산건설 we've 골프단 영상">
+                                <img src="images/common/btn_play.png" alt="플레이 버튼" class="btn_play">
+                              </div>
+                              <h3>두산건설 we've 골프단 영상</h3>
+                            </a>
+                          </li>
+                          <li class="border_frame" data-index="7" data-popup-image="007">
+                            <span class="border bdt"></span>
+                            <span class="border bdl"></span>
+                            <span class="border bdr"></span>
+                            <span class="border bdb"></span>
+                            <a href="javascript:;" class="openPopup">
+                              <div class="img">
+                                <img src="images/golf/sec04_sample08.png" alt="팬사인회 전 기념촬영을 한 유현주 프로, 유효주 프로">
+                                <img src="images/common/btn_play.png" alt="플레이 버튼" class="btn_play">
+                              </div>
+                              <h3>팬사인회 전 기념촬영을 한 유현주 프로, 유효주 프로</h3>
+                            </a>
+                          </li>
+                          <li class="border_frame" data-index="10" data-popup-image="010">
+                            <span class="border bdt"></span>
+                            <span class="border bdl"></span>
+                            <span class="border bdr"></span>
+                            <span class="border bdb"></span>
+                            <a href="javascript:;" class="openPopup">
+                              <div class="img">
+                                <img src="images/golf/sec04_sample11.png" alt="카메라를 보며 미소 짓는 박결 메디힐 한국일보 챔피언 모습 현장사진">
+                                <img src="images/common/btn_play.png" alt="플레이 버튼" class="btn_play">
+                              </div>
+                              <h3>카메라를 보며 미소 짓는 박결 메디힐 한국일보 챔피언 모습 현장사진</h3>
+                            </a>
+                          </li>
+                          <li class="border_frame" data-index="1" data-popup-image="001">
+                            <span class="border bdt"></span>
+                            <span class="border bdl"></span>
+                            <span class="border bdr"></span>
+                            <span class="border bdb"></span>
+                            <a href="javascript:;" class="openPopup">
+                              <div class="img">
+                                <img src="images/golf/sec04_sample02.png" alt="김민솔 선수 프로필 사진">
+                                <img src="images/common/btn_play.png" alt="플레이 버튼" class="btn_play">
+                              </div>
+                              <h3>김민솔 선수 프로필 사진</h3>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+<!-- 탭버튼 - 두산건설 we've 골프단 -->
+                      <li>
+                        <ul class="gallery_inner">
+                          <li class="border_frame" data-index="0" data-popup-image="000">
+                            <span class="border bdt"></span>
+                            <span class="border bdl"></span>
+                            <span class="border bdr"></span>
+                            <span class="border bdb"></span>
+                            <a href="javascript:;" class="openPopup">
+                              <div class="img">
+                                <img src="images/golf/sec04_sample01.png" alt="유현주 프로 프로필 사진">
+                                <img src="images/common/btn_play.png" alt="플레이 버튼" class="btn_play">
+                              </div>
+                              <h3>유현주 프로 프로필 사진</h3>
+                            </a>
+                          </li>
+                          <li class="border_frame" data-index="1" data-popup-image="001">
+                            <span class="border bdt"></span>
+                            <span class="border bdl"></span>
+                            <span class="border bdr"></span>
+                            <span class="border bdb"></span>
+                            <a href="javascript:;" class="openPopup">
+                              <div class="img">
+                                <img src="images/golf/sec04_sample02.png" alt="김민솔 선수 프로필 사진">
+                                <img src="images/common/btn_play.png" alt="플레이 버튼" class="btn_play">
+                              </div>
+                              <h3>김민솔 선수 프로필 사진</h3>
+                            </a>
+                          </li>
+                          <li class="border_frame" data-index="2" data-popup-image="002">
+                            <span class="border bdt"></span>
+                            <span class="border bdl"></span>
+                            <span class="border bdr"></span>
+                            <span class="border bdb"></span>
+                            <a href="javascript:;" class="openPopup">
+                              <div class="img">
+                                <img src="images/golf/sec04_sample03.png" alt="박결 프로 프로필 사진">
+                                <img src="images/common/btn_play.png" alt="플레이 버튼" class="btn_play">
+                              </div>
+                              <h3>박결 프로 프로필 사진</h3>
+                            </a>
+                          </li>
+                          <li class="border_frame" data-index="3" data-popup-image="003">
+                            <span class="border bdt"></span>
+                            <span class="border bdl"></span>
+                            <span class="border bdr"></span>
+                            <span class="border bdb"></span>
+                            <a href="javascript:;" class="openPopup">
+                              <div class="img">
+                                <img src="images/golf/sec04_sample04.png" alt="유효주 프로 프로필 사진">
+                                <img src="images/common/btn_play.png" alt="플레이 버튼" class="btn_play">
+                              </div>
+                              <h3>유효주 프로 프로필 사진</h3>
+                            </a>
+                          </li>
+                          <li class="border_frame" data-index="4" data-popup-image="004">
+                            <span class="border bdt"></span>
+                            <span class="border bdl"></span>
+                            <span class="border bdr"></span>
+                            <span class="border bdb"></span>
+                            <a href="javascript:;" class="openPopup">
+                              <div class="img">
+                                <img src="images/golf/sec04_sample05.png" alt="임희정 프로 프로필 사진">
+                                <img src="images/common/btn_play.png" alt="플레이 버튼" class="btn_play">
+                              </div>
+                              <h3>임희정 프로 프로필 사진</h3>
+                            </a>
+                          </li>
+                          <li class="border_frame" data-index="5" data-popup-image="005">
+                            <span class="border bdt"></span>
+                            <span class="border bdl"></span>
+                            <span class="border bdr"></span>
+                            <span class="border bdb"></span>
+                            <a href="javascript:;" class="openPopup">
+                              <div class="img">
+                                <img src="images/golf/sec04_sample06.png" alt="창단 기념식 230317">
+                                <img src="images/common/btn_play.png" alt="플레이 버튼" class="btn_play">
+                              </div>
+                              <h3>창단 기념식 230317</h3>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+<!-- 탭버튼 - 2023년 대회 -->
+                      <li>
+                        <ul class="gallery_inner">
+                          <li class="border_frame" data-index="6" data-popup-image="006">
+                            <span class="border bdt"></span>
+                            <span class="border bdl"></span>
+                            <span class="border bdr"></span>
+                            <span class="border bdb"></span>
+                            <a href="javascript:;" class="openPopup">
+                              <div class="img video">
+                                <img src="images/golf/sec04_sample07.png" alt="두산건설 we've 골프단 영상">
+                                <img src="images/common/btn_play.png" alt="플레이 버튼" class="btn_play">
+                              </div>
+                              <h3>두산건설 we've 골프단 영상</h3>
+                            </a>
+                          </li>
+                          <li class="border_frame" data-index="7" data-popup-image="007">
+                            <span class="border bdt"></span>
+                            <span class="border bdl"></span>
+                            <span class="border bdr"></span>
+                            <span class="border bdb"></span>
+                            <a href="javascript:;" class="openPopup">
+                              <div class="img">
+                                <img src="images/golf/sec04_sample08.png" alt="팬사인회 전 기념촬영을 한 유현주 프로, 유효주 프로">
+                                <img src="images/common/btn_play.png" alt="플레이 버튼" class="btn_play">
+                              </div>
+                              <h3>팬사인회 전 기념촬영을 한 유현주 프로, 유효주 프로</h3>
+                            </a>
+                          </li>
+                          <li class="border_frame" data-index="8" data-popup-image="008">
+                            <span class="border bdt"></span>
+                            <span class="border bdl"></span>
+                            <span class="border bdr"></span>
+                            <span class="border bdb"></span>
+                            <a href="javascript:;" class="openPopup">
+                              <div class="img">
+                                <img src="images/golf/sec04_sample09.png" alt="퍼팅라인을 확인하는 박결 메데힐 한국일보 챔피언...">
+                                <img src="images/common/btn_play.png" alt="플레이 버튼" class="btn_play">
+                              </div>
+                              <h3>퍼팅라인을 확인하는 박결 메데힐 한국일보 챔피언...</h3>
+                            </a>
+                          </li>
+                          <li class="border_frame" data-index="9" data-popup-image="009">
+                            <span class="border bdt"></span>
+                            <span class="border bdl"></span>
+                            <span class="border bdr"></span>
+                            <span class="border bdb"></span>
+                            <a href="javascript:;" class="openPopup">
+                              <div class="img">
+                                <img src="images/golf/sec04_sample10.png" alt="퍼팅라인을 고민하는 임희정 메디힐 한국일보 챔피...">
+                                <img src="images/common/btn_play.png" alt="플레이 버튼" class="btn_play">
+                              </div>
+                              <h3>퍼팅라인을 고민하는 임희정 메디힐 한국일보 챔피...</h3>
+                            </a>
+                          </li>
+                          <li class="border_frame" data-index="10" data-popup-image="010">
+                            <span class="border bdt"></span>
+                            <span class="border bdl"></span>
+                            <span class="border bdr"></span>
+                            <span class="border bdb"></span>
+                            <a href="javascript:;" class="openPopup">
+                              <div class="img">
+                                <img src="images/golf/sec04_sample11.png" alt="카메라를 보며 미소 짓는 박결 메디힐 한국일보 챔피...">
+                                <img src="images/common/btn_play.png" alt="플레이 버튼" class="btn_play">
+                              </div>
+                              <h3>카메라를 보며 미소 짓는 박결 메디힐 한국일보 챔피...</h3>
+                            </a>
+                          </li>
+                          <li class="border_frame" data-index="11" data-popup-image="011">
+                            <span class="border bdt"></span>
+                            <span class="border bdl"></span>
+                            <span class="border bdr"></span>
+                            <span class="border bdb"></span>
+                            <a href="javascript:;" class="openPopup">
+                              <div class="img">
+                                <img src="images/golf/sec04_sample12.png" alt="미소천사 유효주 메디힐 한국일보챔피언십23">
+                                <img src="images/common/btn_play.png" alt="플레이 버튼" class="btn_play">
+                              </div>
+                              <h3>미소천사 유효주 메디힐 한국일보챔피언십23</h3>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+
+                    </ul>
+
+                    <ol class="golf_pagination_wrap">
+                      <li><button><img src="images/common/arrow_front.png" alt="맨 앞으로"></button></li>
+                      <li><button><img src="images/common/arrow_prev.png" alt="이전"></button></li>
+                      <li class="golf_pagination">
+                        <ol>
+                          <li class="on"><button>1</button></li>
+                          <li><button>2</button></li>
+                          <li><button>3</button></li>
+                          <li><button>4</button></li>
+                          <li class="disable"><button>···</button></li>
+                          <li><button>9</button></li>
+                          <li><button>10</button></li>
+                        </ol>
+                      </li>
+                      <li><button><img src="images/common/arrow_next.png" alt="다음"></button></li>
+                      <li><button><img src="images/common/arrow_last.png" alt="맨 뒤로"></button></li>
+                    </ol>
                   </div>
+
                 </section>
 
                 <!-- footer -->
@@ -326,6 +610,10 @@
             <!-- popup -->
             <div class="popup">
               <button class="pop_close" type="button"><img src="images/common/pop_close.png" alt="pop_close"></button>
+<!-- 골프단 선수 팝업 -->
+              <!-- ------------------------------------------ -->
+              <!-- 선수 데이터 가져오기 - golf.js 347 ~ 462줄 -->
+              <!-- ------------------------------------------ -->
               <ul class="pop_players">
                 <li class="tab">
                   <div class="img">
@@ -368,7 +656,7 @@
                 </li>
                 <!-- //desc -->
               </ul>
-
+<!-- 골프단 뉴스 팝업 -->
               <ul class="pop_news">
 
                 <!-- --------------------------------------------------------- -->
@@ -380,9 +668,9 @@
                 </li>
 
                 <li class="editor">
-                  <!-- -------------------------------------- -->
-                  <!-- 에디터 삽입구간 - 샘플내용 개발시 삭제 -->
-                  <!-- -------------------------------------- -->
+                  <!-- -------------------------------------------- -->
+                  <!-- 에디터 삽입구간 - 샘플내용이므로 개발시 삭제 -->
+                  <!-- -------------------------------------------- -->
                   <h1 style="font-size: 2.4rem; color: #222222; font-weight: 400; ">-최정상급 두산위브더제니스 오션시티와 최정상급 선수의 닮은꼴 만남 화제</h1>
                   <br><br>
                   ‘두산위브더제니스 오션시티’의 견본주택에서 25일~26일 2일간
@@ -392,7 +680,7 @@
                   행사가 진행된 두산위브더제니스 오션시티 견본주택은 좋아하는 선수들을 가까이서 보고 싶어하는 팬들이 쉴 틈 없이 몰려들어 하루 종일 북적였다.
                   <br><br>
                   <img src="images/golf/sec3_editor_sample.png" alt="editor_sample" style="margin: auto; display: block;">
-                  <span style="margin: auto; display: block; text-align: center;"><유현주, 유효주 프로가 팬사인회 전에 기념촬영을 했다.></span>
+                  <span style="margin: auto; display: block; text-align: center;">&#60;유현주, 유효주 프로가 팬사인회 전에 기념촬영을 했다.&#62;</span>
                   <br><br>
                   행사에 참여한 A씨(45세, 부산)는 “보고 싶었던 유현주 프로를 직접 보고, 궁금했던 견본주택도 볼 수 있어서 일석이조였다.”라고 말했다.
                   <br>
@@ -405,13 +693,22 @@
                   기존 아파트 생활보다 업그레이드 된 편안함, 지속 가능한 생활, 편리함 등을 제공할 계획이다.
                   <br><br>
                   <img src="images/golf/sec3_editor_sample2.png" alt="editor_sample" style="margin: auto; display: block;">
-                  <span style="margin: auto; display: block; text-align: center;"><팬사인회에서 포즈를 취한 박결 프로와 임희정 프로> </span>
+                  <span style="margin: auto; display: block; text-align: center;">&#60;팬사인회에서 포즈를 취한 박결 프로와 임희정 프로&#62;</span>
                 </li>
 
                 <li class="pagination">
                   <div><button>PREV<span></span></button></div>
                   <div><button class="next">NEXT<span></span></button></div>
                 </li>
+              </ul>
+<!-- 골프단 갤러리 팝업 -->
+              <ul class="pop_gallery">
+                <div><button><img src="images/common/arrow_9x15_w.png" alt="prev">PREV</button></div>
+                <div class="img">
+                  <img src="images/golf/sec04_gallery_sample.png" alt="팝업이미지">
+                  <h2>두산건설 We′ve 골프단 영상</h2>
+                </div>
+                <div><button class="next">NEXT<img src="images/common/arrow_9x15_w.png" alt="next"></button></div>
               </ul>
 
 
