@@ -26,7 +26,8 @@ let golfPlayers = {
     });
 
     let playersSection = $('.section').not('.section1, .section2, .footer');
-    if ($('#mobile').length) {
+    if ($('#mobile').length && $('.container').hasClass('golfTeaser') === true) {
+      alert('a')
       playersSection.each(function(index) {
         let golfImgUrl = playersSection.eq(index).find('img');
         let mobileUrl = golfImgUrl.attr('src').replace('.png', '_mob.png');
@@ -433,7 +434,7 @@ let golfPlayers = {
         "images/golf/player_kms.png",
         "김민솔", 
         "Kim Minsol", 
-        "“아직 부족한 점이 많기 때문에 한 타 한 타 착실하게 <br>save 하는 것처럼 체력, 스킬, 멘탈도 ‘키우고(save)’ <br>관리하려고 해요.”",
+        "“아직 부족한 점이 많기 때문에 한 타 한 타 착실하게 <br>save 하는 것처럼 체력, 스킬, 멘탈 등 모든 부분을 <br>잘 ‘관리해서(save)’ 발전하는 선수가 되고 싶어요”",
         "2006년 06월 15일",
         " ",
         " ",
@@ -731,8 +732,7 @@ let golfPlayers = {
       e.preventDefault();
 
       if (popGallery.css('display') === 'flex') {
-        selGnum = $(this).parent().attr('data-index');
-
+        selGnum = $(this).parent().data('index');
         galActive = galFrame.children('.active');
         gTarget = galActive.find('li[data-index="' + selGnum + '"]').children('.openPopup');
 
@@ -745,47 +745,80 @@ let golfPlayers = {
           galNext = current.next(),
           galPrev = current.prev();
 
-      selGnum = $(this).hasClass('next') ? galNext.attr('data-index') : galPrev.attr('data-index');
+      selGnum = $(this).hasClass('next') ? galNext.data('index') : galPrev.data('index');
       gTarget = galActive.find('li[data-index="' + selGnum + '"]').children('.openPopup');
       galleryRender();
-
     })
     function galleryRender() {
-      let galData = gTarget.children('.img'),
-          gd_img = galData.children('img').attr('src'),
-          gd_title = gTarget.children('h3').text(),
-          gd_next = gTarget.parent().next(),
-          gd_prev = gTarget.parent().prev();
+      let galData = gTarget.children('.img');
+      let gd_img = galData.children('img').attr('src')
+      let gd_title = gTarget.children('h3').text()
+      let gd_next = gTarget.parent().next();
+      let gd_prev = gTarget.parent().prev();
 
-      let vurl = gd_img.split('/'),
-          pid = gTarget.parent().attr('data-popup-image');
-
-      // title set
-      vurl = vurl[vurl.length - 1];
       popGallery.find('.img h2').text(gd_title);
-      popGallery.find('.img img').attr('src', gd_img.replace(vurl, 'gallery/' + pid + '.jpg'));
 
       if (galData.hasClass('video')) {
-        let newIframe = $('<iframe/>', {
-          src: 'https://player.vimeo.com/video/818598210?rel=0&title=0&showinfo=0&byline=0&controls=1&portrait=0&autopause=1&',
-          width: '100%',
-          height: '100%',
-          frameborder: '0',
-          webkitallowfullscreen: '',
-          mozallowfullscreen: '',
-          allowfullscreen: '',
-          allow: 'autoplay',
-          class: 'vimeo02',
-        });
+        let videoURL = gTarget.parent().data('popup-vimeo');
+        let requestURL = 'https://vimeo.com/api/oembed.json?url=https%3A%2F%2Fvimeo.com%2F' + videoURL;
+        let currentIframe = popGallery.find('.img iframe');
+        let currentImg = popGallery.find('.img img');
+        let currentTit = popGallery.find('.img h2');
 
-        popGallery.find('.img img').replaceWith(newIframe);
+        $.ajax({
+          url: requestURL,
+          dataType: 'json',
+          beforeSend: function() {
+            currentIframe.hide(); // hide the existing iframe
+            currentImg.hide();
+            currentTit.hide();
+          },
+          success: function(data) {
+            let width = data.width;
+            let height = data.height;
+            $('#mobile').length ? null : (width = width * 1.5, height = height* 1.5)
+
+            let newIframe = $('<iframe>', {
+              src: 'https://player.vimeo.com/video/' + videoURL + '?rel=0&title=0&showinfo=0&byline=0&controls=1&portrait=0&autopause=1&',
+              width: width,
+              height: height,
+              frameborder: '0',
+              allowfullscreen: ''
+            });
+
+            if (currentIframe.length && currentIframe.data('video-id') === videoURL) {
+              currentIframe.show();
+              currentTit.show();
+              return; // iframe already loaded and matches videoURL, no need to reload
+            } else {
+              newIframe.data('video-id', videoURL); // set data attribute on new iframe
+              popGallery.find('.img iframe, .img img').replaceWith(newIframe);
+              currentTit.show();
+
+            }
+          }
+        });
       } else {
         let changeImg = new Image();
+        let vurl = gd_img.split('/')
+        const pid = gTarget.parent().data('popup-image');
+
+        vurl = vurl[vurl.length - 1];
         changeImg.src = gd_img.replace(vurl, 'gallery/' + pid + '.jpg');
 
-        popGallery.find('.img iframe').replaceWith(changeImg);
+        popGallery.find('.img iframe').length ?
+            popGallery.find('.img iframe').replaceWith(changeImg) : popGallery.find('.img img').replaceWith(changeImg)
       }
 
+      $(".pop_close").on('click', function() {
+        let iframe = popGallery.find('.img iframe');
+        if (iframe.length) {
+          let player = new Vimeo.Player(iframe);
+          player.unload();
+          popGallery.fadeOut(300);
+        }
+
+      });
 
       // pagination set
       popPagi.removeClass('disabled');
@@ -798,7 +831,7 @@ let golfPlayers = {
     }
 
 
-  }
+  },
 
 
 };

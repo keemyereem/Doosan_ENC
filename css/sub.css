@@ -1986,14 +1986,14 @@
 .golf .golfMain .section:not(.footer) .border_frame .bdr { width: .4rem; height: 0; background: linear-gradient(to bottom, #007aee 0, #005eb8 100%); }
 .golf .golfMain .section:not(.footer) .border_frame .bdl { bottom: 0; left: 0; }
 .golf .golfMain .section:not(.footer) .border_frame .bdr { top: 0; right: 0; }
-.golf .golfMain .section:not(.footer) .border_frame:hover { box-shadow: 8px 14px 21px 0px rgba(4, 0, 0, 0.16); }
+.golf .golfMain .section:not(.section4, .footer) .border_frame:hover { box-shadow: 8px 14px 21px 0px rgba(4, 0, 0, 0.16); }
 .golf .golfMain .section:not(.footer) .border_frame:hover .bdt { width: 100%; transition-delay: .1s; }
 .golf .golfMain .section:not(.footer) .border_frame:hover .bdr { height: 100%; transition-delay: .2s; }
 .golf .golfMain .section:not(.footer) .border_frame:hover .bdb { width: 100%; transition-delay: .3s; }
 .golf .golfMain .section:not(.footer) .border_frame:hover .bdl { height: 100%; transition-delay: .4s; }
 .golf .golfMain .section:not(.footer) .golf_search { position: absolute; right: 0; top: -10rem; border-bottom: .2rem solid #222222; display: flex; align-items: center; padding: 2rem; }
 .golf .golfMain .section:not(.footer) .golf_search input { border: none; background: transparent; font-size: 2.4rem; font-weight: 400; color: #222222; padding-right: 1rem; }
-.golf .golfMain .section:not(.footer) .golf_search input:placeholder { color: #b2b2b2; }
+.golf .golfMain .section:not(.footer) .golf_search input::placeholder { color: #b2b2b2; }
 .golf .golfMain .section:not(.footer) .golf_search button { transition: all ease .2s; }
 .golf .golfMain .section:not(.footer) .golf_search button:hover { transform: scale(.8); }
 .golf .golfMain .section:not(.footer) ol { display: flex; justify-content: center; }
@@ -2002,7 +2002,6 @@
 .golf .golfMain .section:not(.footer) ol li:not(.golf_pagination) button { width: 100%; height: 100%; }
 .golf .golfMain .section:not(.footer) ol .golf_pagination { margin: 0 1.45rem; }
 .golf .golfMain .section:not(.footer) ol .golf_pagination li { margin: 0 .85rem; font-size: 1.5rem; font-family: 'Montserrat'; position: relative; }
-.golf .golfMain .section:not(.footer) ol .golf_pagination li:hover { font-weight: 400; font-size: 1.6rem; }
 .golf .golfMain .section:not(.footer) ol .golf_pagination li.on { font-weight: 400; font-size: 1.6rem; color: #005eb8; border: .1rem solid #005eb8; border-radius: .2rem; }
 .golf .golfMain .section:not(.footer) ol .golf_pagination li.disable { pointer-events: none; }
 .golf .golfMain .section:not(.footer) ol .golf_pagination li button { display: block; width: 100%; height: 100%; }
@@ -2046,7 +2045,7 @@
 .golf .golfMain .section2 .splide { position: relative; margin: 6rem auto 0; width: 100%; max-width: 177rem; height:fit-content; }
 .golf .golfMain .section2 .splide .splide__track { overflow-y: visible; overflow-x: clip; }
 .golf .golfMain .section2 .splide .splide__list { max-height: 52rem; min-height: 41.5rem; height: 27.1vw; display: flex; align-items: center; margin: 5rem 0; }
-.golf .golfMain .section2 .splide .splide__list .splide__slide { position: relative; min-height: 36.8rem; height: 23.96vw; width: calc(20% - 3rem); margin-right: 3rem; border: 1px solid #d9d9d9; transition: all ease .3s; }
+.golf .golfMain .section2 .splide .splide__list .splide__slide { position: relative; min-height: 36.8rem; height: 23.96vw; width: calc(20% - 3rem); margin-right: 3rem; background: #ffffff; border: 1px solid #d9d9d9; transition: all ease .3s; }
 .golf .golfMain .section2 .splide .splide__list .splide__slide:after { content:''; display: block; position: absolute; bottom: -.1rem; width: 100%; height: 26.5%; background: linear-gradient(to top, #014099, transparent); z-index: 0; opacity: 0; pointer-events: none; transition: all ease .3s; }
 .golf .golfMain .section2 .splide .splide__list .splide__slide .openPopup { pointer-events: none; cursor:none; }
 .golf .golfMain .section2 .splide .splide__list .splide__slide .mask_circle { display: flex; position: relative; align-items: center; flex-direction: column; background: #eeeef0; height: 100%; overflow: hidden; clip-path: circle(33% at 50% 37%); transition: all ease .6s; }
@@ -2089,6 +2088,7 @@
 
 /* 골프단 갤러리 */
 .golf .golfMain .section4 { background: #f5f6fa; }
+.golf .golfMain .section4 .border_frame:hover .img { box-shadow: 8px 14px 21px 0px rgba(4, 0, 0, 0.16); }
 .golf .golfMain .section4 .title_box { max-width: 138rem; width: 100%; height: fit-content; margin: 12rem auto 0; padding-left: 2rem; }
 .golf .golfMain .section4 .golf_tab { position: absolute; top: -5.1rem; font-size: 1.8rem; color: #888888; display: flex; }
 .golf .golfMain .section4 .golf_tab button { margin-right: 3rem; position: relative; }
@@ -2101,17 +2101,19 @@
 .golf .golfMain .section4 .golf_gallery .gallery_frame > li.active { position: relative; opacity: 1; top: 0; visibility: visible;  }
 .golf .golfMain .section4 .golf_gallery .gallery_inner { display: flex; flex-wrap: wrap; }
 .golf .golfMain .section4 .golf_gallery .gallery_inner li { width: calc(100% / 3 - 5.35rem); position: relative; margin-bottom: 3rem; }
-.golf .golfMain .section4 .golf_gallery .gallery_inner li a { display: block; overflow: hidden; }
-.golf .golfMain .section4 .golf_gallery .gallery_inner li a .img { position: relative; height: 22.2rem; overflow: hidden; }
+.golf .golfMain .section4 .golf_gallery .gallery_inner li a { display: block; }
+.golf .golfMain .section4 .golf_gallery .gallery_inner li a .img { position: relative; height: 22.2rem; overflow: hidden; transition: box-shadow ease .3s; }
 .golf .golfMain .section4 .golf_gallery .gallery_inner li a .img img { width: 100%; height: 100%; object-fit: cover; }
 .golf .golfMain .section4 .golf_gallery .gallery_inner li a .img.video .btn_play { display: block; }
 .golf .golfMain .section4 .golf_gallery .gallery_inner li a .img .btn_play { width: fit-content; height: fit-content; object-fit: contain; transition: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: none; }
-.golf .golfMain .section4 .golf_gallery .gallery_inner li h3 { width: 100%; padding: 1.6rem 1rem 2rem; font-size: 1.8rem; color: #222222; text-align: center; background: #ffffff; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.golf .golfMain .section4 .golf_gallery .gallery_inner li h3 { width: 100%; padding: 1.6rem 1rem 2rem; font-size: 1.8rem; color: #222222; text-align: center; background: transparent; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .golf .golfMain .section4 .golf_gallery .gallery_inner li:nth-child(3n - 1) { margin: 0 8rem 3rem; }
 
 
 /* 팝업 */
 .golf .golfMain .popup { cursor: none; width: 100%; padding: 0 3rem; overflow: auto; height: 100vh; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, .6); z-index: 1000; display: none; }
+.golf .golfMain .popup::-webkit-scrollbar {width: 1rem; background: rgba(0, 0, 0, .3); }
+.golf .golfMain .popup::-webkit-scrollbar-thumb {background: #ffffff; border-radius: 1rem; }
 .golf .golfMain .popup .pop_close { position: fixed; top: 0; left: 0; width: 7rem; height: 7rem; transform: scale(0); cursor: none; transition: transform ease .3s; }
 .golf .golfMain .popup .pop_close img { width: 100%; }
 .golf .golfMain .popup .pop_players { cursor: auto; width: 128rem; height: calc(100vh - 9.2rem); overflow: hidden; background: #fff; position: relative; margin: 4.6rem auto; letter-spacing: -.15rem; display: none; }
@@ -2186,9 +2188,9 @@
 
 .golf .golfMain .popup .pop_gallery { width: 100%; min-width: 138rem; height: 100vh; display: none; align-items: center; justify-content: center; }
 .golf .golfMain .popup .pop_gallery > * { position: relative; cursor: auto; width: fit-content; overflow: hidden; }
-.golf .golfMain .popup .pop_gallery .img { display: flex; flex-direction: column; max-width: 100rem; max-height: 100vh; }
+.golf .golfMain .popup .pop_gallery .img { display: flex; flex-direction: column; max-width: 100rem; max-height: 100vh; min-width: 36rem; }
 .golf .golfMain .popup .pop_gallery .img img { width: 100%; height: 100%; object-fit: cover; }
-.golf .golfMain .popup .pop_gallery .img iframe {  }
+.golf .golfMain .popup .pop_gallery .img iframe { max-width: 100rem; max-height: 100vh; transition: all ease .3s; }
 .golf .golfMain .popup .pop_gallery .img h2 { text-align: center; font-size: 2rem; font-weight: 400; color: #fff; padding-top: 2rem; }
 .golf .golfMain .popup .pop_gallery > div:not(.img) { font-size: 1.4rem; font-family: 'Montserrat'; font-weight: 400; transition: all ease .2s; color: #fff; border: .1rem solid rgba(255, 255, 255, .5); border-radius: 2rem; width: 13rem; height: 4rem; }
 .golf .golfMain .popup .pop_gallery > div:not(.img, .disabled):hover { transform: scale(1.1); }
@@ -2200,6 +2202,7 @@
 .golf .golfMain .popup .pop_gallery > div:first-child button img { margin-right: 2rem; transform: scale(-1); }
 .golf .golfMain .popup .pop_gallery > div:last-child { margin-left: 8rem; }
 .golf .golfMain .popup .pop_gallery > div:last-child button img { margin-left: 2rem;  }
+
 
 
 @keyframes rotate{
