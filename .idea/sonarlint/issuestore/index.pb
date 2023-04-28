@@ -10,3 +10,8 @@ B
 html/FD-02-04.html,a\e\ae90c49d34ad6759530e3dab90ea7b8254cae1a3
 <
 css/font.css,6\8\682b202495f4a2e69d6e4e1b201e5626aaf3e182
+>
+css/common.css,c\3\c39b8363497cee26cca0813fb632087df2119539
+:
+
+js/main.js,d\a\dae13fd6f331d1c91ab58b06e81d05cb8958bfb1

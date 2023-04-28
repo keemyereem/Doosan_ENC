@@ -1884,6 +1884,191 @@
 
 
 
+/* ================================  골프단 메인  =============================== */
+
+/* 공통 */
+#mobile .golf .golfMain .section:not(.footer) .title_box h1 { font-size: 2.7rem; }
+#mobile .golf .golfMain .section:not(.footer) .title_box p { font-size: 1.5rem; padding-top: 2rem; line-height: 1.53; }
+#mobile .golf .golfMain .section:not(.footer) .border_frame .bdt,
+#mobile .golf .golfMain .section:not(.footer) .border_frame .bdb { height: .2rem; }
+#mobile .golf .golfMain .section:not(.footer) .border_frame .bdl,
+#mobile .golf .golfMain .section:not(.footer) .border_frame .bdr { width: .2rem; }
+#mobile .golf .golfMain .section:not(.section4, .footer) .border_frame:hover { box-shadow: unset; }
+#mobile .golf .golfMain .section:not(.footer) .border_frame:hover .bdt,
+#mobile .golf .golfMain .section:not(.footer) .border_frame:hover .bdb { width: unset; transition-delay: unset; }
+#mobile .golf .golfMain .section:not(.footer) .border_frame:hover .bdr,
+#mobile .golf .golfMain .section:not(.footer) .border_frame:hover .bdl { height: unset; transition-delay: unset; }
+#mobile .golf .golfMain .section:not(.section4, .footer) .border_frame:active { box-shadow: 4px 7px 10.5px 0px rgba(4, 0, 0, 0.16); }
+#mobile .golf .golfMain .section:not(.footer) .border_frame:active .bdt { width: 100%; transition-delay: .1s; }
+#mobile .golf .golfMain .section:not(.footer) .border_frame:active .bdr { height: 100%; transition-delay: .2s; }
+#mobile .golf .golfMain .section:not(.footer) .border_frame:active .bdb { width: 100%; transition-delay: .3s; }
+#mobile .golf .golfMain .section:not(.footer) .border_frame:active .bdl { height: 100%; transition-delay: .4s; }
+#mobile .golf .golfMain .section:not(.footer) .golf_search { position: relative; top: 0; padding: 1rem 0 1rem 2rem; max-width: 22.5rem; margin: auto; }
+#mobile .golf .golfMain .section:not(.footer) .golf_search input { font-size: 1.7rem; padding-right: 0; width: 100%; }
+#mobile .golf .golfMain .section:not(.footer) .golf_search button img { width: 1.8rem; margin: 0 .5rem; }
+#mobile .golf .golfMain .section:not(.footer) .golf_search button:hover { transform: unset; }
+#mobile .golf .golfMain .section:not(.footer) .golf_search button:active { transform: scale(.8); }
+
+#mobile .golf .golfMain .section:not(.footer) ol { display: flex; justify-content: center; }
+#mobile .golf .golfMain .section:not(.footer) ol li:not(.golf_pagination) { width: 2.9rem; height: 2.9rem; display: flex; justify-content: center; align-items: center; }
+#mobile .golf .golfMain .section:not(.footer) ol li:not(.golf_pagination) { margin: 0 .55rem; }
+#mobile .golf .golfMain .section:not(.footer) ol li:not(.golf_pagination) button { width: 100%; height: 100%; }
+#mobile .golf .golfMain .section:not(.footer) ol .golf_pagination { margin: 0 1.45rem; }
+#mobile .golf .golfMain .section:not(.footer) ol .golf_pagination li { margin: 0 .85rem; font-size: 1.5rem; font-family: 'Montserrat'; position: relative; }
+#mobile .golf .golfMain .section:not(.footer) ol .golf_pagination li.on { font-weight: 400; font-size: 1.6rem; color: #005eb8; border: .1rem solid #005eb8; border-radius: .2rem; }
+#mobile .golf .golfMain .section:not(.footer) ol .golf_pagination li.disable { pointer-events: none; }
+#mobile .golf .golfMain .section:not(.footer) ol .golf_pagination li button { display: block; width: 100%; height: 100%; }
+
+/* 배너 */
+#mobile .golf .golfMain .section1 .scroll_down { display: none; }
+#mobile .golf .golfMain .section1 article { bottom: auto; top: 18vh; padding: 0 2rem; }
+#mobile .golf .golfMain .section1 article h2 { font-size: 3.5rem; }
+#mobile .golf .golfMain .section1 article h2:last-of-type { font-weight: 200; }
+#mobile .golf .golfMain .section1 article h2 span.slideUp { top: -10rem; }
+#mobile .golf .golfMain .section1 article p { font-size: 1.8rem;  margin-bottom: 1rem; }
+#mobile .golf .golfMain .section1 article div * { font-size: 1.1rem; margin-top: 5rem; padding: 0 1.8rem; }
+#mobile .golf .golfMain .section1 article div *:after { background: url("../images/common/arrow_7x11_w.png") 50% 50% no-repeat; width: .65rem; height: 1.1rem; background-size: contain; }
+#mobile .golf .golfMain .section1 article div .swiper-button-next:before { content: ''; display: inline-block; width: .1rem; height: 1rem; left: -.1rem; }
+#mobile .golf .golfMain .section1 .swiper-slide img { height: 100%; object-fit: cover; }
+
+/* 선수소개 */
+#mobile .golf .golfMain .section2 .title_box { margin: 6.5rem auto 0; padding-left: 0; text-align: center; }
+#mobile .golf .golfMain .section2 .seciton2_cursor { width: 7.5rem; height: 7.5rem; cursor:none; pointer-events: auto; position: absolute; top: auto; bottom: 6.8rem; right: 0; left: 0; margin: auto; transform: scale(0) }
+#mobile .golf .golfMain .section2 .seciton2_cursor span { font-size: 1.2rem; margin-bottom: .5rem; line-height: 1; }
+#mobile .golf .golfMain .section2 .seciton2_cursor img { width: 1.1rem; height: 1.1rem; }
+#mobile .golf .golfMain .section2 .controller { position:absolute; top: -9rem; right: 1rem; z-index: 2; height: fit-content; width: 13.65rem; }
+#mobile .golf .golfMain .section2 .controller .splide__arrows button { padding: 4rem 1rem; }
+#mobile .golf .golfMain .section2 .controller .splide__arrows button:hover { opacity: 1; }
+#mobile .golf .golfMain .section2 .controller .splide__arrows button:active { opacity: .7; }
+#mobile .golf .golfMain .section2 .controller .splide__arrows button.splide__arrow--prev { padding-left: 4rem; }
+#mobile .golf .golfMain .section2 .controller .splide__arrows button.splide__arrow--next { padding-right: 4rem; }
+#mobile .golf .golfMain .section2 .controller .splide__arrows button.splide__arrow--prev:after { border-width: 6px 6px 6px 0; margin-right: 1rem; }
+#mobile .golf .golfMain .section2 .controller .splide__arrows button.splide__arrow--next:after { border-width: 6px 0 6px 6px; margin-left: 1rem; }
+#mobile .golf .golfMain .section2 .splide { margin: 11.1rem auto 6.5rem;  }
+#mobile .golf .golfMain .section2 .splide .splide__list { max-height: none; min-height: auto; height: 113vw; }
+#mobile .golf .golfMain .section2 .splide .splide__list .splide__slide { min-height: auto; height: calc(113vw - 4rem); width: calc(100% - 8rem); margin-right: 4rem; }
+#mobile .golf .golfMain .section2 .splide .splide__list .splide__slide:after { content:''; height: 21.5%; }
+#mobile .golf .golfMain .section2 .splide .splide__list .splide__slide .mask_circle:after { background: url("../images/golf/sec02_hover_bg_mob.png") 50% 50% no-repeat; background-size: cover; }
+#mobile .golf .golfMain .section2 .splide .splide__list .splide__slide .mask_circle h2 { font-size: 3.5rem; top: 11%; }
+#mobile .golf .golfMain .section2 .splide .splide__list .splide__slide h4 { bottom: 3.5%; font-size: 2rem; }
+#mobile .golf .golfMain .section2 .splide .splide__list .splide__slide h4 span { font-size: 1.4rem; padding-left: 6%; }
+#mobile .golf .golfMain .section2 .splide .splide__list .splide__slide h4 span:before { height: 1.2rem; right: 2.5vw; }
+#mobile .golf .golfMain .section2 .splide .splide__slide.is-active { box-shadow: 6.5px 5.5px 12px 0px rgba(4, 0, 0, 0.2); }
+#mobile .golf .golfMain .section2 .splide .splide__slide.is-active .openPopup { pointer-events: none; }
+#mobile .golf .golfMain .section2 .splide .splide__slide.is-active .openPopup .seciton2_cursor { transform: scale(1); }
+#mobile .golf .golfMain .section2 .splide .splide__slide.is-active .openPopup .seciton2_cursor:active { transform: scale(.8); }
+#mobile .golf .golfMain .section2 .splide .splide__slide.is-active { height: 100%; }
+#mobile .golf .golfMain .section2 .splide .splide__slide.is-active:after { transition-delay: .1s; }
+
+/* 골프단 소식 */
+#mobile .golf .golfMain .section3 .title_box { margin: 6.5rem auto 0; padding-left: 0; text-align: center; }
+#mobile .golf .golfMain .section3 .golf_news { margin: 2rem 2rem 0; }
+#mobile .golf .golfMain .section3 .golf_news ul { margin-top: 3rem; }
+#mobile .golf .golfMain .section3 .golf_news ul li { width: 100%; height: fit-content; margin-bottom: 3rem; }
+#mobile .golf .golfMain .section3 .golf_news ul li:nth-child(3n - 1) { margin: 0; margin-bottom: 3rem; }
+#mobile .golf .golfMain .section3 .golf_news ul li img { height: calc(100% - 10rem); }
+#mobile .golf .golfMain .section3 .golf_news ul li a:hover img { transform: unset; }
+#mobile .golf .golfMain .section3 .golf_news ul li a:active img { transform: scale(1.1); }
+#mobile .golf .golfMain .section3 .golf_news ul li .txt_box { height: 10rem; padding: 2rem; }
+#mobile .golf .golfMain .section3 .golf_news ul li .txt_box p { font-size: 1.5rem; }
+#mobile .golf .golfMain .section3 .golf_news ul li .txt_box span { font-size: 1.2rem; }
+#mobile .golf .golfMain .section3 .golf_pagination_wrap {margin-top: 0; margin-bottom: 6.5rem; }
+
+
+/* 골프단 갤러리 */
+#mobile .golf .golfMain .section4 { background: #f5f6fa; }
+#mobile .golf .golfMain .section4 .border_frame:hover .img { box-shadow: 8px 14px 21px 0px rgba(4, 0, 0, 0.16); }
+#mobile .golf .golfMain .section4 .title_box { max-width: 138rem; width: 100%; height: fit-content; margin: 12rem auto 0; padding-left: 2rem; }
+#mobile .golf .golfMain .section4 .golf_tab { position: absolute; top: -5.1rem; font-size: 1.8rem; color: #888888; display: flex; }
+#mobile .golf .golfMain .section4 .golf_tab button { margin-right: 3rem; position: relative; }
+#mobile .golf .golfMain .section4 .golf_tab button.on { font-weight: 400; color: #005eb8; }
+#mobile .golf .golfMain .section4 .golf_tab button:hover { color: #005eb8; }
+#mobile .golf .golfMain .section4 .golf_tab button:not(:last-of-type):after { content: ''; display: inline-block; width: .1rem; height: 1.3rem; background: #bfbfbf; right: -1.5rem; top: 0; bottom: 0; margin: auto; position: absolute; }
+#mobile .golf .golfMain .section4 .golf_gallery { max-width: 134rem; margin: 7.8rem auto 0; position: relative; }
+#mobile .golf .golfMain .section4 .golf_gallery .gallery_frame { position: relative; }
+#mobile .golf .golfMain .section4 .golf_gallery .gallery_frame > li { position: absolute; top: 5rem; opacity: 0; visibility: hidden; transition: all ease .3s; }
+#mobile .golf .golfMain .section4 .golf_gallery .gallery_frame > li.active { position: relative; opacity: 1; top: 0; visibility: visible;  }
+#mobile .golf .golfMain .section4 .golf_gallery .gallery_inner { display: flex; flex-wrap: wrap; }
+#mobile .golf .golfMain .section4 .golf_gallery .gallery_inner li { width: calc(100% / 3 - 5.35rem); position: relative; margin-bottom: 3rem; }
+#mobile .golf .golfMain .section4 .golf_gallery .gallery_inner li a { display: block; }
+#mobile .golf .golfMain .section4 .golf_gallery .gallery_inner li a .img { position: relative; height: 22.2rem; overflow: hidden; transition: box-shadow ease .3s; }
+#mobile .golf .golfMain .section4 .golf_gallery .gallery_inner li a .img img { width: 100%; height: 100%; object-fit: cover; }
+#mobile .golf .golfMain .section4 .golf_gallery .gallery_inner li a .img.video .btn_play { display: block; }
+#mobile .golf .golfMain .section4 .golf_gallery .gallery_inner li a .img .btn_play { width: fit-content; height: fit-content; object-fit: contain; transition: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: none; }
+#mobile .golf .golfMain .section4 .golf_gallery .gallery_inner li h3 { width: 100%; padding: 1.6rem 1rem 2rem; font-size: 1.8rem; color: #222222; text-align: center; background: transparent; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#mobile .golf .golfMain .section4 .golf_gallery .gallery_inner li:nth-child(3n - 1) { margin: 0 8rem 3rem; }
+
+
+/* 팝업 */
+#mobile .golf .golfMain .popup { padding: 0 2rem; }
+#mobile .golf .golfMain .popup::-webkit-scrollbar {width: .3rem; background: transparent; }
+#mobile .golf .golfMain .popup::-webkit-scrollbar-thumb {background: rgba(255, 255, 255, .3); }
+#mobile .golf .golfMain .popup .pop_close { position: absolute; top: 9.5rem; left: 50%; width: 5.25rem; height: 5.25rem; transform: scale(1) translateX(-50%); }
+#mobile .golf .golfMain .popup .pop_close:active { transform: rotate(90deg) translate(0, 50%); }
+#mobile .golf .golfMain .popup .pop_players { width: 100%; height: fit-content; margin: 17.8rem auto 4.6rem; flex-direction: column; letter-spacing: -.1rem; }
+#mobile .golf .golfMain .popup .pop_players .tab { width: 100%; }
+#mobile .golf .golfMain .popup .pop_players .tab .img { height: fit-content; }
+#mobile .golf .golfMain .popup .pop_players .tab .video { height: calc(100% - 4rem); }
+#mobile .golf .golfMain .popup .pop_players .tab .video #btn-play { width: 6rem; height: 6rem; }
+#mobile .golf .golfMain .popup .pop_players .tab .video #btn-play:active { width: 5rem; height: 5rem; }
+#mobile .golf .golfMain .popup .pop_players .tab .tab_container { height: 4rem; }
+#mobile .golf .golfMain .popup .pop_players .tab .tab_container::before { height: 1.3rem; }
+#mobile .golf .golfMain .popup .pop_players .tab .tab_container button { font-size: 1.2rem; }
+#mobile .golf .golfMain .popup .pop_players .tab .tab_container button img { max-width: 1.75rem; }
+#mobile .golf .golfMain .popup .pop_players .tab .tab_container button:last-of-type img { max-width: 1.65rem; }
+#mobile .golf .golfMain .popup .pop_players .tab .tab_container button span { font-weight: 200; padding: 0 .2rem 0 .75rem; }
+#mobile .golf .golfMain .popup .pop_players .desc { width: 100%; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner { height: calc(100% - 7.6rem); padding: 3.5rem 2rem 0; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:first-child h1 { font-size: 1.4rem;  }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:first-child h2 { font-size: 2.8rem; padding-bottom: 1.5rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:first-child h2 span { font-size: 1.5rem; padding-left: 1.35rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:first-child p { font-size: 1.6rem; line-height: 1.4; height: 9rem; margin: 2rem 0; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:nth-child(2) { padding: 1.4rem 1.9rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:nth-child(2) p { font-size: 1.3rem; padding: .4rem 0; align-items: flex-start; line-height: 1.4 }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:nth-child(2) p b { width: 50%; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:nth-child(2) p b::before { width: .4rem; height: .4rem; margin-right: 1rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:nth-child(2) p span { width: 50%; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:last-child { margin-top: 2.5rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:last-child h3 span { font-size: 1.3rem; padding: .65rem 1.05rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:last-child .history { height: 11.3rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:last-child .history p { font-size: 1.3rem; line-height: 1.4; padding-left: 6.25rem; padding-right: .5rem; padding-bottom: .2rem; letter-spacing: -.05rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:last-child .history p span { padding-left: 1.3rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:last-child .history p span::before { width: .4rem; height: .4rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_pagination_wrap { height: 7.6rem; justify-content: space-between; padding: 0 2rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_pagination_wrap li a { font-size: 1.2rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_pagination_wrap .desc_pagination.prev { background-size: .65rem 1.05rem; background-position: 0% 40%; padding-left: 1.7rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_pagination_wrap .desc_pagination.next { background-size: .65rem 1.05rem; background-position: 100% 40%; padding-right: 1.7rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_pagination_wrap .desc_number { padding: 0; font-size: 1.4rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_pagination_wrap .desc_number span { margin-right: .3rem; }
+#mobile .golf .golfMain .popup .pop_news { width: 100%; margin: 17.8rem auto 4.6rem; letter-spacing: -.15rem; }
+
+#mobile .golf .golfMain .popup .pop_news .title { padding: 6rem 4rem 0; }
+#mobile .golf .golfMain .popup .pop_news .title h2 { width: 100%; font-size: 4rem; font-weight: 400; color: #222222; line-height: 1.2; overflow: hidden; text-overflow: ellipsis; }
+#mobile .golf .golfMain .popup .pop_news .title span { display: block; width: 100%; padding: 3.3rem 0 3.8rem; border-bottom: .1rem solid #e8e8e8; line-height: 1; font-size: 1.6rem; font-family: 'Montserrat'; color: #777777; }
+#mobile .golf .golfMain .popup .pop_news .editor { padding: 6rem 4rem 12rem; font-size: 1.8rem; line-height: 2.1; color: #222222; }
+#mobile .golf .golfMain .popup .pop_news .pagination { padding: 0 4rem 6rem; position: relative; }
+#mobile .golf .golfMain .popup .pop_news .pagination div { width: 100%; border-bottom: .1rem solid #e8e8e8; border-top: .1rem solid #e8e8e8; }
+#mobile .golf .golfMain .popup .pop_news .pagination div:last-child { margin-top: -.1rem; }
+#mobile .golf .golfMain .popup .pop_news .pagination div button { padding: 3rem 0; font-size: 1.5rem; font-family: 'Montserrat'; font-weight: 400; color: #000000; }
+#mobile .golf .golfMain .popup .pop_news .pagination div button span { color: #222222; font-weight: 200; font-family: 'Pretendard'; padding-left: 6rem; display: inline-block; }
+#mobile .golf .golfMain .popup .pop_news .pagination div button:hover span { color: #005eb8; }
+
+#mobile .golf .golfMain .popup .pop_gallery { width: 100%; min-width: 138rem; height: 100vh; display: none; align-items: center; justify-content: center; }
+#mobile .golf .golfMain .popup .pop_gallery > * { position: relative; cursor: auto; width: fit-content; overflow: hidden; }
+#mobile .golf .golfMain .popup .pop_gallery .img { display: flex; flex-direction: column; max-width: 100rem; max-height: 100vh; min-width: 36rem; }
+#mobile .golf .golfMain .popup .pop_gallery .img img { width: 100%; height: 100%; object-fit: cover; }
+#mobile .golf .golfMain .popup .pop_gallery .img iframe { max-width: 100rem; max-height: 100vh; transition: all ease .3s; }
+#mobile .golf .golfMain .popup .pop_gallery .img h2 { text-align: center; font-size: 2rem; font-weight: 400; color: #fff; padding-top: 2rem; }
+#mobile .golf .golfMain .popup .pop_gallery > div:not(.img) { font-size: 1.4rem; font-family: 'Montserrat'; font-weight: 400; transition: all ease .2s; color: #fff; border: .1rem solid rgba(255, 255, 255, .5); border-radius: 2rem; width: 13rem; height: 4rem; }
+#mobile .golf .golfMain .popup .pop_gallery > div:not(.img, .disabled):hover { transform: scale(1.1); }
+#mobile .golf .golfMain .popup .pop_gallery > div:not(.img).disabled { cursor: auto; opacity: .5; }
+#mobile .golf .golfMain .popup .pop_gallery > div:not(.img).disabled button { pointer-events: none; }
+#mobile .golf .golfMain .popup .pop_gallery > div button { width: 100%; height: 100%; letter-spacing: .3rem; display: flex; align-items: center; justify-content: center; }
+
+#mobile .golf .golfMain .popup .pop_gallery > div:first-child { margin-right: 8rem; }
+#mobile .golf .golfMain .popup .pop_gallery > div:first-child button img { margin-right: 2rem; transform: scale(-1); }
+#mobile .golf .golfMain .popup .pop_gallery > div:last-child { margin-left: 8rem; }
+#mobile .golf .golfMain .popup .pop_gallery > div:last-child button img { margin-left: 2rem;  }
 
 
 

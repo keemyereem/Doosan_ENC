@@ -1,9 +1,7 @@
 /* --------------------- DoosanENC Released 2022.08.08 --------------------- */
 /* --------------------- Published by 4m Creative --------------------- */
 
-$(function () {
-
-});
+$(function () { });
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -12,7 +10,7 @@ $(function () {
 let golfPlayers = {
   init: function () {
     this.settingResponsive();
-    this.createFullPageGolf();
+    this.createFullPageGolf()
     this.popupForGolf();
     this.swipersForGolf();
     this.popup01();
@@ -32,6 +30,13 @@ let golfPlayers = {
         let golfImgUrl = playersSection.eq(index).find('img');
         let mobileUrl = golfImgUrl.attr('src').replace('.png', '_mob.png');
         golfImgUrl.attr('src', mobileUrl)
+      });
+    } else if ($('#mobile').length) {
+      const $searchFrame = $('.golf_search');
+      $searchFrame.each(function(index) {
+        let golfImgUrl = $searchFrame.eq(index).find('button img');
+        let mobileUrl = golfImgUrl.attr('src').replace(/\.(png|jpg|jpeg|gif)/i, '_mob.$1');
+        golfImgUrl.attr('src', mobileUrl);
       });
     }
 
@@ -54,21 +59,22 @@ let golfPlayers = {
   createFullPageGolf: function() {
     
     $("#fullpage").fullpage({
-      anchors: [
-        "firstPage",
-        "secondPage",
-        "thirdPage",
-        "fourthPage",
-        "fifthPage",
-        "sixthPage",
-        "seventhPage",
-      ],
+      // anchors: [
+      //   "firstPage",
+      //   "secondPage",
+      //   "thirdPage",
+      //   "fourthPage",
+      //   "fifthPage",
+      //   "sixthPage",
+      //   "seventhPage",
+      // ],
       menu: "#rightnavi",
       verticalCentered: false,
       scrollOverflow: false,
       normalScrollElements: '.popup',
       css3: true,
       scrollingSpeed: 800,
+      responsiveWidth: 800,
 
       onLeave: function (index, nextIndex, direction) {
         // 앵커별 추가기능 조정
@@ -141,6 +147,10 @@ let golfPlayers = {
             $(".footer .sec_tit > span").addClass("fin");
           }, 200);
         }
+      }, afterResponsive: function(isResponsive) {
+        if (isResponsive) {
+          $('.section').addClass('fp-auto-height-responsive');
+        }
       }
     });
     
@@ -157,40 +167,39 @@ let golfPlayers = {
     let popup = document.querySelector(".popup"),
         circle = document.querySelector(".pop_close");
 
+
     // 영역 밖 이동 시 마우스 닫기 버튼 보이기
     $(document).on('mousemove', function (e) {
-      if ($('.popup').children('ul').has(e.target).length === 0) {
-        popupClose.css({ transform: "scale(1)" });
-      } else {
-        popupClose.css({ transform: "scale(0)" });
-      }
+      if (!$('#mobile').length) {
+        if ($('.popup').children('ul').has(e.target).length === 0) {
+          popupClose.css({ transform: "scale(1)" });
+        } else {
+          popupClose.css({ transform: "scale(0)" });
+        }
 
-      let $section2Active = $('.splide__slide.is-active');
-      if ($section2Active.has(e.target).length === 0) {
-        $section2Cursor.css({ transform: "scale(0)" });
-      } else {
-        let ctlX = e.clientX - 45,
-            crlY = e.clientY - 45;
+        let $section2Active = $('.splide__slide.is-active');
+        if ($section2Active.has(e.target).length === 0) {
+          $section2Cursor.css({ transform: "scale(0)" });
+        } else {
+          let ctlX = e.clientX - 45,
+              crlY = e.clientY - 45;
 
-        $section2Cursor.css({transform: "scale(1)", left: ctlX, top: crlY});
-        e.stopPropagation();
-      }
-
-      let $section4 = $('.pop_gallery');
-      if ($section4.children().has(e.target).length !== 0) {
-        //console.log('18')
-      } else {
-        //console.log('28')
+          $section2Cursor.css({transform: "scale(1)", left: ctlX, top: crlY});
+          e.stopPropagation();
+        }
       }
     });
 
     // 영영 밖 이동 시 마우스 닫기 버튼  커서 따라다니기
     popup.addEventListener("mousemove", (e) => {
-      let mouseX = e.clientX;
-      let mouseY = e.clientY;
+      if (!$('#mobile').length) {
+        let mouseX = e.clientX;
+        let mouseY = e.clientY;
 
-      circle.style.left = mouseX - 35 + "px";
-      circle.style.top = mouseY - 35 + "px";
+        circle.style.left = mouseX - 35 + "px";
+        circle.style.top = mouseY - 35 + "px";
+      }
+
     });
 
     $(window).on("scroll", function () {
@@ -203,18 +212,17 @@ let golfPlayers = {
     });
 
     popBtn.on('click', function() {
+      $("html").addClass("blockScroll");
       $(this).closest('.splide__slide').length ?
           LayerPopup1.css('display', 'flex') : $(this).closest('.news_list').length ?
               LayerPopup2.css('display', 'block') : LayerPopup3.css('display', 'flex');
     });
-
 
     popupClose.on("click", () => {
       // 팝업 닫기 function
       $("html").removeClass("blockScroll");
       $(".popup, .popup > ul").fadeOut(300);
       LayerPopup1.find('.video').length ? LayerPopup1.find('.video').removeClass('on') : null;
-      
     });
   },
 
@@ -235,6 +243,15 @@ let golfPlayers = {
       on: {
         init: function() {  // 초기값 - 필요시 작업
           chkWord();
+
+          let slideMob = $('.swiper-slide');
+          if ($('#mobile').length) {
+            slideMob.each(function(index) {
+              let golfImgUrl = slideMob.eq(index).find('img');
+              let mobileUrl = golfImgUrl.attr('src').replace(/\.(png|jpg|jpeg|gif)/i, '_mob.$1');
+              golfImgUrl.attr('src', mobileUrl)
+            });
+          }
         },
 
         slideChangeTransitionStart: function() {  // 넘기기 시작할 때
@@ -307,11 +324,11 @@ let golfPlayers = {
       pagination: false,
       updateOnMove: true,
       autoplay: true,
-      interval: 1000,
+      interval: 3000,
       flickPower: 50,
       breakpoints: {
         640: {
-          autoWidth: false,
+          autoWidth: true,
           perPage: 1,
         },
         1024: {
@@ -324,7 +341,8 @@ let golfPlayers = {
 
     const navBtn = $('.desc_pagination');
 
-    let $section2Active = $('.splide__slide.is-active'),
+    let $section2Slide = $('.splide__slide'),
+        $section2Active = $('.splide__slide.is-active'),
         $section2Cursor = $('.seciton2_cursor'),
         popBtn = $('.openPopup'),
         popClose = $('.pop_close');
@@ -345,13 +363,22 @@ let golfPlayers = {
       Autoplay.play();
     })
 
-    // view more 버튼 플러스 아이콘 트랜지션
-    $section2Active.on('mousedown', function() {
-      $section2Cursor.children('img').css('transform', 'rotate(90deg)');
-    });
-    $section2Active.on('mouseup mouseleave', function() {
-      $section2Cursor.children('img').css('transform', 'rotate(0deg)');
-    })
+    // ********* 모바일 환경
+    if ($('#mobile').length) {
+      $section2Cursor.remove();
+      $section2Slide.children().append($section2Cursor.clone());
+      $section2Slide.find('.seciton2_cursor').on('click', function() {
+        $(this).parent().trigger( "click" );
+      });
+
+      $section2Slide.each(function(index) {
+        let golfImgUrl = $section2Slide.eq(index).find('.mask_circle img');
+        let mobileUrl = golfImgUrl.attr('src').replace(/\.(png|jpg|jpeg|gif)/i, '_mob.$1');
+        golfImgUrl.attr('src', mobileUrl);
+      });
+
+    }
+
 
   },
 
@@ -360,6 +387,7 @@ let golfPlayers = {
     // ●● const ●● 재생버튼, 페이지네이션 버튼, 각 선수들의 동영상 프레임 ID
     const playBtn = $('#btn-play'),
           navBtn = $('.desc_pagination'),
+          popup = $('.popup'),
           popBtn = $('.openPopup'),
           navNum = $('.desc_number'),
           imageCont = $('.tab .img'),
@@ -373,7 +401,7 @@ let golfPlayers = {
         "images/golf/player_yhj.png", 
         "유현주", 
         "Yoo Hyunju", 
-        "“평소 투어프로로서 경험 뿐 아니라 방송, 모델, 인플루언서 등 <br>풍부하고 다양한 경험을 ‘가져보고(have)’ 싶다고 생각했어요.”",
+        "“평소 투어프로로서 경험 뿐 아니라 방송, 모델, <br class='br_m'>인플루언서 등 <br class='br_pc'>풍부하고 다양한 경험을 <br class='br_m'>‘가져보고(have)’ 싶다고 생각했어요.”",
         "1994년 02월 28일",
         "2011년 10월",
         "2012년 제5회 롯데마트 여자오픈",
@@ -390,7 +418,7 @@ let golfPlayers = {
         "images/golf/player_yhyoj.png",
         "유효주", 
         "Yoo Hyoju", 
-        "“골프라는 동반자와 즐거운 인생을 ‘살고(live)’ 싶고, <br>언젠가는 We've에 제 집을 마련해서 살고 싶어요.”",
+        "“골프라는 동반자와 즐거운 인생을 ‘살고(live)’ <br class='br_m'>싶고, <br class='br_pc'>언젠가는 We've에 제 집을 마련해서 살고 <br class='br_m'>싶어요.”",
         "1997년 04월 21일",
         "2015년 10월",
         "2017년 롯데렌터카 여자오픈",
@@ -406,7 +434,7 @@ let golfPlayers = {
         "images/golf/player_pk.png",
         "박결", 
         "Park Gyeol", 
-        "“어릴 때부터 골프를 너무나 사랑해서 골프선수가 되었고, <br>또 골프선수이기에 많은 팬분들의 사랑을 받고 있다고 생각해요. <br>그런 의미에서 골프는 저에게 ‘love’나 다름없죠.”",
+        "“어릴 때부터 골프를 너무나 사랑해서 골프선수가 <br class='br_m'>되었고, <br class='br_pc'>또 골프선수이기에 많은 팬분들의 사랑을 <br class='br_m'>받고 있다고 생각해요. <br>그런 의미에서 골프는 저에게 ‘love’나 다름없죠.”",
         "1996년 01월 09일",
         "2014년 10월",
         "2015년 제8회 롯데마트 여자오픈",
@@ -434,7 +462,7 @@ let golfPlayers = {
         "images/golf/player_kms.png",
         "김민솔", 
         "Kim Minsol", 
-        "“아직 부족한 점이 많기 때문에 한 타 한 타 착실하게 <br>save 하는 것처럼 체력, 스킬, 멘탈 등 모든 부분을 <br>잘 ‘관리해서(save)’ 발전하는 선수가 되고 싶어요”",
+        "“아직 부족한 점이 많기 때문에 한 타 한 타 <br class='br_m'>착실하게 <br class='br_pc'>save 하는 것처럼 체력, 스킬, 멘탈 등 <br class='br_m'>모든 부분을 <br class='br_pc'>잘 ‘관리해서(save)’ 발전하는 <br class='br_m'>선수가 되고 싶어요”",
         "2006년 06월 15일",
         " ",
         " ",
@@ -519,6 +547,7 @@ let golfPlayers = {
       // 이전, 다음버튼 클릭 시 selPnum증감
       selPnum = $(this).hasClass('next') ? (selPnum + 1) % selectPlayers.length : (selPnum + selectPlayers.length - 1) % selectPlayers.length;
       navNum.children('span').text(Number(selPnum) + 1);
+      popup.animate({scrollTop: 0}, 200);
 
       // function vimeoRender/imageRender/descRender ●
       vimeoRender();
@@ -658,7 +687,6 @@ let golfPlayers = {
     let selNnum = 0,
         nTarget = null,
         popPagi =  popNews.find('.pagination div');
-
 
     // ●● click ●● 팝업 오픈 시
     popBtn.on('click', function(e) {
@@ -829,8 +857,6 @@ let golfPlayers = {
         popPagi.first().addClass('disabled');
       }
     }
-
-
   },
 
 
