@@ -407,10 +407,10 @@ let golfPlayers = {
         "2012년 제5회 롯데마트 여자오픈",
         "유현주 프로",
         [
-          ['2020', '제주삼다수 마스터스 25위'],
-          ['2017', 'MY 문영 퀸즈파크 챔피언십 2017 25위'],
-          ['2016', '팬텀 클래식 With YTN 27위'],
-          ['2012', 'BS금융그룹 부산은행ㆍ서울경제 여자오픈 14위']
+          ['2020', '<i>제주삼다수 마스터스 25위</i>'],
+          ['2017', '<i>MY 문영 퀸즈파크 챔피언십 2017 25위</i>'],
+          ['2016', '<i>팬텀 클래식 With YTN 27위</i>'],
+          ['2012', '<i>BS금융그룹 부산은행ㆍ서울경제 여자오픈 14위</i>']
         ]
       ], 
       [
@@ -424,9 +424,9 @@ let golfPlayers = {
         "2017년 롯데렌터카 여자오픈",
         "유효주 프로",
         [
-          ['2022', '<b>WEMIX 챔피언십 with 와우매니지먼트그룹 SBS Golf 우승</b>'],
-          ['2021', '롯데 오픈 7위'],
-          ['2017', 'KB금융 스타챔피언십 3위']
+          ['2022', '<i><b>WEMIX 챔피언십 with 와우매니지먼트그룹 SBS Golf 우승</b></i>'],
+          ['2021', '<i>롯데 오픈 7위</i>'],
+          ['2017', '<i>KB금융 스타챔피언십 3위</i>']
         ]
       ], 
       [
@@ -440,20 +440,20 @@ let golfPlayers = {
         "2015년 제8회 롯데마트 여자오픈",
         "박결 프로",
         [
-          ['2022', '넥센∙세인트나인 마스터즈 2022 3위 '],
-          ['2021', '셀트리온 퀸즈 마스터즈 9위'],
-          ['2020', '제14회 S-OIL 챔피언십 6위'],
-          ['2019', '제8회 KG∙이데일리 레이디스 오픈 with KFC 6위'],
+          ['2022', '<i>넥센∙세인트나인 마스터즈 2022 3위</i>'],
+          ['2021', '<i>셀트리온 퀸즈 마스터즈 9위</i>'],
+          ['2020', '<i>제14회 S-OIL 챔피언십 6위</i>'],
+          ['2019', '<i>제8회 KG∙이데일리 레이디스 오픈 with KFC 6위</i>'],
           [
-            '2018', '<b>SK네트웍스∙서울경제 레이디스 클래식 우승</b> <br>' +
-            '제12회 S-OIL 챔피언십 2위 <br>' +
-            '효성 챔피언십 with SBS 2위'
+            '2018', '<i><b>SK네트웍스∙서울경제 레이디스 클래식 우승</b></i> <br>' +
+            '<i>제12회 S-OIL 챔피언십 2위</i> <br>' +
+            '<i>효성 챔피언십 with SBS 2위</i>'
           ],
-          ['2017', '삼천리 Together Open 2017 2위'],
-          ['2016', '초정탄산수 용평리조트 오픈 with SBS 2위'],
+          ['2017', '<i>삼천리 Together Open 2017 2위</i>'],
+          ['2016', '<i>초정탄산수 용평리조트 오픈 with SBS 2위</i>'],
           [
-            '2015', '제16회 하이트진로 챔피언십 2위 <br>' +
-            '2015 NH투자증권 레이디스 챔피언십 2위'
+            '2015', '<i>제16회 하이트진로 챔피언십 2위</i> <br>' +
+            '<i>2015 NH투자증권 레이디스 챔피언십 2위</i>'
           ]
         ]
       ], 
@@ -468,14 +468,14 @@ let golfPlayers = {
         " ",
         "김민솔 선수",
         [
-          ['2023', '제5회 WAAP(위민스 아마추어 아시아 퍼시픽 선수권) 2위'],
+          ['2023', '<i>제5회 WAAP(위민스 아마추어 아시아 퍼시픽 선수권) 2위</i>'],
           [
-            '2022', '제103회 전국체육대회 3위 <br>' +
-            '<b>제29회 송암배 아마추어골프선수권대회 우승</b> <br>' +
-            '<b>블루원배 제39회 한국주니어골프선수권대회 우승</b> <br>' +
-            '강민구배 제46회 한국여자아마추어골프선수권대회 3위 <br>' +
-            '제20회 빛고을중흥배 아마추어골프선수권대회 4위 <br>' +
-            '제1회 대한골프협회장배 아마추어골프선수권대회 5위'
+            '2022', '<i>제103회 전국체육대회 3위</i> <br>' +
+            '<i><b>제29회 송암배 아마추어골프선수권대회 우승</b></i> <br>' +
+            '<i><b>블루원배 제39회 한국주니어골프선수권대회 우승</b></i> <br>' +
+            '<i>강민구배 제46회 한국여자아마추어골프선수권대회 3위</i> <br>' +
+            '<i>제20회 빛고을중흥배 아마추어골프선수권대회 4위</i> <br>' +
+            '<i>제1회 대한골프협회장배 아마추어골프선수권대회 5위</i>'
           ]
         ]
       ], 
@@ -490,21 +490,21 @@ let golfPlayers = {
         "2018년 효성 챔피언십",
         "임희정 프로",
         [
-          ['2022', '<b>DB그룹 제36회 한국여자오픈 골프선수권대회 우승</b>'],
+          ['2022', '<i><b>DB그룹 제36회 한국여자오픈 골프선수권대회 우승</b></i>'],
           [
-            '2021', 'BMW Ladies Championship 2위 <br>' +
-            '제21회 하이트진로 챔피언십 2위 <br>' +
-            '<b>국민쉼터 하이원 리조트 여자오픈 2021 우승</b> <br>' +
-            '대유위니아∙MBN 여자오픈 2위 <br>'
+            '2021', '<i>BMW Ladies Championship 2위</i> <br>' +
+            '<i>제21회 하이트진로 챔피언십 2위</i> <br>' +
+            '<i><b>국민쉼터 하이원 리조트 여자오픈 2021 우승</b></i> <br>' +
+            '<i>대유위니아∙MBN 여자오픈 2위</i> <br>'
           ],
           [
-            '2020', '아이에스동서 부산오픈 2위 <br>' +
-            '제42회 KLPGA 챔피언십 2위 <br>'
+            '2020', '<i>아이에스동서 부산오픈 2위</i> <br>' +
+            '<i>제42회 KLPGA 챔피언십 2위</i> <br>'
           ],
           [
-            '2019', '<b>KB금융 스타챔피언십 우승</b> <br>' +
-            '<b>올포유∙레노마 챔피언십 2019 우승</b> <br>' +
-            '<b>하이원리조트 여자오픈 2019 우승</b>'
+            '2019', '<i><b>KB금융 스타챔피언십 우승</b></i> <br>' +
+            '<i><b>올포유∙레노마 챔피언십 2019 우승</i> <br>' +
+            '<i><b>하이원리조트 여자오픈 2019 우승</b></i>'
           ]
         ]
       ]
@@ -778,74 +778,99 @@ let golfPlayers = {
       galleryRender();
     })
     function galleryRender() {
-      let galData = gTarget.children('.img');
-      let gd_img = galData.children('img').attr('src')
-      let gd_title = gTarget.children('h3').text()
-      let gd_next = gTarget.parent().next();
-      let gd_prev = gTarget.parent().prev();
+      const galData = gTarget.children('.img');
+      const isVideo = galData.hasClass('video');
+      const gd_img = galData.children('img').attr('src');
+      const gd_title = gTarget.children('h3').text();
+      const gd_next = gTarget.parent().next();
+      const gd_prev = gTarget.parent().prev();
+      const popGalleryImg = popGallery.find('.img');
 
-      popGallery.find('.img h2').text(gd_title);
+      popGalleryImg.find('h2').text(gd_title);
 
-      if (galData.hasClass('video')) {
-        let videoURL = gTarget.parent().data('popup-vimeo');
-        let requestURL = 'https://vimeo.com/api/oembed.json?url=https%3A%2F%2Fvimeo.com%2F' + videoURL;
-        let currentIframe = popGallery.find('.img iframe');
-        let currentImg = popGallery.find('.img img');
-        let currentTit = popGallery.find('.img h2');
+      if (isVideo) {
+        const videoURL = gTarget.parent().data('popup-vimeo');
+        const requestURL = `https://vimeo.com/api/oembed.json?url=https%3A%2F%2Fvimeo.com%2F${videoURL}`;
+
+        const updateGallery = (width, height) => {
+          const newIframe = $('<iframe>', {
+            src: `https://player.vimeo.com/video/${videoURL}?rel=0&title=0&showinfo=1&byline=0&controls=1&portrait=0&autopause=1&`,
+            width,
+            height,
+            frameborder: '0',
+            allowfullscreen: ''
+          });
+
+          const currentIframe = popGalleryImg.find('iframe');
+          const currentTit = popGalleryImg.find('h2');
+
+          currentIframe.length && currentIframe.data('video-id') === videoURL
+              ? currentIframe.show() && currentTit.show()
+              : (newIframe.data('video-id', videoURL),
+                  popGalleryImg.find('iframe, img').replaceWith(newIframe),
+                  currentTit.show());
+        };
+
+        const handleVideoRequest = (data) => {
+          const { width, height } = data;
+          let newWidth;
+          let newHeight;
+
+          console.log(`width: ${width} / height: ${height}`);
+
+          if (!$('#mobile').length) {
+            newWidth = width * 1.5;
+            newHeight = height * 1.5;
+          } else {
+            const deviceWidth = $(window).width();
+            const resMediaWidth = Math.abs(width - deviceWidth - 20);
+            const overHeight = height + resMediaWidth;
+            const downHeight = height - resMediaWidth;
+
+            newWidth = width < deviceWidth ? deviceWidth - 40 : width;
+            newHeight = width < deviceWidth ? overHeight: downHeight + 40;
+          }
+
+          updateGallery(newWidth, newHeight);
+        };
+
+        const handleVideoError = (err) => {
+          console.error(`Error occurred while fetching Vimeo video data: ${err}`);
+        };
 
         $.ajax({
           url: requestURL,
           dataType: 'json',
-          beforeSend: function() {
-            currentIframe.hide(); // hide the existing iframe
-            currentImg.hide();
-            currentTit.hide();
+          beforeSend: () => {
+            popGalleryImg.find('iframe, img, h2').hide();
           },
-          success: function(data) {
-            let width = data.width;
-            let height = data.height;
-            $('#mobile').length ? null : (width = width * 1.5, height = height* 1.5)
-
-            let newIframe = $('<iframe>', {
-              src: 'https://player.vimeo.com/video/' + videoURL + '?rel=0&title=0&showinfo=0&byline=0&controls=1&portrait=0&autopause=1&',
-              width: width,
-              height: height,
-              frameborder: '0',
-              allowfullscreen: ''
-            });
-
-            if (currentIframe.length && currentIframe.data('video-id') === videoURL) {
-              currentIframe.show();
-              currentTit.show();
-              return; // iframe already loaded and matches videoURL, no need to reload
-            } else {
-              newIframe.data('video-id', videoURL); // set data attribute on new iframe
-              popGallery.find('.img iframe, .img img').replaceWith(newIframe);
-              currentTit.show();
-
-            }
-          }
+          success: handleVideoRequest,
+          error: handleVideoError
         });
       } else {
-        let changeImg = new Image();
-        let vurl = gd_img.split('/')
+        const vurl = gd_img.split('/');
         const pid = gTarget.parent().data('popup-image');
 
-        vurl = vurl[vurl.length - 1];
-        changeImg.src = gd_img.replace(vurl, 'gallery/' + pid + '.jpg');
+        const newSrc = gd_img.replace(vurl[vurl.length - 1], `gallery/${pid}.jpg`);
+        const changeImg = $('<img>', { src: newSrc });
 
-        popGallery.find('.img iframe').length ?
-            popGallery.find('.img iframe').replaceWith(changeImg) : popGallery.find('.img img').replaceWith(changeImg)
+        const imgElement = popGalleryImg.find('img');
+        const iframeElement = popGalleryImg.find('iframe');
+
+        iframeElement.length
+            ? iframeElement.replaceWith(changeImg)
+            : imgElement.length && imgElement.replaceWith(changeImg);
       }
 
-      $(".pop_close").on('click', function() {
-        let iframe = popGallery.find('.img iframe');
+      $(".pop_close").on('click', () => {
+        const iframe = popGalleryImg.find('iframe');
+
         if (iframe.length) {
-          let player = new Vimeo.Player(iframe);
+          const player = new Vimeo.Player(iframe);
           player.unload();
-          popGallery.fadeOut(300);
         }
 
+        popGallery.fadeOut(300);
       });
 
       // pagination set
