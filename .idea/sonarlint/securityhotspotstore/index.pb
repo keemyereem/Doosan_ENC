@@ -15,3 +15,5 @@ B
 js/main.js,d\a\dae13fd6f331d1c91ab58b06e81d05cb8958bfb1
 <
 js/common.js,e\3\e3bf330772a44be5273f6c73f31eb6ba03b1bdde
+<
+css/font.css,6\8\682b202495f4a2e69d6e4e1b201e5626aaf3e182

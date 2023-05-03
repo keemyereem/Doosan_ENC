@@ -1915,6 +1915,7 @@
 #mobile .golf .golfMain .section:not(.footer) ol .golf_pagination li.on { font-size: 1.4rem; }
 #mobile .golf .golfMain .section:not(.footer) ol .golf_pagination li button { position: absolute; }
 #mobile .golf .golfMain .section:not(.footer) ol .golf_pagination li:nth-child(n + 4) { display: none; }
+#mobile .golf .golfMain .footer #topButton { display: none !important; }
 
 /* 배너 */
 #mobile .golf .golfMain .section1 .scroll_down { display: none; }

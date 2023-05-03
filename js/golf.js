@@ -7,153 +7,169 @@ $(function () { });
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////                                                  **골프단 신규 - 2023.03.28**                                                      ///////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-let golfPlayers = {
+
+let site = {
   init: function () {
-    this.settingResponsive();
-    this.createFullPageGolf()
-    this.popupForGolf();
-    this.swipersForGolf();
-    this.popup01();
-    this.popup02();
-    this.popup03();
+    this.configureResponsiveLayout();
+    this.createFullPageGolf();
+    this.initEvents();
   },
 
-  settingResponsive: function() {
-    $(window).ready(()=> {
+  configureResponsiveLayout: function() {
+    // Add 'golf' class to body on window load
+    $(window).ready(() => {
       $('body').addClass('golf');
     });
 
-    let playersSection = $('.section').not('.section1, .section2, .footer');
-    if ($('#mobile').length && $('.container').hasClass('golfTeaser') === true) {
-      alert('a')
-      playersSection.each(function(index) {
-        let golfImgUrl = playersSection.eq(index).find('img');
-        let mobileUrl = golfImgUrl.attr('src').replace('.png', '_mob.png');
-        golfImgUrl.attr('src', mobileUrl)
+    let $playersSection = $('.section').not('.section1, .section2, .footer');
+    if ($('#mobile').length && $('.container').hasClass('golfTeaser')) {
+      $playersSection.each((index, element) => {
+        let $golfImg = $(element).find('img');
+        let mobileUrl = $golfImg.attr('src').replace('.png', '_mob.png');
+        $golfImg.attr('src', mobileUrl);
       });
     } else if ($('#mobile').length) {
-      const $searchFrame = $('.golf_search');
-      $searchFrame.each(function(index) {
-        let golfImgUrl = $searchFrame.eq(index).find('button img');
-        let mobileUrl = golfImgUrl.attr('src').replace(/\.(png|jpg|jpeg|gif)/i, '_mob.$1');
-        golfImgUrl.attr('src', mobileUrl);
+      let $searchFrame = $('.golf_search');
+      $searchFrame.each((index, element) => {
+        let $golfImg = $(element).find('button img');
+        let mobileUrl = $golfImg.attr('src').replace(/\.(png|jpg|jpeg|gif)/i, '_mob.$1');
+        $golfImg.attr('src', mobileUrl);
       });
     }
 
-    $(document).on("click", "#topButton", function () {
-      let goTop = location.href.split('#')
+    // Add click event to top button
+    $(document).on('click', '#topButton', () => {
+      let goTop = location.href.split('#');
       window.location = goTop[0] + '#firstPage';
     });
 
-    $('.golf .header').mouseleave(function() {
-      if ($('.golf .header').hasClass('wht')) {
-
-      } else {
-
-      }
-      $(".header").removeClass("wht");
-    })
+    // Remove 'wht' class from header on mouse leave
+    $('.golf .header').mouseleave(() => {
+      $('.header').removeClass('wht');
+    });
 
   },
 
   createFullPageGolf: function() {
-    
+
     $("#fullpage").fullpage({
-      // anchors: [
-      //   "firstPage",
-      //   "secondPage",
-      //   "thirdPage",
-      //   "fourthPage",
-      //   "fifthPage",
-      //   "sixthPage",
-      //   "seventhPage",
-      // ],
+      // Add menu to the right navigation element
       menu: "#rightnavi",
+      // Disable vertical centering of sections
       verticalCentered: false,
+      // Disable scrollOverflow
       scrollOverflow: false,
+      // Set normalScrollElements to '.popup'
       normalScrollElements: '.popup',
+      // Enable CSS3 transitions
       css3: true,
+      // Set scrolling speed to 800ms
       scrollingSpeed: 800,
+      // Set responsive width to 800px
       responsiveWidth: 800,
 
+      // Called on section leave
       onLeave: function (index, nextIndex, direction) {
-        // 앵커별 추가기능 조정
+        // Adjust additional features per anchor
         if (nextIndex == 1) {
-          // 첫번째 페이지
+          // Show header and hide topButton on the first page
           $('.header').fadeIn(500);
-          $(".golf #topButton").fadeOut(500);
-
+          $(".golf > #topButton").fadeOut(500);
         } else if (nextIndex == $(".section").length) {
-          // 마지막(푸터) 페이지
+          // Hide header and topButton on the last (footer) page
           $('.header').fadeOut(500);
-          $(".golf #topButton").fadeOut(500);
-
+          $(".golf > #topButton").fadeOut(500);
         } else {
-          // 그 외 나머지
+          // Hide or show header and topButton depending on the current page and the mobile device
           $("#mobile").length ? $('.header').fadeOut(500) : $('.header').fadeIn(500);
-          $(".golf #topButton").fadeIn(500);
+          $(".golf > #topButton").fadeIn(500);
         }
 
-        // footer: 위에 앵커와 함께 작성할 경우 푸터에 도달하고 뒤늦게 꺼지는 현상 -> 따로 제어
+        // Hide rightnavi on the first, second and last (footer) page
         if (nextIndex == 1 || nextIndex == 2 || nextIndex == $(".section").length) {
           $(".golf #rightnavi").hide();
         } else {
           $(".golf #rightnavi").fadeIn(500);
         }
 
-        // 헤더스타일 화이트/ 노말 제어(1)
+        // Change header style depending on the current page
         if (nextIndex !== 1) {
-          unsetHeaderWhite();
+          setHeaderNormal();
         } else {
           setHeaderWhite();
         }
-        // 헤더스타일 화이트/ 노말 함수(2)
+
+        // Change header style to white
         function setHeaderWhite() {
           setTimeout(() => {
             $(".header").addClass("wht");
           }, 500);
           $(".golf #sub .header .gnb > ul > li").hover(
-            function () {},
-            function () {
-              $(".header").addClass("wht");
-              $(".header").css({ background: "transparent" });
-            }
-          );  
+              function() {},
+              function() {
+                $(".header").addClass("wht");
+                $(".header").css({ background: "transparent" });
+              }
+          );
         }
 
-        function unsetHeaderWhite() {
+        // Change header style to normal
+        function setHeaderNormal() {
           setTimeout(() => {
             $(".header").removeClass("wht");
-          }, 500);   
+          }, 500);
           $(".golf #sub .header .gnb > ul > li").hover(
-            function () {
-              $(".header").css({ background: "#ffffff" });
-            },
-            function () {
-              $(".header").removeClass("wht");
-              $(".header").css({ background: "transparent" });
-              
-            }
-          );  
+              function() {
+                $(".header").css({ background: "#ffffff" });
+              },
+              function() {
+                $(".header").removeClass("wht");
+                $(".header").css({ background: "transparent" });
+              }
+          );
         }
 
-      }, afterLoad: function (anchorLink, index) {
+      },
+
+      // Called after section load
+      afterLoad: function (anchorLink, index) {
+        // Add 'ani' class to the current section
         if (index == index) {
           $('.section').eq(index - 1).addClass('ani')
         }
 
+        // Add 'fin' class to the footer span element on the last (footer) page
         if (index == $(".section").length) {
           setTimeout(() => {
             $(".footer .sec_tit > span").addClass("fin");
           }, 200);
         }
-      }, afterResponsive: function(isResponsive) {
-        if (isResponsive) {
+      },
+
+      afterResponsive: function(isResponsive) {
+        if (isResponsive && !$('.container').hasClass('golfTeaser')) {
           $('.section').addClass('fp-auto-height-responsive');
         }
       }
     });
-    
+
+  },
+
+  initEvents: function() {
+    commonEvent.init();
+    companyEvent.init();
+    golfPlayers.init();
+  }
+};
+
+
+let golfPlayers = {
+  init: function () {
+    this.popupForGolf();
+    this.swipersForGolf();
+    this.popup01();
+    this.popup02();
+    this.popup03();
   },
 
   popupForGolf: function() {
@@ -227,6 +243,7 @@ let golfPlayers = {
   },
 
   swipersForGolf: function() {
+
     // 메인 배너
     new Swiper(".swiperGolf1", {
       spaceBetween: 30,
@@ -242,16 +259,7 @@ let golfPlayers = {
       },
       on: {
         init: function() {  // 초기값 - 필요시 작업
-          chkWord();
-
-          let slideMob = $('.swiper-slide');
-          if ($('#mobile').length) {
-            slideMob.each(function(index) {
-              let golfImgUrl = slideMob.eq(index).find('img');
-              let mobileUrl = golfImgUrl.attr('src').replace(/\.(png|jpg|jpeg|gif)/i, '_mob.$1');
-              golfImgUrl.attr('src', mobileUrl)
-            });
-          }
+          mobileImageTransfer();
         },
 
         slideChangeTransitionStart: function() {  // 넘기기 시작할 때
@@ -263,31 +271,15 @@ let golfPlayers = {
           // 텍스트 슬라이드 애니메이션이 끝나는 시점
           txtPieceChild.on('transitionend', function() {
             let selTit = $(".swiper-slide-active h2").html(),
-                selTitSplit = selTit.split('<br>'),
-                selTitParent = $('.golfMain .section1 article');
+                $selTitSplit = selTit.split('<br>'),
+                $selTitParent = $('.golfMain .section1 article');
 
-            // 이전 슬라이드 내용이 담긴 태그를 모두 삭제
-            selTitParent.children('h2').remove();
-
-            // 각 슬라이드 내부 h2태그의 띄어쓰기 기준으로 분리한 텍스트 배열들의 개수만큼 태그 생성 및 내용 삽입 
-            for (let i=selTitSplit.length-1; i >= 0; i--) {
-              selTitParent.prepend('<h2 class="txtPiece"><span class="slideUp">' + selTitSplit[i] + '</span></h2>');
-
-              if ($('.txtPiece').length < selTitSplit.length) { // 기존 h2태그가 분리한 텍스트 배열 개수보다 낮을 때 = 텍스트 배열 개수만큼 생성
-                i = (selTitSplit.length - 1) - $('.txtPiece').length;
-                selTitParent.prepend('<h2 class="txtPiece"><span class="slideUp">' + selTitSplit[i] + '</span></h2>');
-              } else if ($('.txtPiece').length === 1) { // 분리한 텍스트 배열 개수가 1개일 때 = 전체 프레임 높이값 맞추기 위해 공백의 h2태그 1개 생성
-                i = 0;
-                selTitParent.children('h2').after('<h2>&nbsp;</h2>');
-              }
-
-              chkWord();
-            }
+            devideWord($selTitSplit, $selTitParent)
           })
         },
 
         slideChangeTransitionEnd: function() {  // 넘긴 슬라이드가 완전히 자리 잡았을 때
-          // 텍스트별 슬라이드 시간차 주고 자연스럽게 
+          // 텍스트별 슬라이드 시간차 주고 자연스럽게
           for (let i=0; i<= $('.txtPiece').length; i++) {
             $('.txtPiece').eq(i).children('span').css('transition-delay', i * 0.06 + 's');
           }
@@ -297,6 +289,36 @@ let golfPlayers = {
       }
     });
 
+    function mobileImageTransfer() {
+      chkWord();
+
+      let slideMob = $('.swiper-slide');
+      if ($('#mobile').length) {
+        slideMob.each(function(index) {
+          let golfImgUrl = slideMob.eq(index).find('img');
+          let mobileUrl = golfImgUrl.attr('src').replace(/\.(png|jpg|jpeg|gif)/i, '_mob.$1');
+          golfImgUrl.attr('src', mobileUrl)
+        });
+      }
+    }
+
+    function devideWord(selTitSplit, selTitParent) {
+      // 이전 슬라이드 내용이 담긴 태그를 모두 삭제
+      selTitParent.children('h2').remove();
+
+      // 각 슬라이드 내부 h2태그의 띄어쓰기 기준으로 분리한 텍스트 배열들의 개수만큼 태그 생성 및 내용 삽입
+      for (let i=selTitSplit.length-1; i >= 0; i--) {
+        let txt = i;
+        selTitParent.prepend('<h2 class="txtPiece"><span class="slideUp">' + selTitSplit[txt] + '</span></h2>');
+
+        if ($('.txtPiece').length < selTitSplit.length) { // 기존 h2태그가 분리한 텍스트 배열 개수보다 낮을 때 = 텍스트 배열 개수만큼 생성
+          txt = (selTitSplit.length - 1) - $('.txtPiece').length;
+        } else if (selTitSplit.length == 1) { // 분리한 텍스트 배열 개수가 1개일 때 = 전체 프레임 높이값 맞추기 위해 공백의 h2태그 1개 생성
+          selTitParent.children('h2').after('<h2>&nbsp;</h2>');
+        }
+        chkWord();
+      }
+    }
     function chkWord() {
       let txtPiece = $('.txtPiece'),
           check_kor = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
@@ -312,7 +334,7 @@ let golfPlayers = {
 
 
     // // 선수소개 슬라이드
-    var splide = new Splide( '.splide', {
+    let splide = new Splide( '.splide', {
       type   : 'loop',
       perPage: 5,
       perMove: 1,
