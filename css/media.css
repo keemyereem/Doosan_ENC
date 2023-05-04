@@ -1967,7 +1967,7 @@
 #mobile .golf .golfMain .section3 .golf_news ul li img { height: calc(100% - 10rem); }
 #mobile .golf .golfMain .section3 .golf_news ul li a:hover img { transform: unset; }
 #mobile .golf .golfMain .section3 .golf_news ul li a:active img { transform: scale(1.1); }
-#mobile .golf .golfMain .section3 .golf_news ul li .txt_box { height: 10rem; padding: 2rem; }
+#mobile .golf .golfMain .section3 .golf_news ul li .txt_box { height: 10rem; padding: 1.5rem 2rem; }
 #mobile .golf .golfMain .section3 .golf_news ul li .txt_box p { font-size: 1.5rem; }
 #mobile .golf .golfMain .section3 .golf_news ul li .txt_box span { font-size: 1.2rem; }
 #mobile .golf .golfMain .section3 .golf_pagination_wrap {margin-top: 0; margin-bottom: 6.5rem; }
@@ -2049,8 +2049,8 @@
 #mobile .golf .golfMain .popup .pop_news .pagination div button:active span { color: #005eb8; }
 #mobile .golf .golfMain .popup .pop_news .pagination div button:hover span { color: #000000; }
 #mobile .golf .golfMain .popup .pop_news .editor .editor_test_title { font-size: 1.7rem !important; line-height: 1.4; }
-#mobile .golf .golfMain .popup .pop_news .editor .editor_test_span { padding-top: 2rem; }
-#mobile .golf .golfMain .popup .pop_gallery { min-width: 100%; padding-bottom: 10rem; height: fit-content; position: relative; top: 17.5rem; overflow: visible; justify-content: space-between; flex-wrap: wrap; }
+#mobile .golf .golfMain .popup .pop_news .editor .editor_test_span { padding-top: 2rem; font-size: 1.2rem; margin-top: 0; }
+#mobile .golf .golfMain .popup .pop_gallery { min-width: 100%; padding: 0 0 10rem; height: fit-content; position: relative; top: 23.5rem; overflow: visible; justify-content: space-between; flex-wrap: wrap; }
 #mobile .golf .golfMain .popup .pop_gallery .img { max-width: 100%; max-height: fit-content; min-width: fit-content; width: 100%; align-items: center; }
 #mobile .golf .golfMain .popup .pop_gallery .img iframe { max-width: 100%; }
 #mobile .golf .golfMain .popup .pop_gallery .img h2 { font-size: 1.5rem; padding-top: 1.5rem; }
@@ -2059,10 +2059,10 @@
 #mobile .golf .golfMain .popup .pop_gallery > div:not(.img, .disabled):active { transform: scale(1.1); }
 #mobile .golf .golfMain .popup .pop_gallery > div button { padding: 0 2rem; }
 #mobile .golf .golfMain .popup .pop_gallery > div button img { width: .65rem; }
-#mobile .golf .golfMain .popup .pop_gallery > div:first-child { margin-right: 0; order: 1; }
-#mobile .golf .golfMain .popup .pop_gallery > div:first-child button img { margin-right: 1.25rem; }
-#mobile .golf .golfMain .popup .pop_gallery > div:last-child { margin-left: 0; order: 1 }
-#mobile .golf .golfMain .popup .pop_gallery > div:last-child button img { margin-left: 1.25rem;  }
+#mobile .golf .golfMain .popup .pop_gallery > div:first-of-type { margin-right: 0; margin-left: 2rem; order: 1; }
+#mobile .golf .golfMain .popup .pop_gallery > div:first-of-type button img { margin-right: 1.25rem; }
+#mobile .golf .golfMain .popup .pop_gallery > div:last-of-type { margin-left: 0; margin-right: 2rem; order: 1 }
+#mobile .golf .golfMain .popup .pop_gallery > div:last-of-type button img { margin-left: 1.25rem;  }
 
 
 @keyframes jumpMob{

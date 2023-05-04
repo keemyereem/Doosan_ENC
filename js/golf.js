@@ -186,6 +186,7 @@ let golfPlayers = {
 
     // 영역 밖 이동 시 마우스 닫기 버튼 보이기
     $(document).on('mousemove', function (e) {
+      console.log($('.popup').children('ul').has(e.target).length)
       if (!$('#mobile').length) {
         if ($('.popup').children('ul').has(e.target).length === 0) {
           popupClose.css({ transform: "scale(1)" });
@@ -222,9 +223,9 @@ let golfPlayers = {
       $(".popup > ul").css("left", 0 - $(this).scrollLeft());
       $section2Cursor.css('margin-left', 0 + $(this).scrollLeft());
 
-      if ($(".popup > ul").hasClass('pop_gallery')) {
-        LayerPopup3.css("margin-left", 0 - $(this).scrollLeft());
-      }
+      // if ($(".popup > ul").hasClass('pop_gallery')) {
+      //   LayerPopup3.css("margin-left", 0 - $(this).scrollLeft());
+      // }
     });
 
     popBtn.on('click', function() {
@@ -423,7 +424,7 @@ let golfPlayers = {
         "images/golf/player_yhj.png", 
         "유현주", 
         "Yoo Hyunju", 
-        "“평소 투어프로로서 경험 뿐 아니라 방송, 모델, <br class='br_m'>인플루언서 등 <br class='br_pc'>풍부하고 다양한 경험을 <br class='br_m'>‘가져보고(have)’ 싶다고 생각했어요.”",
+        "“평소 투어프로로서의 경험 뿐 아니라 방송, 모델, <br class='br_m'>인플루언서 등 <br class='br_pc'>여러 분야에서 다양한 경험을 <br class='br_m'>‘갖고(have)’ 싶다고 생각했어요.”",
         "1994년 02월 28일",
         "2011년 10월",
         "2012년 제5회 롯데마트 여자오픈",
@@ -440,7 +441,7 @@ let golfPlayers = {
         "images/golf/player_yhyoj.png",
         "유효주", 
         "Yoo Hyoju", 
-        "“골프라는 동반자와 즐거운 인생을 ‘살고(live)’ <br class='br_m'>싶고, <br class='br_pc'>언젠가는 We've에 제 집을 마련해서 살고 <br class='br_m'>싶어요.”",
+        "“제 인생의 동반자인 골프와 함께 즐겁게 <br class='br_m'>‘살고(live)’ 싶고, <br class='br_pc'>언젠가는 We've에 제 집을 마련해 행복하게 살고 싶어요.”",
         "1997년 04월 21일",
         "2015년 10월",
         "2017년 롯데렌터카 여자오픈",
@@ -456,12 +457,13 @@ let golfPlayers = {
         "images/golf/player_pk.png",
         "박결", 
         "Park Gyeol", 
-        "“어릴 때부터 골프를 너무나 사랑해서 골프선수가 <br class='br_m'>되었고, <br class='br_pc'>또 골프선수이기에 많은 팬분들의 사랑을 <br class='br_m'>받고 있다고 생각해요. <br>그런 의미에서 골프는 저에게 ‘love’나 다름없죠.”",
+        "“어릴 때부터 골프를 너무 사랑해서 <br class='br_m'>골프선수가 되었고, <br class='br_pc'>현재 골프선수로 많은 <br class='br_m'>팬들의 사랑을 받고 있다고 생각해요. <br>그런 의미에서 저에게 골프는 ‘love’나 다름없죠.”",
         "1996년 01월 09일",
         "2014년 10월",
         "2015년 제8회 롯데마트 여자오픈",
         "박결 프로",
         [
+          ['2023', '<i>2023년 크리스 F&C 제45회 KLPGA 챔피언십 2위</i>'],
           ['2022', '<i>넥센∙세인트나인 마스터즈 2022 3위</i>'],
           ['2021', '<i>셀트리온 퀸즈 마스터즈 9위</i>'],
           ['2020', '<i>제14회 S-OIL 챔피언십 6위</i>'],
@@ -484,7 +486,7 @@ let golfPlayers = {
         "images/golf/player_kms.png",
         "김민솔", 
         "Kim Minsol", 
-        "“아직 부족한 점이 많기 때문에 한 타 한 타 <br class='br_m'>착실하게 <br class='br_pc'>save 하는 것처럼 체력, 스킬, 멘탈 등 <br class='br_m'>모든 부분을 <br class='br_pc'>잘 ‘관리해서(save)’ 발전하는 <br class='br_m'>선수가 되고 싶어요”",
+        "“아직 부족한 점이 많기 때문에 한 타 한 타 <br class='br_m'>save 하는 것처럼 <br class='br_pc'>체력, 스킬, 멘탈 등 <br class='br_m'>모든 것을 성실하게 잘 ‘관리해서(save)’ <br>발전하는 선수가 되고 싶어요”",
         "2006년 06월 15일",
         " ",
         " ",
@@ -506,7 +508,7 @@ let golfPlayers = {
         "images/golf/player_lhj.png",
         "임희정", 
         "Lim Heejeong", 
-        "“투어를 다니면서 최고의 성과를 얻기 위해 <br>여러 문제에 직면했을 때도 항상 최선의 답을 찾아 <br>‘해결하는(solve)’ 임희정이 되고 싶어요.”",
+        "“투어 중 어려운 상황에 직면해도 <br>항상 최선의 답을 찾아 ‘해결하는(solve)’ <br>임희정이 되고 싶어요.”",
         "2000년 09월 02일",
         "2018년 10월",
         "2018년 효성 챔피언십",
@@ -710,6 +712,129 @@ let golfPlayers = {
         nTarget = null,
         popPagi =  popNews.find('.pagination div');
 
+
+    let news = [
+        [
+            '<h1 class="editor_test_title"></h1>' +
+            '<img src="images/golf/sec3_editor_sample1.png" alt="editor_sample" style="margin: auto; display: block;">' +
+            '<span class="editor_test_span">&#60;크리스 F&C 챔피언십에서 좋은 성적을 거둔 박결 프로&#62;</span>' +
+            '<br>' +
+            '경기도 양주시 레이크우드 컨트리클럽 산길·숲길 코스(파72)에서 열린 KLPGA 첫 메이저 대회인 \'크리스 F&C 챔피언십(총상금 13억원)\'에서' +
+            '<br>' +
+            '박결 (27·두산건설)이 최종 9언더파 279타로 공동 2위로 대회를 마쳤다.' +
+            '<br><br>' +
+            '박결이 투어에서 준우승을 차지한 것은 2018년 6월 S-OIL 챔피언십 이후 4년 10개월 만이다. 1,2라운드 선두로 개인 첫 메이저 타이틀을 노리던 박결은' +
+            '<br>' +
+            '최종라운드 이다연의 선전으로 아쉽게 우승 트로피는 다음으로 기약했다.' +
+            '<br><br>' +
+            '박결은 "항상 매년 목표가 우승이었기 때문에 하면 좋겠지만 그래도 우승을 너무 매달리지는 않으려 한다. 욕심을 크게 내지 않고 있다"라며' +
+            '<br>' +
+            '"사실, 상위권만 들어도 너무 행복한 거고 그래서 우승에 대한 그렇게 생각을 하면 너무 좋다"라고 밝혔다.' +
+            '<br>' +
+            '이어 "지난해 아이언 샷으로 되게 많이 고생을 했다. 그린 적중률도 너무 떨어졌고 그래서 아이언을 위주로 되게 연습을 많이 했다.' +
+            '<br>' +
+            '이젠 원하는 방향으로도 보낼 수 있고 그래서 잘 훈련된 것 같다.' +
+            '<br>' +
+            '예전에 왼쪽으로 샷이 갔다면 이젠 똑바로 간다"라고 했다. '
+        ],
+
+        [
+          '<h1 class="editor_test_title">- 최정상급 두산위브더제니스 오션시티와 최정상급 선수의 닮은꼴 만남 화제</h1>' +
+          '<br>' +
+          '‘두산위브더제니스 오션시티’의 견본주택에서 25일~26일 2일간' +
+          '<br>' +
+          '‘두산건설 We’ve 골프단’ 소속 선수 4명(유현주, 유효주, 박결, 임희정)이 참여하는 팬사인회가 진행됐다. ' +
+          '<br><br>' +
+          '행사가 진행된 두산위브더제니스 오션시티 견본주택은 좋아하는 선수들을 가까이서 보고 싶어하는 팬들이 쉴 틈 없이 몰려들어 하루 종일 북적였다. ' +
+          '<br><br>' +
+          '<img src="images/golf/sec3_editor_sample3.png" alt="editor_sample" style="margin: auto; display: block;">' +
+          '<span class="editor_test_span">&#60;유현주, 유효주 프로가 팬사인회 전에 기념촬영을 했다.&#62;</span>' +
+          '<br>' +
+          '행사에 참여한 A씨(45세, 부산)는 “보고 싶었던 유현주 프로를 직접 보고, 궁금했던 견본주택도 볼 수 있어서 일석이조였다.”라고 말했다.' +
+          '<br>' +
+          '또한 “선수들의 실력만큼이나 뛰어난 외모에 새삼 놀랬다”라고 했다. ' +
+          '<br><br>' +
+          '이번 행사는 국내 최정상급 선수라는 측면에서 ‘두산위브더제니스 오션시티’와 공통점을 갖는다는 평가를 받고 있다. ' +
+          '<br>' +
+          '최정상급 주거환경을 추구하는 두산위브더제니스 오션시티는 ‘Have, Live, Love, Save, Solve’ 등 5가지 키워드를 바탕으로 ' +
+          '<br>' +
+          '기존 아파트 생활보다 업그레이드 된 편안함, 지속 가능한 생활, 편리함 등을 제공할 계획이다. ' +
+          '<br><br>' +
+          '<img src="images/golf/sec3_editor_sample4.png" alt="editor_sample" style="margin: auto; display: block;">' +
+          '<span class="editor_test_span">&#60;팬사인회에서 포즈를 취한 박결 프로와 임희정 프로&#62;</span>'
+        ],
+
+        [
+          '<h1 class="editor_test_title">- 유현주, 유효주, 박결, 임희정(이상 KLPGA), 김민솔(국가대표)로 구성</h1>' +
+          '<h1 class="editor_test_title">- 5인 5색, 두산건설 브랜드 We’ve의 5가지 의미 홍보</h1>' +
+          '<br>' +
+          '<img src="images/golf/sec3_editor_sample2.png" alt="editor_sample" style="margin: auto; display: block;">' +
+          '<span class="editor_test_span">[두산건설 We’ve 골프단 창단 기념촬영. (왼쪽부터) 유현주, 박결, 유효주, 두산건설 이정환 대표이사, 임희정, 김민솔]</span>' +
+          '<br>' +
+          '두산건설(대표이사 이정환)은 서울 강남구 그랜드 인터컨티넨탈 서울 파르나스에서 KLPGA투어 유현주, 박결, 유효주, 임희정, 국가대표 김민솔로 구성된' +
+          '<br>' +
+          '‘두산건설 We’ve 골프단’ 창단식을 진행했다고 13일 밝혔다.' +
+          '<br><br>' +
+          '창단식에는 KLPGA투어 강춘자 대표이사, 두산건설 이정환 대표이사를 비롯해 선수 및 선수 가족, 골프 관계자들이 참석한 가운데 진행됐다.' +
+          '<br>' +
+          '독특한 개성과 매력을 겸비한 최정상급 선수 다섯 명처럼 선수들과 함께 We’ve의 우수성과 다섯 가지 의미를 알리는 것이 창단 목적이라 밝히며, ' +
+          '<br>' +
+          '‘We’ve got everything’이라는 메시지와 선수들이 선택한 We’ve의 다섯 가지 의미에 대해 소개하였다.' +
+          '<br><br>' +
+          'KLPGA투어에 데뷔한 뒤 방송, 광고까지 다방면으로 활동하며 많은 관심을 받는 유현주 프로는 ‘꼭 갖고 싶은 공간’을 의미하는 Have를 선택하며, ' +
+          '<br>' +
+          '“투어프로로서 단순한 경험을 넘어 다양한 분야의 도전을 통해 다양하게 성장했다고 생각한다.' +
+          '<br>' +
+          '앞으로도 다양한 장점을 가진 프로가 되고 싶다”라고 선택의 배경을 밝혔다.' +
+          '<br><br>' +
+          '작년 생애 최초 우승을 한 유효주 프로는 ‘기쁨이 있는 공간’을 의미하는 Live를 선택하며' +
+          '<br>' +
+          '“삶의 동반자인 골프와 함께 최고령 선수가 될 때까지 즐거운 인생을 살고 싶어 선택했다”고 말했다.' +
+          '<br><br>' +
+          '아시안게임 금메달리스트이자 실력과 미모를 겸비한 박결 프로는 ‘사랑과 행복이 있는 공간’인 Love를 선택하며 “골프를 사랑하고,' +
+          '<br>' +
+          '팬분들의 사랑을 많이 받아 저에게 있어 골프는 사랑과 다름이 없다”며 “앞으로 더 많은 사람께 사랑을 전달할 수 있는 선수가 되기 위해 Love를 선택했다” 고 말했다.' +
+          '<br><br>' +
+          '대한골프협회 랭킹 순위 1위로 2023년 국가대표로 선발된 김민솔 선수는 ‘알뜰한 생활이 있는 공간’인 Save를 선택하며' +
+          '<br>' +
+          '“골프의 특성상 한 타 한 타 Save 한다는 마음으로 경기에 임하고, 앞으로도 체력, 스킬, 정신력을 효율적으로 관리하고 Save 하고 싶어 선택했다”고 말했다.' +
+          '<br><br>' +
+          '데뷔 후 5승과 2년 연속 인기 선수상을 받은 임희정 프로는 ‘생활 속의 문제가 해결되는 공간’을 의미하는 Solve를 선택하며, ' +
+          '<br>' +
+          '“투어를 다니며 문제가 생길 때 최선의 답을 찾아 풀어내는 임희정이 되고 싶어 Solve가 마음에 이끌려 선택했다”고 말했다.' +
+          '<br><br>' +
+          '이날 참석한 KLPGA 투어 강춘자 대표이사는 “두산건설 We\'ve 골프단\'이 KLPGA투어를 빛낼 최고의 골프단이 되길 기원하며, ' +
+          '<br>' +
+          '선수들 또한 두산건설이라는 튼튼한 날개를 달고 더욱 높이 비상하길 진심으로 응원한다\'고 축사를 전했다.' +
+          '<br><br>' +
+          '두산건설 이정환 대표이사는 “선수들이 선택한 We’ve의 의미대로 국내외 골프를 대표하는 최고의 선수가 될 수 있도록 적극 지원하고, ' +
+          '<br>' +
+          '또 최고의 명문구단이 될 수 있도록 최선을 다하겠다. 앞으로 많은 관심과 응원을 부탁 드린다고” 말하며 ' +
+          '<br>' +
+          '올해 두산건설 We’ve 골프단 선수들의 정규대회에서 버디, 이글 홀인원을 할 경우 기부금을 적립해 선수와 함께 불우이웃돕기 성금으로 활용 하겠다고 약속했다.' +
+          '<br><br>' +
+          '한편 선수들은 3월 25~26일 양일간 부산에 위치한' +
+          '<br>' +
+          '‘두산위브더제니스 오션시티’의 모델하우스에서 팬 사인회를 통해 We’ve의 우수성을 알리며 두산건설 소속으로 활동을 시작할 예정이다.' +
+          '<br>' +
+          '그뿐만 아니라 두산건설과 함께 다양한 사회공헌 활동을 계획 중이라 밝혔다.' +
+          '<br><br><br>' +
+          '[ We’ve 의 5가지 의미 ]' +
+          '<br>' +
+          '- Have : 꼭 가지고 싶은 공간' +
+          '<br>' +
+          '- Live :  기쁨이 있는 공간' +
+          '<br>' +
+          '- Love : 사랑과 행복이 있는 공간' +
+          '<br>' +
+          '- Save : 알뜰한 생활이 있는 공간' +
+          '<br>' +
+          '- Solve : 생활 속의 문제가 해결되는 공간'
+        ]
+    ]
+
+
+
     // ●● click ●● 팝업 오픈 시
     popBtn.on('click', function(e) {
       e.preventDefault();
@@ -725,8 +850,8 @@ let golfPlayers = {
     popPagi.children().on('click', function() {
       selNnum = $(this).hasClass('next') ? Number(selNnum) + 1 : Number(selNnum) - 1;
       nTarget = newsList.eq(selNnum).children('.openPopup');
-      popup.animate({scrollTop: 0}, 500);
       newsRender();
+      popup.animate({scrollTop: 0}, 500);
     })
 
     function newsRender() {
@@ -739,11 +864,14 @@ let golfPlayers = {
       // title set
       popNews.find('.title h2').text(nd_title);
       popNews.find('.title span').text(nd_date);
+      popNews.children('.editor').html(news[selNnum]);
 
       // pagination set
       popPagi.removeClass('indent');
       popPagi.first().find('span').text(nd_prev.find('.txt_box p').text());
       popPagi.last().find('span').text(nd_next.find('.txt_box p').text());
+
+
 
       if (!nd_next.length) {
         popPagi.last().addClass('indent');
@@ -769,12 +897,15 @@ let golfPlayers = {
     let selGnum = 0,
         galActive = galFrame.children('.active'),
         gTarget = null,
-        popPagi =  popGallery.children().not('.img');
+        popPagi =  popGallery.children().not('.img, .bg');
 
     tabBtn.on('click', function() {
-      let tabIdx = $(this).index();
-      $(this).addClass('on').siblings().removeClass('on')
-      galFrame.children().eq(tabIdx).addClass('active').siblings().removeClass('active');
+      let tabIdx = $(this).index(),
+          tabIdxChild = galFrame.children().eq(tabIdx);
+
+      $(this).addClass('on').siblings().removeClass('on');
+      tabIdxChild.addClass('active').siblings().removeClass('active');
+
     })
 
     // ●● click ●● 팝업 오픈 시
