@@ -241,6 +241,23 @@
 .en .privacy > p { max-width: 144rem; margin: 0 auto; font-size: 1.6rem; font-weight: 150; color: #555; line-height: 1.875; letter-spacing: -.04rem; margin-top: 1rem; }
 .en .policy > .inner > ul { max-width: 100%; margin: 8rem auto; }
 
+/* Golf Team */
+.golfMain.en .section:not(.footer) .golf_search input { font-size: 2rem; }
+.golfMain.en .section1 article { bottom: 12rem; }
+.golfMain.en .section1 article h2 { font-size: 6rem; }
+.golfMain.en .section2 .splide .splide__list .splide__slide h4 { font-weight: 350; font-size: 2.6rem; }
+.golfMain.en .section4 { background: #ffffff; }
+.golfMain.en .section4 .golf_gallery .gallery_inner li h3 { font-size: 1.6rem; }
+.golfMain.en .popup .pop_players .tab .tab_container { align-items: center; }
+.golfMain.en .popup .pop_players .tab .tab_container button img { margin-right: 1rem; }
+.golfMain.en .popup .pop_players .tab .tab_container button span { padding: 0; }
+.golfMain.en .popup .pop_players .desc .desc_inner li:nth-child(2) p b { width: 17.2rem; }
+.golfMain.en .popup .pop_players .tab .tab_container button:first-of-type span br { display: none; }
+
+
+
+
+
 /* -------------------- Responsive -------------------- */
 
 
@@ -272,6 +289,7 @@
 
     #mobile .en .tab_box > .inner { height: 6.3rem; }
     #mobile .en .tab_box ul li { height: auto; min-height: 4.5rem; }
+
 
     /* Main */
     #mobile #main .en #fullpage .section01 .swiper-slide h2 { font-size: 3.2rem; transform: translateY(-3rem); padding-right: 2rem; }
@@ -306,6 +324,7 @@
     #mobile #main .en #fullpage .section05 .contact_info dl dt { width: 10rem; }
     #mobile #main .en #fullpage .section05 .contact_info dl dd { line-height: 1.5; }
 
+
     /* Business Areas */
 
     /* Masterpiece */
@@ -330,6 +349,7 @@
     #mobile .civil_engineer.en .outline .section p .btn { width: 25rem; }
     #mobile .civil_engineer.en .outline .section p .btn { /* width: 100%; */ text-align: left; margin-left: 0; padding: 0 2rem; }
     #mobile .civil_engineer.en .outline .section p .btn > i { margin-left: auto; }
+
 
     /* Technology Innovation */
 
@@ -438,15 +458,25 @@
     #mobile .sr.en .sc .section04 .box_wrap ul li:nth-child(2) { margin-top: 1rem; }
     #mobile .sr.en .sc .section04 .box_wrap ul li:nth-child(2) .icon { margin-left: .5rem; }
 
-
     /* Contact Us */
     #mobile .customer.en .customer_inquiry .section1 .agree_row input[type="checkbox"] + label:first-of-type { width: 10.5rem; }
     #mobile .customer.en .customer_inquiry .section2 .row.row_email .ipt_cell span { font-size: 1.3rem; }
     #mobile .customer.en .customer_inquiry .section2 .row.row_email .select_row label { font-size: 1.1rem; white-space: nowrap; }
+
 
     /* privacy policy */
     #mobile .en .policy > .inner { width: calc(100% - 4rem)!important; overflow-x: auto; }
     #mobile .en .policy > .inner > ul { width: auto!important; margin: 0 auto; }
     #mobile .en .policy > .inner > ul li { flex: none; width: 20rem; height: 5rem; padding: 0 1rem; }
     #mobile .en .policy > p { font-size: 1.3rem; line-height: 1.53; padding: 0 2rem; }
-}   
+
+
+    /* Golf Team */
+    #mobile .golfMain.en .section:not(.footer) .golf_search input::placeholder { font-size: 1.2rem; font-weight: 300; }
+    #mobile .golfMain.en .section1 article h2 { font-size: 2.6rem; }
+    #mobile .golfMain.en .section4 .golf_gallery .gallery_inner li h3 { height: 5rem; }
+    #mobile .golfMain.en .popup .pop_players .tab .video { height: calc(100% - 4rem); }
+    #mobile .golfMain.en .popup .pop_players .tab .tab_container button { line-height: 1.3; padding: 0 .5rem; }
+    #mobile .golfMain.en .popup .pop_players .tab .tab_container button span { padding: 0; }
+    #mobile .golfMain.en .popup .pop_gallery .img img { width: 100%; height: 100%; }
+}

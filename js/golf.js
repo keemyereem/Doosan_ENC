@@ -40,6 +40,7 @@ let site = {
     // Add click event to top button
     $(document).on('click', '#topButton', () => {
       let goTop = location.href.split('#');
+      console.log(goTop)
       window.location = goTop[0] + '#firstPage';
     });
 
@@ -53,6 +54,15 @@ let site = {
   createFullPageGolf: function() {
 
     $("#fullpage").fullpage({
+      // anchors: [
+      //   "firstPage",
+      //   "secondPage",
+      //   "thirdPage",
+      //   "fourthPage",
+      //   "fifthPage",
+      //   "sixthPage",
+      //   "seventhPage",
+      // ],
       // Add menu to the right navigation element
       menu: "#rightnavi",
       // Disable vertical centering of sections
@@ -186,7 +196,6 @@ let golfPlayers = {
 
     // 영역 밖 이동 시 마우스 닫기 버튼 보이기
     $(document).on('mousemove', function (e) {
-      console.log($('.popup').children('ul').has(e.target).length)
       if (!$('#mobile').length) {
         if ($('.popup').children('ul').has(e.target).length === 0) {
           popupClose.css({ transform: "scale(1)" });
@@ -500,7 +509,12 @@ let golfPlayers = {
             '<i>강민구배 제46회 한국여자아마추어골프선수권대회 3위</i> <br>' +
             '<i>제20회 빛고을중흥배 아마추어골프선수권대회 4위</i> <br>' +
             '<i>제1회 대한골프협회장배 아마추어골프선수권대회 5위</i>'
-          ]
+          ],
+          [
+            '2021', '<i>제14회 KB금융그룹배 여자아마추어골프선수권대회 6위</i> <br>' +
+            '<i>제25회 매경솔라고배 아마추어골프선수권대회 4위</i>'
+          ],
+          ['2020', '<i>제27회 송암배 아마추어골프선수권대회 3위</i>']
         ]
       ], 
       [
@@ -529,6 +543,118 @@ let golfPlayers = {
             '2019', '<i><b>KB금융 스타챔피언십 우승</b></i> <br>' +
             '<i><b>올포유∙레노마 챔피언십 2019 우승</i> <br>' +
             '<i><b>하이원리조트 여자오픈 2019 우승</b></i>'
+          ]
+        ]
+      ]
+    ];
+
+    // 각 선수 정보(개발반영시 변경 예상) - 영문
+    const selectPlayersEn = [
+      // 유현주 프로
+      [
+        "Hyunju Yoo",
+        "“I have thought that I wanna ‘have’ various experiences in many other careers, like on TV, model, and influencer, as well as my regular career on the golf tours.”",
+        "Feb. 28. 1994",
+        "Oct. 2011",
+        "2012 5th Lotte Mart Ladies Open",
+        "Professional golfer, <br>Hyunju Yoo",
+        [
+          ['2020', '<i>25th place in the Jeju Samdasoo Masters</i>'],
+          ['2017', '<i>25th place in the 2017 MY Munyeong Queen’s Park Championship</i>'],
+          ['2016', '<i>27th place in the Phantom Classic with YTN</i>'],
+          ['2012', '<i>14th place in the BS Financial Group Busan BankㆍSeoul Economic Daily Women\'s Open</i>']
+        ]
+      ],
+      // 유효주 프로
+      [
+        "Hyoju Yoo",
+        "“I wanna ‘live’ happily ever after with the golf and someday get Doosan We've to settle on.”",
+        "Apr. 21. 1997",
+        "Oct. 2015",
+        "2017 Lotte Rent-a-Car Ladies Open",
+        "Professional golfer, <br>Hyoju Yoo",
+        [
+          ['2022', '<i><b>Winner in the WEMIX Championship with Wow Management Group SBS Golf</b></i>'],
+          ['2021', '<i>7th place in the Lotte Open</i>'],
+          ['2017', '<i>3rd place in the KB Financial Star Championship</i>']
+        ]
+      ],
+      // 박결 프로
+      [
+        "Gyeol Park",
+        "“Since I was young, I loved golf so much and became the golfer. Also, that’s why I have been loved by many fans. In that sense, golf is ‘love’ to me.”",
+        "Jan. 9. 1996",
+        "Oct. 2014",
+        "2015 8th Lotte Mart Ladies Open",
+        "Professional golfer, <br>Gyeol Park",
+        [
+          ['2023', '<i>2nd place in the 45th CreaS F&C KLPGA Championship</i>'],
+          ['2022', '<i>3rd place in the 2022 Nexen∙SaintNine Masters</i>'],
+          ['2021', '<i>9th place in the Celltrion Queens Masters</i>'],
+          ['2020', '<i>6th place in the 14th S-OIL Championship</i>'],
+          ['2019', '<i>6th place in the 8th KG∙Edaily Ladies Open with KFC</i>'],
+          [
+            '2018', '<i><b>Winner in the SK Networks∙Seoul Economic Daily Ladies Classic</b></i> <br>' +
+          '<i>2nd place in the 12th S-OIL Championship</i> <br>' +
+          '<i>2nd place in the 2018 Hyosung Championship with SBS</i>'
+          ],
+          ['2017', '<i>2nd place in the 2017 Samchuly Together Open</i>'],
+          ['2016', '<i>2nd place in the 2016 ChoJung Sparkling Water Yongpyong Resort Open with SBS</i>'],
+          [
+            '2015', '<i>2nd place in the 16th Hite Jinro Championship</i> <br>' +
+          '<i>2nd place in the 2015 NH Investment & Securities Ladies Championship</i>'
+          ]
+        ]
+      ],
+      // 김민솔 선수
+      [
+        "Minsol Kim",
+        "“I think I still need to be improved. So, I wanna ‘save’ all aspects well, like physical strength, skills, mental management, like steadily saving strokes one by one.”",
+        "Jun. 15. 2006",
+        " ",
+        " ",
+        "Amateur golfer, <br>Minsol Kim",
+        [
+          ['2023', '<i>2nd place in the 5th WAAP (Women\'s Amateur Asia Pacific Championships)</i>'],
+          [
+            '2022', '<i>3rd place in the 103rd National Sports Festival</i> <br>' +
+          '<i><b>Winner in the 29th Song Am Cup Amateur Golf Championship</b></i> <br>' +
+          '<i><b>Winner in the 39th Blueone Cup Korea Junior Golf Championship</b></i> <br>' +
+          '<i>3rd place in the 46th Kangmingu Cup Korea Women\'s Amateur Golf Championship</i> <br>' +
+          '<i>4th place in the 20th Bitgoeul Jungheung Cup Amateur Golf Championship</i> <br>' +
+          '<i>5th place in the 1st Korea Golf Association President Cup Amateur Golf Championship</i>'
+          ],
+          [
+            '2021', '<i>6th place in the 14th KB Financial Group Cup Women’s Amateur Golf Championship</i> <br>' +
+          '<i>4th place in the 25th Maekyung Sollago Cup Amateur Golf Championship</i>'
+          ],
+          ['2020', '<i>3rd place in the 27th Song Am Cup Amateur Golf Championship</i>']
+        ]
+      ],
+      // 임희정 프로
+      [
+        "Heejeong Lim",
+        "“Even when I face many challenges while on tour, I just wanna be myself, Heejeong Lim who always ‘solve’ them with the best solutions.”",
+        "Sep. 2. 2000",
+        "Oct. 2018",
+        "2018 Hyosung Championship",
+        "Professional golfer, <br>Heejeong Lim",
+        [
+          ['2022', '<i><b>Winner in the DB Group 36th Korea Women’s Open Golf Championships</b></i>'],
+          [
+            '2021', '<i>2nd place in the BMW Ladies Championship</i> <br>' +
+          '<i>2nd place in the 21st Hite Jinro Championship</i> <br>' +
+          '<i><b>Winner in the 2021 High1 Resort Ladies Open</b></i> <br>' +
+          '<i>2nd place in the Dayouwinia∙MBN Ladies Open</i> <br>'
+          ],
+          [
+            '2020', '<i>2nd place in the 2020 IS Dongseo Busan Open</i> <br>' +
+          '<i>2nd place in the 42nd KLPGA Championship</i> <br>'
+          ],
+          [
+            '2019', '<i><b>Winner in the 2019 KB Financial Group Star Championship</b></i> <br>' +
+          '<i><b>Winner in the 2019 All For You∙Renoma Championship</i> <br>' +
+          '<i><b>Winner in the 2019 High1 Resort Ladies Open</b></i>'
           ]
         ]
       ]
@@ -571,6 +697,10 @@ let golfPlayers = {
       // 이전, 다음버튼 클릭 시 selPnum증감
       selPnum = $(this).hasClass('next') ? (selPnum + 1) % selectPlayers.length : (selPnum + selectPlayers.length - 1) % selectPlayers.length;
       navNum.children('span').text(Number(selPnum) + 1);
+
+      $('.video').removeClass('on');
+      tabCont.children().first().addClass('on').siblings().removeClass('on');
+
       popup.animate({scrollTop: 0}, 200);
 
       // function vimeoRender/imageRender/descRender ●
@@ -663,6 +793,8 @@ let golfPlayers = {
     }
 
     function descRender() {
+      const isEng = $('.golfMain').hasClass('en');
+
       let descName = $('.desc_inner li:first-child h2'),
           descParph = $('.desc_inner li:first-child p'),
           descBirth = $('.desc_inner .info p:first-child span'),
@@ -671,17 +803,33 @@ let golfPlayers = {
           descRecord = $('.desc_inner li:last-child .history'),
           tabBtn = tabCont.find('span');
 
-      descName.html(selectPlayers[selPnum][2] + '<span>' + selectPlayers[selPnum][3] + '</span>');
-      descParph.html(selectPlayers[selPnum][4]);
-      descBirth.html(selectPlayers[selPnum][5]);
-      descEnter.html(selectPlayers[selPnum][6]);
-      descDebut.html(selectPlayers[selPnum][7]);
-      tabBtn.html(selectPlayers[selPnum][8]);
+      if (isEng) {
+        descName.html(selectPlayersEn[selPnum][0]);
+        descParph.html(selectPlayersEn[selPnum][1]);
+        descBirth.html(selectPlayersEn[selPnum][2]);
+        descEnter.html(selectPlayersEn[selPnum][3]);
+        descDebut.html(selectPlayersEn[selPnum][4]);
 
-      descRecord.children().remove();
-      for(const element of selectPlayers[selPnum][9]) {
-        descRecord.append('<p><span>' + element[0] + '<i>년</i></span>' + element[1] + '</p>');
+        descRecord.children().remove();
+        for(const element of selectPlayersEn[selPnum][6]) {
+          descRecord.append('<p><span>' + element[0] + '</span>' + element[1] + '</p>');
+        }
+
+      } else {
+        descName.html(selectPlayers[selPnum][2] + '<span>' + selectPlayers[selPnum][3] + '</span>');
+        descParph.html(selectPlayers[selPnum][4]);
+        descBirth.html(selectPlayers[selPnum][5]);
+        descEnter.html(selectPlayers[selPnum][6]);
+        descDebut.html(selectPlayers[selPnum][7]);
+        tabBtn.html(selectPlayers[selPnum][8]);
+
+        descRecord.children().remove();
+        for(const element of selectPlayers[selPnum][9]) {
+          descRecord.append('<p><span>' + element[0] + '<i>년</i></span>' + element[1] + '</p>');
+        }
       }
+
+
       descRecord.animate({scrollTop : 0})
       $('.desc').removeClass('on');
 
@@ -723,19 +871,13 @@ let golfPlayers = {
             '<br>' +
             '박결 (27·두산건설)이 최종 9언더파 279타로 공동 2위로 대회를 마쳤다.' +
             '<br><br>' +
-            '박결이 투어에서 준우승을 차지한 것은 2018년 6월 S-OIL 챔피언십 이후 4년 10개월 만이다. 1,2라운드 선두로 개인 첫 메이저 타이틀을 노리던 박결은' +
+            '박결이 투어에서 준우승을 차지한 것은 2018년 6월 S-OIL 챔피언십 이후 4년 10개월 만이다.' +
             '<br>' +
-            '최종라운드 이다연의 선전으로 아쉽게 우승 트로피는 다음으로 기약했다.' +
+            ' 1,2라운드 선두로 개인 첫 메이저 타이틀을 노리던 박결은 최종라운드 이다연의 선전으로 아쉽게 우승 트로피는 다음으로 기약했다.' +
             '<br><br>' +
-            '박결은 "항상 매년 목표가 우승이었기 때문에 하면 좋겠지만 그래도 우승을 너무 매달리지는 않으려 한다. 욕심을 크게 내지 않고 있다"라며' +
+            '박결은 "항상 매년 목표가 우승이었기 때문에 하면 좋겠지만 그래도 우승을 너무 매달리지는 않으려고 해요. 욕심을 크게 내지 않고 있어요." 라고' +
             '<br>' +
-            '"사실, 상위권만 들어도 너무 행복한 거고 그래서 우승에 대한 그렇게 생각을 하면 너무 좋다"라고 밝혔다.' +
-            '<br>' +
-            '이어 "지난해 아이언 샷으로 되게 많이 고생을 했다. 그린 적중률도 너무 떨어졌고 그래서 아이언을 위주로 되게 연습을 많이 했다.' +
-            '<br>' +
-            '이젠 원하는 방향으로도 보낼 수 있고 그래서 잘 훈련된 것 같다.' +
-            '<br>' +
-            '예전에 왼쪽으로 샷이 갔다면 이젠 똑바로 간다"라고 했다. '
+            '말했다. 또한 "사실, 상위권에만 들어도 너무 행복한 거고, 그렇게 생각을 하면 감사한 결과예요."라고 경기를 마친 소감을 전했다.'
         ],
 
         [
@@ -985,6 +1127,7 @@ let golfPlayers = {
           }
 
           updateGallery(newWidth, newHeight);
+          popGalleryImg.find('h2').css('width', newWidth);
         };
 
         const handleVideoError = (err) => {
@@ -1000,6 +1143,7 @@ let golfPlayers = {
           success: handleVideoRequest,
           error: handleVideoError
         });
+
       } else {
         const vurl = gd_img.split('/');
         const pid = gTarget.parent().data('popup-image');
@@ -1014,6 +1158,18 @@ let golfPlayers = {
             ? iframeElement.replaceWith(changeImg)
             : imgElement.length && imgElement.replaceWith(changeImg);
       }
+
+      const imgElement = popGalleryImg.children()[0];
+      if (imgElement.complete) {
+        const naturalWidth = imgElement.clientWidth;
+        popGalleryImg.find('h2').css('width', naturalWidth);
+      } else {
+        imgElement.addEventListener('load', () => {
+          const naturalWidth = imgElement.clientWidth;
+          popGalleryImg.find('h2').css('width', naturalWidth);
+        });
+      }
+
 
       $(".pop_close").on('click', () => {
         const iframe = popGalleryImg.find('iframe');

@@ -1994,8 +1994,6 @@
 .golf .golfMain .section:not(.footer) .golf_search { position: absolute; right: 0; top: -10rem; border-bottom: .2rem solid #222222; display: flex; align-items: center; padding: 2rem; }
 .golf .golfMain .section:not(.footer) .golf_search input { border: none; background: transparent; font-size: 2.4rem; font-weight: 400; color: #222222; padding-right: 1rem; }
 .golf .golfMain .section:not(.footer) .golf_search input::placeholder { color: #b2b2b2; }
-.golf .golfMain .section:not(.footer) .golf_search button { transition: all ease .2s; }
-.golf .golfMain .section:not(.footer) .golf_search button:hover { transform: scale(.8); }
 .golf .golfMain .section:not(.footer) ol { display: flex; justify-content: center; }
 .golf .golfMain .section:not(.footer) ol li:not(.golf_pagination) { width: 2.9rem; height: 2.9rem; display: flex; justify-content: center; align-items: center; }
 .golf .golfMain .section:not(.footer) ol li:not(.golf_pagination) { margin: 0 .55rem; }
@@ -2005,6 +2003,7 @@
 .golf .golfMain .section:not(.footer) ol .golf_pagination li.on { font-weight: 400; font-size: 1.6rem; color: #005eb8; border: .1rem solid #005eb8; border-radius: .2rem; }
 .golf .golfMain .section:not(.footer) ol .golf_pagination li.disable { pointer-events: none; }
 .golf .golfMain .section:not(.footer) ol .golf_pagination li button { display: block; width: 100%; height: 100%; }
+.golf .golfMain .section:not(.footer) .null { min-width: 100%; width: 100%; text-align: center; font-size: 1.6rem; padding: 24rem 0; }
 
 /* 배너 */
 .golf .golfMain .section1 article { position: absolute; bottom: 10rem; left: 0; right: 0; margin: auto; max-width: 144rem; width: 100%; z-index: 9999; display: flex; flex-wrap: wrap; flex-direction: column; }
@@ -2096,11 +2095,10 @@
 .golf .golfMain .section4 .golf_tab button:not(:last-of-type):after { content: ''; display: inline-block; width: .1rem; height: 1.3rem; background: #bfbfbf; right: -1.5rem; top: 0; bottom: 0; margin: auto; position: absolute; }
 .golf .golfMain .section4 .golf_gallery { max-width: 134rem; margin: 7.8rem auto 0; position: relative; }
 .golf .golfMain .section4 .golf_gallery .gallery_frame { position: relative; }
-.golf .golfMain .section4 .golf_gallery .gallery_frame > li { position: absolute; top: 5rem; opacity: 0; visibility: hidden; transition: all ease .3s; pointer-events: none; }
+.golf .golfMain .section4 .golf_gallery .gallery_frame > li { position: absolute; width: 100%; top: 5rem; opacity: 0; visibility: hidden; transition: all ease .3s; pointer-events: none; }
 .golf .golfMain .section4 .golf_gallery .gallery_frame > li.active { position: relative; opacity: 1; top: 0; visibility: visible; pointer-events: auto }
 .golf .golfMain .section4 .golf_gallery .gallery_inner { display: flex; flex-wrap: wrap; }
 .golf .golfMain .section4 .golf_gallery .gallery_inner li { width: calc(100% / 3 - 5.35rem); position: relative; margin-bottom: 3rem; }
-.golf .golfMain .section4 .golf_gallery .gallery_inner li.empty { width: 100%; height: 100%; text-align: center; }
 .golf .golfMain .section4 .golf_gallery .gallery_inner li a { display: block; }
 .golf .golfMain .section4 .golf_gallery .gallery_inner li a .img { position: relative; height: 22.2rem; overflow: hidden; transition: box-shadow ease .3s; }
 .golf .golfMain .section4 .golf_gallery .gallery_inner li a .img img { width: 100%; height: 100%; object-fit: cover; }
@@ -2191,19 +2189,19 @@
 .golf .golfMain .popup .pop_gallery { width: 134rem; margin: auto; height: 100vh; position: relative; display: none; align-items: center; justify-content: space-between; padding: 0 6rem; }
 .golf .golfMain .popup .pop_gallery .bg { display: block; position: absolute; width: 100%; height: 100%; background: #fff; z-index: 0; left: 0; }
 .golf .golfMain .popup .pop_gallery > * { position: relative; cursor: auto; width: fit-content; overflow: hidden; z-index: 1; }
-.golf .golfMain .popup .pop_gallery .img { display: flex; flex-direction: column; max-width: 100rem; max-height: 100vh; min-width: 36rem; align-items: center; }
-.golf .golfMain .popup .pop_gallery .img img { width: 100%; height: 100%; object-fit: cover; }
+.golf .golfMain .popup .pop_gallery .img { display: flex; flex-direction: column; max-width: 85rem; max-height: 100vh; min-width: 36rem; align-items: center; margin: auto; }
+.golf .golfMain .popup .pop_gallery .img img { width: fit-content; height: fit-content; max-width: 100%; object-fit: cover; }
 .golf .golfMain .popup .pop_gallery .img iframe { max-width: 100rem; max-height: 100vh; transition: all ease .3s; }
 .golf .golfMain .popup .pop_gallery .img h2 { text-align: center; font-size: 2rem; font-weight: 400; color: #222222; padding-top: 2rem; }
-.golf .golfMain .popup .pop_gallery > div:not(.img) { font-size: 1.4rem; font-family: 'Montserrat'; font-weight: 400; transition: all ease .2s; color: #000; border: .1rem solid rgba(0, 0, 0, .3); border-radius: 2rem; width: 13rem; height: 4rem; }
+.golf .golfMain .popup .pop_gallery > div:not(.img) { font-size: 1.4rem; position: absolute; z-index: 9; font-family: 'Montserrat'; font-weight: 400; transition: all ease .2s; color: #000; border: .1rem solid rgba(0, 0, 0, .3); border-radius: 2rem; width: 13rem; height: 4rem; }
 .golf .golfMain .popup .pop_gallery > div:not(.img, .disabled):hover { transform: scale(1.1); }
 .golf .golfMain .popup .pop_gallery > div:not(.img).disabled { cursor: auto; opacity: .5; }
 .golf .golfMain .popup .pop_gallery > div:not(.img).disabled button { pointer-events: none; }
 .golf .golfMain .popup .pop_gallery > div button { width: 100%; height: 100%; letter-spacing: .3rem; display: flex; align-items: center; justify-content: center; }
 
-.golf .golfMain .popup .pop_gallery > div:first-of-type { margin-right: 8rem; }
+.golf .golfMain .popup .pop_gallery > div:first-of-type { left: 8rem; }
 .golf .golfMain .popup .pop_gallery > div:first-of-type button img { margin-right: 2rem; transform: scale(-1); }
-.golf .golfMain .popup .pop_gallery > div:last-of-type { margin-left: 8rem; }
+.golf .golfMain .popup .pop_gallery > div:last-of-type { right: 8rem; }
 .golf .golfMain .popup .pop_gallery > div:last-of-type button img { margin-left: 2rem;  }
 
 

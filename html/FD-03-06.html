@@ -156,7 +156,7 @@
                     </div>
 
                     <!-- ------------------------------------------ -->
-                    <!-- 선수 데이터 가져오기 - golf.js 347 ~ 462줄 -->
+                    <!-- 선수 데이터 가져오기 - golf.js 428 ~ 549줄 -->
                     <!-- ------------------------------------------ -->
                     <div class="splide__track">
                       <ul class="splide__list">
@@ -245,7 +245,7 @@
                         <a href="javascript:;" class="openPopup" title="상세페이지 보기">
                           <img src="images/golf/sec03_sample01.png" alt="sec03_sample01">
                           <div class="txt_box">
-                            <p>박결, 2023년 크리스 F&C 제45회 KLPGA 챔피언십 2위</p>
+                            <p>박결, KLPGA 첫 메이저 대회인 '크리스 F&C 챔피언십(총상금 13억원)' 2위</p>
                             <span>2023. 04. 30</span>
                           </div>
                         </a>
@@ -275,7 +275,7 @@
                         <a href="javascript:;" class="openPopup" title="상세페이지 보기">
                           <img src="images/golf/sec03_sample03.png" alt="sec03_sample03">
                           <div class="txt_box">
-                            <p>‘두산건설 We’ve 골프단’ 창단</p>
+                            <p>두산건설 We’ve 골프단 창단</p>
                             <span>2023. 02. 22</span>
                           </div>
                         </a>
@@ -330,11 +330,11 @@
                       <li class="active">
                         <ul class="gallery_inner">
                           <!-- ------------------------------------------------------------------------------------------------ -->
-                          <!-- 비디오일 경우 - img클래스에 video클래스 추가 / 부모요소 li에 data-popup-vimeo="비디오아이디넘버" -->
+                          <!-- 비디오일 경우 - img클래스에 video클래스 추가 / 부모요소 li에 data-popup-vimeo="비메오 아이디 숫자값" -->
                           <!-- ------------------------------------------------------------------------------------------------ -->
-                          <li class="border_frame" data-index="0" data-popup-image="000" data-popup-vimeo="818628158">
+                          <li class="border_frame" data-index="0" data-popup-image="000" data-popup-vimeo="818628158"><!-- data-popup-vimeo="비메오 아이디 숫자값 -->
                             <a href="javascript:;" class="openPopup">
-                              <div class="img video">
+                              <div class="img video"><!-- video 태그 전용 클래스 추가 -->
                                 <span class="border bdt"></span>
                                 <span class="border bdl"></span>
                                 <span class="border bdr"></span>
@@ -362,7 +362,7 @@
 
                           <li class="border_frame" data-index="2" data-popup-image="002">
                             <a href="javascript:;" class="openPopup">
-                              <div class="img"><!-- video 태그 전용 클래스 추가 -->
+                              <div class="img">
                                 <span class="border bdt"></span>
                                 <span class="border bdl"></span>
                                 <span class="border bdr"></span>
@@ -421,9 +421,9 @@
 <!-- 탭버튼 - 두산건설 we've 골프단 -->
                       <li>
                         <ul class="gallery_inner">
-                          <li class="border_frame" data-index="18" data-popup-image="018" data-popup-vimeo="823573625">
+                          <li class="border_frame" data-index="18" data-popup-image="018" data-popup-vimeo="823573625"><!-- data-popup-vimeo="비메오 아이디 숫자값 -->
                             <a href="javascript:;" class="openPopup">
-                              <div class="img video">
+                              <div class="img video"><!-- video 태그 전용 클래스 추가 -->
                                 <span class="border bdt"></span>
                                 <span class="border bdl"></span>
                                 <span class="border bdr"></span>
@@ -431,7 +431,7 @@
                                 <img src="images/golf/sec04_sample08.jpg" alt="박결 쇼츠 영상">
                                 <img src="images/common/btn_play.png" alt="플레이 버튼" class="btn_play">
                               </div>
-                              <h3>퍼팅라인을 고민하는 임희정 메디힐 한국일보 챔피언십23</h3>
+                              <h3>박결 쇼츠 영상</h3>
                             </a>
                           </li>
 
@@ -510,7 +510,7 @@
 <!-- 탭버튼 - 2023년 대회 -->
                       <li>
                         <ul class="gallery_inner">
-                          <li class="empty">게시물이 없습니다.</li>
+                          <li class="null">등록된 내용이 없습니다.</li>
                         </ul>
                       </li>
 
@@ -550,7 +550,7 @@
               <button class="pop_close" type="button"><img src="images/common/pop_close.png" alt="pop_close"></button>
 <!-- 골프단 선수 팝업 -->
               <!-- ------------------------------------------ -->
-              <!-- 선수 데이터 가져오기 - golf.js 347 ~ 462줄 -->
+              <!-- 선수 데이터 가져오기 - golf.js 428 ~ 549줄 -->
               <!-- ------------------------------------------ -->
               <ul class="pop_players">
                 <li class="tab">
@@ -594,21 +594,22 @@
                 </li>
                 <!-- //desc -->
               </ul>
+
 <!-- 골프단 뉴스 팝업 -->
               <ul class="pop_news">
 
-                <!-- --------------------------------------------------------- -->
-                <!-- 제목, 날짜는 뉴스리스트의 글자 반영 - golf.js 639 ~ 650줄 -->
-                <!-- --------------------------------------------------------- -->
+                <!-- ----------------------------------------------------------- -->
+                <!-- 제목, 날짜는 뉴스리스트의 글자 반영 - golf.js 1000 ~ 1028줄 -->
+                <!-- ----------------------------------------------------------- -->
                 <li class="title">
                   <h2></h2>
                   <span></span>
                 </li>
 
                 <li class="editor">
-                  <!-- ------------------------------- -->
-                  <!-- 에디터 삽입구간 - golf.js 716줄 -->
-                  <!-- ------------------------------- -->
+                  <!-- -------------------------------------------- -->
+                  <!-- 에디터 삽입구간 - 데이터 golf.js 865 ~ 977줄 -->
+                  <!-- -------------------------------------------- -->
                 </li>
 
                 <li class="pagination">
@@ -616,6 +617,7 @@
                   <div><button class="next">NEXT<span></span></button></div>
                 </li>
               </ul>
+
 <!-- 골프단 갤러리 팝업 -->
               <ul class="pop_gallery">
                 <div><button><img src="images/common/arrow_9x15.png" alt="prev">PREV</button></div>

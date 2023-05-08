@@ -1915,6 +1915,7 @@
 #mobile .golf .golfMain .section:not(.footer) ol .golf_pagination li.on { font-size: 1.4rem; }
 #mobile .golf .golfMain .section:not(.footer) ol .golf_pagination li button { position: absolute; }
 #mobile .golf .golfMain .section:not(.footer) ol .golf_pagination li:nth-child(n + 4) { display: none; }
+#mobile .golf .golfMain .section:not(.footer) .null { font-size: 1.3rem; padding: 12.5rem 0; }
 #mobile .golf .golfMain .footer #topButton { display: none !important; }
 
 /* 배너 */
@@ -2050,20 +2051,20 @@
 #mobile .golf .golfMain .popup .pop_news .pagination div button:hover span { color: #000000; }
 #mobile .golf .golfMain .popup .pop_news .editor .editor_test_title { font-size: 1.7rem !important; line-height: 1.4; }
 #mobile .golf .golfMain .popup .pop_news .editor .editor_test_span { padding-top: 2rem; font-size: 1.2rem; margin-top: 0; }
-#mobile .golf .golfMain .popup .pop_gallery { min-width: 100%; padding: 0 0 10rem; height: fit-content; position: relative; top: 23.5rem; overflow: visible; justify-content: space-between; flex-wrap: wrap; }
-#mobile .golf .golfMain .popup .pop_gallery .img { max-width: 100%; max-height: fit-content; min-width: fit-content; width: 100%; align-items: center; }
+#mobile .golf .golfMain .popup .pop_gallery { min-width: 100%; width: 100%; padding: 0 0 10rem; margin-bottom: 20rem; height: fit-content; position: relative; top: 17.5rem; overflow: visible; justify-content: space-between; flex-wrap: wrap; }
+#mobile .golf .golfMain .popup .pop_gallery .img { max-width: 100%; max-height: fit-content; min-width: 100%; width: 100%; align-items: center; }
 #mobile .golf .golfMain .popup .pop_gallery .img iframe { max-width: 100%; }
-#mobile .golf .golfMain .popup .pop_gallery .img h2 { font-size: 1.5rem; padding-top: 1.5rem; }
-#mobile .golf .golfMain .popup .pop_gallery > div:not(.img) { font-size: 1.2rem; border-radius: 1.75rem; width: fit-content; height: 3.5rem; margin-top: 3rem; }
+#mobile .golf .golfMain .popup .pop_gallery .img h2 { font-size: 1.5rem; padding: 1.5rem 1rem 0; }
+#mobile .golf .golfMain .popup .pop_gallery > div:not(.img) { font-size: 1.2rem; border-radius: 1.75rem; width: fit-content; height: 3.5rem; margin-top: 3rem; position: relative; }
 #mobile .golf .golfMain .popup .pop_gallery > div:not(.img, .disabled):hover { transform: scale(1); }
 #mobile .golf .golfMain .popup .pop_gallery > div:not(.img, .disabled):active { transform: scale(1.1); }
 #mobile .golf .golfMain .popup .pop_gallery > div button { padding: 0 2rem; }
 #mobile .golf .golfMain .popup .pop_gallery > div button img { width: .65rem; }
-#mobile .golf .golfMain .popup .pop_gallery > div:first-of-type { margin-right: 0; margin-left: 2rem; order: 1; }
+#mobile .golf .golfMain .popup .pop_gallery > div:first-of-type { left: 2rem; order: 1; }
 #mobile .golf .golfMain .popup .pop_gallery > div:first-of-type button img { margin-right: 1.25rem; }
-#mobile .golf .golfMain .popup .pop_gallery > div:last-of-type { margin-left: 0; margin-right: 2rem; order: 1 }
+#mobile .golf .golfMain .popup .pop_gallery > div:last-of-type { right: 2rem; order: 1 }
 #mobile .golf .golfMain .popup .pop_gallery > div:last-of-type button img { margin-left: 1.25rem;  }
-
+#mobile .golf .golfMain .popup .pop_gallery .bg { top: 2rem; height: calc(100% - 8rem); }
 
 @keyframes jumpMob{
     50% { margin-top: -12rem; -webkit-animation-timing-function: ease-in; transform: rotate(90deg); }
