@@ -1987,6 +1987,7 @@
 .golf .golfMain .section:not(.footer) .border_frame .bdl { bottom: 0; left: 0; }
 .golf .golfMain .section:not(.footer) .border_frame .bdr { top: 0; right: 0; }
 .golf .golfMain .section:not(.section4, .footer) .border_frame:hover { box-shadow: 8px 14px 21px 0px rgba(4, 0, 0, 0.16); }
+.golf .golfMain .section:not(.footer, .section1) { display: flex; justify-content: center; flex-direction: column; }
 .golf .golfMain .section:not(.footer) .border_frame:hover .bdt { width: 100%; transition-delay: .1s; }
 .golf .golfMain .section:not(.footer) .border_frame:hover .bdr { height: 100%; transition-delay: .2s; }
 .golf .golfMain .section:not(.footer) .border_frame:hover .bdb { width: 100%; transition-delay: .3s; }
@@ -2021,11 +2022,11 @@
 .golf .golfMain .section1 article div .swiper-button-next:after { right: 0; }
 .golf .golfMain .section1 article div .swiper-button-next:before { content: ''; display: inline-block; width: .1rem; height: 1.4rem; background: #fff; opacity: .4; position: absolute; left: 0; }
 .golf .golfMain .section1 .swiper-slide { height: 100vh; overflow: hidden; }
-.golf .golfMain .section1 .swiper-slide img { position: relative; left: 50%; transform: translateX(-50%); }
+.golf .golfMain .section1 .swiper-slide img { position: relative; left: 50%; transform: translateX(-50%); width: 100%; height: 100%; object-fit: cover; }
 
 /* 선수소개 */
 .golf .golfMain .section2 { background: #f5f6fa; }
-.golf .golfMain .section2 .title_box { max-width: 148rem; width: 100%; height: fit-content; margin: 16.3rem auto 0; padding-left: 2rem; }
+.golf .golfMain .section2 .title_box { max-width: 148rem; width: 100%; height: fit-content; margin: 12.3rem auto 0; padding-left: 2rem; }
 .golf .golfMain .section2 .seciton2_cursor { width: 9.2rem; height: 9.2rem; display: flex; justify-content: center; flex-direction: column; align-items: center; background: rgba(34, 34, 34, .4); border-radius: 100%; position: absolute; z-index: 1; transform: scale(1); transition: transform ease .3s; cursor:none; pointer-events: none; }
 .golf .golfMain .section2 .seciton2_cursor span { color: #ffffff; font-family: 'Montserrat'; font-size: 1.4rem; font-weight: 300; text-align: center; letter-spacing: .1rem; margin-bottom: 1rem; }
 .golf .golfMain .section2 .controller { position:absolute; top: -14.8rem; right: 12.5vw; z-index: 2; height: fit-content; }
@@ -2043,7 +2044,7 @@
 .golf .golfMain .section2 .splide { position: relative; margin: 6rem auto 0; width: 100%; max-width: 177rem; height:fit-content; }
 .golf .golfMain .section2 .splide .splide__track { overflow-y: visible; overflow-x: clip; }
 .golf .golfMain .section2 .splide .splide__list { max-height: 52rem; min-height: 41.5rem; height: 27.1vw; display: flex; align-items: center; margin: 5rem 0; }
-.golf .golfMain .section2 .splide .splide__list .splide__slide { position: relative; min-height: 36.8rem; height: 23.96vw; width: calc(20% - 3rem); margin-right: 3rem; background: #ffffff; transition: all ease .3s; }
+.golf .golfMain .section2 .splide .splide__list .splide__slide { position: relative; min-height: 36.8rem; height: 23.96vw; max-height: 95%; width: calc(20% - 3rem); margin-right: 3rem; background: #ffffff; transition: all ease .3s; }
 .golf .golfMain .section2 .splide .splide__list .splide__slide:after { content:''; display: block; position: absolute; bottom: -.1rem; width: 100%; height: 26.5%; background: linear-gradient(to top, #014099, transparent); z-index: 0; opacity: 0; pointer-events: none; transition: all ease .3s; }
 .golf .golfMain .section2 .splide .splide__list .splide__slide .openPopup { pointer-events: none; cursor:none; }
 .golf .golfMain .section2 .splide .splide__list .splide__slide .mask_circle { display: flex; position: relative; align-items: center; flex-direction: column; background: #eeeef0; height: 100%; overflow: hidden; clip-path: circle(33% at 50% 37%); transition: all ease .6s; }
@@ -2058,7 +2059,7 @@
 .golf .golfMain .section2 .splide .splide__list .splide__slide h4 span:before { content:''; display: inline-block; width: .1rem; height: 1.6rem; background: #999999; vertical-align: top; position: relative; right: 9%; }
 .golf .golfMain .section2 .splide .splide__slide.is-active { box-shadow: 13px 11px 24px 0px rgba(4, 0, 0, 0.2); cursor: none; }
 .golf .golfMain .section2 .splide .splide__slide.is-active .openPopup { pointer-events: auto; }
-.golf .golfMain .section2 .splide .splide__slide.is-active { height: 100%; }
+.golf .golfMain .section2 .splide .splide__slide.is-active { height: 100%; max-height: 100%; }
 .golf .golfMain .section2 .splide .splide__slide.is-active:after { opacity: .7; transition-delay: .3s; }
 .golf .golfMain .section2 .splide .splide__slide.is-active h3 { opacity: 0; }
 .golf .golfMain .section2 .splide .splide__slide.is-active h4,
@@ -2093,7 +2094,7 @@
 .golf .golfMain .section4 .golf_tab button.on { font-weight: 400; color: #005eb8; }
 .golf .golfMain .section4 .golf_tab button:hover { color: #005eb8; }
 .golf .golfMain .section4 .golf_tab button:not(:last-of-type):after { content: ''; display: inline-block; width: .1rem; height: 1.3rem; background: #bfbfbf; right: -1.5rem; top: 0; bottom: 0; margin: auto; position: absolute; }
-.golf .golfMain .section4 .golf_gallery { max-width: 134rem; margin: 7.8rem auto 0; position: relative; }
+.golf .golfMain .section4 .golf_gallery { max-width: 134rem; width: 100%; margin: 7.8rem auto 0; position: relative; }
 .golf .golfMain .section4 .golf_gallery .gallery_frame { position: relative; }
 .golf .golfMain .section4 .golf_gallery .gallery_frame > li { position: absolute; width: 100%; top: 5rem; opacity: 0; visibility: hidden; transition: all ease .3s; pointer-events: none; }
 .golf .golfMain .section4 .golf_gallery .gallery_frame > li.active { position: relative; opacity: 1; top: 0; visibility: visible; pointer-events: auto }

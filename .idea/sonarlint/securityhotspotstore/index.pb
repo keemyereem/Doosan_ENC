@@ -15,3 +15,14 @@ E
 html/en/EN-03-05.html,8\0\803ce44ef9972bc069d9fa94ec15ea550eb08db0
 E
 html/FD-03-06-01.html,4\e\4e613ba0c9dfb424d0d1e9d5ac2911bc93432df1
+:
+
+js/main.js,d\a\dae13fd6f331d1c91ab58b06e81d05cb8958bfb1
+:
+
+css/en.css,d\0\d0cca321d3a316c9812cf3ee9b0af51e803d48e7
+:
+
+index.html,f\6\f6013a00b362253c64368d6eebc50ea2131754e2
+E
+html/en/EN-03-06.html,9\b\9ba66b72dd34d54e3650efb725aacf6bb770b029

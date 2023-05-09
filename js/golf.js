@@ -495,7 +495,7 @@ let golfPlayers = {
         "images/golf/player_kms.png",
         "김민솔", 
         "Kim Minsol", 
-        "“아직 부족한 점이 많기 때문에 한 타 한 타 <br class='br_m'>save 하는 것처럼 <br class='br_pc'>체력, 스킬, 멘탈 등 <br class='br_m'>모든 것을 성실하게 잘 ‘관리해서(save)’ <br>발전하는 선수가 되고 싶어요”",
+        "“아직 부족한 점이 많기 때문에 한 타 한 타 <br class='br_m'>save 하는 것처럼 <br class='br_pc'>체력, 스킬, 멘탈 등 <br class='br_m'>모든 것을 성실하게 잘 ‘관리해서(save)’ <br>발전하는 선수가 되고 싶어요.”",
         "2006년 06월 15일",
         " ",
         " ",
