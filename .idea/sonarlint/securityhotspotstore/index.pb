@@ -24,5 +24,12 @@ css/en.css,d\0\d0cca321d3a316c9812cf3ee9b0af51e803d48e7
 :
 
 index.html,f\6\f6013a00b362253c64368d6eebc50ea2131754e2
-E
-html/en/EN-03-06.html,9\b\9ba66b72dd34d54e3650efb725aacf6bb770b029
+<
+js/common.js,e\3\e3bf330772a44be5273f6c73f31eb6ba03b1bdde
+;
+css/sub.css,6\a\6a3bfa8a6769291c32c6d1d4870f88340cec1c78
+:
+
+js/golf.js,d\f\dfeb0cfb4d9495d0f8a7f5421bd18a3f67ca4505
+=
+css/media.css,8\9\89fbe365cf177773bc53de30f7b91bc56b05d11f
