@@ -2053,7 +2053,7 @@
 #mobile .golf .golfMain .popup .pop_news .editor .editor_test_span { padding-top: 2rem; font-size: 1.2rem; margin-top: 0; }
 #mobile .golf .golfMain .popup .pop_gallery { min-width: 100%; width: 100%; padding: 0 0 10rem; margin-bottom: 20rem; height: fit-content; position: relative; top: 17.5rem; overflow: visible; justify-content: space-between; flex-wrap: wrap; }
 #mobile .golf .golfMain .popup .pop_gallery .img { max-width: 100%; max-height: fit-content; min-width: 100%; width: 100%; align-items: center; }
-#mobile .golf .golfMain .popup .pop_gallery .img iframe { max-width: 100%; }
+#mobile .golf .golfMain .popup .pop_gallery .img iframe { max-width: 100%; background: #000; }
 #mobile .golf .golfMain .popup .pop_gallery .img h2 { font-size: 1.5rem; padding: 1.5rem 1rem 0; }
 #mobile .golf .golfMain .popup .pop_gallery > div:not(.img) { font-size: 1.2rem; border-radius: 1.75rem; width: fit-content; height: 3.5rem; margin-top: 3rem; position: relative; }
 #mobile .golf .golfMain .popup .pop_gallery > div:not(.img, .disabled):hover { transform: scale(1); }

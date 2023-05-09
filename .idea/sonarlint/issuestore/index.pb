@@ -28,8 +28,3 @@ index.html,f\6\f6013a00b362253c64368d6eebc50ea2131754e2
 js/common.js,e\3\e3bf330772a44be5273f6c73f31eb6ba03b1bdde
 ;
 css/sub.css,6\a\6a3bfa8a6769291c32c6d1d4870f88340cec1c78
-:
-
-js/golf.js,d\f\dfeb0cfb4d9495d0f8a7f5421bd18a3f67ca4505
-=
-css/media.css,8\9\89fbe365cf177773bc53de30f7b91bc56b05d11f

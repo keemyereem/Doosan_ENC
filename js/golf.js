@@ -1111,11 +1111,12 @@ let golfPlayers = {
           let newWidth;
           let newHeight;
 
-          console.log(`width: ${width} / height: ${height}`);
+
 
           if (!$('#mobile').length) {
             newWidth = width * 1.5;
             newHeight = height * 1.5;
+            console.log('blah')
           } else {
             const deviceWidth = $(window).width();
             const resMediaWidth = Math.abs(width - deviceWidth - 20);
@@ -1123,7 +1124,9 @@ let golfPlayers = {
             const downHeight = height - resMediaWidth;
 
             newWidth = width < deviceWidth ? deviceWidth - 40 : width;
-            newHeight = width < deviceWidth ? overHeight: downHeight + 40;
+            newHeight = width < deviceWidth ? overHeight - 40 : downHeight - 40;
+
+            console.log(`width: ${newWidth} / height: ${height}`);
           }
 
           updateGallery(newWidth, newHeight);
