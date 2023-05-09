@@ -24,9 +24,6 @@ css/en.css,d\0\d0cca321d3a316c9812cf3ee9b0af51e803d48e7
 index.html,f\6\f6013a00b362253c64368d6eebc50ea2131754e2
 ;
 css/sub.css,6\a\6a3bfa8a6769291c32c6d1d4870f88340cec1c78
-:
-
-.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 =
 css/media.css,8\9\89fbe365cf177773bc53de30f7b91bc56b05d11f
 <
