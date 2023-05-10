@@ -40,7 +40,7 @@ let site = {
     // Add click event to top button
     $(document).on('click', '#topButton', () => {
       let goTop = location.href.split('#');
-      console.log(goTop)
+      console.log(goTop[0])
       window.location = goTop[0] + '#firstPage';
     });
 
@@ -54,15 +54,15 @@ let site = {
   createFullPageGolf: function() {
 
     $("#fullpage").fullpage({
-      // anchors: [
-      //   "firstPage",
-      //   "secondPage",
-      //   "thirdPage",
-      //   "fourthPage",
-      //   "fifthPage",
-      //   "sixthPage",
-      //   "seventhPage",
-      // ],
+      anchors: [
+        "firstPage",
+        "secondPage",
+        "thirdPage",
+        "fourthPage",
+        "fifthPage",
+        "sixthPage",
+        "seventhPage",
+      ],
       // Add menu to the right navigation element
       menu: "#rightnavi",
       // Disable vertical centering of sections
@@ -253,9 +253,9 @@ let golfPlayers = {
   },
 
   swipersForGolf: function() {
-
+    
     // 메인 배너
-    new Swiper(".swiperGolf1", {
+    let golfBanner = new Swiper(".swiperGolf1", {
       spaceBetween: 30,
       effect: "fade",
       speed: 500,
@@ -298,6 +298,11 @@ let golfPlayers = {
         },
       }
     });
+    
+    const bannerArrow = $('.section1 article > div');
+    bannerArrow.children().on('click', function() {
+      golfBanner.autoplay.start();
+    })
 
     function mobileImageTransfer() {
       chkWord();
@@ -342,8 +347,7 @@ let golfPlayers = {
       });
     }
 
-
-    // // 선수소개 슬라이드
+    // 선수소개 슬라이드
     let splide = new Splide( '.splide', {
       type   : 'loop',
       perPage: 5,
@@ -387,10 +391,12 @@ let golfPlayers = {
       $(this).hasClass('next') ? splide.go( '+1' ) : splide.go( '-1' );
     });
 
+    // 골프단 페이지 모든 팝업을 실행할 경우 선수소개 슬라이드는 멈춤.
     popBtn.on('click', ()=> {
       $('.popup').hasClass('on') ? Autoplay.pause() : null;
     })
 
+    // 모든 팝업 닫기버튼을 누르면 오토플레이 재개
     popClose.on('click', function() {
       Autoplay.play();
     })
@@ -971,7 +977,7 @@ let golfPlayers = {
       selNnum = $(this).hasClass('next') ? Number(selNnum) + 1 : Number(selNnum) - 1;
       nTarget = newsList.eq(selNnum).children('.openPopup');
       newsRender();
-      popup.animate({scrollTop: 0}, 500);
+      popup.animate({scrollTop: 0}, 0);
     })
 
     function newsRender() {
