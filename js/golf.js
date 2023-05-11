@@ -11,7 +11,6 @@ $(function () { });
 let site = {
   init: function () {
     this.configureResponsiveLayout();
-    this.createFullPageGolf();
     this.initEvents();
   },
 
@@ -35,13 +34,27 @@ let site = {
         let mobileUrl = $golfImg.attr('src').replace(/\.(png|jpg|jpeg|gif)/i, '_mob.$1');
         $golfImg.attr('src', mobileUrl);
       });
+      
+      $(window).on("load scroll resize", function() {
+        if ($(this).scrollTop() > 400) {
+          $("#topButton").fadeIn();
+        } else {
+          $("#topButton").fadeOut();
+        }
+      });
+    } else {
+      site.createFullPageGolf();
     }
+    
 
     // Add click event to top button
     $(document).on('click', '#topButton', () => {
-      let goTop = location.href.split('#');
-      //console.log(goTop[0])
-      window.location = goTop[0] + '#firstPage';
+      if ($('#mobile').length) {
+        $("html").animate({ scrollTop: 0 }, "300");
+      } else {
+        let goTop = location.href.split('#');
+        window.location = goTop[0] + '#firstPage';
+      }
     });
 
     // Remove 'wht' class from header on mouse leave
@@ -236,6 +249,7 @@ let golfPlayers = {
 
     popBtn.on('click', function() {
       $("html").addClass("blockScroll");
+      $('.popup').addClass('on');
       
       let slide = $(this).closest('.splide__slide');
       let newsList = $(this).closest('.news_list');
@@ -398,10 +412,25 @@ let golfPlayers = {
     });
     
     // 골프단 페이지 모든 팝업을 실행할 경우 선수소개 슬라이드는 멈춤.
-    popBtn.on('click', ()=> {
+    popBtn.on('click', function(e) {
       if ($('.popup').hasClass('on')) {
         Autoplay.pause();
-      }
+      };
+      
+      // 끝쪽 선수카드 일부가 팝업이 안열리는 버그 - 기존의 팝업 오픈이벤트 복사
+      // let clickIdx = Number($(this).parent().index());
+      // splide.go(clickIdx);
+      //
+      // $(".popup").fadeIn(300);
+      // $(".popup").addClass("on");
+      // $("html").addClass("blockScroll");
+      //
+      // let slide = $(this).closest('.splide__slide');
+      // let LayerPopup1 = $('.popup .pop_players');
+      //
+      // if (slide.length) {
+      //   LayerPopup1.css('display', 'flex');
+      // }
     })
     
     // 모든 팝업 닫기버튼을 누르면 오토플레이 재개
@@ -682,6 +711,7 @@ let golfPlayers = {
 
     // ●● click ●● 팝업 오픈 시
     popBtn.on('click', function(e) {
+      
       if ($('.pop_players').css('display') === 'flex') {
         // selPnum값 부여
         selPnum = $(this).parent().attr('data-index');
