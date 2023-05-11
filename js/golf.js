@@ -40,7 +40,7 @@ let site = {
     // Add click event to top button
     $(document).on('click', '#topButton', () => {
       let goTop = location.href.split('#');
-      console.log(goTop[0])
+      //console.log(goTop[0])
       window.location = goTop[0] + '#firstPage';
     });
 
@@ -176,7 +176,8 @@ let site = {
 let golfPlayers = {
   init: function () {
     this.popupForGolf();
-    this.swipersForGolf();
+    this.bannerCarousel();
+    this.playerCarousel();
     this.popup01();
     this.popup02();
     this.popup03();
@@ -231,122 +232,128 @@ let golfPlayers = {
     $(window).on("scroll", function () {
       $(".popup > ul").css("left", 0 - $(this).scrollLeft());
       $section2Cursor.css('margin-left', 0 + $(this).scrollLeft());
-
-      // if ($(".popup > ul").hasClass('pop_gallery')) {
-      //   LayerPopup3.css("margin-left", 0 - $(this).scrollLeft());
-      // }
     });
 
     popBtn.on('click', function() {
       $("html").addClass("blockScroll");
-      $(this).closest('.splide__slide').length ?
-          LayerPopup1.css('display', 'flex') : $(this).closest('.news_list').length ?
-              LayerPopup2.css('display', 'block') : LayerPopup3.css('display', 'flex');
+      
+      let slide = $(this).closest('.splide__slide');
+      let newsList = $(this).closest('.news_list');
+      
+      if (slide.length) {
+        LayerPopup1.css('display', 'flex');
+      } else if (newsList.length) {
+        LayerPopup2.css('display', 'block');
+      } else {
+        LayerPopup3.css('display', 'flex');
+      }
     });
 
     popupClose.on("click", () => {
       // 팝업 닫기 function
       $("html").removeClass("blockScroll");
       $(".popup, .popup > ul").fadeOut(300);
-      LayerPopup1.find('.video').length ? LayerPopup1.find('.video').removeClass('on') : null;
-    });
-  },
-
-  swipersForGolf: function() {
-    
-    // 메인 배너
-    let golfBanner = new Swiper(".swiperGolf1", {
-      spaceBetween: 30,
-      effect: "fade",
-      speed: 500,
-      loop: true,
-      autoplay: {
-        delay: 3000,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      on: {
-        init: function() {  // 초기값 - 필요시 작업
-          mobileImageTransfer();
-        },
-
-        slideChangeTransitionStart: function() {  // 넘기기 시작할 때
-          let txtPieceChild = $('.txtPiece span');
-
-          // 텍스트 슬라이드 애니메이션 클래스 부여(시작)
-          txtPieceChild.addClass('slideUp');
-
-          // 텍스트 슬라이드 애니메이션이 끝나는 시점
-          txtPieceChild.on('transitionend', function() {
-            let selTit = $(".swiper-slide-active h2").html(),
-                $selTitSplit = selTit.split('<br>'),
-                $selTitParent = $('.golfMain .section1 article');
-
-            devideWord($selTitSplit, $selTitParent)
-          })
-        },
-
-        slideChangeTransitionEnd: function() {  // 넘긴 슬라이드가 완전히 자리 잡았을 때
-          // 텍스트별 슬라이드 시간차 주고 자연스럽게
-          for (let i=0; i<= $('.txtPiece').length; i++) {
-            $('.txtPiece').eq(i).children('span').css('transition-delay', i * 0.06 + 's');
-          }
-          // 텍스트 슬라이드 애니메이션 클래스 삭제(원위치로 내려옴)
-          $('.txtPiece span').removeClass('slideUp');
-        },
+      
+      const videoElement = LayerPopup1.find('.video');
+      if (videoElement.length) {
+        videoElement.removeClass('on');
       }
     });
+  },
+  
+  bannerCarousel: function() {
     
-    const bannerArrow = $('.section1 article > div');
-    bannerArrow.children().on('click', function() {
-      golfBanner.autoplay.start();
-    })
-
-    function mobileImageTransfer() {
-      chkWord();
-
-      let slideMob = $('.swiper-slide');
-      if ($('#mobile').length) {
-        slideMob.each(function(index) {
-          let golfImgUrl = slideMob.eq(index).find('img');
-          let mobileUrl = golfImgUrl.attr('src').replace(/\.(png|jpg|jpeg|gif)/i, '_mob.$1');
-          golfImgUrl.attr('src', mobileUrl)
+    // Initialize the Swiper slider for golf
+    function initGolfSwiper() {
+      const golfBanner = new Swiper(".swiperGolf1", {
+        spaceBetween: 30,
+        effect: "fade",
+        speed: 500,
+        loop: true,
+        autoplay: {
+          delay: 3000
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        },
+        on: {
+          init: function() {
+            // Call mobileImageTransfer function on initialization
+            mobileImageTransfer();
+          },
+          slideChangeTransitionStart: function() {
+            const txtPieceChild = $('.txtPiece span');
+            txtPieceChild.addClass('slideUp');
+            txtPieceChild.on('transitionend', function() {
+              const selTit = $(".swiper-slide-active h2").html().split('<br>');
+              const selTitParent = $('.golfMain .section1 article');
+              devideWord(selTit, selTitParent);
+            })
+          },
+          slideChangeTransitionEnd: function() {
+            $('.txtPiece').each(function(index) {
+              $('.txtPiece').eq(index).children('span').css('transition-delay', index * 0.06 + 's');
+            });
+            $('.txtPiece span').removeClass('slideUp');
+          }
+        }
+      });
+      
+      // Restart autoplay on banner arrow click
+      const bannerArrow = $('.section1 article > div');
+      bannerArrow.children().on('click', function() {
+        golfBanner.autoplay.start();
+      });
+      
+      // Replace image URLs with mobile version for smaller screens
+      function mobileImageTransfer() {
+        const slideMob = $('.swiper-slide');
+        if ($('#mobile').length) {
+          slideMob.each(function(index) {
+            const golfImgUrl = slideMob.eq(index).find('img');
+            const mobileUrl = golfImgUrl.attr('src').replace(/\.(png|jpg|jpeg|gif)/i, '_mob.$1');
+            golfImgUrl.attr('src', mobileUrl);
+          });
+        }
+        checkWord();
+      }
+      
+      // Split the text into separate H2 tags and style them
+      function devideWord(selTitSplit, selTitParent) {
+        selTitParent.children('h2').remove();
+        for (let i = selTitSplit.length - 1; i >= 0; i--) {
+          let txt = i;
+          selTitParent.prepend(`<h2 class="txtPiece"><span class="slideUp">${selTitSplit[txt]}</span></h2>`);
+          if ($('.txtPiece').length < selTitSplit.length) {
+            txt = (selTitSplit.length - 1) - $('.txtPiece').length;
+          } else if (selTitSplit.length == 1) {
+            selTitParent.children('h2').after('<h2>&nbsp;</h2>');
+          }
+        }
+        checkWord();
+      }
+      
+      // Check if the text contains mixed font families
+      function checkWord() {
+        const txtPiece = $('.txtPiece');
+        const check_kor = /[ㄱ-ㅎㅏ-ㅣ가-힣]/;
+        txtPiece.each((index) => {
+          const check_txt = txtPiece.eq(index).text();
+          if (!check_kor.test(check_txt)) {
+            txtPiece.eq(index).css("font-family", '"Montserrat", sans-serif');
+          }
         });
       }
     }
 
-    function devideWord(selTitSplit, selTitParent) {
-      // 이전 슬라이드 내용이 담긴 태그를 모두 삭제
-      selTitParent.children('h2').remove();
-
-      // 각 슬라이드 내부 h2태그의 띄어쓰기 기준으로 분리한 텍스트 배열들의 개수만큼 태그 생성 및 내용 삽입
-      for (let i=selTitSplit.length-1; i >= 0; i--) {
-        let txt = i;
-        selTitParent.prepend('<h2 class="txtPiece"><span class="slideUp">' + selTitSplit[txt] + '</span></h2>');
-
-        if ($('.txtPiece').length < selTitSplit.length) { // 기존 h2태그가 분리한 텍스트 배열 개수보다 낮을 때 = 텍스트 배열 개수만큼 생성
-          txt = (selTitSplit.length - 1) - $('.txtPiece').length;
-        } else if (selTitSplit.length == 1) { // 분리한 텍스트 배열 개수가 1개일 때 = 전체 프레임 높이값 맞추기 위해 공백의 h2태그 1개 생성
-          selTitParent.children('h2').after('<h2>&nbsp;</h2>');
-        }
-        chkWord();
-      }
-    }
-    function chkWord() {
-      let txtPiece = $('.txtPiece'),
-          check_kor = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
-
-      // 폰트패밀리 혼용 구분
-      txtPiece.each((index) => {
-        let check_txt = txtPiece.eq(index).text();
-        if (!check_kor.test(check_txt)) {
-          txtPiece.eq(index).css("font-family", '"Montserrat", sans-serif');
-        }
-      });
-    }
-
+    // Call the initGolfSwiper function on document ready
+    $(document).ready(function() {
+      initGolfSwiper();
+    });
+  },
+  
+  playerCarousel: function() {
     // 선수소개 슬라이드
     let splide = new Splide( '.splide', {
       type   : 'loop',
@@ -361,7 +368,7 @@ let golfPlayers = {
       updateOnMove: true,
       autoplay: true,
       interval: 3000,
-      flickPower: 50,
+      flickPower: 10,
       breakpoints: {
         640: {
           autoWidth: true,
@@ -372,35 +379,36 @@ let golfPlayers = {
           perPage: 3,
         }
       }
-
+      
     }).mount();
-
+    
     const navBtn = $('.desc_pagination');
-
+    
     let $section2Slide = $('.splide__slide'),
-        $section2Active = $('.splide__slide.is-active'),
-        $section2Cursor = $('.seciton2_cursor'),
-        popBtn = $('.openPopup'),
-        popClose = $('.pop_close');
-
+      $section2Cursor = $('.seciton2_cursor'),
+      popBtn = $('.openPopup'),
+      popClose = $('.pop_close');
+    
     const { Autoplay } = splide.Components;
-
+    
     // ●● click ●● 페이지네이션 버튼 클릭 시
     navBtn.on('click', function() {
       // 이전, 다음버튼 클릭 시 splide 슬라이더 동작
       $(this).hasClass('next') ? splide.go( '+1' ) : splide.go( '-1' );
     });
-
+    
     // 골프단 페이지 모든 팝업을 실행할 경우 선수소개 슬라이드는 멈춤.
     popBtn.on('click', ()=> {
-      $('.popup').hasClass('on') ? Autoplay.pause() : null;
+      if ($('.popup').hasClass('on')) {
+        Autoplay.pause();
+      }
     })
-
+    
     // 모든 팝업 닫기버튼을 누르면 오토플레이 재개
     popClose.on('click', function() {
       Autoplay.play();
     })
-
+    
     // ********* 모바일 환경
     if ($('#mobile').length) {
       $section2Cursor.remove();
@@ -408,18 +416,15 @@ let golfPlayers = {
       $section2Slide.find('.seciton2_cursor').on('click', function() {
         $(this).parent().trigger( "click" );
       });
-
+      
       $section2Slide.each(function(index) {
         let golfImgUrl = $section2Slide.eq(index).find('.mask_circle img');
         let mobileUrl = golfImgUrl.attr('src').replace(/\.(png|jpg|jpeg|gif)/i, '_mob.$1');
         golfImgUrl.attr('src', mobileUrl);
       });
-
     }
-
-
+  
   },
-
 
   popup01: function() {
     // ●● const ●● 재생버튼, 페이지네이션 버튼, 각 선수들의 동영상 프레임 ID
@@ -693,7 +698,12 @@ let golfPlayers = {
     // ●● click ●● 탭버튼 클릭 시 
     tabCont.children().on('click', function() {
       $(this).addClass('on').siblings().removeClass('on');
-      $(this).index() !== 0 ? $('.video').addClass('on') : ($('.video').removeClass('on'), vimeoRender())
+      if ($(this).index() !== 0) {
+        $('.video').addClass('on');
+      } else {
+        $('.video').removeClass('on');
+        vimeoRender();
+      }
     });
 
     // ●● click ●● 페이지네이션 버튼 클릭 시
@@ -726,7 +736,9 @@ let golfPlayers = {
 
       // 컨트롤 바 생성
       let useCtr = selFrameUrl.replace(/(controls=0)/g, function(vl){
-        switch(vl){ case "controls=0": return "controls=1"; }
+        if (vl === "controls=0") {
+          return "controls=1";
+        }
       });
 
       // 컨트롤바를 생성한 아이프레임 리렌더링
@@ -763,11 +775,11 @@ let golfPlayers = {
     // ●● function/vimeoRender ●●
     function vimeoRender() {
       // 현재 아이프레임 src값에서 ../video/ 이후 id값을 추출
-      let vurl = selFrameUrl.match(/player.vimeo.com\/video\/?([0-9]+)/i);
+      let vurl = selFrameUrl.match(/player.vimeo.com\/video\/(\d+)/i);
 
       // 추출한 id값을 활성화된 인덱스(선수) id값으로 교체
       selFrameUrl = selFrameUrl.replace(vurl[1], selectPlayers[selPnum][0]);
-0
+
       // 교체한 src값을 아이프레임 src값에 치환
       iframe.attr('src', selFrameUrl).fadeOut(100);
 
@@ -1013,11 +1025,9 @@ let golfPlayers = {
   },
 
   popup03: function() {
-    const popup = $('.popup'),
-          popBtn = $('.openPopup'),
+    const popBtn = $('.openPopup'),
           popGallery = $('.pop_gallery'),
           galFrame = $('.gallery_frame'),
-          galVideo = $('.vimeo02'),
           tabBtn = $('.golf_tab').children();
 
     let selGnum = 0,
@@ -1082,25 +1092,25 @@ let golfPlayers = {
 
           const currentIframe = popGalleryImg.find('iframe');
           const currentTit = popGalleryImg.find('h2');
-
-          currentIframe.length && currentIframe.data('video-id') === videoURL
-              ? currentIframe.show() && currentTit.show()
-              : (newIframe.data('video-id', videoURL),
-                  popGalleryImg.find('iframe, img').replaceWith(newIframe),
-                  currentTit.show());
+          
+          if (currentIframe.length && currentIframe.data('video-id') === videoURL) {
+            currentIframe.show();
+            currentTit.show();
+          } else {
+            newIframe.data('video-id', videoURL);
+            popGalleryImg.find('iframe, img').replaceWith(newIframe);
+            currentTit.show();
+          }
         };
 
         const handleVideoRequest = (data) => {
           const { width, height } = data;
           let newWidth;
           let newHeight;
-
-
-
+          
           if (!$('#mobile').length) {
             newWidth = width * 1.5;
             newHeight = height * 1.5;
-            console.log('blah')
           } else {
             const deviceWidth = $(window).width();
             const resMediaWidth = Math.abs(width - deviceWidth - 20);
@@ -1110,7 +1120,6 @@ let golfPlayers = {
             newWidth = width < deviceWidth ? deviceWidth - 40 : width;
             newHeight = width < deviceWidth ? overHeight - 40 : downHeight - 40;
 
-            console.log(`width: ${newWidth} / height: ${height}`);
           }
 
           updateGallery(newWidth, newHeight);

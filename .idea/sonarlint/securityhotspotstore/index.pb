@@ -23,8 +23,6 @@ css/en.css,d\0\d0cca321d3a316c9812cf3ee9b0af51e803d48e7
 js/common.js,e\3\e3bf330772a44be5273f6c73f31eb6ba03b1bdde
 E
 html/FD-03-06-01.html,4\e\4e613ba0c9dfb424d0d1e9d5ac2911bc93432df1
-E
-html/en/EN-03-06.html,9\b\9ba66b72dd34d54e3650efb725aacf6bb770b029
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
