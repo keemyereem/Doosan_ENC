@@ -242,7 +242,9 @@
 .en .policy > .inner > ul { max-width: 100%; margin: 8rem auto; }
 
 /* Golf Team */
+.golfMain.en .section:not(.footer) .golf_search { width: 37rem; }
 .golfMain.en .section:not(.footer) .golf_search input { font-size: 2rem; }
+.golfMain.en .section:not(.footer) .golf_search input::placeholder { font-size: 1.8rem; }
 .golfMain.en .section1 article { bottom: 12rem; }
 .golfMain.en .section1 article h2 { font-size: 6rem; }
 .golfMain.en .section2 .splide .splide__list .splide__slide h4 { font-weight: 350; font-size: 2.6rem; }
