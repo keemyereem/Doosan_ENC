@@ -16,6 +16,3 @@ E
 :
 
 css/en.css,d\0\d0cca321d3a316c9812cf3ee9b0af51e803d48e7
-:
-
-.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
