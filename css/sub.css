@@ -1992,9 +1992,11 @@
 .golf .golfMain .section:not(.footer) .border_frame:hover .bdr { height: 100%; transition-delay: .2s; }
 .golf .golfMain .section:not(.footer) .border_frame:hover .bdb { width: 100%; transition-delay: .3s; }
 .golf .golfMain .section:not(.footer) .border_frame:hover .bdl { height: 100%; transition-delay: .4s; }
-.golf .golfMain .section:not(.footer) .golf_search { position: absolute; right: 0; top: -10rem; border-bottom: .2rem solid #222222; display: flex; align-items: center; padding: 2rem; }
-.golf .golfMain .section:not(.footer) .golf_search input { border: none; background: transparent; font-size: 2.4rem; font-weight: 400; color: #222222; padding-right: 1rem; }
+.golf .golfMain .section:not(.footer) .golf_search { position: absolute; right: 0; top: -10rem; border-bottom: .2rem solid #222222; display: flex; align-items: center; padding: 2rem; width: 33rem; }
+.golf .golfMain .section:not(.footer) .golf_search input { border: none; background: transparent; font-size: 2.4rem; font-weight: 400; color: #222222; width: 100%; padding-right: 1rem; }
 .golf .golfMain .section:not(.footer) .golf_search input::placeholder { color: #b2b2b2; }
+.golf .golfMain .section:not(.footer) .golf_search button[type="reset"] { width: 2rem; height: 2rem; margin-right: .8rem; }
+.golf .golfMain .section:not(.footer) .golf_search button[type="reset"] img { width: 100%; }
 .golf .golfMain .section:not(.footer) ol { display: flex; justify-content: center; }
 .golf .golfMain .section:not(.footer) ol li:not(.golf_pagination) { width: 2.9rem; height: 2.9rem; display: flex; justify-content: center; align-items: center; }
 .golf .golfMain .section:not(.footer) ol li:not(.golf_pagination) { margin: 0 .55rem; }

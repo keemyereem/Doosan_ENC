@@ -1903,11 +1903,11 @@
 #mobile .golf .golfMain .section:not(.footer) .border_frame:active .bdr { height: 100%; transition-delay: .2s; }
 #mobile .golf .golfMain .section:not(.footer) .border_frame:active .bdb { width: 100%; transition-delay: .3s; }
 #mobile .golf .golfMain .section:not(.footer) .border_frame:active .bdl { height: 100%; transition-delay: .4s; }
-#mobile .golf .golfMain .section:not(.footer) .golf_search { position: relative; top: 0; padding: 1rem 0 1rem 2rem; max-width: 22.5rem; margin: auto; }
-#mobile .golf .golfMain .section:not(.footer) .golf_search input { font-size: 1.7rem; padding-right: 0; width: 100%; }
-#mobile .golf .golfMain .section:not(.footer) .golf_search button img { width: 1.8rem; margin: 0 .5rem; }
-#mobile .golf .golfMain .section:not(.footer) .golf_search button:hover { transform: unset; }
-#mobile .golf .golfMain .section:not(.footer) .golf_search button:active { transform: scale(.8); }
+#mobile .golf .golfMain .section:not(.footer) .golf_search { position: relative; top: 0; padding: 1rem 0 1rem 1.5rem; max-width: 22.5rem; margin: auto; }
+#mobile .golf .golfMain .section:not(.footer) .golf_search input { font-size: 1.7rem; padding-right: .5rem; width: calc(100% - 4.5rem); }
+#mobile .golf .golfMain .section:not(.footer) .golf_search button[type="submit"] img { width: 1.8rem; }
+#mobile .golf .golfMain .section:not(.footer) .golf_search button[type="reset"] { width: 1.5rem; height: 1.5rem; margin-right: .4rem; }
+#mobile .golf .golfMain .section:not(.footer) .golf_search button[type="reset"] img { width: 100%; }
 #mobile .golf .golfMain .section:not(.footer) ol { align-items: center; }
 #mobile .golf .golfMain .section:not(.footer) ol li:not(.golf_pagination) { width: fit-content; height: 100%; margin: 0 .5rem; padding: .4rem .7rem; }
 #mobile .golf .golfMain .section:not(.footer) ol .golf_pagination { margin: 0 .95rem; }

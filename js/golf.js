@@ -30,9 +30,13 @@ let site = {
     } else if ($('#mobile').length) {
       let $searchFrame = $('.golf_search');
       $searchFrame.each((index, element) => {
-        let $golfImg = $(element).find('button img');
-        let mobileUrl = $golfImg.attr('src').replace(/\.(png|jpg|jpeg|gif)/i, '_mob.$1');
-        $golfImg.attr('src', mobileUrl);
+        
+        $(element).children('button').each((i, el) => {
+          let $golfImg = $(el).find('img');
+          let mobileUrl = $golfImg.attr('src').replace(/\.(png|jpg|jpeg|gif)/i, '_mob.$1');
+          $golfImg.attr('src', mobileUrl);
+        })
+        
       });
       
       $(window).on("load scroll resize", function() {
