@@ -1960,7 +1960,7 @@
 
 /* 골프단 소식 */
 #mobile .golf .golfMain .section3 .title_box { margin: 6.5rem auto 0; padding-left: 0; text-align: center; }
-#mobile .golf .golfMain .section3 .golf_news { margin: 2rem 2rem 0; }
+#mobile .golf .golfMain .section3 .golf_news { margin: 2rem 2rem 0; max-width: calc(100% - 4rem); }
 #mobile .golf .golfMain .section3 .golf_news ul { margin-top: 3rem; }
 #mobile .golf .golfMain .section3 .golf_news ul li { width: 100%; height: fit-content; margin-bottom: 3rem; }
 #mobile .golf .golfMain .section3 .golf_news ul li:nth-child(3n - 1) { margin: 0; margin-bottom: 3rem; }

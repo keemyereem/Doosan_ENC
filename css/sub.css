@@ -2073,8 +2073,9 @@
 
 /* 골프단 소식 */
 .golf .golfMain .section3 .title_box { max-width: 148rem; width: 100%; height: fit-content; margin: 16.3rem auto 0; padding-left: 2rem; }
-.golf .golfMain .section3 .golf_news { max-width: 144rem; margin: 6rem auto 0; position: relative; }
-.golf .golfMain .section3 .golf_news ul { display: flex; flex-wrap: wrap; }
+.golf .golfMain .section3 .golf_news { max-width: 144rem; margin: 6rem auto 0; position: relative; width: 100%; }
+.golf .golfMain .section3 .golf_news ul { display: flex; flex-wrap: wrap; position: absolute; opacity: 0; visibility: hidden; }
+.golf .golfMain .section3 .golf_news ul.active { position: relative; opacity: 1; visibility: visible; }
 .golf .golfMain .section3 .golf_news ul li { width: calc(100% / 3 - 3.4rem); height: 44.8rem; position: relative; overflow: hidden; }
 .golf .golfMain .section3 .golf_news ul li:nth-child(3n - 1) { margin: 0 5rem; }
 .golf .golfMain .section3 .golf_news ul li img { width: 100%; height: calc(100% - 13.8rem); object-fit: cover; }
