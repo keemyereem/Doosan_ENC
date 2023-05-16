@@ -242,6 +242,7 @@
 .en .policy > .inner > ul { max-width: 100%; margin: 8rem auto; }
 
 /* Golf Team */
+
 .golfMain.en .section:not(.footer) .golf_search { width: 37rem; }
 .golfMain.en .section:not(.footer) .golf_search input { font-size: 2rem; }
 .golfMain.en .section:not(.footer) .golf_search input::placeholder { font-size: 1.8rem; }
@@ -249,7 +250,8 @@
 .golfMain.en .section1 article h2 { font-size: 6rem; }
 .golfMain.en .section2 .splide .splide__list .splide__slide h4 { font-weight: 350; font-size: 2.6rem; }
 .golfMain.en .section4 { background: #ffffff; }
-.golfMain.en .section4 .golf_gallery .gallery_inner li h3 { font-size: 1.6rem; }
+.golfMain.en .section4 .title_box { margin: 10rem auto 0; }
+.golfMain.en .section4 .golf_gallery .gallery_inner li h3 { font-size: 1.6rem; height: 5.5rem; padding: 1.6rem 1rem 0; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; white-space: normal; }
 .golfMain.en .popup .pop_players .tab .tab_container { align-items: center; }
 .golfMain.en .popup .pop_players .tab .tab_container button img { margin-right: 1rem; }
 .golfMain.en .popup .pop_players .tab .tab_container button span { padding: 0; }
