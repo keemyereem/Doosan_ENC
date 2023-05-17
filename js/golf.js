@@ -304,8 +304,19 @@ let golfPlayers = {
             const txtPieceChild = $('.txtPiece span');
             txtPieceChild.addClass('slideUp');
             txtPieceChild.on('transitionend', function() {
-              const selTit = $(".swiper-slide-active h2").html().split('<br>');
               const selTitParent = $('.golfMain .section1 article');
+              let selTit = $(".swiper-slide-active h2").html().split('<br>');
+              
+              // 영문버전에서 번역문 길어짐으로 인한 개행추가 방지문
+              if ($('.en').length) {
+                if ($("#mobile").length) {
+                  selTit = $(".swiper-slide-active h2").html().split('<br class="br_m">');
+                } else {
+                  selTit = $(".swiper-slide-active h2").html().split('<br class="br_pc">');
+                }
+              }
+              
+              
               devideWord(selTit, selTitParent);
             })
           },
