@@ -2099,7 +2099,7 @@
 .golf .golfMain .section4 .golf_tab button:hover { color: #005eb8; }
 .golf .golfMain .section4 .golf_tab button:not(:last-of-type):after { content: ''; display: inline-block; width: .1rem; height: 1.3rem; background: #bfbfbf; right: -1.5rem; top: 0; bottom: 0; margin: auto; position: absolute; }
 .golf .golfMain .section4 .golf_gallery { max-width: 134rem; width: 100%; margin: 7.8rem auto 0; position: relative; }
-.golf .golfMain .section4 .golf_gallery .gallery_frame { position: relative; }
+.golf .golfMain .section4 .golf_gallery .gallery_frame { position: relative; height: 61.8rem;}
 .golf .golfMain .section4 .golf_gallery .gallery_frame > li { position: absolute; width: 100%; top: 0; opacity: 0; visibility: hidden; transition: all ease .2s; pointer-events: none; }
 .golf .golfMain .section4 .golf_gallery .gallery_frame > li.active { position: relative; opacity: 1; visibility: visible; pointer-events: auto }
 .golf .golfMain .section4 .golf_gallery .gallery_inner { display: flex; flex-wrap: wrap; }
