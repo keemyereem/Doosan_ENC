@@ -527,7 +527,7 @@ let golfPlayers = {
         "2015년 제8회 롯데마트 여자오픈",
         "박결 프로",
         [
-          ['2023', '<i>2023년 크리스 F&C 제45회 KLPGA 챔피언십 2위</i>'],
+          ['2023', '<i>제45회 크리스 F&C KLPGA 챔피언십 2위</i>'],
           ['2022', '<i>넥센∙세인트나인 마스터즈 2022 3위</i>'],
           ['2021', '<i>셀트리온 퀸즈 마스터즈 9위</i>'],
           ['2020', '<i>제14회 S-OIL 챔피언십 6위</i>'],
@@ -583,6 +583,7 @@ let golfPlayers = {
         "2018년 효성 챔피언십",
         "임희정 프로",
         [
+          ['2023', '<i>넥센·세인트나인 마스터즈 5위</i>'],
           ['2022', '<i><b>DB그룹 제36회 한국여자오픈 골프선수권대회 우승</b></i>'],
           [
             '2021', '<i>BMW Ladies Championship 2위</i> <br>' +
@@ -695,6 +696,7 @@ let golfPlayers = {
         "2018 Hyosung Championship",
         "Professional golfer, <br>Heejeong Lim",
         [
+          ['2023', '<i>5th place in the Nexen∙Saintnine Masters</i>'],
           ['2022', '<i><b>Winner in the DB Group 36th Korea Women’s Open Golf Championships</b></i>'],
           [
             '2021', '<i>2nd place in the BMW Ladies Championship</i> <br>' +
