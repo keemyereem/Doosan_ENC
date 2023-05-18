@@ -316,7 +316,6 @@ let golfPlayers = {
                 }
               }
               
-              
               devideWord(selTit, selTitParent);
             })
           },
@@ -359,6 +358,11 @@ let golfPlayers = {
           } else if (selTitSplit.length == 1) {
             selTitParent.children('h2').after('<h2>&nbsp;</h2>');
           }
+        }
+        
+        // 골프단 3번째 타이틀 크기 및 자간조정 추가 - 2023.05.18
+        if (golfBanner.realIndex === 2 && !$('#mobile').length) {
+          selTitParent.children('h2').css({'letter-spacing': '-.35rem', 'font-size' : '5.2rem', 'padding': '.525rem 0'})
         }
         checkWord();
       }
