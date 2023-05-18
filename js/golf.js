@@ -288,9 +288,9 @@ let golfPlayers = {
         effect: "fade",
         speed: 500,
         loop: true,
-        // autoplay: {
-        //   delay: 3000
-        // },
+        autoplay: {
+          delay: 3000
+        },
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev"
@@ -331,7 +331,7 @@ let golfPlayers = {
       // Restart autoplay on banner arrow click
       const bannerArrow = $('.section1 article > div');
       bannerArrow.children().on('click', function() {
-        // golfBanner.autoplay.start();
+        golfBanner.autoplay.start();
       });
       
       // Replace image URLs with mobile version for smaller screens
