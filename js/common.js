@@ -61,7 +61,7 @@ $(function () {
   // 다른페이지 링크 후 해당페이지에서 이벤트 발생시키기 (href 뒤에 ?text 표기)
   $(window).ready(() => {
     const page_url = document.location.href,
-      param = page_url.substring(page_url.indexOf("?") + 1).split("?");
+          param = page_url.substring(page_url.indexOf("?") + 1).split("?");
 
     // 메인페이지 직무소개 이동후 팝업열기
     if ($(".isotope").length) {
@@ -1982,7 +1982,7 @@ var recruitEvent = {
 
     // 팝업 컨트롤
     const img = $(".popup .img img"),
-      popupClose = $(".pop_close");
+          popupClose = $(".pop_close");
 
     // 팝업 이미지 초기화
     img.attr("src", "");
@@ -2058,9 +2058,8 @@ var recruitEvent = {
     } else {
       // 적응형 [PC]
 
+      let LayerPopup = $('.recruit .popup ul');
       // 영역 밖 이동 시 마우스 닫기 버튼 보이기
-      const LayerPopup = $(".recruit .popup ul");
-
       $(document).mousemove(function (e) {
         if (LayerPopup.has(e.target).length === 0) {
           popupClose.css({ transform: "scale(1)" });
@@ -2070,14 +2069,14 @@ var recruitEvent = {
       });
 
       // 영영 밖 이동 시 마우스 닫기 버튼  커서 따라다니기
-      const circle = document.querySelector(".pop_close");
+      let circle = document.querySelector(".pop_close");
 
       document.addEventListener("mousemove", (e) => {
         // mousemove이벤트를 이용해 움
         // 마우스의 좌표는 clientX와 clientY를 이용해 알수 있다. -> 브라우저 window의 좌표값 위치를 전달한다.
         // pageX, pageY와는 다름.
-        const mouseX = e.clientX;
-        const mouseY = e.clientY;
+        let mouseX = e.clientX;
+        let mouseY = e.clientY;
         circle.style.left = mouseX - 35 + "px";
         circle.style.top = mouseY - 35 + "px";
       });
@@ -2200,141 +2199,4 @@ var policyEvent = {
       $(".select_wrap .select02").addClass("active");
     });
   },
-};
-
-
-// 골프단 신규 - 2023.03.28
-var golfPlayers = {
-  init: function () {
-    this.settingResponsive();
-    this.createFullPageGolf();
-  },
-
-  settingResponsive: function() {
-    $(window).ready(()=> {
-      $('body').addClass('golf');
-    });
-
-    var playersSection = $('.section').not('.section1, .section2, .footer');
-    if ($('#mobile').length) {
-      playersSection.each(function(index) {
-        let golfImgUrl = playersSection.eq(index).find('img');
-        let mobileUrl = golfImgUrl.attr('src').replace('.png', '_mob.png');
-        golfImgUrl.attr('src', mobileUrl)
-      });
-    }
-
-    $(document).on("click", "#topButton", function () {
-      var goTop = location.href.split('#')
-      window.location = goTop[0] + '#firstPage';
-    });
-
-    $('.golf .header').mouseleave(function() {
-      if ($('.golf .header').hasClass('wht')) {
-        console.log('dqoiwdjkqowidkqpo')
-      } else {
-        console.log('qod')
-      }
-      $(".header").removeClass("wht");
-    })
-
-  },
-
-  createFullPageGolf: function() {
-    
-
-    $("#fullpage").fullpage({
-      anchors: [
-        "firstPage",
-        "secondPage",
-        "thirdPage",
-        "fourthPage",
-        "fifthPage",
-        "sixthPage",
-        "seventhPage",
-      ],
-      menu: "#rightnavi",
-      verticalCentered: false,
-      scrollOverflow: false,
-      css3: true,
-      scrollingSpeed: 800,
-
-      onLeave: function (index, nextIndex, direction) {
-        // 앵커별 추가기능 조정
-        if (nextIndex == 1) {
-          // 첫번째 페이지
-          $('.header').fadeIn(500);
-          $(".golf #topButton").fadeOut(500);
-
-        } else if (nextIndex == $(".section").length) {
-          // 마지막(푸터) 페이지
-          $('.header').fadeOut(500);
-          $(".golf #topButton").fadeOut(500);
-
-        } else {
-          // 그 외 나머지
-          $("#mobile").length ? $('.header').fadeOut(500) : $('.header').fadeIn(500);
-          $(".golf #topButton").fadeIn(500);
-        }
-
-        // footer: 위에 앵커와 함께 작성할 경우 푸터에 도달하고 뒤늦게 꺼지는 현상 -> 따로 제어
-        if (nextIndex == 1 || nextIndex == 2 || nextIndex == $(".section").length) {
-          $(".golf #rightnavi").hide();
-        } else {
-          $(".golf #rightnavi").fadeIn(500);
-        }
-
-        // 헤더스타일 화이트/ 노말 제어(1)
-        if (nextIndex !== 1) {
-          unsetHeaderWhite();
-        } else {
-          setHeaderWhite();
-        }
-        // 헤더스타일 화이트/ 노말 함수(2)
-        function setHeaderWhite() {
-          setTimeout(() => {
-            $(".header").addClass("wht");
-          }, 500);
-          $(".golf #sub .header .gnb > ul > li").hover(
-            function () {},
-            function () {
-              $(".header").addClass("wht");
-              $(".header").css({ background: "transparent" });
-            }
-          );  
-        }
-
-        function unsetHeaderWhite() {
-          setTimeout(() => {
-            $(".header").removeClass("wht");
-          }, 500);   
-          $(".golf #sub .header .gnb > ul > li").hover(
-            function () {
-              $(".header").css({ background: "#ffffff" });
-            },
-            function () {
-              $(".header").removeClass("wht");
-              $(".header").css({ background: "transparent" });
-              
-            }
-          );  
-        }
-
-      }, afterLoad: function (anchorLink, index) {
-        if (index == index) {
-          $('.section').eq(index - 1).addClass('ani')
-        }
-
-        if (index == $(".section").length) {
-          setTimeout(() => {
-            $(".footer .sec_tit > span").addClass("fin");
-          }, 200);
-        }
-      }
-    });
-    
-  },
-
-
-  
 };

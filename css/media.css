@@ -230,8 +230,6 @@
     #mobile #topButton::after { width: 1.8rem; height: 2.3rem; }
 
 
-
-
     /* =========================================================================== */
     /* ===============================  Main Page  =============================== */
     /* =========================================================================== */
@@ -245,7 +243,6 @@
     /* Section01 */
     #mobile #main #fullpage .section01 { height: calc(var(--vh, 1vh) * 100); overflow: hidden; transition: height ease .3s; }
     #mobile #main #fullpage .section01 .swiper .sec01_controller { left: 0; right: 0; bottom: 4rem; margin: auto; width: calc(100% - 7.4rem); height: 4rem; }
-    /* #mobile #main #fullpage .section01.ani .swiper .sec01_controller { opacity: 1; transition-delay: .6s; } */
     #mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-pagination-sec01 { width: calc(100% - 6rem); }
     #mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-pagination-sec01:after { width: calc(100% - 10rem); }
     #mobile #main #fullpage .section01 .swiper .sec01_controller .swiper-pagination-sec01 .swiper-pagination-bullet { width: .9rem; height: .9rem; padding: 2rem; }
@@ -275,7 +272,6 @@
     #mobile #main #fullpage .section02 .swiper-slide h2 { width: 100%; height: auto; transform: translate(50%,0); top:0; margin: 2rem 0 2rem 2rem; font-size: 4rem; transition: opacity; }
     #mobile #main #fullpage .section02/* .active */ .swiper-slide.swiper-slide-active h2,
     #mobile #main #fullpage .section02/* .active */ .swiper-slide.swiper-slide-duplicate-active h2 {opacity: 1; position: relative; left: 2rem; transform: translate(0,0);font-size: 4rem; transition: all ease-in-out .8s }
-
     #mobile #main #fullpage .section02 .moving_tab { width: 100%; height: 8.5rem; align-items: start; position: relative; top:0; left: 0; transform: translateY(0); overflow: auto; }
     #mobile #main #fullpage .section02 .moving_tab .swiper-pagination-sec02 { width: fit-content; margin-left: 1rem; }
     #mobile #main #fullpage .section02 .swiper-pagination-bullet { width: 18rem; margin-right: 3rem; flex-shrink: 0; top: 2rem; }
@@ -344,8 +340,6 @@
     #mobile #main #fullpage .section04 .card li:nth-child(3) .icon_white {  width: 5.2rem; }
     #mobile #main #fullpage .section04 .card li:nth-child(4) .icon,
     #mobile #main #fullpage .section04 .card li:nth-child(4) .icon_white {  width: 5.3rem; }
-    /* #mobile #main #fullpage .section04 .card li:nth-child(5) .icon,
-    #mobile #main #fullpage .section04 .card li:nth-child(5) .icon_white {  width: 6.3rem; } */
     #mobile #main #fullpage .section04 .card li p { position: initial; margin: 0 0 0 13.4rem; transform: translateY(0); text-align: left; font-size: 1.7rem; color: #fff; }
     #mobile #main #fullpage .section04 .card li:hover p { transform: translateY(0); }
     #mobile #main #fullpage .section04 .card li h3 { position: relative; transform: translateY(0); margin: 0 0 0 13.4rem; display: flex; align-items: flex-end; }
@@ -407,7 +401,6 @@
     #mobile #main #fullpage .section06 .right .contents > ul li .txt a::after { width: .65rem; height: 1.05rem; position: relative; background-size: .65rem 1.05rem; margin-left: 3rem; top: .15rem; transform: none; right: unset; transition: all ease .3s; }
     #mobile #main #fullpage .section06 .right .contents > ul li .txt a:hover::after { transform: none; animation: none; margin-left: 4rem; }
     #mobile #main #fullpage .section06 .right .contents > ul li .img { display: none; }
-
 
 
     /* =========================================================================== */
@@ -570,6 +563,7 @@
     #mobile .channel .cibi .section02 .logo_wrap .txt .name { font-size: 2.3rem; margin: 2.8rem 0 1.4rem; }
     #mobile .channel .cibi .section02 .logo_wrap .txt p { font-size: 1.4rem; line-height: 1.57; letter-spacing: -.07rem; margin-bottom: 2rem; }
 
+
     /* ================================  고객센터  =============================== */
 
     /* 고객문의 */
@@ -706,7 +700,6 @@
     #mobile .customer .cyber_report .section2 .btn_blk a { border-radius: 2.25rem; }
     
 
-
     /* ================================  기술개발  =============================== */
 
     /* 기술역량 */
@@ -738,15 +731,14 @@
     #mobile .technology .ipr .tb_box .tb_row.row_body .cell07 { display: block; padding-left: 0; }
     #mobile .technology .ipr.ipr02 .tb_box .tb_row { position: relative; }
     #mobile .technology .ipr.ipr02 .tb_box .tb_row .download { width: 29%; position: absolute; top: 1.5rem; left: calc(65% + 1rem); }
-
     #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell02,
     #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell03,
     #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell04,
     #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell05 { width: 100%; }
-
     #mobile .technology .ipr.ipr04 .tb_box .tb_row.row_body .cell03 { width: 42%; }
     #mobile .technology .ipr.ipr04 .tb_box .tb_row.row_body .cell04 { width: 57%; }
 }
+
 /* responsive */
 @media screen and (max-width:380px) {
     #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell02,
@@ -771,9 +763,6 @@
     #mobile .technology .ipr .tb_box .tb_row .class,
     #mobile .technology .ipr .tb_box .tb_row .num { width: 100%; }
 }
-
-/* 기술연구소 */
-
 
 
 /* ================================  사업영역  =============================== */
@@ -821,7 +810,6 @@
 #mobile .masterpiece .outline section .img { width: calc(100% + 2rem); margin-left: -1rem; }
 #mobile .masterpiece .outline section .img+span { font-size: 1.3rem; margin-top: 1rem; margin-left: -1rem; }
 #mobile .masterpiece .outline section .video { width: calc(100% + 2rem); margin-left: -1rem; }
-
 
 /* 해운대 */
 #mobile .mp01 .sub_visual { background-image: url(../images/business/masterpiece01_outline_visual.png); background-size: cover; }
@@ -899,7 +887,6 @@
 #mobile .mp03 .outline .section6 .left { margin-top: 4.5rem; }
 #mobile .mp03 .outline .section7 { margin: 4.5rem 0 5.5rem; }
 #mobile .mp03 .outline .section7 .right { margin-top: 4.5rem; padding-left: 0; }
-
 
 /* 마스터피스 - 인터뷰 - 공통 */
 #mobile .interview .sub_visual h1 { transform: translateY(calc(-50% + -2.3rem)); font-size: 4rem; line-height: 1.3; }
@@ -990,7 +977,6 @@
 #mobile .shinbundangline .contents .wrap dl:nth-of-type(10),
 #mobile .shinbundangline .contents .wrap dl:nth-of-type(11) { order: 2; }
 
-
 /* 사업소개(개요) */
 #mobile .civil_engineer .sub_visual {  background-image: url(../images/business/business_bg_m.png); background-size: cover; }
 #mobile .civil_engineer .tab_box { position: relative; padding: 0; }
@@ -1058,15 +1044,12 @@
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_mark li { width: 50%; margin-right: 0; }
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_mark li img { width: 3.75rem; height: 3.75rem; }
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_mark li .txt { margin: 1rem 0 0 2rem; }
-
-/* #mobile .card_popup .popup_inner .pop_cont .txt_box .card_mark li:nth-child(n+1):nth-child(-n+2) { margin-bottom: 2.5rem; } */
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_tb th { font-size: 1.25rem; }
 #mobile .card_popup .popup_inner .pop_cont .txt_box .card_tb td { font-size: 1.25rem;  line-height: 1.48; padding: 1rem 0 1rem 2rem; }
 #mobile .card_popup .popup_inner .pop_cont .inner_nav { width: calc(100% - 6rem); margin: 3rem auto 0; padding-bottom: 4rem; }
 #mobile .card_popup .popup_inner .pop_cont .inner_nav .arrow { font-size: 1.2rem; }
 #mobile .card_popup .popup_inner .pop_cont .inner_nav .arrow:after { width: .8rem; height: .8rem; }
 #mobile .card_popup .popup_inner .pop_cont .inner_nav .counter_slider { font-size: 1.4rem; }
-
 
 
 /* ================================  기술개발  =============================== */
@@ -1210,7 +1193,6 @@
 #mobile .technology .iot .inner:last-child .inner_wrap .card li img { width: 7rem; }
 #mobile .technology .iot .inner:last-child .inner_wrap .card li h5 { padding-top: 3.2rem; font-size: 1.5rem; }
 #mobile .technology .iot .inner:last-child .inner_wrap .card li p { padding-top: 1.5rem; font-size: 1.4rem; line-height: 1.5; letter-spacing: -.07rem; }
-
 
 
 /* ================================  회사소개  =============================== */
@@ -1404,11 +1386,6 @@
 #mobile .company .location ul li:last-child div em span { line-height: 1.8rem; width: 1.7rem; height: 1.7rem; margin-right: 1rem; font-size: 1.3rem; flex-shrink: 0; }
 
 
-
-
-
-
-
 /* ================================  사회책임경영  =============================== */
 
 /* 공통 */
@@ -1446,7 +1423,6 @@
 #mobile .sr .certList ul li dl dd:last-child a i { width: 1.5rem; height: 1.5rem; background-size: contain; right: 1rem; }
 #mobiel .sr .social_mob_img { display: block; }
 #mobile .sr .social_pc_img { display: none; }
-
 
 /* 프롤로그(사회책임경영 원칙) */
 #mobile .sr .prologue { box-shadow: .1rem .15rem 2.5rem 0 rgba(41, 41, 41, 0.2); margin-bottom: 10rem; margin-top: 3.5rem; }
@@ -1613,6 +1589,7 @@
 #mobile .sr .sc .section04 .box_wrap ul li:last-child .icon img { width: 4.1rem; }
 #mobile .sr .sc .section04 .box_wrap ul li .txt { font-size: 1.4rem; margin-top: 1.5rem; }
 
+
 /* ================================  인재채용  =============================== */
 
 /* 공통 */
@@ -1763,7 +1740,6 @@
 #mobile .graybox .policy > .inner .select_row::after { right: 1rem; }
 #mobile .graybox .policy > .inner .select_row select { padding: 0 1rem; }
 #mobile .graybox .policy > .inner .select_row label { font-size: 1.5rem; padding: 0 1rem; }
-
 #mobile .graybox .policy .box { margin: 2.7rem auto 10rem; padding: 3.5rem .9rem; width: calc(100% - 2rem); }
 #mobile .graybox .policy .box h3 { font-size: 1.7rem; margin-bottom: 2.5rem; }
 #mobile .graybox .policy .box ol > li+li { margin-top: 2.5rem; }
@@ -1792,6 +1768,7 @@
 #mobile .error p { font-size: 1.4rem; line-height: 1.57; }
 #mobile .error a { margin-top: 3rem; width: 17.4rem; height: 3.5rem; border-radius: 1.6rem; font-size: 1.3rem; line-height: 3.5rem; }
 
+
 /* ================================  Special Responsive  =============================== */
 @media screen and (max-width:316px) {
     #mobile .company .announce .tb_box .tb_row .date,
@@ -1817,7 +1794,6 @@
     #mobile .recruit .popup .img::after { width: 30rem; right: -32rem; }
     #mobile .recruit .job ul li { width: calc(100% / 3 - 4rem); }
 }
-
 
 
 /* =========================================================================== */
@@ -1865,44 +1841,230 @@
 
 /* ================================  두산건설 We've 골프단 - 2023.03.28 =============================== */
 
-#mobile .players { left: 0; transform: translate(0); top: auto; bottom: -25rem; }
-#mobile .golf .section article { padding: 0 2rem; }
-#mobile .golf .section1 article { transform: translate(0); top: 14vh; letter-spacing: -.1rem; }
-#mobile .golf .section1 article p { font-size: 2.1rem; padding-bottom: 1.5rem; }
-#mobile .golf .section1 article p:last-of-type { height: 3.2rem; padding-left: 4.5rem; padding-bottom: 0; margin-top: 4rem; background-size: 3.6rem 3.2rem; right: 0; font-size: 2.4rem; }
-#mobile .golf .section1 article p:last-of-type b:first-child { font-size: 3.6rem; line-height: .75; }
-#mobile .golf .section1 article p:last-of-type b:last-child { font-size: 3.5rem; }
-#mobile .golf .section1 article p:last-of-type::before { top: -2.5rem; animation: .8s wideMob ease-in-out; }
-#mobile .golf .section1 article h2 { font-size: 7.2rem; letter-spacing: -.2rem; filter: drop-shadow(.1rem .15rem .25rem rgba(47, 48, 53, .3)); line-height: .95; }
-#mobile .golf .section1 article h2:first-of-type::before { width: 5.8rem; height: 5.8rem; left: 5.3rem; background-size: cover; }
-#mobile .golf .section1 .scroll_down { left: 0; right: 0; margin: auto; bottom: 6.3rem; }
-#mobile .golf .section1 .scroll_down::after { right: 0; margin: auto; width: 1.5rem; height: 2.2rem; background-size: contain; }
-#mobile .golf .section1 .scroll_down span { display: none; }
-#mobile .golf .section1.ani .players { bottom: -35vh; }
-#mobile .golf .section1.ani article *:nth-child(2)::before { animation: 1s jumpMob 1.8s; animation-iteration-count: 3; }
-#mobile .golf .section1.ani article *:nth-child(4)::before { animation-delay: 1.6s; animation-fill-mode: forwards; }
-#mobile .golf .section2 article p { font-size: 2.5rem; letter-spacing: -.1rem; }
-#mobile .golf .section2 article h2 { font-size: 5.5rem; margin-top: 1.5rem; line-height: 1.1; }
-#mobile .golf .section2 article ul { padding-top: 3.5rem; font-size: 2rem; }
-#mobile .golf .section2 article ul li:nth-child(even) { width: .3rem; height: .3rem; margin: 0 .9rem; transform: translateY(0) rotate(15deg); }
-#mobile .golf .section:not(.footer) { flex-direction: column; }
-#mobile .golf .section:not(.section1, .section2, .footer) article { position: relative; transform: translateX(0); width: 100%; }
-#mobile .golf .section:not(.section1, .section2, .footer) article h2 { font-size: 6rem; margin-left: -1rem; letter-spacing: -.05rem; }
-#mobile .golf .section:not(.section1, .section2, .footer) article h2::before { width: 4.8rem; height: .4rem; margin-left: 1rem; }
-#mobile .golf .section:not(.section1, .section2, .footer) article p { font-size: 1.5rem; line-height: 1.53; letter-spacing: -.05rem; padding-top: 2.35rem; }
-#mobile .golf .section:not(.section1, .section2, .footer) article h3 { width: 11rem; height: 3rem; font-size: 1.6rem; margin-top: 3rem; }
-#mobile .golf .section:not(.section1, .section2, .footer) article h3 span { font-size: 1.85rem; padding-right: .2rem; }
-#mobile .golf .section:not(.section1, .section2, .footer) article:first-of-type { margin-top: 8.5vh; }
-#mobile .golf .section:not(.section1, .section2, .footer) article:last-child { justify-content: center; }
-#mobile .golf .section:not(.section1, .section2, .footer) article:last-child img { height: 90%; bottom: 0; left: -8vw; }
-#mobile .golf .section:not(.section1, .section2, .footer) article:last-child::after { width: 73vw; height: 73vw; transform: translateY(0); position: absolute; top: 9.5vh; }
-#mobile .golf .section5 article:last-child img { left: 0 !important; } /* 박결 프로 단독 좌우 조정 */
+/* 공통 */
 #mobile .golf #rightnavi { left: 2rem; top: unset; bottom: 0.75rem; transform: translateY(0); }
 #mobile .golf #rightnavi li { margin: 1.25rem 0; width: .6rem; height: .6rem; }
 #mobile .golf #rightnavi li a { width: .6rem; height: .6rem; }
 #mobile .golf #rightnavi li a span { font-size: 1.4rem; }
 #mobile .golf #rightnavi li.active { padding-bottom: 6rem; }
 #mobile .golf #rightnavi li.active a span { margin-top: 1.5rem; }
+
+/* 티저 */
+#mobile .golfTeaser .players { left: 0; transform: translate(0); top: auto; bottom: -25rem; }
+#mobile .golf .golfTeaser .section article { padding: 0 2rem; }
+#mobile .golf .golfTeaser .section1 article { transform: translate(0); top: 14vh; letter-spacing: -.1rem; }
+#mobile .golf .golfTeaser .section1 article p { font-size: 2.1rem; padding-bottom: 1.5rem; }
+#mobile .golf .golfTeaser .section1 article p:last-of-type { height: 3.2rem; padding-left: 4.5rem; padding-bottom: 0; margin-top: 4rem; background-size: 3.6rem 3.2rem; right: 0; font-size: 2.4rem; }
+#mobile .golf .golfTeaser .section1 article p:last-of-type b:first-child { font-size: 3.6rem; line-height: .75; }
+#mobile .golf .golfTeaser .section1 article p:last-of-type b:last-child { font-size: 3.5rem; }
+#mobile .golf .golfTeaser .section1 article p:last-of-type::before { top: -2.5rem; animation: .8s wideMob ease-in-out; }
+#mobile .golf .golfTeaser .section1 article h2 { font-size: 7.2rem; letter-spacing: -.2rem; filter: drop-shadow(.1rem .15rem .25rem rgba(47, 48, 53, .3)); line-height: .95; }
+#mobile .golf .golfTeaser .section1 article h2:first-of-type::before { width: 5.8rem; height: 5.8rem; left: 5.3rem; background-size: cover; }
+#mobile .golf .golfTeaser .section1 .scroll_down { left: 0; right: 0; margin: auto; bottom: 6.3rem; }
+#mobile .golf .golfTeaser .section1 .scroll_down::after { right: 0; margin: auto; width: 1.5rem; height: 2.2rem; background-size: contain; }
+#mobile .golf .golfTeaser .section1 .scroll_down span { display: none; }
+#mobile .golf .golfTeaser .section1.ani .players { bottom: -35vh; }
+#mobile .golf .golfTeaser .section1.ani article *:nth-child(2)::before { animation: 1s jumpMob 1.8s; animation-iteration-count: 3; }
+#mobile .golf .golfTeaser .section1.ani article *:nth-child(4)::before { animation-delay: 1.6s; animation-fill-mode: forwards; }
+#mobile .golf .golfTeaser .section2 article p { font-size: 2.5rem; letter-spacing: -.1rem; }
+#mobile .golf .golfTeaser .section2 article h2 { font-size: 5.5rem; margin-top: 1.5rem; line-height: 1.1; }
+#mobile .golf .golfTeaser .section2 article ul { padding-top: 3.5rem; font-size: 2rem; }
+#mobile .golf .golfTeaser .section2 article ul li:nth-child(even) { width: .3rem; height: .3rem; margin: 0 .9rem; transform: translateY(0) rotate(15deg); }
+#mobile .golf .golfTeaser .section:not(.footer) { flex-direction: column; }
+#mobile .golf .golfTeaser .section:not(.section1, .section2, .footer) article { position: relative; transform: translateX(0); width: 100%; }
+#mobile .golf .golfTeaser .section:not(.section1, .section2, .footer) article h2 { font-size: 6rem; margin-left: -1rem; letter-spacing: -.05rem; }
+#mobile .golf .golfTeaser .section:not(.section1, .section2, .footer) article h2::before { width: 4.8rem; height: .4rem; margin-left: 1rem; }
+#mobile .golf .golfTeaser .section:not(.section1, .section2, .footer) article p { font-size: 1.5rem; line-height: 1.53; letter-spacing: -.05rem; padding-top: 2.35rem; }
+#mobile .golf .golfTeaser .section:not(.section1, .section2, .footer) article h3 { width: 11rem; height: 3rem; font-size: 1.6rem; margin-top: 3rem; }
+#mobile .golf .golfTeaser .section:not(.section1, .section2, .footer) article h3 span { font-size: 1.85rem; padding-right: .2rem; }
+#mobile .golf .golfTeaser .section:not(.section1, .section2, .footer) article:first-of-type { margin-top: 8.5vh; }
+#mobile .golf .golfTeaser .section:not(.section1, .section2, .footer) article:last-child { justify-content: center; }
+#mobile .golf .golfTeaser .section:not(.section1, .section2, .footer) article:last-child img { height: 90%; bottom: 0; left: -8vw; }
+#mobile .golf .golfTeaser .section:not(.section1, .section2, .footer) article:last-child::after { width: 73vw; height: 73vw; transform: translateY(0); position: absolute; top: 9.5vh; }
+#mobile .golf .golfTeaser .section5 article:last-child img { left: 0 !important; } /* 박결 프로 단독 좌우 조정 */
+
+
+
+/* ================================  골프단 메인  =============================== */
+
+/* 공통 */
+#mobile .golf .golfMain .section:not(.footer) .title_box h1 { font-size: 2.7rem; font-weight: 450; }
+#mobile .golf .golfMain .section:not(.footer) .title_box p { font-size: 1.5rem; padding-top: 2rem; line-height: 1.53; }
+#mobile .golf .golfMain .section:not(.footer) .border_frame .bdt,
+#mobile .golf .golfMain .section:not(.footer) .border_frame .bdb { height: .2rem; }
+#mobile .golf .golfMain .section:not(.footer) .border_frame .bdl,
+#mobile .golf .golfMain .section:not(.footer) .border_frame .bdr { width: .2rem; }
+#mobile .golf .golfMain .section:not(.section4, .footer) .border_frame:hover { box-shadow: unset; }
+#mobile .golf .golfMain .section:not(.footer) .border_frame:hover .bdt,
+#mobile .golf .golfMain .section:not(.footer) .border_frame:hover .bdb { width: unset; transition-delay: unset; }
+#mobile .golf .golfMain .section:not(.footer) .border_frame:hover .bdr,
+#mobile .golf .golfMain .section:not(.footer) .border_frame:hover .bdl { height: unset; transition-delay: unset; }
+#mobile .golf .golfMain .section:not(.section4, .footer) .border_frame:active { box-shadow: 4px 7px 10.5px 0px rgba(4, 0, 0, 0.16); }
+#mobile .golf .golfMain .section:not(.footer) .border_frame:active .bdt { width: 100%; transition-delay: .1s; }
+#mobile .golf .golfMain .section:not(.footer) .border_frame:active .bdr { height: 100%; transition-delay: .2s; }
+#mobile .golf .golfMain .section:not(.footer) .border_frame:active .bdb { width: 100%; transition-delay: .3s; }
+#mobile .golf .golfMain .section:not(.footer) .border_frame:active .bdl { height: 100%; transition-delay: .4s; }
+#mobile .golf .golfMain .section:not(.footer) .golf_search { position: relative; top: 0; padding: 1rem 0 1rem 1.5rem; max-width: 22.5rem; margin: auto; }
+#mobile .golf .golfMain .section:not(.footer) .golf_search input { font-size: 1.7rem; padding-right: .5rem; width: calc(100% - 4.5rem); }
+#mobile .golf .golfMain .section:not(.footer) .golf_search button[type="submit"] img { width: 1.8rem; }
+#mobile .golf .golfMain .section:not(.footer) .golf_search button[type="reset"] { width: 1.5rem; height: 1.5rem; margin-right: .4rem; }
+#mobile .golf .golfMain .section:not(.footer) .golf_search button[type="reset"] img { width: 100%; }
+#mobile .golf .golfMain .section:not(.footer) ol { align-items: center; }
+#mobile .golf .golfMain .section:not(.footer) ol li:not(.golf_pagination) { width: fit-content; height: 100%; margin: 0 .5rem; padding: .4rem .7rem; }
+#mobile .golf .golfMain .section:not(.footer) ol .golf_pagination { margin: 0 .95rem; }
+#mobile .golf .golfMain .section:not(.footer) ol .golf_pagination li { width: 1.85rem; height: 1.85rem; margin: 0 .85rem; font-size: 1.3rem; }
+#mobile .golf .golfMain .section:not(.footer) ol .golf_pagination li.on { font-size: 1.4rem; }
+#mobile .golf .golfMain .section:not(.footer) ol .golf_pagination li button { position: absolute; }
+#mobile .golf .golfMain .section:not(.footer) ol .golf_pagination li:nth-child(n + 4) { display: none; }
+#mobile .golf .golfMain .section:not(.footer) .null { font-size: 1.3rem; padding: 12.5rem 0; }
+
+/* 배너 */
+#mobile .golf .golfMain .section1 .scroll_down { display: none; }
+#mobile .golf .golfMain .section1 article { bottom: auto; top: 18vh; padding: 0 2rem; }
+#mobile .golf .golfMain .section1 article h2 { font-size: 3.5rem; }
+#mobile .golf .golfMain .section1 article h2:last-of-type { font-weight: 200; }
+#mobile .golf .golfMain .section1 article h2 span.slideUp { top: -10rem; }
+#mobile .golf .golfMain .section1 article p { font-size: 2.4rem;  margin-bottom: 1rem; }
+#mobile .golf .golfMain .section1 article div * { font-size: 1.1rem; margin-top: 5rem; padding: 0 1.8rem; }
+#mobile .golf .golfMain .section1 article div *:after { background: url("../images/common/arrow_7x11_w.png") 50% 50% no-repeat; width: .65rem; height: 1.1rem; background-size: contain; }
+#mobile .golf .golfMain .section1 article div .swiper-button-next:before { content: ''; display: inline-block; width: .1rem; height: 1rem; left: -.1rem; }
+#mobile .golf .golfMain .section1 .swiper-slide img { height: 100%; object-fit: cover; }
+
+/* 선수소개 */
+#mobile .golf .golfMain .section2 .title_box { margin: 6.5rem auto 0; padding-left: 0; text-align: center; }
+#mobile .golf .golfMain .section2 .seciton2_cursor { width: 7.5rem; height: 7.5rem; cursor:none; pointer-events: auto; position: absolute; top: auto; bottom: 6.8rem; right: 0; left: 0; margin: auto; transform: scale(0) }
+#mobile .golf .golfMain .section2 .seciton2_cursor span { font-size: 1.2rem; margin-bottom: .5rem; line-height: 1; }
+#mobile .golf .golfMain .section2 .seciton2_cursor img { width: 1.1rem; height: 1.1rem; }
+#mobile .golf .golfMain .section2 .controller { position:absolute; top: -9rem; right: 1rem; z-index: 2; height: fit-content; width: 13.65rem; }
+#mobile .golf .golfMain .section2 .controller .splide__arrows button { padding: 4rem 1rem; }
+#mobile .golf .golfMain .section2 .controller .splide__arrows button:hover { opacity: 1; }
+#mobile .golf .golfMain .section2 .controller .splide__arrows button:active { opacity: .7; }
+#mobile .golf .golfMain .section2 .controller .splide__arrows button.splide__arrow--prev { padding-left: 4rem; }
+#mobile .golf .golfMain .section2 .controller .splide__arrows button.splide__arrow--next { padding-right: 4rem; }
+#mobile .golf .golfMain .section2 .controller .splide__arrows button.splide__arrow--prev:after { border-width: 6px 6px 6px 0; margin-right: 1rem; }
+#mobile .golf .golfMain .section2 .controller .splide__arrows button.splide__arrow--next:after { border-width: 6px 0 6px 6px; margin-left: 1rem; }
+#mobile .golf .golfMain .section2 .splide { margin: 11.1rem auto 6.5rem;  }
+#mobile .golf .golfMain .section2 .splide .splide__list { max-height: none; min-height: auto; height: 113vw; }
+#mobile .golf .golfMain .section2 .splide .splide__list .splide__slide { min-height: auto; height: calc(113vw - 4rem); width: calc(100% - 8rem); margin-right: 4rem; }
+#mobile .golf .golfMain .section2 .splide .splide__list .splide__slide:after { content:''; height: 21.5%; }
+#mobile .golf .golfMain .section2 .splide .splide__list .splide__slide .mask_circle:after { background: url("../images/golf/sec02_hover_bg_mob.png") 50% 50% no-repeat; background-size: cover; }
+#mobile .golf .golfMain .section2 .splide .splide__list .splide__slide .mask_circle h2 { font-size: 3.5rem; top: 11%; }
+#mobile .golf .golfMain .section2 .splide .splide__list .splide__slide h4 { bottom: 3.5%; font-size: 2rem; }
+#mobile .golf .golfMain .section2 .splide .splide__list .splide__slide h4 span { font-size: 1.4rem; padding-left: 6%; }
+#mobile .golf .golfMain .section2 .splide .splide__list .splide__slide h4 span:before { height: 1.2rem; right: 2.5vw; }
+#mobile .golf .golfMain .section2 .splide .splide__slide.is-active { box-shadow: 6.5px 5.5px 12px 0px rgba(4, 0, 0, 0.2); }
+#mobile .golf .golfMain .section2 .splide .splide__slide.is-active .openPopup { pointer-events: none; }
+#mobile .golf .golfMain .section2 .splide .splide__slide.is-active .openPopup .seciton2_cursor { transform: scale(1); }
+#mobile .golf .golfMain .section2 .splide .splide__slide.is-active .openPopup .seciton2_cursor:active { transform: scale(.8); }
+#mobile .golf .golfMain .section2 .splide .splide__slide.is-active { height: 100%; }
+#mobile .golf .golfMain .section2 .splide .splide__slide.is-active:after { transition-delay: .1s; }
+
+/* 골프단 소식 */
+#mobile .golf .golfMain .section3 .title_box { margin: 6.5rem auto 0; padding-left: 0; text-align: center; }
+#mobile .golf .golfMain .section3 .golf_news { margin: 2rem 2rem 0; max-width: calc(100% - 4rem); }
+#mobile .golf .golfMain .section3 .golf_news ul { margin-top: 3rem; }
+#mobile .golf .golfMain .section3 .golf_news ul li { width: 100%; height: fit-content; margin-bottom: 3rem; }
+#mobile .golf .golfMain .section3 .golf_news ul li:nth-child(3n - 1) { margin: 0; margin-bottom: 3rem; }
+#mobile .golf .golfMain .section3 .golf_news ul li img { height: calc(100% - 10rem); }
+#mobile .golf .golfMain .section3 .golf_news ul li a:hover img { transform: unset; }
+#mobile .golf .golfMain .section3 .golf_news ul li a:active img { transform: scale(1.1); }
+#mobile .golf .golfMain .section3 .golf_news ul li .txt_box { height: 10rem; padding: 1.5rem 2rem; }
+#mobile .golf .golfMain .section3 .golf_news ul li .txt_box p { font-size: 1.5rem; }
+#mobile .golf .golfMain .section3 .golf_news ul li .txt_box span { font-size: 1.2rem; }
+#mobile .golf .golfMain .section3 .golf_pagination_wrap {margin-top: 0; margin-bottom: 6.5rem; }
+
+/* 골프단 갤러리 */
+#mobile .golf .golfMain .section4 { padding-bottom: 11rem; }
+#mobile .golf .golfMain .section4 .border_frame:hover .img { box-shadow: none; }
+#mobile .golf .golfMain .section4 .border_frame:active .img { box-shadow: 4px 7px 10.5px 0px rgba(4, 0, 0, 0.16); }
+#mobile .golf .golfMain .section4 .title_box { margin: 6.5rem auto 0; padding-left: 0; text-align: center; }
+#mobile .golf .golfMain .section4 .golf_search { order: 1; }
+#mobile .golf .golfMain .section4 .golf_pagination_wrap { order: 3; }
+#mobile .golf .golfMain .section4 .golf_tab { position: relative; top: 0; font-size: 1.4rem; overflow: auto; order: 0; padding: 1rem 0; margin-bottom: 1.9rem; }
+#mobile .golf .golfMain .section4 .golf_tab::-webkit-scrollbar {width: auto; height: .3rem; background: #f5f5f5; }
+#mobile .golf .golfMain .section4 .golf_tab::-webkit-scrollbar-thumb {background: #e1e1e1; border-radius: 0; }
+#mobile .golf .golfMain .section4 .golf_tab button { margin-right: 2.5rem; white-space: nowrap; }
+#mobile .golf .golfMain .section4 .golf_tab button:last-of-type { margin-right: 0; }
+#mobile .golf .golfMain .section4 .golf_tab button:active { color: #005eb8; }
+#mobile .golf .golfMain .section4 .golf_tab button:not(:last-of-type):after { height: 1.15rem; right: -1.25rem; }
+#mobile .golf .golfMain .section4 .golf_gallery { margin: 1.5rem 2rem 0; display: flex; flex-direction: column; width: auto; }
+#mobile .golf .golfMain .section4 .golf_gallery .gallery_frame { order: 2; margin-top: 3rem; height: auto; }
+#mobile .golf .golfMain .section4 .golf_gallery .gallery_inner { flex-direction: column; }
+#mobile .golf .golfMain .section4 .golf_gallery .gallery_inner li { width: 100%; margin-bottom: 1.7rem; height: auto; line-height: unset; }
+#mobile .golf .golfMain .section4 .golf_gallery .gallery_inner li a .img { height: 50.4vw; }
+#mobile .golf .golfMain .section4 .golf_gallery .gallery_inner li a .img .btn_play { width: 5rem; height: 5rem; }
+#mobile .golf .golfMain .section4 .golf_gallery .gallery_inner li h3 { width: 100%; padding: 1.3rem 1rem; font-size: 1.4rem; }
+#mobile .golf .golfMain .section4 .golf_gallery .gallery_inner li:nth-child(3n - 1) { margin: 0 0 1.7rem; }
+
+
+/* 팝업 */
+#mobile .golf .golfMain .popup { padding: 0 2rem; }
+#mobile .golf .golfMain .popup::-webkit-scrollbar {width: .3rem; background: transparent; }
+#mobile .golf .golfMain .popup::-webkit-scrollbar-thumb {background: rgba(255, 255, 255, .3); }
+#mobile .golf .golfMain .popup .pop_close { position: absolute; top: 9.5rem; left: 50%; width: 5.25rem; height: 5.25rem; transform: scale(1) translateX(-50%); }
+#mobile .golf .golfMain .popup .pop_close:active { transform: rotate(90deg) translate(0, 50%); }
+#mobile .golf .golfMain .popup .pop_players { width: 100%; height: fit-content; margin: 17.8rem auto 10rem; flex-direction: column; letter-spacing: -.1rem; }
+#mobile .golf .golfMain .popup .pop_players .tab { width: 100%; }
+#mobile .golf .golfMain .popup .pop_players .tab .img { height: fit-content; }
+#mobile .golf .golfMain .popup .pop_players .tab .video { height: calc(100% - 4rem); }
+#mobile .golf .golfMain .popup .pop_players .tab .video #btn-play { width: 6rem; height: 6rem; }
+#mobile .golf .golfMain .popup .pop_players .tab .video #btn-play:active { width: 5rem; height: 5rem; }
+#mobile .golf .golfMain .popup .pop_players .tab .tab_container { height: 4rem; }
+#mobile .golf .golfMain .popup .pop_players .tab .tab_container::before { height: 1.3rem; }
+#mobile .golf .golfMain .popup .pop_players .tab .tab_container button { font-size: 1.2rem; }
+#mobile .golf .golfMain .popup .pop_players .tab .tab_container button img { max-width: 1.75rem; }
+#mobile .golf .golfMain .popup .pop_players .tab .tab_container button:last-of-type img { max-width: 1.65rem; }
+#mobile .golf .golfMain .popup .pop_players .tab .tab_container button span { font-weight: 200; padding: 0 .2rem 0 .75rem; }
+#mobile .golf .golfMain .popup .pop_players .desc { width: 100%; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner { height: calc(100% - 7.6rem); padding: 3.5rem 2rem 0; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:first-child h1 { font-size: 1.4rem;  }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:first-child h2 { font-size: 2.8rem; padding-bottom: 1.5rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:first-child h2 span { font-size: 1.5rem; padding-left: 1.35rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:first-child p { font-size: 1.6rem; line-height: 1.4; height: 9rem; margin: 2rem 0; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:nth-child(2) { padding: 1.4rem 1.9rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:nth-child(2) p { font-size: 1.3rem; padding: .4rem 0; align-items: flex-start; line-height: 1.4 }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:nth-child(2) p b { width: 50%; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:nth-child(2) p b::before { width: .4rem; height: .4rem; margin-right: 1rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:nth-child(2) p span { width: 50%; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:last-child { margin-top: 2.5rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:last-child h3 span { font-size: 1.3rem; padding: .65rem 1.05rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:last-child .history { height: 11.3rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:last-child .history p { font-size: 1.3rem; line-height: 1.4; padding-left: 6.25rem; padding-right: .5rem; padding-bottom: .2rem; letter-spacing: -.05rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:last-child .history p > i { display: inline-block; margin-bottom: .8rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:last-child .history p span { padding-left: 1.3rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_inner li:last-child .history p span::before { width: .4rem; height: .4rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_pagination_wrap { height: 7.6rem; justify-content: space-between; padding: 0 2rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_pagination_wrap li a { font-size: 1.2rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_pagination_wrap .desc_pagination.prev { background-size: .65rem 1.05rem; background-position: 0% 40%; padding-left: 1.7rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_pagination_wrap .desc_pagination.next { background-size: .65rem 1.05rem; background-position: 100% 40%; padding-right: 1.7rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_pagination_wrap .desc_number { padding: 0; font-size: 1.4rem; }
+#mobile .golf .golfMain .popup .pop_players .desc .desc_pagination_wrap .desc_number span { margin-right: .3rem; }
+#mobile .golf .golfMain .popup .pop_news { width: 100%; margin: 17.8rem auto 4.6rem; letter-spacing: -.15rem; }
+#mobile .golf .golfMain .popup .pop_news .title { padding: 4.65rem 2rem 0; }
+#mobile .golf .golfMain .popup .pop_news .title h2 { font-size: 2.5rem; line-height: 1.1; }
+#mobile .golf .golfMain .popup .pop_news .title span { padding: 2.75rem 0 2.6rem; font-size: 1.3rem; }
+#mobile .golf .golfMain .popup .pop_news .editor { padding: 3.1rem 2rem 6rem; font-size: 1.4rem; line-height: 1.7; }
+#mobile .golf .golfMain .popup .pop_news .pagination { padding: 0 2rem 3.5rem; }
+#mobile .golf .golfMain .popup .pop_news .pagination div button { padding: 1.75rem 0; font-size: 1.3rem; width: 100%; display: flex; }
+#mobile .golf .golfMain .popup .pop_news .pagination div button span { padding-left: 4rem; font-size: 1.25rem; text-align: left; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+#mobile .golf .golfMain .popup .pop_news .pagination div button:active span { color: #005eb8; }
+#mobile .golf .golfMain .popup .pop_news .pagination div button:hover span { color: #000000; }
+#mobile .golf .golfMain .popup .pop_news .editor .editor_test_title { font-size: 1.7rem !important; line-height: 1.4; }
+#mobile .golf .golfMain .popup .pop_news .editor .editor_test_span { padding-top: 2rem; font-size: 1.2rem; margin-top: 0; }
+#mobile .golf .golfMain .popup .pop_gallery { min-width: 100%; width: 100%; padding: 0 0 10rem; margin-bottom: 20rem; height: fit-content; position: relative; top: 17.5rem; overflow: visible; justify-content: space-between; flex-wrap: wrap; }
+#mobile .golf .golfMain .popup .pop_gallery .img { max-width: 100%; max-height: fit-content; min-width: 100%; width: 100%; align-items: center; }
+#mobile .golf .golfMain .popup .pop_gallery .img iframe { max-width: 100%; background: #000; }
+#mobile .golf .golfMain .popup .pop_gallery .img h2 { font-size: 1.5rem; padding: 1.5rem 1rem 0; }
+#mobile .golf .golfMain .popup .pop_gallery > div:not(.img) { font-size: 1.2rem; border-radius: 1.75rem; width: fit-content; height: 3.5rem; margin-top: 3rem; position: relative; }
+#mobile .golf .golfMain .popup .pop_gallery > div:not(.img, .disabled):hover { transform: scale(1); }
+#mobile .golf .golfMain .popup .pop_gallery > div:not(.img, .disabled):active { transform: scale(1.1); }
+#mobile .golf .golfMain .popup .pop_gallery > div button { padding: 0 2rem; }
+#mobile .golf .golfMain .popup .pop_gallery > div button img { width: .65rem; }
+#mobile .golf .golfMain .popup .pop_gallery > div:first-of-type { left: 2rem; order: 1; }
+#mobile .golf .golfMain .popup .pop_gallery > div:first-of-type button img { margin-right: 1.25rem; }
+#mobile .golf .golfMain .popup .pop_gallery > div:last-of-type { right: 2rem; order: 1 }
+#mobile .golf .golfMain .popup .pop_gallery > div:last-of-type button img { margin-left: 1.25rem;  }
+#mobile .golf .golfMain .popup .pop_gallery .bg { top: 2rem; height: calc(100% - 8rem); }
 
 @keyframes jumpMob{
     50% { margin-top: -12rem; -webkit-animation-timing-function: ease-in; transform: rotate(90deg); }
