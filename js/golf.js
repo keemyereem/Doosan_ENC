@@ -360,8 +360,8 @@ let golfPlayers = {
           }
         }
         
-        // 골프단 3번째 타이틀 크기 및 자간조정 추가 - 2023.05.18
-        if (golfBanner.realIndex === 2 && !$('#mobile').length) {
+        // 골프단 3번째 타이틀 크기 및 자간조정 추가 - 2023.05.18 (3번째 -> 2번째 변경 2023.05.22)
+        if (golfBanner.realIndex === 1 && !$('#mobile').length) {
           selTitParent.children('h2').css({'letter-spacing': '-.35rem', 'font-size' : '5.2rem', 'padding': '.525rem 0'})
         }
         checkWord();
