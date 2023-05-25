@@ -360,10 +360,17 @@ let golfPlayers = {
           }
         }
         
-        // 골프단 3번째 타이틀 크기 및 자간조정 추가 - 2023.05.18 (3번째 -> 2번째 변경 2023.05.22)
-        if (golfBanner.realIndex === 1 && !$('#mobile').length) {
-          selTitParent.children('h2').css({'letter-spacing': '-.35rem', 'font-size' : '5.2rem', 'padding': '.525rem 0'})
+        // 메인배너 슬라이드 개별 제어 공간 ----------------------------------------------------------------------
+        
+        if (golfBanner.realIndex === 1 && !$('#mobile').length) { // 골프단 3번째 타이틀 크기 및 자간조정 추가 - 2023.05.18 (3번째 -> 2번째 변경 2023.05.22)
+          selTitParent.children('h2').css({'letter-spacing': '-.35rem', 'font-size' : '5.2rem', 'padding': '.525rem 0'});
+          
+        } else if (golfBanner.realIndex === 2 && $('.golfMain.en').length && !$('#mobile').length) { // 골프단 영문버전 3번째 타이틀 크기 및 자간조정 추가 2023.05.25
+          selTitParent.children('h2').css({'letter-spacing': '-.35rem'});
         }
+        
+        // ---------------------------------------------------------------------- 메인배너 슬라이드 개별 제어 공간
+        
         checkWord();
       }
       
@@ -421,6 +428,7 @@ let golfPlayers = {
       $section2Cursor = $('.seciton2_cursor'),
       popBtn = $('.openPopup'),
       popClose = $('.pop_close');
+      
     
     const { Autoplay } = splide.Components;
     
@@ -457,6 +465,27 @@ let golfPlayers = {
       Autoplay.play();
     })
     
+    
+    // ********************************************* 문제 발생 시, 해당코드 삭제 2023.05.25
+    
+    // Arrow 버튼 클릭 하면 오토플레이 재개 2023.05.25
+    let toggleButton = document.querySelectorAll('.sec2_ap' );
+    [].forEach.call(toggleButton,function(toggleButton){
+      toggleButton.addEventListener("click", click, false);
+    });
+    
+    function click(e){
+      //if ( Autoplay.isPaused() ) {
+        Autoplay.play();
+        console.log('dd')
+      //} else {
+        //Autoplay.pause();
+      //}
+    };
+    
+    // 문제 발생 시, 해당코드 삭제 2023.05.25 *********************************************
+    
+
     // ********* 모바일 환경
     if ($('#mobile').length) {
       $section2Cursor.remove();
@@ -470,6 +499,8 @@ let golfPlayers = {
         let mobileUrl = golfImgUrl.attr('src').replace(/\.(png|jpg|jpeg|gif)/i, '_mob.$1');
         golfImgUrl.attr('src', mobileUrl);
       });
+      
+      
     }
   
   },

@@ -1946,6 +1946,7 @@
 #mobile .golf .golfMain .section2 .splide .splide__list { max-height: none; min-height: auto; height: 113vw; }
 #mobile .golf .golfMain .section2 .splide .splide__list .splide__slide { min-height: auto; height: calc(113vw - 4rem); width: calc(100% - 8rem); margin-right: 4rem; }
 #mobile .golf .golfMain .section2 .splide .splide__list .splide__slide:after { content:''; height: 21.5%; }
+#mobile .golf .golfMain .section2 .splide .splide__list .splide__slide .mask_circle { transition: none; }
 #mobile .golf .golfMain .section2 .splide .splide__list .splide__slide .mask_circle:after { background: url("../images/golf/sec02_hover_bg_mob.png") 50% 50% no-repeat; background-size: cover; }
 #mobile .golf .golfMain .section2 .splide .splide__list .splide__slide .mask_circle h2 { font-size: 3.5rem; top: 11%; }
 #mobile .golf .golfMain .section2 .splide .splide__list .splide__slide h4 { bottom: 3.5%; font-size: 2rem; }
