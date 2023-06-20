@@ -253,7 +253,7 @@
                             <div class="ipt_cell">
                                 <div class="area_row">
                                     <textarea placeholder="내용을 입력해 주세요."></textarea>
-                                  </div>
+                                </div>
                             </div>
                         </div> 
                         <div class="row">
@@ -266,10 +266,20 @@
                                         <label for="upload_file">찾아보기</label>
                                     </form>
                                 </div> -->
-                                <div class="file_row">
+
+                                <!-- <div class="file_row">
                                     <input class="upload_name" value="선택된 파일 없음" readonly>
-                                    <label for="upload_file">파일 선택</label>
+                                    <button type="button">파일 선택</button>
                                     <input type="file" id="upload_file" name="upload_file">
+                                </div> -->
+                                <div class="file_row">
+									<div class="fileWrap" id="attachFileId" name="_divFile">
+                                        <input type="hidden" name="attachFileIdFileCode" id="attachFileIdFileCode" value="F001004">
+                                        <input type="hidden" name="attachFileIdfileId" id="attachFileIdfileId" value="">
+                                        <input type="hidden" name="attachFileIdInfo" id="attachFileIdInfo" mxmmuploadsize="10" uploadextsnstr="gif,jpg,jpeg,png,doc,docx,pdf,ppt,pptx,hwp,zip" maxfilecount="1" minfilecount="0">
+                                        <input type="hidden" name="attachFileIdisViweImage" id="attachFileIdisViweImage" value="false">
+                                    </div>
+                                    <button type="button" onclick="file.addFile('attachFileId');">파일 선택</button>
                                 </div>
                                 <span class="info">
                                     ※ jpg, png, gif 등 이미지파일 또는 hwp, docx, xlsx, pdf, pptx 등의 문서 형식만 지원<br>
@@ -285,7 +295,7 @@
                                     <script src='https://www.google.com/recaptcha/api.js'></script>
                                     <div class="g-recaptcha" data-sitekey="6LczXq0iAAAAAJ7T-aFXoZ8HTWoXWmTLGy0EV0Ge"></div>
                                 </div>
-                                 
+                                
                             </div>
 
                             <script>

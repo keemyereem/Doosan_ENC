@@ -91,11 +91,16 @@ body { overflow: overlay; }
 /* file */
 .file_row {display: inline-block;vertical-align: middle;width: 100%;display: flex;align-items: center;justify-content: space-between;}
 .file_row input[type="file"] {position: absolute;width: 0;height: 0;padding: 0;overflow: hidden;border: 0;}
-.file_row label {display: block;float: left;width: 14.8rem;height: 4.6rem;line-height: 4.6rem;font-size: 1.6rem;color: #000;text-align: center;cursor: pointer;border: .1rem solid #000;border-radius: 2.3rem;}
+.file_row label,
+.file_row button {display: block;float: left;width: 14.8rem;height: 4.6rem;line-height: 4.6rem;font-size: 1.6rem;color: #000;text-align: center;cursor: pointer;border: .1rem solid #000;border-radius: 2.3rem;}
 .file_row .upload_name {display: block;float: left;height: 4.6rem;font-size: 1.6rem;color: #b2b2b2; border-bottom: .1rem solid #e8e8e8;border-left: 0;border-right: 0;border-top: 0;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.file_row .fileWrap,
 .file_row .file-list {display: flex; align-items: center; justify-content: flex-start; flex-wrap: wrap; width: calc(100% - 21rem); height: 6rem; padding: 0 2rem; border-bottom: 1px solid #e8e8e8;border-left: 0;border-right: 0;border-top: 0;}
+.fileWrap .filebox,
 .file-list .filebox {display: inline-flex; align-items: center; margin-right: 1rem;}
+.fileWrap .filebox p,
 .file-list .filebox p {font-size: 1.4rem!important; display: inline-block;margin-bottom: 0!important;}
+.fileWrap .filebox .delete,
 .file-list .filebox .delete {display: inline-block;width: 2rem;height: 2rem;background: url(../images/common/btn_del.png) no-repeat;background-size: contain;margin-left: 1rem;font-size: 0;}
 
 /* button */
