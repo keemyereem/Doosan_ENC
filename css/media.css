@@ -68,13 +68,18 @@
     #mobile .checkbox_row input[type="checkbox"]:checked + label:before { background-size: 1rem .75rem; }
 
     /* file */
-    #mobile .file_row label { width: 11.1rem; height: 3.5rem; line-height: 3.5rem; font-size: 1.3rem; font-weight: 150; border-radius: 1.7rem; }
+    #mobile .file_row label,
+    #mobile .file_row button { width: 11.1rem; height: 3.5rem; line-height: 3.5rem; font-size: 1.3rem; font-weight: 150; border-radius: 1.7rem; }
     #mobile .file_row .upload_name { height: 3.5rem; font-size: 1.3rem; padding: 0 2rem; }
 	#mobile .file_row form { align-items: flex-end; }
-	#mobile .file_row .file-list { width: calc(100% - 11rem); height: auto; min-height: 3.5rem; padding: 0 1rem; flex-direction: column; align-items: flex-start; justify-content: center; }
-	#mobile .file-list .filebox { display: flex; max-width: 100%; }
-	#mobile .file-list .filebox p { max-width: 100%; font-size: 1.3rem!important; line-height: 1.8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-	#mobile .file-list .filebox .delete { flex-shrink: 0; }
+	#mobile .file_row .file-list,
+	#mobile .file_row .fileWrap { width: calc(100% - 11rem); height: auto; min-height: 3.5rem; padding: 0 1rem; flex-direction: column; align-items: flex-start; justify-content: center; }
+	#mobile .file-list .filebox,
+	#mobile .fileWrap .filebox { display: flex; max-width: 100%; }
+	#mobile .file-list .filebox p,
+	#mobile .fileWrap .filebox p { max-width: 100%; font-size: 1.3rem!important; line-height: 1.8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+	#mobile .file-list .filebox .delete,
+	#mobile .fileWrap .filebox .delete { flex-shrink: 0; }
 
     /* device checker */
     #mobile { width: 100%; }
