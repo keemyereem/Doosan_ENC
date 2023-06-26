@@ -1892,6 +1892,7 @@ var customerEvent = {
       type.change(function () {
         var select_name = $(this).children("option:selected").text();
         $(this).siblings("label").text(select_name);
+        $(this).children('option:selected').attr('selected','selected');
 
         if (select_name === "직접입력" || select_name === "Direct input") {
           $("#selboxDirect").show();
@@ -1902,7 +1903,7 @@ var customerEvent = {
           }else {
             $(".customer .row .ipt_cell.email_cell > div:nth-of-type(3)").css('margin-left','1rem');
           }
-        }else if(select_name === "선택해주세요" || select_name === "Select"){
+        }else if(select_name === "선택해 주세요" || select_name === "Select"){
           $("#selboxDirect").show();
           $("#email_address").attr('disabled',true);
           $("#email_address").val("");
