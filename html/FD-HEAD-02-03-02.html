@@ -217,17 +217,18 @@
                             <div class="tit_cell">이메일<span class="es">*</span></div>
                             <div class="ipt_cell email_cell">
                                 <div class="input_row">
-                                    <input type="text" id="email_front" placeholder="메일을 입력해 주세요." />
+                                    <input type="text" id="email_front"/>
                                 </div>
                                 <span>@</span>
-                                <div class="input_row">
-                                    <input type="text" id="email_address" />
+                                <div class="input_row" id="selboxDirect">
+                                    <input type="text" id="email_address" disabled />
                                 </div>
                                 <div class="select_row">
-                                    <label for="email_self">naver.com</label>
+                                    <label for="email_self">선택해주세요</label>
                                     <select id="email_self" class="selectBox">
+                                        <option value="">선택해주세요</option>
                                         <option value="">직접입력</option>
-                                        <option selected value="naver.com">naver.com</option>
+                                        <option value="naver.com">naver.com</option>
                                         <option value="daum.net">daum.net</option>
                                         <option value="hanmail.net">hanmail.net</option>
                                         <option value="nate.com">nate.com</option>

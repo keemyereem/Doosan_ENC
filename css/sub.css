@@ -523,10 +523,10 @@
 .customer .customer_inquiry .section2 .row+.row { margin-top: 2rem; }
 .customer .customer_inquiry .section2 .row .tit_cell { font-size: 1.8rem; color: #222; width: 13rem; flex-shrink: 0; }
 .customer .customer_inquiry .section2 .row .ipt_cell { width: 100%; }
-.customer .customer_inquiry .section2 .row.row_email { display: flex; align-items: center; width: 100rem; }
-.customer .customer_inquiry .section2 .row.row_email .ipt_cell span { font-size: 1.6rem; margin: 0 .7rem; }
-.customer .customer_inquiry .section2 .row.row_email .input_row { width: 26rem; }
-.customer .customer_inquiry .section2 .row.row_email .select_row { width: 26rem; margin-left: 1rem; }
+.customer .customer_inquiry .section2 .row .ipt_cell.email_cell { display: flex; align-items: center; }
+.customer .customer_inquiry .section2 .row .ipt_cell.email_cell label { color: #b2b2b2; }
+.customer .customer_inquiry .section2 .row .ipt_cell.email_cell span { font-family: 'Montserrat'; font-size: 1.6rem; color: #222; margin: 0 .7rem; }
+.customer .customer_inquiry .section2 .row .ipt_cell.email_cell .select_row { margin-left: 2rem; }
 .customer .customer_inquiry .section2 .file_row .upload_name { width: calc(100% - 18.2rem); }
 .customer .customer_inquiry .section2 .file_row+.info { font-size: 1.6rem; color: #777; margin-top: 1rem; margin-bottom: 2rem; display: block; }
 .customer .customer_inquiry .section2 .btn_box { margin-top: 12rem; }
@@ -629,11 +629,9 @@
 .customer .cyber_report .section2 .row .ipt_cell.name_cell .info { display: inline-block; font-size: 1.4rem; color: #f00; letter-spacing: -.014rem; margin-top: 1.5rem; }
 .customer .cyber_report .section2 .row .ipt_cell.email_cell { display: flex; align-items: center; }
 .customer .cyber_report .section2 .row .ipt_cell.email_cell label { color: #b2b2b2; }
-.customer .cyber_report .section2 .row .ipt_cell.email_cell > div:first-of-type { width: 320px; }
-.customer .cyber_report .section2 .row .ipt_cell.email_cell > div:nth-of-type(2) { width: 330px; margin-right: 20px; display: none; }
-.customer .cyber_report .section2 .row .ipt_cell.email_cell > div:last-of-type { width: 330px; }
+.customer .cyber_report .section2 .row .ipt_cell.email_cell span { font-family: 'Montserrat'; font-size: 1.6rem; color: #222; margin: 0 .7rem; }
+.customer .cyber_report .section2 .row .ipt_cell.email_cell .select_row { margin-left: 2rem; }
 .customer .cyber_report .section2 .row .ipt_cell.email_cell > .select_row::after { content:''; width: 0; height: 0; border: .5rem solid transparent; border-bottom-width: 0; border-top-color: #777; }
-.customer .cyber_report .section2 .row .ipt_cell.email_cell > span { display: inline-block; margin: 0 1.2rem; font-family: 'Montserrat'; font-size: 1.8rem; color: #222; }
 .customer .cyber_report .section2 .row .ipt_cell.phone_cell { display: flex; align-items: center; }
 .customer .cyber_report .section2 .row .ipt_cell.phone_cell > span { font-size: 1.8rem; color: #222; margin: 0 1.7rem; }
 .customer .cyber_report .section2 .file_row .upload_name { width: calc(100% - 18.2rem); }

@@ -1894,25 +1894,28 @@ var customerEvent = {
         $(this).siblings("label").text(select_name);
 
         if (select_name === "직접입력" || select_name === "Direct input") {
-          $(
-            ".customer .customer_inquiry .row .ipt_cell.email_cell > div:nth-of-type(2)"
-          ).show();
+          $("#selboxDirect").show();
+          $("#email_address").attr('disabled',false);
+          $(".customer .row .ipt_cell.email_cell > div:nth-of-type(3) label").css({'color':'#b2b2b2'});
           if($('#pc').length){
-            $(".customer .customer_inquiry .row .ipt_cell.email_cell > div:nth-of-type(3)").css('margin-left','1rem');
+            $(".customer .row .ipt_cell.email_cell > div:nth-of-type(3)").css('margin-left','2rem');
           }else {
-            $(".customer .customer_inquiry .row .ipt_cell.email_cell > div:nth-of-type(n+1):nth-of-type(-n+2)").css({'width':'32%'});
-            $(".customer .customer_inquiry .row .ipt_cell.email_cell > div:nth-of-type(3)").css({'width':'28%'});
+            $(".customer .row .ipt_cell.email_cell > div:nth-of-type(3)").css('margin-left','1rem');
+          }
+        }else if(select_name === "선택해주세요" || select_name === "Select"){
+          $("#selboxDirect").show();
+          $("#email_address").attr('disabled',true);
+          $("#email_address").val("");
+          $(".customer .row .ipt_cell.email_cell > div:nth-of-type(3) label").css({'color':'#b2b2b2'});
+          if($('#pc').length){
+            $(".customer .row .ipt_cell.email_cell > div:nth-of-type(3)").css('margin-left','2rem');
+          }else {
+            $(".customer .row .ipt_cell.email_cell > div:nth-of-type(3)").css('margin-left','1rem');
           }
         } else {
-          $(
-            ".customer .customer_inquiry .row .ipt_cell.email_cell > div:nth-of-type(2)"
-          ).hide();
-          if($('#pc').length){
-            $(".customer .customer_inquiry .row .ipt_cell.email_cell > div:nth-of-type(3)").css({'margin-left':'0'});
-          }else {
-            $(".customer .customer_inquiry .row .ipt_cell.email_cell > div").css({'width':'47%'});
-          }
-          
+          $("#selboxDirect").hide();
+          $(".customer .row .ipt_cell.email_cell > div:nth-of-type(3)").css({'margin-left':'0'});
+          $(".customer .row .ipt_cell.email_cell > div:nth-of-type(3) label").css({'color':'#222'});
         }
       });
     }
