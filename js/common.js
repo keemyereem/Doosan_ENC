@@ -1892,7 +1892,8 @@ var customerEvent = {
       type.change(function () {
         var select_name = $(this).children("option:selected").text();
         $(this).siblings("label").text(select_name);
-        $(this).children('option:selected').attr('selected','selected');
+        $(this).children('option').attr('selected',false);
+        $(this).children('option:selected').attr('selected',true);
 
         if (select_name === "직접입력" || select_name === "Direct input") {
           $("#selboxDirect").show();
@@ -1921,6 +1922,7 @@ var customerEvent = {
       });
     }
   },
+
 
   //익명 선택시 "익명" 비선택시 초기화
   namechk: function () {
