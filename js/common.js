@@ -272,7 +272,7 @@ var commonEvent = {
     if ($(".sub_visual_menu").length) {
       let fixMenu = subMenu.offsetTop;
 
-      $(window).on("scroll", function () {
+      $(window).on("load scroll", function () {
         let st = $(window).scrollTop();
 
         if (st >= fixMenu) {
