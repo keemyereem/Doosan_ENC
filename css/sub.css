@@ -1190,7 +1190,7 @@
 .company .HMhistory .list > li:not(:first-child) { padding-top: 6.4rem; }
 .company .HMhistory .list > li dl { display: flex; font-size: 2rem; line-height: 2; }
 .company .HMhistory .list > li dl:not(:first-of-type) { margin-top: 5rem; }
-.company .HMhistory .list > li dl dt { font-weight: 400; width: 7rem; }
+.company .HMhistory .list > li dl dt { font-weight: 400; width: 7rem; flex-shrink: 0; }
 .company .HMhistory .list > li dl dt span { font-family: 'Montserrat', sans-serif; }
 .company .HMhistory .list > li dl dd p { color: #777777; }
 .company .HMhistory .list > li dl dd p:not(:first-child),
