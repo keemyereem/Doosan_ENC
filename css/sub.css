@@ -332,7 +332,7 @@
 /* ================================  Channel  =============================== */
 
 /* 공통 */
-.channel .sub_visual { background-image: url(../images/channel/channel_bg.png); }
+.channel .sub_visual { background-image: url(../images/channel/channel_bg.jpg); }
 
 /* News */
 .channel .news { padding-bottom: 20rem; }
@@ -501,7 +501,7 @@
 /* ================================  고객센터  =============================== */
 
 /* 공통 */
-.customer .sub_visual { background-image: url(../images/customer/customer_bg.png); }
+.customer .sub_visual { background-image: url(../images/customer/customer_bg.jpg); }
 
 /* 고객문의 */
 .customer .customer_inquiry .inner { max-width: 120rem; }
@@ -703,7 +703,7 @@
 
 
 /* 해운대 */
-.mp01 .sub_visual { background-image: url(../images/business/masterpiece01_outline_visual.png); }
+.mp01 .sub_visual { background-image: url(../images/business/masterpiece01_outline_visual.jpg); }
 .mp01 .outline .bg-blue { padding: 12rem 0; }
 .mp01 .outline .section .right { margin-left: auto; }
 .mp01 .outline section h3 span { position: relative; width: fit-content; display: inline-block; }
@@ -726,7 +726,7 @@
 .mp01 .outline .section7 { padding-bottom: 20rem; }
 
 /* 분당두산타워 */
-.mp02 .sub_visual { background-image: url(../images/business/masterpiece02_outline_visual.png); }
+.mp02 .sub_visual { background-image: url(../images/business/masterpiece02_outline_visual.jpg); }
 .mp02 .outline .section1 { margin: 10rem 0 13.5rem; }
 .mp02 .outline .section1 .right { padding-left: 12rem; }
 .mp02 .outline .section2 { margin: 15rem 0 11rem; }
@@ -749,7 +749,7 @@
 .mp02 .outline .section8 { padding: 7.5rem 0 20rem; }
 
 /* 신분당선 */
-.mp03 .sub_visual { background-image: url(../images/business/masterpiece03_outline_visual.png); }
+.mp03 .sub_visual { background-image: url(../images/business/masterpiece03_outline_visual.jpg); }
 .mp03 .outline .section { justify-content: space-between; }
 .mp03 .outline .bg-green { background: #f7faf2; border-top: 1px solid #e8e8e8; padding: 11rem 0 20rem; }
 .mp03 .outline .bg-gray { padding: 45rem 0 12.5rem; margin-top: -36rem; }
@@ -802,25 +802,25 @@
 .interview .contents .wrap a:hover:before { content: url(../images/common/interview_arrow_13x21_w.png); animation: infinite 1.2s interviewArrow; }
 
 /* 마스터피스 - 인터뷰 - 해운대두산위브더제니스 */
-.haeundae .sub_visual { background-image: url(../images/business/haeundae_visual.png); }
-.haeundae .sub_visual ul li:first-child { background: url(../images/business/haeundae_visual.png) 71% 31% no-repeat; background-size: 240%; }
+.haeundae .sub_visual { background-image: url(../images/business/haeundae_visual.jpg); }
+.haeundae .sub_visual ul li:first-child { background: url(../images/business/haeundae_visual.jpg) 71% 31% no-repeat; background-size: 240%; }
 .haeundae .sub_visual ul li:first-child::after { backdrop-filter: blur(.5rem); background: rgba(0, 0, 0, .3); }
 .haeundae .sub_visual ul li:first-child p em:nth-of-type(3) { padding-left: 16rem; }
 .haeundae .contents .wrap dl.custom { margin-bottom: 12rem; }
 
 /* 마스터피스 - 인터뷰 - 분당두산타워 */
-.bundang .sub_visual { background-image: url(../images/business/bundang_visual.png); }
-.bundang .sub_visual ul li:first-child { background: url(../images/business/bundang_visual.png) 0% 25% no-repeat; background-size: 223%; }
+.bundang .sub_visual { background-image: url(../images/business/bundang_visual.jpg); }
+.bundang .sub_visual ul li:first-child { background: url(../images/business/bundang_visual.jpg) 0% 25% no-repeat; background-size: 223%; }
 .bundang .sub_visual ul li:first-child p em:last-child { padding-left: 8.5rem; }
 
 /* 마스터피스 - 인터뷰 - 신분당선 */
-.shinbundangline .sub_visual { background-image: url(../images/business/shinbundangline_visual.png); }
+.shinbundangline .sub_visual { background-image: url(../images/business/shinbundangline_visual.jpg); }
 .shinbundangline .sub_visual ul li:first-child { background: url(../images/business/shinbundangline_visual_s.png) 0% 0% no-repeat; }
 .shinbundangline .sub_visual ul li:first-child p em:nth-of-type(3) { padding-left: 11rem; }
 
 
 /* 사업소개 */
-.civil_engineer .sub_visual { background-image: url(../images/business/business_bg.png); }
+.civil_engineer .sub_visual { background-image: url(../images/business/business_bg.jpg); }
 .civil_engineer .tab_box { padding: 4.5rem 0 0; background: #f9f9f9; }
 .civil_engineer.bus_outline .tab_box { padding: 10rem 0; }
 .civil_engineer .outline .section { /* padding: 10rem 0 11rem; */ position: relative; /* height: auto; */ }
@@ -940,7 +940,7 @@
 /* ================================  기술개발  =============================== */
 
 /* 공통 */
-.technology .sub_visual { background-image: url(../images/technology/tech_bg.png); }
+.technology .sub_visual { background-image: url(../images/technology/tech_bg.jpg); }
 .technology .con_tit { padding-bottom: 0; }
 .competence .title_area { position: relative; }
 .competence .title_area .sub_tit { font-size: 3rem; line-height: 1.53; padding-top: 5rem; }
@@ -1127,7 +1127,7 @@
 /* ================================  회사소개  =============================== */
 
 /* 공통 */
-.company .sub_visual { background-image: url(../images/company/company_bg.png); }
+.company .sub_visual { background-image: url(../images/company/company_bg.jpg); }
 .company .contents { max-width: 144rem; width: 100%; margin: auto; }
 .company .btn_mob { display: none; }
 
@@ -1365,7 +1365,7 @@
 /* 공통 */
 #pc .sr .social_mob_img { display: none; }
 #pc .sr .social_pc_img { display: block; }
-.sr .sub_visual { background-image: url(../images/social/sr_bg.png); }
+.sr .sub_visual { background-image: url(../images/social/sr_bg.jpg); }
 .sr .contents { max-width: 144rem; width: 100%; margin: auto; }
 .sr .btn_mob { display: none; }
 .sr section > h3 { text-align: center; font-size: 3.8rem; font-weight: 450; padding-bottom: 6rem; }
@@ -1640,7 +1640,7 @@
 
 /* 공통 */
 .recruit { overflow: hidden; }
-.recruit .sub_visual { background-image: url(../images/recruit/recruit_bg.png); }
+.recruit .sub_visual { background-image: url(../images/recruit/recruit_bg.jpg); }
 .recruit .contents { max-width: 144rem; width: 100%; margin: auto; }
 .recruit .tab_small { margin-bottom: 6rem; }
 .recruit .banner { max-width: 144rem; background: #f7f8f9 url(../images/recruit/job_list_banner_img02.png)100% 100% no-repeat; padding: 9.3rem 13.6rem 0; height: 42rem; margin: 12rem auto; position: relative; overflow: visible; }
