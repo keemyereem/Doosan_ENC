@@ -473,11 +473,11 @@
     #mobile .channel .news .news_list .null { font-size: 1.3rem; padding: 12.5rem 0; }
 
     /* 상세페이지 공통 */
-    #mobile .detail_pg { padding-top: 6.5rem; }
-    #mobile .tb_view { margin-top: 0; }
+    #mobile .detail_pg { padding-top: 5rem; }
+    #mobile .tb_view { padding: 5rem 2rem; }
     #mobile .tb_view .tb_row.row_head .tit { font-size: 2.5rem; }
     #mobile .tb_view .tb_row.row_head .date { font-size: 1.3rem; padding: 2.5rem 0; }
-    #mobile .tb_view .view_box .view_info { min-height: 10rem; padding: 5rem 0 5rem; font-size: 1.4rem; line-height: 1.71; }
+    #mobile .tb_view .view_box .view_info { min-height: 10rem; padding: 4rem 0 7.5rem; font-size: 1.4rem; line-height: inherit; }
     #mobile .tb_view .view_box .view_info .blue { font-size: 1.3rem; line-height: 1.4; padding: 1.5rem 0 0; }
     #mobile .tb_view .view_box .file_box { padding: 0 0 7rem 0; }
     #mobile .tb_view .view_box .file_box .file_download a { padding: .5rem 0 .5rem 2.2rem; font-size: 1.4rem; background-size: 1.45rem 1.5rem; }
@@ -486,7 +486,7 @@
     #mobile .tb_view .view_nav dl dd { width: calc(100% - 7.5rem); }
     #mobile .tb_view .view_nav dl dd a { font-size: 1.25rem; }
     #mobile .tb_view .btn_box { margin-top: 6.5rem; }
-    #mobile .tb_view .btn_line { width: 100%; max-width: 21.1rem; height: 4.5rem; line-height: 4.5rem; }
+    #mobile .tb_view .btn_line { width: 100%; max-width: 21.1rem; height: 4.5rem; line-height: 4.3rem; }
     #mobile .tb_view .btn_line a { border-radius: 2.25rem; font-size: 1.3rem; }
 
     /* SNS */
@@ -525,20 +525,24 @@
     #mobile .channel .sns .popup iframe { height: 59vw; }
 
     /* 자료실 */
-    #mobile .channel .reference { padding: 6rem 0 10rem; margin-top: 5rem; } 
-    #mobile .channel .reference > img { top: initial; bottom: 0; right: 0; }
-    #mobile .channel .reference .inner { flex-direction: column; padding: 0 12rem; }
-    #mobile .channel .reference .inner .left { width: 100%; }
-    #mobile .channel .reference .sec_tit { font-size: 3rem; margin-top: 0; }
-    #mobile .channel .reference .sec_tit::before { width: 4.8rem; height: .4rem; margin-bottom: 1.5rem; }
-    #mobile .channel .reference .sub { font-size: 1.9rem; margin: 2.5rem 0 1.5rem; }
-    #mobile .channel .reference p { font-size: 1.4rem; line-height: 1.64; }
-    #mobile .channel .reference .btn_wrap { flex-direction: column; margin-top: 3rem; }
-    #mobile .channel .reference .btn_wrap a { width: 17.5rem; height: 4.5rem; line-height: 4.5rem; font-size: 1.3rem; text-indent: .5rem;}
-    #mobile .channel .reference .btn_wrap a:first-of-type { margin-right: 0; margin-bottom: 1.5rem; }
-    #mobile .channel .reference .btn_wrap a i { width: 1.5rem; height: 1.5rem; background-size: contain; }
-    #mobile .channel .reference .img { margin-top: 6rem; }
-    #mobile .channel .reference .img img { box-shadow: .35rem .6rem 1.3rem 0px rgba(0, 0, 0, 0.35); }
+    #mobile .channel .reference { margin-top: 5rem; } 
+    #mobile .channel .reference .video_ad { padding: 6rem 2rem; }
+    #mobile .channel .reference .video_ad .tit { font-size: 3rem; letter-spacing: -.075rem; }
+    #mobile .channel .reference .video_ad .video { max-width: 120rem; margin: 3.5rem auto 0; }
+    #mobile .channel .reference .brochure { padding: 6rem 0 10rem; }
+    #mobile .channel .reference .brochure > img { bottom: 0; right: 0; }
+    #mobile .channel .reference .brochure .inner { flex-direction: column; padding: 0 2rem!important; width: 100%!important; }
+    #mobile .channel .reference .brochure .inner .left { width: 100%; }
+    #mobile .channel .reference .brochure .sec_tit { font-size: 3rem; margin-top: 0; }
+    #mobile .channel .reference .brochure .sec_tit::before { width: 4.8rem; height: .4rem; margin-bottom: 1.5rem; }
+    #mobile .channel .reference .brochure .sub { font-size: 1.9rem; margin: 2.5rem 0 1.5rem; }
+    #mobile .channel .reference .brochure p { font-size: 1.4rem; line-height: 1.64; }
+    #mobile .channel .reference .brochure .btn_wrap { flex-direction: column; margin-top: 3rem; }
+    #mobile .channel .reference .brochure .btn_wrap a { width: 17.5rem; height: 4.5rem; line-height: 4.5rem; font-size: 1.3rem; text-indent: .5rem;}
+    #mobile .channel .reference .brochure .btn_wrap a:first-of-type { margin-right: 0; margin-bottom: 1.5rem; }
+    #mobile .channel .reference .brochure .btn_wrap a i { width: 1.5rem; height: 1.5rem; background-size: contain; }
+    #mobile .channel .reference .brochure .img { margin-top: 6rem; }
+    #mobile .channel .reference .brochure .img img { box-shadow: .35rem .6rem 1.3rem 0px rgba(0, 0, 0, 0.35); }
 
     /* CI/BI */
     #mobile .channel .cibi { margin-top: 5rem; }
@@ -1910,7 +1914,8 @@
 #mobile .golf .golfMain .section:not(.footer) .border_frame:active .bdl { height: 100%; transition-delay: .4s; }
 #mobile .golf .golfMain .section:not(.footer) .golf_search { position: relative; top: 0; padding: 1rem 0 1rem 1.5rem; max-width: 22.5rem; margin: auto; }
 #mobile .golf .golfMain .section:not(.footer) .golf_search input { font-size: 1.7rem; padding-right: .5rem; width: calc(100% - 4.5rem); }
-#mobile .golf .golfMain .section:not(.footer) .golf_search button[type="submit"] img { width: 1.8rem; }
+#mobile .golf .golfMain .section:not(.footer) .golf_search button[type="button"] { margin-left: auto; padding-right: .5rem; }
+#mobile .golf .golfMain .section:not(.footer) .golf_search button[type="button"] img { width: 1.8rem; }
 #mobile .golf .golfMain .section:not(.footer) .golf_search button[type="reset"] { width: 1.5rem; height: 1.5rem; margin-right: .4rem; }
 #mobile .golf .golfMain .section:not(.footer) .golf_search button[type="reset"] img { width: 100%; }
 #mobile .golf .golfMain .section:not(.footer) ol { align-items: center; }
@@ -1968,7 +1973,7 @@
 #mobile .golf .golfMain .section3 .title_box { margin: 6.5rem auto 0; padding-left: 0; text-align: center; }
 #mobile .golf .golfMain .section3 .golf_news { margin: 2rem 2rem 0; max-width: calc(100% - 4rem); }
 #mobile .golf .golfMain .section3 .golf_news ul { margin-top: 3rem; }
-#mobile .golf .golfMain .section3 .golf_news ul li { width: 100%; height: fit-content; margin-bottom: 3rem; }
+#mobile .golf .golfMain .section3 .golf_news ul li { width: 100%; height: 33.1rem; margin-bottom: 3rem; }
 #mobile .golf .golfMain .section3 .golf_news ul li:nth-child(3n - 1) { margin: 0; margin-bottom: 3rem; }
 #mobile .golf .golfMain .section3 .golf_news ul li img { height: calc(100% - 10rem); }
 #mobile .golf .golfMain .section3 .golf_news ul li a:hover img { transform: unset; }
@@ -2045,10 +2050,11 @@
 #mobile .golf .golfMain .popup .pop_players .desc .desc_pagination_wrap .desc_number { padding: 0; font-size: 1.4rem; }
 #mobile .golf .golfMain .popup .pop_players .desc .desc_pagination_wrap .desc_number span { margin-right: .3rem; }
 #mobile .golf .golfMain .popup .pop_news { width: 100%; margin: 17.8rem auto 4.6rem; letter-spacing: -.15rem; }
-#mobile .golf .golfMain .popup .pop_news .title { padding: 4.65rem 2rem 0; }
+#mobile .golf .golfMain .popup .pop_news .title { padding: 1rem 0 0; }
 #mobile .golf .golfMain .popup .pop_news .title h2 { font-size: 2.5rem; line-height: 1.1; }
-#mobile .golf .golfMain .popup .pop_news .title span { padding: 2.75rem 0 2.6rem; font-size: 1.3rem; }
-#mobile .golf .golfMain .popup .pop_news .editor { padding: 3.1rem 2rem 6rem; font-size: 1.4rem; line-height: 1.7; }
+#mobile .golf .golfMain .popup .pop_news .title span { padding: 2.5rem 0; font-size: 1.3rem; letter-spacing: 0; }
+#mobile .golf .golfMain .popup .pop_news .ck-content { width: calc(100% - 4rem); }
+#mobile .golf .golfMain .popup .pop_news .editor { padding: 4rem 0 0; font-size: 1.4rem; line-height: 1.7; }
 #mobile .golf .golfMain .popup .pop_news .pagination { padding: 0 2rem 3.5rem; }
 #mobile .golf .golfMain .popup .pop_news .pagination div button { padding: 1.75rem 0; font-size: 1.3rem; width: 100%; display: flex; }
 #mobile .golf .golfMain .popup .pop_news .pagination div button span { padding-left: 4rem; font-size: 1.25rem; text-align: left; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
@@ -2056,8 +2062,19 @@
 #mobile .golf .golfMain .popup .pop_news .pagination div button:hover span { color: #000000; }
 #mobile .golf .golfMain .popup .pop_news .editor .editor_test_title { font-size: 1.7rem !important; line-height: 1.4; }
 #mobile .golf .golfMain .popup .pop_news .editor .editor_test_span { padding-top: 2rem; font-size: 1.2rem; margin-top: 0; }
-#mobile .golf .golfMain .popup .pop_gallery { min-width: 100%; width: 100%; padding: 0 0 10rem; margin-bottom: 20rem; height: fit-content; position: relative; top: 17.5rem; overflow: visible; justify-content: space-between; flex-wrap: wrap; }
+#mobile .golf .golfMain .popup .pop_gallery { min-width: 100%; width: 100%; /* padding: 0 0 10rem; margin-bottom: 20rem; */ padding: 0 0 4rem;margin-bottom: 25rem;min-height: 280px; height: fit-content; position: relative; top: 17.5rem; overflow: visible; justify-content: space-between; flex-wrap: wrap; }
+/* #mobile .golf .golfMain .popup .pop_gallery #loader { width: 30px;height: 30px;top: 100px; }
+#mobile .golf .golfMain .popup .pop_gallery #loader:before, #mobile .golf .golfMain .popup .pop_gallery #loader:after{ top: -5px;left: -5px;border: 5px solid transparent; }
+#mobile .golf .golfMain .popup .pop_gallery #loader:before{ z-index: 100; animation: rotate 1s infinite; }
+#mobile .golf .golfMain .popup .pop_gallery #loader:after{ border: 5px solid #ccc; } */
+
+#mobile .golf .golfMain .popup .pop_gallery #loader { width: 30px;height: 30px;top: 100px; }
+#mobile .golf .golfMain .popup .pop_gallery #loader:before, #mobile .golf .golfMain .popup .pop_gallery #loader:after{ content: "";position: absolute;top: -5px;left: -5px;border: 5px solid transparent;border-top-color: #005eb8; }
+#mobile .golf .golfMain .popup .pop_gallery #loader:before{ z-index: 100; animation: rotate 1s infinite; }
+#mobile .golf .golfMain .popup .pop_gallery #loader:after{ border: 5px solid #ccc; }
+
 #mobile .golf .golfMain .popup .pop_gallery .img { max-width: 100%; max-height: fit-content; min-width: 100%; width: 100%; align-items: center; }
+#mobile .golf .golfMain .popup .pop_gallery .img img { margin-top: 2rem; }
 #mobile .golf .golfMain .popup .pop_gallery .img iframe { max-width: 100%; background: #000; }
 #mobile .golf .golfMain .popup .pop_gallery .img h2 { font-size: 1.5rem; padding: 1.5rem 1rem 0; }
 #mobile .golf .golfMain .popup .pop_gallery > div:not(.img) { font-size: 1.2rem; border-radius: 1.75rem; width: fit-content; height: 3.5rem; margin-top: 3rem; position: relative; }
@@ -2069,7 +2086,7 @@
 #mobile .golf .golfMain .popup .pop_gallery > div:first-of-type button img { margin-right: 1.25rem; }
 #mobile .golf .golfMain .popup .pop_gallery > div:last-of-type { right: 2rem; order: 1 }
 #mobile .golf .golfMain .popup .pop_gallery > div:last-of-type button img { margin-left: 1.25rem;  }
-#mobile .golf .golfMain .popup .pop_gallery .bg { top: 2rem; height: calc(100% - 8rem); }
+#mobile .golf .golfMain .popup .pop_gallery .bg { top: 0; /* height: calc(100% - 6rem); */height: 100%;padding-bottom: 4rem; }
 
 @keyframes jumpMob{
     50% { margin-top: -12rem; -webkit-animation-timing-function: ease-in; transform: rotate(90deg); }
