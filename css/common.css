@@ -120,7 +120,7 @@ body { overflow: overlay; }
 /* header */
 .header {width: 100%;position: fixed;top: 0;left: 0;z-index: 99;padding: 0 5rem; transition: transform ease .2s, background ease .2s, color ease .2s; }
 .header .header_wrap {height: 10rem;display: flex;align-items: center;font-size: 1.8rem;color: #222;}
-.header .logo {display: block;width: 10.3rem;height: 2.8rem;background: url(../images/common/logo_b.png) no-repeat;font-size: 0;margin-right: 7vw; transition: all ease .3s;}
+.header .logo {display: block;width: 10.3rem;height: 2.8rem;background: url(../images/common/logo_b.png) no-repeat;font-size: 0;margin-right: 7vw; /* transition: all ease .3s; */}
 .header .gnb {width: 73rem;height: 100%;}
 .header .gnb > ul {width: 100%;height: 100%;display: flex; flex-shrink: 1; justify-content: space-around; }
 .header .gnb > ul > li > a { display: inline-block; padding: 0 3.9rem; height: 100%; transition: all ease .2s; position: relative; z-index: 1000; }
@@ -319,13 +319,13 @@ body { overflow: overlay; }
 .container .sub_visual .inner { position: relative; }
 .container .sub_visual h1 { font-family: 'Montserrat','Pretendard'; font-size: 7rem; font-weight: 400; color: #fff; line-height: 1; letter-spacing: -.35rem; position: absolute; top: 50%; left: 0; transform: translateY(-2rem); }
 .container .sub_visual .sub_visual_menu { width: 62rem; height: 6rem; background: #fff; position: absolute; bottom: 16rem; display: flex; }
-.container .sub_visual .sub_visual_menu.fixed { position: fixed; top: 0; z-index: 99; width: 100%; left:0; border-bottom: 1px solid #e8e8e8; }
+.container .sub_visual .sub_visual_menu.fixed { position: fixed; top: 0; z-index: 99; width: 100%; left:0; border-bottom: 1px solid #e8e8e8; border-top: 1px solid #e8e8e8; }
 .container .sub_visual .sub_visual_menu .menu_inner {display: flex; position: relative; z-index: 30;}
 .container .sub_visual .sub_visual_menu.fixed .menu_inner {width: 144rem; margin: 0 auto; }
-.container .sub_visual .sub_visual_menu .home { width: 6rem; height: 6rem; background: #fff url(../images/common/vis_home.png) no-repeat 50% 50%; background-size: 1.6rem; border: 1px solid #e8e8e8; position: relative; }
+.container .sub_visual .sub_visual_menu .home { width: 6rem; height: 100%; background: #fff url(../images/common/vis_home.png) no-repeat 50% 50%; background-size: 1.6rem; border: 1px solid #e8e8e8; position: relative; }
 .container .sub_visual .sub_visual_menu .home a { display: block; width: 100%; height: 100%; }
 .container .sub_visual .sub_visual_menu .depth  { position: relative; width: 26rem; height: auto; border-top: .1rem solid #e8e8e8; border-bottom: .1rem solid #e8e8e8; font-size:1.8rem; color: #777; }
-.container .sub_visual .sub_visual_menu.fixed .home { border-top: 0; }
+.container .sub_visual .sub_visual_menu.fixed .home { border-top: 0; border-bottom: 0; }
 .container .sub_visual .sub_visual_menu.fixed .depth { border:0; }
 .container .sub_visual .sub_visual_menu.fixed .depth2 { border-bottom: 1px solid #000; }
 .container .sub_visual .sub_visual_menu .depth.open { box-shadow: 1px 2px 9.5px 0.5px rgba(51, 51, 51, 0.1); height: auto; }
@@ -397,7 +397,9 @@ body { overflow: overlay; }
 .footer .right ul li:hover a { font-size: 4.4rem; opacity: 1; }
 .footer .right ul li:hover a::after { opacity: 1; }
 .footer .right ul li:hover a::before { width: 100%; }
-.footer .footer_wrap { height: 24.3rem; display: flex; flex-direction: column; align-items: center; justify-content: center; border-top: 1px solid rgba(255,255,255,.2); }
+.footer .footer_wrap { border-top: 1px solid rgba(255,255,255,.2); }
+.footer_wrap_inner { max-width: 144rem; height: 24.3rem; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto; position: relative; }
+.footer .footer_wrap .footer_award {position: absolute; top: 7rem; left: 0;}
 .footer .footer_wrap  ul { display: flex; justify-content: center; }
 .footer .footer_wrap  ul li a { font-size: 1.8rem; color: #fff; opacity: .5; padding: 0 4rem; }
 .footer .footer_wrap  ul li a.blue { font-family: 'NS'; font-weight: 400; opacity: 1; }

@@ -36,6 +36,15 @@
 
 /* 공통 */
 @media screen and (max-width:767px) {
+    /* popNoti */
+    #popNoti {right: initial;left: 50%;top: 10rem;transform: translate(-50%, 0);box-shadow: 2.5px 4.5px 27px 3px rgba(0, 0, 0, 0.2);}
+    .pop_close_wrap {height: 3.5rem;}
+    .pop_close_wrap>button {font-size: 1.1rem;}
+
+    #popNoti.pop_recruit,
+    #popNoti.pop_auction {max-width: 30rem;width: calc(100% - 4rem);}
+    #popNoti.pop_tempStop {max-width: 30.5rem;width: calc(100% - 4rem);}
+
     /* common */
     br.br_pc, br.br_t {display: none;}
     br.br_m {display: block;}
@@ -188,10 +197,10 @@
     #mobile .container .sub_visual h1 { font-size: 4rem; transform: translateY(1.1rem); left: 0; letter-spacing: 0; }
     #mobile .container .sub_visual .sub_visual_menu { width: 100%; height: 4.5rem; bottom: 9rem; }
     #mobile .container .sub_visual .sub_visual_menu .menu_inner { width: 100%; }
-    #mobile .container .sub_visual .sub_visual_menu .home { width: 4.5rem; height: 4.5rem; background-size: 1.15rem 1.15rem; }
+    #mobile .container .sub_visual .sub_visual_menu .home { width: 4.5rem; background-size: 1.15rem 1.15rem; }
     #mobile .container .sub_visual .sub_visual_menu .depth1 { width: calc(50% - 3.75rem); }
     #mobile .container .sub_visual .sub_visual_menu .depth2 { width: calc(50% - .75rem); border: 0; }
-    #mobile .container .sub_visual .sub_visual_menu .depth > a { height: 4.5rem; line-height: 4.5rem; padding-left: 2rem; font-size: 1.4rem; }
+    #mobile .container .sub_visual .sub_visual_menu .depth > a { height: 4.5rem; /* line-height: 4.5rem; */ padding-left: 2rem; font-size: 1.4rem; display: flex; align-items: center; line-height: 1.2; }
     #mobile .container .sub_visual .sub_visual_menu .depth > a:before { top: 2.1rem; right: 2rem; border-left: .35rem solid transparent; border-right: .35rem solid transparent; }
     #mobile .container .sub_visual .sub_visual_menu .depth1 > a:before { border-top: .35rem solid #777; }
     #mobile .container .sub_visual .sub_visual_menu .depth2 > a:before { border-top: .35rem solid #fff; }
@@ -223,7 +232,10 @@
     #mobile .footer .family_site.open .site_list { padding: 1rem; }
     #mobile .footer .family_site .site_list li a { font-size: 1.4rem; padding: 1rem; }
     #mobile .footer .right { display: none; }
+    #mobile .footer_wrap_inner { height: auto; }
     #mobile .footer .footer_wrap { height: auto; padding: 5rem 0; }
+    #mobile .footer .footer_wrap .footer_award { position: initial; max-width: 24.1rem; margin-top: 5rem;}
+    #mobile .footer .footer_wrap .footer_award>img { width: 100%; object-fit: contain; }
     #mobile .footer .footer_wrap ul { width: 100%; display: flex; justify-content: center;align-items: center; padding: 0 2rem; text-align: center; }
     #mobile .footer .footer_wrap ul li { position: relative; display: inline-block; }
     #mobile .footer .footer_wrap ul li:not(:last-child)::after { height: 1rem; margin: 0 2.3vw;}
@@ -303,7 +315,8 @@
     #mobile #main #fullpage .section03 .bus_swiper .left ul li+li { margin-top: 1rem; }
     #mobile #main #fullpage .section03 .bus_swiper .left ul li b { font-size: 1.3rem; width: 8rem; }
     #mobile #main #fullpage .section03 .bus_swiper .left ul li b::before { width: .45rem; height: .45rem; transform: rotate(18deg); border-radius: 0; }
-    #mobile #main #fullpage .section03 .bus_swiper .left ul li span { font-size: 1.3rem; }
+    #mobile #main #fullpage .section03 .bus_swiper .left ul li span { font-size: 1.3rem;font-weight: 200; }
+    #mobile #main #fullpage .section03 .bus_swiper .left ul li span.narrow { letter-spacing: -0.105rem; }
     #mobile #main #fullpage .section03 .bus_swiper .left > a { font-size: 1.2rem; margin-top: 2.5rem; height: 5.1rem; line-height: 5.1rem; padding: 0 3.5rem;}
     #mobile #main #fullpage .section03 .bus_swiper .left > a::after { width: .65rem; height: 1.05rem; background-size: .65rem 1.05rem; right: 6.5rem; transform: translateX(3rem); margin-top: -.525rem; }
     #mobile #main #fullpage .section03 .bus_swiper .left > a:hover::after { transform: translateX(3rem); }
@@ -401,7 +414,7 @@
     #mobile #main #fullpage .section06 .right .contents > ul li { padding: 3.5rem 3rem; border: none; border: .1rem solid #cccccc; background: #fff; transition: all ease .1s; }
     #mobile #main #fullpage .section06 .right .contents > ul li:not(:first-child) { margin-top: 1rem; }
     #mobile #main #fullpage .section06 .right .contents > ul li:hover { box-shadow: 1px 2px 18px 2px rgba(34, 34, 34, 0.1); border: .2rem solid #005eb8; }
-    #mobile #main #fullpage .section06 .right .contents > ul li .txt p { font-size: 1.9rem; line-height: 1.59; margin: 2rem 0; }
+    #mobile #main #fullpage .section06 .right .contents > ul li .txt p { font-size: 1.9rem; line-height: 1.59; margin: 2rem 0; padding-right: 0; min-height: 60.41px; }
     #mobile #main #fullpage .section06 .right .contents > ul li .txt a { font-size: 1.2rem; }
     #mobile #main #fullpage .section06 .right .contents > ul li .txt a::after { width: .65rem; height: 1.05rem; position: relative; background-size: .65rem 1.05rem; margin-left: 3rem; top: .15rem; transform: none; right: unset; transition: all ease .3s; }
     #mobile #main #fullpage .section06 .right .contents > ul li .txt a:hover::after { transform: none; animation: none; margin-left: 4rem; }
@@ -1168,19 +1181,16 @@
 #mobile .technology .iot { padding: 6.5rem 0 4rem; position: relative; }
 #mobile .technology .iot .inner .sub_tit { font-size: 2.4rem; }
 #mobile .technology .iot .inner:first-child .sub_par { font-size: 1.5rem; padding-top: 3rem; line-height: 1.5; }
-#mobile .technology .iot .inner:first-child .statistics { flex-wrap: wrap; margin: 4.5rem 0 6.5rem; position: relative; }
-#mobile .technology .iot .inner:first-child .statistics::after,
-#mobile .technology .iot .inner:first-child .statistics::before { content: ''; display: block; position: absolute; background: #e8e8e8; margin: auto; }
+#mobile .technology .iot .inner:first-child .statistics { flex-wrap: wrap; margin: 5rem 0 3.5rem; position: relative; }
 #mobile .technology .iot .inner:first-child .statistics::after { height: 100%; width: .1rem; right: 0; left: 0; }
 #mobile .technology .iot .inner:first-child .statistics::before { width: 100%; height: .1rem; top: 0; bottom: 0; }
-#mobile .technology .iot .inner:first-child .statistics li { width: calc(100% / 2); align-items: center; }
-#mobile .technology .iot .inner:first-child .statistics li:not(:last-child) { border-right: none; }
-#mobile .technology .iot .inner:first-child .statistics li img { width: 25%; }
-#mobile .technology .iot .inner:first-child .statistics li:nth-child(3) img { width: 20%; }
-#mobile .technology .iot .inner:first-child .statistics li div { padding-left: 2rem; height: fit-content; }
+#mobile .technology .iot .inner:first-child .statistics li { width: 100%; align-items: center; }
+#mobile .technology .iot .inner:first-child .statistics li:not(:last-child) { border-right: none; border-bottom: 1px solid #e8e8e8; }
+#mobile .technology .iot .inner:first-child .statistics li img { object-fit: contain; width: 4rem; }
+#mobile .technology .iot .inner:first-child .statistics li div { padding-left: 2.5rem; height: fit-content; }
 #mobile .technology .iot .inner:first-child .statistics li div h4 { font-size: 1.4rem; }
 #mobile .technology .iot .inner:first-child .statistics li div h4 span { font-size: 3rem; margin-right: .5rem; }
-#mobile .technology .iot .inner:first-child .statistics li div > span { font-size: 1.5rem; padding-top: .5rem; }
+#mobile .technology .iot .inner:first-child .statistics li div > span { font-size: 1.5rem; }
 #mobile #sub .technology .iot .inner:nth-child(2) { width: 100%; padding: 6.5rem 0; }
 #mobile .technology .iot .inner:nth-child(2) > div.inner_wrap { max-width: calc(100% - 4rem); flex-direction: column; }
 #mobile .technology .iot .inner:nth-child(2) .sec2_le h3 { padding-top: 3.25rem; font-size: 2.5rem; line-height: 1.3; }
