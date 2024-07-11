@@ -578,7 +578,17 @@ var mainEvent = {
   headerEvent: () => {
     $(window).on("scroll", function () {
       $(".header").css("left", 0 - $(this).scrollLeft());
+
+      if ($("#mobile").length) {
+        if($(window).scrollTop() > 0) {
+          $(".header").addClass('bg');
+        }else {
+          $(".header").removeClass('bg');
+        }
+      }
     });
+
+
   },
 
   footerEvent: () => {
