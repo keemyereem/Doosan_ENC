@@ -234,12 +234,13 @@
 .sr.en .sc .section04 .box_wrap ul li .txt { text-align: center; }
 
 /* Privacy Policy */
-.en .policy > .inner > ul li:not(:first-child) { margin-left: -1px; }
-.en .policy > .inner > ul li a { vertical-align: middle; line-height: initial; }
-.en .policy > .inner .terms_site { width: 32rem;}
+.en .policy > .inner .tab_inner ul { max-width: 100%; margin: 8rem auto 19.5rem; }
+.en .policy > .inner .tab_inner ul li:not(:first-child) { margin-left: -1px; }
+.en .policy > .inner .tab_inner ul li a { vertical-align: middle; line-height: initial; padding: 0 1rem; }
+.en .policy > .inner .select_wrap { top: 13rem; }
+.en .policy > .inner .terms_site { width: 44rem; }
 .en .policy > .inner .terms_site .site_selected{ line-height: initial; min-height: 4.8rem; }
 .en .privacy > p { max-width: 144rem; margin: 0 auto; font-size: 1.6rem; font-weight: 150; color: #555; line-height: 1.875; letter-spacing: -.04rem; margin-top: 1rem; }
-.en .policy > .inner > ul { max-width: 100%; margin: 8rem auto; }
 
 
 
@@ -470,10 +471,14 @@
     #mobile .customer.en .customer_inquiry .section2 .row.row_email .select_row label { font-size: 1.1rem; white-space: nowrap; }
 
     /* privacy policy */
-    #mobile .en .policy > .inner { width: calc(100% - 4rem)!important; overflow-x: auto; }
-    #mobile .en .policy > .inner > ul { width: auto!important; margin: 0 auto; }
-    #mobile .en .policy > .inner > ul li { flex: none; width: 20rem; height: 5rem; padding: 0 1rem; }
+    #mobile .en .policy > .inner { margin-bottom: 8rem; }
+    #mobile .en .policy > .inner .tab_inner { width: 100%; overflow-x: auto; }
+    #mobile .en .policy > .inner .tab_inner ul { width: auto!important; margin: 0 auto; }
+    #mobile .en .policy > .inner .tab_inner ul li { flex: none; width: 20rem; height: 6rem; }
     #mobile .en .policy > p { font-size: 1.3rem; line-height: 1.53; padding: 0 2rem; }
+    /* #mobile .en .policy > .inner .select_wrap { position: initial; transform: translateX(0); margin-top: 3rem; } */
+    #mobile .en .policy > .inner .terms_site { width: 100%; max-width: 21rem; margin: 0 auto; }
+    /* #mobile .en .policy .box { margin: 2rem auto 10rem; } */
     
        /* Golf Team */
     #mobile .golfMain.en .section:not(.footer) .golf_search input::placeholder { font-size: 1.2rem; font-weight: 300; }
