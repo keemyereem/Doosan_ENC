@@ -209,8 +209,6 @@ body { overflow: overlay; }
 @keyframes manuAnimate03_1 { 0%{transform: translateY(-9px) rotate(135deg); width: 4rem; margin-left: 0;} 50%{transform: translateY(-9px) rotate(0deg);} 100%{transform: translateY(0px) rotate(0deg); width: 2.6rem; margin-left: 1rem;} }
 
 /* header ( white version ) */
-.bg { background: #fff;box-shadow: 0px 10px 15.9744px 0.0256px rgba(0, 0, 0, 0.1); }
-.bg .logo {background: url(../images/common/logo_b.png) no-repeat;}
 .wht .logo {background: url(../images/common/logo_w.png) no-repeat;}
 .wht .gnb > ul > li > a,
 .wht .gnb_menu .right_nav ul li a  {color: #fff;position: relative; }
@@ -222,6 +220,9 @@ body { overflow: overlay; }
 .wht .gnb_menu .weve_btn a:hover::before {transform:scaleX(1);}
 .wht .top_sitemap button span::before, 
 .wht .top_sitemap button span::after { background: #fff; }
+.bg { background: #fff;box-shadow: 0px 10px 15.9744px 0.0256px rgba(0, 0, 0, 0.1); }
+.bg .logo {background: url(../images/common/logo_b.png) no-repeat;}
+.bg .top_sitemap button span::after { background: #222; }
 
 /* sitemap */
 .header .logo.sitemapOn { background: url(../images/common/logo_b.png) no-repeat !important; }
@@ -403,6 +404,7 @@ body { overflow: overlay; }
 .footer .footer_wrap  ul { display: flex; justify-content: center; }
 .footer .footer_wrap  ul li a { font-size: 1.8rem; color: #fff; opacity: .5; padding: 0 4rem; }
 .footer .footer_wrap  ul li a.blue { font-family: 'NS'; font-weight: 400; opacity: 1; }
+.footer .footer_wrap  ul li a.bold { font-weight: 400; } 
 .footer .footer_wrap  ul li:not(:last-child)::after { content:''; display: inline-block; width: .1rem; height: 1.4rem; background: #fff; opacity: .5;  }
 .footer .footer_wrap p { font-family: 'Montserrat'; font-size: 1.6rem; opacity: .2; text-align: center; margin-top: 4rem; }
 #topButton { font-family: 'Montserrat'; font-size: 1.8rem; color: #000; letter-spacing: .09rem; position: fixed; right: 8rem; bottom: 8rem; display: none; z-index: 999; writing-mode: vertical-lr; }
