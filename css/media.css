@@ -656,7 +656,7 @@
     #mobile .customer .btn_wrap a:last-of-type .icon { width: 5rem; height: 3.25rem; }
     #mobile .customer .btn_wrap a:last-of-type:hover .icon { width: 5rem; height: 3.25rem; background-size: contain; }
     #mobile .customer .cyber_audit { padding: 0 0 10rem 0; }
-    #mobile .customer .cyber_audit .section1 { background: linear-gradient(to bottom, #f9f9f9, #f9f9f9 42.4rem, #fff 42.5rem, #fff 100% ); }
+    #mobile .customer .cyber_audit .section1 { background: linear-gradient(to bottom, #f9f9f9, #f9f9f9 23rem, #fff 23.1rem, #fff 100% ); }
     #mobile .customer .cyber_audit section .inner { background: transparent; }
     #mobile .customer .cyber_audit h2 { font-size: 2.4rem; padding: 8rem 0 0; }
     #mobile .customer .cyber_audit h3 { font-size: 2.2rem; padding: 6rem 0 3.5rem; }
@@ -664,8 +664,12 @@
     #mobile .customer .cyber_audit .cont ul li:not(:nth-child(3n)) { border-right: 1px solid #e8e8e8; }
     #mobile .customer .cyber_audit .cont ul li:nth-child(2n) { border-left: 0; }
     #mobile .customer .cyber_audit .cont ul li:nth-last-child(n+1):nth-last-child(-n+2) { border-bottom: 1px solid #e8e8e8; }
-    #mobile .customer .cyber_audit .section1 .cont ul, .customer .cyber_audit .section2 .cont ul { padding-bottom: 6rem; background: #fff; }
+    .customer .cyber_audit .section2 .cont ul { padding-bottom: 6rem; background: #fff; }
     #mobile .customer .cyber_audit .section1 .cont ul li:nth-last-child(n+1):nth-last-child(-n+3) { border-top: 1px solid #e8e8e8; }
+    .customer .cyber_audit .section1 .cyber-callcenter { height: 7.5rem;border-radius: 3.7rem;margin: 3.5rem auto 6rem; }
+    .customer .cyber_audit .section1 .cyber-callcenter img { width: 3.1rem; }
+    .customer .cyber_audit .section1 .cyber-callcenter-num span { font-size: 1.5rem; }
+    .customer .cyber_audit .section1 .cyber-callcenter-num div { font-size: 1.8rem; }
     #mobile .customer .cyber_audit .section3 .cont ul { flex-wrap: wrap; }
     #mobile .customer .cyber_audit .section3 .cont ul li { width: calc(100% / 2); }
     #mobile .customer .cyber_audit .section1 ul li:nth-child(1) .icon img { width: 3.4rem; height: 3.55rem; }
