@@ -37,13 +37,13 @@
 /* 공통 */
 @media screen and (max-width:767px) {
     /* popNoti */
-    #popNoti {right: initial;left: 50%;top: 10rem;transform: translate(-50%, 0);box-shadow: 2.5px 4.5px 27px 3px rgba(0, 0, 0, 0.2);}
+    .popNoti {right: initial;left: 50%;top: 10rem;transform: translate(-50%, 0);box-shadow: 2.5px 4.5px 27px 3px rgba(0, 0, 0, 0.2);}
     .pop_close_wrap {height: 3.5rem;}
     .pop_close_wrap>button {font-size: 1.1rem;}
 
-    #popNoti.pop_recruit,
-    #popNoti.pop_auction {max-width: 30rem;width: calc(100% - 4rem);}
-    #popNoti.pop_tempStop {max-width: 30.5rem;width: calc(100% - 4rem);}
+    #pop_recruit,
+    #pop_auction {max-width: 30rem;width: calc(100% - 4rem);}
+    #pop_tempStop {max-width: 30.5rem;width: calc(100% - 4rem);}
 
     /* common */
     br.br_pc, br.br_t {display: none;}
@@ -52,6 +52,7 @@
     #mobile .img_m {display: inline-block;}
     img { width: 100%; object-fit: contain; }
     #mobile .g-recaptcha { transform:scale(0.77); transform-origin:0 0; }
+    ::-webkit-scrollbar {height: 2px;}
 
     /* selectbox */
     #mobile .select_row { height: 4rem; border: .1rem solid #e8e8e8; }
@@ -1745,15 +1746,15 @@
 /* 개인정보처리방침 */
 #mobile .graybox { padding: 6.5rem 0 0; }
 #mobile .graybox .policy > .inner { text-align: center; margin-top: 6.5rem; }
-#mobile .graybox .policy > .inner > ul li { height: 4.5rem; line-height: 4.5rem; }
-#mobile .graybox .policy > .inner > ul li.on { box-shadow: 0px 0px 16px 4px rgba(34, 34, 34, 0.2); }
-#mobile .graybox .policy > .inner > ul li a { font-size: 1.35rem; letter-spacing: -.135rem; }
+#mobile .graybox .policy > .inner .tab_inner ul li { height: 4.5rem; line-height: 4.5rem; }
+#mobile .graybox .policy > .inner .tab_inner ul li.on { box-shadow: 0px 0px 16px 4px rgba(34, 34, 34, 0.2); }
+#mobile .graybox .policy > .inner .tab_inner ul li a { font-size: 1.35rem; letter-spacing: -.135rem; }
 #mobile .graybox .policy > .inner .select_wrap { top: 6.5rem; right: 50%; transform: translateX(50%); width: 100%; }
 #mobile .graybox .policy > .inner .terms_site .site_list { min-width: auto; }
 #mobile .graybox .policy > .inner .terms_site.select01 { width: 100%; max-width: 19rem; text-align: center; margin: 0 auto; }
 #mobile .graybox .policy > .inner .terms_site.select02 { width: 100%; max-width: 25rem; text-align: center; margin: 0 auto; }
 #mobile .graybox .policy > .inner .select_row { max-width: 22rem; width: 100%; position: initial; transform: translateY(0); border: 0; border-bottom: 2px solid #222; margin: 3rem auto 0; }
-#mobile .graybox .policy > .inner .terms_site .site_selected { font-size: 1.3rem; line-height: 4rem; padding: 0 1rem; }
+#mobile .graybox .policy > .inner .terms_site .site_selected { font-size: 1.3rem; line-height: 1.2; min-height: 4.8rem; padding: 0 1rem; }
 #mobile .graybox .policy > .inner .terms_site .site_list li a { font-size: 1.3rem; }
 #mobile .graybox .policy > .inner .select_row::after { right: 1rem; }
 #mobile .graybox .policy > .inner .select_row select { padding: 0 1rem; }

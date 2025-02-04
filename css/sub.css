@@ -6,15 +6,15 @@
 /* popNoti */
 .pop_overlay {background: rgba(0, 0, 0, .4);position: fixed;top: 0;bottom: 0;left: 0;right: 0;width: 100%;height: 100%;z-index: 99; /* display: none; */}
 .pop_overlay.on {display: block;}
-#popNoti {position: fixed;right: 12.5vw;top: 50%;transform: translateY(-50%);box-shadow: 5px 9px 54px 6px rgba(0, 0, 0, 0.2);display: none;}
-#popNoti.on {display: block;z-index: 100;}
-#popNoti .pop_img {width: 100%;object-fit: contain;}
+.popNoti {position: fixed;left: 12.5vw;top: 50%;transform: translateY(-50%);box-shadow: 5px 9px 54px 6px rgba(0, 0, 0, 0.2);display: none;}
+.popNoti.on {display: block;z-index: 100;}
+.popNoti .pop_img {width: 100%;object-fit: contain;}
 .pop_close_wrap {display: flex;height: 5rem;}
 .pop_close_wrap>button {flex:1;font-size: 1.6rem;color: #fff;}
 .pop_close_wrap>.btn_closeForToday {background: #35383d;}
 .pop_close_wrap>.btn_close {background: #000;}
 
-#popNoti.pop_recruit {max-width: 50rem;}
+#pop_recruit {max-width: 50rem;}
 
 /* =========================================================================== */
 /* ===============================  Main Page  =============================== */
