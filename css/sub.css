@@ -1582,18 +1582,23 @@
 .sr .ww .section03 .ww_info2 { width: 144rem; margin: 5.5rem auto 0; }
 .sr .ww .section03 .ww_info2 > .social_pc_img { margin-left: 2rem; }
 .sr .ww .section04 { max-width: 144rem; width: 100%; margin: auto; padding: 12rem 0 13rem; }
-.sr .ww .section04 > ul { display: flex; justify-content: space-between; gap: 3rem; }
-.sr .ww .section04 > ul > li { /* width: calc(100% / 3 - 2rem); */ flex: 1; position: relative; border: .1rem solid #cccccc; }
-.sr .ww .section04 > ul > li:last-child { flex: 1 8%; }
-.sr .ww .section04 > ul > li::before { content: ''; width: calc(100% + .2rem); height: .6rem; background: url(../images/social/ww_info3_bar.png)50% 50% repeat-x; position: absolute; top: -.1rem; left: -.1rem; }
+.sr .ww .section04 > ul { display: flex; justify-content: space-between; }
+.sr .ww .section04 > ul > li:nth-child(1), .sr .ww .section04 > ul > li:nth-child(2) {width: calc(100% * (420 / 1380) - 2rem);}
+.sr .ww .section04 > ul > li:nth-child(3) {width: calc(100% * (540 / 1380) - 2rem);}
+.sr .ww .section04 > ul > li {position: relative; border: .1rem solid #cccccc; }
+.sr .ww .section04 > ul > li::before { content: ''; width: calc(100% + .2rem); height: .6rem; background: url(../images/social/ww_info3_bar.png)50% 50% no-repeat; position: absolute; top: -.1rem; left: -.1rem; background-size: cover;}
 .sr .ww .section04 > ul > li > div { background: #f9f9f9; padding: 6rem 7rem; display: flex; flex-direction: column; }
 .sr .ww .section04 > ul > li > div span { font-size: 1.6rem; font-weight: 400; color: #555555; line-height: 1; padding-bottom: 4.3rem; }
 .sr .ww .section04 > ul > li > div img { width: fit-content; }
 .sr .ww .section04 > ul > li > div h3 { font-size: 2.8rem; font-weight: 450; color: #222222; padding-top: 3rem; }
-.sr .ww .section04 > ul > li .block2 { padding: 1.5rem 5rem; }
-.sr .ww .section04 > ul > li .block2 li { padding: 3rem 0; font-size: 1.8rem; color: #555555; display: flex; line-height: 1.7; }
+.sr .ww .section04 > ul > li .block2 { padding: 1.5rem 4rem; }
+.sr .ww .section04 > ul > li .block2 li { padding: 3rem 0 3rem 1rem; font-size: 1.8rem; color: #555555; display: flex; line-height: 1.7; }
 .sr .ww .section04 > ul > li .block2 li:not(:first-child) { background-image: linear-gradient(to left, #cccccc 5px, rgba(255,255,255,0) 1px); background-size: 6px 1px; background-repeat: repeat-x; }
+.sr .ww .section04 > ul > li .block2 li div p {position:relative; padding-left: 21.5px;}
 .sr .ww .section04 > ul > li .block2 li span { width: 12rem; display: inline-block; color: #222222; font-weight: 400; }
+.sr .ww .section04 > ul > li .block2 li div p:before{font-family: 'NS'; font-weight:bold; position: absolute; top:0; left:0;}
+.sr .ww .section04 > ul > li .block2 li div p:first-child:before {content:'ⓐ';}
+.sr .ww .section04 > ul > li .block2 li div p:nth-child(2):before {content:'ⓑ';}
 .sr .ww .section04 > ul > li .block2 li em { font-size: 16px; }
 .sr .ww .section05 { padding: 11rem 0 20rem; background: linear-gradient(to bottom, #f9f9f9 88.3rem, #fff 1rem); }
 .sr .ww .section05 > ul { display: flex; position: relative; justify-content: space-between; padding-bottom: 7.2rem; }

@@ -1546,6 +1546,8 @@
 #mobile .sr .ww .section04 > ul > li .block2 { padding: .5rem 2.5rem; }
 #mobile .sr .ww .section04 > ul > li .block2 li { padding: 2rem 0 2rem .5rem; font-size: 1.4rem; line-height: 1.42; }
 #mobile .sr .ww .section04 > ul > li .block2 li:not(:first-child) { background-image: linear-gradient(to left, #cccccc 4px, rgba(255,255,255,0) 2px); }
+#mobile .sr .ww .section04 > ul > li .block2 li div p {padding-left: 18.5px;}
+#mobile .sr .ww .section04 > ul > li .block2 li div p:first-child {margin-bottom: 5px;}
 #mobile .sr .ww .section04 > ul > li .block2 li span { width: 10rem; }
 #mobile .sr .ww .section05 { padding: 5.5rem 0 10rem; background: #f9f9f9; }
 #mobile #sub .sr .ww .section05 > ul { flex-direction: column; width: calc(100% - 2rem); padding-bottom: 17.75rem; }
