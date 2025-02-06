@@ -160,7 +160,7 @@ var mainEvent = {
         );
       }, 200);
     };
-    img.src = "images/main/sec01_bg1.jpg";
+    img.src = "images/main/sec01_bg1.png";
 
     // after animation ended, initializing object
     const x = document.getElementById("intro_trigger");
