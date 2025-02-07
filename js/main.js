@@ -21,7 +21,6 @@ $(function () {
   */
 });
 
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////                                                         **메인**                                                                   ///////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -34,6 +33,7 @@ var mainEvent = {
     this.sec06Tab();
     this.headerEvent();
     this.footerEvent();
+    this.popNoti();
   },
 
   createFullpage: () => {
@@ -143,50 +143,75 @@ var mainEvent = {
     // common.js에서 사이트맵 구현 오류 > 추가 중복코드 삽입.
     $(".sitemap").show();
     $("#rightnavi, .header").addClass("blind");
-
+  
     console.log("-> intro animation start");
-
-    img = new Image();
-    img.onload = function () {
-      setTimeout(() => {
-        $(".clip-css").css("opacity", 1);
-        $(".clip-css").on(
-          "transitionend webkitTransitionEnd oTransitionEnd",
-          function () {
-            setTimeout(() => {
-              $(".section01").addClass("ani");
-            }, 500);
-          }
-        );
-      }, 200);
-    };
-    img.src = "images/main/sec01_bg1.png";
-
-    // after animation ended, initializing object
-    const x = document.getElementById("intro_trigger");
-    x.addEventListener("animationend", () => {
-      console.log("-> intro animation end");
-
-      $(".clip-wrap").addClass("indent");
-      $("body").removeClass("blockScroll");
-      $(".header").addClass("wht");
-      $("#rightnavi, .header").removeClass("blind");
-
-      if ($("#mobile").length) {
-        setTimeout(() => {
-          $("#main #fullpage .section01").addClass("active");
-        }, 500);
-      }
-
-      mainEvent.mainSwiper();
-
-      if (!$("#mobile").length) {
-        mainEvent.createFullpage();
-      } else {
-        mainEvent.mobile();
+  
+    const tl = gsap.timeline({
+      onComplete: () => {
+        console.log("-> intro animation end");
+  
+        $(".clip-wrap").addClass("indent");
+        $("body").removeClass("blockScroll");
+        $(".header").addClass("wht");
+        $("#rightnavi, .header").removeClass("blind");
+  
+        if ($("#mobile").length) {
+          setTimeout(() => {
+            $("#main #fullpage .section01").addClass("active");
+          }, 500);
+        }
+  
+        // ✅ 애니메이션이 끝난 후 슬라이드 실행
+        mainEvent.mainSwiper();
+  
+        if (!$("#mobile").length) {
+          mainEvent.createFullpage();
+        } else {
+          mainEvent.mobile();
+        }
       }
     });
+
+    // GSAP 애니메이션 설정
+    if ($("#mobile").length) {
+      // MOBILE
+      tl.from("#section .visual", {
+        autoAlpha: 0,
+        duration: 1, 
+        scale: 2.5,
+      })
+      .to("#section .visual", {
+        duration: 1,
+        delay: 1,
+        width: "281px",
+        height: "95px",
+      })
+      .to("#section", {
+        delay: 1,
+        duration: 1,
+        y: "-100vh",
+      });
+    }else{
+      // PC
+      tl.from("#section .visual", {
+        autoAlpha: 0,
+        duration: 1, 
+        scale: 2.5,
+      })
+      .to("#section .visual", {
+        duration: 1,
+        delay: 1,
+        width: "561px",
+        height: "190px",
+      })
+      .to("#section", {
+        delay: 1,
+        duration: 1,
+        y: "-100vh",
+      });
+    }
   },
+  
 
   mainSwiper: () => {
     const mainSwiper = ".section01 .mainSwiper",
@@ -209,8 +234,13 @@ var mainEvent = {
         prevEl: ".swiper-button-prev",
       },
       pagination: {
-        el: ".swiper-pagination-sec01",
+        el: ".swiper-pagination-01",
         clickable: true,
+        // Bullet Numbering 설정 (01, 02 두자리 형식)
+        renderBullet: function (index, className) {
+          let number = (index + 1).toString().padStart(2, "0"); // 01, 02, 03 ... 형식 유지
+          return '<span class="' + className + '">' + number + "</span>";
+        },
       },
 
       // swiper 이벤트 정리 참고 - https://velog.io/@rhtjdrhkd123/20220516-swiper-events-%EC%A0%95%EB%A6%AC
@@ -587,8 +617,6 @@ var mainEvent = {
         }
       }
     });
-
-
   },
 
   footerEvent: () => {
@@ -719,5 +747,11 @@ var mainEvent = {
       });
       
     }
+  },
+
+  popNoti: ()=> {
+    $("#popNoti").on("click", ".btn_close", function () {
+      $(this).parents("#popNoti.on").removeClass("on");
+    });
   },
 };

@@ -44,10 +44,9 @@
 
 /* main */
 .fp-viewing-firstPage .header_en.wht .logo,
-.fp-viewing-fifthPage .header_en.wht .logo {background: url(../images/common/logo_w_en.png) no-repeat;}
+.fp-viewing-fifthPage .header_en.wht .logo {background: url(../images/common/logo_w_en.png) no-repeat 50% 50%;}
 .en #rightnavi li:nth-child(6) { display: none; }
 #main .en #fullpage .section01.active .swiper-slide-active h2 span:nth-child(5) { transition: .5s 2.2s; }
-#main .en #fullpage .section01 .swiper .sec01_controller { bottom: 20%; }
 #main .en #fullpage .section03 .bus_swiper > .swiper-wrapper > .swiper-slide { padding-bottom: 0; }
 #main .en #fullpage .section02 .big_img { flex-shrink: 0; }
 #main .en #fullpage .section02 .right .contents a { align-items: center; }
