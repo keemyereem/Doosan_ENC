@@ -275,7 +275,7 @@
     #mobile #main #fullpage .section01 .swiper-slide h2 { font-size: 3rem; }
     #main #fullpage .section01 .swiper-slide h2 span {line-height: 4.2rem; letter-spacing: −0.8px; }
     #mobile #main #fullpage .section01 .clip-wrap { width: 100%; height: 100%; position: absolute; z-index: 9; background: #fff; }
-    #mobile #main #fullpage .section01 .clip-css { width: 33.4rem; height: 32.8rem; transform: translateY(0); background: url(../images/main/sec01_bg1.png)no-repeat 50% 50%; background-size: cover; }
+    #mobile #main #fullpage .section01 .clip-css { width: 33.4rem; height: 32.8rem; transform: translateY(0); background: url(../images/main/sec01_bg1.jpg)no-repeat 50% 50%; background-size: cover; }
     #mobile #main #fullpage .section01.ani .clip-css { animation: intro_mobile 1s alternate; width: 100%; height: 100%; }
     #mobile #main #fullpage .section01.active .clip-css { transform: translateY(0); height: 100%; }
     #mobile #main #fullpage .section01 .swiper-slide .slide-inner img { height: 100vh; object-fit: cover; }
