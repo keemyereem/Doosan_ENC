@@ -139,76 +139,103 @@ var mainEvent = {
   },
 
   intro: () => {
-    $("body").addClass("blockScroll");
-    // common.js에서 사이트맵 구현 오류 > 추가 중복코드 삽입.
-    $(".sitemap").show();
-    $("#rightnavi, .header").addClass("blind");
-  
-    console.log("-> intro animation start");
-  
-    const tl = gsap.timeline({
-      onComplete: () => {
-        console.log("-> intro animation end");
-  
-        $(".clip-wrap").addClass("indent");
-        $("body").removeClass("blockScroll");
-        $(".header").addClass("wht");
-        $("#rightnavi, .header").removeClass("blind");
-  
-        if ($("#mobile").length) {
-          setTimeout(() => {
-            $("#main #fullpage .section01").addClass("active");
-          }, 500);
+    if(document.body.dataset.page === "ko-doosan"){
+      $("body").addClass("blockScroll");
+      // common.js에서 사이트맵 구현 오류 > 추가 중복코드 삽입.
+      $(".sitemap").show();
+      $("#rightnavi, .header").addClass("blind");
+    
+      console.log("-> intro animation start");
+    
+      const tl = gsap.timeline({
+        onComplete: () => {
+          console.log("-> intro animation end");
+    
+          $(".clip-wrap").addClass("indent");
+          $("body").removeClass("blockScroll");
+          $(".header").addClass("wht");
+          $("#rightnavi, .header").removeClass("blind");
+    
+          if ($("#mobile").length) {
+            setTimeout(() => {
+              $("#main #fullpage .section01").addClass("active");
+            }, 500);
+          }
+    
+          // ✅ 애니메이션이 끝난 후 슬라이드 실행
+          mainEvent.mainSwiper();
+    
+          if (!$("#mobile").length) {
+            mainEvent.createFullpage();
+          } else {
+            mainEvent.mobile();
+          }
         }
+      });
   
+      // GSAP 애니메이션 설정
+      if ($("#mobile").length) {
+        // MOBILE
+        tl.from("#section .visual", {
+          autoAlpha: 0,
+          duration: 1, 
+          scale: 2.5,
+        })
+        .to("#section .visual", {
+          duration: 1,
+          delay: 1,
+          width: "281px",
+          height: "95px",
+        })
+        .to("#section", {
+          delay: 1,
+          duration: 1,
+          y: "-100vh",
+        });
+      }else{
+        // PC
+        tl.from("#section .visual", {
+          autoAlpha: 0,
+          duration: 1, 
+          scale: 2.5,
+        })
+        .to("#section .visual", {
+          duration: 1,
+          delay: 1,
+          width: "561px",
+          height: "190px",
+        })
+        .to("#section", {
+          delay: 1,
+          duration: 1,
+          y: "-100vh",
+        });
+      }
+    }else{
+      $(".sitemap").show();
+      console.log("-> intro animation end");
+    
+      $(".clip-wrap").addClass("indent");
+      $("body").removeClass("blockScroll");
+      $(".header").addClass("wht");
+      $("#rightnavi, .header").removeClass("blind");
+
+      if ($("#mobile").length) {
+        setTimeout(() => {
+          $("#main #fullpage .section01").addClass("active");
+        }, 500);
+      }
+
+      setTimeout(() => {
         // ✅ 애니메이션이 끝난 후 슬라이드 실행
         mainEvent.mainSwiper();
-  
+
         if (!$("#mobile").length) {
           mainEvent.createFullpage();
         } else {
           mainEvent.mobile();
         }
-      }
-    });
-
-    // GSAP 애니메이션 설정
-    if ($("#mobile").length) {
-      // MOBILE
-      tl.from("#section .visual", {
-        autoAlpha: 0,
-        duration: 1, 
-        scale: 2.5,
-      })
-      .to("#section .visual", {
-        duration: 1,
-        delay: 1,
-        width: "281px",
-        height: "95px",
-      })
-      .to("#section", {
-        delay: 1,
-        duration: 1,
-        y: "-100vh",
-      });
-    }else{
-      // PC
-      tl.from("#section .visual", {
-        autoAlpha: 0,
-        duration: 1, 
-        scale: 2.5,
-      })
-      .to("#section .visual", {
-        duration: 1,
-        delay: 1,
-        width: "561px",
-        height: "190px",
-      })
-      .to("#section", {
-        delay: 1,
-        duration: 1,
-        y: "-100vh",
-      });
+      }, 100);
     }
   },
   
