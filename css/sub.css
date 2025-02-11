@@ -1593,8 +1593,8 @@
 .sr .ww .section04 > ul > li .block2 li div p {position:relative; padding-left: 21.5px;}
 .sr .ww .section04 > ul > li .block2 li span { width: 12rem; display: inline-block; color: #222222; font-weight: 400; }
 .sr .ww .section04 > ul > li .block2 li div p:before{font-family: 'NS'; font-weight:bold; position: absolute; top:0; left:0;}
-.sr .ww .section04 > ul > li .block2 li div p:first-child:before {content:'ⓐ';}
-.sr .ww .section04 > ul > li .block2 li div p:nth-child(2):before {content:'ⓑ';}
+.sr .ww .section04 > ul > li .block2 li div p:first-child:before {content:'①';}
+.sr .ww .section04 > ul > li .block2 li div p:nth-child(2):before {content:'②';}
 .sr .ww .section04 > ul > li .block2 li em { font-size: 16px; }
 .sr .ww .section05 { padding: 11rem 0 20rem; background: linear-gradient(to bottom, #f9f9f9 88.3rem, #fff 1rem); }
 .sr .ww .section05 > ul { display: flex; position: relative; justify-content: space-between; padding-bottom: 7.2rem; }
