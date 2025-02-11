@@ -150,8 +150,7 @@ var mainEvent = {
       const tl = gsap.timeline({
         onComplete: () => {
           console.log("-> intro animation end");
-    
-          $(".clip-wrap").addClass("indent");
+
           $("body").removeClass("blockScroll");
           $(".header").addClass("wht");
           $("#rightnavi, .header").removeClass("blind");
@@ -215,7 +214,6 @@ var mainEvent = {
       $(".sitemap").show();
       console.log("-> intro animation end");
     
-      $(".clip-wrap").addClass("indent");
       $("body").removeClass("blockScroll");
       $(".header").addClass("wht");
       $("#rightnavi, .header").removeClass("blind");
