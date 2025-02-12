@@ -178,7 +178,7 @@ var mainEvent = {
         tl.from("#section .visual", {
           autoAlpha: 0,
           duration: 1, 
-          scale: 2.5,
+          scale: 1.8,
         })
         .to("#section .visual", {
           duration: 1,
@@ -196,7 +196,7 @@ var mainEvent = {
         tl.from("#section .visual", {
           autoAlpha: 0,
           duration: 1, 
-          scale: 2.5,
+          scale: 1.8,
         })
         .to("#section .visual", {
           duration: 1,
