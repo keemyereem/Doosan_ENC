@@ -183,8 +183,8 @@ var mainEvent = {
         .to("#section .visual", {
           duration: 1,
           delay: 1,
-          width: "281px",
-          height: "95px",
+          width: "300px",
+          height: "133px",
         })
         .to("#section", {
           delay: 1,
@@ -201,8 +201,8 @@ var mainEvent = {
         .to("#section .visual", {
           duration: 1,
           delay: 1,
-          width: "561px",
-          height: "190px",
+          width: "600px",
+          height: "266px",
         })
         .to("#section", {
           delay: 1,
