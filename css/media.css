@@ -21,6 +21,7 @@
     #pc { overflow-x: auto !important; width: 144rem;}
     .container .sub_visual h1 { left: 5rem; }
     #sub .container .inner { padding: 0 5rem; width: 144rem; }
+    #sub .container .adaptation .inner {padding:0; padding-bottom: 7.2rem;}
     #sub .container .footer .inner { padding: 15.21vh 4rem 0; }
     #sub .footer .inner { padding: 15.21vh 4rem 0; }
     #sub .civil_engineer .business_lists > .inner { padding: 0!important; }
