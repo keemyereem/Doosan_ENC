@@ -1603,7 +1603,9 @@
 .sr .ww .section05 > ul > li { width: calc(50% - 2rem); }
 .sr .ww .section05 > ul > .info { position: absolute; bottom: 0; right: 4rem; width: 74rem; height: 38.7rem; background: #005eb8; padding: 5rem 9rem 6rem; }
 .sr .ww .section05 > ul > .info > ul { position: relative; }
-.sr .ww .section05 > ul > .info li { color: rgba(255, 255, 255, .8); line-height: 1.5; padding: 2.5rem 0 2.5rem 14rem; font-size: 1.8rem; display: flex; white-space: nowrap; }
+.sr .ww .section05 > ul > .info li { line-height: 1.5; font-size: 1.8rem; padding: 2.5rem 0 2.5rem 14rem; display: flex; white-space: nowrap; }
+.sr .ww .section05 > ul > .info li del { color:#fff; opacity:.8; font-size: 1.8rem; text-decoration: none;}
+.sr .ww .section05 > ul > .info li a { color:#fff; opacity:.8; font-size: 1.8rem;}
 .sr .ww .section05 > ul > .info li:not(:first-child) { background-image: linear-gradient(to left, rgba(204,204,204, .5) 5px, rgba(255,255,255,0) 1px); background-size: 6px 1px; background-repeat: repeat-x; }
 .sr .ww .section05 > ul > .info li span { display: block; position: absolute; left: 0; font-size: 2rem; color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 350; }
 .sr .ww .section05 > ul > .info > span { padding-top: .5rem; color: #fc9f35; font-size: 1.5rem; white-space: nowrap; display: block; letter-spacing: -.07rem; }

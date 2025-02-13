@@ -1551,6 +1551,8 @@
 #mobile .sr .ww .section05 > ul > li:first-child { order: 1; margin-top: 4rem; }
 #mobile .sr .ww .section05 > ul > .info { right: 1rem; width: calc(100% - 2rem); height: auto; padding: 1rem 2.5rem 2.5rem; }
 #mobile .sr .ww .section05 > ul > .info li { line-height: 1.4; padding: 1.5rem 0 1.5rem 8rem; font-size: 1.5rem; white-space: unset; }
+#mobile .sr .ww .section05 > ul > .info li del { color:#fff; opacity:.8; font-size: 1.5rem; text-decoration: none;}
+#mobile .sr .ww .section05 > ul > .info li a { color:#fff; opacity:.8; font-size: 1.5rem;}
 #mobile .sr .ww .section05 > ul > .info li span { font-size: 1.4rem; }
 #mobile .sr .ww .section05 > ul > .info > span { padding-top: .5rem; font-size: 1.25rem; line-height: 1.36; white-space: unset; display: flex; }
 #mobile .sr .ww .section05 > ul > .info > span i { margin-right:.25rem; }
