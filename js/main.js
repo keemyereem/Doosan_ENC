@@ -161,7 +161,7 @@ var mainEvent = {
             }, 500);
           }
     
-          // ✅ 애니메이션이 끝난 후 슬라이드 실행
+          // 애니메이션이 끝난 후 슬라이드 실행
           mainEvent.mainSwiper();
     
           if (!$("#mobile").length) {
@@ -171,20 +171,23 @@ var mainEvent = {
           }
         }
       });
-  
+
       // GSAP 애니메이션 설정
       if ($("#mobile").length) {
         // MOBILE
-        tl.from("#section .visual", {
-          autoAlpha: 0,
-          duration: 1, 
-          scale: 1.8,
+        tl.to("#section .visual", {
+          autoAlpha: 1,
+          duration: .5, 
         })
         .to("#section .visual", {
-          duration: 1,
-          delay: 1,
-          width: "300px",
-          height: "133px",
+          duration: .8,
+          delay: .3,
+          scale:(0.6)
+        })
+        .to("#section .visual", {
+          duration: 0.8,
+          delay: .3,
+          width: "400px",
         })
         .to("#section", {
           delay: 1,
@@ -193,16 +196,19 @@ var mainEvent = {
         });
       }else{
         // PC
-        tl.from("#section .visual", {
-          autoAlpha: 0,
-          duration: 1, 
-          scale: 1.8,
+        tl.to("#section .visual", {
+          autoAlpha: 1,
+          duration: .5, 
         })
         .to("#section .visual", {
-          duration: 1,
-          delay: 1,
-          width: "600px",
-          height: "266px",
+          duration: .8,
+          delay: .3,
+          scale:(0.5)
+        })
+        .to("#section .visual", {
+          duration: 0.8,
+          delay: .3,
+          width: "1354px",
         })
         .to("#section", {
           delay: 1,
@@ -225,7 +231,7 @@ var mainEvent = {
       }
 
       setTimeout(() => {
-        // ✅ 애니메이션이 끝난 후 슬라이드 실행
+        // 애니메이션이 끝난 후 슬라이드 실행
         mainEvent.mainSwiper();
 
         if (!$("#mobile").length) {

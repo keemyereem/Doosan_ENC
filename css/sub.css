@@ -92,8 +92,8 @@
 #parallax__cont {overflow: hidden;position: relative;}
 .parallax__item {width: 100%; height: 100vh; position: relative; display: flex; align-items: center; justify-content: center;}
 #section {position: absolute; top: 0; left: 0; z-index: 99; background-color: white;}
-.visual{width: 23rem; height: 26.6rem; overflow: hidden;}
-.parallax__full {width:60rem; height: 26.6rem;}
+.visual{width: 41.4rem; height: 43.8rem; overflow: hidden; opacity: 0;}
+.parallax__full {width:auto; height: 100%;}
 
 /* Section02 */
 #main #fullpage .section02 .swiper, 
