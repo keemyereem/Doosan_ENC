@@ -587,12 +587,12 @@
 .customer .btn_wrap span { display: block; width: 100%; text-align: center; padding-bottom: 2.7rem; font-size: 1.4rem; color: #666666; }
 .customer .btn_wrap a { display: flex; align-items: center; justify-content: center; width: 34rem; height: 10rem; border-radius: 5rem; text-align: left; font-size: 2rem; color: #005eb8; letter-spacing: -.05rem; }
 .customer .btn_wrap a:first-of-type { background: rgba(0, 94, 184,.05); margin-right: 4rem; }
-.customer .btn_wrap a:first-of-type .icon { width: 4.6rem; height: 4.2rem; margin-right: 2rem; background: url(../images/customer/audit_call_icon.png) no-repeat 50% 50%; background-size: contain; }
+.customer .btn_wrap a:first-of-type .icon { width: 4.6rem; height: 4.2rem; margin-right: 2rem; background: url(../images/customer/audit_call_icon.svg) no-repeat 50% 50%; background-size: contain; }
 .customer .btn_wrap a:first-of-type .txt > div:first-child { color: #005eb8; }
 .customer .btn_wrap a:first-of-type .txt > div:first-child em { font-family: 'Montserrat', sans-serif; font-size: 1.9rem; }
 .customer .btn_wrap a:first-of-type .txt > div:last-child { font-family: 'Montserrat'; font-size: 2.6rem; font-weight: 400; }
 .customer .btn_wrap a:last-of-type { border: 1px solid #005eb8; transition: all .2s; }
-.customer .btn_wrap a:last-of-type .icon { width: 7.5rem; height: 4.9rem; margin-right: 2rem; background: url(../images/customer/audit_weve_icon.png) no-repeat 50% 50%; background-size: contain; }
+.customer .btn_wrap a:last-of-type .icon { width: 7.5rem; height: 4.9rem; margin-right: 2rem; background: url(../images/customer/audit_weve_icon.svg) no-repeat 50% 50%; background-size: contain; }
 .customer .btn_wrap a:last-of-type .txt > div:first-child { font-weight: 400; }
 .customer .btn_wrap a:last-of-type:hover { background: #005eb8; color: #fff; }
 .customer .btn_wrap a:last-of-type:hover .icon { background: url(../images/customer/audit_weve_icon_w.png) no-repeat 50% 50%; }
