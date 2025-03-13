@@ -1445,14 +1445,14 @@
 #mobile .sr .social_pc_img { display: none; }
 
 /* 프롤로그(사회책임경영 원칙) */
-#mobile .sr .prologue { box-shadow: .1rem .15rem 2.5rem 0 rgba(41, 41, 41, 0.2); margin-bottom: 10rem; margin-top: 3.5rem; }
+/* #mobile .sr .prologue { box-shadow: .1rem .15rem 2.5rem 0 rgba(41, 41, 41, 0.2); margin-bottom: 10rem; margin-top: 3.5rem; }
 #mobile .sr .prologue .banner { background: linear-gradient(145deg, #C1BAB3 40%, #CBC6C2 60%); padding: 4.5rem 2.6rem 0; height: 36rem; }
 #mobile .sr .prologue .banner h2 { font-size: 3.5rem; }
 #mobile .sr .prologue .banner p { font-size: 1.5rem; line-height: 1.53; padding-top: 1.5rem; }
 #mobile .sr .prologue .banner img { right: -1rem; }
 #mobile .sr .prologue .board_inner { margin: 0 2rem 0; padding-bottom: 1rem; }
 #mobile .sr .prologue .board_inner li { padding: 2.5rem 0; margin: 0; font-size: 1.6rem; line-height: 1.5; flex-direction: column; align-items: flex-start; }
-#mobile .sr .prologue .board_inner li p { width: 100%; }
+#mobile .sr .prologue .board_inner li p { width: 100%; } */
 
 /* 안전보건경영 */
 #mobile .sr .hsm { width: 100%; margin-top: 5.5rem; padding-top: 5.5rem; }
