@@ -1432,10 +1432,10 @@
 .sr .certList ul li dl dd:last-child a:hover::after { width: 0; }
 
 /* 프롤로그(사회책임경영 원칙) */
+/* ESG section01 */
 .esg_section01_wrap {background-color: #f9f9f9;}
 .esg_section01_wrap .esg_section01 {color:#fff; padding: 12rem 0;}
 .esg_section01_wrap .esg_section01 h3{font-family: 'Montserrat'; color:#0c1014; line-height: 4rem; font-weight: bold; font-size: 3.8rem; text-align: center; margin-bottom: 7.8rem;}
-.esg_section01_wrap .esg_section01 .list_tip{}
 .esg_section01_wrap .esg_section01 .list_tip .list_tip_stick{display:block; width:6.5rem; height: .6rem; -webkit-transform: skew(-40deg); -moz-transform: skew(-40deg);  -o-transform: skew(-40deg); margin-bottom:1.5rem}
 .esg_section01_wrap .esg_section01 .list_tip .list_tip_tit{color:#0b0f14; font-size:2.8rem; font-weight: 400;}
 .esg_section01_wrap .esg_section01 .esg_section01_purple .ellipse{width:26rem; padding:23px 0;background: #eaeaea; border-radius: 3.5rem; text-align: center; font-size: 2rem;}
@@ -1473,14 +1473,6 @@
 .esg_section01_wrap .esg_section01 .esg_section01_purple .center01 .ellipse:nth-child(2)::after{content: ''; width: 1px; height: 19rem; background-color: #555; position: absolute; top: -19.2rem; left: 50%; transform: translate(-50%, 0)}
 .esg_section01_wrap .esg_section01 .esg_section01_purple .right .sky_txt{position: absolute; bottom:0; left: 50%; transform: translate(-50%, 0);}
 .esg_section01_wrap .esg_section01 .esg_section01_purple .right .sky_txt::before{content: ''; display: block; width: 3px; height: 3px; border-radius: 100%; border: 2px solid #555; background: #fff;    position: absolute; top: -2.5px;left: 50%; transform: translate(-50%, 0);}
-.blue_txt01{position:absolute; top: 192px; left: 50%; transform: translate(-50%, 0);}
-.blue_txt01::before{content: ''; display: block; width: 3px; height: 3px; border-radius: 100%; border: 2px solid #555; background: #fff;    position: absolute; top: -2.5px;left: 50%; transform: translate(-50%, 0);}
-.blue_txt01::after{content: ''; display: block; width: 3px; height: 3px; border-radius: 100%; border: 2px solid #555; background: #fff; position: absolute; bottom: -2.5px;left: 50%; transform: translate(-50%, 0);}
-.blue_txt02{position:absolute; top: 300px; left: 444px; border-radius: 4rem!important; max-height: 80px; padding:16px 0!important;}
-.blue_txt02::before{content: ''; display: block; width: 3px; height: 3px; border-radius: 100%; border: 2px solid #555; background: #fff; position: absolute; top: 50%; left: 0; transform: translate(-50%, -50%);}
-.blue_txt02::after{content: ''; width: 32px; height: 0.1rem; background-color: #555; position: absolute; top: 50%; left: -35px; transform: translate(0%, -50%);}
-.blue_txt02 span:last-child{font-size: 1.8rem; opacity: 0.5; position: relative;}
-.blue_txt02 span:last-child::before{content:''; display:inline-block; width:5px; height:5px; border-radius: 100%; background-color: #fff; opacity: 0.5; position: absolute; left:-11px;top: 50%; transform: translate(0, -50%);}
 .esg_section01_wrap .esg_section01 .esg_section01_sky{background-color: #ecf5f7; margin-bottom: 2rem; border-radius: 4rem; display: flex;}
 .esg_section01_wrap .esg_section01 .esg_section01_sky ul{display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;}
 .esg_section01_wrap .esg_section01 .esg_section01_sky ul li{width:26rem; height:70px; background-color:#fff; color:#00a5d7; border: 1px solid #00a5d7; border-radius: 3.5rem; display: flex; justify-content: center; align-items: center; text-align: center; font-size: 1.8rem; font-weight:300;}
@@ -1491,10 +1483,25 @@
 .esg_section01_wrap .esg_section01 .esg_section01_green ul li{padding:32px 48px; background-color: #fff; border:1px solid #00ad83; color:#555; font-size:1.8rem; line-height: 3.6rem; border-radius: 2rem; width: 26rem;}
 .esg_section01_wrap .esg_section01 .esg_section01_green ul li p{position:relative;}
 .esg_section01_wrap .esg_section01 .esg_section01_green ul li p::before{content:''; display:inline-block; width:5px; height:5px; border-radius: 100%; background-color: #00ad83; position: absolute; left:-11px;top: 50%; transform: translate(0, -50%);}
+.blue_txt01{position:absolute; top: 192px; left: 50%; transform: translate(-50%, 0);}
+.blue_txt01::before{content: ''; display: block; width: 3px; height: 3px; border-radius: 100%; border: 2px solid #555; background: #fff;    position: absolute; top: -2.5px;left: 50%; transform: translate(-50%, 0);}
+.blue_txt01::after{content: ''; display: block; width: 3px; height: 3px; border-radius: 100%; border: 2px solid #555; background: #fff; position: absolute; bottom: -2.5px;left: 50%; transform: translate(-50%, 0);}
+.blue_txt02{position:absolute; top: 300px; left: 444px; border-radius: 4rem!important; max-height: 80px; padding:16px 0!important;}
+.blue_txt02::before{content: ''; display: block; width: 3px; height: 3px; border-radius: 100%; border: 2px solid #555; background: #fff; position: absolute; top: 50%; left: 0; transform: translate(-50%, -50%);}
+.blue_txt02::after{content: ''; width: 32px; height: 0.1rem; background-color: #555; position: absolute; top: 50%; left: -35px; transform: translate(0%, -50%);}
+.blue_txt02 span:last-child{font-size: 1.8rem; opacity: 0.5; position: relative;}
+.blue_txt02 span:last-child::before{content:''; display:inline-block; width:5px; height:5px; border-radius: 100%; background-color: #fff; opacity: 0.5; position: absolute; left:-11px;top: 50%; transform: translate(0, -50%);}
+/* ESG 테이블*/
 .esg_table table { border: 1px solid #e8e8e8; font-size: 16px; border-collapse: collapse; color: #222;}
 .esg_table table thead { border-top: 2px solid; height: 7.2rem; text-align: center; font-weight: bold; }
 .esg_table tbody td{line-height: 2.4rem;}
 .esg_table tbody td.tac {text-align: center;}
+.esg_table tbody td .sub_t { display: block; font-size: 14px; color: #777; display: flex;align-items: center;justify-content: left;gap: 10px; }
+.esg_table tbody td .sub_txt { display: block; font-size: 14px; color: #777; display: flex;align-items: center;justify-content: left;gap: 10px;}
+.esg_table tbody td .sub_txt::before{content:''; width:5px; height: 5px; display: block; border-radius: 100%;background-color: #d9dfe9; }
+.esg_table tbody tr td .number { display: flex; align-items: center; justify-content: left; gap: 5px; }
+.esg_table tbody tr td .number span{ font-size: 10px;  }
+.esg_table tbody td[rowspan] { vertical-align: middle; }
 .esg_table table thead tr th:first-child {width: 12rem;}
 .esg_table table thead tr th:nth-child(2) {width: 19rem; }
 .esg_table table thead tr th:nth-child(3) {width: 31.8rem; }
@@ -1523,17 +1530,6 @@
 .esg_table table tbody tr:nth-child(9) td:nth-child(1),
 .esg_table table tbody tr:nth-child(9) td:nth-child(2),
 .esg_table table tbody tr:nth-child(9) td:nth-child(3){padding: 0 3rem;}
-.esg_table tbody td .sub_t { display: block; font-size: 14px; color: #777; display: flex;align-items: center;justify-content: left;gap: 10px; }
-.esg_table tbody td .sub_txt { display: block; font-size: 14px; color: #777; display: flex;align-items: center;justify-content: left;gap: 10px;}
-.esg_table tbody td .sub_txt::before{content:''; width:5px; height: 5px; display: block; border-radius: 100%;background-color: #d9dfe9; }
-.esg_table tbody tr td .number { display: flex; align-items: center; justify-content: left; gap: 5px; }
-.esg_table tbody tr td .number span{ font-size: 10px;  }
-.esg_table tbody td[rowspan] { vertical-align: middle; }
-.esg_section02 table thead{border-top-color: #005eb8; background-color: #e5eff8;}
-.esg_section03 table thead{border-top-color: #00ad83; background-color: #e5f7f2;}
-.esg_section02{padding: 12rem 0 5rem 0;}
-.esg_section02 h3{font-size: 3.8rem; font-weight: bold; line-height: 4rem; color:#0c1014; text-align: center; margin-bottom: 8rem;}
-.esg_section02 table tbody tr:first-child td:nth-child(2){}
 .esg_section02 table tbody tr:first-child td:nth-child(3),
 .esg_section02 table tbody tr:first-child td:nth-child(4){height: 9rem;}
 .esg_section02 table tbody tr:nth-child(2) td:nth-child(1),
@@ -1555,6 +1551,10 @@
 .esg_table table tbody tr:nth-child(9) td:nth-child(1),
 .esg_table table tbody tr:nth-child(9) td:nth-child(2),
 .esg_table table tbody tr:nth-child(9) td:nth-child(3){height: 11.7rem;}
+.esg_section02 table thead{border-top-color: #005eb8; background-color: #e5eff8;}
+.esg_section03 table thead{border-top-color: #00ad83; background-color: #e5f7f2;}
+.esg_section02{padding: 12rem 0 5rem 0;}
+.esg_section02 h3{font-size: 3.8rem; font-weight: bold; line-height: 4rem; color:#0c1014; text-align: center; margin-bottom: 8rem;}
 .esg_section03{padding-bottom:19.7rem;}
 .esg_section03 table tbody tr:first-child td:nth-child(2),
 .esg_section03 table tbody tr:first-child td:nth-child(3),
