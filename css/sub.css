@@ -2247,7 +2247,12 @@
 .golf .golfMain .section2 .splide .splide__slide.is-active .mask_circle h2 { opacity: 1; }
 
 /* 골프단 소식 */
-.golf .golfMain .section3 .title_box { max-width: 148rem; width: 100%; height: fit-content; margin: 16.3rem auto 0; padding-left: 2rem; }
+.golf .golfMain .section3 .title_box { max-width: 148rem; width: 100%; height: fit-content; margin: 16.3rem auto 0; padding-left: 2rem; margin-bottom: 2rem;}
+.golf .golfMain .section3 .golf_tab { position: absolute; top: -5.1rem; font-size: 1.8rem; color: #888888; display: flex; }
+.golf .golfMain .section3 .golf_tab button { margin-right: 3rem; position: relative; }
+.golf .golfMain .section3 .golf_tab button.on { font-weight: 400; color: #005eb8; }
+.golf .golfMain .section3 .golf_tab button:hover { color: #005eb8; }
+.golf .golfMain .section3 .golf_tab button:not(:last-of-type):after { content: ''; display: inline-block; width: .1rem; height: 1.3rem; background: #bfbfbf; right: -1.5rem; top: 0; bottom: 0; margin: auto; position: absolute; }
 .golf .golfMain .section3 .golf_news { max-width: 144rem; margin: 6rem auto 0; position: relative; width: 100%; }
 .golf .golfMain .section3 .golf_news ul { display: flex; flex-wrap: wrap; position: absolute; opacity: 0; visibility: hidden; }
 .golf .golfMain .section3 .golf_news ul.active { position: relative; opacity: 1; visibility: visible; }
@@ -2268,9 +2273,12 @@
 .golf .golfMain .section4 .border_frame:hover .img { box-shadow: 8px 14px 21px 0px rgba(4, 0, 0, 0.16); }
 .golf .golfMain .section4 .title_box { max-width: 138rem; width: 100%; height: fit-content; margin: 12rem auto 0; padding-left: 2rem; }
 .golf .golfMain .section4 .golf_tab { position: absolute; top: -5.1rem; font-size: 1.8rem; color: #888888; display: flex; }
+.golf .golfMain .section4 .golf_tab img{ margin-right: 2rem;}
+.golf .golfMain .section4 .golf_tab p {color:#222; display: flex; align-items: center; margin-right: 4rem; font-weight: 400;}
+.golf .golfMain .section4 .golf_tab p span {font-family: 'Montserrat'; margin: 0 0.5rem;}
 .golf .golfMain .section4 .golf_tab button { margin-right: 3rem; position: relative; }
 .golf .golfMain .section4 .golf_tab button.on { font-weight: 400; color: #005eb8; }
-.golf .golfMain .section4 .golf_tab button:hover { color: #005eb8; }
+.golf .golfMain .section4 .golf_tab button:hover { color: #005eb8;}
 .golf .golfMain .section4 .golf_tab button:not(:last-of-type):after { content: ''; display: inline-block; width: .1rem; height: 1.3rem; background: #bfbfbf; right: -1.5rem; top: 0; bottom: 0; margin: auto; position: absolute; }
 .golf .golfMain .section4 .golf_gallery { max-width: 134rem; width: 100%; margin: 7.8rem auto 0; position: relative; }
 .golf .golfMain .section4 .golf_gallery .gallery_frame { position: relative; height: 61.8rem;}

@@ -519,169 +519,191 @@ let golfPlayers = {
     // 0 동영상/ 1 이미지/ 2 이름/ 3 영문이름/ 4 인터뷰/ 5 생년월일/ 6 입회년도/ 7 데뷔전/ 8 명칭 풀네임/ 9 주요성적
     const selectPlayers = [
       [
-        "818591181", 
-        "images/golf/player_yhj.png", 
-        "유현주", 
-        "Yoo Hyunju", 
+        "818591181",
+        "images/golf/player_yhj.png",
+        "유현주",
+        "Yoo Hyunju",
         "“평소 투어프로로서의 경험 뿐 아니라 방송, 모델, <br class='br_m'>인플루언서 등 <br class='br_pc'>여러 분야에서 다양한 경험을 <br class='br_m'>‘갖고(have)’ 싶다고 생각했어요.”",
         "1994년 02월 28일",
         "2011년 10월",
         "2012년 제5회 롯데마트 여자오픈",
         "유현주 프로",
         [
-          ['2024', '<i>노랑통닭 큐캐피탈파트너스 드림챌린지 1차전 5위</i>'],
-          ['2022', '<i>지에이코리아 드림투어 2차전 6위</i>'],
-          ['2021', '<i>무안CC·올포유 드림투어 4차전 14위</i>'],
-          ['2020', '<i>제주삼다수 마스터스 25위</i>'],
-          ['2017', '<i>MY 문영 퀸즈파크 챔피언십 2017 25위</i>'],
-          ['2016', '<i>팬텀 클래식 With YTN 27위</i>'],
-          ['2012', '<i>BS금융그룹 부산은행ㆍ서울경제 여자오픈 14위</i>']
-        ]
-      ], 
+          ["2024", "<i>노랑통닭 큐캐피탈파트너스 드림챌린지 1차전 5위</i>"],
+          ["2022", "<i>지에이코리아 드림투어 2차전 6위</i>"],
+          ["2021", "<i>무안CC·올포유 드림투어 4차전 14위</i>"],
+          ["2020", "<i>제주삼다수 마스터스 25위</i>"],
+          ["2017", "<i>MY 문영 퀸즈파크 챔피언십 2017 25위</i>"],
+          ["2016", "<i>팬텀 클래식 With YTN 27위</i>"],
+          ["2012", "<i>BS금융그룹 부산은행ㆍ서울경제 여자오픈 14위</i>"],
+        ],
+      ],
       [
-        "818598210", 
-        "images/golf/player_yhyoj.png",
-        "유효주", 
-        "Yoo Hyoju", 
+        "818598210",
+        "images/golf/player_yhyoj.jpg",
+        "유효주",
+        "Yoo Hyoju",
         "“제 인생의 동반자인 골프와 함께 즐겁게 <br class='br_m'>‘살고(live)’ 싶고, <br class='br_pc'>언젠가는 We've에 제 집을 마련해서 행복하게 살고 싶어요.”",
         "1997년 04월 21일",
         "2015년 10월",
         "2017년 롯데렌터카 여자오픈",
         "유효주 프로",
         [
-          ['2024', '<i>두산 매치플레이 9위</i>'],
-          ['2022', '<i><b>WEMIX 챔피언십 with 와우매니지먼트그룹 SBS Golf 우승</b></i>'],
-          ['2021', '<i>롯데 오픈 7위</i>'],
-          ['2017', '<i>KB금융 스타챔피언십 3위</i>']
-        ]
+          ["2024", "<i>두산 매치플레이 9위</i>"],
+          [
+            "2022",
+            "<i><b>WEMIX 챔피언십 with 와우매니지먼트그룹 SBS Golf 우승</b></i>",
+          ],
+          ["2021", "<i>롯데 오픈 7위</i>"],
+          ["2017", "<i>KB금융 스타챔피언십 3위</i>"],
+        ],
       ],
       [
-        "000000000", 
-        "images/golf/player_yhyoj.png",
-        "이율린", 
-        "Lee Yoollyn", 
+        "000000000",
+        "images/golf/player_lyl.jpg",
+        "이율린",
+        "Lee Yoollyn",
         "“필드라는 공간에서 골프를 칠 때, <br>저는 가장 ‘살아있다(live)’고 느껴요. <br>필드는 저에게 '기쁨을 주는 공간'이에요.”",
         "2002년 12월 29일",
         "2022년 08월",
         "2023년 롯데렌터카 여자오픈",
         "이율린 프로",
         [
-          ['2024', '<i>KLPGA 2025 정규투어 시드순위전 1위</i><br>' +
-            '<i><b>덕신EPC·서울경제 레이디스 클래식 2위</b></i><br>' +
-            '<i>넥센 세인트나인 마스터즈 2024 15위</i>'
+          [
+            "2024",
+            "<i>KLPGA 2025 정규투어 시드순위전 1위</i><br>" +
+              "<i><b>덕신EPC·서울경제 레이디스 클래식 2위</b></i><br>" +
+              "<i>넥센 세인트나인 마스터즈 2024 15위</i>",
           ],
-          ['2023', '<i>동부건설 한국토지신탁 챔피언십 7위</i>'],
-          ['2021', '<i>강민구배 제45회 한국여자아마추어골프선수권대회 3위</i>'],
-          ['2020', '<i><b>국가대표 선발전 여자부 1위</b></i><br>' +
-            '<i><b>제11회 KLPGA 회장배 여자아마추어골프선수권대회 우승</b></i><br>' +
-            '<i>강민구배 제44회 한국여자아마추어골프선수권대회 2위</i>'
+          ["2023", "<i>동부건설 한국토지신탁 챔피언십 7위</i>"],
+          ["2021", "<i>강민구배 제45회 한국여자아마추어골프선수권대회 3위</i>"],
+          [
+            "2020",
+            "<i><b>국가대표 선발전 여자부 1위</b></i><br>" +
+              "<i>제11회 KLPGA 회장배 여자아마추어골프선수권대회 우승</i><br>" +
+              "<i>강민구배 제44회 한국여자아마추어골프선수권대회 2위</i>",
           ],
-        ]
+        ],
       ],
       [
-        "818590506", 
-        "images/golf/player_pk.png",
-        "박결", 
-        "Park Gyeol", 
+        "818590506",
+        "images/golf/player_pk.jpg",
+        "박결",
+        "Park Gyeol",
         "“어릴 때부터 골프를 너무 사랑해서 <br class='br_m'>골프선수가 되었고, <br class='br_pc'>현재 골프선수로 많은 <br class='br_m'>팬들의 사랑을 받고 있다고 생각해요. <br>그런 의미에서 저에게 골프는 ‘love’나 다름없죠.”",
         "1996년 01월 09일",
         "2014년 10월",
         "2015년 제8회 롯데마트 여자오픈",
         "박결 프로",
         [
-          ['2024', '<i>제12회 E1 채리티 오픈 3위</i>'],
-          ['2023', '<i>대보하우스디 오픈 4위</i><br>' +
-            '<i>에버콜라겐·더시에나 퀸즈 크라운 2923 3위</i><br>' +
-            '<i>제45회 크리스 F&C KLPGA 챔피언십 2위</i>'
-          ],
-          ['2022', '<i>넥센∙세인트나인 마스터즈 2022 3위</i>'],
+          ["2024", "<i>제12회 E1 채리티 오픈 3위</i>"],
           [
-            '2018', '<i><b>SK네트웍스∙서울경제 레이디스 클래식 우승</b></i> <br>' +
-            '<i>제12회 S-OIL 챔피언십 2위</i> <br>' +
-            '<i>효성 챔피언십 with SBS 2위</i>'
+            "2023",
+            "<i>대보하우스디 오픈 4위</i><br>" +
+              "<i>에버콜라겐·더시에나 퀸즈 크라운 2923 3위</i><br>" +
+              "<i>제45회 크리스 F&C KLPGA 챔피언십 2위</i>",
           ],
-          ['2017', '<i>삼천리 Together Open 2017 2위</i>'],
-          ['2016', '<i>초정탄산수 용평리조트 오픈 with SBS 2위</i>'],
+          ["2022", "<i>넥센∙세인트나인 마스터즈 2022 3위</i>"],
           [
-            '2015', '<i>제16회 하이트진로 챔피언십 2위</i> <br>' +
-            '<i>2015 NH투자증권 레이디스 챔피언십 2위</i>'
+            "2018",
+            "<i><b>SK네트웍스∙서울경제 레이디스 클래식 우승</b></i> <br>" +
+              "<i>제12회 S-OIL 챔피언십 2위</i> <br>" +
+              "<i>효성 챔피언십 with SBS 2위</i>",
+          ],
+          ["2017", "<i>삼천리 Together Open 2017 2위</i>"],
+          ["2016", "<i>초정탄산수 용평리조트 오픈 with SBS 2위</i>"],
+          [
+            "2015",
+            "<i>제16회 하이트진로 챔피언십 2위</i> <br>" +
+              "<i>2015 NH투자증권 레이디스 챔피언십 2위</i>",
           ],
           [
-            '2014', '<i><b>인천아시안게임 여자골프 개인전 금메달</b></i> <br>' +
-            '<i>인천아시안게임 여자골프 단체전 은메달</i>'
-          ]
-        ]
-      ], 
+            "2014",
+            "<i><b>인천아시안게임 여자골프 개인전 금메달</b></i> <br>" +
+              "<i>인천아시안게임 여자골프 단체전 은메달</i>",
+          ],
+        ],
+      ],
       [
-        "818589792", 
-        "images/golf/player_kms.png",
-        "김민솔", 
-        "Kim Minsol", 
+        "818589792",
+        "images/golf/player_kms.jpg",
+        "김민솔",
+        "Kim Minsol",
         "“아직 부족한 점이 많기 때문에 한 타 한 타 <br class='br_m'>save 하는 것처럼 <br class='br_pc'>체력, 스킬, 멘탈 등 <br class='br_m'>모든 것을 성실하게 잘 ‘관리해서(save)’ <br>발전하는 선수가 되고 싶어요.”",
         "2006년 06월 15일",
         "2024년 07월",
         " ",
         "김민솔 선수",
         [
-          ['2024', "<i>두산건설 We've 챔피언십 8위</i><br>" +
-            "<i>제10회 교촌 1991 레이디스 오픈 2위</i>"
-          ],
-          ['2023', '<i><b>아부다비 세계선수권대회 단체전 우승</b></i><br>' +
-            '<i><b>제104회 전국체육대회 개인전 우승</b></i><br>' +
-            '<i>제19회 항저우 아시안게임 여자골프 단체전 은메달</i><br>' +
-            '<i>OK금융그룹 읏맨 오픈 5위</i><br>' +
-            "<i>두산건설 We've 챔피언십 9위</i><br>" +
-            '<i><b>제4회 드림파크배 아마추어골프선수권 대회 우승</b></i><br>' +
-            "<i>DB그룹 제37회 한국여자오픈 골프선수권대회 4위</i><br>" +
-            "<i>아시아 태평양 여자 아마추어 챔피언십(WAAP) 2위</i><br>"
+          [
+            "2024",
+            "<i>두산건설 We've 챔피언십 8위</i><br>" +
+              "<i>제10회 교촌 1991 레이디스 오픈 2위</i>",
           ],
           [
-            '2022', '<i>LPGA BMW 레이디스 챔피언십 10위</i> <br>' +
-            '<i><b>제29회 송암배 아마추어골프선수권대회 우승</b></i> <br>' +
-            '<i><b>블루원배 제39회 한국주니어골프선수권대회 우승</b></i> <br>' +
-            '<i>강민구배 제46회 한국여자아마추어골프선수권대회 3위</i> <br>'
+            "2023",
+            "<i><b>아부다비 세계선수권대회 단체전 우승</b></i><br>" +
+            "<i><b>제104회 전국체육대회 개인전 우승</b></i><br>" +
+            "<i>제19회 항저우 아시안게임 여자골프 단체전 은메달</i><br>" +
+            "<i>OK금융그룹 읏맨 오픈 5위</i><br>" +
+            "<i>두산건설 We've 챔피언십 9위</i><br>" +
+            "<i><b>제4회 드림파크배 아마추어골프선수권 대회 우승</b></i><br>" +
+            "<i>DB그룹 제37회 한국여자오픈 골프선수권대회 4위</i><br>" +
+            "<i>아시아 태평양 여자 아마추어 챔피언십(WAAP) 2위</i><br>",
           ],
-        ]
-      ], 
+          [
+            "2022",
+            "<i>LPGA BMW 레이디스 챔피언십 10위</i> <br>" +
+            "<i><b>제29회 송암배 아마추어골프선수권대회 우승</b></i> <br>" +
+            "<i><b>블루원배 제39회 한국주니어골프선수권대회 우승</b></i> <br>" +
+            "<i>강민구배 제46회 한국여자아마추어골프선수권대회 3위</i> <br>",
+          ],
+        ],
+      ],
       [
-        "000000000", 
-        "images/golf/player_kms.png",
-        "박혜준", 
-        "Park Hyejun", 
-        "“골프에서는 어려운 상황에서도 한 타를 '지켜내는(save)' 것이 중요하기에 위기 상황에서도 지혜롭게 스코어를 지켜가는 선수가 되고 싶어요.”",
+        "000000000",
+        "images/golf/player_phj.jpg",
+        "박혜준",
+        "Park Hyejun",
+        "“골프에서는 어려운 상황에서도<br>한 타를 '지켜내는(save)' 것이 중요하기에<br class='br_m'> 위기 상황에서도<br class='br_pc'>지혜롭게 스코어를 지켜가는<br class='br_m'> 선수가 되고 싶어요.”",
         "2003년 05월 20일",
         "2021년 08월",
         "2022년 롯데렌터카 여자오픈",
         "박혜준 선수",
         [
-          ['2024', "<i><b>두산건설 We've 챔피언십 2위</b></i><br>" +
-            "<i><b>제11회 제주삼다수 마스터스 2위</b></i><br>" +
-            "<i>동부건설·한국토지신탁 챔피언십 4위</i><br>" +
-            "<i>NH투자증권 레이디스 챔피언십 8위</i>"
-          ],
-          ['2023', '<i>엠씨스퀘어·군산CC 드림투어 2차전 2위</i><br>' +
-            '<i>드림투어 5차전 3위</i><br>' +
-            '<i>드림투어 13차전 3위</i><br>' +
-            '<i>SBS골프·롯데 오픈 드림투어 4위</i><br>'
+          [
+            "2024",
+            "<i><b>두산건설 We've 챔피언십 2위</b></i><br>" +
+              "<i><b>제11회 제주삼다수 마스터스 2위</b></i><br>" +
+              "<i>동부건설·한국토지신탁 챔피언십 4위</i><br>" +
+              "<i>NH투자증권 레이디스 챔피언십 8위</i>",
           ],
           [
-            '2022', '<i>LPGA BMW 레이디스 챔피언십 10위</i> <br>' +
-            '<i><b>제29회 송암배 아마추어골프선수권대회 우승</b></i> <br>' +
-            '<i><b>블루원배 제39회 한국주니어골프선수권대회 우승</b></i> <br>' +
-            '<i>강민구배 제46회 한국여자아마추어골프선수권대회 3위</i> <br>'
+            "2023",
+            "<i>엠씨스퀘어·군산CC 드림투어 2차전 2위</i><br>" +
+              "<i>드림투어 5차전 3위</i><br>" +
+              "<i>드림투어 13차전 3위</i><br>" +
+              "<i>SBS골프·롯데 오픈 드림투어 4위</i><br>",
           ],
           [
-            '2021', '<i><b>XGOLF·백제CC 점프투어 3차전 우승</b></i> <br>' +
-            '<i><b>그랜드·삼대인 점프투어 8차전 우승</b></i> <br>' +
-            '<i>그랜드·삼대인 점프투어 7차전 2위</i> <br>'
-          ]
-        ]
-      ], 
+            "2022",
+            "<i>지에이코리아 드림투어 2차전 3위</i> <br>" +
+              "<i>톨비스트·휘닉스CC 드림투어 11차전 4위</i> <br>" +
+              "<i>톨비스트·휘닉스CC 드림투어 55차전 5위</i> <br>",
+          ],
+          [
+            "2021",
+            "<i><b>XGOLF·백제CC 점프투어 3차전 우승</b></i> <br>" +
+              "<i><b>그랜드·삼대인 점프투어 8차전 우승</b></i> <br>" +
+              "<i>그랜드·삼대인 점프투어 7차전 2위</i> <br>",
+          ],
+        ],
+      ],
       [
-        "818599469", 
-        "images/golf/player_lhj.png",
-        "임희정", 
-        "Lim Heejeong", 
+        "818599469",
+        "images/golf/player_lhj.jpg",
+        "임희정",
+        "Lim Heejeong",
         "“투어 중 어려운 상황에 직면해도 <br class='br_m'>항상 최선의 답을 찾아 <br class='br_pc'>‘해결하는(solve)’ <br class='br_m'>임희정이 되고 싶어요.”",
         "2000년 09월 02일",
         "2018년 10월",
@@ -689,30 +711,37 @@ let golfPlayers = {
         "임희정 프로",
         [
           [
-            '2021', '<i>맥콜·모나 용평 오픈 7위</i> <br>' +
-            '<i>롯데 오픈 8위</i> <br>' +
-            '<i>한화 클래식 2024 7위</i> <br>' +
-            '<i>SK텔레콤·SK쉴더스 챔피언십 8위</i>'
+            "2024",
+            "<i>맥콜·모나 용평 오픈 7위</i> <br>" +
+              "<i>롯데 오픈 8위</i> <br>" +
+              "<i>한화 클래식 2024 7위</i> <br>" +
+              "<i>SK텔레콤·SK쉴더스 챔피언십 8위</i>",
           ],
-          ['2023', '<i>상상인·한국경제TV 오픈 2023 2위</i>'],
-          ['2022', '<i><b>DB그룹 제36회 한국여자오픈 골프선수권대회 우승</b></i>'],
+          ["2023", "<i>상상인·한국경제TV 오픈 2023 2위</i>"],
           [
-            '2021', '<i>BMW Ladies Championship 2위</i> <br>' +
-            '<i>제21회 하이트진로 챔피언십 2위</i> <br>' +
-            '<i><b>국민쉼터 하이원 리조트 여자오픈 2021 우승</b></i> <br>' +
-            '<i>대유위니아∙MBN 여자오픈 2위</i> <br>'
+            "2022",
+            "<i><b>DB그룹 제36회 한국여자오픈 골프선수권대회 우승</b></i>",
           ],
           [
-            '2020', '<i>아이에스동서 부산오픈 2위</i> <br>' +
-            '<i>제42회 KLPGA 챔피언십 2위</i> <br>'
+            "2021",
+            "<i>BMW Ladies Championship 2위</i> <br>" +
+              "<i>제21회 하이트진로 챔피언십 2위</i> <br>" +
+              "<i><b>국민쉼터 하이원 리조트 여자오픈 2021 우승</b></i> <br>" +
+              "<i>대유위니아∙MBN 여자오픈 2위</i> <br>",
           ],
           [
-            '2019', '<i><b>KB금융 스타챔피언십 우승</b></i> <br>' +
-            '<i><b>올포유∙레노마 챔피언십 2019 우승</b></i> <br>' +
-            '<i><b>하이원리조트 여자오픈 2019 우승</b></i>'
-          ]
-        ]
-      ]
+            "2020",
+            "<i>아이에스동서 부산오픈 2위</i> <br>" +
+              "<i>제42회 KLPGA 챔피언십 2위</i> <br>",
+          ],
+          [
+            "2019",
+            "<i><b>KB금융 스타챔피언십 우승</b></i> <br>" +
+              "<i><b>올포유∙레노마 챔피언십 2019 우승</b></i> <br>" +
+              "<i><b>하이원리조트 여자오픈 2019 우승</b></i>",
+          ],
+        ],
+      ],
     ];
 
     // 각 선수 정보(개발반영시 변경 예상) - 영문
@@ -726,25 +755,75 @@ let golfPlayers = {
         "2012 5th Lotte Mart Ladies Open",
         "Professional golfer, <br>Hyunju Yoo",
         [
-          ['2020', '<i>25th place in the Jeju Samdasoo Masters</i>'],
-          ['2017', '<i>25th place in the 2017 MY Munyeong Queen’s Park Championship</i>'],
-          ['2016', '<i>27th place in the Phantom Classic with YTN</i>'],
-          ['2012', '<i>14th place in the BS Financial Group Busan BankㆍSeoul Economic Daily Women\'s Open</i>']
-        ]
+          [
+            "2024",
+            "<i>5th Place in the 2024 Norang Tongdak Q Capital Partners Dream Challenge Round 1</i>",
+          ],
+          ["2022", "<i>6th Place in the 2022 GA Korea Dream Tour Round 2</i>"],
+          [
+            "2021",
+            "<i>14th Place in the 2021 Muan CC · All For You Dream Tour Round 4</i>",
+          ],
+          ["2020", "<i>25th place in the Jeju Samdasoo Masters</i>"],
+          [
+            "2017",
+            "<i>25th place in the 2017 MY Munyeong Queen’s Park Championship</i>",
+          ],
+          ["2016", "<i>27th place in the Phantom Classic with YTN</i>"],
+          [
+            "2012",
+            "<i>14th place in the BS Financial Group Busan BankㆍSeoul Economic Daily Women's Open</i>",
+          ],
+        ],
       ],
       // 유효주 프로
       [
         "Hyoju Yoo",
-        "“I wanna ‘live’ happily ever after with the golf and someday get Doosan We've to settle on.”",
+        "“I want to 'live' joyfully with golf, my lifelong companion, and someday, I want to have my own home in We've and live happily.”",
         "Apr. 21. 1997",
         "Oct. 2015",
         "2017 Lotte Rent-a-Car Ladies Open",
         "Professional golfer, <br>Hyoju Yoo",
         [
-          ['2022', '<i><b>Winner in the WEMIX Championship with Wow Management Group SBS Golf</b></i>'],
-          ['2021', '<i>7th place in the Lotte Open</i>'],
-          ['2017', '<i>3rd place in the KB Financial Star Championship</i>']
-        ]
+          ["2024", "<i>9th Place in the 2024 Doosan Match Play</i>"],
+          [
+            "2022",
+            "<i><b>Winner in the WEMIX Championship with Wow Management Group SBS Golf</b></i>",
+          ],
+          ["2021", "<i>7th place in the Lotte Open</i>"],
+          ["2017", "<i>3rd place in the KB Financial Star Championship</i>"],
+        ],
+      ],
+      // 이율린 프로
+      [
+        "Lee Yoollyn",
+        "“When I play golf on the field, I feel the most 'live'. The field is a space that gives me joy.”",
+        "Dec. 29. 2002",
+        "Aug. 2022",
+        "2023 Lette Rent a car Ladies Open",
+        "Professional golfer, <br>Lee Yoollyn",
+        [
+          [
+            "2024",
+            "<i>1st Place in the KLPGA 2025 Regular Tour Seed Ranking Tournament</i><br>" +
+              "<i><b>2nd Place in the Deokshin EPC · Seoul Economic Ladies Classic</b></i><br>" +
+              "<i>15th Place in the Nexen Saintnine Masters 2024</i>",
+          ],
+          [
+            "2023",
+            "<i>7th Place in the Dongbu Construction · Korea Land Trust Championship</i>",
+          ],
+          [
+            "2021",
+            "<i>3rd Place in the Kang Min-goo Cup 45th Korea Women’s Amateur Golf Championship</i>",
+          ],
+          [
+            "2020",
+            "<i><b>1st Place in the National Team Selection Tournament (Women’s Division)</b></i><br>" +
+              "<i>Winner in the 11th KLPGA President’s Cup Women’s Amateur Golf Championship</i><br>" +
+              "<i>2nd Place in the Kang Min-goo Cup 44th Korea Women’s Amateur Golf Championship</i>",
+          ],
+        ],
       ],
       // 박결 프로
       [
@@ -755,48 +834,116 @@ let golfPlayers = {
         "2015 8th Lotte Mart Ladies Open",
         "Professional golfer, <br>Gyeol Park",
         [
-          ['2023', '<i>2nd place in the 45th CreaS F&C KLPGA Championship</i>'],
-          ['2022', '<i>3rd place in the 2022 Nexen∙SaintNine Masters</i>'],
-          ['2021', '<i>9th place in the Celltrion Queens Masters</i>'],
-          ['2020', '<i>6th place in the 14th S-OIL Championship</i>'],
-          ['2019', '<i>6th place in the 8th KG∙Edaily Ladies Open with KFC</i>'],
+          ["2024", "<i>3rd Place in the 12th E1 Charity Open</i>"],
           [
-            '2018', '<i><b>Winner in the SK Networks∙Seoul Economic Daily Ladies Classic</b></i> <br>' +
-          '<i>2nd place in the 12th S-OIL Championship</i> <br>' +
-          '<i>2nd place in the 2018 Hyosung Championship with SBS</i>'
+            "2023",
+            "<i>대보하우스디 오픈 4위</i><br>" +
+              "<i>에버콜라겐·더시에나 퀸즈 크라운 2923 3위</i><br>" +
+              "<i>제45회 크리스 F&C KLPGA 챔피언십 2위</i>",
           ],
-          ['2017', '<i>2nd place in the 2017 Samchuly Together Open</i>'],
-          ['2016', '<i>2nd place in the 2016 ChoJung Sparkling Water Yongpyong Resort Open with SBS</i>'],
+          ["2022", "<i>3rd place in the 2022 Nexen∙SaintNine Masters</i>"],
           [
-            '2015', '<i>2nd place in the 16th Hite Jinro Championship</i> <br>' +
-          '<i>2nd place in the 2015 NH Investment & Securities Ladies Championship</i>'
-          ]
-        ]
+            "2018",
+            "<i><b>Winner in the SK Networks∙Seoul Economic Daily Ladies Classic</b></i> <br>" +
+              "<i>2nd place in the 12th S-OIL Championship</i> <br>" +
+              "<i>2nd place in the 2018 Hyosung Championship with SBS</i>",
+          ],
+          ["2017", "<i>2nd place in the 2017 Samchuly Together Open</i>"],
+          [
+            "2016",
+            "<i>2nd place in the 2016 ChoJung Sparkling Water Yongpyong Resort Open with SBS</i>",
+          ],
+          [
+            "2015",
+            "<i>2nd place in the 16th Hite Jinro Championship</i> <br>" +
+              "<i>2nd place in the 2015 NH Investment & Securities Ladies Championship</i>",
+          ],
+          [
+            "2014",
+            "<i><b>인천아시안게임 여자골프 개인전 금메달</b></i> <br>" +
+              "<i>인천아시안게임 여자골프 단체전 은메달</i>",
+          ],
+        ],
       ],
       // 김민솔 선수
       [
         "Minsol Kim",
         "“I think I still need to be improved. So, I wanna ‘save’ all aspects well, like physical strength, skills, mental management, like steadily saving strokes one by one.”",
         "Jun. 15. 2006",
-        " ",
+        "July 2024",
         " ",
         "Amateur golfer, <br>Minsol Kim",
         [
-          ['2023', '<i>2nd place in the 5th WAAP (Women\'s Amateur Asia Pacific Championships)</i>'],
           [
-            '2022', '<i>3rd place in the 103rd National Sports Festival</i> <br>' +
-          '<i><b>Winner in the 29th Song Am Cup Amateur Golf Championship</b></i> <br>' +
-          '<i><b>Winner in the 39th Blueone Cup Korea Junior Golf Championship</b></i> <br>' +
-          '<i>3rd place in the 46th Kangmingu Cup Korea Women\'s Amateur Golf Championship</i> <br>' +
-          '<i>4th place in the 20th Bitgoeul Jungheung Cup Amateur Golf Championship</i> <br>' +
-          '<i>5th place in the 1st Korea Golf Association President Cup Amateur Golf Championship</i>'
+            "2024",
+            "<i>8th Place in the Doosan Construction We've Championship</i><br>" +
+              "<i>2nd Place in the 10th Kyochon 1991 Ladies Open</i>",
           ],
           [
-            '2021', '<i>6th place in the 14th KB Financial Group Cup Women’s Amateur Golf Championship</i> <br>' +
-          '<i>4th place in the 25th Maekyung Sollago Cup Amateur Golf Championship</i>'
+            "2023",
+            "<i><b>Winner in the Team Event at the Abu Dhabi World Championship</b></i><br>" +
+              "<i><b>제104회 전국체육대회 개인전 우승</b></i><br>" +
+              "<i>제19회 항저우 아시안게임 여자골프 단체전 은메달</i><br>" +
+              "<i>OK금융그룹 읏맨 오픈 5위</i><br>" +
+              "<i>두산건설 We've 챔피언십 9위</i><br>" +
+              "<i><b>제4회 드림파크배 아마추어골프선수권 대회 우승</b></i><br>" +
+              "<i>DB그룹 제37회 한국여자오픈 골프선수권대회 4위</i><br>" +
+              "<i>아시아 태평양 여자 아마추어 챔피언십(WAAP) 2위</i><br>",
           ],
-          ['2020', '<i>3rd place in the 27th Song Am Cup Amateur Golf Championship</i>']
-        ]
+          [
+            "2022",
+            "<i>LPGA BMW 레이디스 챔피언십 10위</i> <br>" +
+              "<i><b>제29회 송암배 아마추어골프선수권대회 우승</b></i> <br>" +
+              "<i><b>블루원배 제39회 한국주니어골프선수권대회 우승</b></i> <br>" +
+              "<i>강민구배 제46회 한국여자아마추어골프선수권대회 3위</i> <br>",
+          ],
+          // [
+          //   "2021",
+          //   "<i>6th place in the 14th KB Financial Group Cup Women’s Amateur Golf Championship</i> <br>" +
+          //     "<i>4th place in the 25th Maekyung Sollago Cup Amateur Golf Championship</i>",
+          // ],
+          // [
+          //   "2020",
+          //   "<i>3rd place in the 27th Song Am Cup Amateur Golf Championship</i>",
+          // ],
+        ],
+      ],
+      // 박해준 선수
+      [
+        "Park Hyejun",
+        "“In golf, it is important to 'save' a stroke even in difficult situations. That’s why I want to be a player who wisely saves my score even in moments of crisis.”",
+        "May 20. 2003",
+        "Aug. 2021",
+        "2022 Lette Rent a car Ladies Open",
+        "Amateur golfer, <br>Park Hyejun",
+        [
+          [
+            "2024",
+            "<i><b>2nd Place in the Doosan Construction We've Championship</b></i><br>" +
+              "<i><b>2nd Place in the 11th Jeju Samdasoo Masters</b></i><br>" +
+              "<i>4th Place in the Dongbu Construction · Korea Land Trust Championship</i><br>" +
+              "<i>8th Place in the NH Investment & Securities Ladies Championship</i>",
+          ],
+          [
+            "2023",
+            "<i>2nd Place in the MC Square · Gunsan CC Dream Tour Round 2</i><br>" +
+              "<i>3rd Place in the Dream Tour Round 5</i><br>" +
+              "<i>3rd Place in the Dream Tour Round 13</i><br>" +
+              "<i>4th Place in the SBS Golf · Lotte Open Dream Tour</i><br>",
+          ],
+          [
+            "2022",
+            "<i>3rd Place in the GA Korea Dream Tour Round 2</i> <br>" +
+              "<i>4th Place in the Tolvlist · Phoenix CC Dream Tour Round 11</i> <br>" +
+              "<i>5th Place in the Tolvlist · Phoenix CC Dream Tour Round 55</i> <br>",
+          ],
+          [
+            "2021",
+            "<i><b>Winner in the XGOLF · Baekje CC Jump Tour Round 3</b></i> <br>" +
+              "<i><b>Winner in the Grand · Samdain Jump Tour Round 8</b></i> <br>" +
+              "<i>2nd Place in the Grand · Samdain Jump Tour Round 7</i> <br>",
+          ],
+        ],
       ],
       // 임희정 프로
       [
@@ -807,25 +954,38 @@ let golfPlayers = {
         "2018 Hyosung Championship",
         "Professional golfer, <br>Heejeong Lim",
         [
-          ['2023', '<i>5th place in the Nexen∙Saintnine Masters</i>'],
-          ['2022', '<i><b>Winner in the DB Group 36th Korea Women’s Open Golf Championships</b></i>'],
           [
-            '2021', '<i>2nd place in the BMW Ladies Championship</i> <br>' +
-          '<i>2nd place in the 21st Hite Jinro Championship</i> <br>' +
-          '<i><b>Winner in the 2021 High1 Resort Ladies Open</b></i> <br>' +
-          '<i>2nd place in the Dayouwinia∙MBN Ladies Open</i> <br>'
+            "2024",
+            "<i>7th Place in the McCol · Mona Yongpyong Open</i> <br>" +
+              "<i>8th Place in the Lotte Open</i> <br>" +
+              "<i>7th Place in the Hanwha Classic 2024</i> <br>" +
+              "<i>8th Place in the SK Telecom · SK Shields Championship</i>",
+          ],
+          ["2023", "<i>5th place in the Nexen∙Saintnine Masters</i>"],
+          [
+            "2022",
+            "<i><b>Winner in the DB Group 36th Korea Women’s Open Golf Championships</b></i>",
           ],
           [
-            '2020', '<i>2nd place in the 2020 IS Dongseo Busan Open</i> <br>' +
-          '<i>2nd place in the 42nd KLPGA Championship</i> <br>'
+            "2021",
+            "<i>2nd place in the BMW Ladies Championship</i> <br>" +
+              "<i>2nd place in the 21st Hite Jinro Championship</i> <br>" +
+              "<i><b>Winner in the 2021 High1 Resort Ladies Open</b></i> <br>" +
+              "<i>2nd place in the Dayouwinia∙MBN Ladies Open</i> <br>",
           ],
           [
-            '2019', '<i><b>Winner in the 2019 KB Financial Group Star Championship</b></i> <br>' +
-          '<i><b>Winner in the 2019 All For You∙Renoma Championship</i> <br>' +
-          '<i><b>Winner in the 2019 High1 Resort Ladies Open</b></i>'
-          ]
-        ]
-      ]
+            "2020",
+            "<i>2nd place in the 2020 IS Dongseo Busan Open</i> <br>" +
+              "<i>2nd place in the 42nd KLPGA Championship</i> <br>",
+          ],
+          [
+            "2019",
+            "<i><b>Winner in the 2019 KB Financial Group Star Championship</b></i> <br>" +
+              "<i><b>Winner in the 2019 All For You∙Renoma Championship</i> <br>" +
+              "<i><b>Winner in the 2019 High1 Resort Ladies Open</b></i>",
+          ],
+        ],
+      ],
     ];
 
     // ●● let ●● 아이프레임 정보
