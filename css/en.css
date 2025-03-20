@@ -172,11 +172,19 @@
 .sr.en .board_inner li > span { position: absolute; left: 1rem; top: 4.5rem; }
 .sr.en .certList ul li dl dd:not(:last-child) { display: flex; }
 .sr.en .certList ul li dl dd:not(:last-child)::before { position: relative; top: 1.7rem; }
-.sr.en .certList ul li dl dd:last-child a { width: 25rem; }
+.sr.en .certList ul li dl dd:last-child a { width: 25rem;}
 
 /* Principles of Social Responsibility */
 .sr.en .prologue .banner { padding: 9.5rem 13.6rem 0; }
 .sr.en .prologue .board_inner li > span { top: unset; }
+.sr.en .esg_section01_wrap .esg_section01 .esg_section01_purple .blue_txt02{width: 38.7rem;  max-height: 10rem; border-radius: 5rem!important; padding-left: 5.5rem!important; text-align: left;}
+.sr.en .esg_section01_wrap .esg_section01 .esg_section01_sky ul li{height: 11rem; border-radius: 5.5rem;}
+.sr.en .blue_txt02 span:last-child::before {top: 24%; left:-13px;}
+.sr.en .esg_section01_wrap .esg_section01 .esg_section01_green ul li p::before{content: none;}
+.sr.en .esg_section01_wrap .esg_section01 .esg_section01_green ul li p del{text-decoration: none;}
+.sr.en .esg_section01_wrap .esg_section01 .esg_section01_green ul li p del::before{content: ''; display: inline-block; width: 5px; height: 5px; background-color: #00ad83; position: absolute; left: -14px; top: 42%; transform: rotate(15deg);}
+.sr.en .esg_section01_wrap .esg_section01 .esg_section01_green ul li p span::before{ content: ''; display: inline-block; width: 5px; height: 5px; background-color: #00ad83; position: absolute; left: -14px; top: 21%; transform: rotate(15deg);}
+.sr.en .esg_section01_wrap .esg_section01 .esg_section01_purple .ellipse {font-weight: 300;}
 
 /* Safety and Health Management */
 .sr.en .hsm .section02 ul li { width: calc(100% / 3); height: auto; }

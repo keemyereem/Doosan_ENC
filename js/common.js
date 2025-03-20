@@ -2206,3 +2206,55 @@ var policyEvent = {
     });
   },
 };
+
+// 지속가능경영 체계 모바일 아코디언
+document.addEventListener("DOMContentLoaded", () => {
+  const accordionButton = $('.accordion-list .accordion-item > .accordion-link');
+  
+  accordionButton.on('click', function(e) {
+    e.preventDefault();
+    const $this = $(this);
+    const target = $this.parent();
+    const description = $this.siblings('.accordion-desc');
+    const other = target.siblings('.accordion-item');
+    const otherDescription = other.find('.accordion-desc');
+    
+    accordionToggle(target, description, other, otherDescription);
+  });
+
+  function accordionToggle(target, description, other, otherDescription) {
+    if (target.hasClass('active')) {
+      target.removeClass('active');
+      description.stop().slideUp(300);
+    } else {
+      target.addClass('active');
+      description.stop().slideDown(300);
+    }
+
+    if (other && otherDescription) {
+      other.removeClass('active');
+      otherDescription.stop().slideUp(300);
+    }
+  }
+});
+
+
+// 지속가능경영 모바일 팝업
+document.addEventListener("DOMContentLoaded", () => {
+  const ergMobileButton = $('.esg_section01_wrap .esg_section01 .view_more');
+  const popupCloseButton = $('.erg_popup .close_btn');
+
+  ergMobileButton.on('click', function(e) {
+    e.preventDefault();
+    console.log('a');
+    const popup = $('.erg_popup');
+    popup.addClass('on');
+  });
+
+  popupCloseButton.on('click', function(e) {
+    e.preventDefault();
+    console.log('a');
+    const popup = $('.erg_popup');
+    popup.removeClass('on');
+  });
+});

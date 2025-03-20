@@ -37,7 +37,7 @@
 
 /* 공통 */
 @media screen and (max-width:767px) {
-    .pc {display: none;}
+    .pc {display: none!important;}
     .mo {display: block;}
     /* popNoti */
     .popNoti {right: initial;left: 50%;top: 10rem;transform: translate(-50%, 0);box-shadow: 2.5px 4.5px 27px 3px rgba(0, 0, 0, 0.2);}
@@ -1410,7 +1410,7 @@
 
 /* 공통 */
 #mobile .sr .sub_visual { background-image: url(../images/social/sr_bg_m.jpg); }
-#mobile .sr .contents { max-width: 100%; width: calc(100% - 4rem); }
+#mobile .sr .contents { max-width: 100%; width: calc(100% - 2rem); }
 #mobile .sr .btn_mob { display: block; }
 #mobile .sr section > h3 { font-size: 2.4rem; padding-bottom: 3.75rem; }
 #mobile .sr .board { width: calc(100% - 2rem); margin: 0 auto 5.5rem; box-shadow: .1rem .15rem 2.5rem 0 rgba(41, 41, 41, 0.2); border-top: .6rem solid #005eb8; padding: 5.35rem 0 4.5rem; }
@@ -1445,14 +1445,49 @@
 #mobile .sr .social_pc_img { display: none; }
 
 /* 프롤로그(사회책임경영 원칙) */
-/* #mobile .sr .prologue { box-shadow: .1rem .15rem 2.5rem 0 rgba(41, 41, 41, 0.2); margin-bottom: 10rem; margin-top: 3.5rem; }
-#mobile .sr .prologue .banner { background: linear-gradient(145deg, #C1BAB3 40%, #CBC6C2 60%); padding: 4.5rem 2.6rem 0; height: 36rem; }
-#mobile .sr .prologue .banner h2 { font-size: 3.5rem; }
-#mobile .sr .prologue .banner p { font-size: 1.5rem; line-height: 1.53; padding-top: 1.5rem; }
-#mobile .sr .prologue .banner img { right: -1rem; }
-#mobile .sr .prologue .board_inner { margin: 0 2rem 0; padding-bottom: 1rem; }
-#mobile .sr .prologue .board_inner li { padding: 2.5rem 0; margin: 0; font-size: 1.6rem; line-height: 1.5; flex-direction: column; align-items: flex-start; }
-#mobile .sr .prologue .board_inner li p { width: 100%; } */
+#mobile .esg_section01_wrap {margin-top: 5.5rem;}
+#mobile .esg_section01_wrap .esg_section01 {padding:5.5rem 0;}
+.esg_section01_wrap .esg_section01 .mo{position: relative;}
+.esg_section01_wrap .esg_section01 .view_more{width:75px; height:75px; position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); display: none;}
+#mobile .esg_section01_wrap .esg_section01 .view_more{width:7.5rem; height:7.5rem; position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); display: block;}
+#mobile .esg_section01_wrap .esg_section01 h3 {font-size:2.4rem; margin-bottom: 3rem;}
+#mobile .esg_section02 {padding: 5.5rem 0 5rem 0;}
+#mobile .esg_section02 h3 {font-size: 2.4rem; line-height: 2rem;margin-bottom: 3.5rem;}
+
+/* 아코디언 메뉴 */
+.erg_popup {position: absolute; width: 100%; height: 100%; position: fixed; left: 0; top: 0; z-index: 9999; background: #fff; justify-content: center; align-items: center; display: none;}
+.erg_popup.on {display: flex;}
+.erg_popup .close_btn {width:52.5px; height: 52px; position: absolute; top: 5rem; left: 50%; transform: translate(-50%, 0);}
+.esg_section02 .accordion-list li:first-child .accordion-link{background-color: #f2f7fb;}
+.esg_section03 .accordion-list li:first-child .accordion-link{background-color: #f2fbf9;}
+.accordion-list {border-top: 1px solid #e8e8e8;}
+.accordion-list .accordion-item.active {border-bottom: 1px solid #ddd;}
+.accordion-list .accordion-item .accordion-link {display: block; position: relative; padding: 14.5px; border-bottom: 1px solid #ddd; transition: all 0.3s;}
+.accordion-list .accordion-item.active .accordion-link {background-color: #fff;}
+.accordion-list .accordion-item .accordion-link::before {content: ""; position: absolute; top:50%; right: 1.5rem; border-left: .5rem solid transparent; border-right: .5rem solid transparent; border-top: .5rem solid #222222;     transform: translate(0, -50%); transition: 0.2s ease-in;}
+.accordion-list .accordion-item.active .accordion-link::before {border-left: .5rem solid transparent;
+border-right: .5rem solid transparent;border-top: .5rem solid #222; transform: rotate(-180deg);}
+.accordion-list .accordion-name {position: relative; width: calc(100% - 50px); font-size: 13.5px; font-weight: 200;}
+.accordion-list .accordion-name .bold{margin-right:10px; font-weight: bold;}
+.accordion-list .accordion-name .icon {display: inline-block; position: absolute; top: 3px; left: 0; font-family: 'gmarket'; font-weight: bold; font-size: 17px; color: #15989f; vertical-align: middle;}
+.accordion-list .accordion-item .accordion-desc {display: none; color: #222;}
+.accordion-list .accordion-item .accordion-desc ul{display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px 0px; border-bottom: 1px solid #e8e8e8; padding: 16px 14.5px}
+.accordion-list .accordion-item .accordion-desc ul:last-child{border-bottom: none;}
+.accordion-list .accordion-item .accordion-desc ul li{font-size: 13px; font-weight: 200; line-height: 1.8rem;}
+.accordion-list .accordion-item .accordion-desc ul li .montserrat {letter-spacing: 0.2px;}
+.accordion-list .accordion-item .accordion-desc ul li .sub_t{font-size: 12px; color: #777; display: flex; align-items: center; justify-content: left; gap: 10px;}
+.accordion-list .accordion-item .accordion-desc ul li .f10 {font-size: 9px;}
+.accordion-list .accordion-item .accordion-desc ul .number{display: flex; justify-content: left; gap: 5px;}
+.accordion-list .accordion-item .accordion-desc ul li .sub_txt {display: flex; align-items: center; justify-content: left; color:#777777; font-size: 12px;}
+.accordion-list .accordion-item .accordion-desc ul li .sub_txt2 {display: flex; align-items: center; justify-content: left; color:#777777; font-size: 12px;}
+.accordion-list .accordion-item .accordion-desc ul li .sub_txt::before { content: ''; width: 4px; height: 4px; display: block; border-radius: 100%; background-color: #d9dfe9; margin-right: 10px;}
+.accordion-list .accordion-item .accordion-desc ul li .sub_txt2::before { content: ''; width: 4px; height: 4px; display: block; border-radius: 100%; background-color: #d9dfe9; margin-right: 10px; margin-bottom: 17px;}
+.aco_title { display: none; align-items: center; justify-content: center; color:#222; font-size: 13px; font-weight: 400; height:4rem;}
+#mobile .aco_title {display: flex;}
+.aco_blue { background-color: #e5eff8; border-top: 2px solid #005eb8;}
+.aco_green { background-color: #e5f7f2; border-top: 2px solid #00ad83;}
+.bold{font-weight: 400!important;}
+
 
 /* 안전보건경영 */
 #mobile .sr .hsm { width: 100%; margin-top: 5.5rem; padding-top: 5.5rem; }

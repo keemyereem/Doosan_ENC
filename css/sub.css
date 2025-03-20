@@ -1433,6 +1433,9 @@
 
 /* 프롤로그(사회책임경영 원칙) */
 /* ESG section01 */
+.montserrat{font-family: 'Montserrat';}
+.erg_popup{display: none;}
+#mobile .esg_section01_wrap .esg_section01 .view_more{display:none;}
 .esg_section01_wrap {background-color: #f9f9f9;}
 .esg_section01_wrap .esg_section01 {color:#fff; padding: 12rem 0;}
 .esg_section01_wrap .esg_section01 h3{font-family: 'Montserrat'; color:#0c1014; line-height: 4rem; font-weight: bold; font-size: 3.8rem; text-align: center; margin-bottom: 7.8rem;}
@@ -1441,6 +1444,10 @@
 .esg_section01_wrap .esg_section01 .esg_section01_purple .ellipse{width:26rem; padding:23px 0;background: #eaeaea; border-radius: 3.5rem; text-align: center; font-size: 2rem;}
 .esg_section01_wrap .esg_section01 .esg_section01_purple .blue{background-color:#005eb8;}
 .esg_section01_wrap .esg_section01 .esg_section01_purple .sky{background-color:#00a5d7; font-family: 'Montserrat'; font-weight: 300;}
+.esg_section01_wrap .esg_section01 .esg_section01_blue,
+.esg_section01_wrap .esg_section01 .esg_section01_purple,
+.esg_section01_wrap .esg_section01 .esg_section01_sky,
+.esg_section01_wrap .esg_section01 .esg_section01_green{min-width: 1415px; }
 .esg_section01_wrap .esg_section01 .esg_section01_purple,
 .esg_section01_wrap .esg_section01 .esg_section01_sky,
 .esg_section01_wrap .esg_section01 .esg_section01_green{padding: 60px; position: relative;}
@@ -1449,6 +1456,8 @@
 .esg_section01_wrap .esg_section01 .esg_section01_blue span{font-size: 2.8rem; font-weight: 400;}
 .esg_section01_wrap .esg_section01 .esg_section01_blue .label{font-family: 'Montserrat';flex-shrink: 0;}
 .esg_section01_wrap .esg_section01 .esg_section01_blue .text{flex-grow: 1; text-align: center;}
+.esg_section01_wrap .esg_section01 .scroll-x-wrap {overflow-x: scroll;}
+.esg_section01_wrap .esg_section01 .scroll-x-wrap::-webkit-scrollbar{display:none;}
 .esg_section01_wrap .esg_section01 .esg_section01_purple{background-color: #ecf1f6; margin-bottom: 2rem; border-radius: 4rem; display: flex; width: 100%; height: 64.5rem;}
 .esg_section01_wrap .esg_section01 .esg_section01_purple .list_tip_stick{background: #005eb8;}
 .esg_section01_wrap .esg_section01 .esg_section01_purple .list_tip_tit{font-family: 'Montserrat';}
@@ -1478,11 +1487,12 @@
 .esg_section01_wrap .esg_section01 .esg_section01_sky ul li{width:26rem; height:70px; background-color:#fff; color:#00a5d7; border: 1px solid #00a5d7; border-radius: 3.5rem; display: flex; justify-content: center; align-items: center; text-align: center; font-size: 1.8rem; font-weight:300;}
 .esg_section01_wrap .esg_section01 .esg_section01_sky .list_tip_stick{background-color: #00a5d7; margin-right: 125px;}
 .esg_section01_wrap .esg_section01 .esg_section01_green{background-color: #ecf5f3; border-radius: 4rem; border-radius: 4rem; display: flex;}
-.esg_section01_wrap .esg_section01 .esg_section01_green .list_tip_stick{background-color: #00ad83; margin-right: 129px;}
+.esg_section01_wrap .esg_section01 .esg_section01_green .list_tip_stick{background-color: #00ad83; margin-right: 125px;}
 .esg_section01_wrap .esg_section01 .esg_section01_green ul{display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px}
 .esg_section01_wrap .esg_section01 .esg_section01_green ul li{padding:32px 48px; background-color: #fff; border:1px solid #00ad83; color:#555; font-size:1.8rem; line-height: 3.6rem; border-radius: 2rem; width: 26rem;}
 .esg_section01_wrap .esg_section01 .esg_section01_green ul li p{position:relative;}
-.esg_section01_wrap .esg_section01 .esg_section01_green ul li p::before{content:''; display:inline-block; width:5px; height:5px; border-radius: 100%; background-color: #00ad83; position: absolute; left:-11px;top: 50%; transform: translate(0, -50%);}
+.esg_section01_wrap .esg_section01 .esg_section01_green ul li p .montserrat {font-weight: 300;}
+.esg_section01_wrap .esg_section01 .esg_section01_green ul li p::before{content:''; display:inline-block; width:5px; height:5px; background-color: #00ad83; position: absolute; left:-14px;top: 42%; transform: rotate(15deg);}
 .blue_txt01{position:absolute; top: 192px; left: 50%; transform: translate(-50%, 0);}
 .blue_txt01::before{content: ''; display: block; width: 3px; height: 3px; border-radius: 100%; border: 2px solid #555; background: #fff;    position: absolute; top: -2.5px;left: 50%; transform: translate(-50%, 0);}
 .blue_txt01::after{content: ''; display: block; width: 3px; height: 3px; border-radius: 100%; border: 2px solid #555; background: #fff; position: absolute; bottom: -2.5px;left: 50%; transform: translate(-50%, 0);}
@@ -1491,17 +1501,21 @@
 .blue_txt02::after{content: ''; width: 32px; height: 0.1rem; background-color: #555; position: absolute; top: 50%; left: -35px; transform: translate(0%, -50%);}
 .blue_txt02 span:last-child{font-size: 1.8rem; opacity: 0.5; position: relative;}
 .blue_txt02 span:last-child::before{content:''; display:inline-block; width:5px; height:5px; border-radius: 100%; background-color: #fff; opacity: 0.5; position: absolute; left:-11px;top: 50%; transform: translate(0, -50%);}
+.aco_title{display:none;}
 /* ESG 테이블*/
 .esg_table table { border: 1px solid #e8e8e8; font-size: 16px; border-collapse: collapse; color: #222;}
 .esg_table table thead { border-top: 2px solid; height: 7.2rem; text-align: center; font-weight: bold; }
 .esg_table tbody td{line-height: 2.4rem;}
 .esg_table tbody td.tac {text-align: center;}
+.esg_table tbody td.montserrat{font-weight: 300;}
 .esg_table tbody td .sub_t { display: block; font-size: 14px; color: #777; display: flex;align-items: center;justify-content: left;gap: 10px; }
-.esg_table tbody td .sub_txt { display: block; font-size: 14px; color: #777; display: flex;align-items: center;justify-content: left;gap: 10px;}
-.esg_table tbody td .sub_txt::before{content:''; width:5px; height: 5px; display: block; border-radius: 100%;background-color: #d9dfe9; }
+.esg_table tbody td .sub_txt { display: block; font-size: 14px; color: #777; display: flex;align-items: center;justify-content: left;}
+.esg_table tbody td .sub_txt::before{content:''; width:5px; height: 5px; display: block; border-radius: 100%;background-color: #d9dfe9; margin-right: 10px;}
 .esg_table tbody tr td .number { display: flex; align-items: center; justify-content: left; gap: 5px; }
-.esg_table tbody tr td .number span{ font-size: 10px;  }
+.esg_table tbody tr td .number span.f10{ font-size: 10px;  }
+.esg_table tbody tr td .montserrat{ font-weight: 300;  }
 .esg_table tbody td[rowspan] { vertical-align: middle; }
+.esg_table table thead tr th{font-weight:400;}
 .esg_table table thead tr th:first-child {width: 12rem;}
 .esg_table table thead tr th:nth-child(2) {width: 19rem; }
 .esg_table table thead tr th:nth-child(3) {width: 31.8rem; }
