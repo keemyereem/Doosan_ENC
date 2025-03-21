@@ -837,9 +837,9 @@ let golfPlayers = {
           ["2024", "<i>3rd Place in the 12th E1 Charity Open</i>"],
           [
             "2023",
-            "<i>대보하우스디 오픈 4위</i><br>" +
-              "<i>에버콜라겐·더시에나 퀸즈 크라운 2923 3위</i><br>" +
-              "<i>제45회 크리스 F&C KLPGA 챔피언십 2위</i>",
+            "<i>4th Place in the Daebo HausD Open</i><br>" +
+              "<i>3rd Place in the Evercollagen · The Siena Queen’s Crown 2923</i><br>" +
+              "<i>2nd Place in the 45th Chris F&C KLPGA Championship</i>",
           ],
           ["2022", "<i>3rd place in the 2022 Nexen∙SaintNine Masters</i>"],
           [
@@ -860,8 +860,8 @@ let golfPlayers = {
           ],
           [
             "2014",
-            "<i><b>인천아시안게임 여자골프 개인전 금메달</b></i> <br>" +
-              "<i>인천아시안게임 여자골프 단체전 은메달</i>",
+            "<i><b>Gold Medal in Women's Individual Golf at the Incheon Asian Games</b></i> <br>" +
+              "<i>Silver Medal in Women's Team Golf at the Incheon Asian Games</i>",
           ],
         ],
       ],
@@ -882,30 +882,21 @@ let golfPlayers = {
           [
             "2023",
             "<i><b>Winner in the Team Event at the Abu Dhabi World Championship</b></i><br>" +
-              "<i><b>제104회 전국체육대회 개인전 우승</b></i><br>" +
-              "<i>제19회 항저우 아시안게임 여자골프 단체전 은메달</i><br>" +
-              "<i>OK금융그룹 읏맨 오픈 5위</i><br>" +
-              "<i>두산건설 We've 챔피언십 9위</i><br>" +
-              "<i><b>제4회 드림파크배 아마추어골프선수권 대회 우승</b></i><br>" +
-              "<i>DB그룹 제37회 한국여자오픈 골프선수권대회 4위</i><br>" +
-              "<i>아시아 태평양 여자 아마추어 챔피언십(WAAP) 2위</i><br>",
+              "<i><b>1st Place in the Individual Event at the 104th National Sports Festival</b></i><br>" +
+              "<i>Silver Medal in Women's Team Golf at the 19th Hangzhou Asian Games</i><br>" +
+              "<i>5th Place in the OK Financial Group Eunman Open</i><br>" +
+              "<i>9th Place in the Doosan Engineering & Construction We've Championship</i><br>" +
+              "<i><b>1st Place in the 4th Dream Park Amateur Golf Championship</b></i><br>" +
+              "<i>4th Place in the 37th DB Group Korea Women's Open Golf Championship</i><br>" +
+              "<i>2nd Place in the Asia-Pacific Women's Amateur Championship (WAAP)</i><br>",
           ],
           [
             "2022",
-            "<i>LPGA BMW 레이디스 챔피언십 10위</i> <br>" +
-              "<i><b>제29회 송암배 아마추어골프선수권대회 우승</b></i> <br>" +
-              "<i><b>블루원배 제39회 한국주니어골프선수권대회 우승</b></i> <br>" +
-              "<i>강민구배 제46회 한국여자아마추어골프선수권대회 3위</i> <br>",
+            "<i>10th Place in the LPGA BMW Ladies Championship</i> <br>" +
+              "<i><b>1st Place in the 29th Song-Am Cup Amateur Golf Championship</b></i> <br>" +
+              "<i><b>1st Place in the 39th BlueOne Korea Junior Golf Championship</b></i> <br>" +
+              "<i>3rd Place in the 46th Kang Min Koo Korea Women's Amateur Golf Championship</i> <br>",
           ],
-          // [
-          //   "2021",
-          //   "<i>6th place in the 14th KB Financial Group Cup Women’s Amateur Golf Championship</i> <br>" +
-          //     "<i>4th place in the 25th Maekyung Sollago Cup Amateur Golf Championship</i>",
-          // ],
-          // [
-          //   "2020",
-          //   "<i>3rd place in the 27th Song Am Cup Amateur Golf Championship</i>",
-          // ],
         ],
       ],
       // 박해준 선수
@@ -961,7 +952,7 @@ let golfPlayers = {
               "<i>7th Place in the Hanwha Classic 2024</i> <br>" +
               "<i>8th Place in the SK Telecom · SK Shields Championship</i>",
           ],
-          ["2023", "<i>5th place in the Nexen∙Saintnine Masters</i>"],
+          ["2023", "<i>2nd Place in the SangSangin · Korea Economic TV Open 2023</i>"],
           [
             "2022",
             "<i><b>Winner in the DB Group 36th Korea Women’s Open Golf Championships</b></i>",
