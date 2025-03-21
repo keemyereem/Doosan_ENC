@@ -189,6 +189,8 @@
 .sr.en .esg_table table thead tr th:nth-child(3) {width: 34.8rem;}
 .sr.en .esg_table table thead tr th:nth-child(4) {width: 45.1rem;}
 .sr.en .esg_table tbody td {font-weight: 300;}
+.sr.en .esg_table tbody tr td .number span.mb-50{margin-bottom: 50px;}
+.sr.en .esg_table tbody tr td .number span.mb-25{margin-bottom: 25px;}
 .sr.en .esg_table tbody td .sub_txt {font-weight: 200;}
 .sr.en .esg_table tbody td .sub_txt2 {display: block; font-size: 14px; color: #777; display: flex; align-items: center; justify-content: left; font-weight: 200;}
 .sr.en .esg_table tbody td .sub_txt2::before { content: ''; width: 5px; height: 5px; display: block; border-radius: 100%; background-color: #d9dfe9; margin-right: 10px; margin-bottom: 23px;}
