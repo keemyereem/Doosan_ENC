@@ -580,7 +580,7 @@ let golfPlayers = {
           [
             "2020",
             "<i><b>국가대표 선발전 여자부 1위</b></i><br>" +
-              "<i>제11회 KLPGA 회장배 여자아마추어골프선수권대회 우승</i><br>" +
+              "<i><b>제11회 KLPGA 회장배 여자아마추어골프선수권대회 우승</b></i><br>" +
               "<i>강민구배 제44회 한국여자아마추어골프선수권대회 2위</i>",
           ],
         ],
@@ -820,7 +820,7 @@ let golfPlayers = {
           [
             "2020",
             "<i><b>1st Place in the National Team Selection Tournament (Women’s Division)</b></i><br>" +
-              "<i>Winner in the 11th KLPGA President’s Cup Women’s Amateur Golf Championship</i><br>" +
+              "<i><b>Winner in the 11th KLPGA President’s Cup Women’s Amateur Golf Championship</b></i><br>" +
               "<i>2nd Place in the Kang Min-goo Cup 44th Korea Women’s Amateur Golf Championship</i>",
           ],
         ],
