@@ -39,6 +39,7 @@
 @media screen and (max-width:767px) {
     .pc {display: none!important;}
     .mo {display: block;}
+    .mo_flex {display: flex;}
     /* popNoti */
     .popNoti {right: initial;left: 50%;top: 10rem;transform: translate(-50%, 0);box-shadow: 2.5px 4.5px 27px 3px rgba(0, 0, 0, 0.2);}
     .pop_close_wrap {height: 3.5rem;}
@@ -1482,8 +1483,7 @@ border-right: .5rem solid transparent;border-top: .5rem solid #222; transform: r
 .accordion-list .accordion-item .accordion-desc ul li .sub_txt2 {display: flex; align-items: center; justify-content: left; color:#777777; font-size: 12px;}
 .accordion-list .accordion-item .accordion-desc ul li .sub_txt::before { content: ''; width: 4px; height: 4px; display: block; border-radius: 100%; background-color: #d9dfe9; margin-right: 10px;}
 .accordion-list .accordion-item .accordion-desc ul li .sub_txt2::before { content: ''; width: 4px; height: 4px; display: block; border-radius: 100%; background-color: #d9dfe9; margin-right: 10px; margin-bottom: 17px;}
-.aco_title { display: none; align-items: center; justify-content: center; color:#222; font-size: 13px; font-weight: 400; height:4rem;}
-#mobile .aco_title {display: flex;}
+.aco_title { align-items: center; justify-content: center; color:#222; font-size: 13px; font-weight: 400; height:4rem;}
 .aco_blue { background-color: #e5eff8; border-top: 2px solid #005eb8;}
 .aco_green { background-color: #e5f7f2; border-top: 2px solid #00ad83;}
 .bold{font-weight: 400!important;}
