@@ -2273,9 +2273,11 @@
 .golf .golfMain .section4 .border_frame:hover .img { box-shadow: 8px 14px 21px 0px rgba(4, 0, 0, 0.16); }
 .golf .golfMain .section4 .title_box { max-width: 138rem; width: 100%; height: fit-content; margin: 12rem auto 0; padding-left: 2rem; }
 .golf .golfMain .section4 .golf_tab { position: absolute; top: -5.1rem; font-size: 1.8rem; color: #888888; display: flex; }
-.golf .golfMain .section4 .golf_tab img{ margin-right: 2rem;}
+.golf .golfMain .section4 .golf_tab img{ margin-right: 2rem; vertical-align:middle;}
 .golf .golfMain .section4 .golf_tab p {color:#222; display: flex; align-items: center; margin-right: 4rem; font-weight: 400;}
-.golf .golfMain .section4 .golf_tab p span {font-family: 'Montserrat'; margin: 0 0.5rem;}
+.golf .golfMain .section4 .golf_tab p a {display: flex; align-items: center;}
+.golf .golfMain .section4 .golf_tab p a span{line-height: 18px;}
+.golf .golfMain .section4 .golf_tab p span.en {font-family: 'Montserrat'; margin: 0 0.5rem;}
 .golf .golfMain .section4 .golf_tab button { margin-right: 3rem; position: relative; }
 .golf .golfMain .section4 .golf_tab button.on { font-weight: 400; color: #005eb8; }
 .golf .golfMain .section4 .golf_tab button:hover { color: #005eb8;}
