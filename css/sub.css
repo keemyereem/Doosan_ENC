@@ -1544,6 +1544,13 @@
 .esg_table table tbody tr:nth-child(9) td:nth-child(1),
 .esg_table table tbody tr:nth-child(9) td:nth-child(2),
 .esg_table table tbody tr:nth-child(9) td:nth-child(3){padding: 0 3rem;}
+.esg_table table tbody tr:nth-child(10) td:nth-child(1),
+.esg_table table tbody tr:nth-child(10) td:nth-child(2),
+.esg_table table tbody tr:nth-child(10) td:nth-child(3){padding: 0 3rem;}
+.esg_table table tbody tr:nth-child(11) td:nth-child(1),
+.esg_table table tbody tr:nth-child(11) td:nth-child(2),
+.esg_table table tbody tr:nth-child(11) td:nth-child(3){padding: 0 3rem;}
+.esg_table table tbody tr:nth-child(12) td:nth-child(1){padding: 0 3rem;}
 .esg_section02 table tbody tr:first-child td:nth-child(3),
 .esg_section02 table tbody tr:first-child td:nth-child(4){height: 9rem;}
 .esg_section02 table tbody tr:nth-child(2) td:nth-child(1),
@@ -1564,16 +1571,22 @@
 .esg_table table tbody tr:nth-child(8) td:nth-child(3){height: 9rem;}
 .esg_table table tbody tr:nth-child(9) td:nth-child(1),
 .esg_table table tbody tr:nth-child(9) td:nth-child(2),
-.esg_table table tbody tr:nth-child(9) td:nth-child(3){height: 11.7rem;}
+.esg_table table tbody tr:nth-child(9) td:nth-child(3){height: 9rem;}
+.esg_table table tbody tr:nth-child(10) td:nth-child(1),
+.esg_table table tbody tr:nth-child(10) td:nth-child(2),
+.esg_table table tbody tr:nth-child(10) td:nth-child(3){height: 6.6rem;}
+.esg_table table tbody tr:nth-child(11) td:nth-child(1),
+.esg_table table tbody tr:nth-child(11) td:nth-child(2),
+.esg_table table tbody tr:nth-child(11) td:nth-child(3),
+.esg_table table tbody tr:nth-child(12) td:nth-child(1){height: 6.6rem;}
 .esg_section02 table thead{border-top-color: #005eb8; background-color: #e5eff8;}
 .esg_section03 table thead{border-top-color: #00ad83; background-color: #e5f7f2;}
 .esg_section02{padding: 12rem 0 5rem 0;}
 .esg_section02 h3{font-size: 3.8rem; font-weight: bold; line-height: 4rem; color:#0c1014; text-align: center; margin-bottom: 8rem;}
 .esg_section03{padding-bottom:19.7rem;}
 .esg_section03 table tbody tr:first-child td:nth-child(2),
-.esg_section03 table tbody tr:first-child td:nth-child(3),
-.esg_section03 table tbody tr:first-child td:nth-child(4){height: 14rem;}
-
+.esg_section03 table tbody tr:first-child td:nth-child(3){height: 13.4rem;}
+.esg_section03 table tbody tr:first-child td:nth-child(4){height: 6.6rem;}
 
 /* 안전보건경영 */
 .sr .hsm { max-width: 100%; background: #f9f9f9; padding-top: 12rem; }
