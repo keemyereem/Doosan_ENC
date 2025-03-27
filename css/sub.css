@@ -1503,21 +1503,29 @@
 .blue_txt02 span:last-child::before{content:''; display:inline-block; width:5px; height:5px; border-radius: 100%; background-color: #fff; opacity: 0.5; position: absolute; left:-11px;top: 50%; transform: translate(0, -50%);}
 .aco_title{display:none;}
 /* ESG 테이블*/
-.esg_table table { border: 1px solid #e8e8e8; font-size: 16px; border-collapse: collapse; color: #222;}
+.esg_table table { font-size: 16px; border-collapse: collapse; color: #222; }
 .esg_table table thead { border-top: 2px solid; height: 7.2rem; text-align: center; font-weight: bold; }
-.esg_table tbody td{line-height: 2.4rem;}
+.esg_table tbody td{line-height: 2.4rem; border: 1px solid #e8e8e8;}
 .esg_table tbody td.tac {text-align: center;}
 .esg_table tbody td.montserrat{font-weight: 300;}
 .esg_table tbody td .sub_t { display: block; font-size: 14px; color: #777; display: flex;align-items: center;justify-content: left;gap: 10px; }
 .esg_table tbody td .sub_txt { display: block; font-size: 14px; color: #777; display: flex;align-items: center;justify-content: left;}
 .esg_table tbody td .sub_txt::before{content:''; width:5px; height: 5px; display: block; border-radius: 100%;background-color: #d9dfe9; margin-right: 10px;}
+.esg_table tbody td .sub_txt2 {display: block; font-size: 14px; color: #777; display: flex; align-items: center; justify-content: left; font-weight: 200;}
+.esg_table tbody td .sub_txt2::before{ content: ''; width: 5px; height: 5px; display: block; border-radius: 100%; background-color: #d9dfe9; margin-right: 10px; margin-bottom: 23px;}
+.esg_section02 tbody tr:first-child td:first-child {border-left: 0; background-color: #f2f7fb;}
+.esg_section03 tbody tr:first-child td:first-child {border-left: 0; background-color: #f2fbf9;}
+.esg_section02 tbody tr td:last-child{border-right: 0;}
+.esg_section03 tbody tr td:last-child{border-right: 0;}
 .esg_table tbody tr td .number { display: flex; align-items: center; justify-content: left; gap: 5px; }
 .esg_table tbody tr td .number span.f10{ font-size: 10px;  }
 .esg_table tbody tr td .montserrat{ font-weight: 300;  }
 .esg_table tbody td[rowspan] { vertical-align: middle; }
+.esg_table table thead tr th:first-child{border-left: none;}
+.esg_table table thead tr th:last-child{border-right: none;}
 .esg_table table thead tr th{font-weight:400;}
 .esg_table table thead tr th:first-child {width: 12rem;}
-.esg_table table thead tr th:nth-child(2) {width: 19rem; }
+.esg_table table thead tr th:nth-child(2) {width: 19.8rem; }
 .esg_table table thead tr th:nth-child(3) {width: 31.8rem; }
 .esg_table table thead tr th:nth-child(4) {width: 43.1rem; }
 .esg_table table tbody tr:nth-child(1) td:nth-child(1){font-weight:400; font-family: 'Montserrat';}

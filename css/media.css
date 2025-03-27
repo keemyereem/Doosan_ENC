@@ -1463,7 +1463,7 @@
 .esg_section03 .accordion-list li:first-child .accordion-link{background-color: #f2fbf9;}
 .accordion-list {border-top: 1px solid #e8e8e8;}
 .accordion-list .accordion-item.active {border-bottom: 1px solid #ddd;}
-.accordion-list .accordion-item .accordion-link {display: block; position: relative; padding: 11.5px; border-bottom: 1px solid #ddd; transition: all 0.3s;}
+.accordion-list .accordion-item .accordion-link {display: block; position: relative; padding: 11.5px;  transition: all 0.3s;}
 .accordion-list .accordion-item.active .accordion-link {background-color: #fff;}
 .accordion-list .accordion-item .accordion-link::before {content: ""; position: absolute; top:50%; right: 1.5rem; border-left: .5rem solid transparent; border-right: .5rem solid transparent; border-top: .5rem solid #222222;     transform: translate(0, -50%); transition: 0.2s ease-in;}
 .accordion-list .accordion-item.active .accordion-link::before {border-left: .5rem solid transparent;
@@ -1472,11 +1472,11 @@ border-right: .5rem solid transparent;border-top: .5rem solid #222; transform: r
 .accordion-list .accordion-name .bold{margin-right:10px; font-weight: bold;}
 .accordion-list .accordion-name .icon {display: inline-block; position: absolute; top: 3px; left: 0; font-family: 'gmarket'; font-weight: bold; font-size: 17px; color: #15989f; vertical-align: middle;}
 .accordion-list .accordion-item .accordion-desc {display: none; color: #222;}
-.accordion-list .accordion-item .accordion-desc ul{display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px 0px; border-bottom: 1px solid #e8e8e8; padding: 16px 14.5px}
+.accordion-list .accordion-item .accordion-desc ul{display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px 0px; border-bottom: 1px solid #e8e8e8; padding: 16px 0px}
 .accordion-list .accordion-item .accordion-desc ul:last-child{border-bottom: none;}
-.accordion-list .accordion-item .accordion-desc ul li{font-size: 13px; font-weight: 200; line-height: 1.8rem;}
-.accordion-list .accordion-item .accordion-desc ul li:nth-child(2n) {padding-left: 5px;}
-.accordion-list .accordion-item .accordion-desc ul li:nth-child(2n) div{line-height: 22px; margin-bottom: 20px; border-bottom: 1px solid #EAEAEC; padding-bottom: 20px;}
+.accordion-list .accordion-item .accordion-desc ul li{font-size: 13px; font-weight: 200; line-height: 1.8rem; padding-left: 15.5px;}
+.accordion-list .accordion-item .accordion-desc ul li:nth-child(2n) {}
+.accordion-list .accordion-item .accordion-desc ul li:nth-child(2n) div{line-height: 22px; margin-bottom: 20px; border-bottom: 1px dotted #e8e8e8; padding-bottom: 20px;}
 .accordion-list .accordion-item .accordion-desc ul li:nth-child(2n) div:last-child{ border-bottom: none; margin-bottom: 0;}
 .accordion-list .accordion-item .accordion-desc ul li .montserrat {letter-spacing: 0.2px;}
 .accordion-list .accordion-item .accordion-desc ul li del.montserrat {text-decoration: none;}
@@ -1843,6 +1843,10 @@ border-right: .5rem solid transparent;border-top: .5rem solid #222; transform: r
     #mobile .footer .footer_wrap ul li:not(:last-child)::after { margin: 0 2.5vw; }
 }
 
+@media screen and (min-width:456px) {
+    .sr.en .accordion-list .accordion-item .accordion-desc ul li .sub_txt3 {display: block; font-size: 14px; color: #777; display: flex; align-items: center; justify-content: left; font-weight: 200;}
+    .sr.en .accordion-list .accordion-item .accordion-desc ul li .sub_txt3::before{ content: ''; width: 5px; height: 5px; display: block; border-radius: 100%; background-color: #d9dfe9; margin-right: 10px; margin-bottom: 23px;}
+}
 
 @media screen and (min-width:660px) and (max-width:1024px){
     /* 인재채용 - 직무소개 */

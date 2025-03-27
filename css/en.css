@@ -185,7 +185,11 @@
 .sr.en .esg_section01_wrap .esg_section01 .esg_section01_green ul li p del::before{content: ''; display: inline-block; width: 5px; height: 5px; background-color: #00ad83; position: absolute; left: -14px; top: 42%; transform: rotate(15deg);}
 .sr.en .esg_section01_wrap .esg_section01 .esg_section01_green ul li p span::before{ content: ''; display: inline-block; width: 5px; height: 5px; background-color: #00ad83; position: absolute; left: -14px; top: 21%; transform: rotate(15deg);}
 .sr.en .esg_section01_wrap .esg_section01 .esg_section01_purple .ellipse {font-weight: 300;}
+.sr.en .esg_table table tbody tr:nth-child(4){height: 12rem;}
 .sr.en .esg_table table thead tr th:first-child {width: 10rem;}
+.sr.en .esg_table table tbody tr:nth-child(10) {height: 12rem;}
+.sr.en .esg_table table tbody tr:nth-child(11) {height: 12rem;}
+.sr.en .esg_table table tbody tr:nth-child(12) {height: 12rem;}
 .sr.en .esg_table table thead tr th:nth-child(3) {width: 34.8rem;}
 .sr.en .esg_table table thead tr th:nth-child(4) {width: 45.1rem;}
 .sr.en .esg_table tbody td {font-weight: 300;}
@@ -194,10 +198,12 @@
 .sr.en .esg_table tbody td .sub_txt {font-weight: 200;}
 .sr.en .esg_table tbody td .sub_txt2 {display: block; font-size: 14px; color: #777; display: flex; align-items: center; justify-content: left; font-weight: 200;}
 .sr.en .esg_table tbody td .sub_txt2::before { content: ''; width: 5px; height: 5px; display: block; border-radius: 100%; background-color: #d9dfe9; margin-right: 10px; margin-bottom: 23px;}
+.sr.en .accordion-list .accordion-item .accordion-desc ul li .sub_txt3 { display: block; font-size: 14px; color: #777; display: flex;align-items: center;justify-content: left;}
+.sr.en .accordion-list .accordion-item .accordion-desc ul li .sub_txt3::before{content:''; width:5px; height: 5px; display: block; border-radius: 100%;background-color: #d9dfe9; margin-right: 10px;}
 .sr.en .accordion-list .accordion-name {line-height: 20px;}
 .sr.en .esg_table table tbody tr:nth-child(9) td:nth-child(1), 
 .sr.en .esg_table table tbody tr:nth-child(9) td:nth-child(2), 
-.sr.en .esg_table table tbody tr:nth-child(9) td:nth-child(3){height: 17.7rem;}
+.sr.en .esg_table table tbody tr:nth-child(9) td:nth-child(3){height: 11.7rem;}
 .sr.en .accordion-list .accordion-item .accordion-desc ul li .f10 {font-size:13px;}
 
 /* Safety and Health Management */
