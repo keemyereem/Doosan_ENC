@@ -198,13 +198,16 @@
 .sr.en .esg_table tbody td .sub_txt {font-weight: 200;}
 .sr.en .esg_table tbody td .sub_txt2 {display: block; font-size: 14px; color: #777; display: flex; align-items: center; justify-content: left; font-weight: 200;}
 .sr.en .esg_table tbody td .sub_txt2::before { content: ''; width: 5px; height: 5px; display: block; border-radius: 100%; background-color: #d9dfe9; margin-right: 10px; margin-bottom: 23px;}
+.sr.en .accordion-list .accordion-item .accordion-desc ul li { margin-left: 0;}
 .sr.en .accordion-list .accordion-item .accordion-desc ul li .sub_txt3 { display: block; font-size: 14px; color: #777; display: flex;align-items: center;justify-content: left;}
-.sr.en .accordion-list .accordion-item .accordion-desc ul li .sub_txt3::before{content:''; width:5px; height: 5px; display: block; border-radius: 100%;background-color: #d9dfe9; margin-right: 10px;}
+.sr.en .accordion-list .accordion-item .accordion-desc ul li .sub_txt3::before{content:''; width:4px; height: 4px; display: block; border-radius: 100%;background-color: #d9dfe9; margin-right: 10px;}
 .sr.en .accordion-list .accordion-name {line-height: 20px;}
 .sr.en .esg_table table tbody tr:nth-child(9) td:nth-child(1), 
 .sr.en .esg_table table tbody tr:nth-child(9) td:nth-child(2), 
 .sr.en .esg_table table tbody tr:nth-child(9) td:nth-child(3){height: 11.7rem;}
 .sr.en .accordion-list .accordion-item .accordion-desc ul li .f10 {font-size:13px;}
+/* .sr.en .accordion-list .accordion-item .accordion-desc ul li:nth-child(2n-1) {width: 90px;}
+.sr.en .accordion-list .accordion-item .accordion-desc ul li:nth-child(2n) {width: 177px;} */
 
 /* Safety and Health Management */
 .sr.en .hsm .section02 ul li { width: calc(100% / 3); height: auto; }

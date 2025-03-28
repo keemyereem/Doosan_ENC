@@ -1475,7 +1475,6 @@ border-right: .5rem solid transparent;border-top: .5rem solid #222; transform: r
 .accordion-list .accordion-item .accordion-desc ul{display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px 0px; border-bottom: 1px solid #e8e8e8; padding: 16px 0px}
 .accordion-list .accordion-item .accordion-desc ul:last-child{border-bottom: none;}
 .accordion-list .accordion-item .accordion-desc ul li{font-size: 13px; font-weight: 200; line-height: 1.8rem; padding-left: 15.5px;}
-.accordion-list .accordion-item .accordion-desc ul li:nth-child(2n) {}
 .accordion-list .accordion-item .accordion-desc ul li:nth-child(2n) div{line-height: 22px; margin-bottom: 20px; border-bottom: 1px dotted #e8e8e8; padding-bottom: 20px;}
 .accordion-list .accordion-item .accordion-desc ul li:nth-child(2n) div:last-child{ border-bottom: none; margin-bottom: 0;}
 .accordion-list .accordion-item .accordion-desc ul li .montserrat {letter-spacing: 0.2px;}
@@ -1486,8 +1485,10 @@ border-right: .5rem solid transparent;border-top: .5rem solid #222; transform: r
 .accordion-list .accordion-item .accordion-desc ul .number{display: flex; justify-content: left; gap: 5px; margin-bottom: 5px;}
 .accordion-list .accordion-item .accordion-desc ul li .sub_txt {display: flex; align-items: center; justify-content: left; color:#777777; font-size: 12px;}
 .accordion-list .accordion-item .accordion-desc ul li .sub_txt2 {display: flex; align-items: center; justify-content: left; color:#777777; font-size: 12px;}
-.accordion-list .accordion-item .accordion-desc ul li .sub_txt::before { content: ''; width: 4px; height: 4px; display: block; border-radius: 100%; background-color: #d9dfe9; margin-right: 10px;}
-.accordion-list .accordion-item .accordion-desc ul li .sub_txt2::before { content: ''; width: 4px; height: 4px; display: block; border-radius: 100%; background-color: #d9dfe9; margin-right: 10px; margin-bottom: 17px;}
+.accordion-list .accordion-item .accordion-desc ul li .sub_txt::before { content: ''; min-width: 4px; height: 4px; display: block; border-radius: 100%; background-color: #d9dfe9; margin-right: 10px;}
+.accordion-list .accordion-item .accordion-desc ul li .sub_txt2::before { content: ''; min-width: 4px; height: 4px; display: block; border-radius: 100%; background-color: #d9dfe9; margin-right: 10px;}
+.accordion-list .accordion-item .accordion-desc ul li .sub_txt3::before { content: ''; min-width: 4px; height: 4px; display: block; border-radius: 100%; background-color: #d9dfe9; margin-right: 10px;}
+
 .aco_title { align-items: center; justify-content: center; color:#222; font-size: 13px; font-weight: 400; height:4rem;}
 .aco_blue { background-color: #e5eff8; border-top: 2px solid #005eb8;}
 .aco_green { background-color: #e5f7f2; border-top: 2px solid #00ad83;}
@@ -1843,9 +1844,11 @@ border-right: .5rem solid transparent;border-top: .5rem solid #222; transform: r
     #mobile .footer .footer_wrap ul li:not(:last-child)::after { margin: 0 2.5vw; }
 }
 
-@media screen and (min-width:456px) {
-    .sr.en .accordion-list .accordion-item .accordion-desc ul li .sub_txt3 {display: block; font-size: 14px; color: #777; display: flex; align-items: center; justify-content: left; font-weight: 200;}
-    .sr.en .accordion-list .accordion-item .accordion-desc ul li .sub_txt3::before{ content: ''; width: 5px; height: 5px; display: block; border-radius: 100%; background-color: #d9dfe9; margin-right: 10px; margin-bottom: 23px;}
+@media screen and (max-width:457px) {
+    .sr.en .accordion-list .accordion-item .accordion-desc ul li .sub_txt3 { font-size: 14px; color: #777; display: flex; align-items: center; justify-content: left; font-weight: 200;}
+    .sr.en .accordion-list .accordion-item .accordion-desc ul li .sub_txt3::before{ content: ''; min-width: 4px; height: 4px; display: block; border-radius: 100%; background-color: #d9dfe9; margin-right: 10px; margin-bottom: 17px;}
+    .accordion-list .accordion-item .accordion-desc ul li .sub_txt2::before { content: ''; min-width: 4px; height: 4px; display: block; border-radius: 100%; background-color: #d9dfe9; margin-right: 10px; margin-bottom: 17px;}
+    .accordion-list .accordion-item .accordion-desc ul li .sub_txt3::before { content: ''; min-width: 4px; height: 4px; display: block; border-radius: 100%; background-color: #d9dfe9; margin-right: 10px; margin-bottom: 17px;}
 }
 
 @media screen and (min-width:660px) and (max-width:1024px){
