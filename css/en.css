@@ -160,7 +160,7 @@
 .company.en #HMchart > li h2 { margin-bottom: .8rem; }
 .company.en #HMchart > li .graph .graph_bar li > p { width: 100%; bottom: -6rem; }
 
-/* Social Responsibility */
+/* Sustainable Management */
 
 /* common */
 .sr { letter-spacing: -.1rem; }
@@ -174,7 +174,7 @@
 .sr.en .certList ul li dl dd:not(:last-child)::before { position: relative; top: 1.7rem; }
 .sr.en .certList ul li dl dd:last-child a { width: 25rem;}
 
-/* Principles of Social Responsibility */
+/* Principles of Sustainable Management */
 .sr.en .prologue .banner { padding: 9.5rem 13.6rem 0; }
 .sr.en .prologue .board_inner li > span { top: unset; }
 .sr.en .esg_section01_wrap .esg_section01 .esg_section01_purple .blue_txt02{width: 38.7rem;  max-height: 10rem; border-radius: 5rem!important; padding-left: 5.5rem!important; text-align: left;}
@@ -434,7 +434,7 @@
     #mobile .company.en .location ul li:last-child div em { align-items: flex-start; }
 
 
-    /* Social Responsibility */
+    /* Sustainable Management */
 
     /* common */
     #mobile .sr.en .board .paragraph p { padding: 2rem 2rem 0; }

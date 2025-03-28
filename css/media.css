@@ -1407,7 +1407,7 @@
 #mobile .company .location ul li:last-child div em span { line-height: 1.8rem; width: 1.7rem; height: 1.7rem; margin-right: 1rem; font-size: 1.3rem; flex-shrink: 0; }
 
 
-/* ================================  사회책임경영  =============================== */
+/* ================================  지속가능경영  =============================== */
 
 /* 공통 */
 #mobile .sr .sub_visual { background-image: url(../images/social/sr_bg_m.jpg); }
@@ -1445,7 +1445,7 @@
 #mobiel .sr .social_mob_img { display: block; }
 #mobile .sr .social_pc_img { display: none; }
 
-/* 프롤로그(사회책임경영 원칙) */
+/* 프롤로그(지속가능경영 체계) */
 #mobile .esg_section01_wrap {margin-top: 5.5rem;}
 #mobile .esg_section01_wrap .esg_section01 {padding:5.5rem 0;}
 .esg_section01_wrap .esg_section01 .mo{position: relative;}

@@ -1390,7 +1390,7 @@
 
 
 
-/* ================================  사회책임경영  =============================== */
+/* ================================  지속가능경영  =============================== */
 
 /* 공통 */
 #pc .sr .social_mob_img { display: none; }
@@ -1431,7 +1431,7 @@
 .sr .certList ul li dl dd:last-child a::after { content:''; display: block; width: 100%; height: .1rem; background: #000; transition: width .3s; } 
 .sr .certList ul li dl dd:last-child a:hover::after { width: 0; }
 
-/* 프롤로그(사회책임경영 원칙) */
+/* 프롤로그(지속가능경영 체계) */
 /* ESG section01 */
 .montserrat{font-family: 'Montserrat';}
 .erg_popup{display: none;}
