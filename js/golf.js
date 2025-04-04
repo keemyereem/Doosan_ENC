@@ -666,7 +666,7 @@ let golfPlayers = {
         "박혜준",
         "Park Hyejun",
         "“골프에서는 어려운 상황에서도<br>한 타를 '지켜내는(save)' 것이 중요하기에<br class='br_m'> 위기 상황에서도<br class='br_pc'>지혜롭게 스코어를 지켜가는<br class='br_m'> 선수가 되고 싶어요.”",
-        "2003년 05월 20일",
+        "2003년 05월 02일",
         "2021년 08월",
         "2022년 롯데렌터카 여자오픈",
         "박혜준 선수",
@@ -899,11 +899,11 @@ let golfPlayers = {
           ],
         ],
       ],
-      // 박해준 선수
+      // 박혜준 선수
       [
         "Park Hyejun",
         "“In golf, it is important to 'save' a stroke even in difficult situations. That’s why I want to be a player who wisely saves my score even in moments of crisis.”",
-        "May 20. 2003",
+        "May 2. 2003",
         "Aug. 2021",
         "2022 Lette Rent a car Ladies Open",
         "Amateur golfer, <br>Park Hyejun",
