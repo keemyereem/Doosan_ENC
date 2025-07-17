@@ -2008,7 +2008,24 @@
 .graybox .policy .box .box_cont.on { display: block; } */
 .graybox .privacy .box .privacy01 ol > li > .tit+p:first-of-type { margin-bottom: 3rem; }
 .graybox .privacy .box .privacy01 ol > li:first-child > .tit+p:first-of-type { margin-bottom: 0; }
-.graybox .privacy .box .privacy02 ol > li > p+ul { margin-top: 1rem; }
+
+/* 고정형 영상정보처리기기 운영·관리방침 */
+.graybox .policy .box .new_privacy {}
+.graybox .policy .box .new_privacy h3 { font-size: 2.4rem; margin-bottom: 0.8rem; }
+.graybox .policy .box .new_privacy p { font-size: 1.6rem; font-weight: 150; color: #555; line-height: 1.875; letter-spacing: -.04rem; margin-top: 1rem; }
+.graybox .policy .box .new_privacy .line-e8 { width: 100%; height: 1px; border: none; background-color: #e8e8e8; margin: 50px auto;}
+.graybox .privacy .box .privacy02 ol > li > p+ul { margin-top: 3rem; }
+.graybox .privacy .box .privacy02 .pre_number{position: relative; padding-left: 15px; font-weight: 350!important;}
+.graybox .privacy .box .privacy02 .pre_hangle{position: relative; padding-left: 15px; font-weight: 350!important; margin-top: 0!important; padding-left: 22px;}
+.graybox .privacy .box .privacy02 .pre_number .number{position: absolute; left: 0; top: 0;}
+.graybox .privacy .box .privacy02 .tit+.bold{margin-top: 3rem;}
+
+/* 고정형 영상정보처리기기 운영·관리방침 테이블 */
+.graybox .policy .box .new_privacy .table-wrap+ul.bold{margin-top: 28px;}
+.graybox .policy .box .new_privacy .table-wrap { margin-top: 3.9rem; overflow-x: auto; border-bottom: 1px solid #e8e8e8!important;}
+.graybox .policy .box .new_privacy .table-wrap table { width: 100%; border-collapse: collapse; font-size: 1.6rem; color: #555; line-height: 71px; letter-spacing: -0.04rem; min-width: 600px; border-top: 2px solid #000000;  border-bottom: 1px solid #e8e8e8!important;}
+.graybox .policy .box .new_privacy .table-wrap thead th { background-color: #f9f9f9; font-weight: 400; color: #222; text-align: center; border: 1px solid #e8e8e8;}
+.graybox .policy .box .new_privacy .table-wrap tbody td { text-align: center; border: 1px solid #e8e8e8; font-weight: 300; color:#222;}
 
 /* error */
 .error { height: 100vh; }

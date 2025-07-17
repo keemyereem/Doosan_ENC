@@ -1794,7 +1794,7 @@ border-right: .5rem solid transparent;border-top: .5rem solid #222; transform: r
 #mobile .graybox .policy > .inner { text-align: center; margin-top: 6.5rem; }
 #mobile .graybox .policy > .inner .tab_inner ul li { height: 4.5rem; line-height: 4.5rem; }
 #mobile .graybox .policy > .inner .tab_inner ul li.on { box-shadow: 0px 0px 16px 4px rgba(34, 34, 34, 0.2); }
-#mobile .graybox .policy > .inner .tab_inner ul li a { font-size: 1.35rem; letter-spacing: -.135rem; }
+#mobile .graybox .policy > .inner .tab_inner ul li a { font-size: 1.35rem; letter-spacing: -.135rem; line-height: 18px; display: flex; align-items: center; justify-content: center;}
 #mobile .graybox .policy > .inner .select_wrap { top: 6.5rem; right: 50%; transform: translateX(50%); width: 100%; }
 #mobile .graybox .policy > .inner .terms_site .site_list { min-width: auto; }
 #mobile .graybox .policy > .inner .terms_site.select01 { width: 100%; max-width: 19rem; text-align: center; margin: 0 auto; }
@@ -1825,6 +1825,24 @@ border-right: .5rem solid transparent;border-top: .5rem solid #222; transform: r
 #mobile .graybox .policy .box ol > li .download i { width: 1.5rem; height: 1.5rem; background-size: contain; }
 #mobile .graybox .privacy .box ol > li > .tit+p:first-of-type { margin-bottom: 2rem; }
 #mobile .graybox .privacy .box ol > li:first-child > .tit+p:first-of-type { margin-bottom: 0; }
+
+/* 고정형 영상정보처리기기 운영·관리방침 */
+#mobile .graybox .policy .box .new_privacy {}
+#mobile .graybox .policy .box .new_privacy h3 {    font-size: 1.7rem;    margin-bottom: 0.8rem; }
+#mobile .graybox .policy .box .new_privacy p {     font-size: 1.3rem; line-height: 1.53; margin-top: 1.5rem; position: relative;}
+#mobile .graybox .policy .box .new_privacy .line-e8 { width: 100%; height: 1px; border: none; background-color: #e8e8e8; margin: 2.5rem auto;}
+#mobile .graybox .privacy .box .privacy02 ol > li > p+ul { margin-top: 1.5rem; }
+#mobile .graybox .privacy .box .privacy02 .pre_number{position: relative; padding-left: 15px; font-weight: 350!important;}
+#mobile .graybox .privacy .box .privacy02 .pre_hangle{position: relative; padding-left: 15px; font-weight: 350!important; margin-top: 0!important; padding-left: 22px;}
+#mobile .graybox .privacy .box .privacy02 .pre_number .number{position: absolute; left: 0; top: 0;}
+#mobile .graybox .privacy .box .privacy02 .tit+.bold{margin-top: 3rem;}
+
+/* 고정형 영상정보처리기기 운영·관리방침 테이블 */
+#mobile .graybox .policy .box .new_privacy .table-wrap+ul.bold{margin-top: 28px;}
+#mobile .graybox .policy .box .new_privacy .table-wrap { margin-top: 2rem; overflow-x: auto; border-bottom: 1px solid #e8e8e8!important;}
+#mobile .graybox .policy .box .new_privacy .table-wrap table { width: 100%; border-collapse: collapse; font-size: 1.3rem; color: #555; line-height: 55px; letter-spacing: -0.04rem; min-width: 600px; border-top: 2px solid #000000;  border-bottom: 1px solid #e8e8e8!important;}
+#mobile .graybox .policy .box .new_privacy .table-wrap thead th { background-color: #f9f9f9; font-weight: 400; color: #222; text-align: center; border: 1px solid #e8e8e8;}
+#mobile .graybox .policy .box .new_privacy .table-wrap tbody td { text-align: center; border: 1px solid #e8e8e8; font-weight: 300; color:#222;}
 
 /* error */
 #mobile .error .contents { padding: 0 2rem; }
