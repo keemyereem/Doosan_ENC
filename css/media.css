@@ -1792,13 +1792,14 @@ border-right: .5rem solid transparent;border-top: .5rem solid #222; transform: r
 /* 개인정보처리방침 */
 #mobile .graybox { padding: 6.5rem 0 0; }
 #mobile .graybox .policy > .inner { text-align: center; margin-top: 6.5rem; }
-#mobile .graybox .policy > .inner .tab_inner ul li { height: 4.5rem; line-height: 4.5rem; }
+#mobile .graybox .policy > .inner .tab_inner ul{ margin: 0 auto 12rem;}
+#mobile .graybox .policy > .inner .tab_inner ul li { height: 4.5rem; line-height: 4.5rem;}
 #mobile .graybox .policy > .inner .tab_inner ul li.on { box-shadow: 0px 0px 16px 4px rgba(34, 34, 34, 0.2); }
 #mobile .graybox .policy > .inner .tab_inner ul li a { font-size: 1.35rem; letter-spacing: -.135rem; line-height: 18px; display: flex; align-items: center; justify-content: center;}
 #mobile .graybox .policy > .inner .select_wrap { top: 6.5rem; right: 50%; transform: translateX(50%); width: 100%; }
 #mobile .graybox .policy > .inner .terms_site .site_list { min-width: auto; }
 #mobile .graybox .policy > .inner .terms_site.select01 { width: 100%; max-width: 19rem; text-align: center; margin: 0 auto; }
-#mobile .graybox .policy > .inner .terms_site.select02 { width: 100%; max-width: 25rem; text-align: center; margin: 0 auto; }
+#mobile .graybox .policy > .inner .terms_site.select02 { width: 100%; max-width: 29rem; text-align: center; margin: 0 auto; }
 #mobile .graybox .policy > .inner .select_row { max-width: 22rem; width: 100%; position: initial; transform: translateY(0); border: 0; border-bottom: 2px solid #222; margin: 3rem auto 0; }
 #mobile .graybox .policy > .inner .terms_site .site_selected { font-size: 1.3rem; line-height: 1.2; min-height: 4.8rem; padding: 0 1rem; }
 #mobile .graybox .policy > .inner .terms_site .site_list li a { font-size: 1.3rem; }

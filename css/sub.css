@@ -1972,8 +1972,8 @@
 .graybox .policy > .inner .tab_inner ul li.on { background: #005eb8; border-color: #005eb8; box-shadow: 0px 0px 32px 8px rgba(34, 34, 34, 0.2); }
 .graybox .policy > .inner .tab_inner ul li.on a { color: #fff; }
 .graybox .policy > .inner .select_wrap { position: absolute; top:12rem; right: 0; z-index: 10; }
-.graybox .policy > .inner .terms_site { width: 26.8rem; /* display: none; */ }
-/* .graybox .policy > .inner .terms_site.active { display: block; } */
+.graybox .policy > .inner .terms_site { width: 26.8rem; display: none; }
+.graybox .policy > .inner .terms_site.active { display: block!important; }
 .graybox .policy > .inner .terms_site.select02 { width: 40.2rem; } 
 .graybox .policy > .inner .terms_site .site_selected { font-size: 16px; width: 100%; line-height: 48px; color: #222; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #222; }
 .graybox .policy > .inner .terms_site .site_selected::after { content: ''; display: inline-block; width: 0; height: 0; border-top: 5px solid #222; border-left: 5px solid transparent; border-right: 5px solid transparent; transition: transform ease .3s;}
