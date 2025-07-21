@@ -309,7 +309,7 @@
 
 /* 공통 */
 #wrap, .container { width: 100%; }
-.title_area { padding: 12rem 0; text-align: center; }
+.title_area { padding: 10rem 0; text-align: center; }
 .title_area .con_tit { font-family: 'Montserrat','Pretendard'; font-size: 6rem; font-weight: 450; color: #0c1014; letter-spacing: -.15rem; padding-bottom: 3rem; position: relative; }
 .title_area .eng_tit { font-weight: 400; }
 .title_area.single .con_tit { padding-bottom: 0; }
@@ -1966,15 +1966,15 @@
 /* 개인정보처리방침 */
 .graybox { background: #f9f9f9; padding-top: 14rem; }
 .graybox .policy > .inner { position: relative; }
-.graybox .policy > .inner .tab_inner ul { display: flex; max-width: 57.6rem; margin: 0 auto 8rem; }
-.graybox .policy > .inner .tab_inner ul li { flex: 1; display: table; height: 7rem; line-height: 7rem; border: 1px solid #e8e8e8; text-align: center; }
+.graybox .policy > .inner .tab_inner ul { display: flex; max-width: 88rem; margin: 0 auto 15rem; }
+.graybox .policy > .inner .tab_inner ul li { flex: 1; display: table; height: 7rem; line-height: 7rem; border: 1px solid #e8e8e8; text-align: center; background-color: #fff;}
 .graybox .policy > .inner .tab_inner ul li a { display: table-cell; width: 100%; height: 100%; font-size: 1.8rem; color: #222; }
 .graybox .policy > .inner .tab_inner ul li.on { background: #005eb8; border-color: #005eb8; box-shadow: 0px 0px 32px 8px rgba(34, 34, 34, 0.2); }
 .graybox .policy > .inner .tab_inner ul li.on a { color: #fff; }
-.graybox .policy > .inner .select_wrap { position: absolute; top:1rem; right: 0; z-index: 10; }
+.graybox .policy > .inner .select_wrap { position: absolute; top:12rem; right: 0; z-index: 10; }
 .graybox .policy > .inner .terms_site { width: 26.8rem; /* display: none; */ }
 /* .graybox .policy > .inner .terms_site.active { display: block; } */
-.graybox .policy > .inner .terms_site.select02 { width: 34rem; } 
+.graybox .policy > .inner .terms_site.select02 { width: 40.2rem; } 
 .graybox .policy > .inner .terms_site .site_selected { font-size: 16px; width: 100%; line-height: 48px; color: #222; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #222; }
 .graybox .policy > .inner .terms_site .site_selected::after { content: ''; display: inline-block; width: 0; height: 0; border-top: 5px solid #222; border-left: 5px solid transparent; border-right: 5px solid transparent; transition: transform ease .3s;}
 .graybox .policy > .inner .terms_site.open .site_selected::after { transform: rotate3d(1, 0, 0, 180deg);}
