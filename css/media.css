@@ -422,7 +422,7 @@
     /* =========================================================================== */
 
     /* 공통 */
-    #mobile .title_area { padding: 6rem 2rem 0; text-align: center; }
+    #mobile .title_area { padding: 6.5rem 2rem 0; text-align: center; }
     #mobile .title_area .con_tit { font-size: 3.5rem; padding-bottom: 0; }
     #mobile .title_area .con_tit > span { display: block; margin: 2rem auto; width: 1.5rem; height: 0.75rem; }
     #mobile .title_area .con_tit > span::after { border-left: .75rem solid transparent; border-right: .75rem solid transparent; border-top: .75rem solid #1d1f1e; top: 0; }
@@ -588,9 +588,9 @@
     #mobile .customer .sub_visual { background-image: url(../images/customer/customer_bg_m.jpg); }
     #mobile #sub .customer .inner { padding: 0; width: calc(100% - 4rem); }
     #mobile .customer .customer_inquiry .section1 { padding: 4.5rem 0; margin-top: 6rem; }
-    #mobile .customer .customer_inquiry .section1 .sec_tit { font-size: 1.7rem; }
+    #mobile .customer .customer_inquiry .section1 .sec_tit { font-size: 2.2rem; }
     #mobile .customer .customer_inquiry .section1 .cont_box { margin: 2rem 0 1.5rem; }
-    #mobile .customer .customer_inquiry .section1 .cont_box > div { font-size: 1.3rem; line-height: 1.38; padding: 2rem; height: 12.4rem; }
+    #mobile .customer .customer_inquiry .section1 .cont_box > div { font-size: 1.3rem; line-height: 1.38; padding: 2rem; height: 43.5rem; }
     #mobile .customer .customer_inquiry .section1 ul { font-size: 1.2rem; line-height: 1.41; margin-bottom: 3.2rem; }
     #mobile .customer .customer_inquiry .section1 ul li { padding-left: 1rem; }
     #mobile .customer .customer_inquiry .section1 .checkbox_row p { font-size: 1.6rem; padding-bottom: 2rem; }
@@ -638,11 +638,12 @@
     #mobile .customer .notice .tb_box .tb_row.none { display: none; }
 
     /* 사이버 감사실 */
+    #mobile .customer .pb0 {padding:0;}
     #mobile .customer .pb0 .guide { max-width: 100%; margin: 3rem auto 2rem; padding: 3.5rem 2rem; }
     #mobile .customer .pb0 .guide dt { font-size: 1.7rem; padding-bottom: 1.5rem; }
     #mobile .customer .pb0 .guide dd { font-size: 1.3rem; white-space: normal; line-height: 1.6; display: flex; }
     #mobile .customer .pb0 .guide dd i { display: inline-block; padding-right: .2rem; }
-    #mobile .customer .btn_wrap { flex-direction: column; margin-top: 2.5rem; padding-bottom: 6.5rem; }
+    #mobile .customer .btn_wrap { flex-direction: column; margin-top: 2.5rem; padding-bottom: 0rem; }
     #mobile .customer .btn_wrap span { padding-bottom: 1.5rem; font-size: 1.2rem; line-height: 1.4; }
     #mobile .customer .btn_wrap a { width: 100%; max-width: 25rem; height: 7.5rem; border-radius: 3.75rem; font-size: 1.5rem; }
     #mobile .customer .btn_wrap a:first-of-type { margin-right: 0; margin-bottom: 2rem; }
@@ -691,10 +692,10 @@
     #mobile .customer .btn_wrap a:first-of-type .txt > div:first-child em {font-size: 15.06px;}
 
     /* 제보하기 */
-    #mobile .customer .cyber_report .section1 { padding: 4.5rem 0; margin-top: 6rem; }
-    #mobile .customer .cyber_report .section1 .sec_tit { font-size: 1.7rem; }
-    #mobile .customer .cyber_report .section1 .cont_box { margin: 2rem 0 1.5rem; }
-    #mobile .customer .cyber_report .section1 .cont_box > div { font-size: 1.3rem; line-height: 1.38; padding: 2rem; height: 12.4rem; }
+    #mobile .customer .cyber_report .section1 { padding: 4.5rem 0; margin-top: 6.5rem; }
+    #mobile .customer .cyber_report .section1 .sec_tit { font-size: 2.2rem; }
+    #mobile .customer .cyber_report .section1 .cont_box { margin: 2rem 0 3.5rem; }
+    #mobile .customer .cyber_report .section1 .cont_box > div { font-size: 1.3rem; line-height: 1.38; padding: 2rem; height: 43.5rem; letter-spacing: -0.2px;}
     #mobile .customer .cyber_report .section1 ul { font-size: 1.2rem; line-height: 1.41; margin-bottom: 3.2rem; }
     #mobile .customer .cyber_report .section1 ul li { padding-left: 1rem; }
     #mobile .customer .cyber_report .section1 .checkbox_row p { font-size: 1.6rem; padding-bottom: 2rem; }

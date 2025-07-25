@@ -525,7 +525,9 @@
 .customer .customer_inquiry .section1 { background: #f9f9f9; padding: 11.5rem 0 12rem; }
 .customer .customer_inquiry .section1 .sec_tit { font-size: 3.4rem; color: #222; font-weight: 450; }
 .customer .customer_inquiry .section1 .cont_box { background: #fff; border: 1px solid #e8e8e8; margin: 3rem 0 2rem; }
-.customer .customer_inquiry .section1 .cont_box > div { font-size: 1.6rem; color: #222; line-height: 1.625; padding: 4.5rem 7rem; height: 19.4rem; overflow-y: scroll; }
+.customer .customer_inquiry .section1 .cont_box > div { font-size: 1.6rem; color: #555; line-height: 1.625; padding: 4.5rem 7rem; height: 43.5rem; overflow-y: scroll; }
+.customer .customer_inquiry .section1 .cont_box > div .tit {font-weight: 400; color: #222;}
+.customer .customer_inquiry .section1 .cont_box > div .blue {font-weight: 400; color:#005eb8;} 
 .customer .customer_inquiry .section1 ul { font-size: 1.4rem; color: #777; line-height: 1.71; letter-spacing: -.0014rem; margin-bottom: 3.5rem; }
 .customer .customer_inquiry .section1 ul li { position: relative; padding-left: 1.2rem; }
 .customer .customer_inquiry .section1 ul li span { position: absolute; top: 0; left: 0; }
@@ -629,7 +631,9 @@
 .customer .cyber_report .section1 { background: #f9f9f9; padding: 11.5rem 0 12rem; }
 .customer .cyber_report .section1 .sec_tit { font-size: 3.4rem; color: #222; font-weight: 450; }
 .customer .cyber_report .section1 .cont_box { background: #fff; border: 1px solid #e8e8e8; margin: 3rem 0 4rem; }
-.customer .cyber_report .section1 .cont_box > div { font-size: 1.6rem; color: #222; line-height: 1.625; padding: 4.5rem 7rem; height: 19.4rem; overflow-y: scroll; }
+.customer .cyber_report .section1 .cont_box > div { font-size: 1.6rem; color: #555; line-height: 1.625; padding: 4.5rem 7rem; height: 43.5rem; overflow-y: scroll; }
+.customer .cyber_report .section1 .cont_box > div .tit {font-weight: 400; color:#222;}
+.customer .cyber_report .section1 .cont_box > div .blue {font-weight: 400; color:#005eb8;} 
 .customer .cyber_report .section1 ul { font-size: 1.4rem; color: #777; line-height: 1.71; letter-spacing: -.0014rem; margin-bottom: 3.5rem; }
 .customer .cyber_report .section1 ul li { position: relative; padding-left: 1.2rem; }
 .customer .cyber_report .section1 ul li span { position: absolute; top: 0; left: 0; }
@@ -2025,7 +2029,11 @@
 .graybox .policy .box .new_privacy .table-wrap { margin-top: 3.9rem; overflow-x: auto; border-bottom: 1px solid #e8e8e8!important;}
 .graybox .policy .box .new_privacy .table-wrap table { width: 100%; border-collapse: collapse; font-size: 1.6rem; color: #555; line-height: 71px; letter-spacing: -0.04rem; min-width: 600px; border-top: 2px solid #000000;  border-bottom: 1px solid #e8e8e8!important;}
 .graybox .policy .box .new_privacy .table-wrap thead th { background-color: #f9f9f9; font-weight: 400; color: #222; text-align: center; border: 1px solid #e8e8e8;}
+.graybox .policy .box .new_privacy .table-wrap thead th:first-child{border-left:none;}
+.graybox .policy .box .new_privacy .table-wrap thead th:last-child{border-right:none;}
 .graybox .policy .box .new_privacy .table-wrap tbody td { text-align: center; border: 1px solid #e8e8e8; font-weight: 300; color:#222;}
+.graybox .policy .box .new_privacy .table-wrap tbody td:first-child{border-left:none;}
+.graybox .policy .box .new_privacy .table-wrap tbody td:last-child{border-right:none;}
 
 /* error */
 .error { height: 100vh; }
