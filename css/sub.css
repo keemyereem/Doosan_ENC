@@ -2026,9 +2026,9 @@
 
 /* 고정형 영상정보처리기기 운영·관리방침 테이블 */
 .graybox .policy .box .new_privacy .table-wrap+ul.bold{margin-top: 28px;}
-.graybox .policy .box .new_privacy .table-wrap { margin-top: 3.9rem; overflow-x: auto; border-bottom: 1px solid #e8e8e8!important;}
-.graybox .policy .box .new_privacy .table-wrap table { width: 100%; border-collapse: collapse; font-size: 1.6rem; color: #555; line-height: 71px; letter-spacing: -0.04rem; min-width: 600px; border-top: 2px solid #000000;  border-bottom: 1px solid #e8e8e8!important;}
-.graybox .policy .box .new_privacy .table-wrap thead th { background-color: #f9f9f9; font-weight: 400; color: #222; text-align: center; border: 1px solid #e8e8e8;}
+.graybox .policy .box .new_privacy .table-wrap { margin-top: 3.9rem; overflow-x: auto; }
+.graybox .policy .box .new_privacy .table-wrap table { width: 100%; border-collapse: collapse; font-size: 1.6rem; color: #555; line-height: 71px; letter-spacing: -0.04rem; min-width: 600px;}
+.graybox .policy .box .new_privacy .table-wrap thead th { background-color: #f9f9f9; font-weight: 400; color: #222; text-align: center; border: 1px solid #e8e8e8; border-top: 2px solid #000;}
 .graybox .policy .box .new_privacy .table-wrap thead th:first-child{border-left:none;}
 .graybox .policy .box .new_privacy .table-wrap thead th:last-child{border-right:none;}
 .graybox .policy .box .new_privacy .table-wrap tbody td { text-align: center; border: 1px solid #e8e8e8; font-weight: 300; color:#222;}

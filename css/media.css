@@ -423,7 +423,7 @@
 
     /* 공통 */
     #mobile .title_area { padding: 6.5rem 2rem 0; text-align: center; }
-    #mobile .title_area .con_tit { font-size: 3.5rem; padding-bottom: 0; }
+    #mobile .title_area .con_tit { font-size: 4rem; padding-bottom: 0; }
     #mobile .title_area .con_tit > span { display: block; margin: 2rem auto; width: 1.5rem; height: 0.75rem; }
     #mobile .title_area .con_tit > span::after { border-left: .75rem solid transparent; border-right: .75rem solid transparent; border-top: .75rem solid #1d1f1e; top: 0; }
     #mobile .title_area .sub_tit { font-size: 2.2rem; padding: 3rem 0 1rem; line-height: 1.36; }
@@ -1791,23 +1791,31 @@ border-right: .5rem solid transparent;border-top: .5rem solid #222; transform: r
 #mobile .recruit .benefits ul li:nth-child(8) .icon { width: 5rem; height: 4.95rem; margin-top: -.5rem; }
 
 /* 개인정보처리방침 */
-#mobile .graybox { padding: 6.5rem 0 0; }
-#mobile .graybox .policy > .inner { text-align: center; margin-top: 6.5rem; }
+#mobile .graybox { padding: 6rem 0 0; }
+#mobile .graybox .title_area {padding: 6rem 2rem 2.5rem 2rem; background: #fff;}
+#mobile .graybox .policy { padding-top: 17.5px}
+#mobile .graybox .policy > .inner { margin-top: 0rem; width: calc(100% - 2rem)!important;}
 #mobile .graybox .policy > .inner .tab_inner ul{ margin: 0 auto 12rem;}
 #mobile .graybox .policy > .inner .tab_inner ul li { height: 4.5rem; line-height: 4.5rem;}
 #mobile .graybox .policy > .inner .tab_inner ul li.on { box-shadow: 0px 0px 16px 4px rgba(34, 34, 34, 0.2); }
 #mobile .graybox .policy > .inner .tab_inner ul li a { font-size: 1.35rem; letter-spacing: -.135rem; line-height: 18px; display: flex; align-items: center; justify-content: center;}
-#mobile .graybox .policy > .inner .select_wrap { top: 6.5rem; right: 50%; transform: translateX(50%); width: 100%; }
+#mobile .graybox .policy > .inner .select_area {width: 100%; height: 111px;}
+#mobile .graybox .policy > .inner .select_wrap { top: 8.5rem; right: 50%; transform: translateX(50%); width: calc(100% - 40px);}
+#mobile .graybox .policy > .inner .select_wrap.mo {top: 0rem; right: 50%; transform: translateX(50%); width: 100%; z-index: 11;}
+#mobile .graybox .policy > .inner .select_wrap.mo .terms_site{width:100%; background: #005eb8; color: #fff!important;}
+#mobile .graybox .policy > .inner .select_wrap.mo .terms_site .site_selected {color:#fff; border-bottom: none!important; padding: 2.5rem; min-height: 5rem}
+#mobile .graybox .policy > .inner .select_wrap.mo .terms_site .site_selected::after {border-top: 5px solid #fff;}
+#mobile .graybox .policy > .inner .select_wrap.mo .terms_site .site_list li a {    height: 5rem; line-height: 5rem; line-height: 5rem; padding: 0 2.5rem;}
 #mobile .graybox .policy > .inner .terms_site .site_list { min-width: auto; }
-#mobile .graybox .policy > .inner .terms_site.select01 { width: 100%; max-width: 19rem; text-align: center; margin: 0 auto; }
-#mobile .graybox .policy > .inner .terms_site.select02 { width: 100%; max-width: 29rem; text-align: center; margin: 0 auto; }
+#mobile .graybox .policy > .inner .terms_site.select01 { width: 100%; max-width: auto; text-align: center; margin: 0 auto; }
+#mobile .graybox .policy > .inner .terms_site.select02 { width: 100%; max-width: auto; text-align: center; margin: 0 auto; }
 #mobile .graybox .policy > .inner .select_row { max-width: 22rem; width: 100%; position: initial; transform: translateY(0); border: 0; border-bottom: 2px solid #222; margin: 3rem auto 0; }
-#mobile .graybox .policy > .inner .terms_site .site_selected { font-size: 1.3rem; line-height: 1.2; min-height: 4.8rem; padding: 0 1rem; }
+#mobile .graybox .policy > .inner .terms_site .site_selected { font-size: 1.5rem; line-height: 1.2; min-height: 4.8rem; padding: 0 1.4rem; }
 #mobile .graybox .policy > .inner .terms_site .site_list li a { font-size: 1.3rem; }
 #mobile .graybox .policy > .inner .select_row::after { right: 1rem; }
 #mobile .graybox .policy > .inner .select_row select { padding: 0 1rem; }
 #mobile .graybox .policy > .inner .select_row label { font-size: 1.5rem; padding: 0 1rem; }
-#mobile .graybox .policy .box { margin: 2.7rem auto 10rem; padding: 3.5rem .9rem; width: calc(100% - 2rem); }
+#mobile .graybox .policy .box { margin: 5.7rem auto 10rem; padding: 3.5rem .9rem; width: calc(100% - 2rem); }
 #mobile .graybox .policy .box h3 { font-size: 1.7rem; margin-bottom: 2.5rem; }
 #mobile .graybox .policy .box ol > li+li { margin-top: 2.5rem; }
 #mobile .graybox .policy .box ol > li:not(:last-child) { padding-bottom: 2.5rem; }
@@ -1841,9 +1849,12 @@ border-right: .5rem solid transparent;border-top: .5rem solid #222; transform: r
 
 /* 고정형 영상정보처리기기 운영·관리방침 테이블 */
 #mobile .graybox .policy .box .new_privacy .table-wrap+ul.bold{margin-top: 28px;}
-#mobile .graybox .policy .box .new_privacy .table-wrap { margin-top: 2rem; overflow-x: auto; border-bottom: 1px solid #e8e8e8!important;}
-#mobile .graybox .policy .box .new_privacy .table-wrap table { width: 100%; border-collapse: collapse; font-size: 1.3rem; color: #555; line-height: 55px; letter-spacing: -0.04rem; min-width: 600px; border-top: 2px solid #000000;  border-bottom: 1px solid #e8e8e8!important;}
-#mobile .graybox .policy .box .new_privacy .table-wrap thead th { background-color: #f9f9f9; font-weight: 400; color: #222; text-align: center; border: 1px solid #e8e8e8;}
+#mobile .graybox .policy .box .new_privacy .table-wrap { margin-top: 2rem; overflow-x: auto;}
+#mobile .graybox .policy .box .new_privacy .table-wrap table { width: 100%; border-collapse: collapse; font-size: 1.3rem; color: #555; line-height: 55px; letter-spacing: -0.04rem; min-width: 600px; border-top:2px solid #000;}
+#mobile .graybox .policy .box .new_privacy .table-wrap.mo table {min-width: auto;}
+#mobile .graybox .policy .box .new_privacy .table-wrap.mo table tr td:first-child {background-color: #f9f9f9; border-left: none;}
+#mobile .graybox .policy .box .new_privacy .table-wrap.mo table tr td:last-child {border-right: none;}
+#mobile .graybox .policy .box .new_privacy .table-wrap thead th { background-color: #f9f9f9; font-weight: 400; color: #222; text-align: center; border: 1px solid #e8e8e8; border-top:2px solid #000;}
 #mobile .graybox .policy .box .new_privacy .table-wrap tbody td { text-align: center; border: 1px solid #e8e8e8; font-weight: 300; color:#222;}
 
 /* error */
