@@ -410,3 +410,10 @@ body { overflow: overlay; }
 #topButton { font-family: 'Montserrat'; font-size: 1.8rem; color: #000; letter-spacing: .09rem; position: fixed; right: 8rem; bottom: 8rem; display: none; z-index: 999; writing-mode: vertical-lr; }
 #topButton::after { content:''; display: block; width: 2.3rem; height: 3rem; background: url(../images/common/scrollTop.png) no-repeat; background-size: contain; position: absolute; top: -100%; left: 0; }
 #topButton.on { position: absolute; }
+.flex {display: flex;}
+.flex_justify_center{ justify-content: center;}
+.text_justify {text-align: justify;}
+.flex_align_center {align-items: center;}
+.text_left {text-align: left!important;}
+.gray999 {color:#999!important;}
+.position_rel {position: relative;}

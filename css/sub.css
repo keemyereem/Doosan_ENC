@@ -23,6 +23,8 @@
 /* 공통 */
 .pc {display: block;}
 .mo {display: none;}
+.mobile {display: none;}
+.mobile_375 {display:none;}
 .fp-viewing-firstPage .header.wht .logo,
 .fp-viewing-fifthPage .header.wht .logo {background: url(../images/common/logo_w_65.svg) no-repeat;}
 .fp-viewing-firstPage .header.wht .gnb > ul > li > a,
@@ -1968,6 +1970,7 @@
 .recruit .benefits ul li:nth-child(8) .icon { margin-top: -1.5rem; }
 
 /* 개인정보처리방침 */
+.policy_tit {line-height: 84px;}
 .graybox { background: #f9f9f9; padding-top: 14rem; }
 .graybox .policy > .inner { position: relative; }
 .graybox .policy > .inner .tab_inner ul { display: flex; max-width: 88rem; margin: 0 auto 15rem; }
@@ -1991,7 +1994,10 @@
 .graybox .policy .box ol > li+li { margin-top: 5rem; }
 .graybox .policy .box ol > li:not(:last-child) { border-bottom: 1px solid #e8e8e8; padding-bottom: 5rem; }
 .graybox .policy .box ol > li .tit { font-size: 2rem; font-weight: 400; }
-.graybox .policy .box ol > li > p { font-size: 1.6rem; font-weight: 150; color: #555; line-height: 1.875; letter-spacing: -.04rem; margin-top: 1rem; }
+.graybox .policy .box ol > li .tit .position_rel {padding-left: 32px;}
+.graybox .policy .box ol > li .tit .position_rel span{position: absolute; top: 0; left: 0;}
+.graybox .policy .box ol > li .inner_box {padding: 50px 60px; border: 1px solid #e8e8e8; margin-top: 50px;}
+.graybox .policy .box ol > li > p { font-size: 1.6rem; font-weight: 150; color: #555; line-height: 30px; letter-spacing: -.04rem; margin-top: 1rem; }
 .graybox .policy .box ol > li > p.gray { color: #999; }
 .graybox .policy .box ol > li > p b { font-weight: 350; display: block; }
 .graybox .policy .box ol > li .sub_tit { font-size: 1.8rem; font-weight: 400; color: #000; }
@@ -2005,13 +2011,78 @@
 .graybox .policy .box ol > li dl { font-size: 1.6rem; font-weight: 150; color: #555; line-height: 1.875; letter-spacing: -.04rem; }
 .graybox .policy .box ol > li dl dt, .graybox .policy .box ol > li dl dd { display: inline-block; }
 .graybox .policy .box ol > li .download { display: flex; align-items: center; justify-content: space-between; padding: 0 1rem 2rem 1rem; font-size: 1.6rem; color: #005eb8; width: 23.2rem; position: relative; margin-top: 3rem; }
+.pre_number .download {margin-bottom: 35px;}
+.graybox .policy .box ol > li .download.type01{width: 48.6rem;}
+.graybox .policy .box ol > li .download.type02{width: 40.1rem;}
+.graybox .policy .box ol > li .download.type03{width: 28.4rem;}
 .graybox .policy .box ol > li .download i { display: inline-block; width: 1.9rem; height: 2rem; background: url(../images/common/icon_download_b.png) no-repeat 50% 50%; background-size: contain; }
 .graybox .policy .box ol > li .download::after { content:''; display: block; width: 100%; height: 0.1rem; background: #005eb8; position: absolute; bottom: 0; left: 0; transition: width .3s; }
 .graybox .policy .box ol > li .download:hover::after { width: 0; }
-/* .graybox .policy .box .box_cont { display: none;}
-.graybox .policy .box .box_cont.on { display: block; } */
-.graybox .privacy .box .privacy01 ol > li > .tit+p:first-of-type { margin-bottom: 3rem; }
+.graybox .privacy .box .privacy01 ol > li > .tit+p:first-of-type { margin-bottom: 2.5rem; }
 .graybox .privacy .box .privacy01 ol > li:first-child > .tit+p:first-of-type { margin-bottom: 0; }
+.graybox .privacy .box .privacy01 .data_collection {background: url('../images/privacy/01_data_collection.jpg') no-repeat; width: 43px; height: 43px; background-size: cover;}
+.graybox .privacy .box .privacy01 .processing_purpose { background: url('../images/privacy/02_processing_purpose.jpg') no-repeat; width: 42px; height: 48px; background-size: cover;}
+.graybox .privacy .box .privacy01 .retention_period { background: url('../images/privacy/03_retention_period.jpg') no-repeat; width: 42px; height: 48px; background-size: cover;}
+.graybox .privacy .box .privacy01 .data_provision { background: url('../images/privacy/04_data_provision.jpg') no-repeat; width: 42px; height: 48px; background-size: cover;}
+.graybox .privacy .box .privacy01 .processing_delegation { background: url('../images/privacy/05_processing_delegation.jpg') no-repeat; width: 42px; height: 48px; background-size: cover;}
+.graybox .privacy .box .privacy01 .complaint_handling { background: url('../images/privacy/06_complaint_handling.jpg') no-repeat; width: 41px; height: 41px; background-size: cover;}
+.graybox .privacy .box .privacy01 .child_privacy_protection { background: url('../images/privacy/child_privacy_protection.jpg') no-repeat; width: 42px; height: 42px; background-size: cover;}
+.graybox .privacy .box .privacy01 .data_destruction { background: url('../images/privacy/data_destruction.jpg') no-repeat; width: 42px; height: 48px; background-size: cover;}
+.graybox .privacy .box .privacy01 .security_measures { background: url('../images/privacy/security_measures.jpg') no-repeat; width: 41px; height: 41px; background-size: cover;}
+.graybox .privacy .box .privacy01 .privacy_officer { background: url('../images/privacy/privacy_officer.jpg') no-repeat; width: 41px; height: 41px; background-size: cover;}
+.graybox .privacy .box .privacy01 .rights_remedy { background: url('../images/privacy/rights_remedy.jpg') no-repeat; width: 41px; height: 41px; background-size: cover;}
+.graybox .privacy .box .privacy01 .privacy_policy_update { background: url('../images/privacy/privacy_policy_update.jpg') no-repeat; width: 41px; height: 41px; background-size: cover;}
+.graybox .privacy .box .privacy01 .table-wrap { margin-top: 3.9rem; overflow-x: auto; }
+.graybox .privacy .box .privacy01 .table-wrap table { width: 100%; border-collapse: collapse; font-size: 1.6rem; color: #555; line-height: 30px; letter-spacing: -0.04rem; min-width: 600px;}
+.graybox .privacy .box .privacy01 .table-wrap.type01 table { line-height: 24px;}
+.graybox .privacy .box .privacy01 .table-wrap thead th { background-color: #f9f9f9; font-weight: 400; color: #222; text-align: center; border: 1px solid #e8e8e8; border-top: 2px solid #000; height: 72px;}
+.graybox .privacy .box .privacy01 .table-wrap thead th:first-child{border-left:none;}
+.graybox .privacy .box .privacy01 .table-wrap thead th:last-child{border-right:none;}
+.graybox .privacy .box .privacy01 .table-wrap tbody td { text-align: center; border: 1px solid #e8e8e8; font-weight: 300; color:#222;}
+.graybox .privacy .box .privacy01 .table-wrap.type01 td {padding: 27px 0;}
+.graybox .privacy .box .privacy01 .table-wrap.type01 td.text_left {padding-left: 20px;}
+.graybox .privacy .box .privacy01 .table-wrap.type01 td.text_left.type01 {padding-left: 40px;}
+.graybox .privacy .box .privacy01 .table-wrap tbody td:first-child{border-left:none;}
+.graybox .privacy .box .privacy01 .table-wrap tbody td:last-child{border-right:none;}
+.graybox .privacy .box .privacy01 .table-wrap tbody td .ico {display: block;  background-size: cover; margin: 28px auto}
+.graybox .privacy .box .privacy01 .table-wrap tbody td .data_collection { width: 57px; height: 57px; background-size: cover;}
+.graybox .privacy .box .privacy01 .table-wrap tbody td .processing_purpose { width: 54px; height: 62px; background-size: cover;}
+.graybox .privacy .box .privacy01 .table-wrap tbody td .retention_period { width: 54px; height: 62px; background-size: cover;}
+.graybox .privacy .box .privacy01 .table-wrap tbody td .data_provision { width: 54px; height: 62px; background-size: cover;}
+.graybox .privacy .box .privacy01 .table-wrap tbody td .processing_delegation { width: 54px; height: 62px; background-size: cover;}
+.graybox .privacy .box .privacy01 .table-wrap tbody td .complaint_handling { width: 55px; height: 55px; background-size: cover;}
+.graybox .privacy .box .privacy01 .table-wrap tbody td p.sub_txt {color: #999999; font-weight: 150; margin-bottom: 15px;}
+.graybox .privacy .box .privacy01 .table-wrap tbody td.solo p{margin-bottom: 60px;} 
+.graybox .privacy .box .privacy01 .table-wrap tbody td .gray999 {color:#999; font-weight: 150;}
+.graybox .privacy .box .privacy01 .pre_number {  font-size: 1.6rem; font-weight: 150; color: #555; line-height: 1.875; letter-spacing: -.04rem; margin-top: 1rem;  position: relative; padding-left: 26px; font-weight: 350 !important;}
+.graybox .privacy .box .privacy01 .pre_number:first-child { margin-top: 30px;}
+.graybox .privacy .box .privacy01 .pre_number .number { position: absolute; left: 0; top: 0;}
+.graybox .privacy .box .privacy01 .pre_number.type01:first-child { margin-top: 20px;}
+.graybox .privacy .box .privacy01 .pre_number.type01 { padding-left: 18px;}
+.graybox .privacy .box .privacy01 .pre_number.type01 .number { font-size: 10px; top: 5px;}
+.graybox .privacy .box .privacy01 .pre_number.type02:first-child { margin-top: 40px;}
+.graybox .privacy .box .privacy01 .pre_number.type02 { padding-left: 18px;}
+.graybox .privacy .box .privacy01 .pre_number.type02 .number { font-size: 10px; top: 5px;}
+.graybox .privacy .box .privacy01 .pre_number.type03 { padding-left: 98px;}
+.graybox .privacy .box .privacy01 .flex {display: flex;}
+.graybox .privacy .box .privacy01 .ico_tit_wrap {gap:20px; letter-spacing: -0.4px;}
+.graybox .privacy .box .privacy01 .ico_tit_wrap .ico_wrap { gap: 14px;}
+.graybox .privacy .box .privacy01 .hyphen{padding-left: 1rem; position: relative;}
+.graybox .privacy .box .privacy01 .hyphen::before{ content: '-'; display: block; position: absolute; top: -.2rem; left: 0;}
+.graybox .privacy .box .privacy01 .pre_hangle{padding-left: 1.7rem; position: relative;}
+.graybox .privacy .box .privacy01 .pre_star{padding-left: 1.2rem; position: relative; font-weight: 150;}
+.graybox .privacy .box .privacy01 .hangle {position: absolute; top: 0; left: 0;}
+
+/* 고정형 영상정보처리기기 운영·관리방침 테이블 */
+.graybox .policy .box .new_privacy .table-wrap+ul.bold{margin-top: 28px;}
+.graybox .policy .box .new_privacy .table-wrap { margin-top: 3.9rem; overflow-x: auto; }
+.graybox .policy .box .new_privacy .table-wrap table { width: 100%; border-collapse: collapse; font-size: 1.6rem; color: #555; line-height: 71px; letter-spacing: -0.04rem; min-width: 600px;}
+.graybox .policy .box .new_privacy .table-wrap thead th { background-color: #f9f9f9; font-weight: 400; color: #222; text-align: center; border: 1px solid #e8e8e8; border-top: 2px solid #000;}
+.graybox .policy .box .new_privacy .table-wrap thead th:first-child{border-left:none;}
+.graybox .policy .box .new_privacy .table-wrap thead th:last-child{border-right:none;}
+.graybox .policy .box .new_privacy .table-wrap tbody td { text-align: center; border: 1px solid #e8e8e8; font-weight: 300; color:#222;}
+.graybox .policy .box .new_privacy .table-wrap tbody td:first-child{border-left:none;}
+.graybox .policy .box .new_privacy .table-wrap tbody td:last-child{border-right:none;}
 
 /* 고정형 영상정보처리기기 운영·관리방침 */
 .graybox .policy .box .new_privacy {}

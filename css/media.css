@@ -38,6 +38,7 @@
 /* 공통 */
 @media screen and (max-width:767px) {
     .pc {display: none!important;}
+    .mobile {display: block;}
     .mo {display: block;}
     .mo_flex {display: flex;}
     /* popNoti */
@@ -772,6 +773,7 @@
     #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell05 { width: 100%; }
     #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell02,
     #mobile .technology .ipr.ipr03 .tb_box .tb_row.row_body .cell04 { padding-right: 1rem; }
+    .mobile_375 {display: block;}
 }
 @media screen and (max-width:359px) {
     #mobile .technology .ipr.ipr04 .tb_box .tb_row.row_body .cell02,
@@ -1791,6 +1793,7 @@ border-right: .5rem solid transparent;border-top: .5rem solid #222; transform: r
 #mobile .recruit .benefits ul li:nth-child(8) .icon { width: 5rem; height: 4.95rem; margin-top: -.5rem; }
 
 /* 개인정보처리방침 */
+#mobile .policy_tit {line-height: 52px;}
 #mobile .graybox { padding: 6rem 0 0; }
 #mobile .graybox .title_area {padding: 6rem 2rem 2.5rem 2rem; background: #fff;}
 #mobile .graybox .policy { padding-top: 17.5px}
@@ -1831,13 +1834,61 @@ border-right: .5rem solid transparent;border-top: .5rem solid #222; transform: r
 #mobile .graybox .policy .box ol > li > ul > li { padding-left: 1rem; font-size: 1.3rem; line-height: 1.53; }
 #mobile .graybox .policy .box ol > li dl { font-size: 1.3rem; line-height: 1.53; display: flex; }
 #mobile .graybox .policy .box ol > li dl dt { width: 5.5rem; flex-shrink: 0; }
-#mobile .graybox .policy .box ol > li .download { padding: 0 1rem 1.6rem .5rem; font-size: 1.3rem; width: 17.5rem; margin-top: 2.5rem; }
+#mobile .graybox .policy .box ol > li .download { padding: 0 1rem 0.8rem .5rem; font-size: 1.3rem; width: 17.5rem; margin-top: 2.5rem; margin-bottom: 20px;}
 #mobile .graybox .policy .box ol > li .download i { width: 1.5rem; height: 1.5rem; background-size: contain; }
 #mobile .graybox .privacy .box ol > li > .tit+p:first-of-type { margin-bottom: 2rem; }
 #mobile .graybox .privacy .box ol > li:first-child > .tit+p:first-of-type { margin-bottom: 0; }
+#mobile .graybox .policy .box ol > li .inner_box{padding: 26px 33px 26px 26px; margin-top: 25px;}
+#mobile .graybox .policy .box ol > li .inner_box .pre_number {font-size: 13px; line-height: 23px; margin-top: 0; padding-left: 21px;}
+#mobile .graybox .policy .box ol > li .inner_box .pre_number:first-child {margin-top: 15px;}
+#mobile .graybox .privacy .box .privacy01 .data_collection {width: 31px; height: 31px;}
+#mobile .graybox .privacy .box .privacy01 .processing_purpose {width: 31px; height: 35.5px;}
+#mobile .graybox .privacy .box .privacy01 .retention_period  {width: 31px; height: 35.5px;}
+#mobile .graybox .privacy .box .privacy01 .child_privacy_protection {width: 30px; height: 30px;}
+#mobile .graybox .privacy .box .privacy01 .data_provision {width: 31px; height: 35.5px;}
+#mobile .graybox .privacy .box .privacy01 .processing_delegation {width: 31px; height: 35.5px;}
+#mobile .graybox .privacy .box .privacy01 .data_destruction {width: 31px; height: 35.5px;}
+#mobile .graybox .privacy .box .privacy01 .complaint_handling {width: 30px; height: 30px;}
+#mobile .graybox .privacy .box .privacy01 .security_measures {width: 30px; height: 30px;}
+#mobile .graybox .privacy .box .privacy01 .privacy_officer {width: 30px; height: 30px;}
+#mobile .graybox .privacy .box .privacy01 .rights_remedy {width: 30px; height: 30px;}
+#mobile .graybox .privacy .box .privacy01 .privacy_policy_update {width: 30px; height: 30px;}
+#mobile .graybox .policy .box ol > li .tit .position_rel {padding-left: 25px; line-height: 22px;}
+#mobile .graybox .privacy .box .privacy01 .ico_tit_wrap {gap:0px; justify-content: space-between;}
+#mobile .graybox .privacy .box .privacy01 .ico_tit_wrap .ico_wrap { gap: 12px;}
+#mobile .graybox .privacy .box .privacy01 .table-wrap {margin-top: 20px;}
+#mobile .graybox .privacy .box .privacy01 .table-wrap.mo thead th {height: 42px; font-size: 13px;}
+#mobile .graybox .privacy .box .privacy01 .table-wrap tbody td .data_collection { width: 42.5px; height: 42.5px;}
+#mobile .graybox .privacy .box .privacy01 .table-wrap tbody td .processing_purpose { width: 40px; height: 46px;}
+#mobile .graybox .privacy .box .privacy01 .table-wrap tbody td .retention_period { width: 40px; height: 46px;}
+#mobile .graybox .privacy .box .privacy01 .table-wrap tbody td .data_provision { width: 40px; height: 46px;}
+#mobile .graybox .privacy .box .privacy01 .table-wrap tbody td .processing_delegation { width: 40px; height: 46px;}
+#mobile .graybox .privacy .box .privacy01 .table-wrap tbody td .complaint_handling { width: 47.5px; height: 47.5px;}
+#mobile .graybox .privacy .box .privacy01 .table-wrap tbody td .ico {margin:17.5px auto 16px auto;}
+#mobile .graybox .privacy .box .privacy01 .table-wrap.mo table {font-size: 13px; line-height: 20px;}
+#mobile .graybox .privacy .box .privacy01 .table-wrap.type01 table {min-width: 855px; font-size: 13px; line-height: 18px;}
+#mobile .graybox .privacy .box .privacy01 .table-wrap.type01.mobile table{min-width: auto;}
+#mobile .graybox .privacy .box .privacy01 .table-wrap thead th {height: 42px; }
+#mobile .graybox .privacy .box .privacy01 .table-wrap.type01 td {padding: 16px 0;}
+#mobile .graybox .privacy .box .privacy01 .table-wrap.type01.mobile td:first-child {background: #f9f9f9; border-right: none; font-weight: 400;}
+#mobile .graybox .privacy .box .privacy01 .table-wrap.type01.mobile td:last-child{ border-left: none; text-align: left; padding-left: 24px;}
+#mobile .graybox .privacy .box .privacy01 .table-wrap.type01.mobile th:first-child{ border-right: none; }
+#mobile .graybox .privacy .box .privacy01 .table-wrap.type01.mobile th:last-child{ border-left: none; text-align: left; padding-left: 24px;font-weight: 300; background: none; }
+#mobile .graybox .privacy .box .privacy01 .table-wrap.type01.mobile.head_color th:last-child{background: #f9f9f9; text-align: center; padding-left: 0; border-left: 1px solid #e8e8e8; font-weight: 400;}
+#mobile .graybox .privacy .box .privacy01 .table-wrap.type01.mobile.head_color td:first-child{background: none; text-align: center; padding-left: 0px; font-weight: 300; border-right: 1px solid #e8e8e8;}
+#mobile .graybox .privacy .box .privacy01 .table-wrap.type01 td.text_left {padding-left: 15px;}
+#mobile .graybox .privacy .box .privacy01 .pre_number {font-size: 13px; line-height: 20px; letter-spacing: -0.04px;}
+#mobile .graybox .privacy .box .privacy01 .pre_number.type02 {font-size: 13px; line-height: 20px; letter-spacing: -0.04px;}
+#mobile .graybox .privacy .box .privacy01 .pre_number.type02:first-child {margin-top: 20px;}
+#mobile .graybox .privacy .box .privacy01 .pre_number.type02 .number {top:0; font-size: 9px;}
+#mobile .graybox .privacy .box .privacy01 .pre_number.type01 .number {top:0; font-size: 9px;}
+#mobile .graybox .privacy .box ol > li .download.type01{width: 27.05rem;}
+#mobile .graybox .privacy .box ol > li .download.type02{width: 27.3rem;}
+#mobile .graybox .privacy .box ol > li .download.type03{width: 21.7rem;}
+#mobile .graybox .privacy .box .privacy01 .pre_number.type03 {position: inherit; padding-left: 0;}
+#mobile .graybox .privacy .box .privacy01 .pre_number.type03 .number {position: inherit;}
 
 /* 고정형 영상정보처리기기 운영·관리방침 */
-#mobile .graybox .policy .box .new_privacy {}
 #mobile .graybox .policy .box .new_privacy h3 {    font-size: 1.7rem;    margin-bottom: 0.8rem; }
 #mobile .graybox .policy .box .new_privacy p {     font-size: 1.3rem; line-height: 1.53; margin-top: 1.5rem; position: relative;}
 #mobile .graybox .policy .box .new_privacy .line-e8 { width: 100%; height: 1px; border: none; background-color: #e8e8e8; margin: 2.5rem auto;}
@@ -1846,6 +1897,7 @@ border-right: .5rem solid transparent;border-top: .5rem solid #222; transform: r
 #mobile .graybox .privacy .box .privacy02 .pre_hangle{position: relative; padding-left: 15px; font-weight: 350!important; margin-top: 0!important; padding-left: 22px;}
 #mobile .graybox .privacy .box .privacy02 .pre_number .number{position: absolute; left: 0; top: 0;}
 #mobile .graybox .privacy .box .privacy02 .tit+.bold{margin-top: 3rem;}
+#mobile .graybox .privacy .box .privacy01 .table-wrap.mo table { min-width: auto;}
 
 /* 고정형 영상정보처리기기 운영·관리방침 테이블 */
 #mobile .graybox .policy .box .new_privacy .table-wrap+ul.bold{margin-top: 28px;}
