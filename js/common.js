@@ -148,6 +148,7 @@ var commonEvent = {
     this.tabEvent();
     this.popup();
     this.english();
+    this.scrollToPreNumber();
   },
 
   headerEvent: () => {
@@ -725,6 +726,22 @@ var commonEvent = {
         }
       });
     }
+  },
+  
+  scrollToPreNumber: () => {
+    $('.pre_number a[href^="#"]').on('click', function(e) {
+      e.preventDefault();
+
+      const target = $(this.getAttribute('href'));
+      if (target.length) {
+        const isMobile = $('html').attr('id') === 'mobile';
+        const offset = isMobile ? 80 : 150;
+
+        $('html, body').animate({
+          scrollTop: target.offset().top - offset
+        }, 500);
+      }
+    });
   },
 };
 

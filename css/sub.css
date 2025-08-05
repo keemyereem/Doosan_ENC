@@ -1969,7 +1969,7 @@
 .recruit .benefits ul li:nth-child(7) .icon { margin-top: -1rem; }
 .recruit .benefits ul li:nth-child(8) .icon { margin-top: -1.5rem; }
 
-/* 개인정보처리방침 */
+/* 개인정보 처리방침 */
 .policy_tit {line-height: 84px;}
 .graybox { background: #f9f9f9; padding-top: 14rem; }
 .graybox .policy > .inner { position: relative; }
@@ -2054,16 +2054,17 @@
 .graybox .privacy .box .privacy01 .table-wrap tbody td p.sub_txt {color: #999999; font-weight: 150; margin-bottom: 15px;}
 .graybox .privacy .box .privacy01 .table-wrap tbody td.solo p{margin-bottom: 60px;} 
 .graybox .privacy .box .privacy01 .table-wrap tbody td .gray999 {color:#999; font-weight: 150;}
-.graybox .privacy .box .privacy01 .pre_number {  font-size: 1.6rem; font-weight: 150; color: #555; line-height: 1.875; letter-spacing: -.04rem; margin-top: 1rem;  position: relative; padding-left: 26px; font-weight: 350 !important;}
+.graybox .privacy .box .privacy01 .pre_number {  font-size: 1.6rem; color: #555; line-height: 1.875; letter-spacing: -.04rem; margin-top: 1rem;  position: relative; padding-left: 26px; font-weight: 150;}
 .graybox .privacy .box .privacy01 .pre_number:first-child { margin-top: 30px;}
 .graybox .privacy .box .privacy01 .pre_number .number { position: absolute; left: 0; top: 0;}
 .graybox .privacy .box .privacy01 .pre_number.type01:first-child { margin-top: 20px;}
-.graybox .privacy .box .privacy01 .pre_number.type01 { padding-left: 18px;}
+.graybox .privacy .box .privacy01 .pre_number.type01 { padding-left: 18px; font-weight: 300;}
 .graybox .privacy .box .privacy01 .pre_number.type01 .number { font-size: 10px; top: 5px;}
 .graybox .privacy .box .privacy01 .pre_number.type02:first-child { margin-top: 40px;}
 .graybox .privacy .box .privacy01 .pre_number.type02 { padding-left: 18px;}
 .graybox .privacy .box .privacy01 .pre_number.type02 .number { font-size: 10px; top: 5px;}
 .graybox .privacy .box .privacy01 .pre_number.type03 { padding-left: 98px;}
+.graybox .privacy .box .privacy01 .pre_number.type03:first-child { margin-top: 20px;}
 .graybox .privacy .box .privacy01 .flex {display: flex;}
 .graybox .privacy .box .privacy01 .ico_tit_wrap {gap:20px; letter-spacing: -0.4px;}
 .graybox .privacy .box .privacy01 .ico_tit_wrap .ico_wrap { gap: 14px;}

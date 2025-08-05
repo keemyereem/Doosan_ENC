@@ -1792,7 +1792,7 @@ border-right: .5rem solid transparent;border-top: .5rem solid #222; transform: r
 #mobile .recruit .benefits ul li:nth-child(7) .icon { width: 5rem; height: 4.4rem; margin-top: -.5rem; }
 #mobile .recruit .benefits ul li:nth-child(8) .icon { width: 5rem; height: 4.95rem; margin-top: -.5rem; }
 
-/* 개인정보처리방침 */
+/* 개인정보 처리방침 */
 #mobile .policy_tit {line-height: 52px;}
 #mobile .graybox { padding: 6rem 0 0; }
 #mobile .graybox .title_area {padding: 6rem 2rem 2.5rem 2rem; background: #fff;}
@@ -1806,7 +1806,7 @@ border-right: .5rem solid transparent;border-top: .5rem solid #222; transform: r
 #mobile .graybox .policy > .inner .select_wrap { top: 8.5rem; right: 50%; transform: translateX(50%); width: calc(100% - 40px);}
 #mobile .graybox .policy > .inner .select_wrap.mo {top: 0rem; right: 50%; transform: translateX(50%); width: 100%; z-index: 11;}
 #mobile .graybox .policy > .inner .select_wrap.mo .terms_site{width:100%; background: #005eb8; color: #fff!important;}
-#mobile .graybox .policy > .inner .select_wrap.mo .terms_site .site_selected {color:#fff; border-bottom: none!important; padding: 2.5rem; min-height: 5rem}
+#mobile .graybox .policy > .inner .select_wrap.mo .terms_site .site_selected {color:#fff; border-bottom: none!important; padding: 2.5rem; max-height: 5rem}
 #mobile .graybox .policy > .inner .select_wrap.mo .terms_site .site_selected::after {border-top: 5px solid #fff;}
 #mobile .graybox .policy > .inner .select_wrap.mo .terms_site .site_list li a {    height: 5rem; line-height: 5rem; line-height: 5rem; padding: 0 2.5rem;}
 #mobile .graybox .policy > .inner .terms_site .site_list { min-width: auto; }
@@ -1818,7 +1818,7 @@ border-right: .5rem solid transparent;border-top: .5rem solid #222; transform: r
 #mobile .graybox .policy > .inner .select_row::after { right: 1rem; }
 #mobile .graybox .policy > .inner .select_row select { padding: 0 1rem; }
 #mobile .graybox .policy > .inner .select_row label { font-size: 1.5rem; padding: 0 1rem; }
-#mobile .graybox .policy .box { margin: 5.7rem auto 10rem; padding: 3.5rem .9rem; width: calc(100% - 2rem); }
+#mobile .graybox .policy .box { margin: 5.7rem auto 10rem; padding: 3.5rem .9rem 4.5rem .9rem; width: calc(100% - 2rem); }
 #mobile .graybox .policy .box h3 { font-size: 1.7rem; margin-bottom: 2.5rem; }
 #mobile .graybox .policy .box ol > li+li { margin-top: 2.5rem; }
 #mobile .graybox .policy .box ol > li:not(:last-child) { padding-bottom: 2.5rem; }
@@ -1863,16 +1863,16 @@ border-right: .5rem solid transparent;border-top: .5rem solid #222; transform: r
 #mobile .graybox .privacy .box .privacy01 .table-wrap tbody td .retention_period { width: 40px; height: 46px;}
 #mobile .graybox .privacy .box .privacy01 .table-wrap tbody td .data_provision { width: 40px; height: 46px;}
 #mobile .graybox .privacy .box .privacy01 .table-wrap tbody td .processing_delegation { width: 40px; height: 46px;}
-#mobile .graybox .privacy .box .privacy01 .table-wrap tbody td .complaint_handling { width: 47.5px; height: 47.5px;}
+#mobile .graybox .privacy .box .privacy01 .table-wrap tbody td .complaint_handling { width: 42.5px; height: 42.5px;}
 #mobile .graybox .privacy .box .privacy01 .table-wrap tbody td .ico {margin:17.5px auto 16px auto;}
 #mobile .graybox .privacy .box .privacy01 .table-wrap.mo table {font-size: 13px; line-height: 20px;}
-#mobile .graybox .privacy .box .privacy01 .table-wrap.type01 table {min-width: 855px; font-size: 13px; line-height: 18px;}
+#mobile .graybox .privacy .box .privacy01 .table-wrap.type01 table {min-width: 875px; font-size: 13px; line-height: 18px;}
 #mobile .graybox .privacy .box .privacy01 .table-wrap.type01.mobile table{min-width: auto;}
-#mobile .graybox .privacy .box .privacy01 .table-wrap thead th {height: 42px; }
+#mobile .graybox .privacy .box .privacy01 .table-wrap thead th {height: 42px; padding: 15px 0;}
 #mobile .graybox .privacy .box .privacy01 .table-wrap.type01 td {padding: 16px 0;}
 #mobile .graybox .privacy .box .privacy01 .table-wrap.type01.mobile td:first-child {background: #f9f9f9; border-right: none; font-weight: 400;}
-#mobile .graybox .privacy .box .privacy01 .table-wrap.type01.mobile td:last-child{ border-left: none; text-align: left; padding-left: 24px;}
-#mobile .graybox .privacy .box .privacy01 .table-wrap.type01.mobile th:first-child{ border-right: none; }
+#mobile .graybox .privacy .box .privacy01 .table-wrap.type01.mobile td:last-child{ border-left: none; text-align: left; padding: 16px 24px;}
+#mobile .graybox .privacy .box .privacy01 .table-wrap.type01.mobile th:first-child{ border-right: none;}
 #mobile .graybox .privacy .box .privacy01 .table-wrap.type01.mobile th:last-child{ border-left: none; text-align: left; padding-left: 24px;font-weight: 300; background: none; }
 #mobile .graybox .privacy .box .privacy01 .table-wrap.type01.mobile.head_color th:last-child{background: #f9f9f9; text-align: center; padding-left: 0; border-left: 1px solid #e8e8e8; font-weight: 400;}
 #mobile .graybox .privacy .box .privacy01 .table-wrap.type01.mobile.head_color td:first-child{background: none; text-align: center; padding-left: 0px; font-weight: 300; border-right: 1px solid #e8e8e8;}
@@ -2246,6 +2246,8 @@ border-right: .5rem solid transparent;border-top: .5rem solid #222; transform: r
 #mobile .golf .golfMain .popup .pop_gallery > div:last-of-type { right: 2rem; order: 1 }
 #mobile .golf .golfMain .popup .pop_gallery > div:last-of-type button img { margin-left: 1.25rem;  }
 #mobile .golf .golfMain .popup .pop_gallery .bg { top: 0; /* height: calc(100% - 6rem); */height: 100%;padding-bottom: 4rem; }
+
+#mobile .mo-pl-98{padding-left: 98px;}
 
 @keyframes jumpMob{
     50% { margin-top: -12rem; -webkit-animation-timing-function: ease-in; transform: rotate(90deg); }
