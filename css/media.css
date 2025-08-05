@@ -1803,7 +1803,7 @@ border-right: .5rem solid transparent;border-top: .5rem solid #222; transform: r
 #mobile .graybox .policy > .inner .tab_inner ul li.on { box-shadow: 0px 0px 16px 4px rgba(34, 34, 34, 0.2); }
 #mobile .graybox .policy > .inner .tab_inner ul li a { font-size: 1.35rem; letter-spacing: -.135rem; line-height: 18px; display: flex; align-items: center; justify-content: center;}
 #mobile .graybox .policy > .inner .select_area {width: 100%; height: 111px;}
-#mobile .graybox .policy > .inner .select_wrap { top: 8.5rem; right: 50%; transform: translateX(50%); width: calc(100% - 40px);}
+#mobile .graybox .policy > .inner .select_wrap { top: 8.5rem; right: 50%; transform: translateX(50%); width: 100%; }
 #mobile .graybox .policy > .inner .select_wrap.mo {top: 0rem; right: 50%; transform: translateX(50%); width: 100%; z-index: 11;}
 #mobile .graybox .policy > .inner .select_wrap.mo .terms_site{width:100%; background: #005eb8; color: #fff!important;}
 #mobile .graybox .policy > .inner .select_wrap.mo .terms_site .site_selected {color:#fff; border-bottom: none!important; padding: 2.5rem; max-height: 5rem}
@@ -1813,7 +1813,7 @@ border-right: .5rem solid transparent;border-top: .5rem solid #222; transform: r
 #mobile .graybox .policy > .inner .terms_site.select01 { width: 100%; max-width: auto; text-align: center; margin: 0 auto; }
 #mobile .graybox .policy > .inner .terms_site.select02 { width: 100%; max-width: auto; text-align: center; margin: 0 auto; }
 #mobile .graybox .policy > .inner .select_row { max-width: 22rem; width: 100%; position: initial; transform: translateY(0); border: 0; border-bottom: 2px solid #222; margin: 3rem auto 0; }
-#mobile .graybox .policy > .inner .terms_site .site_selected { font-size: 1.5rem; line-height: 1.2; min-height: 4.8rem; padding: 0 1.4rem; }
+#mobile .graybox .policy > .inner .terms_site .site_selected { font-size: 1.5rem; line-height: 1.2; min-height: 4.8rem; padding: 0 1.4rem; text-align: left;}
 #mobile .graybox .policy > .inner .terms_site .site_list li a { font-size: 1.3rem; }
 #mobile .graybox .policy > .inner .select_row::after { right: 1rem; }
 #mobile .graybox .policy > .inner .select_row select { padding: 0 1rem; }
@@ -1845,6 +1845,7 @@ border-right: .5rem solid transparent;border-top: .5rem solid #222; transform: r
 #mobile .graybox .privacy .box .privacy01 .processing_purpose {width: 31px; height: 35.5px;}
 #mobile .graybox .privacy .box .privacy01 .retention_period  {width: 31px; height: 35.5px;}
 #mobile .graybox .privacy .box .privacy01 .child_privacy_protection {width: 30px; height: 30px;}
+#mobile .graybox .privacy .box .privacy01 .ico {margin:0;}
 #mobile .graybox .privacy .box .privacy01 .data_provision {width: 31px; height: 35.5px;}
 #mobile .graybox .privacy .box .privacy01 .processing_delegation {width: 31px; height: 35.5px;}
 #mobile .graybox .privacy .box .privacy01 .data_destruction {width: 31px; height: 35.5px;}
@@ -1858,6 +1859,7 @@ border-right: .5rem solid transparent;border-top: .5rem solid #222; transform: r
 #mobile .graybox .privacy .box .privacy01 .ico_tit_wrap .ico_wrap { gap: 12px;}
 #mobile .graybox .privacy .box .privacy01 .table-wrap {margin-top: 20px;}
 #mobile .graybox .privacy .box .privacy01 .table-wrap.mo thead th {height: 42px; font-size: 13px;}
+#mobile .graybox .privacy .box .privacy01 .table-wrap tbody td.solo p{margin-bottom: 56px;}
 #mobile .graybox .privacy .box .privacy01 .table-wrap tbody td .data_collection { width: 42.5px; height: 42.5px;}
 #mobile .graybox .privacy .box .privacy01 .table-wrap tbody td .processing_purpose { width: 40px; height: 46px;}
 #mobile .graybox .privacy .box .privacy01 .table-wrap tbody td .retention_period { width: 40px; height: 46px;}
