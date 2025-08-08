@@ -58,6 +58,7 @@
             // JS importing
             commonEvent.init();
             customerEvent.inqEmail();
+            customerEvent.agreeToggle();
         });
     </script>
 </head>
@@ -113,14 +114,14 @@
                 <h2 class="con_tit">고객문의</h2>
                 <div class="btn_wrap btn_wrap02">
                     <span>* 위브 하자보수 접수 및 고객 불편사항은 콜센터 및 <br class="br_m">위브 홈페이지 고객센터에서 접수 가능합니다.</span>
-                    <a href="tel:02-3441-1721" title="콜센터">
+                    <a href="tel:02-3441-1721" title="콜센터" rel="nosublink">
                         <div class="icon"></div>
                         <div class="txt">
                             <div>위브 <em>A/S</em> 콜센터</div>
                             <div>02-3441-1721</div>
                         </div>
                     </a>
-                    <a href="http://dev.doosan.4-m.co.kr/DoosanWeve/html/FD-03-03.html" title="위브 고객센터 바로가기" target="_blank">
+                    <a href="https://www.weveapt.co.kr/as/asMain.do" title="위브 고객센터 바로가기" target="_blank">
                         <div class="icon"></div>
                         <div class="txt">
                             <div>위브 홈페이지</div>
@@ -138,7 +139,7 @@
             <div class="contents customer_inquiry">
                 <section class="section1">
                     <div class="inner">
-                        <h2 class="sec_tit">개인정보 수집 및 이용에 대한 동의 </h2>
+                        <h2 class="sec_tit">개인정보 수집 및 이용동의</h2>
                         <div class="cont_box">
                             <div>
                                 <span class="tit">■ 수집하는 개인정보의 항목</span><br>
@@ -177,11 +178,11 @@
                         <div class="checkbox_row">
                             <p>개인정보 수집 · 이용에 동의합니다.</p>
                             <div class="agree_row">
-                                <input type="checkbox" name="agreement" id="chk01" onclick='doOpenCheck(this)'>
+                                <input type="checkbox" name="agreement" id="chk01" class="agree" onclick='doOpenCheck(this)'>
                                 <label for="chk01">동의합니다</label>
     
-                                <input type="checkbox" name="agreement" id="chk02" onclick='doOpenCheck(this)'>
-                                <label for="chk02">동의하지 않습니다<span><br class="br_m">(동의하셔야 등록이 가능합니다)</span></label>
+                                <input type="checkbox" name="agreement" id="chk02" class="disagree" onclick='doOpenCheck(this)'>
+                                <label for="chk02">동의하지 않습니다<span class="agree_alert"><br class="br_m">(동의하셔야 등록이 가능합니다)</span></label>
                             </div>
                         </div>
                         <script>
@@ -214,39 +215,6 @@
                                 </div>
                             </div>
                         </div>  
-                        <!-- <div class="row row_short">
-                            <div class="tit_cell">국가</div>
-                            <div class="ipt_cell">
-                                <div class="select_row">
-                                <label for="sel02">국가를 선택해 주세요.</label>
-                                <select id="sel02" class="selectBox">
-                                    <!-- <option value=""></option>
-                                </select>
-                                </div>
-                            </div>
-                        </div>   -->
-
-
-                        <!-- <div class="row row_short">
-                            <div class="tit_cell">소속회사</div>
-                            <div class="ipt_cell">
-                                <div class="input_row">
-                                    <input type="text" id="company_name" placeholder="소속회사을 입력해 주세요.">
-                                </div>
-                            </div>
-                        </div>  -->
-                        <!-- <div class="row">
-                            <div class="tit_cell">분류<span class="es">*</span></div>
-                            <div class="ipt_cell">
-                                <div class="select_row">
-                                <label for="sel03">분류를 선택해 주세요.</label>
-                                <select id="sel03" class="selectBox">
-                                    <option value="">토목</option>
-                                    <option value="">건축</option>
-                                </select>
-                                </div>
-                            </div>
-                        </div>   -->
 
                         <div class="row row_short">
                             <div class="tit_cell">이름<span class="es">*</span></div>
@@ -308,7 +276,10 @@
                                     <label for="upload_file">파일 선택</label>
                                     <input type="file" id="upload_file" name="upload_file">
                                 </div>
-                                <span class="info">* 첨부 가능한 파일의 최대 용량은 9MB입니다.</span>
+                                <span class="info">
+                                    ※ jpg, png, gif 등 이미지파일 또는 hwp, docx, xlsx, pdf, pptx 등의 문서 형식만 지원<br>
+                                    ※ 첨부하실 파일의 사이즈는 5MB까지 업로드 가능합니다
+                                </span>
                             </div>
                         </div>
                         <div class="row">

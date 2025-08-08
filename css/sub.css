@@ -534,6 +534,7 @@
 .customer .customer_inquiry .section1 ul li { position: relative; padding-left: 1.2rem; }
 .customer .customer_inquiry .section1 ul li span { position: absolute; top: 0; left: 0; }
 .customer .customer_inquiry .section1 .agree_row { display: flex; position: relative; }
+.customer .customer_inquiry .agree_alert { display: none; }
 .customer .customer_inquiry .section2 { padding: 12rem 0 20rem; }
 .customer .customer_inquiry .section2 p { font-size: 1.6rem; color: #222; margin-bottom: 2rem; }
 .customer .customer_inquiry .section2 .es { color: #005eb8; }
@@ -549,7 +550,7 @@
 .customer .customer_inquiry .section2 .row .ipt_cell.email_cell span { font-family: 'Montserrat'; font-size: 1.6rem; color: #222; margin: 0 .7rem; }
 .customer .customer_inquiry .section2 .row .ipt_cell.email_cell .select_row { margin-left: 2rem; }
 .customer .customer_inquiry .section2 .file_row .upload_name { width: calc(100% - 18.2rem); }
-.customer .customer_inquiry .section2 .file_row+.info { font-size: 1.6rem; color: #777; margin-top: 2rem; margin-bottom: 2rem; display: block; }
+.customer .customer_inquiry .section2 .file_row+.info { font-size: 1.6rem; color: #777; margin-top: 2rem; margin-bottom: 2rem; display: block; line-height: 1.5; }
 .customer .customer_inquiry .section2 .btn_box { margin-top: 12rem; }
 .customer .customer_inquiry .section2 .btn_blk { width:28.3rem;height: 6.4rem;line-height: 6.4rem; }
 .customer .customer_inquiry .section2 .btn_blk a { border-radius: 3.2rem; }

@@ -1898,6 +1898,7 @@ var customerEvent = {
   init: function () {
     this.inqEmail();
     this.namechk();
+    this.agreeToggle();
   },
 
   inqEmail: function () {
@@ -1951,6 +1952,32 @@ var customerEvent = {
       }
     });
   },
+
+  agreeToggle: function () {
+    $('.agree_row').each(function () {
+      var $row = $(this);
+      var $agree = $row.find('.agree');
+      var $disagree = $row.find('.disagree');
+      var $alert = $row.find('.agree_alert');
+
+      function toggleAlert() {
+        if (!$alert.length) return;
+
+        if ($disagree.is(':checked')) {
+          $alert.show();
+        } else {
+          $alert.hide();
+        }
+      }
+
+      // 이벤트 바인딩
+      $agree.on('change', toggleAlert);
+      $disagree.on('change', toggleAlert);
+
+      // 초기 상태 체크
+      toggleAlert();
+    });
+  }
 };
 
 var channelEvent = {
