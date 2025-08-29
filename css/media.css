@@ -1835,7 +1835,8 @@ border-right: .5rem solid transparent;border-top: .5rem solid #222; transform: r
 #mobile .graybox .policy .box ol > li dl { font-size: 1.3rem; line-height: 1.53; display: flex; }
 #mobile .graybox .policy .box ol > li dl dt { width: 5.5rem; flex-shrink: 0; }
 #mobile .graybox .policy .box ol > li .download { padding: 0 1rem 0.8rem .5rem; font-size: 1.3rem; width: 17.5rem; margin-top: 2.5rem; margin-bottom: 20px;}
-#mobile .graybox .policy .box ol > li .download i { width: 1.5rem; height: 1.5rem; background-size: contain; }
+#mobile .graybox .policy .box ol > li .download i { width: 1.5rem; height: 1.5rem; background-size: contain; min-width: 15px;}
+#mobile .graybox .policy .box ol > li .download:hover::after {width: 100%;}
 #mobile .graybox .privacy .box ol > li > .tit+p:first-of-type { margin-bottom: 2rem; }
 #mobile .graybox .privacy .box ol > li:first-child > .tit+p:first-of-type { margin-bottom: 0; }
 #mobile .graybox .policy .box ol > li .inner_box{padding: 26px 33px 26px 26px; margin-top: 25px;}
@@ -1882,8 +1883,8 @@ border-right: .5rem solid transparent;border-top: .5rem solid #222; transform: r
 #mobile .graybox .privacy .box .privacy01 .pre_number {font-size: 13px; line-height: 20px; letter-spacing: -0.04px;}
 #mobile .graybox .privacy .box .privacy01 .pre_number.type02 {font-size: 13px; line-height: 20px; letter-spacing: -0.04px;}
 #mobile .graybox .privacy .box .privacy01 .pre_number.type02:first-child {margin-top: 20px;}
-#mobile .graybox .privacy .box .privacy01 .pre_number.type02 .number {top:0; font-size: 9px;}
-#mobile .graybox .privacy .box .privacy01 .pre_number.type01 .number {top:0; font-size: 9px;}
+#mobile .graybox .privacy .box .privacy01 .pre_number.type02 .number{top:-1px; font-size: 15px;}
+#mobile .graybox .privacy .box .privacy01 .pre_number.type01 .number {top:-1px; font-size: 15px;}
 #mobile .graybox .privacy .box ol > li .download.type01{width: 27.05rem;}
 #mobile .graybox .privacy .box ol > li .download.type02{width: 27.3rem;}
 #mobile .graybox .privacy .box ol > li .download.type03{width: 21.7rem;}
