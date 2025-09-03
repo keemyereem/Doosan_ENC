@@ -60,7 +60,7 @@
 #rightnavi li.active a span { margin-top: 3rem; line-height: 1; height: auto; max-height: 50rem; }
 #rightnavi li:nth-child(2).active {padding-bottom: 12.5rem; }
 #rightnavi li:nth-child(3).active {padding-bottom: 9.5rem; }
-#rightnavi li:nth-child(4).active {padding-bottom: 20rem; }
+#rightnavi li:nth-child(4).active {padding-bottom: 25rem; }
 #rightnavi li:nth-child(5).active {padding-bottom: 7.2rem; }
 #rightnavi li:nth-child(6).active {padding-bottom: 8.5rem; }
 #rightnavi li:last-child {display: none; }
