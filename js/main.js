@@ -139,87 +139,35 @@ var mainEvent = {
   },
 
   intro: () => {
-    if(document.body.dataset.page === "ko-doosan"){
-      $("body").addClass("blockScroll");
-      // common.js에서 사이트맵 구현 오류 > 추가 중복코드 삽입.
-      $(".sitemap").show();
-      $("#rightnavi, .header").addClass("blind");
-    
-      console.log("-> intro animation start");
-    
-      const tl = gsap.timeline({
-        onComplete: () => {
-          console.log("-> intro animation end");
+    $("body").addClass("blockScroll");
+    // common.js에서 사이트맵 구현 오류 > 추가 중복코드 삽입.
+    $(".sitemap").show();
+    $("#rightnavi, .header").addClass("blind");
 
-          $("body").removeClass("blockScroll");
-          $(".header").addClass("wht");
-          $("#rightnavi, .header").removeClass("blind");
-    
-          if ($("#mobile").length) {
+    console.log("-> intro animation start");
+
+    img = new Image();
+    img.onload = function () {
+      setTimeout(() => {
+        $(".clip-css").css("opacity", 1);
+        $(".clip-css").on(
+          "transitionend webkitTransitionEnd oTransitionEnd",
+          function () {
             setTimeout(() => {
-              $("#main #fullpage .section01").addClass("active");
+              $(".section01").addClass("ani");
             }, 500);
           }
-    
-          // 애니메이션이 끝난 후 슬라이드 실행
-          mainEvent.mainSwiper();
-    
-          if (!$("#mobile").length) {
-            mainEvent.createFullpage();
-          } else {
-            mainEvent.mobile();
-          }
-        }
-      });
+        );
+      }, 200);
+    };
+    img.src = "../images/main/sec01_bg1.jpg";
 
-      // GSAP 애니메이션 설정
-      if ($("#mobile").length) {
-        // MOBILE
-        tl.to("#section .visual", {
-          autoAlpha: 1,
-          duration: .5, 
-        })
-        .to("#section .visual", {
-          duration: .8,
-          delay: .3,
-          scale:(0.6)
-        })
-        .to("#section .visual", {
-          duration: 0.8,
-          delay: .3,
-          width: "400px",
-        })
-        .to("#section", {
-          delay: 1,
-          duration: 1,
-          y: "-100vh",
-        });
-      }else{
-        // PC
-        tl.to("#section .visual", {
-          autoAlpha: 1,
-          duration: .5, 
-        })
-        .to("#section .visual", {
-          duration: .8,
-          delay: .3,
-          scale:(0.5)
-        })
-        .to("#section .visual", {
-          duration: 0.8,
-          delay: .3,
-          width: "1354px",
-        })
-        .to("#section", {
-          delay: 1,
-          duration: 1,
-          y: "-100vh",
-        });
-      }
-    }else{
-      $(".sitemap").show();
+    // after animation ended, initializing object
+    const x = document.getElementById("intro_trigger");
+    x.addEventListener("animationend", () => {
       console.log("-> intro animation end");
-    
+
+      $(".clip-wrap").addClass("indent");
       $("body").removeClass("blockScroll");
       $(".header").addClass("wht");
       $("#rightnavi, .header").removeClass("blind");
@@ -230,19 +178,15 @@ var mainEvent = {
         }, 500);
       }
 
-      setTimeout(() => {
-        // 애니메이션이 끝난 후 슬라이드 실행
-        mainEvent.mainSwiper();
+      mainEvent.mainSwiper();
 
-        if (!$("#mobile").length) {
-          mainEvent.createFullpage();
-        } else {
-          mainEvent.mobile();
-        }
-      }, 100);
-    }
+      if (!$("#mobile").length) {
+        mainEvent.createFullpage();
+      } else {
+        mainEvent.mobile();
+      }
+    });
   },
-  
 
   mainSwiper: () => {
     const mainSwiper = ".section01 .mainSwiper",
@@ -677,7 +621,7 @@ var mainEvent = {
         $("html").animate({ scrollTop: 0 }, "300");
       });
 
-      // 섹션4 social responsibility 토글변수
+      // 섹션4 Sustainable Management 토글변수
       var countTrigger = true;
 
       $(window).on("load scroll resize", () => {
@@ -732,7 +676,7 @@ var mainEvent = {
             }
 
             if (index === 3) {
-              // 섹션4 social responsibility 토글변수가 자동 true로 반환
+              // 섹션4 Sustainable Management 토글변수가 자동 true로 반환
               if (countTrigger === true) {
 
                 // 토글변수 true일 때, 카운트 func 시작

@@ -42,7 +42,7 @@
     .mo {display: block;}
     .mo_flex {display: flex;}
     /* popNoti */
-    .popNoti {right: initial;left: 50%;top: 10rem;transform: translate(-50%, 0);box-shadow: 2.5px 4.5px 27px 3px rgba(0, 0, 0, 0.2);}
+    .popNoti {right: initial; right: 50%;top: 10rem;transform: translate(50%, 0);box-shadow: 2.5px 4.5px 27px 3px rgba(0, 0, 0, 0.2);}
     .pop_close_wrap {height: 3.5rem;}
     .pop_close_wrap>button {font-size: 1.1rem;}
 
@@ -104,12 +104,12 @@
     #mobile .header { padding: 0 2rem; width: 100vw; }
     #mobile .header::before { content: ''; width: 100vw; height: 0; top: 6rem; left: 0; position: fixed; background: linear-gradient(to bottom, #005eb8 50%, transparent 50%); z-index: -100; transition: all ease .3s; }
     #mobile .header.bg { background: #fff;box-shadow: none; }
-    #mobile .header.bg .logo { background: url(../images/common/logo_65.svg) no-repeat; }
+    #mobile .header.bg .logo { background: url(../images/common/logo_b.png) no-repeat; }
     #mobile .header.bg .top_sitemap button span::before { background-color: #222; }
     #mobile .header .top_sitemap.on button span::before { background-color: #fff; }
     #mobile .header .header_wrap { width: 100%; height: 6rem; justify-content: space-between; }
-    #mobile .header .logo { width: 12.45rem; height: 4.25rem; margin-right: 0; background-size: contain !important; }
-    #mobile .header .logo.sitemapOn { background: url(../images/common/logo_w_65.svg) no-repeat !important; background-size: contain !important; }
+    #mobile .header .logo { width: 7.7rem; height: 2.1rem; margin-right: 0; background-size: contain !important; }
+    #mobile .header .logo.sitemapOn { background: url(../images/common/logo_w_mob.png) no-repeat !important; background-size: contain !important; }
     #mobile .header .gnb_menu { width: auto; margin-left: initial; display: block; }
     #mobile .header .gnb,
     #mobile .header .weve_btn,
@@ -271,6 +271,12 @@
     #mobile #main #fullpage .section01 .swiper-slide .slide-inner img { height: 100vh; object-fit: cover; }
     #mobile #main #fullpage .section01 .swiper-pagination-bullet {width: 2.2rem; height: 2.2rem; font-size: 0.88rem;}
     .visual{width: 13rem; height: 13.3rem; overflow: hidden; transform:scale(1.5);}
+    #mobile #main #fullpage .section01 .clip-wrap { width: 100%; height: 100%; position: absolute; z-index: 9; background: #fff; }
+    #mobile #main #fullpage .section01 .clip-css { width: 33.4rem; height: 32.8rem; transform: translateY(0); background: url(../images/main/sec01_bg1_m.jpg)no-repeat 50% 50%; background-size: cover; }
+    #mobile #main #fullpage .section01.ani .clip-css { animation: intro_mobile 1s alternate; width: 100%; height: 100%; }
+    #mobile #main #fullpage .section01.active .clip-css { transform: translateY(0); height: 100%; }
+    #mobile #main #fullpage .section01 .swiper-slide .slide-inner img { height: 100vh; object-fit: cover; }
+
 
     /* Section02 */
     #mobile #main #fullpage .section02 { padding-bottom: 5.8rem; }
@@ -585,10 +591,11 @@
     /* ================================  고객센터  =============================== */
 
     /* 고객문의 */
+    #mobile .customer .title_area { padding-bottom: 6.5rem; }
     #mobile .customer .sub_txt { padding-top: 3rem; }
     #mobile .customer .sub_visual { background-image: url(../images/customer/customer_bg_m.jpg); }
     #mobile #sub .customer .inner { padding: 0; width: calc(100% - 4rem); }
-    #mobile .customer .customer_inquiry .section1 { padding: 4.5rem 0; margin-top: 6rem; }
+    #mobile .customer .customer_inquiry .section1 { padding: 4.5rem 0; }
     #mobile .customer .customer_inquiry .section1 .sec_tit { font-size: 2.2rem; }
     #mobile .customer .customer_inquiry .section1 .cont_box { margin: 2rem 0 1.5rem; }
     #mobile .customer .customer_inquiry .section1 .cont_box > div { font-size: 1.3rem; line-height: 1.38; padding: 2rem; height: 43.5rem; }
@@ -639,11 +646,11 @@
     #mobile .customer .notice .tb_box .tb_row.none { display: none; }
 
     /* 사이버 감사실 */
-    #mobile .customer .pb0 {padding:0;}
-    #mobile .customer .pb0 .guide { max-width: 100%; margin: 3rem auto 2rem; padding: 3.5rem 2rem; }
-    #mobile .customer .pb0 .guide dt { font-size: 1.7rem; padding-bottom: 1.5rem; }
-    #mobile .customer .pb0 .guide dd { font-size: 1.3rem; white-space: normal; line-height: 1.6; display: flex; }
-    #mobile .customer .pb0 .guide dd i { display: inline-block; padding-right: .2rem; }
+    #mobile .customer .pb0 {padding-bottom: 0;}
+    #mobile .customer .guide { max-width: 100%; margin: 3rem auto 2rem; padding: 3.5rem 2rem; }
+    #mobile .customer .guide dt { font-size: 1.7rem; padding-bottom: 1.5rem; }
+    #mobile .customer .guide dd { font-size: 1.3rem; white-space: normal; line-height: 1.6; display: flex; }
+    #mobile .customer .guide dd i { display: inline-block; padding-right: .2rem; }
     #mobile .customer .btn_wrap { flex-direction: column; margin-top: 2.5rem; padding-bottom: 0rem; }
     #mobile .customer .btn_wrap span { padding-bottom: 1.5rem; font-size: 1.2rem; line-height: 1.4; }
     #mobile .customer .btn_wrap a { width: 100%; max-width: 25rem; height: 7.5rem; border-radius: 3.75rem; font-size: 1.5rem; }
@@ -657,7 +664,7 @@
     #mobile .customer .cyber_audit section .inner { background: transparent; }
     #mobile .customer .cyber_audit h2 { font-size: 2.4rem; padding: 8rem 0 0; }
     #mobile .customer .cyber_audit h3 { font-size: 2.2rem; padding: 6rem 0 3.5rem; }
-    #mobile .customer .cyber_audit .cont ul li { width: calc(100% / 2); height: 12.5rem; border-bottom: 0; }
+    #mobile .customer .cyber_audit .cont ul li { width: calc(100% / 2); height: 12.5rem; border-bottom: 0; padding-bottom: 0; justify-content: center; }
     #mobile .customer .cyber_audit .cont ul li:not(:nth-child(3n)) { border-right: 1px solid #e8e8e8; }
     #mobile .customer .cyber_audit .cont ul li:nth-child(2n) { border-left: 0; }
     #mobile .customer .cyber_audit .cont ul li:nth-last-child(n+1):nth-last-child(-n+2) { border-bottom: 1px solid #e8e8e8; }
@@ -670,11 +677,11 @@
     #mobile .customer .cyber_audit .section1 .cyber-callcenter-num div { font-size: 1.8rem; }
     #mobile .customer .cyber_audit .section3 .cont ul { flex-wrap: wrap; }
     #mobile .customer .cyber_audit .section3 .cont ul li { width: calc(100% / 2); }
-    #mobile .customer .cyber_audit .section1 ul li:nth-child(1) .icon img { width: 3.4rem; height: 3.55rem; }
-    #mobile .customer .cyber_audit .section1 ul li:nth-child(2) .icon img { width: 3.2rem; height: 3.6rem; }
-    #mobile .customer .cyber_audit .section1 ul li:nth-child(3) .icon img { width: 3.5rem; height: 3.55rem; }
-    #mobile .customer .cyber_audit .section1 ul li:nth-child(4) .icon img { width: 4.7rem; height: 3.6rem; }
-    #mobile .customer .cyber_audit .section1 ul li:nth-child(5) .icon img { width: 3.4rem; height: 3.5rem; }
+    #mobile .customer .cyber_audit .section1 ul li:nth-child(1) .icon img { width: 4.65rem; height: 3.55rem; }
+    #mobile .customer .cyber_audit .section1 ul li:nth-child(2) .icon img { width: 3.4rem; height: 3.55rem; }
+    #mobile .customer .cyber_audit .section1 ul li:nth-child(3) .icon img { width: 2.85rem; height: 3.6rem; }
+    #mobile .customer .cyber_audit .section1 ul li:nth-child(4) .icon img { width: 3.2rem; height: 3.6rem; }
+    #mobile .customer .cyber_audit .section1 ul li:nth-child(5) .icon img { width: 3.5rem; height: 3.55rem; }
     #mobile .customer .cyber_audit .section1 ul li:nth-child(6) .icon img { width: 4.65rem; height: 3.6rem; }
     #mobile .customer .cyber_audit .section2 ul li:nth-child(1) .icon img { width: 3.45rem; height: 3.7rem; }
     #mobile .customer .cyber_audit .section2 ul li:nth-child(2) .icon img { width: 4.4rem; height: 3.7rem; }
@@ -683,7 +690,7 @@
     #mobile .customer .cyber_audit .section3 ul li:nth-child(2) .icon img { width: 3.55rem; height: 3.55rem; }
     #mobile .customer .cyber_audit .section3 ul li:nth-child(3) .icon img { width: 3rem; height: 3.6rem; }
     #mobile .customer .cyber_audit .section3 ul li:nth-child(4) .icon img { width: 3.5rem; height: 3.5rem; }
-    #mobile .customer .cyber_audit .cont ul li .tit { font-size: 1.4rem; margin-top: 1.2rem; }
+    #mobile .customer .cyber_audit .cont ul li .tit { font-size: 1.4rem; margin-top: 1.2rem; min-height: auto; }
     #mobile .customer .cyber_audit .cont ul li a { width: 11rem; height: 3rem; border-radius: 1.5rem; font-size: 1.2rem; }
     #mobile .customer .cyber_audit .cont ul li a span { width: 1rem; height: 1rem; background-size: auto; }
     #mobile .customer .cyber_audit .cont ul li:hover { box-shadow: 3px 3px .45rem 0px rgba(0, 0, 0, 0.23);}
@@ -713,6 +720,7 @@
     #mobile .customer .cyber_report .section2 .txt_row { height: auto; font-size: 1.4rem; }
     #mobile .customer .cyber_report .section2 .row .ipt_cell.name_cell .checkbox_row { width: 100%; margin-left: 0; margin-top: 1.5rem; }
     #mobile .customer .cyber_report .section2 .row .ipt_cell.name_cell .info { font-size: 1.2rem; line-height: 1.41; margin-top: 0; }
+    #mobile .customer .cyber_report .section2 .row .ipt_cell.phone_cell > span { margin: 0 1rem; }
     #mobile .customer .cyber_report .section2 .row .ipt_cell.email_cell .input_row input::placeholder { opacity: 0; }
     #mobile .customer .cyber_report .section2 .row .ipt_cell.email_cell span { font-size: 1.3rem; margin: 0 .5rem; }
     #mobile .customer .cyber_report .section2 .row .ipt_cell.email_cell > .select_row::after { right: .5rem; border: .45rem solid transparent; }
@@ -1613,13 +1621,26 @@ border-right: .5rem solid transparent;border-top: .5rem solid #222; transform: r
 #mobile .sr .etm .section01 { padding: 5.5rem 0 4.5rem; }
 #mobile .sr .etm .section01 > p { font-size: 1.4rem; padding: 2.5rem 1rem; }
 #mobile .sr .etm .section01 img { margin-top: 4.5rem; }
-#mobile .sr .etm .section02 h3 { padding-bottom: 2.5rem; }
-#mobile .sr .etm .section02 p span { font-size: 1.6rem; line-height: 1.68; padding-bottom: .5rem; }
-#mobile .sr .etm .section02 p { font-size: 1.5rem; line-height: 1.73; padding-top: 3rem; }
-#mobile .sr .etm .section03 { padding: 5.5rem 0 10rem; }
-#mobile .sr .etm .section03 h3 { padding-bottom: .5rem; }
-#mobile .sr .etm .section03 p { font-size: 1.5rem; line-height: 1.73; }
-#mobile .sr .etm .section03 img { margin-top: 4.5rem; }
+
+#mobile .sr .etm .section02 { padding: 0 1rem; }
+#mobile .etm_lists { padding: 5rem 1rem 1rem;box-shadow: 1px 2px 15px 0 rgba(0, 0, 0, 0.2);border-top-width: 0.6rem; }
+#mobile .etm_lists + .etm_lists { margin-top: 2rem; }
+#mobile .etm_lists h4 { font-size: 2.7rem; }
+#mobile .etm_lists h4::after { width: 9.5rem;height: 0.5rem;margin: 3.5rem auto; }
+#mobile .etm_box { padding: 0 2rem; }
+#mobile .etm_box .flex { padding: 3rem 0;flex-direction: column; }
+#mobile .etm_box .tit { font-size: 1.7rem;width: 100%;margin-bottom: 2rem; }
+#mobile .etm_box .dec li { font-size: 1.3rem;line-height: 1.5;padding-left: 1.8rem; }
+#mobile .etm_box .dec li::before { width: 0.3rem;height: 0.3rem;top: 0.7rem;left: 0.5rem; }
+#mobile .etm_box .dec li + li { margin-top: 2rem; }
+
+#mobile .sr .etm .section03 h3 { padding-bottom: 2.5rem; }
+#mobile .sr .etm .section03 p span { font-size: 1.6rem; line-height: 1.68; padding-bottom: .5rem; }
+#mobile .sr .etm .section03 p { font-size: 1.5rem; line-height: 1.73; padding-top: 3rem; }
+#mobile .sr .etm .section04 { padding: 5.5rem 0 10rem; }
+#mobile .sr .etm .section04 h3 { padding-bottom: .5rem; }
+#mobile .sr .etm .section04 p { font-size: 1.5rem; line-height: 1.73; }
+#mobile .sr .etm .section04 img { margin-top: 4.5rem; }
 
 /* 사회공헌 */
 #mobile .sr .sc { width: 100%; margin-top: 5rem; }

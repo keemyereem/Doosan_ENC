@@ -148,6 +148,7 @@ var commonEvent = {
     this.tabEvent();
     this.popup();
     this.english();
+    this.popNoti();
     this.scrollToPreNumber();
   },
 
@@ -218,6 +219,7 @@ var commonEvent = {
     });
 
     // 사이트맵/ 랭귀지 버튼 애니메이션
+    $(".top_sitemap, .header .lang_select a").off("click");
     $(".top_sitemap, .header .lang_select a").on("click", function () {
       $(this).toggleClass("on");
       if ($("#mobile").length && $(".top_sitemap").hasClass("on")) {
@@ -727,7 +729,13 @@ var commonEvent = {
       });
     }
   },
-  
+
+  popNoti: ()=> {
+    $("#popNoti").on("click", ".btn_close", function () {
+      $(this).parents("#popNoti.on").removeClass("on");
+    });
+  },
+
   scrollToPreNumber: () => {
     $('.pre_number a[href^="#"]').on('click', function(e) {
       e.preventDefault();
@@ -1369,7 +1377,7 @@ var techEvent = {
   },
 
   sectionNav: () => {
-    const section = $("section"),
+    const section = $(".competence section"),
       fixSidemenu = $(".competence .section_nav"),
       fraction = fixSidemenu.find(".fraction"),
       fixmenuHeight = $(".sub_visual_menu").height();
@@ -1723,7 +1731,7 @@ var companyEvent = {
     "use strict";
 
     const graph = $("#HMchart .graph"),
-      graphBarColor = ["#dbe2e8", "#aeb8be", "#6a7b88", "purple"],
+      graphBarColor = ["#dbe2e8", "#aeb8be", "#005eb8", "purple"],
       transitionEnd =
         "transitionend webkitTransitionEnd oTransitionEnd otransitionend",
       barSpeed = 1000,
@@ -1941,7 +1949,6 @@ var customerEvent = {
     }
   },
 
-
   //익명 선택시 "익명" 비선택시 초기화
   namechk: function () {
     $("#anonymous").change(function () {
@@ -2086,7 +2093,7 @@ var recruitEvent = {
             index === 6 ||
             index === 11
           ) {
-            // 1. 정은별 사원, 3. 김동훈 사원, 6. 양지범 과장, 7. 천소영 차장, 12 송유현 대리
+            // 1. 정은별 사원, 3. 김동훈 대리, 6. 양지범 과장, 7. 천소영 차장, 12 송유현 대리
             img.css({ right: 0 });
           } else if (index === 3 || index === 4) {
             // 4. 문종호 대리, 5. 김종훈 과장
@@ -2195,7 +2202,8 @@ var socialEvent = {
 
 var policyEvent = {
   init: function () {
-    this.privacyTab();
+    // this.privacyTab();
+    this.privacyTabScroll();
     this.privacySelect();
   },
 
@@ -2213,41 +2221,67 @@ var policyEvent = {
     });
   },
 
+  privacyTabScroll: function () {
+    if ($("#mobile").length) {
+      var activeIndex = $(".privacy .tab_inner ul li.on").index();
+
+      if (activeIndex !== -1) {
+        var liWidth = $(".privacy .tab_inner ul li").eq(activeIndex).outerWidth(true);
+        var liPosition = $(".privacy .tab_inner ul li").eq(activeIndex).position().left;
+    
+        // 스크롤 이동
+        var scrollLeft = liPosition + $(".tab_inner").scrollLeft() - ($(".tab_inner").width() - liWidth) / 2;
+        $(".tab_inner").animate({ scrollLeft: scrollLeft }, 300);
+      }
+    }
+  },
+
   privacySelect: function () {
-    $(document).on("click", ".terms_site .site_selected", function () {
-      var selElm = $(this).parent();
-      if (!selElm.hasClass("open")) {
-        selElm.addClass("open");
-      } else {
-        selElm.removeClass("open");
+  $(document).on("click", ".terms_site .site_selected", function () {
+    var selElm = $(this).parent();
+    selElm.toggleClass("open");
+  });
+
+  $(document).on("click", ".terms_site .site_list li a", function (e) {
+    e.preventDefault();
+
+    var selected = this.innerText;
+    var termsSite = this.closest(".terms_site");
+    var siteName = termsSite.querySelector(".site_selected");  // << 여기서 가까운 site_selected 찾기
+
+    // 선택된 텍스트 교체 (모바일/PC 공통)
+    siteName.innerText = selected;
+    termsSite.classList.remove("open");
+
+    var href = $(this).attr("href");
+    var cntntsInnb = $(this).data("cntnts-innb");
+    var cntntsSn = $(this).data("cntnts-sn");
+
+    // 모바일용 select_wrap mo → href로 페이지 이동
+    if (href && href !== "javascript:;") {
+      window.location.href = href;
+      return;
+    }
+
+    // PC용 select_wrap → AJAX로 내용 로드
+    var url = "";
+    if ($(this).attr("title").includes("현재") || $(this).attr("title").includes("Current")) {
+      url = "/cont/contentsHisViewAjax.do";
+    } else {
+      url = "/cont/contentsHisViewAjax.do?cntntsInnb=" + cntntsInnb + "&cntntsSn=" + cntntsSn;
+    }
+
+    $.ajax({
+      url: url,
+      type: "GET",
+      success: function (data) {
+        $(".box").html(data);
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        console.error("Error fetching data: ", textStatus, errorThrown);
       }
     });
-
-    $(document).on("click", ".terms_site .site_list li a", function () {
-      var selected = this.innerText,
-        siteName = document.getElementsByClassName("site_selected")[0],
-        termsSite = this.parentNode.parentNode.parentNode;
-
-      siteName.innerText = selected;
-      termsSite.classList.remove("open");
-    });
-
-    $(document).on("click", "#prev_info", function () {
-      $(".privacy .inner ul li").removeClass("on");
-      $(".privacy .inner ul li").eq(0).addClass("on");
-      $(".box_cont").removeClass("active");
-      $(".privacy01").addClass("active");
-      $(".privacy .select_wrap .terms_site").removeClass("active");
-      $(".select_wrap .select01").addClass("active");
-    });
-    $(document).on("click", "#prev_video", function () {
-      $(".privacy .inner ul li").removeClass("on");
-      $(".privacy .inner ul li").eq(1).addClass("on");
-      $(".box_cont").removeClass("active");
-      $(".privacy02").addClass("active");
-      $(".privacy .select_wrap .terms_site").removeClass("active");
-      $(".select_wrap .select02").addClass("active");
-    });
+  });
   },
 };
 
