@@ -1812,7 +1812,7 @@
 .etm_lists05 .etm_box { background: rgba(0, 173, 131, 0.03); }
 .etm_box .flex { padding: 5rem 0; }
 .etm_box .flex + .flex { border-top: 1px solid #e8e8e8; }
-.etm_box .tit { font-size: 2.4rem;font-weight: 450;color: #222;width: 27rem; }
+.etm_box .tit { font-size: 2.4rem;font-weight: 450;color: #222;width: 27rem;flex-shrink: 0; }
 .etm_box .dec li { font-size: 1.8rem;line-height: 1.9;padding-left: 2.4rem;position: relative; }
 .etm_box .dec li::before { content: '';display: block;width: 0.4rem;height: 0.4rem;background: #000;border-radius: 100%;position: absolute;top: 1.3rem;left: 0; }
 .etm_box .dec li + li { margin-top: 2rem; }
