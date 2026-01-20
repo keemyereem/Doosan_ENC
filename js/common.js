@@ -150,6 +150,7 @@ var commonEvent = {
     this.english();
     this.popNoti();
     this.scrollToPreNumber();
+    this.placeholder();
   },
 
   headerEvent: () => {
@@ -749,6 +750,34 @@ var commonEvent = {
           scrollTop: target.offset().top - offset
         }, 500);
       }
+    });
+  },
+
+  placeholder: () => {
+    $('.fake_placeholder').each(function () {
+      const $guide = $(this);
+      const $textarea = $guide.siblings('textarea');
+
+      // textarea가 없으면 그냥 스킵 (다른 페이지 대비)
+      if ($textarea.length === 0) return;
+
+      const toggleGuide = function () {
+        if ($textarea.val().trim() !== '') {
+          $guide.hide();
+        } else {
+          $guide.show();
+        }
+      };
+
+      // 초기 상태 체크
+      toggleGuide();
+
+      // 이벤트 바인딩
+      $textarea
+        .on('focus', function () {
+          $guide.hide();
+        })
+        .on('blur input', toggleGuide);
     });
   },
 };

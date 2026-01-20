@@ -673,9 +673,9 @@
 .customer .cyber_report .section2 .btn_box { margin-top: 12rem; }
 .customer .cyber_report .section2 .btn_blk { width:28.3rem;height: 6.4rem;line-height: 6.4rem; }
 .customer .cyber_report .section2 .btn_blk a { border-radius: 3.2rem; }
-
-
-
+.customer .cyber_report .fake_placeholder { font-size: 1.4rem;color: #b2b2b2;line-height: 1.6;position: absolute;top: 2rem;left: 5rem;right: 2rem;z-index: -1; }
+.customer .cyber_report .fake_placeholder li::marker { content: counter(list-item) ") "; }
+.customer .cyber_report .fake_placeholder li + li { margin-top: 20px; }
 
 /* ================================  사업영역  =============================== */
 

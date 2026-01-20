@@ -73,7 +73,7 @@
     #mobile .input_search a { float: right; }
 
     /* textarea */
-    #mobile .area_row { height: 15.7rem; }
+    #mobile .area_row { height: 31rem; }
     #mobile .area_row textarea { padding: 1.5rem 2rem; font-size: 1.4rem; line-height: 1.4; }
 
     /* check box type */
@@ -732,6 +732,7 @@
     #mobile .customer .cyber_report .section2 .btn_box { margin-top: 6.4rem; }
     #mobile .customer .cyber_report .section2 .btn_blk { width: 100%; max-width: 21.1rem; height: 4.5rem; line-height: 4.5rem; }
     #mobile .customer .cyber_report .section2 .btn_blk a { border-radius: 2.25rem; }
+    .customer .cyber_report .fake_placeholder { font-size: 1.3rem;line-height: 1.4;top: 1.5rem;left: 3rem; }
     
 
     /* ================================  기술개발  =============================== */
