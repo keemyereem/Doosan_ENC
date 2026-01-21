@@ -1817,7 +1817,7 @@ border-right: .5rem solid transparent;border-top: .5rem solid #222; transform: r
 /* 개인정보 처리방침 */
 #mobile .policy_tit {line-height: 52px;}
 #mobile .graybox { padding: 6rem 0 0; }
-#mobile .graybox .title_area {padding: 6rem 2rem 2.5rem 2rem; background: #fff;}
+#mobile .graybox .title_area {padding: 6rem 2rem 2.5rem 2rem;}
 #mobile .graybox .policy { padding-top: 17.5px}
 #mobile .graybox .policy > .inner { margin-top: 0rem; width: calc(100% - 2rem)!important;}
 #mobile .graybox .policy > .inner .tab_inner ul{ margin: 0 auto 12rem;}
