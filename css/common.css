@@ -120,7 +120,7 @@ body { overflow: overlay; }
 /* header */
 .header {width: 100%;position: fixed;top: 0;left: 0;z-index: 99;padding: 0 5rem; transition: transform ease .2s, background ease .2s, color ease .2s; }
 .header .header_wrap {height: 10rem;display: flex;align-items: center;font-size: 1.8rem;color: #222;}
-.header .logo {display: block;width: 10.3rem;height: 2.8rem;background: url(../images/common/logo_b.png) no-repeat;font-size: 0;margin-right: 7vw; /* transition: all ease .3s; */}
+.header .logo {display: block;width: 10.55rem;height: 3.05rem;background: url(../images/common/logo_b.svg) no-repeat;font-size: 0;margin-right: 7vw; /* transition: all ease .3s; */}
 .header .gnb {width: 73rem;height: 100%;}
 .header .gnb > ul {width: 100%;height: 100%;display: flex; flex-shrink: 1; justify-content: space-around; }
 .header .gnb > ul > li > a { display: inline-block; padding: 0 3.9rem; height: 100%; transition: all ease .2s; position: relative; z-index: 1000; }
@@ -209,7 +209,7 @@ body { overflow: overlay; }
 @keyframes manuAnimate03_1 { 0%{transform: translateY(-9px) rotate(135deg); width: 4rem; margin-left: 0;} 50%{transform: translateY(-9px) rotate(0deg);} 100%{transform: translateY(0px) rotate(0deg); width: 2.6rem; margin-left: 1rem;} }
 
 /* header ( white version ) */
-.wht .logo {background: url(../images/common/logo_w.png) no-repeat;}
+.wht .logo {background: url(../images/common/logo_w.svg) no-repeat;}
 .wht .gnb > ul > li > a,
 .wht .gnb_menu .right_nav ul li a  {color: #fff;position: relative; }
 .wht .gnb_menu .right_nav ul li a::before {content:'';display: inline-block;width: 0;height: .1rem;background: #fff;position: absolute;bottom: -.2rem;left: 1.9rem;transition: width .3s;}
@@ -221,11 +221,11 @@ body { overflow: overlay; }
 .wht .top_sitemap button span::before, 
 .wht .top_sitemap button span::after { background: #fff; }
 .bg { background: #fff;box-shadow: 0px 10px 15.9744px 0.0256px rgba(0, 0, 0, 0.1); }
-.bg .logo {background: url(../images/common/logo_b.png) no-repeat;}
+.bg .logo {background: url(../images/common/logo_b.svg) no-repeat;}
 .bg .top_sitemap button span::after { background: #222; }
 
 /* sitemap */
-.header .logo.sitemapOn { background: url(../images/common/logo_b.png) no-repeat !important; }
+.header .logo.sitemapOn { background: url(../images/common/logo_b.svg) no-repeat !important; }
 .header .gnb.sitemapOn,
 .header .right_nav.sitemapOn,
 .header .lang_select.sitemapOn,
