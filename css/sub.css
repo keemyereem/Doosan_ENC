@@ -710,10 +710,10 @@
 .masterpiece .outline .section0 .tit_area h2 { font-size: 8rem; color: #000; font-weight: 400; margin: 1.5rem 0; }
 .masterpiece .outline .section0 .tit_area p { font-size: 2rem; color: #777; line-height: 1.7; }
 .masterpiece .outline .section0 .cont_area { border-top: 1px solid #222; border-bottom: 1px solid #e8e8e8; padding: 3.5rem 0 4rem; margin: 7.5rem 0 8rem; opacity: 0; transform: translateY(7rem); transition-duration: .3s; transition-timing-function: ease-in-out; transition-property: opacity, transform; }
-.masterpiece .outline .section0 .cont_area ul { display: flex; align-items: center; }
+.masterpiece .outline .section0 .cont_area ul { display: flex; align-items: stretch; }
 .masterpiece .outline .section0 .cont_area ul li { position: relative; flex-grow: 1; padding-left: 6rem; }
 .masterpiece .outline .section0 .cont_area ul li:first-child { padding-left: 4rem; }
-.masterpiece .outline .section0 .cont_area ul li::after { content:''; display: inline-block; width: 1px; height: 6rem; background: #e8e8e8; position: absolute; right:0rem; top:0; }
+.masterpiece .outline .section0 .cont_area ul li::after { content:''; display: inline-block; width: 1px; height: 100%; background: #e8e8e8; position: absolute; right:0rem; top:0; }
 .masterpiece .outline .section0 .cont_area ul li:last-child::after { display: none; }
 .masterpiece .outline .section0 .cont_area .tit_blue { font-size: 1.8rem; font-weight: 400; color: #005eb8; }
 .masterpiece .outline .section0 .cont_area p { font-size: 1.8rem; color: #777; margin-top: 1rem; }
